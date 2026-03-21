@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F1 Bolão — Standings</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --red: #e10600;
+    --red-dim: #ffb4a8;
+    --blue: #a6c8ff;
+    --blue-bright: #3192fc;
+    --surface: #131313;
+    --surface-low: #1c1b1b;
+    --surface-mid: #201f1f;
+    --surface-high: #2a2a2a;
+    --surface-highest: #353534;
+    --on-surface: #e5e2e1;
+    --on-surface-50: rgba(229,226,225,0.5);
+    --on-surface-30: rgba(229,226,225,0.3);
+    --on-surface-15: rgba(229,226,225,0.15);
+    --on-surface-08: rgba(229,226,225,0.08);
+    --outline: #af8781;
+    --outline-var: #5e3f3a;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--surface); color: var(--on-surface); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  body { min-height: 100dvh; display: flex; flex-direction: column; }
+
+  /* ── TOP BAR ── */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--surface);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    padding: 0 20px;
+  }
+  .topbar-inner {
+    display: flex; justify-content: space-between; align-items: center;
+    height: 56px;
+  }
+  .brand { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.04em; color: var(--red); text-transform: uppercase; }
+  .brand span { color: var(--on-surface); opacity: 0.4; }
+  .topbar-sub {
+    padding: 6px 0 10px;
+    font-size: 0.6rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--blue);
+  }
+  .icon-btn { background: none; border: none; cursor: pointer; color: var(--on-surface); padding: 6px; display: flex; align-items: center; }
+  .icon-btn:hover { color: var(--red-dim); }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+  main { flex: 1; padding-bottom: 80px; }
+
+  /* ── P1 SPOTLIGHT ── */
+  .spotlight {
+    margin: 20px 16px 0;
+    background: var(--surface-low);
+    border-left: 3px solid var(--red);
+    padding: 20px 20px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .spotlight-bg-num {
+    position: absolute; right: -16px; top: -24px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 9rem; font-weight: 900; font-style: italic;
+    color: var(--on-surface); opacity: 0.04; line-height: 1;
+    pointer-events: none; user-select: none;
+  }
+  .spotlight-badge {
+    display: inline-block;
+    background: var(--red); color: #fff;
+    font-size: 0.58rem; font-weight: 900; letter-spacing: 0.18em;
+    text-transform: uppercase; font-style: italic;
+    padding: 3px 8px; margin-bottom: 14px;
+  }
+  .spotlight-body { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; }
+  .spotlight-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.2rem; font-weight: 700; line-height: 1.0;
+    letter-spacing: -0.03em; text-transform: uppercase;
+  }
+  .spotlight-team {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--blue); margin-top: 4px;
+  }
+  .spotlight-pts-label {
+    font-size: 0.55rem; font-weight: 900; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--on-surface-50); text-align: right;
+  }
+  .spotlight-pts-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 3rem; font-weight: 700; line-height: 1.0;
+    color: var(--red); text-align: right;
+  }
+
+  /* ── STANDINGS LIST ── */
+  .section-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 20px; margin: 28px 0 10px;
+  }
+  .section-label {
+    font-size: 0.7rem; font-weight: 900; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--on-surface-50);
+  }
+  .section-count {
+    font-size: 0.6rem; font-weight: 800; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--blue-bright);
+  }
+
+  .standings-list { display: flex; flex-direction: column; gap: 2px; padding: 0 16px; }
+
+  .player-row {
+    background: var(--surface-low);
+    overflow: hidden;
+    transition: background 0.15s;
+  }
+  .player-row.rank-1 { border-left: 3px solid var(--red); }
+  .player-row.rank-2 { border-left: 3px solid var(--outline); }
+  .player-row.rank-3 { border-left: 3px solid #8B7355; }
+  .player-row.rank-other { border-left: 3px solid transparent; }
+
+  .player-header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 16px; cursor: pointer; gap: 12px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .player-header:active { background: var(--surface-high); }
+
+  .player-left { display: flex; align-items: center; gap: 14px; min-width: 0; }
+  .player-rank {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem; font-weight: 700;
+    color: var(--on-surface-30); width: 32px; flex-shrink: 0; line-height: 1;
+  }
+  .player-row.rank-1 .player-rank { color: var(--red); }
+  .player-row.rank-2 .player-rank { color: var(--outline); }
+  .player-row.rank-3 .player-rank { color: #8B7355; }
+
+  .player-info { min-width: 0; }
+  .player-name {
+    font-size: 0.88rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .player-team {
+    font-size: 0.58rem; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--on-surface-50); margin-top: 3px;
+  }
+
+  .player-right { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+  .stat-block { text-align: right; }
+  .stat-label {
+    font-size: 0.5rem; font-weight: 900; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--on-surface-30);
+  }
+  .stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem; font-weight: 700; line-height: 1.1;
+  }
+  .stat-value.dim { color: var(--on-surface-50); }
+  .stat-block.budget { display: none; }
+  @media (min-width: 400px) { .stat-block.budget { display: block; } }
+
+  .expand-icon { color: var(--on-surface-30); font-size: 1.1rem; transition: transform 0.2s; }
+  .player-row.open .expand-icon { transform: rotate(180deg); }
+
+  /* ── EXPANDED PANEL ── */
+  .player-expanded {
+    display: none;
+    border-top: 1px solid var(--on-surface-08);
+    padding: 16px 16px 16px 62px;
+    background: var(--surface-mid);
+  }
+  .player-row.open .player-expanded { display: block; }
+
+  .expanded-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px;
+  }
+  .exp-stat-label {
+    font-size: 0.5rem; font-weight: 900; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--on-surface-30);
+  }
+  .exp-stat-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem; font-weight: 700; margin-top: 2px;
+  }
+  .trend-up { color: #4ade80; }
+  .trend-down { color: var(--red-dim); }
+  .trend-flat { color: var(--blue); }
+  .prize-val { color: #4ade80; }
+
+  .cards-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; align-items: center; }
+  .cards-label { font-size: 0.5rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-surface-30); }
+  .card-chip {
+    background: var(--surface-highest); border: 1px solid var(--on-surface-15);
+    padding: 2px 8px; font-size: 0.58rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--blue);
+  }
+
+  .view-team-btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    width: 100%; padding: 10px;
+    background: rgba(225,6,0,0.08); border: 1px solid rgba(225,6,0,0.2);
+    color: var(--red); cursor: pointer;
+    font-size: 0.6rem; font-weight: 900; letter-spacing: 0.18em; text-transform: uppercase;
+    transition: background 0.15s;
+  }
+  .view-team-btn:hover { background: rgba(225,6,0,0.15); }
+
+  /* ── TROPHY RACE CHART ── */
+  .chart-section { margin: 32px 16px 0; }
+  .chart-title { font-size: 0.7rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--on-surface-50); }
+  .chart-sub { font-size: 0.58rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-surface-30); margin-top: 2px; margin-bottom: 14px; }
+  .chart-wrap {
+    background: var(--surface-low);
+    padding: 20px 16px 16px;
+    position: relative;
+  }
+  #trophy-chart { width: 100%; display: block; }
+
+  .chart-legend {
+    display: flex; flex-wrap: wrap; gap: 10px 18px;
+    margin-top: 14px;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 8px; height: 8px; flex-shrink: 0; }
+  .legend-name { font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--on-surface-50); }
+
+  /* ── FOOTER STATS ── */
+  .footer-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 20px 16px 0; }
+  .footer-card { background: var(--surface-high); padding: 16px; }
+  .footer-card.blue-accent { border-left: 2px solid var(--blue); }
+  .footer-card.red-accent { border-left: 2px solid var(--red); }
+  .footer-card-label { font-size: 0.5rem; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; color: var(--on-surface-30); margin-bottom: 4px; }
+  .footer-card-value {
+    font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700;
+  }
+  .footer-card-unit { font-size: 0.58rem; font-weight: 400; color: var(--on-surface-30); }
+
+  /* ── BOTTOM NAV ── */
+  .bottom-nav {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
+    background: var(--surface);
+    box-shadow: 0 -10px 40px rgba(0,0,0,0.25);
+    display: flex; height: 60px;
+    border-top: 1px solid var(--on-surface-08);
+  }
+  .nav-item {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 3px; text-decoration: none; color: rgba(166,200,255,0.35);
+    font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    transition: color 0.15s; cursor: pointer; background: none; border: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .nav-item.active {
+    color: var(--red);
+    border-top: 2px solid var(--red);
+    background: var(--surface-low);
+  }
+  .nav-item:hover:not(.active) { color: rgba(166,200,255,0.6); }
+  .nav-item .material-symbols-outlined { font-size: 1.3rem; }
+  .nav-item.active .material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .player-row { animation: fadeSlideIn 0.3s ease both; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">F1<span> / </span>Bolão</div>
+    <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
+  </div>
+  <div class="topbar-sub" id="race-context">Global League · Season 2026</div>
+</header>
+
+<main>
+
+  <!-- P1 SPOTLIGHT -->
+  <div class="spotlight" id="spotlight">
+    <div class="spotlight-bg-num" id="spotlight-bg">01</div>
+    <div class="spotlight-badge">P1 Global Leader</div>
+    <div class="spotlight-body">
+      <div>
+        <div class="spotlight-name" id="spotlight-name">—</div>
+        <div class="spotlight-team" id="spotlight-team">—</div>
+      </div>
+      <div>
+        <div class="spotlight-pts-label">Total Points</div>
+        <div class="spotlight-pts-value" id="spotlight-pts">—</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STANDINGS -->
+  <div class="section-header">
+    <span class="section-label">League Standings</span>
+    <span class="section-count" id="player-count">— Players</span>
+  </div>
+
+  <div class="standings-list" id="standings-list"></div>
+
+  <!-- TROPHY RACE CHART -->
+  <div class="chart-section">
+    <div class="chart-title">The Trophy Race</div>
+    <div class="chart-sub">Season Rank Progression</div>
+    <div class="chart-wrap">
+      <svg id="trophy-chart" viewBox="0 0 340 160" xmlns="http://www.w3.org/2000/svg"></svg>
+      <div class="chart-legend" id="chart-legend"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER STATS -->
+  <div class="footer-stats">
+    <div class="footer-card blue-accent">
+      <div class="footer-card-label">League Average</div>
+      <div class="footer-card-value"><span id="league-avg">—</span> <span class="footer-card-unit">PTS</span></div>
+    </div>
+    <div class="footer-card red-accent">
+      <div class="footer-card-label">Highest Budget</div>
+      <div class="footer-card-value"><span id="highest-budget">—</span> <span class="footer-card-unit">M</span></div>
+    </div>
+  </div>
+
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a class="nav-item active" href="standings.html">
+    <span class="material-symbols-outlined">leaderboard</span>
+    <span>Standings</span>
+  </a>
+  <a class="nav-item" href="results.html">
+    <span class="material-symbols-outlined">flag</span>
+    <span>Results</span>
+  </a>
+  <a class="nav-item" href="market.html">
+    <span class="material-symbols-outlined">monetization_on</span>
+    <span>Market</span>
+  </a>
+  <a class="nav-item" href="race.html">
+    <span class="material-symbols-outlined">sports_motorsports</span>
+    <span>Race</span>
+  </a>
+</nav>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────────────────────
+const RESULTS = [{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":1,"race_rank":1,"rank_change":0,"team_name":"Stradale  Mucci","user_name":"Fabio Mucci","season_points":256.0,"race_points":256.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"No Negative (GD1)","current_budget":100.0,"new_budget":100.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":2,"race_rank":2,"rank_change":0,"team_name":"Liberius","user_name":"Liberio Junior","season_points":251.0,"race_points":251.0,"budget_remaining":0.1,"team_value":99.9,"cards_used":"","current_budget":100.0,"new_budget":102.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":3,"race_rank":3,"rank_change":0,"team_name":"Semi-aquatic-mammals","user_name":"Guilherme Figueiredo","season_points":250.0,"race_points":250.0,"budget_remaining":0.2,"team_value":99.8,"cards_used":"Autopilot (GD1)","current_budget":100.0,"new_budget":102.9},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":4,"race_rank":4,"rank_change":0,"team_name":"Fiat147","user_name":"Rafael Dias","season_points":233.0,"race_points":233.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"Limitless (GD2)","current_budget":100.0,"new_budget":102.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":5,"race_rank":5,"rank_change":0,"team_name":"CarretaFuracao","user_name":"Robson Jardim","season_points":228.0,"race_points":228.0,"budget_remaining":2.9,"team_value":97.1,"cards_used":"","current_budget":100.0,"new_budget":103.1},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":6,"race_rank":6,"rank_change":0,"team_name":"Ixxtain","user_name":"Raphael Stein","season_points":224.0,"race_points":224.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"","current_budget":100.0,"new_budget":102.1},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":7,"race_rank":7,"rank_change":0,"team_name":"qq um menos o Liberio","user_name":"Vinicius Agostini","season_points":202.0,"race_points":202.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"No Negative (GD1)","current_budget":100.0,"new_budget":101.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":8,"race_rank":8,"rank_change":0,"team_name":"Yas Bombs","user_name":"Danilo Iglesias","season_points":174.0,"race_points":174.0,"budget_remaining":0.1,"team_value":99.9,"cards_used":"","current_budget":100.0,"new_budget":101.1},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":9,"race_rank":9,"rank_change":0,"team_name":"Prisci Prisci","user_name":"Priscila Rigotto","season_points":164.0,"race_points":164.0,"budget_remaining":0.3,"team_value":99.7,"cards_used":"","current_budget":100.0,"new_budget":101.3},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":10,"race_rank":10,"rank_change":0,"team_name":"Edu Lima","user_name":"Eduardo Santos Lima","season_points":156.0,"race_points":156.0,"budget_remaining":7.8,"team_value":92.2,"cards_used":"","current_budget":100.0,"new_budget":100.4},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":11,"race_rank":11,"rank_change":0,"team_name":"Mucci_Senior","user_name":"Ricardo Mucci","season_points":98.0,"race_points":98.0,"budget_remaining":3.2,"team_value":96.8,"cards_used":"","current_budget":100.0,"new_budget":99.8},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":1,"race_rank":2,"rank_change":0,"team_name":"Liberius","user_name":"Liberio Junior","season_points":719.0,"race_points":468.0,"budget_remaining":0.7,"team_value":101.8,"cards_used":"Extra DRS (GD2)","current_budget":102.5,"new_budget":104.6},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":2,"race_rank":1,"rank_change":0,"team_name":"Fiat147","user_name":"Rafael Dias","season_points":714.0,"race_points":481.0,"budget_remaining":0.0,"team_value":102.5,"cards_used":"Limitless (GD2)","current_budget":102.5,"new_budget":104.0},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":3,"race_rank":3,"rank_change":0,"team_name":"Stradale  Mucci","user_name":"Fabio Mucci","season_points":691.0,"race_points":435.0,"budget_remaining":0.2,"team_value":100.3,"cards_used":"","current_budget":100.5,"new_budget":101.4},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":4,"race_rank":4,"rank_change":0,"team_name":"CarretaFuracao","user_name":"Robson Jardim","season_points":643.0,"race_points":415.0,"budget_remaining":2.0,"team_value":101.1,"cards_used":"","current_budget":103.1,"new_budget":105.2},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":5,"race_rank":6,"rank_change":0,"team_name":"qq um menos o Liberio","user_name":"Vinicius Agostini","season_points":599.0,"race_points":397.0,"budget_remaining":0.0,"team_value":101.5,"cards_used":"","current_budget":101.5,"new_budget":103.6},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":6,"race_rank":8,"rank_change":0,"team_name":"Ixxtain","user_name":"Raphael Stein","season_points":588.0,"race_points":364.0,"budget_remaining":0.0,"team_value":102.1,"cards_used":"","current_budget":102.1,"new_budget":104.2},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":7,"race_rank":5,"rank_change":0,"team_name":"Prisci Prisci","user_name":"Priscila Rigotto","season_points":563.0,"race_points":399.0,"budget_remaining":0.2,"team_value":101.1,"cards_used":"","current_budget":101.3,"new_budget":103.4},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":8,"race_rank":7,"rank_change":0,"team_name":"Yas Bombs","user_name":"Danilo Iglesias","season_points":556.0,"race_points":382.0,"budget_remaining":0.7,"team_value":100.4,"cards_used":"","current_budget":101.1,"new_budget":102.0},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":9,"race_rank":9,"rank_change":0,"team_name":"Semi-aquatic-mammals","user_name":"Guilherme Figueiredo","season_points":546.0,"race_points":296.0,"budget_remaining":9.0,"team_value":93.9,"cards_used":"","current_budget":102.9,"new_budget":105.3},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":10,"race_rank":11,"rank_change":0,"team_name":"Edu Lima","user_name":"Eduardo Santos Lima","season_points":413.0,"race_points":257.0,"budget_remaining":7.8,"team_value":92.6,"cards_used":"","current_budget":100.4,"new_budget":100.4},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":11,"race_rank":10,"rank_change":0,"team_name":"Mucci_Senior","user_name":"Ricardo Mucci","season_points":373.0,"race_points":275.0,"budget_remaining":0.7,"team_value":99.1,"cards_used":"","current_budget":99.8,"new_budget":99.8}];
+
+// Prizes: sum race_prize per player across all races
+function computePrizeTotals(results) {
+  const totals = {};
+  results.forEach(r => {
+    if (!totals[r.user_name]) totals[r.user_name] = 0;
+    totals[r.user_name] += r.race_prize || 0;
+  });
+  // Round to 2dp
+  Object.keys(totals).forEach(k => totals[k] = Math.round(totals[k] * 100) / 100);
+  return totals;
+}
+
+const CHART_COLORS = [
+  '#e10600','#a6c8ff','#4ade80','#f59e0b','#c084fc',
+  '#fb923c','#34d399','#f472b6','#60a5fa','#a3e635','#94a3b8'
+];
+
+// ── COMPUTE ───────────────────────────────────────────────────────────────
+const maxRace = Math.max(...RESULTS.map(r => r.race_number));
+const latest  = RESULTS.filter(r => r.race_number === maxRace).sort((a,b) => a.season_rank - b.season_rank);
+
+const prizes = computePrizeTotals(RESULTS);
+
+// Trophy race data
+const trophyData = {};
+RESULTS.forEach(r => {
+  if (!trophyData[r.user_name]) trophyData[r.user_name] = [];
+  trophyData[r.user_name].push({ race: r.race_number, rank: r.season_rank });
+});
+Object.values(trophyData).forEach(arr => arr.sort((a,b) => a.race - b.race));
+
+// Stats
+const leagueAvg = (latest.reduce((s,p) => s + p.season_points, 0) / latest.length).toFixed(1);
+const highestBudget = Math.max(...latest.map(p => p.new_budget)).toFixed(1);
+
+// ── RENDER SPOTLIGHT ──────────────────────────────────────────────────────
+const p1 = latest[0];
+document.getElementById('race-context').textContent =
+  `${p1.race_flag} ${p1.race_name}  ·  Season 2026`;
+document.getElementById('spotlight-name').textContent = p1.user_name;
+document.getElementById('spotlight-team').textContent = p1.team_name;
+document.getElementById('spotlight-pts').textContent = p1.season_points.toFixed(0);
+document.getElementById('player-count').textContent = `${latest.length} Players Tracked`;
+document.getElementById('league-avg').textContent = leagueAvg;
+document.getElementById('highest-budget').textContent = highestBudget;
+
+// ── RENDER STANDINGS ──────────────────────────────────────────────────────
+function rankClass(rank) {
+  if (rank === 1) return 'rank-1';
+  if (rank === 2) return 'rank-2';
+  if (rank === 3) return 'rank-3';
+  return 'rank-other';
+}
+function trendHTML(change) {
+  if (change > 0) return `<span class="trend-up" style="display:flex;align-items:center;gap:3px"><svg width="10" height="10" viewBox="0 0 10 10"><polygon points="5,1 9,9 1,9" fill="#4ade80"/></svg><span style="font-size:.6rem;font-weight:800">+${change}</span></span>`;
+  if (change < 0) return `<span class="trend-down" style="display:flex;align-items:center;gap:3px"><svg width="10" height="10" viewBox="0 0 10 10"><polygon points="5,9 9,1 1,1" fill="#ffb4a8"/></svg><span style="font-size:.6rem;font-weight:800">${change}</span></span>`;
+  return `<span class="trend-flat" style="display:flex;align-items:center;gap:3px"><svg width="10" height="4" viewBox="0 0 10 4"><rect x="0" y="1.5" width="10" height="1.5" fill="#a6c8ff"/></svg><span style="font-size:.6rem;font-weight:800">—</span></span>`;
+}
+
+const list = document.getElementById('standings-list');
+latest.forEach((p, idx) => {
+  const avgPts = (p.season_points / p.race_number).toFixed(1);
+  const prize = prizes[p.user_name] ? `$${prizes[p.user_name].toFixed(2)}` : '—';
+  const prizeClass = prizes[p.user_name] ? 'prize-val' : '';
+  const rankNum = String(p.season_rank).padStart(2, '0');
+  const hasCard = p.cards_used && p.cards_used.trim() !== '';
+
+  const row = document.createElement('div');
+  row.className = `player-row ${rankClass(p.season_rank)}`;
+  row.style.animationDelay = `${idx * 0.04}s`;
+
+  row.innerHTML = `
+    <div class="player-header" onclick="toggleRow(this.parentElement)">
+      <div class="player-left">
+        <div class="player-rank">${rankNum}</div>
+        <div class="player-info">
+          <div class="player-name">${p.user_name}</div>
+          <div class="player-team">${p.team_name}</div>
+        </div>
+      </div>
+      <div class="player-right">
+        <div class="stat-block budget">
+          <div class="stat-label">Budget</div>
+          <div class="stat-value dim" style="font-size:.9rem">$${p.new_budget.toFixed(1)}M</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-label">Points</div>
+          <div class="stat-value ${p.season_rank === 1 ? '' : 'dim'}">${p.season_points.toFixed(0)}</div>
+        </div>
+        <span class="material-symbols-outlined expand-icon">expand_more</span>
+      </div>
+    </div>
+    <div class="player-expanded">
+      <div class="expanded-grid">
+        <div>
+          <div class="exp-stat-label">Avg / Race</div>
+          <div class="exp-stat-value">${avgPts}</div>
+        </div>
+        <div>
+          <div class="exp-stat-label">Prize</div>
+          <div class="exp-stat-value ${prizeClass}">${prize}</div>
+        </div>
+        <div>
+          <div class="exp-stat-label">Trend</div>
+          <div class="exp-stat-value" style="display:flex;align-items:center">${trendHTML(p.rank_change)}</div>
+        </div>
+      </div>
+      ${hasCard ? `<div class="cards-row"><span class="cards-label">Cards:</span><span class="card-chip">${p.cards_used}</span></div>` : ''}
+      <button class="view-team-btn" onclick="location.href='team.html?user=${encodeURIComponent(p.user_name)}'">
+        <span style="letter-spacing:.18em">View Full Team Details</span>
+        <span class="material-symbols-outlined" style="font-size:.9rem">arrow_forward</span>
+      </button>
+    </div>`;
+  list.appendChild(row);
+});
+
+function toggleRow(row) {
+  const wasOpen = row.classList.contains('open');
+  document.querySelectorAll('.player-row.open').forEach(r => r.classList.remove('open'));
+  if (!wasOpen) row.classList.add('open');
+}
+
+// ── TROPHY RACE CHART ─────────────────────────────────────────────────────
+(function buildChart() {
+  const svg = document.getElementById('trophy-chart');
+  const W = 340, H = 160;
+  const PAD = { top: 12, right: 12, bottom: 24, left: 28 };
+  const chartW = W - PAD.left - PAD.right;
+  const chartH = H - PAD.top - PAD.bottom;
+
+  const races = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
+  const numPlayers = latest.length; // 11
+
+  function xPos(race) {
+    const idx = races.indexOf(race);
+    return PAD.left + (idx / (races.length - 1 || 1)) * chartW;
+  }
+  function yPos(rank) {
+    return PAD.top + ((rank - 1) / (numPlayers - 1)) * chartH;
+  }
+
+  let svgHTML = '';
+
+  // Grid lines (horizontal — one per rank)
+  for (let r = 1; r <= numPlayers; r++) {
+    const y = yPos(r);
+    svgHTML += `<line x1="${PAD.left}" y1="${y}" x2="${W - PAD.right}" y2="${y}" stroke="rgba(229,226,225,0.04)" stroke-width="1"/>`;
+  }
+
+  // X axis labels
+  races.forEach((race, i) => {
+    const x = xPos(race);
+    const isLast = i === races.length - 1;
+    svgHTML += `<text x="${x}" y="${H - 4}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="${isLast ? '#e10600' : 'rgba(229,226,225,0.3)'}">${isLast ? 'LIVE' : `RD ${race}`}</text>`;
+  });
+
+  // Y axis label (P1, P11)
+  svgHTML += `<text x="${PAD.left - 4}" y="${yPos(1) + 4}" text-anchor="end" font-family="Inter,sans-serif" font-size="7" fill="rgba(229,226,225,0.25)">P1</text>`;
+  svgHTML += `<text x="${PAD.left - 4}" y="${yPos(numPlayers) + 4}" text-anchor="end" font-family="Inter,sans-serif" font-size="7" fill="rgba(229,226,225,0.25)">P${numPlayers}</text>`;
+
+  // Lines — sort users by current rank so P1/P2/P3 are drawn last (on top)
+  const sortedUsers = [...latest].reverse().map(p => p.user_name);
+  const legendItems = [];
+
+  sortedUsers.forEach(userName => {
+    const userLatest = latest.find(p => p.user_name === userName);
+    const colorIdx = latest.findIndex(p => p.user_name === userName);
+    const color = CHART_COLORS[colorIdx] || '#666';
+    const data = trophyData[userName];
+    if (!data || data.length < 1) return;
+
+    const isTop3 = userLatest && userLatest.season_rank <= 3;
+    const opacity = isTop3 ? 1 : 0.35;
+    const strokeW = isTop3 ? 2.5 : 1;
+
+    const points = data.map(d => `${xPos(d.race)},${yPos(d.rank)}`).join(' ');
+    svgHTML += `<polyline points="${points}" fill="none" stroke="${color}" stroke-width="${strokeW}" stroke-linecap="round" stroke-linejoin="round" opacity="${opacity}"/>`;
+
+    // Dots at each point
+    data.forEach(d => {
+      svgHTML += `<circle cx="${xPos(d.race)}" cy="${yPos(d.rank)}" r="${isTop3 ? 3.5 : 2}" fill="${color}" opacity="${opacity}"/>`;
+    });
+
+    legendItems.push({ color, name: userName.split(' ')[0], rank: userLatest ? userLatest.season_rank : 99, isTop3 });
+  });
+
+  svg.innerHTML = svgHTML;
+
+  // Legend (top 5 + others collapsed)
+  const legendEl = document.getElementById('chart-legend');
+  legendItems.sort((a,b) => a.rank - b.rank).forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'legend-item';
+    el.innerHTML = `<div class="legend-dot" style="background:${item.color};opacity:${item.isTop3 ? 1 : 0.4}"></div><span class="legend-name" style="opacity:${item.isTop3 ? 0.8 : 0.4}">${item.name}</span>`;
+    legendEl.appendChild(el);
+  });
+})();
+</script>
+</body>
+</html>

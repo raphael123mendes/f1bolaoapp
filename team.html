@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F1 Bolão — Team Detail</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --red:#e10600; --red-dim:#ffb4a8; --red-faint:rgba(225,6,0,0.08);
+  --blue:#a6c8ff; --blue-bright:#3192fc;
+  --green:#4ade80; --green-faint:rgba(74,222,128,0.1);
+  --amber:#f59e0b;
+  --surface:#131313; --surface-low:#1c1b1b; --surface-mid:#201f1f;
+  --surface-high:#2a2a2a; --surface-highest:#353534;
+  --on:#e5e2e1;
+  --on-60:rgba(229,226,225,0.6); --on-40:rgba(229,226,225,0.4);
+  --on-20:rgba(229,226,225,0.2); --on-08:rgba(229,226,225,0.08);
+  --outline:#af8781;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--surface);color:var(--on);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;font-family:'Material Symbols Outlined';vertical-align:middle}
+
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:50;background:var(--surface);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;height:56px;padding:0 16px}
+.back-btn{background:none;border:none;cursor:pointer;color:var(--on-40);padding:6px;display:flex;align-items:center;gap:8px;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase}
+.back-btn:hover{color:var(--on)}
+.topbar-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:var(--red);text-transform:uppercase}
+.icon-btn{background:none;border:none;cursor:pointer;color:var(--on-40);padding:6px;display:flex;align-items:center}
+
+main{flex:1;padding-bottom:80px}
+
+/* portrait/landscape toggle */
+.portrait-only{display:block}
+.landscape-only{display:none}
+@media(orientation:landscape){
+  .portrait-only{display:none!important}
+  .landscape-only{display:flex!important}
+  main{padding-bottom:0}
+  .bottom-nav{display:none}
+  .topbar{position:relative}
+}
+
+/* ── PROFILE HEADER ── */
+.profile{position:relative;overflow:hidden;border-left:3px solid var(--red);background:var(--surface-low);padding:20px 20px 22px}
+.profile-bg{position:absolute;right:-10px;top:-10px;font-family:'Space Grotesk',sans-serif;font-size:8rem;font-weight:900;font-style:italic;color:var(--on);opacity:0.03;line-height:1;pointer-events:none;user-select:none}
+.tier-badge{display:inline-block;background:var(--red);color:#fff;font-size:0.55rem;font-weight:900;letter-spacing:0.18em;text-transform:uppercase;font-style:italic;padding:2px 8px;margin-bottom:10px}
+.tier-badge.mid{background:var(--blue-bright)}
+.tier-badge.back{background:var(--surface-highest);color:var(--on-40)}
+.profile-rank-badge{background:var(--on-08);color:var(--blue);font-size:0.55rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;padding:2px 8px;margin-left:6px}
+.profile-name{font-family:'Space Grotesk',sans-serif;font-size:2.2rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:1}
+.profile-team{font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--blue);margin-top:6px}
+
+/* ── METRICS GRID ── */
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;padding:2px 16px 0}
+@media(min-width:400px){.metrics{grid-template-columns:repeat(4,1fr)}}
+.metric-card{background:var(--surface-high);padding:12px 14px}
+.metric-card.red{border-left:2px solid var(--red)}
+.metric-card.blue{border-left:2px solid var(--blue)}
+.metric-card.green{border-left:2px solid var(--green)}
+.metric-label{font-size:0.48rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:3px}
+.metric-val{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;line-height:1}
+.metric-val.green{color:var(--green)}
+.metric-val.blue{color:var(--blue)}
+
+/* ── CHARTS ── */
+.charts-section{padding:16px}
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chart-card{background:var(--surface-low);padding:14px}
+.chart-header{border-left:2px solid var(--blue);padding-left:8px;margin-bottom:12px}
+.chart-header.red{border-left-color:var(--red)}
+.chart-header.green{border-left-color:var(--green)}
+.chart-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on)}
+.chart-sub{font-size:0.5rem;font-weight:600;color:var(--on-40);text-transform:uppercase;letter-spacing:0.08em;margin-top:2px}
+.chart-svg{width:100%;display:block;overflow:visible}
+
+/* ── CARDS SECTION ── */
+.cards-section{padding:0 16px 16px}
+.section-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.section-accent{width:3px;height:18px;flex-shrink:0}
+.section-accent.red{background:var(--red)}
+.section-accent.blue{background:var(--blue)}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase}
+.section-sub{font-size:0.5rem;font-weight:700;color:var(--on-40);letter-spacing:0.12em;text-transform:uppercase;margin-left:auto}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+@media(min-width:400px){.cards-grid{grid-template-columns:repeat(6,1fr)}}
+.card-chip{background:var(--surface-high);padding:8px 6px;display:flex;align-items:center;gap:5px}
+.card-chip.used{border-left:2px solid var(--green);background:var(--green-faint)}
+.card-icon{font-size:0.85rem}
+.card-icon.used{color:var(--green)}
+.card-icon.unused{color:var(--on-20)}
+.card-name{font-size:0.52rem;font-weight:800;text-transform:uppercase;letter-spacing:0.06em}
+.card-name.used{color:var(--on)}
+.card-name.unused{color:var(--on-40)}
+
+/* ── DRIVER LINEUP ── */
+.lineup-section{padding:0 16px 16px}
+.hero-drivers{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:4px}
+.hero-card{background:var(--surface-low);position:relative;overflow:hidden;height:140px;cursor:pointer}
+.hero-card.captain{border:2px solid var(--red)}
+.hero-card.megacap{border:2px solid var(--blue)}
+.hero-portrait{position:absolute;left:0;top:0;height:100%;width:55%;object-fit:cover;object-position:top;filter:grayscale(100%);transition:filter 0.5s,transform 0.5s;transform:scale(1.05)}
+.hero-card:hover .hero-portrait{filter:grayscale(0%);transform:scale(1)}
+.hero-gradient{position:absolute;left:0;top:0;width:100%;height:100%;background:linear-gradient(to right,transparent 35%,var(--surface-low) 65%)}
+.hero-badge{position:absolute;top:6px;left:6px;font-size:0.44rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;padding:2px 6px;z-index:2}
+.hero-badge.captain{background:var(--red);color:#fff}
+.hero-badge.megacap{background:var(--blue);color:#000}
+.hero-badge.new-pick{background:var(--amber);color:#000;top:6px;left:auto;right:6px}
+.hero-info{position:absolute;right:0;top:0;width:50%;height:100%;display:flex;flex-direction:column;justify-content:center;padding:10px;z-index:1}
+.hero-driver-name{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.02em;line-height:1}
+.hero-price{font-size:0.52rem;font-weight:700;color:var(--blue);margin-top:3px;letter-spacing:0.08em}
+.hero-pts{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:700;line-height:1;margin-top:auto}
+.hero-pts.neg{color:var(--red-dim)}
+.hero-pts-label{font-size:0.45rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40)}
+
+/* compact drivers row */
+.compact-drivers{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-bottom:4px}
+.compact-card{background:var(--surface-low);overflow:hidden;position:relative}
+.compact-portrait{width:100%;aspect-ratio:1;object-fit:cover;object-position:top;filter:grayscale(100%);transition:filter 0.4s;display:block}
+.compact-card:hover .compact-portrait{filter:grayscale(0%)}
+.compact-new-badge{position:absolute;top:4px;right:4px;background:var(--amber);color:#000;font-size:0.4rem;font-weight:900;letter-spacing:0.08em;padding:1px 4px;text-transform:uppercase}
+.compact-info{padding:6px 8px}
+.compact-name{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.compact-price{font-size:0.46rem;font-weight:700;color:var(--blue);letter-spacing:0.06em;margin-top:1px}
+.compact-bottom{display:flex;justify-content:space-between;align-items:baseline;margin-top:4px}
+.compact-pts-label{font-size:0.42rem;font-weight:700;text-transform:uppercase;color:var(--on-40)}
+.compact-pts{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700}
+.compact-pts.neg{color:var(--red-dim)}
+
+/* constructors */
+.constructors-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.con-card{background:var(--surface-low);overflow:hidden;position:relative;border-top:2px solid var(--red);cursor:pointer}
+.con-card.second{border-top-color:var(--blue)}
+.con-car-wrap{width:100%;padding:12px 8px;background:var(--surface-high);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.con-car-img{width:100%;max-width:220px;height:auto;object-fit:contain;display:block;margin:0 auto;transition:transform 0.4s}
+.con-card:hover .con-car-img{transform:scale(1.04)}
+.con-new-badge{position:absolute;top:4px;right:4px;background:var(--amber);color:#000;font-size:0.4rem;font-weight:900;letter-spacing:0.08em;padding:1px 4px;text-transform:uppercase}
+.con-info{display:flex;justify-content:space-between;align-items:center;padding:8px 10px}
+.con-name{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase}
+.con-right{text-align:right}
+.con-price{font-size:0.48rem;font-weight:700;color:var(--blue);letter-spacing:0.06em}
+.con-pts{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700}
+
+/* ── LANDSCAPE ── */
+.landscape-wrap{display:none;flex-direction:row;height:calc(100dvh - 56px);overflow:hidden}
+.landscape-sidebar{width:200px;flex-shrink:0;background:var(--surface-low);display:flex;flex-direction:column;border-right:1px solid var(--on-08)}
+.landscape-main{flex:1;overflow-y:auto;padding:16px}
+
+.ls-profile{padding:14px 14px 12px;border-bottom:1px solid var(--on-08);border-left:3px solid var(--red)}
+.ls-name{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em}
+.ls-team{font-size:0.52rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-top:3px}
+.ls-rank{font-family:'Space Grotesk',sans-serif;font-size:1.6rem;font-weight:900;color:var(--red);line-height:1;margin-top:8px}
+.ls-rank-label{font-size:0.46rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40)}
+
+.ls-stats{display:flex;flex-direction:column;gap:0;flex:1;overflow-y:auto}
+.ls-stat-row{display:flex;justify-content:space-between;align-items:center;padding:8px 14px;border-bottom:1px solid var(--on-08)}
+.ls-stat-label{font-size:0.5rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40)}
+.ls-stat-val{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700}
+.ls-stat-val.green{color:var(--green)}
+.ls-stat-val.blue{color:var(--blue)}
+
+.ls-main-title{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--on-60);margin-bottom:12px}
+.ls-charts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.ls-chart-card{background:var(--surface-low);padding:10px}
+
+/* rank progression table */
+.rank-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+.rank-table th{font-size:0.48rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);padding:5px 10px;text-align:left;border-bottom:1px solid var(--on-08)}
+.rank-table td{padding:8px 10px;border-bottom:1px solid var(--on-08)}
+.rank-table tr:last-child td{border-bottom:none}
+.rank-table tr:hover td{background:var(--surface-high)}
+.rank-num{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700}
+.rank-pts{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-align:right}
+.rank-prize{font-size:0.65rem;font-weight:700;color:var(--green);text-align:right}
+.rank-budget{font-size:0.65rem;font-weight:600;color:var(--blue);text-align:right}
+.delta-up{color:var(--green);font-size:0.6rem;font-weight:800}
+.delta-dn{color:var(--red-dim);font-size:0.6rem;font-weight:800}
+.delta-flat{color:var(--on-40);font-size:0.6rem;font-weight:800}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:rgba(166,200,255,0.35);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.15s;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-item.active{color:var(--red);border-top:2px solid var(--red);background:var(--surface-low)}
+.nav-item .material-symbols-outlined{font-size:1.3rem}
+.nav-item.active .material-symbols-outlined{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="back-btn" onclick="history.back()">
+      <span class="material-symbols-outlined">arrow_back</span>
+      <span>Back</span>
+    </button>
+    <div class="topbar-title">Team Detail</div>
+    <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
+  </div>
+</header>
+
+<!-- LANDSCAPE LAYOUT -->
+<div class="landscape-wrap landscape-only" id="landscape-wrap">
+  <div class="landscape-sidebar">
+    <div class="ls-profile" id="ls-profile"></div>
+    <div class="ls-stats" id="ls-stats"></div>
+  </div>
+  <div class="landscape-main">
+    <div class="ls-main-title" id="ls-main-title">Season Performance</div>
+    <div class="ls-charts-grid" id="ls-charts-grid"></div>
+    <div id="ls-rank-table"></div>
+  </div>
+</div>
+
+<!-- PORTRAIT LAYOUT -->
+<main class="portrait-only">
+  <!-- Profile -->
+  <div class="profile" id="profile" style="margin:16px 16px 4px">
+    <div class="profile-bg" id="profile-bg"></div>
+    <div>
+      <span class="tier-badge" id="tier-badge"></span>
+      <span class="profile-rank-badge" id="rank-badge"></span>
+    </div>
+    <div class="profile-name" id="profile-name"></div>
+    <div class="profile-team" id="profile-team"></div>
+  </div>
+
+  <!-- Metrics -->
+  <div class="metrics" id="metrics"></div>
+
+  <!-- Charts -->
+  <div class="charts-section">
+    <div class="charts-grid" id="charts-grid"></div>
+  </div>
+
+  <!-- Strategy Cards -->
+  <div class="cards-section">
+    <div class="section-header">
+      <div class="section-accent blue"></div>
+      <div class="section-title">Strategy Cards</div>
+      <div class="section-sub" id="cards-used-count"></div>
+    </div>
+    <div class="cards-grid" id="cards-grid"></div>
+  </div>
+
+  <!-- Driver Lineup -->
+  <div class="lineup-section">
+    <div class="section-header">
+      <div class="section-accent red"></div>
+      <div class="section-title">Driver Lineup</div>
+      <div class="section-sub" id="lineup-race-label"></div>
+    </div>
+    <div class="hero-drivers" id="hero-drivers"></div>
+    <div class="compact-drivers" id="compact-drivers"></div>
+
+    <!-- Constructors -->
+    <div class="section-header" style="margin-top:12px">
+      <div class="section-accent red"></div>
+      <div class="section-title">Constructors</div>
+    </div>
+    <div class="constructors-grid" id="constructors-grid"></div>
+  </div>
+</main>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav portrait-only">
+  <a class="nav-item active" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
+  <a class="nav-item" href="results.html"><span class="material-symbols-outlined">flag</span><span>Results</span></a>
+  <a class="nav-item" href="market.html"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
+  <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
+</nav>
+
+<script>
+const ALL_CARDS = ['No Negative','Autopilot','Extra DRS','Limitless','Final Fix','Wildcard'];
+
+const DATA = {"Danilo Iglesias":{"user_name":"Danilo Iglesias","team_name":"Yas Bombs","season_rank":8,"season_points":556.0,"race_number":2,"new_budget":102.0,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Nico Hulkenberg","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/nico_hulkenberg.png","price":5.6},{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/oliver_bearman.png","price":8.6},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/logos/haas.webp","price":8.6},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":8,"race_rank":8,"race_points":174.0,"new_budget":101.1,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":8,"race_rank":7,"race_points":382.0,"new_budget":102.0,"race_prize":0.0}]},"Eduardo Santos Lima":{"user_name":"Eduardo Santos Lima","team_name":"Edu Lima","season_rank":10,"season_points":413.0,"race_number":2,"new_budget":100.4,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Sergio Perez","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/sergio_perez.png","price":6.4},{"name":"Carlos Sainz","type":"Driver","pts":37,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/carlos_sainz.png","price":12.2},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/audi.webp","price":5.4}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":10,"race_rank":10,"race_points":156.0,"new_budget":100.4,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":10,"race_rank":11,"race_points":257.0,"new_budget":100.4,"race_prize":0.0}]},"Fabio Mucci":{"user_name":"Fabio Mucci","team_name":"Stradale  Mucci","season_rank":3,"season_points":691.0,"race_number":2,"new_budget":101.4,"total_prize":26.95,"cards_used":["No Negative"],"picks":[{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"Nico Hulkenberg","type":"Driver","pts":7,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/nico_hulkenberg.png","price":5.6},{"name":"Valtteri Bottas","type":"Driver","pts":3,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Sergio Perez","type":"Driver","pts":20,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/sergio_perez.png","price":6.4},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":1,"race_rank":1,"race_points":256.0,"new_budget":100.5,"race_prize":19.25},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":3,"race_rank":3,"race_points":435.0,"new_budget":101.4,"race_prize":7.7}]},"Guilherme Figueiredo":{"user_name":"Guilherme Figueiredo","team_name":"Semi-aquatic-mammals","season_rank":9,"season_points":546.0,"race_number":2,"new_budget":105.3,"total_prize":7.7,"cards_used":["Autopilot"],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/arvid_lindblad.png","price":7.4},{"name":"Esteban Ocon","type":"Driver","pts":33,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/esteban_ocon.png","price":8.5},{"name":"Lando Norris","type":"Driver","pts":-10,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/lando_norris.png","price":26.8},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"McLaren","type":"Constructor","pts":19,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mclaren.webp","price":28.5}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":3,"race_rank":3,"race_points":250.0,"new_budget":102.9,"race_prize":7.7},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":9,"race_rank":9,"race_points":296.0,"new_budget":105.3,"race_prize":0.0}]},"Liberio Junior":{"user_name":"Liberio Junior","team_name":"Liberius","season_rank":1,"season_points":719.0,"race_number":2,"new_budget":104.6,"total_prize":30.8,"cards_used":["Extra DRS"],"picks":[{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Gabriel Bortoleto","type":"Driver","pts":-14,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/gabriel_bortoleto.png","price":6.4},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Arvid Lindblad","type":"Driver","pts":7,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/arvid_lindblad.png","price":7.4},{"name":"Racing Bulls","type":"Constructor","pts":50,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/racing_bulls.webp","price":7.5},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":2,"race_rank":2,"race_points":251.0,"new_budget":102.5,"race_prize":11.55},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":1,"race_rank":2,"race_points":468.0,"new_budget":104.6,"race_prize":19.25}]},"Priscila Rigotto":{"user_name":"Priscila Rigotto","team_name":"Prisci Prisci","season_rank":7,"season_points":563.0,"race_number":2,"new_budget":103.4,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Esteban Ocon","type":"Driver","pts":33,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/esteban_ocon.png","price":8.5},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/franco_colapinto.png","price":7.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/audi.webp","price":5.4}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":9,"race_rank":9,"race_points":164.0,"new_budget":101.3,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":7,"race_rank":5,"race_points":399.0,"new_budget":103.4,"race_prize":0.0}]},"Rafael Dias":{"user_name":"Rafael Dias","team_name":"Fiat147","season_rank":2,"season_points":714.0,"race_number":2,"new_budget":104.0,"total_prize":11.55,"cards_used":["Limitless"],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"Carlos Sainz","type":"Driver","pts":37,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/carlos_sainz.png","price":12.2},{"name":"Isack Hadjar","type":"Driver","pts":11,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/isack_hadjar.png","price":10.1},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/haas.webp","price":8.6}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":4,"race_rank":4,"race_points":233.0,"new_budget":102.5,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":2,"race_rank":1,"race_points":481.0,"new_budget":104.0,"race_prize":11.55}]},"Raphael Stein":{"user_name":"Raphael Stein","team_name":"Ixxtain","season_rank":6,"season_points":588.0,"race_number":2,"new_budget":104.2,"total_prize":0.0,"cards_used":[],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"Franco Colapinto","type":"Driver","pts":18,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/franco_colapinto.png","price":7.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Gabriel Bortoleto","type":"Driver","pts":-14,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/gabriel_bortoleto.png","price":6.4},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/haas.webp","price":8.6},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":6,"race_rank":6,"race_points":224.0,"new_budget":102.1,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":6,"race_rank":8,"race_points":364.0,"new_budget":104.2,"race_prize":0.0}]},"Ricardo Mucci":{"user_name":"Ricardo Mucci","team_name":"Mucci_Senior","season_rank":11,"season_points":373.0,"race_number":2,"new_budget":99.8,"total_prize":0.0,"cards_used":[],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/arvid_lindblad.png","price":7.4},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Sergio Perez","type":"Driver","pts":20,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/sergio_perez.png","price":6.4},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":11,"race_rank":11,"race_points":98.0,"new_budget":99.8,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":11,"race_rank":10,"race_points":275.0,"new_budget":99.8,"race_prize":0.0}]},"Robson Jardim":{"user_name":"Robson Jardim","team_name":"CarretaFuracao","season_rank":4,"season_points":643.0,"race_number":2,"new_budget":105.2,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/franco_colapinto.png","price":7.0},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":5,"race_rank":5,"race_points":228.0,"new_budget":103.1,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":4,"race_rank":4,"race_points":415.0,"new_budget":105.2,"race_prize":0.0}]},"Vinicius Agostini":{"user_name":"Vinicius Agostini","team_name":"qq um menos o Liberio","season_rank":5,"season_points":599.0,"race_number":2,"new_budget":103.6,"total_prize":0.0,"cards_used":["No Negative"],"picks":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/oliver_bearman.png","price":8.6},{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"Nico Hulkenberg","type":"Driver","pts":7,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/nico_hulkenberg.png","price":5.6},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":7,"race_rank":7,"race_points":202.0,"new_budget":101.5,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":5,"race_rank":6,"race_points":397.0,"new_budget":103.6,"race_prize":0.0}]}};
+
+// ── INIT ──────────────────────────────────────────────────────────────────
+function getUser() {
+  const p = new URLSearchParams(window.location.search).get('user');
+  return (p && DATA[p]) ? p : Object.keys(DATA).sort((a,b) => DATA[a].season_rank - DATA[b].season_rank)[0];
+}
+
+const user = getUser();
+const d = DATA[user];
+
+function tierInfo(rank) {
+  if (rank <= 3) return { label: 'Podium Tier', cls: '' };
+  if (rank <= 7) return { label: 'Mid Tier', cls: 'mid' };
+  return { label: 'Backmarker', cls: 'back' };
+}
+
+function rankDelta(history, idx) {
+  if (idx === 0) return null;
+  const prev = history[idx-1].season_rank, curr = history[idx].season_rank;
+  if (curr < prev) return { dir: 'up', n: prev - curr };
+  if (curr > prev) return { dir: 'dn', n: curr - prev };
+  return { dir: 'flat', n: 0 };
+}
+
+// ── SVG CHART HELPERS ─────────────────────────────────────────────────────
+function miniLineChart(data, color, W=200, H=60) {
+  if (data.length < 2) return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg"></svg>`;
+  const mn = Math.min(...data), mx = Math.max(...data);
+  const range = mx - mn || 1;
+  const pts = data.map((v, i) => {
+    const x = (i / (data.length-1)) * (W-4) + 2;
+    const y = H - 8 - ((v - mn) / range) * (H - 16);
+    return [x, y];
+  });
+  const path = pts.map((p,i) => `${i===0?'M':'L'}${p[0]},${p[1]}`).join(' ');
+  const area = `M${pts[0][0]},${H} ` + pts.map(p=>`L${p[0]},${p[1]}`).join(' ') + ` L${pts[pts.length-1][0]},${H} Z`;
+  const dots = pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="3" fill="${color}"/>`).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg">
+    <defs><linearGradient id="g${color.replace('#','')}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="${area}" fill="url(#g${color.replace('#','')})" />
+    <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${dots}
+  </svg>`;
+}
+
+function miniBarChart(data, color, W=200, H=60) {
+  if (!data.length) return '';
+  const mx = Math.max(...data, 1);
+  const bw = (W - 8) / data.length - 3;
+  const bars = data.map((v,i) => {
+    const bh = Math.max(2, ((v / mx) * (H - 12)));
+    const x = 4 + i * ((W-8)/data.length);
+    const y = H - 4 - bh;
+    return `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" fill="${color}" rx="1"/>`;
+  }).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg">${bars}</svg>`;
+}
+
+// ── RENDER PORTRAIT ───────────────────────────────────────────────────────
+const tier = tierInfo(d.season_rank);
+document.getElementById('profile-bg').textContent = `P${d.season_rank}`;
+document.getElementById('tier-badge').textContent = tier.label;
+document.getElementById('tier-badge').className = `tier-badge ${tier.cls}`;
+document.getElementById('rank-badge').textContent = `Rank #${d.season_rank}`;
+document.getElementById('profile-name').textContent = d.user_name;
+document.getElementById('profile-team').textContent = d.team_name;
+
+const avgRace = (d.season_points / d.race_number).toFixed(1);
+document.getElementById('metrics').innerHTML = [
+  { l:'Total Points', v: d.season_points, cls:'red' },
+  { l:'Avg / Race',   v: avgRace,          cls:'blue' },
+  { l:'Season Rank',  v: `P${d.season_rank}`, cls:'red' },
+  { l:'Budget',       v: `$${d.new_budget.toFixed(1)}M`, cls:'blue' },
+  { l:'Prize Money',  v: d.total_prize > 0 ? `$${d.total_prize.toFixed(2)}` : '—', cls: d.total_prize > 0 ? 'green' : 'blue' },
+].map(m => `<div class="metric-card ${m.cls}">
+  <div class="metric-label">${m.l}</div>
+  <div class="metric-val${m.cls==='green'?' green':m.cls==='blue'?' blue':''}">${m.v}</div>
+</div>`).join('');
+
+// Charts
+const budgets = d.rank_history.map(r => r.new_budget);
+const racePoints = d.rank_history.map(r => r.race_points);
+const prizes = d.rank_history.map(r => r.race_prize);
+const cumPrizes = prizes.reduce((acc, v) => { acc.push((acc.length ? acc[acc.length-1] : 0) + v); return acc; }, []);
+
+document.getElementById('charts-grid').innerHTML = `
+  <div class="chart-card">
+    <div class="chart-header"><div class="chart-title">Budget Evolution</div><div class="chart-sub">$${budgets[budgets.length-1].toFixed(1)}M current</div></div>
+    ${miniLineChart(budgets, '#a6c8ff')}
+  </div>
+  <div class="chart-card">
+    <div class="chart-header red"><div class="chart-title">Points per Race</div><div class="chart-sub">Latest: ${racePoints[racePoints.length-1]} pts</div></div>
+    ${miniBarChart(racePoints, '#e10600')}
+  </div>
+  <div class="chart-card">
+    <div class="chart-header green"><div class="chart-title">Prize Earnings</div><div class="chart-sub">Total: $${d.total_prize.toFixed(2)}</div></div>
+    ${miniBarChart(prizes, '#4ade80')}
+  </div>
+  <div class="chart-card">
+    <div class="chart-header"><div class="chart-title">Season Rank</div><div class="chart-sub">Lower = better</div></div>
+    ${miniLineChart(d.rank_history.map(r => -r.season_rank + 12), '#f59e0b')}
+  </div>`;
+
+// Cards
+const usedSet = new Set(d.cards_used);
+document.getElementById('cards-used-count').textContent = `${usedSet.size} / ${ALL_CARDS.length} used`;
+document.getElementById('cards-grid').innerHTML = ALL_CARDS.map(c => {
+  const used = usedSet.has(c);
+  return `<div class="card-chip${used?' used':''}">
+    <span class="material-symbols-outlined card-icon ${used?'used':'unused'}" style="font-size:0.9rem">${used?'check_circle':'close'}</span>
+    <span class="card-name ${used?'used':'unused'}">${c}</span>
+  </div>`;
+}).join('');
+
+// Driver lineup
+document.getElementById('lineup-race-label').textContent = `Race ${d.race_number} picks`;
+const drivers = d.picks.filter(p => p.type === 'Driver');
+const cons = d.picks.filter(p => p.type === 'Constructor');
+const heroDrivers = drivers.slice(0, 2);
+const compactDrivers = drivers.slice(2);
+
+document.getElementById('hero-drivers').innerHTML = heroDrivers.map((p, i) => {
+  const badge = p.is_megacap ? 'megacap' : p.is_captain ? 'captain' : '';
+  const badgeLabel = p.is_megacap ? '3× Megacap' : p.is_captain ? '2× Captain' : '';
+  const borderCls = p.is_megacap ? 'megacap' : p.is_captain ? 'captain' : '';
+  return `<div class="hero-card ${borderCls}">
+    ${badgeLabel ? `<div class="hero-badge ${badge}">${badgeLabel}</div>` : ''}
+    ${p.is_new ? `<div class="hero-badge new-pick">New</div>` : ''}
+    <img class="hero-portrait" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'"/>
+    <div class="hero-gradient"></div>
+    <div class="hero-info">
+      <div class="hero-driver-name">${p.name.split(' ').slice(-1)[0]}</div>
+      <div class="hero-price">${p.price != null ? `$${p.price.toFixed(1)}M` : '—'}</div>
+      <div style="margin-top:auto">
+        <div class="hero-pts-label">Points</div>
+        <div class="hero-pts ${p.pts < 0 ? 'neg' : ''}">${p.pts > 0 ? '+' : ''}${p.pts}</div>
+      </div>
+    </div>
+  </div>`;
+}).join('');
+
+document.getElementById('compact-drivers').innerHTML = compactDrivers.map(p => `
+  <div class="compact-card">
+    <img class="compact-portrait" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'"/>
+    ${p.is_new ? `<div class="compact-new-badge">New</div>` : ''}
+    <div class="compact-info">
+      <div class="compact-name">${p.name.split(' ').slice(-1)[0]}</div>
+      <div class="compact-price">${p.price != null ? `$${p.price.toFixed(1)}M` : '—'}</div>
+      <div class="compact-bottom">
+        <span class="compact-pts-label">PTS</span>
+        <span class="compact-pts ${p.pts < 0 ? 'neg' : ''}">${p.pts}</span>
+      </div>
+    </div>
+  </div>`).join('');
+
+document.getElementById('constructors-grid').innerHTML = cons.map((p, i) => `
+  <div class="con-card ${i === 1 ? 'second' : ''}">
+    <div class="con-car-wrap">
+      <img class="con-car-img" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'"/>
+      ${p.is_new ? `<div class="con-new-badge">New</div>` : ''}
+    </div>
+    <div class="con-info">
+      <div>
+        <div class="con-name">${p.name.replace(' F1 Team','')}</div>
+        <div class="con-price">${p.price != null ? `$${p.price.toFixed(1)}M` : '—'}</div>
+      </div>
+      <div class="con-right">
+        <div class="con-pts ${p.pts < 0 ? '' : ''}">${p.pts > 0 ? '+' : ''}${p.pts}</div>
+      </div>
+    </div>
+  </div>`).join('');
+
+// ── RENDER LANDSCAPE ──────────────────────────────────────────────────────
+function renderLandscape() {
+  // Sidebar profile
+  document.getElementById('ls-profile').innerHTML = `
+    <div class="ls-name">${d.user_name}</div>
+    <div class="ls-team">${d.team_name}</div>
+    <div class="ls-rank">P${d.season_rank}</div>
+    <div class="ls-rank-label">Season Rank</div>`;
+
+  document.getElementById('ls-stats').innerHTML = [
+    { l:'Total Points', v: d.season_points },
+    { l:'Avg / Race',   v: avgRace },
+    { l:'Budget',       v: `$${d.new_budget.toFixed(1)}M`, cls:'blue' },
+    { l:'Prize Money',  v: d.total_prize > 0 ? `$${d.total_prize.toFixed(2)}` : '—', cls: d.total_prize > 0 ? 'green' : '' },
+    { l:'Cards Used',   v: d.cards_used.join(', ') || 'None' },
+    { l:'Race 1 Pts',   v: d.rank_history[0]?.race_points || '—' },
+    { l:'Race 2 Pts',   v: d.rank_history[1]?.race_points || '—' },
+  ].map(s => `<div class="ls-stat-row">
+    <span class="ls-stat-label">${s.l}</span>
+    <span class="ls-stat-val${s.cls ? ' ' + s.cls : ''}">${s.v}</span>
+  </div>`).join('');
+
+  // Charts row
+  document.getElementById('ls-main-title').textContent = `${d.user_name} — Season Performance`;
+  document.getElementById('ls-charts-grid').innerHTML = `
+    <div class="ls-chart-card">
+      <div class="chart-header" style="margin-bottom:8px"><div class="chart-title">Budget</div></div>
+      ${miniLineChart(budgets, '#a6c8ff', 180, 50)}
+    </div>
+    <div class="ls-chart-card">
+      <div class="chart-header red" style="margin-bottom:8px"><div class="chart-title">Race Points</div></div>
+      ${miniBarChart(racePoints, '#e10600', 180, 50)}
+    </div>
+    <div class="ls-chart-card">
+      <div class="chart-header green" style="margin-bottom:8px"><div class="chart-title">Prizes</div></div>
+      ${miniBarChart(prizes, '#4ade80', 180, 50)}
+    </div>`;
+
+  // Rank table
+  document.getElementById('ls-rank-table').innerHTML = `
+    <table class="rank-table">
+      <thead><tr>
+        <th>Race</th>
+        <th>Season Rank</th>
+        <th>Race Rank</th>
+        <th style="text-align:right">Race Pts</th>
+        <th style="text-align:right">Budget</th>
+        <th style="text-align:right">Prize</th>
+      </tr></thead>
+      <tbody>${d.rank_history.map((r, i) => {
+        const delta = rankDelta(d.rank_history, i);
+        const deltaHTML = !delta ? '' :
+          delta.dir === 'up' ? `<span class="delta-up">▲${delta.n}</span>` :
+          delta.dir === 'dn' ? `<span class="delta-dn">▼${delta.n}</span>` :
+          `<span class="delta-flat">—</span>`;
+        return `<tr>
+          <td><span style="font-size:1rem">${r.race_flag}</span> R${r.race}</td>
+          <td><span class="rank-num">P${r.season_rank}</span> ${deltaHTML}</td>
+          <td><span class="rank-num">P${r.race_rank}</span></td>
+          <td class="rank-pts">${r.race_points}</td>
+          <td class="rank-budget">$${r.new_budget.toFixed(1)}M</td>
+          <td class="rank-prize">${r.race_prize > 0 ? `$${r.race_prize.toFixed(2)}` : '—'}</td>
+        </tr>`;
+      }).join('')}</tbody>
+    </table>`;
+}
+
+renderLandscape();
+window.addEventListener('resize', () => { if (window.innerWidth > window.innerHeight) renderLandscape(); });
+window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
+</script>
+</body>
+</html>

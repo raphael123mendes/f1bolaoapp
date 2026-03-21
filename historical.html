@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F1 Bolão — Historical Data</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --red:#e10600;--red-dim:#ffb4a8;
+  --blue:#a6c8ff;--blue-bright:#3192fc;
+  --green:#4ade80;--amber:#f59e0b;--purple:#c084fc;
+  --surface:#131313;--surface-low:#1c1b1b;--surface-mid:#201f1f;
+  --surface-high:#2a2a2a;--surface-highest:#353534;
+  --on:#e5e2e1;
+  --on-60:rgba(229,226,225,0.6);--on-40:rgba(229,226,225,0.4);
+  --on-20:rgba(229,226,225,0.2);--on-08:rgba(229,226,225,0.08);
+  --outline:#af8781;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--surface);color:var(--on);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;font-family:'Material Symbols Outlined';vertical-align:middle}
+
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:50;background:var(--surface);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;height:56px;padding:0 16px}
+.back-btn{background:none;border:none;cursor:pointer;color:var(--red);padding:6px;display:flex;align-items:center;gap:6px;font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+.topbar-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:var(--red);text-transform:uppercase}
+.icon-btn{background:none;border:none;cursor:pointer;color:var(--on-40);padding:6px;display:flex;align-items:center}
+
+main{flex:1;padding-bottom:80px}
+
+/* ── ENTITY SELECTOR ── */
+.filter-bar{display:flex;gap:4px;padding:12px 16px 8px}
+.filter-btn{background:var(--surface-high);border:none;color:var(--on-40);font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:7px 14px;cursor:pointer;transition:all 0.15s}
+.filter-btn.active{background:var(--red);color:#fff}
+.filter-btn:hover:not(.active){color:var(--on);background:var(--surface-highest)}
+
+.entity-scroll{display:flex;overflow-x:auto;gap:6px;padding:0 16px 10px;scrollbar-width:none}
+.entity-scroll::-webkit-scrollbar{display:none}
+.entity-pill{flex-shrink:0;display:flex;align-items:center;gap:6px;background:var(--surface-high);border:none;cursor:pointer;padding:5px 10px 5px 5px;transition:all 0.15s;border-bottom:2px solid transparent}
+.entity-pill.active{border-bottom-color:var(--red);background:var(--surface-highest)}
+.entity-pill:hover:not(.active){background:var(--surface-highest)}
+.pill-thumb{width:22px;height:22px;object-fit:cover;object-position:top;flex-shrink:0;background:var(--surface-highest)}
+.pill-thumb.car{object-fit:contain;padding:1px}
+.pill-name{font-size:0.58rem;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap;color:var(--on)}
+.pill-pts{font-size:0.58rem;font-weight:700;color:var(--on-40)}
+
+/* ── HERO ── */
+.hero{margin:0 16px 4px;background:var(--surface-low);overflow:hidden;position:relative;border-left:4px solid var(--red)}
+.hero-inner{display:flex;align-items:stretch;min-height:120px}
+.hero-img-wrap{width:90px;flex-shrink:0;overflow:hidden;background:var(--surface-high);position:relative}
+.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(40%);display:block}
+.hero-car{width:100%;height:100%;object-fit:contain;padding:8px;display:block}
+.hero-content{flex:1;padding:16px;min-width:0}
+.hero-badge{display:inline-block;background:var(--red);color:#fff;font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;padding:2px 7px;margin-bottom:6px}
+.hero-badge.con{background:var(--blue-bright)}
+.hero-name{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:1}
+.hero-bg-abbr{position:absolute;right:-4px;top:-4px;font-family:'Space Grotesk',sans-serif;font-size:5rem;font-weight:900;font-style:italic;color:rgba(255,255,255,0.04);pointer-events:none;line-height:1}
+.hero-stats-row{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
+.hero-stat{display:flex;flex-direction:column}
+.hero-stat-label{font-size:0.46rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40)}
+.hero-stat-val{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;line-height:1.1}
+.hero-stat-sub{font-size:0.5rem;font-weight:700;margin-top:1px}
+.hero-stat-sub.pos{color:var(--green)}
+.hero-stat-sub.neg{color:var(--red-dim)}
+.hero-stat-sub.flat{color:var(--on-40)}
+
+/* ── FORECAST CARDS ── */
+.forecast-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin:8px 16px 0}
+.fc-card{background:var(--surface-high);padding:12px 10px}
+.fc-card.red{border-left:2px solid var(--red)}
+.fc-card.blue{border-left:2px solid var(--blue)}
+.fc-card.green{border-left:2px solid var(--green)}
+.fc-label{font-size:0.48rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);margin-bottom:4px}
+.fc-icon{font-size:1.2rem;margin-bottom:4px;display:block}
+.fc-val{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;line-height:1.1}
+.fc-sub{font-size:0.5rem;font-weight:600;color:var(--on-40);margin-top:3px;line-height:1.4}
+
+/* ── ROUND TABLE ── */
+.table-section{margin:12px 16px 0}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
+.section-sub{font-size:0.5rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40)}
+.rotate-hint{display:flex;align-items:center;gap:4px;font-size:0.5rem;font-weight:700;color:var(--blue)}
+
+.tbl-wrap{overflow-x:auto;background:var(--surface-low)}
+.tbl-wrap::-webkit-scrollbar{height:3px}
+.tbl-wrap::-webkit-scrollbar-thumb{background:var(--red)}
+table{width:100%;border-collapse:collapse;min-width:380px}
+thead tr{background:var(--surface-highest)}
+th{font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:8px 10px;text-align:left;white-space:nowrap}
+th.right{text-align:right}
+tbody tr{border-bottom:1px solid var(--on-08);transition:background 0.1s;cursor:pointer}
+tbody tr:hover{background:var(--surface-high)}
+tbody tr.completed{}
+tbody tr.future{opacity:0.4}
+tbody tr.cancelled{opacity:0.3;text-decoration:line-through}
+tbody tr.best-race{border-left:2px solid var(--green)}
+tbody tr.worst-race{border-left:2px solid var(--red-dim)}
+tbody tr.sprint{border-left:2px solid var(--amber)}
+td{padding:9px 10px;font-size:0.72rem;white-space:nowrap}
+td.right{text-align:right}
+.td-round{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.8rem;color:var(--on-40)}
+.td-race{font-weight:700;text-transform:uppercase;letter-spacing:0.02em;font-size:0.65rem}
+.td-pts{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;text-align:right}
+.td-pts.pos{color:var(--on)}
+.td-pts.neg{color:var(--red-dim)}
+.td-pts.zero{color:var(--on-40)}
+.td-pts.future{color:var(--on-20)}
+.td-price{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:600;text-align:right;color:var(--on-60)}
+.td-chg{font-size:0.62rem;font-weight:700;text-align:right}
+.td-chg.pos{color:var(--green)}
+.td-chg.neg{color:var(--red-dim)}
+.td-chg.flat{color:var(--on-40)}
+.td-eff{font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:700;text-align:right;color:var(--blue)}
+.td-eff.neg{color:var(--red-dim)}
+.td-eff.zero{color:var(--on-40)}
+.sprint-tag{font-size:0.42rem;font-weight:800;background:rgba(245,158,11,0.2);color:var(--amber);padding:1px 4px;letter-spacing:0.08em;text-transform:uppercase;margin-left:4px}
+.cancelled-tag{font-size:0.42rem;font-weight:800;background:rgba(229,226,225,0.08);color:var(--on-40);padding:1px 4px;letter-spacing:0.08em;text-transform:uppercase;margin-left:4px}
+
+/* ── COMPETITIVENESS ── */
+.comp-section{margin:12px 16px 0}
+.comp-grid{display:flex;flex-direction:column;gap:4px;background:var(--surface-low);padding:14px}
+.comp-row{display:flex;align-items:center;gap:10px}
+.comp-name{font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.04em;width:110px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;color:var(--on-60)}
+.comp-name:hover{color:var(--blue)}
+.comp-name.selected{color:var(--on)}
+.comp-bar-wrap{flex:1;height:8px;background:var(--surface-highest);position:relative}
+.comp-bar-fill{height:100%;position:absolute;top:0;left:0;transition:width 0.4s}
+.comp-eff{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;width:30px;text-align:right;flex-shrink:0}
+
+/* ── SEASON CHART ── */
+.chart-section{margin:12px 16px 0;background:var(--surface-low);padding:14px}
+.chart-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:10px;display:flex;justify-content:space-between}
+.chart-svg{width:100%;display:block;overflow:visible}
+
+/* ── LANDSCAPE ── */
+@media(orientation:landscape){
+  .portrait-only{display:none!important}
+  .landscape-wrap{display:flex!important}
+  main{padding-bottom:0;height:calc(100dvh - 56px);overflow:hidden}
+  .bottom-nav{display:none}
+  .topbar{position:relative}
+}
+.landscape-wrap{
+  display:none;
+  flex-direction:row;
+  height:calc(100dvh - 56px);
+  width:100%;
+}
+.ls-left{width:220px;flex-shrink:0;background:var(--surface-low);overflow-y:auto;border-right:1px solid var(--on-08);display:flex;flex-direction:column}
+.ls-right{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.ls-entity-sel{padding:8px 10px;border-bottom:1px solid var(--on-08)}
+.ls-select{width:100%;background:var(--surface-high);border:1px solid var(--red);color:var(--on);font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;padding:5px 8px;cursor:pointer;outline:none;appearance:none}
+.ls-hero{padding:12px;border-left:3px solid var(--red);border-bottom:1px solid var(--on-08)}
+.ls-name{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase}
+.ls-stats{flex:1;overflow-y:auto}
+.ls-stat-row{display:flex;justify-content:space-between;padding:7px 12px;border-bottom:1px solid var(--on-08);font-size:0.52rem}
+.ls-stat-label{font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
+.ls-stat-val{font-family:'Space Grotesk',sans-serif;font-weight:700}
+.ls-stat-val.green{color:var(--green)}
+.ls-stat-val.blue{color:var(--blue)}
+.ls-stat-val.red{color:var(--red-dim)}
+.ls-title{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--on-60);margin-bottom:8px}
+.ls-tbl-wrap{overflow-x:auto;background:var(--surface-low)}
+.ls-charts-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ls-chart-card{background:var(--surface-low);padding:10px}
+.ls-chart-title{font-size:0.55rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);margin-bottom:8px}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:rgba(166,200,255,0.35);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.15s;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-item.active{color:var(--red);border-top:2px solid var(--red);background:var(--surface-low)}
+.nav-item .material-symbols-outlined{font-size:1.3rem}
+.nav-item.active .material-symbols-outlined{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="back-btn" onclick="history.back()">
+      <span class="material-symbols-outlined">arrow_back</span>Back
+    </button>
+    <div class="topbar-title">Historical Data</div>
+    <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
+  </div>
+</header>
+
+<!-- LANDSCAPE -->
+<div class="landscape-wrap" id="landscape-wrap">
+  <div class="ls-left">
+    <div class="ls-entity-sel">
+      <select class="ls-select" id="ls-select" onchange="selectEntity(this.value)"></select>
+    </div>
+    <div class="ls-hero" id="ls-hero"></div>
+    <div class="ls-stats" id="ls-stats"></div>
+  </div>
+  <div class="ls-right" id="ls-right"></div>
+</div>
+
+<!-- PORTRAIT -->
+<main class="portrait-only">
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+    <button class="filter-btn" onclick="setFilter('Driver',this)">Drivers</button>
+    <button class="filter-btn" onclick="setFilter('Constructor',this)">Constructors</button>
+  </div>
+  <div class="entity-scroll" id="entity-scroll"></div>
+
+  <div class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-img-wrap" id="hero-img-wrap">
+        <img id="hero-img" src="" alt="" onerror="this.style.opacity='0.1'"/>
+      </div>
+      <div class="hero-content">
+        <div class="hero-bg-abbr" id="hero-abbr"></div>
+        <div class="hero-badge" id="hero-badge"></div>
+        <div class="hero-name" id="hero-name"></div>
+        <div class="hero-stats-row" id="hero-stats"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="forecast-grid" id="forecast-grid"></div>
+
+  <div class="chart-section" style="margin:8px 16px 0">
+    <div class="chart-title">
+      <span>Season Performance</span>
+      <div class="rotate-hint">
+        <span class="material-symbols-outlined" style="font-size:0.9rem">screen_rotation</span>
+        Rotate for full table
+      </div>
+    </div>
+    <svg id="season-chart" class="chart-svg" viewBox="0 0 340 100"></svg>
+    <div style="display:flex;gap:14px;margin-top:8px">
+      <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:3px;background:var(--red)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">Points</span></div>
+      <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:3px;background:var(--blue)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">Price $M</span></div>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <div class="section-header">
+      <span class="section-title">Round by Round</span>
+      <div class="rotate-hint">
+        <span class="material-symbols-outlined" style="font-size:0.9rem">screen_rotation</span>Rotate for full view
+      </div>
+    </div>
+    <div class="tbl-wrap" id="tbl-wrap">
+      <table id="round-table">
+        <thead><tr>
+          <th>R</th><th>Race</th>
+          <th class="right">Pts</th>
+          <th class="right">Price</th>
+          <th class="right">Chg</th>
+          <th class="right">Pts/$M</th>
+        </tr></thead>
+        <tbody id="round-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="comp-section">
+    <div class="section-header">
+      <span class="section-title">Market Competitiveness</span>
+      <span class="section-sub">Pts / $M</span>
+    </div>
+    <div class="comp-grid" id="comp-grid"></div>
+  </div>
+</main>
+
+<nav class="bottom-nav portrait-only">
+  <a class="nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
+  <a class="nav-item" href="results.html"><span class="material-symbols-outlined">flag</span><span>Results</span></a>
+  <a class="nav-item active" href="market.html"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
+  <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
+</nav>
+
+<script>
+const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
+const CON_SLUG = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
+
+function imgPath(name, type) {
+  if (type === 'Driver') {
+    const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
+    return `images/portraits/${slug}.png`;
+  }
+  const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/,'').replace(/ /g,'_');
+  return `images/cars/${slug}.webp`;
+}
+
+const ENTITY_ORDER = ["Mercedes","Ferrari","Haas F1 Team","Racing Bulls","Red Bull Racing","McLaren","Audi","George Russell","Charles Leclerc","Lewis Hamilton","Kimi Antonelli","Oliver Bearman","Liam Lawson","Carlos Sainz","Esteban Ocon","Sergio Perez","Franco Colapinto","Arvid Lindblad","Isack Hadjar","Gabriel Bortoleto","Lando Norris","Valtteri Bottas","Nico Hulkenberg","Oscar Piastri","Alexander Albon","Fernando Alonso","Lance Stroll","Max Verstappen","Pierre Gasly","Sergio Perez","Isack Hadjar"];
+
+const DATA = {"Alexander Albon":{"type":"Driver","total_pts":0,"current_price":10.8,"next_price":10.8,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":7.8,"price_next":8.0,"price_chg":0.2,"price_chg_pct":2.56,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":8.0,"price_next":8.1,"price_chg":0.1,"price_chg_pct":1.25,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":8.1,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Alpine":{"type":"Constructor","total_pts":0,"current_price":13.7,"next_price":13.7,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":12.5,"price_next":13.1,"price_chg":0.6,"price_chg_pct":4.8,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":13.1,"price_next":12.7,"price_chg":-0.4,"price_chg_pct":-3.05,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":12.7,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Aston Martin":{"type":"Constructor","total_pts":0,"current_price":9.1,"next_price":9.1,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":10.3,"price_next":9.7,"price_chg":-0.6,"price_chg_pct":-5.83,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":9.7,"price_next":9.2,"price_chg":-0.5,"price_chg_pct":-5.15,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":9.2,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Audi":{"type":"Constructor","total_pts":-4,"current_price":5.4,"next_price":5.4,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":18,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":9.3,"price_next":8.7,"price_chg":-0.6,"price_chg_pct":-6.45,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":-4,"price":8.7,"price_next":5.4,"price_chg":-0.6,"price_chg_pct":-10.0,"eff":-0.46,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":5.4,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Cadillac":{"type":"Constructor","total_pts":0,"current_price":5.2,"next_price":5.2,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":5.0,"price_next":5.1,"price_chg":0.1,"price_chg_pct":2.0,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":5.1,"price_next":5.2,"price_chg":0.1,"price_chg_pct":1.96,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":5.2,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Carlos Sainz":{"type":"Driver","total_pts":37,"current_price":12.2,"next_price":12.2,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":9,"pts_per_m":3.0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":15,"price":18.2,"price_next":18.5,"price_chg":0.3,"price_chg_pct":1.65,"eff":0.82,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":37,"price":18.5,"price_next":12.2,"price_chg":0.3,"price_chg_pct":1.62,"eff":2.0,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":12.2,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Charles Leclerc":{"type":"Driver","total_pts":80,"current_price":23.4,"next_price":23.4,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":45,"pts_per_m":3.4,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":29,"price":22.8,"price_next":23.1,"price_chg":0.3,"price_chg_pct":1.32,"eff":1.27,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":51,"price":23.1,"price_next":23.4,"price_chg":0.3,"price_chg_pct":1.3,"eff":2.21,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":23.4,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Esteban Ocon":{"type":"Driver","total_pts":33,"current_price":8.5,"next_price":8.5,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":18,"pts_per_m":3.9,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":5,"price":8.9,"price_next":9.1,"price_chg":0.2,"price_chg_pct":2.25,"eff":0.56,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":33,"price":9.1,"price_next":8.5,"price_chg":0.6,"price_chg_pct":7.59,"eff":3.63,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":8.5,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Ferrari":{"type":"Constructor","total_pts":188,"current_price":23.9,"next_price":23.9,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":82,"pts_per_m":7.9,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":69,"price":23.3,"price_next":23.6,"price_chg":0.3,"price_chg_pct":1.29,"eff":2.96,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":119,"price":23.6,"price_next":23.9,"price_chg":0.3,"price_chg_pct":1.27,"eff":5.04,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":23.9,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Fernando Alonso":{"type":"Driver","total_pts":0,"current_price":8.8,"next_price":8.8,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":13.2,"price_next":12.7,"price_chg":-0.5,"price_chg_pct":-3.79,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":12.7,"price_next":8.8,"price_chg":-0.4,"price_chg_pct":-3.15,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":8.8,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Franco Colapinto":{"type":"Driver","total_pts":24,"current_price":7.0,"next_price":7.0,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":27,"pts_per_m":3.4,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":10,"price":8.5,"price_next":8.9,"price_chg":0.4,"price_chg_pct":4.71,"eff":1.18,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":24,"price":8.9,"price_next":7.0,"price_chg":0.6,"price_chg_pct":9.37,"eff":2.7,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":7.0,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Gabriel Bortoleto":{"type":"Driver","total_pts":-1,"current_price":6.4,"next_price":6.4,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":55,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":13,"price":8.3,"price_next":8.0,"price_chg":-0.3,"price_chg_pct":-3.61,"eff":1.57,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":-14,"price":8.0,"price_next":6.4,"price_chg":-0.6,"price_chg_pct":-8.57,"eff":-1.75,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":6.4,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"George Russell":{"type":"Driver","total_pts":84,"current_price":28.0,"next_price":28.0,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":45,"pts_per_m":3.0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":39,"price":27.4,"price_next":27.7,"price_chg":0.3,"price_chg_pct":1.09,"eff":1.42,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":45,"price":27.7,"price_next":28.0,"price_chg":0.3,"price_chg_pct":1.08,"eff":1.62,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":28.0,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Haas F1 Team":{"type":"Constructor","total_pts":99,"current_price":8.6,"next_price":8.6,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":18,"pts_per_m":11.5,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":58,"price":9.4,"price_next":9.8,"price_chg":0.4,"price_chg_pct":4.26,"eff":6.17,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":65,"price":9.8,"price_next":8.6,"price_chg":0.6,"price_chg_pct":7.5,"eff":6.63,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":8.6,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Isack Hadjar":{"type":"Driver","total_pts":11,"current_price":13.9,"next_price":13.9,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":18,"pts_per_m":0.8,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":11,"price":9.9,"price_next":10.1,"price_chg":0.2,"price_chg_pct":2.02,"eff":1.11,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":11,"price":10.1,"price_next":13.9,"price_chg":-0.6,"price_chg_pct":-4.14,"eff":1.09,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":13.9,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Kimi Antonelli":{"type":"Driver","total_pts":68,"current_price":23.8,"next_price":23.8,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":36,"pts_per_m":2.9,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":25,"price":23.2,"price_next":23.5,"price_chg":0.3,"price_chg_pct":1.29,"eff":1.08,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":68,"price":23.5,"price_next":23.8,"price_chg":0.3,"price_chg_pct":1.28,"eff":2.89,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":23.8,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Lance Stroll":{"type":"Driver","total_pts":0,"current_price":6.8,"next_price":6.8,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":8.0,"price_next":8.1,"price_chg":0.1,"price_chg_pct":1.25,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":8.1,"price_next":6.8,"price_chg":-0.1,"price_chg_pct":-1.23,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":6.8,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Lando Norris":{"type":"Driver","total_pts":-10,"current_price":26.8,"next_price":26.8,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":9,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":27.2,"price_next":26.7,"price_chg":-0.5,"price_chg_pct":-1.84,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":-10,"price":26.7,"price_next":26.8,"price_chg":-0.3,"price_chg_pct":-1.11,"eff":-0.37,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":26.8,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Lewis Hamilton":{"type":"Driver","total_pts":73,"current_price":22.9,"next_price":22.9,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":27,"pts_per_m":3.2,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":25,"price":22.3,"price_next":22.5,"price_chg":0.2,"price_chg_pct":0.9,"eff":1.12,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":48,"price":22.5,"price_next":22.9,"price_chg":0.3,"price_chg_pct":1.33,"eff":2.13,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":22.9,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Liam Lawson":{"type":"Driver","total_pts":40,"current_price":6.9,"next_price":6.9,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":64,"pts_per_m":5.8,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":5,"price":11.7,"price_next":12.0,"price_chg":0.3,"price_chg_pct":2.56,"eff":0.43,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":35,"price":12.0,"price_next":6.9,"price_chg":0.6,"price_chg_pct":9.52,"eff":2.92,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":6.9,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Max Verstappen":{"type":"Driver","total_pts":0,"current_price":28.1,"next_price":28.1,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":28.5,"price_next":28.2,"price_chg":-0.3,"price_chg_pct":-1.05,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":28.2,"price_next":28.1,"price_chg":0.1,"price_chg_pct":0.36,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":28.1,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"McLaren":{"type":"Constructor","total_pts":19,"current_price":28.5,"next_price":28.5,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":9,"pts_per_m":0.7,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":11,"price":21.7,"price_next":21.5,"price_chg":-0.2,"price_chg_pct":-0.92,"eff":0.51,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":8,"price":21.5,"price_next":28.5,"price_chg":-0.5,"price_chg_pct":-2.33,"eff":0.37,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":28.5,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Mercedes":{"type":"Constructor","total_pts":211,"current_price":29.9,"next_price":29.9,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":64,"pts_per_m":7.1,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":96,"price":29.3,"price_next":29.6,"price_chg":0.3,"price_chg_pct":1.02,"eff":3.28,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":115,"price":29.6,"price_next":29.9,"price_chg":0.3,"price_chg_pct":1.01,"eff":3.89,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":29.9,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Nico Hulkenberg":{"type":"Driver","total_pts":-13,"current_price":5.6,"next_price":5.6,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":27,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":22,"price":12.5,"price_next":12.6,"price_chg":0.1,"price_chg_pct":0.8,"eff":1.76,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":-13,"price":12.6,"price_next":5.6,"price_chg":-0.6,"price_chg_pct":-9.68,"eff":-1.03,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":5.6,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Oliver Bearman":{"type":"Driver","total_pts":54,"current_price":8.6,"next_price":8.6,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":27,"pts_per_m":6.3,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":32,"price":9.8,"price_next":9.8,"price_chg":0.0,"price_chg_pct":0.0,"eff":3.27,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":54,"price":9.8,"price_next":8.6,"price_chg":0.6,"price_chg_pct":7.5,"eff":5.51,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":8.6,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Oscar Piastri":{"type":"Driver","total_pts":-14,"current_price":24.9,"next_price":24.9,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":24.0,"price_next":24.3,"price_chg":0.3,"price_chg_pct":1.25,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":-14,"price":24.3,"price_next":24.9,"price_chg":-0.3,"price_chg_pct":-1.19,"eff":-0.58,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":24.9,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Pierre Gasly":{"type":"Driver","total_pts":0,"current_price":12.8,"next_price":12.8,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":11.0,"price_next":11.0,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":11.0,"price_next":12.8,"price_chg":-0.2,"price_chg_pct":-1.82,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":12.8,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Racing Bulls":{"type":"Constructor","total_pts":85,"current_price":7.5,"next_price":7.5,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":18,"pts_per_m":11.3,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":10.1,"price_next":10.5,"price_chg":0.4,"price_chg_pct":3.96,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":85,"price":10.5,"price_next":7.5,"price_chg":0.6,"price_chg_pct":8.7,"eff":8.1,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":7.5,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Red Bull Racing":{"type":"Constructor","total_pts":42,"current_price":28.8,"next_price":28.8,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":1.5,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":15.7,"price_next":15.4,"price_chg":-0.3,"price_chg_pct":-1.91,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":42,"price":15.4,"price_next":28.8,"price_chg":-0.4,"price_chg_pct":-2.6,"eff":2.73,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":28.8,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Sergio Perez":{"type":"Driver","total_pts":24,"current_price":6.4,"next_price":6.4,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":9,"pts_per_m":3.8,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":14,"price":7.7,"price_next":8.5,"price_chg":0.8,"price_chg_pct":10.39,"eff":1.82,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":24,"price":8.5,"price_next":6.4,"price_chg":0.6,"price_chg_pct":7.06,"eff":2.82,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":6.4,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Valtteri Bottas":{"type":"Driver","total_pts":-13,"current_price":4.7,"next_price":4.7,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":27,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":-4,"price":7.1,"price_next":6.3,"price_chg":-0.8,"price_chg_pct":-11.27,"eff":-0.56,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":-13,"price":6.3,"price_next":4.7,"price_chg":-0.6,"price_chg_pct":-11.11,"eff":-2.06,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":4.7,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Williams":{"type":"Constructor","total_pts":0,"current_price":13.2,"next_price":13.2,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":0,"pts_per_m":0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":12.5,"price_next":13.1,"price_chg":0.6,"price_chg_pct":4.76,"eff":0,"has_pts":false},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":0,"price":13.1,"price_next":13.2,"price_chg":0.6,"price_chg_pct":4.76,"eff":0,"has_pts":false},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":13.2,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]},"Arvid Lindblad":{"type":"Driver","total_pts":22,"current_price":7.4,"next_price":7.4,"next_price_chg":0.0,"next_price_chg_pct":0.0,"ownership":55,"pts_per_m":3.0,"rows":[{"race":1,"race_name":"Australian Grand Prix","sprint":false,"cancelled":false,"pts":15,"price":6.2,"price_next":6.8,"price_chg":0.6,"price_chg_pct":9.68,"eff":2.42,"has_pts":true},{"race":2,"race_name":"Chinese Grand Prix","sprint":true,"cancelled":false,"pts":22,"price":6.8,"price_next":7.4,"price_chg":0.6,"price_chg_pct":8.82,"eff":3.24,"has_pts":true},{"race":3,"race_name":"Japanese Grand Prix","sprint":false,"cancelled":false,"pts":0,"price":7.4,"price_next":null,"price_chg":0.0,"price_chg_pct":0.0,"eff":0,"has_pts":false}]}};
+
+const SORTED_NAMES = Object.keys(DATA).sort((a,b) => DATA[b].total_pts - DATA[a].total_pts);
+const CAT_COLORS_COMP = ['#e10600','#a6c8ff','#4ade80','#f59e0b','#c084fc','#fb923c','#94a3b8'];
+
+let activeFilter = 'all';
+let selectedEntity = new URLSearchParams(window.location.search).get('entity') || 'George Russell';
+if (!DATA[selectedEntity]) selectedEntity = 'George Russell';
+
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function filteredNames() {
+  return SORTED_NAMES.filter(n => activeFilter === 'all' || DATA[n].type === activeFilter);
+}
+
+function isCon(name) { return DATA[name]?.type === 'Constructor'; }
+
+function heroImg(name) {
+  if (isCon(name)) {
+    const slug = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'}[name]
+      || name.toLowerCase().replace(/ f1 team/,'').replace(/ /g,'_');
+    return `images/cars/${slug}.webp`;
+  }
+  const slug = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'}[name]
+    || name.toLowerCase().replace(/ /g,'_');
+  return `images/portraits/${slug}.png`;
+}
+
+function miniSvg(rows, W, H) {
+  const completed = rows.filter(r => r.has_pts);
+  if (completed.length < 1) return '';
+  const prices = completed.map(r => r.price);
+  const pts    = completed.map(r => r.pts);
+  const maxPts = Math.max(...pts.map(Math.abs), 1);
+  const minP = Math.min(...prices), maxP = Math.max(...prices, minP+0.1);
+
+  function px(i, arr, mn, mx) {
+    const x = 6 + (i/(completed.length-1||1))*(W-12);
+    const y = H/2-4 - ((arr[i]-mn)/(mx-mn||1))*(H/2-8);
+    return [x, y];
+  }
+
+  const ptsPath = pts.map((v,i) => {
+    const x = 6 + (i/(completed.length-1||1))*(W-12);
+    const y = H-4 - (Math.max(0,v)/maxPts)*(H/2-8);
+    return `${i===0?'M':'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const pricePoints = prices.map((v,i) => px(i,prices,minP,maxP));
+  const pricePath = pricePoints.map((p,i)=>`${i===0?'M':'L'}${p[0].toFixed(1)},${(p[1]+H/2).toFixed(1)}`).join(' ');
+  const gId = 'g'+Math.random().toString(36).slice(2,5);
+  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;overflow:visible">
+    <defs><linearGradient id="${gId}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e10600" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#e10600" stop-opacity="0"/>
+    </linearGradient></defs>
+    <line x1="6" y1="${H/2}" x2="${W-6}" y2="${H/2}" stroke="rgba(229,226,225,0.06)" stroke-width="1"/>
+    <path d="${ptsPath} L${(6+(completed.length-1/(completed.length-1||1))*(W-12)).toFixed(1)},${H} L6,${H} Z" fill="url(#${gId})"/>
+    <path d="${ptsPath}" fill="none" stroke="#e10600" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="${pricePath}" fill="none" stroke="#a6c8ff" stroke-width="1.5" stroke-dasharray="3,2" stroke-linejoin="round"/>
+    ${completed.map((r,i)=>{
+      const x = 6+(i/(completed.length-1||1))*(W-12);
+      return `<text x="${x.toFixed(1)}" y="${H+10}" text-anchor="middle" font-family="Inter" font-size="8" fill="rgba(229,226,225,0.3)">R${r.race}</text>`;
+    }).join('')}
+  </svg>`;
+}
+
+// ── SELECTOR ──────────────────────────────────────────────────────────────
+function buildSelector() {
+  const names = filteredNames();
+  const el = document.getElementById('entity-scroll');
+  el.innerHTML = names.map(name => {
+    const d = DATA[name];
+    return `<button class="entity-pill${name===selectedEntity?' active':''}" onclick="selectEntity('${name.replace(/'/g,"\\'")}')">
+      <img class="pill-thumb${isCon(name)?' car':''}" src="${heroImg(name)}" alt="" onerror="this.style.opacity='0.2'"/>
+      <span class="pill-name">${name.split(' ').slice(-1)[0]}</span>
+      <span class="pill-pts">${d.total_pts}</span>
+    </button>`;
+  }).join('');
+  el.querySelector('.active')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+  // ls select
+  const lsSel = document.getElementById('ls-select');
+  if (lsSel) {
+    lsSel.innerHTML = SORTED_NAMES.map(n=>`<option value="${n}"${n===selectedEntity?' selected':''}>${n}</option>`).join('');
+  }
+}
+
+function setFilter(f, btn) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  buildSelector();
+}
+
+function selectEntity(name) {
+  selectedEntity = name;
+  buildSelector();
+  renderAll();
+}
+
+// ── HERO ──────────────────────────────────────────────────────────────────
+function renderHero() {
+  const d = DATA[selectedEntity];
+  const con = isCon(selectedEntity);
+  const img = document.getElementById('hero-img');
+  img.src = heroImg(selectedEntity);
+  img.className = con ? 'hero-car' : 'hero-portrait';
+  document.getElementById('hero-abbr').textContent = selectedEntity.split(' ').slice(-1)[0].slice(0,3).toUpperCase();
+  const badge = document.getElementById('hero-badge');
+  badge.textContent = con ? 'Constructor' : 'Driver';
+  badge.className = `hero-badge${con?' con':''}`;
+  document.getElementById('hero-name').textContent = selectedEntity;
+
+  const chgCls = d.next_price_chg > 0 ? 'pos' : d.next_price_chg < 0 ? 'neg' : 'flat';
+  const chgStr = d.next_price_chg > 0 ? `+$${d.next_price_chg.toFixed(1)}M` : d.next_price_chg < 0 ? `-$${Math.abs(d.next_price_chg).toFixed(1)}M` : 'Stable';
+  document.getElementById('hero-stats').innerHTML = `
+    <div class="hero-stat">
+      <div class="hero-stat-label">Current Price</div>
+      <div class="hero-stat-val">$${d.current_price.toFixed(1)}M</div>
+      <div class="hero-stat-sub ${chgCls}">${chgStr} (${d.next_price_chg_pct.toFixed(1)}%)</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-label">Season Pts</div>
+      <div class="hero-stat-val">${d.total_pts}</div>
+      <div class="hero-stat-sub flat">${d.rows.filter(r=>r.has_pts).length} races</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-label">Pts / $M</div>
+      <div class="hero-stat-val" style="color:var(--blue)">${d.pts_per_m}</div>
+      <div class="hero-stat-sub flat">${d.ownership}% owned</div>
+    </div>`;
+}
+
+// ── FORECAST ──────────────────────────────────────────────────────────────
+function renderForecast() {
+  const d = DATA[selectedEntity];
+  const completedRows = d.rows.filter(r => r.has_pts);
+  const bestRace = completedRows.length ? completedRows.reduce((a,b)=>a.pts>=b.pts?a:b) : null;
+  const stability = completedRows.length > 1
+    ? (100 - Math.round(Math.abs(completedRows[0].pts - completedRows[completedRows.length-1].pts) / Math.max(...completedRows.map(r=>Math.abs(r.pts)),1) * 100))
+    : 100;
+  const nextChg = d.next_price_chg;
+  const nextCls = nextChg > 0 ? 'green' : nextChg < 0 ? 'red' : 'blue';
+  const nextIcon = nextChg > 0 ? 'trending_up' : nextChg < 0 ? 'trending_down' : 'trending_flat';
+
+  document.getElementById('forecast-grid').innerHTML = `
+    <div class="fc-card ${nextCls}">
+      <div class="fc-label">Next Race Price</div>
+      <span class="material-symbols-outlined fc-icon" style="color:var(--${nextCls==='red'?'red-dim':nextCls})">${nextIcon}</span>
+      <div class="fc-val">$${d.next_price.toFixed(1)}M</div>
+      <div class="fc-sub">${nextChg >= 0 ? '+' : ''}${d.next_price_chg_pct.toFixed(1)}% projected</div>
+    </div>
+    <div class="fc-card blue">
+      <div class="fc-label">Stability</div>
+      <span class="material-symbols-outlined fc-icon" style="color:var(--blue)">verified_user</span>
+      <div class="fc-val">${stability}%</div>
+      <div class="fc-sub">Score vs avg</div>
+    </div>
+    <div class="fc-card ${d.ownership > 60 ? 'red' : 'green'}">
+      <div class="fc-label">Ownership</div>
+      <span class="material-symbols-outlined fc-icon" style="color:var(--${d.ownership>60?'red-dim':'green'})">groups</span>
+      <div class="fc-val">${d.ownership}%</div>
+      <div class="fc-sub">${d.ownership > 60 ? 'High saturation' : d.ownership < 25 ? 'Differentiator' : 'Moderate'}</div>
+    </div>`;
+}
+
+// ── SEASON CHART ──────────────────────────────────────────────────────────
+function renderChart() {
+  const d = DATA[selectedEntity];
+  const svg = document.getElementById('season-chart');
+  svg.innerHTML = miniSvg(d.rows, 340, 90) || '<text x="170" y="50" text-anchor="middle" font-family="Inter" font-size="11" fill="rgba(229,226,225,0.3)">No data yet</text>';
+}
+
+// ── ROUND TABLE ───────────────────────────────────────────────────────────
+function renderTable() {
+  const d = DATA[selectedEntity];
+  const completedRows = d.rows.filter(r => r.has_pts);
+  const bestPts = completedRows.length ? Math.max(...completedRows.map(r=>r.pts)) : 0;
+  const worstPts = completedRows.length > 1 ? Math.min(...completedRows.map(r=>r.pts)) : null;
+
+  document.getElementById('round-tbody').innerHTML = d.rows.map(row => {
+    const isBest = row.has_pts && row.pts === bestPts && bestPts > 0;
+    const isWorst = row.has_pts && worstPts !== null && row.pts === worstPts && worstPts < bestPts;
+    const rowCls = row.cancelled ? 'cancelled' : !row.has_pts ? 'future' : isBest ? 'best-race' : isWorst ? 'worst-race' : row.sprint ? 'sprint' : 'completed';
+    const ptsClass = !row.has_pts ? 'future' : row.pts > 0 ? 'pos' : row.pts < 0 ? 'neg' : 'zero';
+    const chgCls = row.price_chg > 0 ? 'pos' : row.price_chg < 0 ? 'neg' : 'flat';
+    const effCls = row.eff > 0 ? '' : row.eff < 0 ? 'neg' : 'zero';
+    const sprintTag = row.sprint ? '<span class="sprint-tag">Sprint</span>' : '';
+    const cancelTag = row.cancelled ? '<span class="cancelled-tag">Cancelled</span>' : '';
+    const ptsDisplay = !row.has_pts ? '—' : row.pts;
+    const effDisplay = !row.has_pts ? '—' : row.eff;
+    return `<tr class="${rowCls}">
+      <td><span class="td-round">R${String(row.race).padStart(2,'0')}</span></td>
+      <td><span class="td-race">${row.race_name.replace(' Grand Prix','').replace(' GP','')}${sprintTag}${cancelTag}</span></td>
+      <td class="right"><span class="td-pts ${ptsClass}">${ptsDisplay}</span></td>
+      <td class="right"><span class="td-price">$${row.price.toFixed(1)}M</span></td>
+      <td class="right"><span class="td-chg ${chgCls}">${row.price_chg>=0?'+':''}$${row.price_chg.toFixed(1)}M</span></td>
+      <td class="right"><span class="td-eff ${effCls}">${effDisplay}</span></td>
+    </tr>`;
+  }).join('');
+}
+
+// ── COMPETITIVENESS ───────────────────────────────────────────────────────
+function renderComp() {
+  const d = DATA[selectedEntity];
+  const sameType = Object.entries(DATA)
+    .filter(([n, e]) => e.type === d.type && e.pts_per_m >= 0)
+    .sort((a, b) => b[1].pts_per_m - a[1].pts_per_m)
+    .slice(0, 10);
+  const maxEff = sameType[0]?.[1].pts_per_m || 1;
+
+  document.getElementById('comp-grid').innerHTML = sameType.map(([name, e], i) => {
+    const color = CAT_COLORS_COMP[i % CAT_COLORS_COMP.length];
+    const isSelected = name === selectedEntity;
+    return `<div class="comp-row">
+      <span class="comp-name${isSelected?' selected':''}" onclick="selectEntity('${name.replace(/'/g,"\\'")}')">${name.split(' ').slice(-1)[0]}</span>
+      <div class="comp-bar-wrap">
+        <div class="comp-bar-fill" style="width:${maxEff>0?(e.pts_per_m/maxEff*100).toFixed(1):0}%;background:${isSelected?'var(--red)':color};opacity:${isSelected?1:0.5}"></div>
+      </div>
+      <span class="comp-eff" style="color:${isSelected?'var(--red)':color}">${e.pts_per_m}</span>
+    </div>`;
+  }).join('');
+}
+
+// ── LANDSCAPE ─────────────────────────────────────────────────────────────
+function renderLandscape() {
+  const d = DATA[selectedEntity];
+  const lsSel = document.getElementById('ls-select');
+  if (lsSel) lsSel.innerHTML = SORTED_NAMES.map(n=>`<option value="${n}"${n===selectedEntity?' selected':''}>${n}</option>`).join('');
+
+  document.getElementById('ls-hero').innerHTML = `
+    <img src="${heroImg(selectedEntity)}" alt="" style="width:100%;max-height:80px;object-fit:${isCon(selectedEntity)?'contain':'cover'};object-position:top;opacity:0.8;margin-bottom:8px" onerror="this.style.display='none'"/>
+    <div class="ls-name">${selectedEntity}</div>
+    <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-top:2px">${d.type}</div>`;
+
+  document.getElementById('ls-stats').innerHTML = [
+    {l:'Current Price', v:`$${d.current_price.toFixed(1)}M`, cls:'blue'},
+    {l:'Season Pts',    v:d.total_pts},
+    {l:'Pts / $M',     v:d.pts_per_m, cls:d.pts_per_m>5?'green':d.pts_per_m>0?'':'' },
+    {l:'Ownership',    v:`${d.ownership}%`},
+    {l:'Next Price',   v:`$${d.next_price.toFixed(1)}M`, cls:d.next_price_chg>0?'green':d.next_price_chg<0?'red':''},
+    {l:'Stability',    v: d.rows.filter(r=>r.has_pts).length > 1 ? `${100-Math.round(Math.abs((d.rows.filter(r=>r.has_pts)[0]?.pts||0)-(d.rows.filter(r=>r.has_pts).slice(-1)[0]?.pts||0))/Math.max(...d.rows.filter(r=>r.has_pts).map(r=>Math.abs(r.pts)),1)*100)}%` : 'N/A'},
+  ].map(s=>`<div class="ls-stat-row"><span class="ls-stat-label">${s.l}</span><span class="ls-stat-val${s.cls?' '+s.cls:''}">${s.v}</span></div>`).join('');
+
+  // Right panel
+  const W = 500;
+  document.getElementById('ls-right').innerHTML = `
+    <div class="ls-title">${selectedEntity} — Full Historical View</div>
+
+    <div class="ls-chart-card">
+      <div class="ls-chart-title">Points & Price — all ${d.rows.length} rounds</div>
+      ${miniSvg(d.rows, W, 100) || '<div style="color:var(--on-40);font-size:0.7rem;padding:8px">No completed races yet</div>'}
+    </div>
+
+    <div class="ls-tbl-wrap">
+      <table style="width:100%;border-collapse:collapse;min-width:400px">
+        <thead><tr style="background:var(--surface-highest)">
+          <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:left">R</th>
+          <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:left">Race</th>
+          <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:right">Pts</th>
+          <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:right">Price</th>
+          <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:right">Chg $</th>
+          <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:right">Chg%</th>
+          <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:right">Pts/$M</th>
+        </tr></thead>
+        <tbody>${d.rows.map(row=>{
+          const ptsC = !row.has_pts?'var(--on-20)':row.pts>0?'var(--on)':row.pts<0?'var(--red-dim)':'var(--on-40)';
+          const chgC = row.price_chg>0?'var(--green)':row.price_chg<0?'var(--red-dim)':'var(--on-40)';
+          const effC = row.eff>0?'var(--blue)':row.eff<0?'var(--red-dim)':'var(--on-40)';
+          return `<tr style="border-bottom:1px solid var(--on-08)">
+            <td style="padding:7px 10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.72rem;color:var(--on-40)">R${String(row.race).padStart(2,'0')}</td>
+            <td style="padding:7px 10px;font-size:0.65rem;font-weight:700;text-transform:uppercase">${row.race_name.replace(' Grand Prix','').replace(' GP','')}${row.sprint?'<span style="font-size:0.42rem;background:rgba(245,158,11,0.2);color:var(--amber);padding:1px 4px;margin-left:4px">S</span>':''}</td>
+            <td style="padding:7px 10px;text-align:right;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;color:${ptsC}">${row.has_pts?row.pts:'—'}</td>
+            <td style="padding:7px 10px;text-align:right;font-size:0.68rem;color:var(--on-60)">$${row.price.toFixed(1)}M</td>
+            <td style="padding:7px 10px;text-align:right;font-size:0.65rem;font-weight:700;color:${chgC}">${row.price_chg>=0?'+':''}$${row.price_chg.toFixed(1)}M</td>
+            <td style="padding:7px 10px;text-align:right;font-size:0.65rem;font-weight:700;color:${chgC}">${row.price_chg_pct>=0?'+':''}${row.price_chg_pct.toFixed(1)}%</td>
+            <td style="padding:7px 10px;text-align:right;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:700;color:${effC}">${row.has_pts?row.eff:'—'}</td>
+          </tr>`;
+        }).join('')}</tbody>
+      </table>
+    </div>
+
+    <div class="ls-chart-card">
+      <div class="ls-chart-title">Market Competitiveness — Pts/$M (${DATA[selectedEntity].type}s)</div>
+      ${(()=>{
+        const sameType = Object.entries(DATA).filter(([n,e])=>e.type===DATA[selectedEntity].type&&e.pts_per_m>=0).sort((a,b)=>b[1].pts_per_m-a[1].pts_per_m).slice(0,10);
+        const mx = sameType[0]?.[1].pts_per_m||1;
+        return sameType.map(([name,e],i)=>{
+          const color = CAT_COLORS_COMP[i%CAT_COLORS_COMP.length];
+          const isSel = name===selectedEntity;
+          return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
+            <span style="font-size:0.55rem;font-weight:700;text-transform:uppercase;width:100px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:${isSel?'var(--on)':'var(--on-40)'};cursor:pointer" onclick="selectEntity('${name.replace(/'/g,"\\'")}')">${name.split(' ').slice(-1)[0]}</span>
+            <div style="flex:1;height:8px;background:var(--surface-highest);position:relative">
+              <div style="width:${mx>0?(e.pts_per_m/mx*100).toFixed(1):0}%;height:100%;background:${isSel?'var(--red)':color};opacity:${isSel?1:0.55}"></div>
+            </div>
+            <span style="font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;color:${isSel?'var(--red)':color};width:28px;text-align:right">${e.pts_per_m}</span>
+          </div>`;
+        }).join('');
+      })()}
+    </div>`;
+}
+
+// ── MAIN RENDER ───────────────────────────────────────────────────────────
+function renderAll() {
+  renderHero();
+  renderForecast();
+  renderChart();
+  renderTable();
+  renderComp();
+  renderLandscape();
+}
+
+buildSelector();
+renderAll();
+window.addEventListener('resize', renderLandscape);
+window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
+</script>
+</body>
+</html>

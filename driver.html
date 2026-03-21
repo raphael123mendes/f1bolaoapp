@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F1 Bolão — Driver Analytics</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --red:#e10600;--red-dim:#ffb4a8;
+  --blue:#a6c8ff;--blue-bright:#3192fc;
+  --green:#4ade80;--amber:#f59e0b;
+  --surface:#131313;--surface-low:#1c1b1b;--surface-mid:#201f1f;
+  --surface-high:#2a2a2a;--surface-highest:#353534;
+  --on:#e5e2e1;
+  --on-60:rgba(229,226,225,0.6);--on-40:rgba(229,226,225,0.4);
+  --on-20:rgba(229,226,225,0.2);--on-08:rgba(229,226,225,0.08);
+  --outline:#af8781;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--surface);color:var(--on);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;font-family:'Material Symbols Outlined';vertical-align:middle}
+
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:50;background:var(--surface);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;height:56px;padding:0 16px}
+.back-btn{background:none;border:none;cursor:pointer;color:var(--red);padding:6px;display:flex;align-items:center;gap:6px;font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase}
+.topbar-title{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1rem;letter-spacing:-0.02em;color:var(--red);text-transform:uppercase;font-style:italic}
+.icon-btn{background:none;border:none;cursor:pointer;color:var(--on-40);padding:6px;display:flex;align-items:center}
+
+main{flex:1;padding-bottom:80px}
+
+/* ── ENTITY SELECTOR ── */
+.filter-bar{display:flex;gap:4px;padding:12px 16px 8px}
+.filter-btn{background:var(--surface-high);border:none;color:var(--on-40);font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:7px 14px;cursor:pointer;transition:all 0.15s}
+.filter-btn.active{background:var(--red);color:#fff}
+.filter-btn:hover:not(.active){color:var(--on);background:var(--surface-highest)}
+
+.entity-scroll{display:flex;overflow-x:auto;gap:6px;padding:0 16px 10px;scrollbar-width:none}
+.entity-scroll::-webkit-scrollbar{display:none}
+.entity-pill{flex-shrink:0;display:flex;align-items:center;gap:6px;background:var(--surface-high);border:none;cursor:pointer;padding:5px 10px 5px 5px;transition:all 0.15s;border-bottom:2px solid transparent;-webkit-tap-highlight-color:transparent}
+.entity-pill.active{border-bottom-color:var(--red);background:var(--surface-highest)}
+.entity-pill:hover:not(.active){background:var(--surface-highest)}
+.pill-thumb{width:22px;height:22px;object-fit:cover;object-position:top;border-radius:0;flex-shrink:0;background:var(--surface-highest)}
+.pill-thumb.car{object-fit:contain;object-position:center}
+.pill-name{font-size:0.58rem;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap}
+.pill-pts{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;color:var(--on-40);margin-left:2px}
+
+/* ── HERO ── */
+.hero{position:relative;margin:0 16px;overflow:hidden;background:var(--surface-low)}
+.hero-img-wrap{position:relative;height:200px;overflow:hidden;background:var(--surface-high)}
+.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(60%) contrast(1.1);display:block}
+.hero-car{width:100%;height:100%;object-fit:contain;object-position:center;padding:16px 24px;display:block}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--surface-low) 0%,transparent 50%)}
+.hero-num{position:absolute;bottom:12px;left:16px;font-family:'Space Grotesk',sans-serif;font-size:6rem;font-weight:900;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;user-select:none}
+.hero-info{padding:16px 16px 20px;border-left:4px solid var(--red)}
+.hero-team{font-size:0.55rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
+.hero-name{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:1}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:14px;border-top:1px solid var(--on-08);padding-top:14px}
+.hero-stat{padding-right:12px}
+.hero-stat+.hero-stat{border-left:1px solid var(--on-08);padding-left:12px}
+.hero-stat-label{font-size:0.46rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40)}
+.hero-stat-val{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;line-height:1.1;margin-top:2px}
+.hero-stat-sub{font-size:0.5rem;font-weight:700;margin-top:1px}
+.hero-stat-sub.pos{color:var(--green)}
+.hero-stat-sub.neg{color:var(--red-dim)}
+.hero-ownership{display:flex;align-items:center;gap:8px;margin-top:12px}
+.ownership-label{font-size:0.5rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40)}
+.ownership-bar-wrap{flex:1;height:4px;background:var(--surface-highest)}
+.ownership-bar-fill{height:100%;background:var(--blue);transition:width 0.5s ease}
+.ownership-pct{font-size:0.6rem;font-weight:700;color:var(--blue)}
+
+/* ── BENTO GRID ── */
+.bento{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 16px 0}
+.bento-card{background:var(--surface-low);padding:14px}
+.bento-full{grid-column:1/-1}
+.bento-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.bento-badge{background:var(--red);color:#fff;font-size:0.48rem;font-weight:900;letter-spacing:0.1em;padding:1px 5px;text-transform:uppercase}
+
+/* breakdown bars */
+.breakdown-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.breakdown-row:last-child{margin-bottom:0}
+.breakdown-label{font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;width:68px;flex-shrink:0;color:var(--on-60)}
+.breakdown-bars{flex:1;position:relative;height:14px}
+.breakdown-bg{position:absolute;inset:0;background:var(--surface-highest)}
+.breakdown-fill{position:absolute;top:0;left:0;height:100%;transition:width 0.5s ease}
+.breakdown-fill.player{background:var(--blue)}
+.breakdown-fill.avg{background:rgba(166,200,255,0.25)}
+.breakdown-val{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:700;width:28px;text-align:right;flex-shrink:0}
+.breakdown-val.neg{color:var(--red-dim)}
+
+/* comparison bars */
+.comp-row{margin-bottom:14px}
+.comp-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
+.comp-label{font-size:0.52rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
+.comp-delta{font-size:0.65rem;font-weight:700}
+.comp-delta.pos{color:var(--green)}
+.comp-delta.neg{color:var(--red-dim)}
+.comp-bar-wrap{height:8px;background:var(--surface-highest);position:relative}
+.comp-bar-fill{height:100%;position:absolute;top:0;left:0;transition:width 0.5s}
+.comp-labels{display:flex;justify-content:space-between;margin-top:3px}
+.comp-sub{font-size:0.45rem;font-weight:700;text-transform:uppercase;color:var(--on-40)}
+
+/* ── CHARTS SECTION (portrait) ── */
+.charts-section{margin:8px 16px 0}
+.charts-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.rotate-hint{display:flex;align-items:center;gap:4px;font-size:0.5rem;font-weight:700;color:var(--blue);letter-spacing:0.06em}
+.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.chart-card{background:var(--surface-low);padding:12px}
+.chart-card-title{font-size:0.55rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);margin-bottom:3px}
+.chart-card-val{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px}
+.chart-svg{width:100%;display:block;overflow:visible}
+
+/* ── LANDSCAPE (full historical charts) ── */
+.portrait-only{display:block}
+.landscape-only{display:none!important}
+@media(orientation:landscape){
+  .portrait-only{display:none!important}
+  .landscape-only{display:block!important}
+  body{overflow:hidden}
+  main{padding-bottom:0;height:calc(100dvh - 56px);overflow:hidden;display:flex;flex-direction:row}
+  .bottom-nav{display:none}
+  .topbar{position:relative}
+}
+
+.landscape-sidebar{width:200px;flex-shrink:0;background:var(--surface-low);overflow-y:auto;border-right:1px solid var(--on-08)}
+.landscape-charts{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}
+.ls-hero-mini{padding:14px;border-left:3px solid var(--red);margin-bottom:2px}
+.ls-name{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em}
+.ls-stats-mini{display:flex;flex-direction:column;gap:0}
+.ls-stat{display:flex;justify-content:space-between;align-items:center;padding:7px 14px;border-bottom:1px solid var(--on-08);font-size:0.52rem}
+.ls-stat-label{font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
+.ls-stat-val{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.8rem}
+.ls-stat-val.blue{color:var(--blue)}
+.ls-stat-val.green{color:var(--green)}
+
+.ls-chart-section{background:var(--surface-low);padding:14px}
+.ls-chart-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:10px}
+.ls-chart-svg{width:100%;display:block;overflow:visible}
+.ls-charts-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:rgba(166,200,255,0.35);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.15s;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-item.active{color:var(--red);border-top:2px solid var(--red);background:var(--surface-low)}
+.nav-item .material-symbols-outlined{font-size:1.3rem}
+.nav-item.active .material-symbols-outlined{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="back-btn" onclick="history.back()">
+      <span class="material-symbols-outlined">arrow_back</span>Market
+    </button>
+    <div class="topbar-title">F1 Fantasy Market</div>
+    <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
+  </div>
+</header>
+
+<main id="main-content">
+
+  <!-- PORTRAIT LAYOUT -->
+  <div class="portrait-only" id="portrait-wrap">
+    <!-- Filter + Entity Selector -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="setFilter('all',this)">All</button>
+      <button class="filter-btn" onclick="setFilter('Driver',this)">Drivers</button>
+      <button class="filter-btn" onclick="setFilter('Constructor',this)">Constructors</button>
+    </div>
+    <div class="entity-scroll" id="entity-scroll"></div>
+
+    <!-- Hero Card -->
+    <div class="hero" id="hero">
+      <div class="hero-img-wrap">
+        <img id="hero-img" src="" alt="" onerror="this.style.opacity='0.1'" class="hero-portrait"/>
+        <div class="hero-overlay"></div>
+        <div class="hero-num" id="hero-num"></div>
+      </div>
+      <div class="hero-info">
+        <div class="hero-team" id="hero-team">—</div>
+        <div class="hero-name" id="hero-name"></div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-label">Price</div>
+            <div class="hero-stat-val" id="hero-price"></div>
+            <div class="hero-stat-sub" id="hero-price-chg"></div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Season Pts</div>
+            <div class="hero-stat-val" id="hero-pts"></div>
+            <div class="hero-stat-sub" id="hero-pts-sub" style="color:var(--on-40)"></div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-label">Pts / $M</div>
+            <div class="hero-stat-val" id="hero-eff" style="color:var(--blue)"></div>
+            <div class="hero-stat-sub" id="hero-ownership" style="color:var(--on-40)"></div>
+          </div>
+        </div>
+        <div class="hero-ownership">
+          <span class="ownership-label">Ownership</span>
+          <div class="ownership-bar-wrap"><div class="ownership-bar-fill" id="own-bar"></div></div>
+          <span class="ownership-pct" id="own-pct"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="bento" id="bento">
+      <!-- Points Breakdown -->
+      <div class="bento-card bento-full">
+        <div class="bento-title">
+          Points Breakdown
+          <span class="bento-badge">Season Total</span>
+        </div>
+        <div id="breakdown-bars"></div>
+        <div style="display:flex;gap:14px;margin-top:10px">
+          <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:4px;background:var(--blue)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">This Entity</span></div>
+          <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:4px;background:rgba(166,200,255,0.25)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">League Avg</span></div>
+        </div>
+      </div>
+      <!-- vs League -->
+      <div class="bento-card bento-full">
+        <div class="bento-title">vs League Average</div>
+        <div id="comparison-bars"></div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="charts-section portrait-only">
+      <div class="charts-title">
+        Season Trends
+        <div class="rotate-hint">
+          <span class="material-symbols-outlined" style="font-size:0.9rem">screen_rotation</span>
+          Rotate for full view
+        </div>
+      </div>
+      <div class="charts-grid" id="portrait-charts"></div>
+    </div>
+  </div>
+
+  <!-- LANDSCAPE LAYOUT -->
+  <div class="landscape-only" id="landscape-wrap" style="display:flex;width:100%;height:100%">
+    <div class="landscape-sidebar">
+      <div class="ls-hero-mini" id="ls-hero-mini"></div>
+      <div class="ls-stats-mini" id="ls-stats-mini"></div>
+    </div>
+    <div class="landscape-charts" id="landscape-charts"></div>
+  </div>
+
+</main>
+
+<nav class="bottom-nav portrait-only">
+  <a class="nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
+  <a class="nav-item" href="results.html"><span class="material-symbols-outlined">flag</span><span>Results</span></a>
+  <a class="nav-item active" href="market.html"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
+  <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
+</nav>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────────────────
+const ENTITY_DATA = {"Mercedes":{"type":"Constructor","total_pts":211,"per_race":{"1":96,"2":115},"img":"Images/cars/mercedes.webp","cat_totals":{"Qualifying":52,"Race Pos":85,"Sprint":5,"Overtakes":46,"Fastest Lap":10,"Bonuses":13},"price_history":[{"race":1,"price":29.3,"price_next":29.6,"pct":1.02},{"race":2,"price":29.6,"price_next":29.9,"pct":1.01}],"eff_history":[{"race":1,"eff":3.28},{"race":2,"eff":3.89}],"price":29.9,"price_change":0.3,"price_change_pct":1.01,"pts_per_m":7.1,"ownership":64,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Ferrari":{"type":"Constructor","total_pts":188,"per_race":{"1":69,"2":119},"img":"Images/cars/ferrari.webp","cat_totals":{"Qualifying":46,"Race Pos":58,"Sprint":18,"Overtakes":46,"Fastest Lap":5,"Bonuses":15},"price_history":[{"race":1,"price":23.3,"price_next":23.6,"pct":1.29},{"race":2,"price":23.6,"price_next":23.9,"pct":1.27}],"eff_history":[{"race":1,"eff":2.96},{"race":2,"eff":5.04}],"price":23.9,"price_change":0.3,"price_change_pct":1.27,"pts_per_m":7.9,"ownership":82,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Haas F1 Team":{"type":"Constructor","total_pts":99,"per_race":{"1":58,"2":65},"img":"Images/cars/haas.webp","cat_totals":{"Qualifying":29,"Race Pos":29,"Sprint":0,"Overtakes":51,"Fastest Lap":0,"Bonuses":20},"price_history":[{"race":1,"price":9.4,"price_next":9.8,"pct":4.26},{"race":2,"price":9.8,"price_next":8.6,"pct":7.5}],"eff_history":[{"race":1,"eff":6.17},{"race":2,"eff":6.63}],"price":8.6,"price_change":0.6,"price_change_pct":7.5,"pts_per_m":11.5,"ownership":18,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Racing Bulls":{"type":"Constructor","total_pts":85,"per_race":{"1":0,"2":50},"img":"Images/cars/racing_bulls.webp","cat_totals":{"Qualifying":6,"Race Pos":22,"Sprint":4,"Overtakes":28,"Fastest Lap":0,"Bonuses":8},"price_history":[{"race":1,"price":10.1,"price_next":10.5,"pct":3.96},{"race":2,"price":10.5,"price_next":7.5,"pct":8.7}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":4.76}],"price":7.5,"price_change":0.6,"price_change_pct":8.7,"pts_per_m":11.3,"ownership":18,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Red Bull Racing":{"type":"Constructor","total_pts":42,"per_race":{"1":0,"2":42},"img":"Images/cars/red_bull.webp","cat_totals":{"Qualifying":0,"Race Pos":18,"Sprint":0,"Overtakes":18,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":15.7,"price_next":15.4,"pct":-1.91},{"race":2,"price":15.4,"price_next":15.0,"pct":-2.6}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":2.73}],"price":15.0,"price_change":-0.4,"price_change_pct":-2.6,"pts_per_m":1.5,"ownership":0,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"McLaren":{"type":"Constructor","total_pts":19,"per_race":{"1":11,"2":19},"img":"Images/cars/mclaren.webp","cat_totals":{"Qualifying":0,"Race Pos":7,"Sprint":0,"Overtakes":12,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":21.7,"price_next":21.5,"pct":-0.92},{"race":2,"price":21.5,"price_next":28.5,"pct":-1.04}],"eff_history":[{"race":1,"eff":0.51},{"race":2,"eff":0.88}],"price":28.5,"price_change":-0.3,"price_change_pct":-1.04,"pts_per_m":0.7,"ownership":9,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Audi":{"type":"Constructor","total_pts":-4,"per_race":{"1":0,"2":-4},"img":"Images/cars/audi.webp","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":0,"Overtakes":1,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":9.3,"price_next":8.7,"pct":-6.45},{"race":2,"price":8.7,"price_next":5.4,"pct":-10.0}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":-0.46}],"price":5.4,"price_change":-0.6,"price_change_pct":-10.0,"pts_per_m":0,"ownership":18,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"George Russell":{"type":"Driver","total_pts":84,"per_race":{"1":39,"2":45},"img":"Images/portraits/george_russell.png","cat_totals":{"Qualifying":19,"Race Pos":43,"Sprint":8,"Overtakes":14,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":27.4,"price_next":27.7,"pct":1.09},{"race":2,"price":27.7,"price_next":28.0,"pct":1.08}],"eff_history":[{"race":1,"eff":1.42},{"race":2,"eff":1.62}],"price":28.0,"price_change":0.3,"price_change_pct":1.08,"pts_per_m":3.0,"ownership":45,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Charles Leclerc":{"type":"Driver","total_pts":80,"per_race":{"1":29,"2":51},"img":"Images/portraits/charles_leclerc.png","cat_totals":{"Qualifying":14,"Race Pos":28,"Sprint":11,"Overtakes":22,"Fastest Lap":5,"Bonuses":0},"price_history":[{"race":1,"price":22.8,"price_next":23.1,"pct":1.32},{"race":2,"price":23.1,"price_next":23.4,"pct":1.3}],"eff_history":[{"race":1,"eff":1.27},{"race":2,"eff":2.21}],"price":23.4,"price_change":0.3,"price_change_pct":1.3,"pts_per_m":3.4,"ownership":45,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Lewis Hamilton":{"type":"Driver","total_pts":73,"per_race":{"1":25,"2":48},"img":"Images/portraits/lewis_hamilton.png","cat_totals":{"Qualifying":22,"Race Pos":30,"Sprint":0,"Overtakes":11,"Fastest Lap":10,"Bonuses":0},"price_history":[{"race":1,"price":22.3,"price_next":22.5,"pct":0.9},{"race":2,"price":22.5,"price_next":22.9,"pct":1.33}],"eff_history":[{"race":1,"eff":1.12},{"race":2,"eff":2.13}],"price":22.9,"price_change":0.3,"price_change_pct":1.33,"pts_per_m":3.2,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Kimi Antonelli":{"type":"Driver","total_pts":68,"per_race":{"1":25,"2":68},"img":"Images/portraits/kimi_antonelli.png","cat_totals":{"Qualifying":10,"Race Pos":25,"Sprint":1,"Overtakes":22,"Fastest Lap":10,"Bonuses":10},"price_history":[{"race":1,"price":23.2,"price_next":23.5,"pct":1.29},{"race":2,"price":23.5,"price_next":23.8,"pct":1.28}],"eff_history":[{"race":1,"eff":1.08},{"race":2,"eff":2.89}],"price":23.8,"price_change":0.3,"price_change_pct":1.28,"pts_per_m":2.9,"ownership":36,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Oliver Bearman":{"type":"Driver","total_pts":54,"per_race":{"1":32,"2":54},"img":"Images/portraits/oliver_bearman.png","cat_totals":{"Qualifying":9,"Race Pos":32,"Sprint":2,"Overtakes":8,"Fastest Lap":5,"Bonuses":5},"price_history":[{"race":1,"price":9.8,"price_next":9.8,"pct":0.0},{"race":2,"price":9.8,"price_next":8.6,"pct":7.5}],"eff_history":[{"race":1,"eff":3.27},{"race":2,"eff":5.51}],"price":8.6,"price_change":0.6,"price_change_pct":7.5,"pts_per_m":6.3,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Liam Lawson":{"type":"Driver","total_pts":40,"per_race":{"1":5,"2":35},"img":"Images/portraits/liam_lawson.png","cat_totals":{"Qualifying":8,"Race Pos":16,"Sprint":8,"Overtakes":14,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":11.7,"price_next":12.0,"pct":2.56},{"race":2,"price":12.0,"price_next":6.9,"pct":9.52}],"eff_history":[{"race":1,"eff":0.43},{"race":2,"eff":2.92}],"price":6.9,"price_change":0.6,"price_change_pct":9.52,"pts_per_m":5.8,"ownership":64,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Carlos Sainz":{"type":"Driver","total_pts":37,"per_race":{"1":15,"2":37},"img":"Images/portraits/carlos_sainz.png","cat_totals":{"Qualifying":14,"Race Pos":23,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":18.2,"price_next":18.5,"pct":1.65},{"race":2,"price":18.5,"price_next":12.2,"pct":1.62}],"eff_history":[{"race":1,"eff":0.82},{"race":2,"eff":2.0}],"price":12.2,"price_change":0.3,"price_change_pct":1.62,"pts_per_m":3.0,"ownership":9,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Esteban Ocon":{"type":"Driver","total_pts":33,"per_race":{"1":5,"2":33},"img":"Images/portraits/esteban_ocon.png","cat_totals":{"Qualifying":9,"Race Pos":25,"Sprint":3,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":8.9,"price_next":9.1,"pct":2.25},{"race":2,"price":9.1,"price_next":8.5,"pct":7.59}],"eff_history":[{"race":1,"eff":0.56},{"race":2,"eff":3.63}],"price":8.5,"price_change":0.6,"price_change_pct":7.59,"pts_per_m":3.9,"ownership":18,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Sergio Perez":{"type":"Driver","total_pts":24,"per_race":{"1":14,"2":24},"img":"Images/portraits/sergio_perez.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":9,"Overtakes":14,"Fastest Lap":5,"Bonuses":0},"price_history":[{"race":1,"price":7.7,"price_next":8.5,"pct":10.39},{"race":2,"price":8.5,"price_next":6.4,"pct":7.06}],"eff_history":[{"race":1,"eff":1.82},{"race":2,"eff":2.82}],"price":6.4,"price_change":0.6,"price_change_pct":7.06,"pts_per_m":3.8,"ownership":9,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Franco Colapinto":{"type":"Driver","total_pts":24,"per_race":{"1":10,"2":24},"img":"Images/portraits/franco_colapinto.png","cat_totals":{"Qualifying":0,"Race Pos":24,"Sprint":10,"Overtakes":9,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":8.5,"price_next":8.9,"pct":4.71},{"race":2,"price":8.9,"price_next":7.0,"pct":9.37}],"eff_history":[{"race":1,"eff":1.18},{"race":2,"eff":2.7}],"price":7.0,"price_change":0.6,"price_change_pct":9.37,"pts_per_m":3.4,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Arvid Lindblad":{"type":"Driver","total_pts":22,"per_race":{"1":15,"2":22},"img":"Images/portraits/arvid_lindblad.png","cat_totals":{"Qualifying":0,"Race Pos":3,"Sprint":0,"Overtakes":30,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":6.2,"price_next":6.8,"pct":9.68},{"race":2,"price":6.8,"price_next":7.4,"pct":8.82}],"eff_history":[{"race":1,"eff":2.42},{"race":2,"eff":3.24}],"price":7.4,"price_change":0.6,"price_change_pct":8.82,"pts_per_m":3.0,"ownership":55,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Isack Hadjar":{"type":"Driver","total_pts":11,"per_race":{"1":11,"2":11},"img":"Images/portraits/isack_hadjar.png","cat_totals":{"Qualifying":0,"Race Pos":1,"Sprint":0,"Overtakes":11,"Fastest Lap":0,"Bonuses":10},"price_history":[{"race":1,"price":9.9,"price_next":10.1,"pct":2.02},{"race":2,"price":10.1,"price_next":13.9,"pct":1.98}],"eff_history":[{"race":1,"eff":1.11},{"race":2,"eff":1.09}],"price":13.9,"price_change":-0.6,"price_change_pct":-4.14,"pts_per_m":0.8,"ownership":18,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Gabriel Bortoleto":{"type":"Driver","total_pts":-1,"per_race":{"1":13,"2":-1},"img":"Images/portraits/gabriel_bortoleto.png","cat_totals":{"Qualifying":0,"Race Pos":-19,"Sprint":6,"Overtakes":12,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":8.3,"price_next":8.0,"pct":-3.61},{"race":2,"price":8.0,"price_next":6.4,"pct":-8.57}],"eff_history":[{"race":1,"eff":1.57},{"race":2,"eff":-0.13}],"price":6.4,"price_change":-0.6,"price_change_pct":-8.57,"pts_per_m":0,"ownership":55,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Lando Norris":{"type":"Driver","total_pts":-10,"per_race":{"1":0,"2":-10},"img":"Images/portraits/lando_norris.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":27.2,"price_next":26.7,"pct":-1.84},{"race":2,"price":26.7,"price_next":26.8,"pct":-1.11}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":-0.37}],"price":26.8,"price_change":-0.3,"price_change_pct":-1.11,"pts_per_m":0,"ownership":9,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Valtteri Bottas":{"type":"Driver","total_pts":-13,"per_race":{"1":-4,"2":-13},"img":"Images/portraits/valtteri_bottas.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":-4,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":7.1,"price_next":6.3,"pct":-11.27},{"race":2,"price":6.3,"price_next":4.7,"pct":-11.11}],"eff_history":[{"race":1,"eff":-0.56},{"race":2,"eff":-2.06}],"price":4.7,"price_change":-0.6,"price_change_pct":-11.11,"pts_per_m":0,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Nico Hulkenberg":{"type":"Driver","total_pts":-13,"per_race":{"1":22,"2":-13},"img":"Images/portraits/nico_hulkenberg.png","cat_totals":{"Qualifying":10,"Race Pos":12,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":12.5,"price_next":12.6,"pct":0.8},{"race":2,"price":12.6,"price_next":5.6,"pct":-9.68}],"eff_history":[{"race":1,"eff":1.76},{"race":2,"eff":-1.03}],"price":5.6,"price_change":-0.6,"price_change_pct":-9.68,"pts_per_m":0,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Oscar Piastri":{"type":"Driver","total_pts":-14,"per_race":{"1":0,"2":-14},"img":"Images/portraits/oscar_piastri.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":24.0,"price_next":24.3,"pct":1.25},{"race":2,"price":24.3,"price_next":24.9,"pct":-1.19}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":-0.58}],"price":24.9,"price_change":-0.3,"price_change_pct":-1.19,"pts_per_m":0,"ownership":0,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}}};
+
+const ENTITY_ORDER = ["Mercedes","Ferrari","Haas F1 Team","Racing Bulls","Red Bull Racing","McLaren","Audi","George Russell","Charles Leclerc","Lewis Hamilton","Kimi Antonelli","Oliver Bearman","Liam Lawson","Carlos Sainz","Esteban Ocon","Sergio Perez","Franco Colapinto","Arvid Lindblad","Isack Hadjar","Gabriel Bortoleto","Lando Norris","Valtteri Bottas","Nico Hulkenberg","Oscar Piastri"];
+const CAT_COLORS = {'Qualifying':'#a6c8ff','Race Pos':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Fastest Lap':'#c084fc','Bonuses':'#fb923c'};
+
+// ── STATE ─────────────────────────────────────────────────────────────────
+let activeFilter = 'all';
+let selectedEntity = new URLSearchParams(window.location.search).get('entity') || 'George Russell';
+if (!ENTITY_DATA[selectedEntity]) selectedEntity = 'George Russell';
+
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function filteredEntities() {
+  return ENTITY_ORDER.filter(n => activeFilter === 'all' || ENTITY_DATA[n].type === activeFilter);
+}
+
+function svgLine(data, color, W, H, yKey='val') {
+  if (!data || data.length < 2) return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg"></svg>`;
+  const vals = data.map(d => d[yKey] ?? d);
+  const mn = Math.min(...vals), mx = Math.max(...vals);
+  const range = mx - mn || 1;
+  const pts = vals.map((v,i) => {
+    const x = 6 + (i/(data.length-1))*(W-12);
+    const y = H - 8 - ((v-mn)/range)*(H-16);
+    return [x,y];
+  });
+  const path = pts.map((p,i)=>`${i===0?'M':'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  const area = `M${pts[0][0].toFixed(1)},${H} `+pts.map(p=>`L${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ')+` L${pts[pts.length-1][0].toFixed(1)},${H} Z`;
+  const gId = `g${Math.random().toString(36).slice(2,6)}`;
+  const dots = pts.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3" fill="${color}"/>`).join('');
+  const labels = data.map((d,i)=>{
+    const x = 6+(i/(data.length-1))*(W-12);
+    return `<text x="${x.toFixed(1)}" y="${H}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="rgba(229,226,225,0.3)">R${d.race||i+1}</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 ${W} ${H+12}" class="chart-svg">
+    <defs><linearGradient id="${gId}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="${area}" fill="url(#${gId})"/>
+    <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${dots}${labels}
+  </svg>`;
+}
+
+function svgBars(data, color, W, H, valKey='val') {
+  if (!data || !data.length) return '';
+  const vals = data.map(d => Math.max(0, d[valKey] ?? d));
+  const mx = Math.max(...vals, 1);
+  const bw = Math.floor((W - (data.length+1)*4) / data.length);
+  const bars = vals.map((v,i) => {
+    const bh = Math.max(2, (v/mx)*(H-12));
+    const x = 4 + i*(bw+4);
+    const y = H-4-bh;
+    const label = `<text x="${(x+bw/2).toFixed(1)}" y="${H+10}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="rgba(229,226,225,0.3)">R${data[i].race||i+1}</text>`;
+    return `<rect x="${x}" y="${y.toFixed(1)}" width="${bw}" height="${bh.toFixed(1)}" fill="${color}" rx="1"/>${label}`;
+  }).join('');
+  return `<svg viewBox="0 0 ${W} ${H+14}" class="chart-svg">${bars}</svg>`;
+}
+
+// ── ENTITY SELECTOR ───────────────────────────────────────────────────────
+function buildSelector() {
+  const list = filteredEntities();
+  const el = document.getElementById('entity-scroll');
+  el.innerHTML = list.map(name => {
+    const d = ENTITY_DATA[name];
+    const isCon = d.type === 'Constructor';
+    return `<button class="entity-pill${name===selectedEntity?' active':''}" onclick="selectEntity('${name.replace(/'/g,"\\'")}')">
+      <img class="pill-thumb${isCon?' car':''}" src="${d.img}" alt="" onerror="this.style.opacity='0.3'"/>
+      <span class="pill-name">${name.split(' ').slice(-1)[0]}</span>
+      <span class="pill-pts">${d.total_pts}</span>
+    </button>`;
+  }).join('');
+  el.querySelector('.active')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+
+function setFilter(f, btn) {
+  activeFilter = f;
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  buildSelector();
+}
+
+function selectEntity(name) {
+  selectedEntity = name;
+  buildSelector();
+  renderHero();
+  renderBento();
+  renderPortraitCharts();
+  renderLandscape();
+}
+
+// ── HERO ──────────────────────────────────────────────────────────────────
+function renderHero() {
+  const d = ENTITY_DATA[selectedEntity];
+  const isCon = d.type === 'Constructor';
+  const img = document.getElementById('hero-img');
+  img.src = d.img;
+  img.className = isCon ? 'hero-car' : 'hero-portrait';
+
+  document.getElementById('hero-num').textContent = isCon ? '' : selectedEntity.split(' ').slice(-1)[0].slice(0,2).toUpperCase();
+  document.getElementById('hero-team').textContent = isCon ? 'Constructor' : '—';
+  document.getElementById('hero-name').textContent = selectedEntity;
+  document.getElementById('hero-price').textContent = `$${d.price.toFixed(1)}M`;
+
+  const pctEl = document.getElementById('hero-price-chg');
+  pctEl.textContent = `${d.price_change>=0?'+':''}$${d.price_change.toFixed(1)}M (${d.price_change_pct.toFixed(1)}%)`;
+  pctEl.className = `hero-stat-sub ${d.price_change>=0?'pos':'neg'}`;
+
+  document.getElementById('hero-pts').textContent = d.total_pts;
+  const races = Object.keys(d.per_race).length;
+  document.getElementById('hero-pts-sub').textContent = `${races} race${races!==1?'s':''}`;
+  document.getElementById('hero-eff').textContent = d.pts_per_m > 0 ? d.pts_per_m : '—';
+  document.getElementById('hero-ownership').textContent = `${d.ownership}% owned`;
+  document.getElementById('own-bar').style.width = `${d.ownership}%`;
+  document.getElementById('own-pct').textContent = `${d.ownership}%`;
+}
+
+// ── BENTO ─────────────────────────────────────────────────────────────────
+function renderBento() {
+  const d = ENTITY_DATA[selectedEntity];
+  const cats = Object.entries(d.cat_totals);
+  const maxCat = Math.max(...cats.map(([,v])=>Math.abs(v)), 1);
+  const avgCats = d.league_avg_cats;
+  const maxAvg = Math.max(...Object.values(avgCats), 1);
+  const globalMax = Math.max(maxCat, maxAvg);
+
+  // Breakdown bars
+  document.getElementById('breakdown-bars').innerHTML = cats.map(([cat, val]) => {
+    const playerPct = Math.max(0, (val/globalMax)*100);
+    const avgVal = avgCats[cat] || 0;
+    const avgPct = Math.max(0, (avgVal/globalMax)*100);
+    const color = CAT_COLORS[cat] || '#a6c8ff';
+    return `<div class="breakdown-row">
+      <div class="breakdown-label">${cat}</div>
+      <div class="breakdown-bars">
+        <div class="breakdown-bg"></div>
+        <div class="breakdown-fill avg" style="width:${avgPct.toFixed(1)}%"></div>
+        <div class="breakdown-fill player" style="width:${playerPct.toFixed(1)}%;background:${color}"></div>
+      </div>
+      <div class="breakdown-val${val<0?' neg':''}">${val}</div>
+    </div>`;
+  }).join('');
+
+  // Comparison bars
+  const compData = [
+    { label:'Pts / $M', player:d.pts_per_m, avg:d.type==='Driver'?3.0:5.0 },
+    { label:'Total Pts', player:d.total_pts, avg:d.type==='Driver'?28.7:92.4 },
+    { label:'Ownership', player:d.ownership, avg:35 },
+    { label:'Price $M',  player:d.price, avg:d.type==='Driver'?14.8:16.7 },
+  ];
+  document.getElementById('comparison-bars').innerHTML = compData.map(c => {
+    const max = Math.max(Math.abs(c.player), Math.abs(c.avg), 1);
+    const playerPct = Math.max(0, (c.player/max)*100);
+    const avgPct = Math.max(0, (c.avg/max)*100);
+    const diff = c.player - c.avg;
+    const diffStr = `${diff>=0?'+':''}${diff.toFixed(1)}`;
+    return `<div class="comp-row">
+      <div class="comp-header">
+        <span class="comp-label">${c.label}</span>
+        <span class="comp-delta ${diff>=0?'pos':'neg'}">${diffStr} vs avg</span>
+      </div>
+      <div class="comp-bar-wrap">
+        <div class="comp-bar-fill" style="width:${avgPct.toFixed(1)}%;background:rgba(229,226,225,0.15)"></div>
+        <div class="comp-bar-fill" style="width:${playerPct.toFixed(1)}%;background:var(--blue);opacity:0.8"></div>
+      </div>
+      <div class="comp-labels">
+        <span class="comp-sub">${selectedEntity.split(' ').slice(-1)[0]}: ${c.player}</span>
+        <span class="comp-sub">Avg: ${c.avg}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── PORTRAIT CHARTS ───────────────────────────────────────────────────────
+function renderPortraitCharts() {
+  const d = ENTITY_DATA[selectedEntity];
+  const priceData = d.price_history.map(p=>({race:p.race, val:p.price}));
+  const ptsData = Object.entries(d.per_race).map(([r,v])=>({race:+r, val:v})).sort((a,b)=>a.race-b.race);
+  const effData = d.eff_history.map(e=>({race:e.race, val:e.eff}));
+  const latestPts = ptsData[ptsData.length-1]?.val || 0;
+  const latestEff = effData[effData.length-1]?.eff || effData[effData.length-1]?.val || 0;
+
+  document.getElementById('portrait-charts').innerHTML = `
+    <div class="chart-card">
+      <div class="chart-card-title">Price Evolution</div>
+      <div class="chart-card-val">$${d.price.toFixed(1)}M</div>
+      ${svgLine(priceData,'#a6c8ff',160,50,'val')}
+    </div>
+    <div class="chart-card">
+      <div class="chart-card-title">Points/Race</div>
+      <div class="chart-card-val">${latestPts > 0 ? '+' : ''}${latestPts}</div>
+      ${svgBars(ptsData,'#e10600',160,50,'val')}
+    </div>
+    <div class="chart-card">
+      <div class="chart-card-title">Pts / $M Trend</div>
+      <div class="chart-card-val">${d.pts_per_m}</div>
+      ${svgLine(effData,'#4ade80',160,50,'val')}
+    </div>
+    <div class="chart-card">
+      <div class="chart-card-title">Ownership</div>
+      <div class="chart-card-val">${d.ownership}%</div>
+      <div style="height:50px;display:flex;align-items:flex-end">
+        <div style="width:100%;height:${d.ownership}%;background:var(--amber);min-height:4px;transition:height 0.5s"></div>
+      </div>
+    </div>`;
+}
+
+// ── LANDSCAPE ─────────────────────────────────────────────────────────────
+function renderLandscape() {
+  const d = ENTITY_DATA[selectedEntity];
+  const priceData = d.price_history.map(p=>({race:p.race,val:p.price}));
+  const ptsData = Object.entries(d.per_race).map(([r,v])=>({race:+r,val:v})).sort((a,b)=>a.race-b.race);
+  const effData = d.eff_history.map(e=>({race:e.race,val:e.val||e.eff}));
+
+  document.getElementById('ls-hero-mini').innerHTML = `
+    <div class="ls-name">${selectedEntity}</div>
+    <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-top:3px">${d.type}</div>`;
+
+  document.getElementById('ls-stats-mini').innerHTML = [
+    {l:'Price',    v:`$${d.price.toFixed(1)}M`, cls:'blue'},
+    {l:'Season Pts', v:d.total_pts},
+    {l:'Pts / $M', v:d.pts_per_m, cls:'green'},
+    {l:'Ownership',v:`${d.ownership}%`},
+    {l:'Chg %',    v:`${d.price_change_pct>0?'+':''}${d.price_change_pct.toFixed(1)}%`, cls:d.price_change_pct>=0?'green':''},
+  ].map(s=>`<div class="ls-stat"><span class="ls-stat-label">${s.l}</span><span class="ls-stat-val${s.cls?' '+s.cls:''}">${s.v}</span></div>`).join('');
+
+  const W = 400, H = 90;
+  document.getElementById('landscape-charts').innerHTML = `
+    <div style="font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;color:var(--on-60);margin-bottom:4px">${selectedEntity} — Full Season View</div>
+
+    <div class="ls-chart-section">
+      <div class="ls-chart-title">Price Evolution — all ${priceData.length} races</div>
+      ${svgLine(priceData,'#a6c8ff',W,H,'val')}
+    </div>
+
+    <div class="ls-chart-section">
+      <div class="ls-chart-title">Points per Race — all ${ptsData.length} races</div>
+      ${svgBars(ptsData,'#e10600',W,H,'val')}
+    </div>
+
+    <div class="ls-chart-section">
+      <div class="ls-chart-title">Pts / $M Efficiency — race by race</div>
+      ${svgLine(effData,'#4ade80',W,H,'val')}
+    </div>
+
+    <div class="ls-charts-row">
+      <div class="ls-chart-section">
+        <div class="ls-chart-title">Points Breakdown by Category</div>
+        ${(()=>{
+          const cats = Object.entries(d.cat_totals);
+          const mx = Math.max(...cats.map(([,v])=>Math.abs(v)),1);
+          const bw = Math.floor((W/2 - (cats.length+1)*4)/cats.length);
+          const bars = cats.map(([cat,val],i)=>{
+            const bh = Math.max(2,(Math.max(0,val)/mx)*(H-12));
+            const x = 4+i*(bw+4);
+            const color = CAT_COLORS[cat]||'#a6c8ff';
+            const abbr = cat.slice(0,4).toUpperCase();
+            return `<rect x="${x}" y="${(H-4-bh).toFixed(1)}" width="${bw}" height="${bh.toFixed(1)}" fill="${color}" rx="1"/>
+              <text x="${(x+bw/2).toFixed(1)}" y="${H+10}" text-anchor="middle" font-family="Inter" font-size="7" fill="rgba(229,226,225,0.4)">${abbr}</text>`;
+          }).join('');
+          return `<svg viewBox="0 0 ${W/2} ${H+14}" class="ls-chart-svg">${bars}</svg>`;
+        })()}
+      </div>
+      <div class="ls-chart-section">
+        <div class="ls-chart-title">Ownership trend (latest: ${d.ownership}%)</div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+          <div style="flex:1;height:8px;background:var(--surface-highest)">
+            <div style="width:${d.ownership}%;height:100%;background:var(--amber);transition:width 0.5s"></div>
+          </div>
+          <span style="font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;color:var(--amber)">${d.ownership}%</span>
+        </div>
+        <div style="font-size:0.5rem;color:var(--on-40);margin-top:8px;text-transform:uppercase;letter-spacing:0.08em">
+          ${d.ownership > 50 ? '⚠ High saturation — common pick' : d.ownership <= 20 ? '✦ Low ownership — differentiator' : 'Moderate ownership'}
+        </div>
+      </div>
+    </div>`;
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────
+buildSelector();
+renderHero();
+renderBento();
+renderPortraitCharts();
+renderLandscape();
+
+window.addEventListener('resize', renderLandscape);
+window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
+</script>
+</body>
+</html>

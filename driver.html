@@ -118,19 +118,19 @@ main{flex:1;padding-bottom:80px}
 .landscape-only{display:none!important}
 @media(orientation:landscape){
   .portrait-only{display:none!important}
-  .landscape-only{display:block!important}
-  body{overflow:hidden}
-  main{padding-bottom:0;height:calc(100dvh - 56px);overflow:hidden;display:flex;flex-direction:row}
+  .landscape-only{display:flex!important}
+  body{overflow:hidden;height:100dvh}
+  main{padding-bottom:0;height:calc(100dvh - 56px);overflow:hidden;display:flex;flex-direction:column}
   .bottom-nav{display:none}
   .topbar{position:relative}
 }
 
-.landscape-sidebar{width:200px;flex-shrink:0;background:var(--surface-low);overflow-y:auto;border-right:1px solid var(--on-08)}
-.landscape-charts{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px}
+.landscape-sidebar{width:170px;flex-shrink:0;background:var(--surface-low);overflow-y:auto;border-right:1px solid var(--on-08);height:100%}
+.landscape-charts{flex:1;overflow-y:auto;overflow-x:hidden;padding:12px 16px;display:flex;flex-direction:column;gap:10px;height:100%}
 .ls-hero-mini{padding:14px;border-left:3px solid var(--red);margin-bottom:2px}
 .ls-name{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em}
 .ls-stats-mini{display:flex;flex-direction:column;gap:0}
-.ls-stat{display:flex;justify-content:space-between;align-items:center;padding:7px 14px;border-bottom:1px solid var(--on-08);font-size:0.52rem}
+.ls-stat{display:flex;justify-content:space-between;align-items:center;padding:5px 12px;border-bottom:1px solid var(--on-08);font-size:0.5rem}
 .ls-stat-label{font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
 .ls-stat-val{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.8rem}
 .ls-stat-val.blue{color:var(--blue)}
@@ -138,8 +138,8 @@ main{flex:1;padding-bottom:80px}
 
 .ls-chart-section{background:var(--surface-low);padding:14px}
 .ls-chart-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:10px}
-.ls-chart-svg{width:100%;display:block;overflow:visible}
-.ls-charts-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ls-chart-svg{width:100%;max-width:100%;display:block;overflow:hidden}
+.ls-charts-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
 
 /* ── BOTTOM NAV ── */
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
@@ -243,8 +243,11 @@ main{flex:1;padding-bottom:80px}
   </div>
 
   <!-- LANDSCAPE LAYOUT -->
-  <div class="landscape-only" id="landscape-wrap" style="display:flex;width:100%;height:100%">
+  <div class="landscape-only" id="landscape-wrap" style="width:100%;height:calc(100dvh - 56px);overflow:hidden">
     <div class="landscape-sidebar">
+      <div style="padding:8px;border-bottom:1px solid var(--on-08)">
+        <select id="ls-entity-select" onchange="selectEntity(this.value)" style="width:100%;background:var(--surface-high);border:1px solid var(--red);color:var(--on);font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;padding:5px 8px;cursor:pointer;outline:none;appearance:none"></select>
+      </div>
       <div class="ls-hero-mini" id="ls-hero-mini"></div>
       <div class="ls-stats-mini" id="ls-stats-mini"></div>
     </div>
@@ -471,6 +474,13 @@ function renderPortraitCharts() {
 
 // ── LANDSCAPE ─────────────────────────────────────────────────────────────
 function renderLandscape() {
+  // populate sidebar select
+  const lsSel = document.getElementById('ls-entity-select');
+  if (lsSel) {
+    lsSel.innerHTML = ENTITY_ORDER.map(n =>
+      `<option value="${n}" ${n===selectedEntity?'selected':''}>${n}</option>`
+    ).join('');
+  }
   const d = ENTITY_DATA[selectedEntity];
   const priceData = d.price_history.map(p=>({race:p.race,val:p.price}));
   const ptsData = Object.entries(d.per_race).map(([r,v])=>({race:+r,val:v})).sort((a,b)=>a.race-b.race);

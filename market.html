@@ -107,7 +107,7 @@
   /* ── TABLE ── */
   .market-table-wrap { margin: 0 16px; background: var(--surface-low); overflow: hidden; }
   .table-head {
-    display: grid; grid-template-columns: minmax(0,1fr) 44px 58px 46px 80px;
+    display: grid; grid-template-columns: minmax(0,1fr) 40px 56px 44px 78px;
     padding: 8px 14px; gap: 4px;
     font-size: 0.5rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-40);
     border-bottom: 1px solid var(--on-08);
@@ -115,7 +115,7 @@
   .table-head span:not(:first-child) { text-align: right; }
 
   .market-row {
-    display: grid; grid-template-columns: minmax(0,1fr) 44px 58px 46px 80px;
+    display: grid; grid-template-columns: minmax(0,1fr) 40px 56px 44px 78px;
     padding: 11px 14px; gap: 4px; align-items: center;
     border-bottom: 1px solid var(--on-08);
     transition: background 0.1s;
@@ -126,18 +126,18 @@
   .market-row:last-child { border-bottom: none; }
   @keyframes rowIn { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
 
-  .entity-cell { display: flex; align-items: center; gap: 10px; min-width: 0; }
+  .entity-cell { display: flex; align-items: center; gap: 8px; min-width: 0; overflow: hidden; }
   .entity-thumb-wrap { position: relative; flex-shrink: 0; width: 40px; height: 40px; background: var(--surface-highest); }
   .entity-thumb { width: 100%; height: 100%; object-fit: cover; object-position: top; }
   .entity-thumb.logo { object-fit: contain; object-position: center; padding: 4px; }
   .entity-type-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; }
   .entity-type-bar.driver { background: var(--red-dim); }
   .entity-type-bar.constructor { background: var(--blue); }
-  .entity-name { font-family:'Space Grotesk',sans-serif; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width:100%; }
+  .entity-name { font-family:'Space Grotesk',sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: -0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .entity-type-tag { font-size: 0.48rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-40); margin-top: 2px; }
 
   .pts-cell { text-align: right; }
-  .pts-val { font-family:'Space Grotesk',sans-serif; font-size: 1.05rem; font-weight: 700; font-style: italic; line-height: 1; }
+  .pts-val { font-family:'Space Grotesk',sans-serif; font-size: 0.82rem; font-weight: 700; line-height: 1; }
   .pts-val.neg { color: var(--red-dim); }
   .pts-val.zero { color: var(--on-40); }
 
@@ -380,7 +380,7 @@ function renderTable() {
           <img class="entity-thumb${isLogo ? ' logo' : ''}" src="${m.img}" alt="${m.name}" onerror="this.style.display='none'"/>
           <div class="entity-type-bar ${m.type.toLowerCase()}"></div>
         </div>
-        <div>
+        <div style="min-width:0;overflow:hidden">
           <div class="entity-name">${m.name}</div>
           <div class="entity-type-tag">${m.type}</div>
         </div>

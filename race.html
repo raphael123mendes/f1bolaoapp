@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>F1 Bolão — Race Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --red:#e10600; --red-dim:#ffb4a8; --red-faint:rgba(225,6,0,0.08);
+  --blue:#a6c8ff; --blue-bright:#3192fc;
+  --green:#4ade80;
+  --surface:#131313; --surface-low:#1c1b1b; --surface-mid:#201f1f;
+  --surface-high:#2a2a2a; --surface-highest:#353534;
+  --on:#e5e2e1;
+  --on-60:rgba(229,226,225,0.6); --on-40:rgba(229,226,225,0.4);
+  --on-20:rgba(229,226,225,0.2); --on-08:rgba(229,226,225,0.08);
+  --outline:#af8781;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--surface);color:var(--on);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;font-family:'Material Symbols Outlined';vertical-align:middle}
+.fill{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:50;background:var(--surface);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;height:56px;padding:0 20px}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.03em;color:var(--red);text-transform:uppercase}
+.icon-btn{background:none;border:none;cursor:pointer;color:var(--on-40);padding:6px;display:flex;align-items:center}
+
+main{flex:1;padding-bottom:80px}
+
+/* ── ROUND SWITCHER ── */
+.round-switcher{display:flex;overflow-x:auto;padding:12px 16px;gap:6px;scrollbar-width:none}
+.round-switcher::-webkit-scrollbar{display:none}
+.round-btn{flex-shrink:0;background:var(--surface-high);border:none;color:var(--on-40);
+  font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:800;letter-spacing:0.1em;
+  text-transform:uppercase;padding:6px 12px;cursor:pointer;transition:all 0.15s;
+  border-bottom:2px solid transparent;white-space:nowrap}
+.round-btn.active{color:var(--red);background:var(--surface-highest);border-bottom-color:var(--red)}
+.round-btn.no-data{color:var(--on-20);cursor:not-allowed}
+
+/* ── RACE HEADER ── */
+.race-header{margin:0 16px 4px;background:var(--surface-low);border-left:3px solid var(--red);padding:16px 20px}
+.race-label{font-size:0.55rem;font-weight:900;letter-spacing:0.2em;text-transform:uppercase;color:var(--red)}
+.race-title{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:-0.03em;text-transform:uppercase;margin-top:4px}
+.race-sub{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);margin-top:4px}
+
+/* ── PLAYER SELECTOR ── */
+.selector-wrap{padding:14px 16px 0}
+.selector-label{font-size:0.55rem;font-weight:900;letter-spacing:0.18em;text-transform:uppercase;color:var(--on-40);margin-bottom:6px}
+.player-select{width:100%;background:var(--surface-high);border:2px solid var(--red);color:var(--on);
+  font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;letter-spacing:-0.01em;
+  text-transform:uppercase;padding:12px 16px;cursor:pointer;outline:none;
+  appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23e10600'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:20px;padding-right:42px}
+.player-select option{background:var(--surface-high)}
+
+/* ── PLAYER STATS STRIP ── */
+.stats-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin:10px 16px 0}
+.strip-card{background:var(--surface-high);padding:10px 12px}
+.strip-label{font-size:0.48rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40)}
+.strip-val{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700;line-height:1.1;margin-top:2px}
+
+/* ── BENTO GRID (portrait) ── */
+.bento{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 16px 0}
+@media(min-width:600px){.bento{grid-template-columns:1fr 1fr}}
+
+/* ── PICK CARDS ── */
+.roster-section{background:var(--surface-low);padding:16px}
+.section-title-bar{display:flex;align-items:center;gap:8px;margin-bottom:12px}
+.section-accent{width:3px;height:18px;background:var(--red);flex-shrink:0}
+.section-accent.blue{background:var(--blue)}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em}
+.pick-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.pick-card{background:var(--surface-high);padding:10px;display:flex;align-items:center;gap:10px;position:relative;overflow:hidden;cursor:pointer;transition:background 0.1s}
+.pick-card:hover{background:var(--surface-highest)}
+.pick-card.captain{border:2px solid var(--red)}
+.captain-badge{position:absolute;top:-1px;right:-1px;background:var(--red);color:#fff;
+  font-size:0.44rem;font-weight:900;letter-spacing:0.1em;padding:2px 5px;text-transform:uppercase}
+.pick-thumb{width:40px;height:40px;object-fit:cover;object-position:top;background:var(--surface-highest);flex-shrink:0}
+.pick-thumb.logo{object-fit:contain;object-position:center;padding:4px}
+.pick-name{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pick-type{font-size:0.48rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);margin-top:1px}
+.pick-pts{font-family:'Space Grotesk',sans-serif;font-size:1.05rem;font-weight:700;margin-left:auto;flex-shrink:0}
+.pick-pts.neg{color:var(--red-dim)}
+.pick-pts.pos{color:var(--on)}
+.ownership-bar{position:absolute;bottom:0;left:0;height:2px;background:var(--blue);transition:width 0.4s}
+
+/* ── RADAR SECTION (portrait only) ── */
+.radar-section{background:var(--surface-low);padding:16px}
+.radar-hint{font-size:0.55rem;font-weight:600;color:var(--on-40);text-align:center;margin-top:8px;letter-spacing:0.06em}
+#radar-svg{width:100%;max-width:280px;display:block;margin:0 auto;cursor:pointer;overflow:visible}
+
+/* Landscape: hide portrait layout, show bar chart */
+@media(orientation:landscape){
+  .portrait-only{display:none!important}
+  .landscape-only{display:flex!important}
+  main{padding-bottom:0}
+  .bottom-nav{display:none}
+  .topbar{position:relative}
+}
+@media(orientation:portrait){
+  .landscape-only{display:none!important}
+}
+
+/* ── LANDSCAPE LAYOUT ── */
+.landscape-wrap{
+  display:none;flex-direction:row;height:calc(100dvh - 56px);overflow:hidden
+}
+.landscape-left{width:220px;flex-shrink:0;background:var(--surface-low);display:flex;flex-direction:column;overflow:hidden}
+.landscape-selector{padding:10px 12px;border-bottom:1px solid var(--on-08)}
+.landscape-select{width:100%;background:var(--surface-high);border:1px solid var(--red);color:var(--on);
+  font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;
+  text-transform:uppercase;padding:6px 10px;cursor:pointer;outline:none;appearance:none}
+.landscape-picks{flex:1;overflow-y:auto;padding:8px}
+.ls-pick{display:flex;align-items:center;gap:6px;padding:6px 4px;border-bottom:1px solid var(--on-08)}
+.ls-thumb{width:28px;height:28px;object-fit:cover;object-position:top;background:var(--surface-highest);flex-shrink:0}
+.ls-thumb.logo{object-fit:contain;padding:2px}
+.ls-name{font-size:0.62rem;font-weight:700;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ls-pts{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:700;margin-left:auto;flex-shrink:0}
+.ls-pts.neg{color:var(--red-dim)}
+
+.landscape-right{flex:1;overflow-y:auto;padding:12px 16px;display:flex;flex-direction:column;gap:10px}
+.ls-title{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;color:var(--on-60)}
+.bar-group{display:flex;flex-direction:column;gap:3px}
+.bar-row{display:grid;grid-template-columns:120px 1fr 40px;align-items:center;gap:8px}
+.bar-label{font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:var(--on-60);text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{height:10px;background:var(--surface-highest);position:relative}
+.bar-fill{height:100%;transition:width 0.4s ease}
+.bar-fill.player{background:var(--red)}
+.bar-fill.avg{background:var(--blue);opacity:0.5;position:absolute;top:0;left:0}
+.bar-val{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;text-align:left}
+.bar-val.neg{color:var(--red-dim)}
+.axis-header{font-size:0.52rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);border-bottom:1px solid var(--on-08);padding-bottom:4px;margin-top:4px}
+.ls-legend{display:flex;gap:16px;align-items:center;padding-top:4px}
+.ls-legend-item{display:flex;align-items:center;gap:5px;font-size:0.5rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
+.ls-legend-dot{width:10px;height:6px}
+
+/* ── STRATEGIC DIFFERENTIATORS ── */
+.strategic-section{background:var(--surface-low);padding:16px}
+.strat-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:10px}
+.strat-card{background:var(--surface-mid);padding:10px}
+.strat-card-title{font-size:0.5rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;margin-bottom:4px}
+.strat-card.exclusive .strat-card-title{color:var(--blue)}
+.strat-card.common .strat-card-title{color:var(--red-dim)}
+.strat-badge{font-size:0.44rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:1px 5px;margin-bottom:8px;display:inline-block}
+.strat-card.exclusive .strat-badge{background:rgba(166,200,255,0.1);color:var(--blue)}
+.strat-card.common .strat-badge{background:rgba(255,180,168,0.1);color:var(--red-dim)}
+.strat-item{display:flex;align-items:center;justify-content:space-between;padding:6px 8px;background:var(--surface-high);border-left:2px solid var(--blue);margin-bottom:4px}
+.strat-item.common{border-left-color:var(--red)}
+.strat-item-name{font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.02em}
+.strat-item-pct{font-size:0.55rem;font-weight:800;color:var(--on-40)}
+
+/* ── TELEMETRY TABLE ── */
+.telemetry-section{background:var(--surface-low);overflow:hidden;margin:0 16px}
+.telemetry-header{background:var(--surface-highest);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--on-08)}
+.telemetry-title{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:900;letter-spacing:0.1em;text-transform:uppercase;font-style:italic}
+.telemetry-live{font-size:0.52rem;font-weight:800;color:var(--red);letter-spacing:0.1em;text-transform:uppercase}
+.tbl-head{display:grid;grid-template-columns:1fr 90px 50px;padding:6px 14px;
+  font-size:0.48rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);
+  border-bottom:1px solid var(--on-08)}
+.tbl-head span:not(:first-child){text-align:right}
+.tbl-row{display:grid;grid-template-columns:1fr 90px 50px;padding:8px 14px;
+  border-bottom:1px solid var(--on-08);align-items:center;cursor:pointer;transition:background 0.1s}
+.tbl-row:hover{background:var(--surface-high)}
+.tbl-row:last-child{border-bottom:none}
+.tbl-pick{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase}
+.tbl-pick.cap::after{content:'(C)';font-size:0.55rem;color:var(--red);margin-left:4px}
+.tbl-cats{font-size:0.5rem;color:var(--on-40);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tbl-total{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;text-align:right}
+.tbl-total.neg{color:var(--red-dim)}
+
+/* ── POPUP / AXIS DETAIL ── */
+.popup-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.6);display:none;align-items:flex-end;justify-content:center}
+.popup-overlay.open{display:flex}
+.popup{background:var(--surface-low);width:100%;max-width:480px;max-height:70dvh;overflow-y:auto;padding:20px;border-top:3px solid var(--red)}
+.popup-title{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:4px}
+.popup-sub{font-size:0.55rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);margin-bottom:16px}
+.popup-total{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:900;color:var(--red);margin-bottom:16px}
+.popup-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--on-08)}
+.popup-row:last-child{border-bottom:none}
+.popup-cat{font-size:0.65rem;font-weight:600;letter-spacing:0.06em}
+.popup-pts{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700}
+.popup-pts.pos{color:var(--green)}
+.popup-pts.neg{color:var(--red-dim)}
+.popup-close{position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--on-40)}
+.popup-league{font-size:0.55rem;font-weight:700;color:var(--blue);margin-top:12px;padding-top:12px;border-top:1px solid var(--on-08)}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);
+  box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;text-decoration:none;color:rgba(166,200,255,0.35);font-size:0.6rem;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;transition:color 0.15s;background:none;border:none;
+  cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-item.active{color:var(--red);border-top:2px solid var(--red);background:var(--surface-low)}
+.nav-item .material-symbols-outlined{font-size:1.3rem}
+.nav-item.active .material-symbols-outlined{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Race Analysis</div>
+    <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
+  </div>
+</header>
+
+<!-- LANDSCAPE LAYOUT -->
+<div class="landscape-wrap landscape-only" id="landscape-wrap">
+  <div class="landscape-left">
+    <div class="landscape-selector">
+      <select class="landscape-select" id="ls-player-select" onchange="syncPlayer(this.value)"></select>
+    </div>
+    <div class="landscape-picks" id="ls-picks"></div>
+  </div>
+  <div class="landscape-right" id="landscape-right">
+    <!-- built by JS -->
+  </div>
+</div>
+
+<!-- PORTRAIT LAYOUT -->
+<main class="portrait-only" id="portrait-main">
+  <div class="round-switcher" id="round-switcher"></div>
+
+  <div class="race-header">
+    <div class="race-label" id="race-label"></div>
+    <div class="race-title" id="race-title"></div>
+    <div class="race-sub" id="race-sub"></div>
+  </div>
+
+  <div class="selector-wrap">
+    <div class="selector-label">Select Player</div>
+    <select class="player-select" id="player-select" onchange="syncPlayer(this.value)"></select>
+  </div>
+
+  <div class="stats-strip" id="stats-strip"></div>
+
+  <div class="bento" style="margin:12px 16px 0">
+    <!-- ROSTER -->
+    <div class="roster-section">
+      <div class="section-title-bar">
+        <div class="section-accent"></div>
+        <div class="section-title">Team Roster</div>
+      </div>
+      <div class="pick-grid" id="pick-grid"></div>
+    </div>
+
+    <!-- RADAR -->
+    <div class="radar-section">
+      <div class="section-title-bar">
+        <div class="section-accent blue"></div>
+        <div class="section-title">Performance Matrix</div>
+      </div>
+      <svg id="radar-svg" viewBox="0 0 240 220"></svg>
+      <div class="radar-hint">↻ Tap axis to see point breakdown</div>
+      <div style="display:flex;gap:12px;margin-top:10px;justify-content:center">
+        <div style="display:flex;align-items:center;gap:5px">
+          <div style="width:10px;height:10px;background:var(--red);opacity:0.8"></div>
+          <span style="font-size:0.52rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">Your Team</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:5px">
+          <div style="width:10px;height:10px;background:var(--blue);opacity:0.4"></div>
+          <span style="font-size:0.52rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">League Avg</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRATEGIC -->
+  <div class="bento" style="margin:0 16px">
+    <div class="strategic-section">
+      <div class="section-title-bar">
+        <div class="section-accent blue"></div>
+        <div class="section-title">Strategic Differentiators</div>
+      </div>
+      <div class="strat-grid" id="strat-grid"></div>
+    </div>
+  </div>
+
+  <!-- TELEMETRY TABLE -->
+  <div style="margin:8px 16px 0">
+    <div class="telemetry-section">
+      <div class="telemetry-header">
+        <span class="telemetry-title">Raw Telemetry Log</span>
+        <span class="telemetry-live" id="telemetry-race-label"></span>
+      </div>
+      <div class="tbl-head"><span>Pick</span><span>Categories</span><span>Total</span></div>
+      <div id="tbl-body"></div>
+    </div>
+  </div>
+</main>
+
+<!-- AXIS POPUP -->
+<div class="popup-overlay" id="popup-overlay" onclick="closePopup(event)">
+  <div class="popup" style="position:relative">
+    <button class="popup-close" onclick="closePopup()"><span class="material-symbols-outlined">close</span></button>
+    <div class="popup-title" id="popup-title"></div>
+    <div class="popup-sub" id="popup-sub"></div>
+    <div class="popup-total" id="popup-total"></div>
+    <div id="popup-rows"></div>
+    <div class="popup-league" id="popup-league"></div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav portrait-only">
+  <a class="nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
+  <a class="nav-item" href="results.html"><span class="material-symbols-outlined">flag</span><span>Results</span></a>
+  <a class="nav-item" href="market.html"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
+  <a class="nav-item active" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
+</nav>
+
+<script>
+// ── DATA ─────────────────────────────────────────────────────────────────
+const RACES_META = [{"round":1,"race_name":"Australian Grand Prix","location":"Melbourne, Australia","race_date":"2026-03-08","sprint_weekend":false,"cancelled":false},{"round":2,"race_name":"Chinese Grand Prix","location":"Shanghai, China","race_date":"2026-03-15","sprint_weekend":true,"cancelled":false},{"round":3,"race_name":"Japanese Grand Prix","location":"Suzuka, Japan","race_date":"2026-03-29","sprint_weekend":false,"cancelled":false},{"round":4,"race_name":"Bahrain Grand Prix","location":"Sakhir, Bahrain","race_date":"2026-04-12","sprint_weekend":false,"cancelled":true},{"round":5,"race_name":"Saudi Arabian Grand Prix","location":"Jeddah, Saudi Arabia","race_date":"2026-04-19","sprint_weekend":false,"cancelled":true}];
+
+const CIRCUIT_MAP = {'Australian Grand Prix':null,'Chinese Grand Prix':'images/circuits/round-04_shanghai.svg','Japanese Grand Prix':'images/circuits/round-03_suzuka.svg','Bahrain Grand Prix':'images/circuits/round-01_sakhir.svg','Saudi Arabian Grand Prix':'images/circuits/round-02_jeddah.svg','Miami Grand Prix':'images/circuits/round-05_miami.svg','Canadian Grand Prix':'images/circuits/round-10_montreal.svg','Monaco Grand Prix':'images/circuits/round-07_montecarlo.svg','Barcelona-Catalunya Grand Prix':'images/circuits/round-08_catalunya.svg','Austrian Grand Prix':'images/circuits/round-11_spielberg.svg','British Grand Prix':'images/circuits/round-12_silverstone.svg','Belgian Grand Prix':'images/circuits/round-13_spa.svg','Hungarian Grand Prix':'images/circuits/round-14_hungaroring.svg','Dutch Grand Prix':'images/circuits/round-15_zandvoort.svg','Italian Grand Prix':'images/circuits/round-16_monza.svg','Spanish Grand Prix':'images/circuits/round-09_madring.svg','Azerbaijan Grand Prix':'images/circuits/round-17_baku.svg','Singapore Grand Prix':'images/circuits/round-18_singapore.svg','United States Grand Prix':'images/circuits/round-19_austin.svg','Mexico City Grand Prix':'images/circuits/round-20_mexicocity.svg','São Paulo Grand Prix':'images/circuits/round-21_interlagos.svg','Las Vegas Grand Prix':'images/circuits/round-22_lasvegas.svg','Qatar Grand Prix':'images/circuits/round-23_lusail.svg','Abu Dhabi Grand Prix':'images/circuits/round-24_yasmarinacircuit.svg'};
+
+const AXES = ['Qualifying','Race','Sprint','Overtakes','Pit/Bonus'];
+const AXIS_COLORS = {'Qualifying':'#a6c8ff','Race':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Pit/Bonus':'#c084fc'};
+
+// Embedded race data
+const DATA = {"1":{"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","sprint_weekend":false,"users":{"Danilo Iglesias":{"radar":{"Qualifying":39,"Race":41,"Sprint":0,"Overtakes":59,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":29,"Both Driver Q3":10,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":22,"Race position gained":13,"Race Fastest lap":6},"Sprint":{},"Overtakes":{"race overtake bonus":59},"Pit/Bonus":{"Fastest Pitstop":10}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Qualifying Position":8,"Race Position":9,"Race position gained":5,"race overtake bonus":0}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":true,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Qualifying Position":14,"Race Position":13,"Race position gained":8,"Race Fastest lap":6,"race overtake bonus":0}},{"name":"Nico Hulkenberg","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/nico_hulkenberg.png","ownership":27,"breakdown":{"Qualifying Position":7,"Both Driver Q3":10,"race overtake bonus":5}},{"name":"Oliver Bearman","type":"Driver","pts":32,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{"One Driver Q3":5,"QF not classified":-5,"Race Position":0,"Race position gained":0,"race overtake bonus":0}},{"name":"Haas F1 Team","type":"Constructor","pts":58,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"Race position gained":0,"race overtake bonus":0,"Fastest Pitstop":10}},{"name":"Racing Bulls","type":"Constructor","pts":0,"is_captain":false,"is_megacap":false,"img":"images/logos/racing_bulls.webp","ownership":18,"breakdown":{"Qualifying Position":0,"Race Position":0,"Race position gained":0,"race overtake bonus":0}}],"exclusive":[{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":true,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}},{"name":"Nico Hulkenberg","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/nico_hulkenberg.png","ownership":27,"breakdown":{}},{"name":"Oliver Bearman","type":"Driver","pts":32,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{}},{"name":"Haas F1 Team","type":"Constructor","pts":58,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{}},{"name":"Racing Bulls","type":"Constructor","pts":0,"is_captain":false,"is_megacap":false,"img":"images/logos/racing_bulls.webp","ownership":18,"breakdown":{}}],"common":[],"season_rank":8,"race_rank":8,"race_points":174.0,"season_points":174.0,"new_budget":101.1,"cards_used":""},"Eduardo Santos Lima":{"radar":{"Qualifying":40,"Race":24,"Sprint":0,"Overtakes":56,"Pit/Bonus":7},"axis_detail":{"Qualifying":{"Qualifying Position":30,"Both Driver Q3":10},"Race":{"Race Position":17,"Race position gained":7},"Sprint":{},"Overtakes":{"race overtake bonus":56},"Pit/Bonus":{"Fastest Pitstop":7}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Qualifying Position":8,"Race Position":9,"Race position gained":5,"race overtake bonus":0}},{"name":"Valtteri Bottas","type":"Driver","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/portraits/valtteri_bottas.png","ownership":27,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0}},{"name":"Carlos Sainz","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/carlos_sainz.png","ownership":9,"breakdown":{"Qualifying Position":14,"Race Position":8,"race overtake bonus":0}},{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":8,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":11}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"McLaren","type":"Constructor","pts":11,"is_captain":false,"is_megacap":false,"img":"images/logos/mclaren.webp","ownership":9,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0}}],"exclusive":[{"name":"Valtteri Bottas","type":"Driver","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/portraits/valtteri_bottas.png","ownership":27,"breakdown":{}},{"name":"Carlos Sainz","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/carlos_sainz.png","ownership":9,"breakdown":{}},{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"McLaren","type":"Constructor","pts":11,"is_captain":false,"is_megacap":false,"img":"images/logos/mclaren.webp","ownership":9,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}}],"season_rank":10,"race_rank":10,"race_points":156.0,"season_points":156.0,"new_budget":100.4,"cards_used":""},"Fabio Mucci":{"radar":{"Qualifying":57,"Race":67,"Sprint":0,"Overtakes":65,"Pit/Bonus":20},"axis_detail":{"Qualifying":{"Qualifying Position":28,"Both Driver Q3":20,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":35,"Race position gained":13,"Race Fastest lap":10,"Driver Of Day":0},"Sprint":{},"Overtakes":{"race overtake bonus":65},"Pit/Bonus":{"Fastest Pitstop":10,"2nd Fastest Pitstop":5}},"picks":[{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":8,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":11}},{"name":"Arvid Lindblad","type":"Driver","pts":15,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":15}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":0,"2nd Fastest Pitstop":5}}],"exclusive":[{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"Arvid Lindblad","type":"Driver","pts":15,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}}],"season_rank":1,"race_rank":1,"race_points":256.0,"season_points":256.0,"new_budget":100.5,"cards_used":"No Negative (GD1)"},"Guilherme Figueiredo":{"radar":{"Qualifying":48,"Race":59,"Sprint":0,"Overtakes":64,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":28,"Both Driver Q3":20},"Race":{"Race Position":27,"Race position gained":22,"Race Fastest lap":10},"Sprint":{},"Overtakes":{"race overtake bonus":64},"Pit/Bonus":{"Fastest Pitstop":10}},"picks":[{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":false,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":8,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":11}},{"name":"Lando Norris","type":"Driver","pts":-10,"is_captain":false,"is_megacap":false,"img":"images/portraits/lando_norris.png","ownership":9,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0}},{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{"Qualifying Position":0,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":15}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Qualifying Position":14,"Race Position":13,"Race position gained":8,"Race Fastest lap":6,"race overtake bonus":0}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":0,"2nd Fastest Pitstop":5}}],"exclusive":[{"name":"Lando Norris","type":"Driver","pts":-10,"is_captain":false,"is_megacap":false,"img":"images/portraits/lando_norris.png","ownership":9,"breakdown":{}},{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{}},{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":false,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}}],"season_rank":3,"race_rank":3,"race_points":250.0,"season_points":250.0,"new_budget":102.9,"cards_used":"Autopilot (GD1)"},"Liberio Junior":{"radar":{"Qualifying":62,"Race":86,"Sprint":0,"Overtakes":48,"Pit/Bonus":15},"axis_detail":{"Qualifying":{"Qualifying Position":38,"Both Driver Q3":20,"One Driver Q3":0},"Race":{"Race Position":56,"Race position gained":14,"Race Fastest lap":6,"Driver Of Day":0},"Sprint":{},"Overtakes":{"race overtake bonus":48},"Pit/Bonus":{"Fastest Pitstop":7,"2nd Fastest Pitstop":5}},"picks":[{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":false,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{"Qualifying Position":0,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":15}},{"name":"Lando Norris","type":"Driver","pts":19,"is_captain":true,"is_megacap":false,"img":"images/portraits/lando_norris.png","ownership":9,"breakdown":{"Qualifying Position":16,"Race Position":0,"race overtake bonus":3}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"McLaren","type":"Constructor","pts":11,"is_captain":false,"is_megacap":false,"img":"images/logos/mclaren.webp","ownership":9,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0}}],"exclusive":[{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":false,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{}},{"name":"Lando Norris","type":"Driver","pts":19,"is_captain":true,"is_megacap":false,"img":"images/portraits/lando_norris.png","ownership":9,"breakdown":{}},{"name":"McLaren","type":"Constructor","pts":11,"is_captain":false,"is_megacap":false,"img":"images/logos/mclaren.webp","ownership":9,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}}],"season_rank":2,"race_rank":2,"race_points":251.0,"season_points":251.0,"new_budget":102.5,"cards_used":""},"Priscila Rigotto":{"radar":{"Qualifying":46,"Race":53,"Sprint":0,"Overtakes":46,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":27,"Both Driver Q3":10,"One Driver Q3":0,"QF not classified":-5},"Race":{"Race Position":31,"Race position gained":22},"Sprint":{},"Overtakes":{"race overtake bonus":46},"Pit/Bonus":{"Fastest Pitstop":10}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Qualifying Position":8,"Race Position":9,"Race position gained":5,"race overtake bonus":0}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Qualifying Position":14,"Race Position":13,"Race position gained":8,"Race Fastest lap":6,"race overtake bonus":0}},{"name":"Esteban Ocon","type":"Driver","pts":5,"is_captain":false,"is_megacap":false,"img":"images/portraits/esteban_ocon.png","ownership":18,"breakdown":{"Qualifying Position":5,"Race Position":0,"race overtake bonus":0}},{"name":"Franco Colapinto","type":"Driver","pts":10,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{"Qualifying Position":0,"Race Position":9,"Race position gained":9,"race overtake bonus":0}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/logos/audi.webp","ownership":18,"breakdown":{"QF not classified":-5,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0}}],"exclusive":[{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}},{"name":"Esteban Ocon","type":"Driver","pts":5,"is_captain":false,"is_megacap":false,"img":"images/portraits/esteban_ocon.png","ownership":18,"breakdown":{}},{"name":"Franco Colapinto","type":"Driver","pts":10,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{}},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/logos/audi.webp","ownership":18,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}}],"season_rank":9,"race_rank":9,"race_points":164.0,"season_points":164.0,"new_budget":101.3,"cards_used":""},"Rafael Dias":{"radar":{"Qualifying":56,"Race":77,"Sprint":0,"Overtakes":60,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":37,"Both Driver Q3":20,"QF not classified":-5},"Race":{"Race Position":45,"Race position gained":22,"Race Fastest lap":10},"Sprint":{},"Overtakes":{"race overtake bonus":60},"Pit/Bonus":{"Fastest Pitstop":10}},"picks":[{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":false,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":8,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":11}},{"name":"Lewis Hamilton","type":"Driver","pts":44,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{"Qualifying Position":17,"Race Position":20,"Race position gained":7,"race overtake bonus":0}},{"name":"Carlos Sainz","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/carlos_sainz.png","ownership":9,"breakdown":{"Qualifying Position":14,"Race Position":8,"race overtake bonus":0}},{"name":"Isack Hadjar","type":"Driver","pts":11,"is_captain":false,"is_megacap":false,"img":"images/portraits/isack_hadjar.png","ownership":18,"breakdown":{"Qualifying Position":0,"Both Driver Q3":10,"Race Position":0,"Race position gained":1,"race overtake bonus":0}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Haas F1 Team","type":"Constructor","pts":58,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":10}}],"exclusive":[{"name":"Charles Leclerc","type":"Driver","pts":29,"is_captain":false,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"Lewis Hamilton","type":"Driver","pts":44,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{}},{"name":"Carlos Sainz","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/carlos_sainz.png","ownership":9,"breakdown":{}},{"name":"Isack Hadjar","type":"Driver","pts":11,"is_captain":false,"is_megacap":false,"img":"images/portraits/isack_hadjar.png","ownership":18,"breakdown":{}},{"name":"Haas F1 Team","type":"Constructor","pts":58,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}}],"season_rank":4,"race_rank":4,"race_points":233.0,"season_points":233.0,"new_budget":102.5,"cards_used":"Limitless (GD2)"},"Raphael Stein":{"radar":{"Qualifying":57,"Race":84,"Sprint":0,"Overtakes":46,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":37,"Both Driver Q3":20},"Race":{"Race Position":49,"Race position gained":25,"Race Fastest lap":10},"Sprint":{},"Overtakes":{"race overtake bonus":46},"Pit/Bonus":{"Fastest Pitstop":10}},"picks":[{"name":"Lewis Hamilton","type":"Driver","pts":44,"is_captain":true,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{"Qualifying Position":17,"Race Position":20,"Race position gained":7,"race overtake bonus":0}},{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":false,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{"Qualifying Position":0,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":15}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Qualifying Position":14,"Race Position":13,"Race position gained":8,"Race Fastest lap":6,"race overtake bonus":0}},{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Qualifying Position":8,"Race Position":9,"Race position gained":5,"race overtake bonus":0}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":0,"2nd Fastest Pitstop":5}}],"exclusive":[{"name":"Lewis Hamilton","type":"Driver","pts":44,"is_captain":true,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{}},{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":false,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":6,"race_rank":6,"race_points":224.0,"season_points":224.0,"new_budget":102.1,"cards_used":""},"Ricardo Mucci":{"radar":{"Qualifying":42,"Race":25,"Sprint":0,"Overtakes":0,"Pit/Bonus":0},"axis_detail":{"Qualifying":{"Qualifying Position":22,"Both Driver Q3":20},"Race":{"Race Position":18,"Race position gained":7},"Sprint":{},"Overtakes":{},"Pit/Bonus":{}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Qualifying Position":8,"Race Position":9,"Race position gained":5,"race overtake bonus":0}},{"name":"Arvid Lindblad","type":"Driver","pts":15,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":15}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Mercedes","type":"Constructor","pts":-8,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":0,"2nd Fastest Pitstop":5}}],"exclusive":[{"name":"Arvid Lindblad","type":"Driver","pts":15,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":-8,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":11,"race_rank":11,"race_points":98.0,"season_points":98.0,"new_budget":99.8,"cards_used":""},"Robson Jardim":{"radar":{"Qualifying":49,"Race":91,"Sprint":0,"Overtakes":50,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":39,"Both Driver Q3":10},"Race":{"Race Position":50,"Race position gained":31,"Race Fastest lap":10},"Sprint":{},"Overtakes":{"race overtake bonus":50},"Pit/Bonus":{"Fastest Pitstop":10}},"picks":[{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Qualifying Position":14,"Race Position":13,"Race position gained":8,"Race Fastest lap":6,"race overtake bonus":0}},{"name":"Lewis Hamilton","type":"Driver","pts":44,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{"Qualifying Position":17,"Race Position":20,"Race position gained":7,"race overtake bonus":0}},{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Qualifying Position":8,"Race Position":9,"Race position gained":5,"race overtake bonus":0}},{"name":"Franco Colapinto","type":"Driver","pts":10,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{"Qualifying Position":0,"Race Position":9,"Race position gained":9,"race overtake bonus":0}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":0,"2nd Fastest Pitstop":5}}],"exclusive":[{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}},{"name":"Lewis Hamilton","type":"Driver","pts":44,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{}},{"name":"Franco Colapinto","type":"Driver","pts":10,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":5,"race_rank":5,"race_points":228.0,"season_points":228.0,"new_budget":103.1,"cards_used":""},"Vinicius Agostini":{"radar":{"Qualifying":44,"Race":56,"Sprint":0,"Overtakes":51,"Pit/Bonus":15},"axis_detail":{"Qualifying":{"Qualifying Position":29,"Both Driver Q3":10,"One Driver Q3":5},"Race":{"Race Position":34,"Race position gained":22},"Sprint":{},"Overtakes":{"race overtake bonus":51},"Pit/Bonus":{"Fastest Pitstop":10,"2nd Fastest Pitstop":5}},"picks":[{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Qualifying Position":14,"Race Position":13,"Race position gained":8,"Race Fastest lap":6,"race overtake bonus":0}},{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Qualifying Position":8,"Race Position":9,"Race position gained":5,"race overtake bonus":0}},{"name":"Oliver Bearman","type":"Driver","pts":32,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{"One Driver Q3":5,"QF not classified":-5,"Race Position":0,"Race position gained":0,"race overtake bonus":0}},{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{"Qualifying Position":0,"Both Driver Q3":10,"Race Position":0,"race overtake bonus":15}},{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":7}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Fastest Pitstop":0,"2nd Fastest Pitstop":5}}],"exclusive":[{"name":"Oliver Bearman","type":"Driver","pts":32,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{}},{"name":"Kimi Antonelli","type":"Driver","pts":25,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":40,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":69,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":96,"is_captain":false,"is_megacap":false,"img":"images/portraits/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":7,"race_rank":7,"race_points":202.0,"season_points":202.0,"new_budget":101.5,"cards_used":"No Negative (GD1)"}},"league_avg":{"Qualifying":49.1,"Race":60.3,"Sprint":0.0,"Overtakes":49.5,"Pit/Bonus":10.6},"axis_max":{"Qualifying":62,"Race":91,"Sprint":1,"Overtakes":65,"Pit/Bonus":20}},"2":{"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","sprint_weekend":true,"users":{"Danilo Iglesias":{"radar":{"Qualifying":62,"Race":117,"Sprint":17,"Overtakes":126,"Pit/Bonus":12},"axis_detail":{"Qualifying":{"Qualifying Position":37,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5},"Race":{"Race Position":73,"Race position gained":30,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-1},"Sprint":{"Sprint Position":17,"Sprint position gained":0,"Sprint Not Classified":-10,"Sprint Fastest lap":5,"Sprint Position lost":-5},"Overtakes":{"race overtake bonus":100,"Sprint overtake bonus":26},"Pit/Bonus":{"Fastest Pitstop":7,"2nd Fastest Pitstop":5}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Sprint overtake bonus":4,"Race Position":18,"Qualifying Position":9,"Sprint Position":8,"race overtake bonus":6}},{"name":"Nico Hulkenberg","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/nico_hulkenberg.png","ownership":27,"breakdown":{"Both Driver Q3":10,"Qualifying Position":0,"Race Position":12,"race overtake bonus":0}},{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{"One Driver Q3":5,"Sprint Position":2,"Sprint Fastest lap":5,"Race Position":18,"Qualifying Position":9,"Race position gained":14,"race overtake bonus":0,"Sprint Not Classified":-10,"Sprint overtake bonus":8,"Sprint Position lost":-5}},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{"Both Driver Q3":10,"Both Driver Q2":3,"Sprint position gained":6,"Sprint overtake bonus":8,"Race Position":19,"Qualifying Position":0,"Sprint Position":2,"Race not classified":-20,"Race Position lost":-1,"race overtake bonus":43,"Fastest Pitstop":7,"2nd Fastest Pitstop":5}},{"name":"Racing Bulls","type":"Constructor","pts":50,"is_captain":false,"is_megacap":false,"img":"images/logos/racing_bulls.webp","ownership":18,"breakdown":{"Both Driver Q2":3,"Sprint position gained":6,"Sprint overtake bonus":12,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":10,"Fastest Pitstop":5,"race overtake bonus":16,"Sprint Not Classified":-10}}],"exclusive":[{"name":"Nico Hulkenberg","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/nico_hulkenberg.png","ownership":27,"breakdown":{}},{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{}},{"name":"Racing Bulls","type":"Constructor","pts":50,"is_captain":false,"is_megacap":false,"img":"images/logos/racing_bulls.webp","ownership":18,"breakdown":{}}],"common":[{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":8,"race_rank":7,"race_points":382.0,"season_points":556.0,"new_budget":102.0,"cards_used":""},"Eduardo Santos Lima":{"radar":{"Qualifying":37,"Race":17,"Sprint":21,"Overtakes":121,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":37},"Race":{"Race Position":17,"Race Position lost":-5},"Sprint":{"Sprint Position":6,"Sprint position gained":9,"Sprint Fastest lap":5,"Sprint Position lost":-4},"Overtakes":{"race overtake bonus":101,"Sprint overtake bonus":20},"Pit/Bonus":{"Fastest Pitstop":5,"2nd Fastest Pitstop":5}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"img":"images/portraits/valtteri_bottas.png","ownership":27,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Sprint Position":0,"Race Position lost":-5,"Sprint Position lost":-4,"Sprint overtake bonus":0}},{"name":"Sergio Perez","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"img":"images/portraits/sergio_perez.png","ownership":9,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":14,"Sprint Position":4,"Sprint position gained":3,"Sprint Fastest lap":5,"Sprint overtake bonus":0}},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":15,"Both Driver Q3":10,"Race Position":17,"race overtake bonus":9}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/logos/audi.webp","ownership":18,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Sprint Position":0,"Sprint overtake bonus":1}}],"exclusive":[{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"img":"images/portraits/valtteri_bottas.png","ownership":27,"breakdown":{}},{"name":"Sergio Perez","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"img":"images/portraits/sergio_perez.png","ownership":9,"breakdown":{}},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/logos/audi.webp","ownership":18,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":10,"race_rank":11,"race_points":257.0,"season_points":413.0,"new_budget":100.4,"cards_used":""},"Fabio Mucci":{"radar":{"Qualifying":78,"Race":90,"Sprint":29,"Overtakes":112,"Pit/Bonus":15},"axis_detail":{"Qualifying":{"Qualifying Position":43,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":60,"Race position gained":15,"Race Fastest lap":10,"Driver Of Day":10,"Race Position lost":-5},"Sprint":{"Sprint Position":13,"Sprint position gained":5,"Sprint Fastest lap":5,"Sprint Not Classified":-10},"Overtakes":{"race overtake bonus":87,"Sprint overtake bonus":25},"Pit/Bonus":{"Fastest Pitstop":10,"2nd Fastest Pitstop":5}},"picks":[{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":15,"Both Driver Q3":10,"Race Position":17,"race overtake bonus":9}},{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":22,"Sprint Not Classified":-10,"Sprint overtake bonus":6,"Sprint Position":0,"Race position gained":3,"race overtake bonus":8}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":28,"Race Position":33,"Race Fastest lap":10,"Driver Of Day":10,"QF not classified":-5,"Race Position lost":-5,"race overtake bonus":36,"Sprint overtake bonus":6,"Sprint Position":0}}],"exclusive":[{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}}],"season_rank":3,"race_rank":3,"race_points":435.0,"season_points":691.0,"new_budget":101.4,"cards_used":""},"Guilherme Figueiredo":{"radar":{"Qualifying":40,"Race":55,"Sprint":0,"Overtakes":67,"Pit/Bonus":5},"axis_detail":{"Qualifying":{"Qualifying Position":40},"Race":{"Race Position":45,"Race position gained":10},"Sprint":{"Sprint Position":0,"Sprint position gained":0,"Sprint Not Classified":0},"Overtakes":{"race overtake bonus":50,"Sprint overtake bonus":17},"Pit/Bonus":{"Fastest Pitstop":5}},"picks":[{"name":"Lando Norris","type":"Driver","pts":-10,"is_captain":false,"is_megacap":false,"img":"images/portraits/lando_norris.png","ownership":9,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0}},{"name":"Sergio Perez","type":"Driver","pts":10,"is_captain":false,"is_megacap":false,"img":"images/portraits/sergio_perez.png","ownership":9,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":14,"Sprint Position":0,"sprint position gained":0,"Sprint overtake bonus":0}},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"img":"images/portraits/valtteri_bottas.png","ownership":27,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Sprint Position":0}},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":15,"Both Driver Q3":10,"Race Position":17,"race overtake bonus":9}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"McLaren","type":"Constructor","pts":19,"is_captain":false,"is_megacap":false,"img":"images/logos/mclaren.webp","ownership":9,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0}}],"exclusive":[{"name":"Lando Norris","type":"Driver","pts":-10,"is_captain":false,"is_megacap":false,"img":"images/portraits/lando_norris.png","ownership":9,"breakdown":{}},{"name":"Sergio Perez","type":"Driver","pts":10,"is_captain":false,"is_megacap":false,"img":"images/portraits/sergio_perez.png","ownership":9,"breakdown":{}},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"img":"images/portraits/valtteri_bottas.png","ownership":27,"breakdown":{}},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"McLaren","type":"Constructor","pts":19,"is_captain":false,"is_megacap":false,"img":"images/logos/mclaren.webp","ownership":9,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}}],"season_rank":9,"race_rank":9,"race_points":296.0,"season_points":546.0,"new_budget":105.3,"cards_used":""},"Liberio Junior":{"radar":{"Qualifying":93,"Race":150,"Sprint":13,"Overtakes":195,"Pit/Bonus":15},"axis_detail":{"Qualifying":{"Qualifying Position":63,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":109,"Race position gained":20,"Race Fastest lap":10,"Driver Of Day":10,"Race not classified":-20,"Race Position lost":-5},"Sprint":{"Sprint Position":13,"Sprint position gained":0},"Overtakes":{"race overtake bonus":150,"Sprint overtake bonus":45},"Pit/Bonus":{"Fastest Pitstop":10,"2nd Fastest Pitstop":5}},"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Sprint overtake bonus":4,"Race Position":18,"Qualifying Position":9,"Sprint Position":8,"race overtake bonus":6}},{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{"Sprint Position lost":-3,"Sprint overtake bonus":10,"Driver Of Day":10,"Race Position":25,"Qualifying Position":10,"Sprint Position":4,"Race Fastest lap":10,"race overtake bonus":2}},{"name":"Gabriel Bortoleto","type":"Driver","pts":-14,"is_captain":false,"is_megacap":false,"img":"images/portraits/gabriel_bortoleto.png","ownership":55,"breakdown":{"Sprint position gained":1,"Sprint overtake bonus":5,"Qualifying Position":0,"Sprint Position":0,"Race not classified":-20}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"Arvid Lindblad","type":"Driver","pts":7,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{"Sprint overtake bonus":6,"Race Position":0,"Qualifying Position":0,"Race position gained":3,"race overtake bonus":8,"Sprint Not Classified":-10}},{"name":"Racing Bulls","type":"Constructor","pts":50,"is_captain":false,"is_megacap":false,"img":"images/logos/racing_bulls.webp","ownership":18,"breakdown":{"Both Driver Q2":3,"Sprint position gained":6,"Sprint overtake bonus":12,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":10,"Fastest Pitstop":5,"race overtake bonus":16,"Sprint Not Classified":-10}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}}],"exclusive":[{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}},{"name":"Racing Bulls","type":"Constructor","pts":50,"is_captain":false,"is_megacap":false,"img":"images/logos/racing_bulls.webp","ownership":18,"breakdown":{}}],"common":[{"name":"Gabriel Bortoleto","type":"Driver","pts":-14,"is_captain":false,"is_megacap":false,"img":"images/portraits/gabriel_bortoleto.png","ownership":55,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}}],"season_rank":1,"race_rank":2,"race_points":468.0,"season_points":719.0,"new_budget":104.6,"cards_used":"Extra DRS (GD2)"},"Priscila Rigotto":{"radar":{"Qualifying":62,"Race":120,"Sprint":24,"Overtakes":132,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":37,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5},"Race":{"Race Position":92,"Race position gained":22,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-4},"Sprint":{"Sprint Position":13,"Sprint position gained":6,"Sprint Position lost":-5},"Overtakes":{"race overtake bonus":102,"Sprint overtake bonus":30},"Pit/Bonus":{"Fastest Pitstop":5,"2nd Fastest Pitstop":5}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Sprint overtake bonus":4,"Race Position":18,"Qualifying Position":9,"Sprint Position":8,"race overtake bonus":6}},{"name":"Esteban Ocon","type":"Driver","pts":33,"is_captain":false,"is_megacap":false,"img":"images/portraits/esteban_ocon.png","ownership":18,"breakdown":{"Qualifying Position":4,"Race Position":18,"Race position gained":7,"race overtake bonus":0,"Sprint Position":3,"Sprint Position lost":-2}},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{"Qualifying Position":0,"Race Position":7,"Race position gained":8,"race overtake bonus":9,"Sprint Position":0,"Sprint overtake bonus":10,"Race Position lost":-2,"Race not classified":-20}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/logos/audi.webp","ownership":18,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":0,"Sprint Position":0,"Sprint overtake bonus":1}}],"exclusive":[{"name":"Esteban Ocon","type":"Driver","pts":33,"is_captain":false,"is_megacap":false,"img":"images/portraits/esteban_ocon.png","ownership":18,"breakdown":{}},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"img":"images/logos/audi.webp","ownership":18,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":7,"race_rank":5,"race_points":399.0,"season_points":563.0,"new_budget":103.4,"cards_used":""},"Rafael Dias":{"radar":{"Qualifying":77,"Race":139,"Sprint":35,"Overtakes":145,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":47,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":105,"Race position gained":26,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-5},"Sprint":{"Sprint Position":14,"Sprint position gained":6,"Sprint Position lost":-5},"Overtakes":{"race overtake bonus":119,"Sprint overtake bonus":26},"Pit/Bonus":{"Fastest Pitstop":5,"2nd Fastest Pitstop":5}},"picks":[{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":false,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{"Qualifying Position":15,"Both Driver Q3":10,"Race Position":17,"race overtake bonus":9}},{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{"Qualifying Position":19,"Both Driver Q3":10,"Race Position":15,"Race Fastest lap":10,"race overtake bonus":0}},{"name":"Carlos Sainz","type":"Driver","pts":37,"is_captain":false,"is_megacap":false,"img":"images/portraits/carlos_sainz.png","ownership":9,"breakdown":{"Qualifying Position":13,"Race Position":16,"Race position gained":8,"race overtake bonus":0}},{"name":"Isack Hadjar","type":"Driver","pts":11,"is_captain":false,"is_megacap":false,"img":"images/portraits/isack_hadjar.png","ownership":18,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":11}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{"Both Driver Q3":10,"Both Driver Q2":3,"Sprint position gained":6,"Sprint overtake bonus":8,"Race Position":19,"Qualifying Position":0,"Sprint Position":2,"Race not classified":-20,"Race Position lost":-5,"race overtake bonus":43,"Fastest Pitstop":5,"2nd Fastest Pitstop":5}}],"exclusive":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{}},{"name":"Carlos Sainz","type":"Driver","pts":37,"is_captain":false,"is_megacap":false,"img":"images/portraits/carlos_sainz.png","ownership":9,"breakdown":{}},{"name":"Isack Hadjar","type":"Driver","pts":11,"is_captain":false,"is_megacap":false,"img":"images/portraits/isack_hadjar.png","ownership":18,"breakdown":{}},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":false,"is_megacap":false,"img":"images/portraits/charles_leclerc.png","ownership":45,"breakdown":{}},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"img":"images/logos/haas.webp","ownership":18,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}}],"season_rank":2,"race_rank":1,"race_points":481.0,"season_points":714.0,"new_budget":104.0,"cards_used":"Limitless (GD2)"},"Raphael Stein":{"radar":{"Qualifying":77,"Race":134,"Sprint":28,"Overtakes":143,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":47,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":105,"Race position gained":14,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-5},"Sprint":{"Sprint Position":13,"Sprint position gained":5,"Sprint Position lost":-5},"Overtakes":{"race overtake bonus":117,"Sprint overtake bonus":26},"Pit/Bonus":{"Fastest Pitstop":5,"2nd Fastest Pitstop":5}},"picks":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":true,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{"Qualifying Position":19,"Both Driver Q3":10,"Race Position":15,"Race Fastest lap":10,"race overtake bonus":0}},{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":false,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{"Sprint Position lost":-3,"Sprint overtake bonus":10,"Driver Of Day":10,"Race Position":25,"Qualifying Position":10,"Sprint Position":4,"Race Fastest lap":10,"race overtake bonus":2}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Sprint overtake bonus":4,"Race Position":18,"Qualifying Position":9,"Sprint Position":8,"race overtake bonus":6}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":28,"Race Position":33,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-5,"race overtake bonus":111,"Sprint overtake bonus":6,"Sprint Position":0,"Sprint position gained":5}}],"exclusive":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":true,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{}},{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":false,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":6,"race_rank":8,"race_points":364.0,"season_points":588.0,"new_budget":104.2,"cards_used":""},"Ricardo Mucci":{"radar":{"Qualifying":62,"Race":106,"Sprint":18,"Overtakes":106,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":37,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5},"Race":{"Race Position":92,"Race position gained":14},"Sprint":{"Sprint Position":8,"Sprint position gained":5,"Sprint Position lost":-5},"Overtakes":{"race overtake bonus":90,"Sprint overtake bonus":16},"Pit/Bonus":{"Fastest Pitstop":5,"2nd Fastest Pitstop":5}},"picks":[{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{"Qualifying Position":0,"Race Position":0,"race overtake bonus":22,"Sprint Not Classified":-10,"Sprint overtake bonus":6,"Sprint Position":0,"Race position gained":3,"race overtake bonus":8}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":28,"Race Position":33,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-5,"race overtake bonus":111,"Sprint overtake bonus":6,"Sprint Position":0,"Sprint position gained":5}}],"exclusive":[{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"img":"images/portraits/arvid_lindblad.png","ownership":55,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":11,"race_rank":10,"race_points":275.0,"season_points":373.0,"new_budget":99.8,"cards_used":""},"Robson Jardim":{"radar":{"Qualifying":77,"Race":127,"Sprint":27,"Overtakes":130,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":47,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":100,"Race position gained":27},"Sprint":{"Sprint Position":17,"Sprint position gained":5,"Sprint Position lost":-5},"Overtakes":{"race overtake bonus":110,"Sprint overtake bonus":20},"Pit/Bonus":{"Fastest Pitstop":5,"2nd Fastest Pitstop":5}},"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Sprint overtake bonus":4,"Race Position":18,"Qualifying Position":9,"Sprint Position":8,"race overtake bonus":6}},{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{"Qualifying Position":19,"Both Driver Q3":10,"Race Position":15,"Race Fastest lap":10,"race overtake bonus":0}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{"Qualifying Position":0,"Race Position":7,"Race position gained":8,"race overtake bonus":9,"Sprint Position":0,"Sprint overtake bonus":10,"Race Position lost":-2,"Race not classified":-20}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":28,"Race Position":33,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-5,"race overtake bonus":111,"Sprint overtake bonus":6,"Sprint Position":0,"Sprint position gained":5}}],"exclusive":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"img":"images/portraits/lewis_hamilton.png","ownership":27,"breakdown":{}},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"img":"images/portraits/franco_colapinto.png","ownership":27,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":true,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":4,"race_rank":4,"race_points":415.0,"season_points":643.0,"new_budget":105.2,"cards_used":""},"Vinicius Agostini":{"radar":{"Qualifying":72,"Race":118,"Sprint":27,"Overtakes":133,"Pit/Bonus":10},"axis_detail":{"Qualifying":{"Qualifying Position":47,"Both Driver Q3":20,"Both Driver Q2":3,"One Driver Q3":5,"QF not classified":-5},"Race":{"Race Position":92,"Race position gained":21,"Race not classified":-20,"Race Position lost":-5},"Sprint":{"Sprint Position":17,"Sprint position gained":5,"Sprint Position lost":-5},"Overtakes":{"race overtake bonus":107,"Sprint overtake bonus":26},"Pit/Bonus":{"Fastest Pitstop":5,"2nd Fastest Pitstop":5}},"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{"Sprint overtake bonus":4,"Race Position":18,"Qualifying Position":9,"Sprint Position":8,"race overtake bonus":6}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{"Sprint position gained":6,"Sprint overtake bonus":6,"Race Position":6,"Qualifying Position":0,"Sprint Position":2,"Race position gained":7,"race overtake bonus":8}},{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{"One Driver Q3":5,"Sprint Position":2,"Sprint Fastest lap":5,"Race Position":18,"Qualifying Position":9,"Race position gained":14,"race overtake bonus":0,"Sprint Not Classified":-10,"Sprint overtake bonus":8,"Sprint Position lost":-5}},{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{"Sprint Position lost":-3,"Sprint overtake bonus":10,"Driver Of Day":10,"Race Position":25,"Qualifying Position":10,"Sprint Position":4,"Race Fastest lap":10,"race overtake bonus":2}},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{"Sprint Fastest lap":5,"Sprint position gained":5,"Sprint overtake bonus":13,"Race Position":27,"Qualifying Position":15,"Sprint Position":13,"Both Driver Q3":10,"Fastest Pitstop":5,"2nd Fastest Pitstop":5,"race overtake bonus":21}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{"Both Driver Q3":10,"One Driver Q3":5,"Qualifying Position":28,"Race Position":33,"Race Fastest lap":10,"Race not classified":-20,"Race Position lost":-5,"race overtake bonus":111,"Sprint overtake bonus":6,"Sprint Position":0,"Sprint position gained":5}}],"exclusive":[{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"img":"images/portraits/oliver_bearman.png","ownership":27,"breakdown":{}},{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"img":"images/portraits/kimi_antonelli.png","ownership":36,"breakdown":{}},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"img":"images/portraits/george_russell.png","ownership":45,"breakdown":{}}],"common":[{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"img":"images/logos/ferrari.webp","ownership":82,"breakdown":{}},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"img":"images/logos/mercedes.webp","ownership":64,"breakdown":{}},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"img":"images/portraits/liam_lawson.png","ownership":64,"breakdown":{}}],"season_rank":5,"race_rank":6,"race_points":397.0,"season_points":599.0,"new_budget":103.6,"cards_used":""}},"league_avg":{"Qualifying":65.4,"Race":107.5,"Sprint":19.5,"Overtakes":128.4,"Pit/Bonus":10.2},"axis_max":{"Qualifying":93,"Race":150,"Sprint":35,"Overtakes":195,"Pit/Bonus":15}}};
+
+// ── STATE ─────────────────────────────────────────────────────────────────
+const racedRounds = Object.keys(DATA).map(Number).sort((a,b)=>a-b);
+let selectedRace = Math.max(...racedRounds);
+let selectedUser = null;
+
+// ── HELPERS ───────────────────────────────────────────────────────────────
+function getRaceData() { return DATA[selectedRace]; }
+function getUserData() { return getRaceData().users[selectedUser]; }
+function getAllUsers() { return Object.keys(getRaceData().users).sort(); }
+
+// ── ROUND SWITCHER ────────────────────────────────────────────────────────
+function buildSwitcher() {
+  const el = document.getElementById('round-switcher');
+  el.innerHTML = '';
+  const allRounds = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
+  allRounds.forEach(r => {
+    const hasData = racedRounds.includes(r);
+    const btn = document.createElement('button');
+    btn.className = 'round-btn' + (r === selectedRace ? ' active' : '') + (!hasData ? ' no-data' : '');
+    btn.textContent = `R${String(r).padStart(2,'0')}`;
+    if (hasData) btn.onclick = () => { selectedRace = r; init(); };
+    el.appendChild(btn);
+  });
+  el.querySelector('.active')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+
+// ── PLAYER SELECTS ────────────────────────────────────────────────────────
+function buildSelects() {
+  const users = getAllUsers();
+  ['player-select','ls-player-select'].forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = users.map(u => `<option value="${u}"${u===selectedUser?' selected':''}>${u}</option>`).join('');
+  });
+}
+
+function syncPlayer(user) {
+  selectedUser = user;
+  ['player-select','ls-player-select'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = user;
+  });
+  renderAll();
+}
+
+// ── RACE HEADER ───────────────────────────────────────────────────────────
+function renderHeader() {
+  const rd = getRaceData();
+  document.getElementById('race-label').textContent = `${rd.race_flag} Strategy Portal`;
+  document.getElementById('race-title').textContent = rd.race_name;
+  document.getElementById('race-sub').textContent = `${rd.sprint_weekend ? '⚡ Sprint Weekend · ' : ''}Round ${selectedRace} · 2026`;
+  document.getElementById('telemetry-race-label').textContent = `${rd.race_name} Live Feed`;
+}
+
+// ── STATS STRIP ───────────────────────────────────────────────────────────
+function renderStrip() {
+  const ud = getUserData();
+  const el = document.getElementById('stats-strip');
+  el.innerHTML = [
+    {l:'Race Rank', v:`P${ud.race_rank}`},
+    {l:'Race Pts',  v:ud.race_points},
+    {l:'Season',    v:ud.season_points},
+    {l:'Budget',    v:`$${ud.new_budget.toFixed(1)}M`},
+  ].map(s=>`<div class="strip-card"><div class="strip-label">${s.l}</div><div class="strip-val">${s.v}</div></div>`).join('');
+  if (ud.cards_used) {
+    el.innerHTML += `<div class="strip-card" style="grid-column:1/-1;border-left:2px solid var(--red)"><div class="strip-label">Card Used</div><div class="strip-val" style="font-size:0.75rem">${ud.cards_used}</div></div>`;
+  }
+}
+
+// ── PICK GRID ─────────────────────────────────────────────────────────────
+function renderPickGrid() {
+  const ud = getUserData();
+  const el = document.getElementById('pick-grid');
+  el.innerHTML = ud.picks.map(p => {
+    const ptsClass = p.pts < 0 ? 'neg' : 'pos';
+    const isLogo = p.type === 'Constructor';
+    return `<div class="pick-card${p.is_captain?' captain':''}" onclick="showPickPopup('${p.name.replace(/'/g,"\\'")}')">
+      ${p.is_captain ? '<div class="captain-badge">2× Captain</div>' : ''}
+      <img class="pick-thumb${isLogo?' logo':''}" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'"/>
+      <div style="min-width:0;flex:1">
+        <div class="pick-name">${p.name}</div>
+        <div class="pick-type">${p.type}</div>
+      </div>
+      <div class="pick-pts ${ptsClass}">${p.pts > 0?'+':''}${p.pts}</div>
+      <div class="ownership-bar" style="width:${p.ownership}%"></div>
+    </div>`;
+  }).join('');
+}
+
+// ── RADAR CHART ───────────────────────────────────────────────────────────
+function renderRadar() {
+  const ud = getUserData();
+  const rd = getRaceData();
+  const svg = document.getElementById('radar-svg');
+  const cx = 120, cy = 110, r = 85;
+  const n = AXES.length;
+
+  function point(axis, value, maxVal, radius) {
+    const i = AXES.indexOf(axis);
+    const angle = (i * 2 * Math.PI / n) - Math.PI / 2;
+    const norm = Math.max(0, Math.min(1, value / (maxVal || 1)));
+    return [cx + radius * norm * Math.cos(angle), cy + radius * norm * Math.sin(angle)];
+  }
+
+  function axisPoint(i, frac) {
+    const angle = (i * 2 * Math.PI / n) - Math.PI / 2;
+    return [cx + r * frac * Math.cos(angle), cy + r * frac * Math.sin(angle)];
+  }
+
+  let html = '';
+
+  // Grid rings
+  [0.25, 0.5, 0.75, 1].forEach(frac => {
+    const pts = AXES.map((_,i) => axisPoint(i, frac).join(',')).join(' ');
+    html += `<polygon points="${pts}" fill="none" stroke="rgba(229,226,225,0.07)" stroke-width="1"/>`;
+  });
+
+  // Axis lines + labels
+  AXES.forEach((axis, i) => {
+    const [x2, y2] = axisPoint(i, 1);
+    const [lx, ly] = axisPoint(i, 1.22);
+    const isZeroAxis = axis === 'Sprint' && rd.sprint_weekend === false;
+    html += `<line x1="${cx}" y1="${cy}" x2="${x2}" y2="${y2}" stroke="rgba(229,226,225,0.1)" stroke-width="1"/>`;
+    // Clickable label
+    html += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="central"
+      font-family="Inter,sans-serif" font-size="9" font-weight="800" fill="${isZeroAxis?'rgba(229,226,225,0.2)':AXIS_COLORS[axis]}"
+      style="cursor:pointer;text-transform:uppercase;letter-spacing:0.06em"
+      onclick="showAxisPopup('${axis}')">${axis}${isZeroAxis?' (N/A)':''}</text>`;
+  });
+
+  // League avg polygon
+  const avgPts = AXES.map(axis => {
+    const [x,y] = point(axis, rd.league_avg[axis], rd.axis_max[axis], r);
+    return `${x},${y}`;
+  }).join(' ');
+  html += `<polygon points="${avgPts}" fill="rgba(166,200,255,0.08)" stroke="rgba(166,200,255,0.4)" stroke-width="1.5" stroke-dasharray="3,3"/>`;
+
+  // Player polygon
+  const playerPts = AXES.map(axis => {
+    const val = Math.max(0, ud.radar[axis]);
+    const [x,y] = point(axis, val, rd.axis_max[axis], r);
+    return `${x},${y}`;
+  }).join(' ');
+  html += `<polygon points="${playerPts}" fill="rgba(225,6,0,0.2)" stroke="rgba(225,6,0,0.9)" stroke-width="2"/>`;
+
+  // Dots on player polygon
+  AXES.forEach(axis => {
+    const val = Math.max(0, ud.radar[axis]);
+    const [x,y] = point(axis, val, rd.axis_max[axis], r);
+    html += `<circle cx="${x}" cy="${y}" r="4" fill="${AXIS_COLORS[axis]}" stroke="var(--surface)" stroke-width="1.5" style="cursor:pointer" onclick="showAxisPopup('${axis}')"/>`;
+  });
+
+  svg.innerHTML = html;
+}
+
+// ── STRATEGIC ─────────────────────────────────────────────────────────────
+function renderStrategic() {
+  const ud = getUserData();
+  const el = document.getElementById('strat-grid');
+  const excl = ud.exclusive.slice(0,3);
+  const comm = ud.common.slice(0,3);
+
+  function items(arr, cls) {
+    if (!arr.length) return '<div style="font-size:0.6rem;color:var(--on-40);padding:8px">None this race</div>';
+    return arr.map(p=>`<div class="strat-item ${cls}">
+      <span class="strat-item-name">${p.name.split(' ').slice(-1)[0]}</span>
+      <span class="strat-item-pct">${p.ownership}% owned</span>
+    </div>`).join('');
+  }
+
+  el.innerHTML = `
+    <div class="strat-card exclusive">
+      <div class="strat-card-title">Exclusive Assets</div>
+      <div class="strat-badge">Low Ownership</div>
+      ${items(excl,'exclusive')}
+    </div>
+    <div class="strat-card common">
+      <div class="strat-card-title">Common Holdings</div>
+      <div class="strat-badge">High Saturation</div>
+      ${items(comm,'common')}
+    </div>`;
+}
+
+// ── TELEMETRY TABLE ───────────────────────────────────────────────────────
+function renderTable() {
+  const ud = getUserData();
+  const el = document.getElementById('tbl-body');
+  el.innerHTML = ud.picks.sort((a,b)=>b.pts-a.pts).map(p => {
+    const cats = Object.entries(p.breakdown).filter(([,v])=>v!==0)
+      .sort((a,b)=>b[1]-a[1]).slice(0,3)
+      .map(([k,v])=>`${k}: ${v>0?'+':''}${v}`).join(' · ');
+    return `<div class="tbl-row" onclick="showPickPopup('${p.name.replace(/'/g,"\\'")}')">
+      <div>
+        <div class="tbl-pick${p.is_captain?' cap':''}">${p.name}</div>
+        <div class="tbl-cats">${cats||'—'}</div>
+      </div>
+      <div></div>
+      <div class="tbl-total${p.pts<0?' neg':''}">${p.pts>0?'+':''}${p.pts}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── LANDSCAPE BAR CHART ───────────────────────────────────────────────────
+function renderLandscape() {
+  const ud = getUserData();
+  const rd = getRaceData();
+  const right = document.getElementById('landscape-right');
+  const lsPicks = document.getElementById('ls-picks');
+
+  // Picks sidebar
+  lsPicks.innerHTML = ud.picks.sort((a,b)=>b.pts-a.pts).map(p=>`
+    <div class="ls-pick">
+      <img class="ls-thumb${p.type==='Constructor'?' logo':''}" src="${p.img}" alt="" onerror="this.style.display='none'"/>
+      <div class="ls-name">${p.name.split(' ').slice(-1)[0]}${p.is_captain?' (C)':''}</div>
+      <div class="ls-pts${p.pts<0?' neg':''}">${p.pts>0?'+':''}${p.pts}</div>
+    </div>`).join('');
+
+  // Bar chart: all categories grouped by axis
+  const globalMax = Math.max(...AXES.map(axis => {
+    const playerVal = Math.abs(ud.radar[axis]);
+    const avgVal = Math.abs(rd.league_avg[axis]);
+    return Math.max(playerVal, avgVal, 1);
+  }));
+
+  let html = `<div class="ls-title">${rd.race_name} · ${Object.keys(rd.users).find(u=>u===selectedUser)}</div>`;
+  html += `<div class="ls-legend">
+    <div class="ls-legend-item"><div class="ls-legend-dot" style="background:var(--red)"></div>Your Team</div>
+    <div class="ls-legend-item"><div class="ls-legend-dot" style="background:var(--blue);opacity:0.5"></div>League Avg</div>
+  </div>`;
+
+  AXES.forEach(axis => {
+    const playerVal = ud.radar[axis];
+    const avgVal = rd.league_avg[axis];
+    const axisMax = Math.max(Math.abs(playerVal), Math.abs(avgVal), 1);
+    const isSprint = axis === 'Sprint' && !rd.sprint_weekend;
+    const color = AXIS_COLORS[axis];
+
+    html += `<div class="axis-header" style="color:${color}">${axis}${isSprint?' (No Sprint)':''} — ${playerVal > 0 ? '+' : ''}${playerVal} pts</div>`;
+    html += `<div class="bar-group">`;
+
+    // Axis total bar
+    const pPct = Math.max(0, (playerVal / axisMax) * 100);
+    const aPct = Math.max(0, (avgVal / axisMax) * 100);
+    html += `<div class="bar-row">
+      <div class="bar-label">Total</div>
+      <div class="bar-track">
+        <div class="bar-fill avg" style="width:${aPct}%"></div>
+        <div class="bar-fill player" style="width:${pPct}%;background:${color}"></div>
+      </div>
+      <div class="bar-val${playerVal<0?' neg':''}">${playerVal>0?'+':''}${playerVal}</div>
+    </div>`;
+
+    // Category detail bars
+    const detail = ud.axis_detail[axis];
+    Object.entries(detail).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).forEach(([cat,val]) => {
+      const catPct = Math.min(100, Math.max(0, (Math.abs(val) / axisMax) * 100));
+      const catColor = val < 0 ? 'var(--red-dim)' : color;
+      html += `<div class="bar-row">
+        <div class="bar-label">${cat}</div>
+        <div class="bar-track">
+          <div class="bar-fill" style="width:${catPct}%;background:${catColor};opacity:0.7"></div>
+        </div>
+        <div class="bar-val${val<0?' neg':''}">${val>0?'+':''}${val}</div>
+      </div>`;
+    });
+    html += `</div>`;
+  });
+
+  right.innerHTML = html;
+}
+
+// ── POPUPS ────────────────────────────────────────────────────────────────
+function showAxisPopup(axis) {
+  const ud = getUserData();
+  const rd = getRaceData();
+  const detail = ud.axis_detail[axis];
+  const total = ud.radar[axis];
+  const avg = rd.league_avg[axis];
+  const color = AXIS_COLORS[axis];
+
+  document.getElementById('popup-title').textContent = axis;
+  document.getElementById('popup-sub').textContent = `${getRaceData().race_name} · ${selectedUser}`;
+  const totEl = document.getElementById('popup-total');
+  totEl.textContent = `${total > 0 ? '+' : ''}${total} pts`;
+  totEl.style.color = color;
+
+  const rows = Object.entries(detail).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
+  document.getElementById('popup-rows').innerHTML = rows.length
+    ? rows.map(([cat,val])=>`<div class="popup-row">
+        <span class="popup-cat">${cat}</span>
+        <span class="popup-pts ${val>0?'pos':'neg'}">${val>0?'+':''}${val}</span>
+      </div>`).join('')
+    : '<div style="font-size:0.7rem;color:var(--on-40);padding:8px 0">No points in this category</div>';
+
+  document.getElementById('popup-league').textContent = `League average for ${axis}: ${avg} pts`;
+  document.getElementById('popup-overlay').classList.add('open');
+}
+
+function showPickPopup(name) {
+  const ud = getUserData();
+  const pick = ud.picks.find(p => p.name === name);
+  if (!pick) return;
+
+  document.getElementById('popup-title').textContent = name;
+  document.getElementById('popup-sub').textContent = `${pick.type} · ${getRaceData().race_name}`;
+  const totEl = document.getElementById('popup-total');
+  totEl.textContent = `${pick.pts > 0 ? '+' : ''}${pick.pts} pts`;
+  totEl.style.color = pick.pts < 0 ? 'var(--red-dim)' : 'var(--red)';
+
+  const rows = Object.entries(pick.breakdown).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
+  document.getElementById('popup-rows').innerHTML = rows.length
+    ? rows.map(([cat,val])=>`<div class="popup-row">
+        <span class="popup-cat">${cat}</span>
+        <span class="popup-pts ${val>0?'pos':'neg'}">${val>0?'+':''}${val}</span>
+      </div>`).join('')
+    : '<div style="font-size:0.7rem;color:var(--on-40)">No breakdown available</div>';
+
+  document.getElementById('popup-league').textContent = `Ownership: ${pick.ownership}% of league selected ${name}`;
+  document.getElementById('popup-overlay').classList.add('open');
+}
+
+function closePopup(e) {
+  if (!e || e.target === document.getElementById('popup-overlay'))
+    document.getElementById('popup-overlay').classList.remove('open');
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────
+function renderAll() {
+  renderHeader();
+  renderStrip();
+  renderPickGrid();
+  renderRadar();
+  renderStrategic();
+  renderTable();
+  renderLandscape();
+}
+
+function init() {
+  buildSwitcher();
+  const users = getAllUsers();
+  // Default: P1 player for this race
+  const p1 = Object.entries(getRaceData().users).sort((a,b)=>a[1].season_rank-b[1].season_rank)[0];
+  selectedUser = selectedUser && users.includes(selectedUser) ? selectedUser : p1[0];
+  buildSelects();
+  renderAll();
+}
+
+init();
+
+// Orientation change — re-render landscape
+window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
+window.addEventListener('resize', () => {
+  if (window.innerWidth > window.innerHeight) renderLandscape();
+});
+</script>
+</body>
+</html>

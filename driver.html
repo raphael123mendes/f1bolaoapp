@@ -200,7 +200,11 @@ main{flex:1;padding-bottom:80px}
             <div class="hero-stat-sub" id="hero-ownership" style="color:var(--on-40)"></div>
           </div>
         </div>
-        <div class="hero-ownership">
+        <button onclick="goToHistorical()" style="display:flex;align-items:center;justify-content:space-between;width:100%;background:rgba(166,200,255,0.08);border:1px solid rgba(166,200,255,0.2);color:var(--blue);padding:8px 12px;cursor:pointer;margin-top:10px;font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;transition:background 0.15s" onmouseover="this.style.background='rgba(166,200,255,0.15)'" onmouseout="this.style.background='rgba(166,200,255,0.08)'">
+  <span>View Full Historical Data</span>
+  <span class="material-symbols-outlined" style="font-size:0.9rem">history</span>
+</button>
+<div class="hero-ownership">
           <span class="ownership-label">Ownership</span>
           <div class="ownership-bar-wrap"><div class="ownership-bar-fill" id="own-bar"></div></div>
           <span class="ownership-pct" id="own-pct"></span>
@@ -269,6 +273,11 @@ const ENTITY_DATA = {"Mercedes":{"type":"Constructor","total_pts":211,"per_race"
 
 const ENTITY_ORDER = ["Mercedes","Ferrari","Haas F1 Team","Racing Bulls","Red Bull Racing","McLaren","Audi","George Russell","Charles Leclerc","Lewis Hamilton","Kimi Antonelli","Oliver Bearman","Liam Lawson","Carlos Sainz","Esteban Ocon","Sergio Perez","Franco Colapinto","Arvid Lindblad","Isack Hadjar","Gabriel Bortoleto","Lando Norris","Valtteri Bottas","Nico Hulkenberg","Oscar Piastri"];
 const CAT_COLORS = {'Qualifying':'#a6c8ff','Race Pos':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Fastest Lap':'#c084fc','Bonuses':'#fb923c'};
+
+// ── NAVIGATION ───────────────────────────────────────────────────────────
+function goToHistorical() {
+  window.location.href = 'historical.html?entity=' + encodeURIComponent(selectedEntity);
+}
 
 // ── STATE ─────────────────────────────────────────────────────────────────
 let activeFilter = 'all';

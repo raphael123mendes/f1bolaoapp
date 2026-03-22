@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -274,6 +274,11 @@
 <body>
 
 <!-- TOP BAR -->
+<div id="loading-overlay" style="position:fixed;inset:0;background:#131313;z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;color:#e10600;letter-spacing:-0.02em;text-transform:uppercase">F1 Bolão</div>
+  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden"><div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div></div>
+  <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
+</div>
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">F1<span> / </span>Bolão</div>
@@ -353,39 +358,22 @@
 </nav>
 
 <script>
-// ── DATA ──────────────────────────────────────────────────────────────────
-// Data loaded from JSON files
-let RESULTS = [];
-async function loadData() {
-  const [r] = await Promise.all([
-    fetch('results.json').then(x => x.json()),
-  ]);
-  RESULTS = r;
-}
 
-// Prizes: sum race_prize per player across all races
-function computePrizeTotals(results) {
-  const totals = {};
-  results.forEach(r => {
-    if (!totals[r.user_name]) totals[r.user_name] = 0;
-    totals[r.user_name] += r.race_prize || 0;
-  });
-  // Round to 2dp
-  Object.keys(totals).forEach(k => totals[k] = Math.round(totals[k] * 100) / 100);
-  return totals;
-}
+// ── DATA ──────────────────────────────────────────────────────────────────
 
 const CHART_COLORS = [
   '#e10600','#a6c8ff','#4ade80','#f59e0b','#c084fc',
   '#fb923c','#34d399','#f472b6','#60a5fa','#a3e635','#94a3b8'
 ];
 
+
 async function init() {
-// ── COMPUTE ───────────────────────────────────────────────────────────────
+  try {
+    const RESULTS = await fetch('results.json').then(r => r.json());
+    document.getElementById('loading-overlay')?.remove();
+    // ── COMPUTE ───────────────────────────────────────────────────────────────
 const maxRace = Math.max(...RESULTS.map(r => r.race_number));
 const latest  = RESULTS.filter(r => r.race_number === maxRace).sort((a,b) => a.season_rank - b.season_rank);
-
-const prizes = computePrizeTotals(RESULTS);
 
 // Trophy race data
 const trophyData = {};
@@ -426,8 +414,8 @@ function trendHTML(change) {
 const list = document.getElementById('standings-list');
 latest.forEach((p, idx) => {
   const avgPts = (p.season_points / p.race_number).toFixed(1);
-  const prize = prizes[p.user_name] ? `$${prizes[p.user_name].toFixed(2)}` : '—';
-  const prizeClass = prizes[p.user_name] ? 'prize-val' : '';
+  const prize = p.race_prize ? `$${p.race_prize.toFixed(2)}` : '—';
+  const prizeClass = p.race_prize ? 'prize-val' : '';
   const rankNum = String(p.season_rank).padStart(2, '0');
   const hasCard = p.cards_used && p.cards_used.trim() !== '';
 
@@ -480,11 +468,11 @@ latest.forEach((p, idx) => {
   list.appendChild(row);
 });
 
-function toggleRow(row) {
+window.toggleRow = function(row) {
   const wasOpen = row.classList.contains('open');
   document.querySelectorAll('.player-row.open').forEach(r => r.classList.remove('open'));
   if (!wasOpen) row.classList.add('open');
-}
+};
 
 // ── TROPHY RACE CHART ─────────────────────────────────────────────────────
 (function buildChart() {
@@ -561,8 +549,14 @@ function toggleRow(row) {
     legendEl.appendChild(el);
   });
 })();
+
+  } catch(e) {
+    console.error('Standings error:', e);
+    const ov = document.getElementById('loading-overlay');
+    if (ov) ov.innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px;text-align:center">Failed to load data.<br>Please refresh.</div>';
+  }
 }
-loadData().then(init);
+document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>

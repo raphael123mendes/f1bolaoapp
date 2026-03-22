@@ -281,125 +281,10 @@
 </nav>
 
 <script>
-async function init() {
-  try {
-    const [picks, prices] = await Promise.all([
-      fetch('picks.json').then(r => r.json()),
-      fetch('prices.json').then(r => r.json()),
-    ]);
-
-    // Build MARKET from picks + prices (same logic as before)
-    const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
-    const CON_SLUG = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
-
-    function imgPath(name, ptype) {
-      if (ptype === 'Driver') {
-        const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
-        return 'images/portraits/' + slug + '.png';
-      }
-      const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,'');
-      return 'images/logos/' + slug + '.webp';
-    }
-
-    // Deduplicate picks
-    const seen = new Set();
-    const deduped = picks.filter(p => {
-      const key = p.pick_name + '|' + p.race_number;
-      if (seen.has(key)) return false;
-      seen.add(key); return true;
-    });
-
-    // Season pts per entity
-    const entityPts = {};
-    deduped.forEach(p => {
-      if (!entityPts[p.pick_name]) entityPts[p.pick_name] = {pts:0, type:p.pick_type};
-      entityPts[p.pick_name].pts += (p.pick_points_gd || 0);
-    });
-
-    // Latest prices (race 2 - last with real changes)
-    const maxRace = Math.max(...prices.filter(p=>p.price_change_pct!==0||p.race_number===1).map(p=>p.race_number));
-    const latestPrices = {};
-    prices.filter(p=>p.race_number===maxRace).forEach(p=>latestPrices[p.player_name]=p);
-
-    // Ownership
-    const maxPickRace = Math.max(...picks.map(p=>p.race_number));
-    const totalUsers = new Set(picks.filter(p=>p.race_number===maxPickRace).map(p=>p.user_name)).size;
-    const ownerCounts = {};
-    picks.filter(p=>p.race_number===maxPickRace).forEach(p=>{
-      if(!ownerCounts[p.pick_name]) ownerCounts[p.pick_name] = new Set();
-      ownerCounts[p.pick_name].add(p.user_name);
-    });
-
-    const MARKET = Object.entries(latestPrices).map(([name, pd]) => {
-      const pts = (entityPts[name]||{}).pts || 0;
-      const price = pd.price_next_race || pd.price_this_race || 0;
-      const ownership = ownerCounts[name] ? Math.round(ownerCounts[name].size/totalUsers*100) : 0;
-      return {
-        name, type: pd.type,
-        price, price_change: pd.price_change, price_change_pct: pd.price_change_pct,
-        season_pts: pts, pts_per_m: price>0&&pts>0 ? Math.round(pts/price*10)/10 : 0,
-        ownership,
-        img: imgPath(name, pd.type)
-      };
-    });
-
-
-
-// ── STATE ─────────────────────────────────────────────────────────────────
+// ── GLOBALS (must be accessible by inline HTML handlers) ───────────────────
+let MARKET = [];
 let activeFilter = 'all';
 
-// ── HERO ──────────────────────────────────────────────────────────────────
-// buildHero called inside init
-(function buildHero() {
-  const sorted = [...MARKET].sort((a,b) => b.price_change_pct - a.price_change_pct);
-  const riser  = sorted[0];
-  const faller = sorted[sorted.length - 1];
-  const risers = MARKET.filter(m => m.price_change_pct > 0).length;
-  const fallers = MARKET.filter(m => m.price_change_pct < 0).length;
-  const bullish = risers >= fallers;
-  const volatile = [...MARKET].sort((a,b) => Math.abs(b.price_change_pct) - Math.abs(a.price_change_pct))[0];
-  const bestEff  = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
-
-  // Sentiment
-  const title = document.getElementById('sentiment-title');
-  title.textContent = bullish ? 'BULLISH MOMENTUM' : 'BEARISH PRESSURE';
-  title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
-  document.getElementById('sentiment-icon').textContent = bullish ? 'trending_up' : 'trending_down';
-
-  const statsEl = document.getElementById('sentiment-stats');
-  function statHTML(label, entity, pct, absDelta, valClass, isLogo) {
-    const clickNav = `onclick="window.location.href='driver.html?entity='+encodeURIComponent('${entity.name}')"`;
-    const sign = absDelta >= 0 ? '+' : '';
-    return `<div class="hero-stat" style="cursor:pointer" onclick="window.location.href='driver.html?entity='+encodeURIComponent('${entity.name}')">
-      <div class="hero-stat-label">${label}</div>
-      <div class="hero-stat-row">
-        <img class="hero-stat-thumb${isLogo ? ' logo' : ''}" src="${entity.img}" alt="" onerror="this.style.display='none'"/>
-        <div>
-          <div class="hero-stat-name">${entity.name.split(' ')[0]}</div>
-          <div class="hero-stat-val ${valClass}">${sign}$${Math.abs(absDelta).toFixed(1)}M <span style="opacity:0.55;font-size:0.85em">(${pct})</span></div>
-        </div>
-      </div>
-    </div>`;
-  }
-  statsEl.innerHTML =
-    statHTML('Top Riser',  riser,  `+${riser.price_change_pct.toFixed(1)}%`,  riser.price_change,  'pos', riser.type  === 'Constructor') +
-    statHTML('Top Faller', faller, `${faller.price_change_pct.toFixed(1)}%`, faller.price_change, 'neg', faller.type === 'Constructor');
-
-  // Efficiency card
-  if (bestEff) {
-    document.getElementById('eff-value').textContent = bestEff.pts_per_m.toFixed(1);
-    document.getElementById('eff-entity').textContent = bestEff.name;
-    document.getElementById('eff-price').textContent = `$${bestEff.price.toFixed(1)}M`;
-  }
-
-  // Volatility card
-  const volSign = volatile.price_change >= 0 ? '+' : '';
-  document.getElementById('vol-value').textContent = `${Math.abs(volatile.price_change_pct).toFixed(1)}%`;
-  document.getElementById('vol-entity').textContent = volatile.name;
-  document.getElementById('vol-delta').textContent = `${volSign}$${Math.abs(volatile.price_change).toFixed(1)}M`;
-})();
-
-// ── FILTER & SORT ─────────────────────────────────────────────────────────
 function setFilter(f, btn) {
   activeFilter = f;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -419,7 +304,6 @@ function renderTable() {
     return 0;
   });
 
-  // Max pts for scaling
   const maxPts = Math.max(...data.map(d => d.season_pts), 1);
 
   const list = document.getElementById('market-list');
@@ -434,7 +318,6 @@ function renderTable() {
     const chgIcon  = isPos ? 'arrow_drop_up' : isNeg ? 'arrow_drop_down' : 'remove';
     const chgStr   = isPos ? `+${m.price_change_pct.toFixed(1)}%` : `${m.price_change_pct.toFixed(1)}%`;
 
-    // Efficiency badge tier
     let effClass = '';
     if (m.pts_per_m >= 10) effClass = 'top';
     else if (m.pts_per_m >= 5) effClass = 'good';
@@ -475,7 +358,116 @@ function renderTable() {
   });
 }
 
-renderTable();
+// ── INIT ───────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const [picks, prices, config] = await Promise.all([
+      fetch('picks.json').then(r => r.json()),
+      fetch('prices.json').then(r => r.json()),
+      fetch('config.json').then(r => r.json()),
+    ]);
+
+    // Slug overrides from config.json
+    const DRIVER_SLUG = config.driver_slug_overrides || {};
+    const CON_SLUG    = config.constructor_slug_overrides || {};
+
+    function imgPath(name, ptype) {
+      if (ptype === 'Driver') {
+        const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
+        return 'images/portraits/' + slug + '.png';
+      }
+      const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,'');
+      return 'images/logos/' + slug + '.webp';
+    }
+
+    // Deduplicate picks
+    const seen = new Set();
+    const deduped = picks.filter(p => {
+      const key = p.pick_name + '|' + p.race_number;
+      if (seen.has(key)) return false;
+      seen.add(key); return true;
+    });
+
+    // Season pts per entity
+    const entityPts = {};
+    deduped.forEach(p => {
+      if (!entityPts[p.pick_name]) entityPts[p.pick_name] = {pts:0, type:p.pick_type};
+      entityPts[p.pick_name].pts += (p.pick_points_gd || 0);
+    });
+
+    // Latest prices
+    const maxRace = Math.max(...prices.filter(p=>p.price_change_pct!==0||p.race_number===1).map(p=>p.race_number));
+    const latestPrices = {};
+    prices.filter(p=>p.race_number===maxRace).forEach(p=>latestPrices[p.player_name]=p);
+
+    // Ownership
+    const maxPickRace = Math.max(...picks.map(p=>p.race_number));
+    const totalUsers = new Set(picks.filter(p=>p.race_number===maxPickRace).map(p=>p.user_name)).size;
+    const ownerCounts = {};
+    picks.filter(p=>p.race_number===maxPickRace).forEach(p=>{
+      if(!ownerCounts[p.pick_name]) ownerCounts[p.pick_name] = new Set();
+      ownerCounts[p.pick_name].add(p.user_name);
+    });
+
+    // Populate global MARKET array
+    MARKET = Object.entries(latestPrices).map(([name, pd]) => {
+      const pts = (entityPts[name]||{}).pts || 0;
+      const price = pd.price_next_race || pd.price_this_race || 0;
+      const ownership = ownerCounts[name] ? Math.round(ownerCounts[name].size/totalUsers*100) : 0;
+      return {
+        name, type: pd.type,
+        price, price_change: pd.price_change, price_change_pct: pd.price_change_pct,
+        season_pts: pts, pts_per_m: price>0&&pts>0 ? Math.round(pts/price*10)/10 : 0,
+        ownership,
+        img: imgPath(name, pd.type)
+      };
+    });
+
+    // ── HERO ────────────────────────────────────────────────────────────────
+    const sorted = [...MARKET].sort((a,b) => b.price_change_pct - a.price_change_pct);
+    const riser   = sorted[0];
+    const faller  = sorted[sorted.length - 1];
+    const risers  = MARKET.filter(m => m.price_change_pct > 0).length;
+    const fallers = MARKET.filter(m => m.price_change_pct < 0).length;
+    const bullish = risers >= fallers;
+    const volatile = [...MARKET].sort((a,b) => Math.abs(b.price_change_pct) - Math.abs(a.price_change_pct))[0];
+    const bestEff  = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
+
+    const title = document.getElementById('sentiment-title');
+    title.textContent = bullish ? 'BULLISH MOMENTUM' : 'BEARISH PRESSURE';
+    title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
+    document.getElementById('sentiment-icon').textContent = bullish ? 'trending_up' : 'trending_down';
+
+    const statsEl = document.getElementById('sentiment-stats');
+    function statHTML(label, entity, pct, absDelta, valClass, isLogo) {
+      const sign = absDelta >= 0 ? '+' : '';
+      return `<div class="hero-stat" style="cursor:pointer" onclick="window.location.href='driver.html?entity='+encodeURIComponent('${entity.name}')">
+        <div class="hero-stat-label">${label}</div>
+        <div class="hero-stat-row">
+          <img class="hero-stat-thumb${isLogo ? ' logo' : ''}" src="${entity.img}" alt="" onerror="this.style.display='none'"/>
+          <div>
+            <div class="hero-stat-name">${entity.name.split(' ')[0]}</div>
+            <div class="hero-stat-val ${valClass}">${sign}$${Math.abs(absDelta).toFixed(1)}M <span style="opacity:0.55;font-size:0.85em">(${pct})</span></div>
+          </div>
+        </div>
+      </div>`;
+    }
+    statsEl.innerHTML =
+      statHTML('Top Riser',  riser,  `+${riser.price_change_pct.toFixed(1)}%`,  riser.price_change,  'pos', riser.type  === 'Constructor') +
+      statHTML('Top Faller', faller, `${faller.price_change_pct.toFixed(1)}%`, faller.price_change, 'neg', faller.type === 'Constructor');
+
+    if (bestEff) {
+      document.getElementById('eff-value').textContent = bestEff.pts_per_m.toFixed(1);
+      document.getElementById('eff-entity').textContent = bestEff.name;
+      document.getElementById('eff-price').textContent = `$${bestEff.price.toFixed(1)}M`;
+    }
+
+    const volSign = volatile.price_change >= 0 ? '+' : '';
+    document.getElementById('vol-value').textContent = `${Math.abs(volatile.price_change_pct).toFixed(1)}%`;
+    document.getElementById('vol-entity').textContent = volatile.name;
+    document.getElementById('vol-delta').textContent = `${volSign}$${Math.abs(volatile.price_change).toFixed(1)}M`;
+
+    renderTable();
 
     document.getElementById("loading-overlay")?.remove();
   } catch(e) {

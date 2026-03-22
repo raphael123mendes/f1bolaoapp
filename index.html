@@ -274,6 +274,13 @@
 <body>
 
 <!-- TOP BAR -->
+<div id="loading-overlay" style="position:fixed;inset:0;background:#131313;z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;color:#e10600;letter-spacing:-0.02em;text-transform:uppercase">F1 Bolão</div>
+  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div>
+  </div>
+  <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
+</div>
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">F1<span> / </span>Bolão</div>
@@ -353,8 +360,14 @@
 </nav>
 
 <script>
+async function init() {
+  try {
+    const [results] = await Promise.all([
+      fetch('results.json').then(r => r.json()),
+    ]);
+    const RESULTS = results;
+
 // ── DATA ──────────────────────────────────────────────────────────────────
-const RESULTS = [{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":1,"race_rank":1,"rank_change":0,"team_name":"Stradale  Mucci","user_name":"Fabio Mucci","season_points":256.0,"race_points":256.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"No Negative (GD1)","current_budget":100.0,"new_budget":100.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":2,"race_rank":2,"rank_change":0,"team_name":"Liberius","user_name":"Liberio Junior","season_points":251.0,"race_points":251.0,"budget_remaining":0.1,"team_value":99.9,"cards_used":"","current_budget":100.0,"new_budget":102.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":3,"race_rank":3,"rank_change":0,"team_name":"Semi-aquatic-mammals","user_name":"Guilherme Figueiredo","season_points":250.0,"race_points":250.0,"budget_remaining":0.2,"team_value":99.8,"cards_used":"Autopilot (GD1)","current_budget":100.0,"new_budget":102.9},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":4,"race_rank":4,"rank_change":0,"team_name":"Fiat147","user_name":"Rafael Dias","season_points":233.0,"race_points":233.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"Limitless (GD2)","current_budget":100.0,"new_budget":102.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":5,"race_rank":5,"rank_change":0,"team_name":"CarretaFuracao","user_name":"Robson Jardim","season_points":228.0,"race_points":228.0,"budget_remaining":2.9,"team_value":97.1,"cards_used":"","current_budget":100.0,"new_budget":103.1},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":6,"race_rank":6,"rank_change":0,"team_name":"Ixxtain","user_name":"Raphael Stein","season_points":224.0,"race_points":224.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"","current_budget":100.0,"new_budget":102.1},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":7,"race_rank":7,"rank_change":0,"team_name":"qq um menos o Liberio","user_name":"Vinicius Agostini","season_points":202.0,"race_points":202.0,"budget_remaining":0.0,"team_value":100.0,"cards_used":"No Negative (GD1)","current_budget":100.0,"new_budget":101.5},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":8,"race_rank":8,"rank_change":0,"team_name":"Yas Bombs","user_name":"Danilo Iglesias","season_points":174.0,"race_points":174.0,"budget_remaining":0.1,"team_value":99.9,"cards_used":"","current_budget":100.0,"new_budget":101.1},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":9,"race_rank":9,"rank_change":0,"team_name":"Prisci Prisci","user_name":"Priscila Rigotto","season_points":164.0,"race_points":164.0,"budget_remaining":0.3,"team_value":99.7,"cards_used":"","current_budget":100.0,"new_budget":101.3},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":10,"race_rank":10,"rank_change":0,"team_name":"Edu Lima","user_name":"Eduardo Santos Lima","season_points":156.0,"race_points":156.0,"budget_remaining":7.8,"team_value":92.2,"cards_used":"","current_budget":100.0,"new_budget":100.4},{"race_number":1,"race_name":"Australian Grand Prix","race_flag":"🇦🇺","race_date":"2026-03-13","season_rank":11,"race_rank":11,"rank_change":0,"team_name":"Mucci_Senior","user_name":"Ricardo Mucci","season_points":98.0,"race_points":98.0,"budget_remaining":3.2,"team_value":96.8,"cards_used":"","current_budget":100.0,"new_budget":99.8},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":1,"race_rank":2,"rank_change":0,"team_name":"Liberius","user_name":"Liberio Junior","season_points":719.0,"race_points":468.0,"budget_remaining":0.7,"team_value":101.8,"cards_used":"Extra DRS (GD2)","current_budget":102.5,"new_budget":104.6},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":2,"race_rank":1,"rank_change":0,"team_name":"Fiat147","user_name":"Rafael Dias","season_points":714.0,"race_points":481.0,"budget_remaining":0.0,"team_value":102.5,"cards_used":"Limitless (GD2)","current_budget":102.5,"new_budget":104.0},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":3,"race_rank":3,"rank_change":0,"team_name":"Stradale  Mucci","user_name":"Fabio Mucci","season_points":691.0,"race_points":435.0,"budget_remaining":0.2,"team_value":100.3,"cards_used":"","current_budget":100.5,"new_budget":101.4},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":4,"race_rank":4,"rank_change":0,"team_name":"CarretaFuracao","user_name":"Robson Jardim","season_points":643.0,"race_points":415.0,"budget_remaining":2.0,"team_value":101.1,"cards_used":"","current_budget":103.1,"new_budget":105.2},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":5,"race_rank":6,"rank_change":0,"team_name":"qq um menos o Liberio","user_name":"Vinicius Agostini","season_points":599.0,"race_points":397.0,"budget_remaining":0.0,"team_value":101.5,"cards_used":"","current_budget":101.5,"new_budget":103.6},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":6,"race_rank":8,"rank_change":0,"team_name":"Ixxtain","user_name":"Raphael Stein","season_points":588.0,"race_points":364.0,"budget_remaining":0.0,"team_value":102.1,"cards_used":"","current_budget":102.1,"new_budget":104.2},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":7,"race_rank":5,"rank_change":0,"team_name":"Prisci Prisci","user_name":"Priscila Rigotto","season_points":563.0,"race_points":399.0,"budget_remaining":0.2,"team_value":101.1,"cards_used":"","current_budget":101.3,"new_budget":103.4},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":8,"race_rank":7,"rank_change":0,"team_name":"Yas Bombs","user_name":"Danilo Iglesias","season_points":556.0,"race_points":382.0,"budget_remaining":0.7,"team_value":100.4,"cards_used":"","current_budget":101.1,"new_budget":102.0},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":9,"race_rank":9,"rank_change":0,"team_name":"Semi-aquatic-mammals","user_name":"Guilherme Figueiredo","season_points":546.0,"race_points":296.0,"budget_remaining":9.0,"team_value":93.9,"cards_used":"","current_budget":102.9,"new_budget":105.3},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":10,"race_rank":11,"rank_change":0,"team_name":"Edu Lima","user_name":"Eduardo Santos Lima","season_points":413.0,"race_points":257.0,"budget_remaining":7.8,"team_value":92.6,"cards_used":"","current_budget":100.4,"new_budget":100.4},{"race_number":2,"race_name":"Chinese Grand Prix","race_flag":"🇨🇳","race_date":"2026-03-15","season_rank":11,"race_rank":10,"rank_change":0,"team_name":"Mucci_Senior","user_name":"Ricardo Mucci","season_points":373.0,"race_points":275.0,"budget_remaining":0.7,"team_value":99.1,"cards_used":"","current_budget":99.8,"new_budget":99.8}];
 
 // Prizes: sum race_prize per player across all races
 function computePrizeTotals(results) {
@@ -393,7 +406,8 @@ const highestBudget = Math.max(...latest.map(p => p.new_budget)).toFixed(1);
 
 // ── RENDER SPOTLIGHT ──────────────────────────────────────────────────────
 const p1 = latest[0];
-document.getElementById('race-context').textContent =
+document.getElementById('loading-overlay')?.remove();
+  document.getElementById('race-context').textContent =
   `${p1.race_flag} ${p1.race_name}  ·  Season 2026`;
 document.getElementById('spotlight-name').textContent = p1.user_name;
 document.getElementById('spotlight-team').textContent = p1.team_name;
@@ -553,6 +567,12 @@ function toggleRow(row) {
     legendEl.appendChild(el);
   });
 })();
+  } catch(e) {
+    console.error('index.html fetch error:', e);
+    document.getElementById('loading-overlay').innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px">Failed to load data. Please refresh.</div>';
+  }
+}
+document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>

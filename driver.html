@@ -151,6 +151,13 @@ main{flex:1;padding-bottom:80px}
 </head>
 <body>
 
+<div id="loading-overlay" style="position:fixed;inset:0;background:#131313;z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;color:#e10600;letter-spacing:-0.02em;text-transform:uppercase">F1 Bolão</div>
+  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div>
+  </div>
+  <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
+</div>
 <header class="topbar">
   <div class="topbar-inner">
     <button class="back-btn" onclick="history.back()">
@@ -268,10 +275,125 @@ main{flex:1;padding-bottom:80px}
 </nav>
 
 <script>
-// ── DATA ─────────────────────────────────────────────────────────────────
-const ENTITY_DATA = {"Mercedes":{"type":"Constructor","total_pts":211,"per_race":{"1":96,"2":115},"img":"images/cars/mercedes.webp","cat_totals":{"Qualifying":52,"Race Pos":85,"Sprint":5,"Overtakes":46,"Fastest Lap":10,"Bonuses":13},"price_history":[{"race":1,"price":29.3,"price_next":29.6,"pct":1.02},{"race":2,"price":29.6,"price_next":29.9,"pct":1.01}],"eff_history":[{"race":1,"eff":3.28},{"race":2,"eff":3.89}],"price":29.9,"price_change":0.3,"price_change_pct":1.01,"pts_per_m":7.1,"ownership":64,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Ferrari":{"type":"Constructor","total_pts":188,"per_race":{"1":69,"2":119},"img":"images/cars/ferrari.webp","cat_totals":{"Qualifying":46,"Race Pos":58,"Sprint":18,"Overtakes":46,"Fastest Lap":5,"Bonuses":15},"price_history":[{"race":1,"price":23.3,"price_next":23.6,"pct":1.29},{"race":2,"price":23.6,"price_next":23.9,"pct":1.27}],"eff_history":[{"race":1,"eff":2.96},{"race":2,"eff":5.04}],"price":23.9,"price_change":0.3,"price_change_pct":1.27,"pts_per_m":7.9,"ownership":82,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Haas F1 Team":{"type":"Constructor","total_pts":99,"per_race":{"1":58,"2":65},"img":"images/cars/haas.webp","cat_totals":{"Qualifying":29,"Race Pos":29,"Sprint":0,"Overtakes":51,"Fastest Lap":0,"Bonuses":20},"price_history":[{"race":1,"price":9.4,"price_next":9.8,"pct":4.26},{"race":2,"price":9.8,"price_next":8.6,"pct":7.5}],"eff_history":[{"race":1,"eff":6.17},{"race":2,"eff":6.63}],"price":8.6,"price_change":0.6,"price_change_pct":7.5,"pts_per_m":11.5,"ownership":18,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Racing Bulls":{"type":"Constructor","total_pts":85,"per_race":{"1":0,"2":50},"img":"images/cars/racing_bulls.webp","cat_totals":{"Qualifying":6,"Race Pos":22,"Sprint":4,"Overtakes":28,"Fastest Lap":0,"Bonuses":8},"price_history":[{"race":1,"price":10.1,"price_next":10.5,"pct":3.96},{"race":2,"price":10.5,"price_next":7.5,"pct":8.7}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":4.76}],"price":7.5,"price_change":0.6,"price_change_pct":8.7,"pts_per_m":11.3,"ownership":18,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Red Bull Racing":{"type":"Constructor","total_pts":42,"per_race":{"1":0,"2":42},"img":"images/cars/red_bull.webp","cat_totals":{"Qualifying":0,"Race Pos":18,"Sprint":0,"Overtakes":18,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":15.7,"price_next":15.4,"pct":-1.91},{"race":2,"price":15.4,"price_next":15.0,"pct":-2.6}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":2.73}],"price":15.0,"price_change":-0.4,"price_change_pct":-2.6,"pts_per_m":1.5,"ownership":0,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"McLaren":{"type":"Constructor","total_pts":19,"per_race":{"1":11,"2":19},"img":"images/cars/mclaren.webp","cat_totals":{"Qualifying":0,"Race Pos":7,"Sprint":0,"Overtakes":12,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":21.7,"price_next":21.5,"pct":-0.92},{"race":2,"price":21.5,"price_next":28.5,"pct":-1.04}],"eff_history":[{"race":1,"eff":0.51},{"race":2,"eff":0.88}],"price":28.5,"price_change":-0.3,"price_change_pct":-1.04,"pts_per_m":0.7,"ownership":9,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"Audi":{"type":"Constructor","total_pts":-4,"per_race":{"1":0,"2":-4},"img":"images/cars/audi.webp","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":0,"Overtakes":1,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":9.3,"price_next":8.7,"pct":-6.45},{"race":2,"price":8.7,"price_next":5.4,"pct":-10.0}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":-0.46}],"price":5.4,"price_change":-0.6,"price_change_pct":-10.0,"pts_per_m":0,"ownership":18,"league_avg_cats":{"Qualifying":21.1,"Race Pos":34.3,"Sprint":4.1,"Overtakes":26.1,"Fastest Lap":2.1,"Bonuses":12.0}},"George Russell":{"type":"Driver","total_pts":84,"per_race":{"1":39,"2":45},"img":"images/portraits/george_russell.png","cat_totals":{"Qualifying":19,"Race Pos":43,"Sprint":8,"Overtakes":14,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":27.4,"price_next":27.7,"pct":1.09},{"race":2,"price":27.7,"price_next":28.0,"pct":1.08}],"eff_history":[{"race":1,"eff":1.42},{"race":2,"eff":1.62}],"price":28.0,"price_change":0.3,"price_change_pct":1.08,"pts_per_m":3.0,"ownership":45,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Charles Leclerc":{"type":"Driver","total_pts":80,"per_race":{"1":29,"2":51},"img":"images/portraits/charles_leclerc.png","cat_totals":{"Qualifying":14,"Race Pos":28,"Sprint":11,"Overtakes":22,"Fastest Lap":5,"Bonuses":0},"price_history":[{"race":1,"price":22.8,"price_next":23.1,"pct":1.32},{"race":2,"price":23.1,"price_next":23.4,"pct":1.3}],"eff_history":[{"race":1,"eff":1.27},{"race":2,"eff":2.21}],"price":23.4,"price_change":0.3,"price_change_pct":1.3,"pts_per_m":3.4,"ownership":45,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Lewis Hamilton":{"type":"Driver","total_pts":73,"per_race":{"1":25,"2":48},"img":"images/portraits/lewis_hamilton.png","cat_totals":{"Qualifying":22,"Race Pos":30,"Sprint":0,"Overtakes":11,"Fastest Lap":10,"Bonuses":0},"price_history":[{"race":1,"price":22.3,"price_next":22.5,"pct":0.9},{"race":2,"price":22.5,"price_next":22.9,"pct":1.33}],"eff_history":[{"race":1,"eff":1.12},{"race":2,"eff":2.13}],"price":22.9,"price_change":0.3,"price_change_pct":1.33,"pts_per_m":3.2,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Kimi Antonelli":{"type":"Driver","total_pts":68,"per_race":{"1":25,"2":68},"img":"images/portraits/kimi_antonelli.png","cat_totals":{"Qualifying":10,"Race Pos":25,"Sprint":1,"Overtakes":22,"Fastest Lap":10,"Bonuses":10},"price_history":[{"race":1,"price":23.2,"price_next":23.5,"pct":1.29},{"race":2,"price":23.5,"price_next":23.8,"pct":1.28}],"eff_history":[{"race":1,"eff":1.08},{"race":2,"eff":2.89}],"price":23.8,"price_change":0.3,"price_change_pct":1.28,"pts_per_m":2.9,"ownership":36,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Oliver Bearman":{"type":"Driver","total_pts":54,"per_race":{"1":32,"2":54},"img":"images/portraits/oliver_bearman.png","cat_totals":{"Qualifying":9,"Race Pos":32,"Sprint":2,"Overtakes":8,"Fastest Lap":5,"Bonuses":5},"price_history":[{"race":1,"price":9.8,"price_next":9.8,"pct":0.0},{"race":2,"price":9.8,"price_next":8.6,"pct":7.5}],"eff_history":[{"race":1,"eff":3.27},{"race":2,"eff":5.51}],"price":8.6,"price_change":0.6,"price_change_pct":7.5,"pts_per_m":6.3,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Liam Lawson":{"type":"Driver","total_pts":40,"per_race":{"1":5,"2":35},"img":"images/portraits/liam_lawson.png","cat_totals":{"Qualifying":8,"Race Pos":16,"Sprint":8,"Overtakes":14,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":11.7,"price_next":12.0,"pct":2.56},{"race":2,"price":12.0,"price_next":6.9,"pct":9.52}],"eff_history":[{"race":1,"eff":0.43},{"race":2,"eff":2.92}],"price":6.9,"price_change":0.6,"price_change_pct":9.52,"pts_per_m":5.8,"ownership":64,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Carlos Sainz":{"type":"Driver","total_pts":37,"per_race":{"1":15,"2":37},"img":"images/portraits/carlos_sainz.png","cat_totals":{"Qualifying":14,"Race Pos":23,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":18.2,"price_next":18.5,"pct":1.65},{"race":2,"price":18.5,"price_next":12.2,"pct":1.62}],"eff_history":[{"race":1,"eff":0.82},{"race":2,"eff":2.0}],"price":12.2,"price_change":0.3,"price_change_pct":1.62,"pts_per_m":3.0,"ownership":9,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Esteban Ocon":{"type":"Driver","total_pts":33,"per_race":{"1":5,"2":33},"img":"images/portraits/esteban_ocon.png","cat_totals":{"Qualifying":9,"Race Pos":25,"Sprint":3,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":8.9,"price_next":9.1,"pct":2.25},{"race":2,"price":9.1,"price_next":8.5,"pct":7.59}],"eff_history":[{"race":1,"eff":0.56},{"race":2,"eff":3.63}],"price":8.5,"price_change":0.6,"price_change_pct":7.59,"pts_per_m":3.9,"ownership":18,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Sergio Perez":{"type":"Driver","total_pts":24,"per_race":{"1":14,"2":24},"img":"images/portraits/sergio_perez.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":9,"Overtakes":14,"Fastest Lap":5,"Bonuses":0},"price_history":[{"race":1,"price":7.7,"price_next":8.5,"pct":10.39},{"race":2,"price":8.5,"price_next":6.4,"pct":7.06}],"eff_history":[{"race":1,"eff":1.82},{"race":2,"eff":2.82}],"price":6.4,"price_change":0.6,"price_change_pct":7.06,"pts_per_m":3.8,"ownership":9,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Franco Colapinto":{"type":"Driver","total_pts":24,"per_race":{"1":10,"2":24},"img":"images/portraits/franco_colapinto.png","cat_totals":{"Qualifying":0,"Race Pos":24,"Sprint":10,"Overtakes":9,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":8.5,"price_next":8.9,"pct":4.71},{"race":2,"price":8.9,"price_next":7.0,"pct":9.37}],"eff_history":[{"race":1,"eff":1.18},{"race":2,"eff":2.7}],"price":7.0,"price_change":0.6,"price_change_pct":9.37,"pts_per_m":3.4,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Arvid Lindblad":{"type":"Driver","total_pts":22,"per_race":{"1":15,"2":22},"img":"images/portraits/arvid_lindblad.png","cat_totals":{"Qualifying":0,"Race Pos":3,"Sprint":0,"Overtakes":30,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":6.2,"price_next":6.8,"pct":9.68},{"race":2,"price":6.8,"price_next":7.4,"pct":8.82}],"eff_history":[{"race":1,"eff":2.42},{"race":2,"eff":3.24}],"price":7.4,"price_change":0.6,"price_change_pct":8.82,"pts_per_m":3.0,"ownership":55,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Isack Hadjar":{"type":"Driver","total_pts":11,"per_race":{"1":11,"2":11},"img":"images/portraits/isack_hadjar.png","cat_totals":{"Qualifying":0,"Race Pos":1,"Sprint":0,"Overtakes":11,"Fastest Lap":0,"Bonuses":10},"price_history":[{"race":1,"price":9.9,"price_next":10.1,"pct":2.02},{"race":2,"price":10.1,"price_next":13.9,"pct":1.98}],"eff_history":[{"race":1,"eff":1.11},{"race":2,"eff":1.09}],"price":13.9,"price_change":-0.6,"price_change_pct":-4.14,"pts_per_m":0.8,"ownership":18,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Gabriel Bortoleto":{"type":"Driver","total_pts":-1,"per_race":{"1":13,"2":-1},"img":"images/portraits/gabriel_bortoleto.png","cat_totals":{"Qualifying":0,"Race Pos":-19,"Sprint":6,"Overtakes":12,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":8.3,"price_next":8.0,"pct":-3.61},{"race":2,"price":8.0,"price_next":6.4,"pct":-8.57}],"eff_history":[{"race":1,"eff":1.57},{"race":2,"eff":-0.13}],"price":6.4,"price_change":-0.6,"price_change_pct":-8.57,"pts_per_m":0,"ownership":55,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Lando Norris":{"type":"Driver","total_pts":-10,"per_race":{"1":0,"2":-10},"img":"images/portraits/lando_norris.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":27.2,"price_next":26.7,"pct":-1.84},{"race":2,"price":26.7,"price_next":26.8,"pct":-1.11}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":-0.37}],"price":26.8,"price_change":-0.3,"price_change_pct":-1.11,"pts_per_m":0,"ownership":9,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Valtteri Bottas":{"type":"Driver","total_pts":-13,"per_race":{"1":-4,"2":-13},"img":"images/portraits/valtteri_bottas.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":-4,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":7.1,"price_next":6.3,"pct":-11.27},{"race":2,"price":6.3,"price_next":4.7,"pct":-11.11}],"eff_history":[{"race":1,"eff":-0.56},{"race":2,"eff":-2.06}],"price":4.7,"price_change":-0.6,"price_change_pct":-11.11,"pts_per_m":0,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Nico Hulkenberg":{"type":"Driver","total_pts":-13,"per_race":{"1":22,"2":-13},"img":"images/portraits/nico_hulkenberg.png","cat_totals":{"Qualifying":10,"Race Pos":12,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":12.5,"price_next":12.6,"pct":0.8},{"race":2,"price":12.6,"price_next":5.6,"pct":-9.68}],"eff_history":[{"race":1,"eff":1.76},{"race":2,"eff":-1.03}],"price":5.6,"price_change":-0.6,"price_change_pct":-9.68,"pts_per_m":0,"ownership":27,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}},"Oscar Piastri":{"type":"Driver","total_pts":-14,"per_race":{"1":0,"2":-14},"img":"images/portraits/oscar_piastri.png","cat_totals":{"Qualifying":0,"Race Pos":0,"Sprint":0,"Overtakes":0,"Fastest Lap":0,"Bonuses":0},"price_history":[{"race":1,"price":24.0,"price_next":24.3,"pct":1.25},{"race":2,"price":24.3,"price_next":24.9,"pct":-1.19}],"eff_history":[{"race":1,"eff":0.0},{"race":2,"eff":-0.58}],"price":24.9,"price_change":-0.3,"price_change_pct":-1.19,"pts_per_m":0,"ownership":0,"league_avg_cats":{"Qualifying":4.6,"Race Pos":5.4,"Sprint":1.1,"Overtakes":16.8,"Fastest Lap":0.9,"Bonuses":0.6}}};
+const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
+const CON_SLUG_D = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
+const DISPLAY_CATS = {
+  'Qualifying':  ['Qualifying Position','Both Driver Q2','Both Driver Q3','One Driver Q3','QF not classified'],
+  'Race Pos':    ['Race Position','Race position gained','Race Position lost','Race not classified'],
+  'Sprint':      ['Sprint Position','Sprint position gained','Sprint Position lost','Sprint Not Classified'],
+  'Overtakes':   ['race overtake bonus','Sprint overtake bonus'],
+  'Fastest Lap': ['Race Fastest lap','Sprint Fastest lap'],
+  'Bonuses':     ['Driver Of Day','Fastest Pitstop','2nd Fastest Pitstop'],
+};
 
-const ENTITY_ORDER = ["Mercedes","Ferrari","Haas F1 Team","Racing Bulls","Red Bull Racing","McLaren","Audi","George Russell","Charles Leclerc","Lewis Hamilton","Kimi Antonelli","Oliver Bearman","Liam Lawson","Carlos Sainz","Esteban Ocon","Sergio Perez","Franco Colapinto","Arvid Lindblad","Isack Hadjar","Gabriel Bortoleto","Lando Norris","Valtteri Bottas","Nico Hulkenberg","Oscar Piastri"];
+function buildDriverData(picks, prices, breakdowns) {
+  // Deduplicate picks
+  const seen = new Set();
+  const deduped = picks.filter(p => {
+    const k = p.pick_name+'|'+p.race_number;
+    if (seen.has(k)) return false; seen.add(k); return true;
+  });
+
+  // Entity pts per race
+  const entityData = {};
+  deduped.forEach(p => {
+    const n = p.pick_name;
+    if (!entityData[n]) entityData[n] = {type:p.pick_type, totalPts:0, perRace:{},
+      img: p.pick_type==='Driver'
+        ? 'images/portraits/'+(DRIVER_SLUG[n]||n.toLowerCase().replace(/ /g,'_'))+'.png'
+        : 'images/cars/'+(CON_SLUG_D[n]||n.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,''))+'.webp'
+    };
+    const pts = p.pick_points_gd || 0;
+    entityData[n].totalPts += pts;
+    entityData[n].perRace[p.race_number] = pts;
+  });
+
+  // Breakdown per entity (deduped)
+  const bdSeen = new Set();
+  const bdTotals = {}; // name -> cat -> pts
+  breakdowns.forEach(b => {
+    const k = b.pick_name+'|'+b.race_number+'|'+b.breakdown_category;
+    if (bdSeen.has(k)) return; bdSeen.add(k);
+    if (!bdTotals[b.pick_name]) bdTotals[b.pick_name] = {};
+    bdTotals[b.pick_name][b.breakdown_category] = (bdTotals[b.pick_name][b.breakdown_category]||0) + b.breakdown_points;
+  });
+
+  // Display category totals
+  Object.keys(entityData).forEach(n => {
+    const raw = bdTotals[n] || {};
+    entityData[n].catTotals = {};
+    Object.entries(DISPLAY_CATS).forEach(([cat, keys]) => {
+      entityData[n].catTotals[cat] = keys.reduce((s,k)=>s+(raw[k]||0),0);
+    });
+  });
+
+  // Price history
+  const priceByEntity = {};
+  prices.sort((a,b)=>a.race_number-b.race_number).forEach(p => {
+    if (!priceByEntity[p.player_name]) priceByEntity[p.player_name] = [];
+    if (p.price_change_pct !== 0 || p.race_number === 1)
+      priceByEntity[p.player_name].push({race:p.race_number, price:p.price_this_race, priceNext:p.price_next_race, pct:p.price_change_pct});
+  });
+
+  // Latest prices (race 2)
+  const maxCompleted = Math.max(...deduped.map(p=>p.race_number));
+  const latestPrices = {};
+  prices.filter(p=>p.race_number===maxCompleted).forEach(p=>latestPrices[p.player_name]=p);
+
+  // Ownership
+  const totalUsers = new Set(picks.filter(p=>p.race_number===maxCompleted).map(p=>p.user_name)).size;
+  const ownerCounts = {};
+  picks.filter(p=>p.race_number===maxCompleted).forEach(p=>{
+    if(!ownerCounts[p.pick_name]) ownerCounts[p.pick_name]=new Set();
+    ownerCounts[p.pick_name].add(p.user_name);
+  });
+
+  // League avg categories by type
+  const leagueAvg = {Driver:{}, Constructor:{}};
+  ['Driver','Constructor'].forEach(type => {
+    const names = Object.keys(entityData).filter(n=>entityData[n].type===type);
+    Object.keys(DISPLAY_CATS).forEach(cat => {
+      const vals = names.map(n=>entityData[n].catTotals[cat]||0);
+      leagueAvg[type][cat] = vals.length ? Math.round(vals.reduce((a,b)=>a+b,0)/vals.length*10)/10 : 0;
+    });
+  });
+
+  // Assemble final
+  Object.keys(entityData).forEach(n => {
+    const d = entityData[n];
+    const lp = latestPrices[n] || {};
+    const price = lp.price_next_race || 0;
+    d.price = price;
+    d.priceChange = lp.price_change || 0;
+    d.priceChangePct = lp.price_change_pct || 0;
+    d.ptsPerm = price>0&&d.totalPts>0 ? Math.round(d.totalPts/price*10)/10 : 0;
+    d.ownership = ownerCounts[n] ? Math.round(ownerCounts[n].size/totalUsers*100) : 0;
+    d.priceHistory = (priceByEntity[n]||[]).map(ph => {
+      const pts = d.perRace[ph.race] || 0;
+      return {...ph, eff: ph.price>0&&pts!==0 ? Math.round(pts/ph.price*100)/100 : 0};
+    });
+    d.leagueAvgCats = leagueAvg[d.type];
+    // normalise key names to match template expectations
+    d.pts_per_m = d.ptsPerm;
+    d.total_pts = d.totalPts;
+    d.price_change = d.priceChange;
+    d.price_change_pct = d.priceChangePct;
+    d.price_history = d.priceHistory;
+    d.per_race = d.perRace;
+    d.cat_totals = d.catTotals;
+    d.league_avg_cats = d.leagueAvgCats;
+    d.eff_history = d.priceHistory.map(ph=>({race:ph.race, val:ph.eff}));
+  });
+
+  const order = Object.entries(entityData)
+    .sort((a,b) => { if(a[1].type!==b[1].type) return a[1].type==='Constructor'?-1:1; return b[1].totalPts-a[1].totalPts; })
+    .map(([n])=>n);
+
+  return { ENTITY_DATA: entityData, ENTITY_ORDER: order };
+}
+
+// ── DATA ─────────────────────────────────────────────────────────────────
+
 const CAT_COLORS = {'Qualifying':'#a6c8ff','Race Pos':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Fastest Lap':'#c084fc','Bonuses':'#fb923c'};
 
 // ── NAVIGATION ───────────────────────────────────────────────────────────
@@ -568,6 +690,27 @@ renderLandscape();
 
 window.addEventListener('resize', renderLandscape);
 window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
+
+async function init() {
+  try {
+    const [picks, prices, breakdowns] = await Promise.all([
+      fetch('picks.json').then(r=>r.json()),
+      fetch('prices.json').then(r=>r.json()),
+      fetch('breakdowns.json').then(r=>r.json()),
+    ]);
+    const { ENTITY_DATA, ENTITY_ORDER } = buildDriverData(picks, prices, breakdowns);
+    document.getElementById('loading-overlay')?.remove();
+    buildSelector();
+    renderHero();
+    renderBento();
+    renderPortraitCharts();
+    renderLandscape();
+  } catch(e) {
+    console.error('driver.html error:', e);
+    document.getElementById('loading-overlay').innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px;text-align:center">Failed to load data.<br>Please refresh.</div>';
+  }
+}
+document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>

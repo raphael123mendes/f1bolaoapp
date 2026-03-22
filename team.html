@@ -191,6 +191,13 @@ main{flex:1;padding-bottom:80px}
 </head>
 <body>
 
+<div id="loading-overlay" style="position:fixed;inset:0;background:#131313;z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;color:#e10600;letter-spacing:-0.02em;text-transform:uppercase">F1 Bolão</div>
+  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div>
+  </div>
+  <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
+</div>
 <header class="topbar">
   <div class="topbar-inner">
     <button class="back-btn" onclick="history.back()">
@@ -274,9 +281,91 @@ main{flex:1;padding-bottom:80px}
 </nav>
 
 <script>
+const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
+const CON_SLUG = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
 const ALL_CARDS = ['No Negative','Autopilot','Extra DRS','Limitless','Final Fix','Wildcard'];
 
-const DATA = {"Danilo Iglesias":{"user_name":"Danilo Iglesias","team_name":"Yas Bombs","season_rank":8,"season_points":556.0,"race_number":2,"new_budget":102.0,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Nico Hulkenberg","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/nico_hulkenberg.png","price":5.6},{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/oliver_bearman.png","price":8.6},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/logos/haas.webp","price":8.6},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":8,"race_rank":8,"race_points":174.0,"new_budget":101.1,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":8,"race_rank":7,"race_points":382.0,"new_budget":102.0,"race_prize":0.0}]},"Eduardo Santos Lima":{"user_name":"Eduardo Santos Lima","team_name":"Edu Lima","season_rank":10,"season_points":413.0,"race_number":2,"new_budget":100.4,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Sergio Perez","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/sergio_perez.png","price":6.4},{"name":"Carlos Sainz","type":"Driver","pts":37,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/carlos_sainz.png","price":12.2},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/audi.webp","price":5.4}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":10,"race_rank":10,"race_points":156.0,"new_budget":100.4,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":10,"race_rank":11,"race_points":257.0,"new_budget":100.4,"race_prize":0.0}]},"Fabio Mucci":{"user_name":"Fabio Mucci","team_name":"Stradale  Mucci","season_rank":3,"season_points":691.0,"race_number":2,"new_budget":101.4,"total_prize":26.95,"cards_used":["No Negative"],"picks":[{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"Nico Hulkenberg","type":"Driver","pts":7,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/nico_hulkenberg.png","price":5.6},{"name":"Valtteri Bottas","type":"Driver","pts":3,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Sergio Perez","type":"Driver","pts":20,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/sergio_perez.png","price":6.4},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":1,"race_rank":1,"race_points":256.0,"new_budget":100.5,"race_prize":19.25},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":3,"race_rank":3,"race_points":435.0,"new_budget":101.4,"race_prize":7.7}]},"Guilherme Figueiredo":{"user_name":"Guilherme Figueiredo","team_name":"Semi-aquatic-mammals","season_rank":9,"season_points":546.0,"race_number":2,"new_budget":105.3,"total_prize":7.7,"cards_used":["Autopilot"],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/arvid_lindblad.png","price":7.4},{"name":"Esteban Ocon","type":"Driver","pts":33,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/esteban_ocon.png","price":8.5},{"name":"Lando Norris","type":"Driver","pts":-10,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/lando_norris.png","price":26.8},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"McLaren","type":"Constructor","pts":19,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mclaren.webp","price":28.5}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":3,"race_rank":3,"race_points":250.0,"new_budget":102.9,"race_prize":7.7},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":9,"race_rank":9,"race_points":296.0,"new_budget":105.3,"race_prize":0.0}]},"Liberio Junior":{"user_name":"Liberio Junior","team_name":"Liberius","season_rank":1,"season_points":719.0,"race_number":2,"new_budget":104.6,"total_prize":30.8,"cards_used":["Extra DRS"],"picks":[{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Gabriel Bortoleto","type":"Driver","pts":-14,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/gabriel_bortoleto.png","price":6.4},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Arvid Lindblad","type":"Driver","pts":7,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/arvid_lindblad.png","price":7.4},{"name":"Racing Bulls","type":"Constructor","pts":50,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/racing_bulls.webp","price":7.5},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":2,"race_rank":2,"race_points":251.0,"new_budget":102.5,"race_prize":11.55},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":1,"race_rank":2,"race_points":468.0,"new_budget":104.6,"race_prize":19.25}]},"Priscila Rigotto":{"user_name":"Priscila Rigotto","team_name":"Prisci Prisci","season_rank":7,"season_points":563.0,"race_number":2,"new_budget":103.4,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Esteban Ocon","type":"Driver","pts":33,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/esteban_ocon.png","price":8.5},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/franco_colapinto.png","price":7.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Audi","type":"Constructor","pts":-4,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/audi.webp","price":5.4}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":9,"race_rank":9,"race_points":164.0,"new_budget":101.3,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":7,"race_rank":5,"race_points":399.0,"new_budget":103.4,"race_prize":0.0}]},"Rafael Dias":{"user_name":"Rafael Dias","team_name":"Fiat147","season_rank":2,"season_points":714.0,"race_number":2,"new_budget":104.0,"total_prize":11.55,"cards_used":["Limitless"],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"Carlos Sainz","type":"Driver","pts":37,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/carlos_sainz.png","price":12.2},{"name":"Isack Hadjar","type":"Driver","pts":11,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/isack_hadjar.png","price":10.1},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/haas.webp","price":8.6}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":4,"race_rank":4,"race_points":233.0,"new_budget":102.5,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":2,"race_rank":1,"race_points":481.0,"new_budget":104.0,"race_prize":11.55}]},"Raphael Stein":{"user_name":"Raphael Stein","team_name":"Ixxtain","season_rank":6,"season_points":588.0,"race_number":2,"new_budget":104.2,"total_prize":0.0,"cards_used":[],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Charles Leclerc","type":"Driver","pts":51,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/charles_leclerc.png","price":23.4},{"name":"Franco Colapinto","type":"Driver","pts":18,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/franco_colapinto.png","price":7.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Gabriel Bortoleto","type":"Driver","pts":-14,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/gabriel_bortoleto.png","price":6.4},{"name":"Haas F1 Team","type":"Constructor","pts":65,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/haas.webp","price":8.6},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":6,"race_rank":6,"race_points":224.0,"new_budget":102.1,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":6,"race_rank":8,"race_points":364.0,"new_budget":104.2,"race_prize":0.0}]},"Ricardo Mucci":{"user_name":"Ricardo Mucci","team_name":"Mucci_Senior","season_rank":11,"season_points":373.0,"race_number":2,"new_budget":99.8,"total_prize":0.0,"cards_used":[],"picks":[{"name":"George Russell","type":"Driver","pts":45,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Arvid Lindblad","type":"Driver","pts":22,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/arvid_lindblad.png","price":7.4},{"name":"Valtteri Bottas","type":"Driver","pts":-13,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/valtteri_bottas.png","price":4.7},{"name":"Sergio Perez","type":"Driver","pts":20,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/sergio_perez.png","price":6.4},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":11,"race_rank":11,"race_points":98.0,"new_budget":99.8,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":11,"race_rank":10,"race_points":275.0,"new_budget":99.8,"race_prize":0.0}]},"Robson Jardim":{"user_name":"Robson Jardim","team_name":"CarretaFuracao","season_rank":4,"season_points":643.0,"race_number":2,"new_budget":105.2,"total_prize":0.0,"cards_used":[],"picks":[{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":true,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"Liam Lawson","type":"Driver","pts":35,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/liam_lawson.png","price":6.9},{"name":"Franco Colapinto","type":"Driver","pts":24,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/franco_colapinto.png","price":7.0},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":5,"race_rank":5,"race_points":228.0,"new_budget":103.1,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":4,"race_rank":4,"race_points":415.0,"new_budget":105.2,"race_prize":0.0}]},"Vinicius Agostini":{"user_name":"Vinicius Agostini","team_name":"qq um menos o Liberio","season_rank":5,"season_points":599.0,"race_number":2,"new_budget":103.6,"total_prize":0.0,"cards_used":["No Negative"],"picks":[{"name":"Lewis Hamilton","type":"Driver","pts":48,"is_captain":true,"is_megacap":false,"is_new":false,"img":"images/portraits/lewis_hamilton.png","price":22.9},{"name":"George Russell","type":"Driver","pts":45,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/george_russell.png","price":28.0},{"name":"Oliver Bearman","type":"Driver","pts":54,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/portraits/oliver_bearman.png","price":8.6},{"name":"Kimi Antonelli","type":"Driver","pts":68,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/kimi_antonelli.png","price":23.8},{"name":"Nico Hulkenberg","type":"Driver","pts":7,"is_captain":false,"is_megacap":false,"is_new":true,"img":"images/portraits/nico_hulkenberg.png","price":5.6},{"name":"Ferrari","type":"Constructor","pts":119,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/ferrari.webp","price":23.9},{"name":"Mercedes","type":"Constructor","pts":115,"is_captain":false,"is_megacap":false,"is_new":false,"img":"images/logos/mercedes.webp","price":29.9}],"rank_history":[{"race":1,"race_name":"Australian Grand Prix","race_flag":"\ud83c\udde6\ud83c\uddfa","season_rank":7,"race_rank":7,"race_points":202.0,"new_budget":101.5,"race_prize":0.0},{"race":2,"race_name":"Chinese Grand Prix","race_flag":"\ud83c\udde8\ud83c\uddf3","season_rank":5,"race_rank":6,"race_points":397.0,"new_budget":103.6,"race_prize":0.0}]}};
+function cleanCard(c) { return c.replace(/\s*\(GD\d\)/,'').trim(); }
+function driverImg(name) {
+  const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
+  return 'images/portraits/' + slug + '.png';
+}
+function carImg(name) {
+  const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,'');
+  return 'images/cars/' + slug + '.webp';
+}
+
+function buildData(results, picks, prices) {
+  const maxRace = Math.max(...results.map(r=>r.race_number));
+  const users = [...new Set(results.map(r=>r.user_name))].sort();
+  const latestPrices = {};
+  prices.filter(p=>p.race_number===2).forEach(p=>latestPrices[p.player_name]=p.price_next_race);
+
+  const DATA = {};
+  users.forEach(user => {
+    const userResults = results.filter(r=>r.user_name===user).sort((a,b)=>a.race_number-b.race_number);
+    if (!userResults.length) return;
+    const latest = userResults[userResults.length-1];
+
+    // Cards used
+    const cardsUsed = new Set();
+    userResults.forEach(r => { if(r.cards_used) r.cards_used.split(',').forEach(c=>cardsUsed.add(cleanCard(c))); });
+
+    // Total prize
+    const totalPrize = Math.round(userResults.reduce((s,r)=>s+(r.race_prize||0),0)*100)/100;
+
+    // Latest picks
+    const latestPicks = picks.filter(p=>p.user_name===user&&p.race_number===maxRace);
+    const prevPicks = new Set(picks.filter(p=>p.user_name===user&&p.race_number===maxRace-1).map(p=>p.pick_name));
+
+    // Dedup picks by name
+    const seenPicks = new Set();
+    const uniquePicks = latestPicks.filter(p=>{ if(seenPicks.has(p.pick_name)) return false; seenPicks.add(p.pick_name); return true; });
+
+    uniquePicks.sort((a,b)=>{
+      const rank = p => p.is_megacap?0:p.is_captain?1:p.pick_type==='Driver'?2:3;
+      return rank(a)-rank(b);
+    });
+
+    DATA[user] = {
+      user_name: user,
+      team_name: latest.team_name,
+      season_rank: latest.season_rank,
+      season_points: latest.season_points,
+      race_number: latest.race_number,
+      new_budget: latest.new_budget,
+      total_prize: totalPrize,
+      cards_used: [...cardsUsed].sort(),
+      picks: uniquePicks.map(p=>({
+        name: p.pick_name, type: p.pick_type,
+        pts: p.pick_points_gd, is_captain: p.is_captain, is_megacap: p.is_megacap,
+        is_new: !prevPicks.has(p.pick_name),
+        img: p.pick_type==='Driver' ? driverImg(p.pick_name) : carImg(p.pick_name),
+        price: latestPrices[p.pick_name] || null,
+      })),
+      rank_history: userResults.map(r=>({
+        race: r.race_number, race_name: r.race_name, race_flag: r.race_flag,
+        season_rank: r.season_rank, race_rank: r.race_rank,
+        race_points: r.race_points, new_budget: r.new_budget,
+        race_prize: r.race_prize||0,
+      })),
+    };
+  });
+  return DATA;
+}
+
+async function init() {
+  try {
+    const [results, picks, prices] = await Promise.all([
+      fetch('results.json').then(r=>r.json()),
+      fetch('picks.json').then(r=>r.json()),
+      fetch('prices.json').then(r=>r.json()),
+    ]);
+    const DATA = buildData(results, picks, prices);
+    document.getElementById('loading-overlay')?.remove();
+
+const ALL_CARDS = ['No Negative','Autopilot','Extra DRS','Limitless','Final Fix','Wildcard'];
+
 
 // ── NAVIGATION HELPER ────────────────────────────────────────────────────
 function navToDriver(name) {
@@ -534,6 +623,13 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > window.innerHeight && window.innerHeight < 500) renderLandscape();
 });
 window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
+
+  } catch(e) {
+    console.error('team.html error:', e);
+    document.getElementById('loading-overlay').innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px">Failed to load data. Refresh to try again.</div>';
+  }
+}
+document.addEventListener('DOMContentLoaded', init);
 </script>
 </body>
 </html>

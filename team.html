@@ -289,6 +289,7 @@ function getUser() {
   return (p && DATA[p]) ? p : Object.keys(DATA).sort((a,b) => DATA[a].season_rank - DATA[b].season_rank)[0];
 }
 
+try {
 const user = getUser();
 const d = DATA[user];
 
@@ -526,8 +527,8 @@ function renderLandscape() {
 
 renderLandscape();
 } catch(e) {
-  document.body.insertAdjacentHTML('afterbegin', `<div style="background:#e10600;color:#fff;padding:12px;font-family:monospace;font-size:12px;position:fixed;top:0;left:0;right:0;z-index:9999">JS Error: ${e.message}<br>${e.stack?.split('\n')[1]||''}</div>`);
-  console.error(e);
+  console.error('team.html error:', e);
+  document.body.insertAdjacentHTML('afterbegin', `<div style="background:#e10600;color:#fff;padding:12px;font-family:monospace;font-size:11px;position:fixed;top:0;left:0;right:0;z-index:9999">Error: ${e.message}</div>`);
 }
 window.addEventListener('resize', () => {
   if (window.innerWidth > window.innerHeight && window.innerHeight < 500) renderLandscape();

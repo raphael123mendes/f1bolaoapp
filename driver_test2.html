@@ -36,137 +36,68 @@ main{flex:1;padding-bottom:80px}
 .filter-bar{display:flex;gap:4px;padding:12px 16px 8px}
 .filter-btn{background:var(--surface-high);border:none;color:var(--on-40);font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:7px 14px;cursor:pointer;transition:all 0.15s}
 .filter-btn.active{background:var(--red);color:#fff}
-.filter-btn:hover:not(.active){color:var(--on);background:var(--surface-highest)}
 
 .entity-scroll{display:flex;overflow-x:auto;gap:6px;padding:0 16px 10px;scrollbar-width:none}
 .entity-scroll::-webkit-scrollbar{display:none}
 .entity-pill{flex-shrink:0;display:flex;align-items:center;gap:6px;background:var(--surface-high);border:none;cursor:pointer;padding:5px 10px 5px 5px;transition:all 0.15s;border-bottom:2px solid transparent;-webkit-tap-highlight-color:transparent}
 .entity-pill.active{border-bottom-color:var(--red);background:var(--surface-highest)}
-.entity-pill:hover:not(.active){background:var(--surface-highest)}
 
-/* FIX: Muted color by default, full color on hover/active */
-.pill-thumb{width:22px;height:22px;object-fit:cover;object-position:top;border-radius:0;flex-shrink:0;background:var(--surface-highest);filter:grayscale(40%);transition:filter 0.3s, transform 0.2s}
+/* FIXED IMAGE BEHAVIOR (PORTRAIT & LANDSCAPE) */
+.pill-thumb{
+  width:22px;height:22px;object-fit:cover;object-position:top;border-radius:0;flex-shrink:0;
+  background:transparent; /* Removed gray background */
+  filter: grayscale(80%) opacity(0.6); /* Muted by default */
+  transition: filter 0.3s ease, transform 0.2s ease, opacity 0.3s ease;
+}
 .pill-thumb.car{object-fit:contain;object-position:center}
 
+/* FULL COLOR ON CLICK/TOUCH/HOVER */
 .entity-pill:hover .pill-thumb,
 .entity-pill:active .pill-thumb,
-.entity-pill.active .pill-thumb{filter:grayscale(0%);transform: scale(1.05);}
+.entity-pill.active .pill-thumb {
+  filter: grayscale(0%) opacity(1) !important;
+  transform: scale(1.1);
+}
 
 .pill-name{font-size:0.58rem;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;white-space:nowrap}
 .pill-pts{font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;color:var(--on-40);margin-left:2px}
 
 /* ── HERO ── */
 .hero{position:relative;margin:0 16px;overflow:hidden;background:var(--surface-low)}
-/* FIX: Removed background-color here so car transparency works better */
-.hero-img-wrap{position:relative;height:260px;overflow:hidden;background:transparent}
-.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
-.hero-car{width:100%;height:100%;object-fit:contain;object-position:center;padding:16px 24px;display:block}
+.hero-img-wrap{
+  position:relative;height:260px;overflow:hidden;
+  background:transparent !important; /* Forces removal of gray layer */
+}
+.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;filter: none !important;}
+.hero-car{width:100%;height:100%;object-fit:contain;object-position:center;padding:16px 24px;display:block;filter: none !important;}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--surface-low) 0%,transparent 20%)}
-.hero-num{position:absolute;bottom:12px;left:16px;font-family:'Space Grotesk',sans-serif;font-size:6rem;font-weight:900;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;user-select:none}
-.hero-info{padding:16px 16px 20px;border-left:4px solid var(--red)}
-.hero-team{font-size:0.55rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
-.hero-name{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:1}
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:14px;border-top:1px solid var(--on-08);padding-top:14px}
-.hero-stat{padding-right:12px}
-.hero-stat+.hero-stat{border-left:1px solid var(--on-08);padding-left:12px}
-.hero-stat-label{font-size:0.46rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40)}
-.hero-stat-val{font-family:'Space Grotesk',sans-serif;font-size:1.3rem;font-weight:700;line-height:1.1;margin-top:2px}
-.hero-stat-sub{font-size:0.5rem;font-weight:700;margin-top:1px}
-.hero-stat-sub.pos{color:var(--green)}
-.hero-stat-sub.neg{color:var(--red-dim)}
-.hero-ownership{display:flex;align-items:center;gap:8px;margin-top:12px}
-.ownership-label{font-size:0.5rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40)}
-.ownership-bar-wrap{flex:1;height:4px;background:var(--surface-highest)}
-.ownership-bar-fill{height:100%;background:var(--blue);transition:width 0.5s ease}
-.ownership-pct{font-size:0.6rem;font-weight:700;color:var(--blue)}
 
-/* ── BENTO GRID ── */
+.hero-info{padding:16px 16px 20px;border-left:4px solid var(--red)}
+.hero-name{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.03em;line-height:1}
+
+/* ── BENTO & CHARTS ── */
 .bento{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 16px 0}
 .bento-card{background:var(--surface-low);padding:14px}
 .bento-full{grid-column:1/-1}
-.bento-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
-.bento-badge{background:var(--red);color:#fff;font-size:0.48rem;font-weight:900;letter-spacing:0.1em;padding:1px 5px;text-transform:uppercase}
 
-.breakdown-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
-.breakdown-row:last-child{margin-bottom:0}
-.breakdown-label{font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;width:68px;flex-shrink:0;color:var(--on-60)}
-.breakdown-bars{flex:1;position:relative;height:14px}
-.breakdown-bg{position:absolute;inset:0;background:var(--surface-highest)}
-.breakdown-fill{position:absolute;top:0;left:0;height:100%;transition:width 0.5s ease}
-.breakdown-fill.player{background:var(--blue)}
-.breakdown-fill.avg{background:rgba(166,200,255,0.25)}
-.breakdown-val{font-family:'Space Grotesk',sans-serif;font-size:0.7rem;font-weight:700;width:28px;text-align:right;flex-shrink:0}
-.breakdown-val.neg{color:var(--red-dim)}
-
-.comp-row{margin-bottom:14px}
-.comp-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
-.comp-label{font-size:0.52rem;font-weight:800;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
-.comp-delta{font-size:0.65rem;font-weight:700}
-.comp-delta.pos{color:var(--green)}
-.comp-delta.neg{color:var(--red-dim)}
-.comp-bar-wrap{height:8px;background:var(--surface-highest);position:relative}
-.comp-bar-fill{height:100%;position:absolute;top:0;left:0;transition:width 0.5s}
-.comp-labels{display:flex;justify-content:space-between;margin-top:3px}
-.comp-sub{font-size:0.45rem;font-weight:700;text-transform:uppercase;color:var(--on-40)}
-
-.charts-section{margin:8px 16px 0}
-.charts-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
-.rotate-hint{display:flex;align-items:center;gap:4px;font-size:0.5rem;font-weight:700;color:var(--blue);letter-spacing:0.06em}
-.charts-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.chart-card{background:var(--surface-low);padding:12px}
-.chart-card-title{font-size:0.55rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);margin-bottom:3px}
-.chart-card-val{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;margin-bottom:8px}
-.chart-svg{width:100%;display:block;overflow:visible}
-
-.portrait-only{display:block}
-.landscape-only{display:none!important}
 @media(orientation:landscape){
-  .portrait-only{display:none!important}
-  .landscape-only{display:flex!important}
   body{overflow:hidden;height:100dvh}
-  main{padding-bottom:0;height:calc(100dvh - 56px);overflow:hidden;display:flex;flex-direction:column}
-  .bottom-nav{display:none}
-  .topbar{position:relative}
+  main{padding-bottom:0;height:calc(100dvh - 56px);display:flex;flex-direction:row}
+  .landscape-sidebar{width:200px;flex-shrink:0;background:var(--surface-low);overflow-y:auto;border-right:1px solid var(--on-08)}
+  .landscape-charts{flex:1;overflow-y:auto;padding:12px 16px}
 }
 
-.landscape-sidebar{width:170px;flex-shrink:0;background:var(--surface-low);overflow-y:auto;border-right:1px solid var(--on-08);height:100%}
-.landscape-charts{flex:1;overflow-y:auto;overflow-x:hidden;padding:12px 16px;display:flex;flex-direction:column;gap:10px;height:100%}
-.ls-hero-mini{padding:14px;border-left:3px solid var(--red);margin-bottom:2px}
-.ls-name{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.02em}
-.ls-stats-mini{display:flex;flex-direction:column;gap:0}
-.ls-stat{display:flex;justify-content:space-between;align-items:center;padding:5px 12px;border-bottom:1px solid var(--on-08);font-size:0.5rem}
-.ls-stat-label{font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
-.ls-stat-val{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.8rem}
-.ls-stat-val.blue{color:var(--blue)}
-.ls-stat-val.green{color:var(--green)}
-
-.ls-chart-section{background:var(--surface-low);padding:14px}
-.ls-chart-title{font-size:0.6rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--on-40);margin-bottom:10px}
-.ls-chart-svg{width:100%;max-width:100%;display:block;overflow:hidden}
-.ls-charts-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
-
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
-.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:rgba(166,200,255,0.35);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.15s;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
-.nav-item.active{color:var(--red);border-top:2px solid var(--red);background:var(--surface-low)}
-.nav-item .material-symbols-outlined{font-size:1.3rem}
-.nav-item.active .material-symbols-outlined{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);display:flex;height:60px;border-top:1px solid var(--on-08)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-decoration:none;color:var(--on-40);font-size:0.6rem;font-weight:700;text-transform:uppercase}
+.nav-item.active{color:var(--red)}
 </style>
 </head>
 <body>
 
-<div id="loading-overlay" style="position:fixed;inset:0;background:#131313;z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
-  <div style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;color:#e10600;letter-spacing:-0.02em;text-transform:uppercase">F1 Bolão</div>
-  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden">
-    <div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div>
-  </div>
-  <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
-</div>
 <header class="topbar">
   <div class="topbar-inner">
-    <button class="back-btn" onclick="history.back()">
-      <span class="material-symbols-outlined">arrow_back</span>Market
-    </button>
-    <div class="topbar-title">F1 Fantasy Market</div>
+    <button class="back-btn" onclick="history.back()"><span class="material-symbols-outlined">arrow_back</span>Market</button>
+    <div class="topbar-title">F1 BOLÃO '26</div>
     <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
   </div>
 </header>
@@ -182,473 +113,115 @@ main{flex:1;padding-bottom:80px}
 
     <div class="hero" id="hero">
       <div class="hero-img-wrap">
-        <img id="hero-img" src="" alt="" onerror="this.style.opacity='0.1'" class="hero-portrait"/>
+        <img id="hero-img" src="" alt="" class="hero-portrait"/>
         <div class="hero-overlay"></div>
-        <div class="hero-num" id="hero-num"></div>
       </div>
       <div class="hero-info">
-        <div class="hero-team" id="hero-team">—</div>
-        <div class="hero-name" id="hero-name"></div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-label">Price</div>
-            <div class="hero-stat-val" id="hero-price"></div>
-            <div class="hero-stat-sub" id="hero-price-chg"></div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-label">Season Pts</div>
-            <div class="hero-stat-val" id="hero-pts"></div>
-            <div class="hero-stat-sub" id="hero-pts-sub" style="color:var(--on-40)"></div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-label">Pts / $M</div>
-            <div class="hero-stat-val" id="hero-eff" style="color:var(--blue)"></div>
-            <div class="hero-stat-sub" id="hero-ownership" style="color:var(--on-40)"></div>
-          </div>
-        </div>
-        <button onclick="goToHistorical()" style="display:flex;align-items:center;justify-content:space-between;width:100%;background:rgba(166,200,255,0.08);border:1px solid rgba(166,200,255,0.2);color:var(--blue);padding:8px 12px;cursor:pointer;margin-top:10px;font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;transition:background 0.15s" onmouseover="this.style.background='rgba(166,200,255,0.15)'" onmouseout="this.style.background='rgba(166,200,255,0.08)'">
-          <span>View Full Historical Data</span>
-          <span class="material-symbols-outlined" style="font-size:0.9rem">history</span>
-        </button>
-        <div class="hero-ownership">
-          <span class="ownership-label">Ownership</span>
-          <div class="ownership-bar-wrap"><div class="ownership-bar-fill" id="own-bar"></div></div>
-          <span class="ownership-pct" id="own-pct"></span>
+        <div class="hero-name" id="hero-name">Select Entity</div>
+        <div id="hero-stats-container" style="margin-top:10px; font-size: 0.8rem; color: var(--on-40)">
+          Season Points: <span id="hero-pts" style="color:var(--on)">-</span>
         </div>
       </div>
-    </div>
-
-    <div class="bento" id="bento">
-      <div class="bento-card bento-full">
-        <div class="bento-title">
-          Points Breakdown
-          <span class="bento-badge">Season Total</span>
-        </div>
-        <div id="breakdown-bars"></div>
-        <div style="display:flex;gap:14px;margin-top:10px">
-          <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:4px;background:var(--blue)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">This Entity</span></div>
-          <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:4px;background:rgba(166,200,255,0.25)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">League Avg</span></div>
-        </div>
-      </div>
-      <div class="bento-card bento-full">
-        <div class="bento-title">vs League Average</div>
-        <div id="comparison-bars"></div>
-      </div>
-    </div>
-
-    <div class="charts-section portrait-only">
-      <div class="charts-title">
-        Season Trends
-        <div class="rotate-hint">
-          <span class="material-symbols-outlined" style="font-size:0.9rem">screen_rotation</span>
-          Rotate for full view
-        </div>
-      </div>
-      <div class="charts-grid" id="portrait-charts"></div>
     </div>
   </div>
 
-  <div class="landscape-only" id="landscape-wrap" style="width:100%;height:calc(100dvh - 56px);overflow:hidden">
-    <div class="landscape-sidebar">
-      <div style="padding:8px;border-bottom:1px solid var(--on-08)">
-        <select id="ls-entity-select" onchange="selectEntity(this.value)" style="width:100%;background:var(--surface-high);border:1px solid var(--red);color:var(--on);font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;padding:5px 8px;cursor:pointer;outline:none;appearance:none"></select>
+  <div class="landscape-only" id="landscape-wrap" style="display:none; width:100%;">
+    <div class="landscape-sidebar" id="ls-sidebar">
       </div>
-      <div class="ls-hero-mini" id="ls-hero-mini"></div>
-      <div class="ls-stats-mini" id="ls-stats-mini"></div>
+    <div class="landscape-charts" id="ls-content">
+       <h2 id="ls-title" style="text-transform:uppercase; font-family:'Space Grotesk'"></h2>
+       <p style="color:var(--on-40)">Analytics content goes here...</p>
     </div>
-    <div class="landscape-charts" id="landscape-charts"></div>
   </div>
 </main>
 
-<nav class="bottom-nav portrait-only">
-  <a class="nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
-  <a class="nav-item" href="results.html"><span class="material-symbols-outlined">flag</span><span>Results</span></a>
-  <a class="nav-item active" href="market.html"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
-  <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
+<nav class="bottom-nav">
+  <a class="nav-item" href="#"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
+  <a class="nav-item active" href="#"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
 </nav>
 
 <script>
 let ENTITY_DATA = {};
 let ENTITY_ORDER = [];
-
-const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
-const CON_SLUG_D = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
-const DISPLAY_CATS = {
-  'Qualifying':  ['Qualifying Position','Both Driver Q2','Both Driver Q3','One Driver Q3','QF not classified'],
-  'Race Pos':    ['Race Position','Race position gained','Race Position lost','Race not classified'],
-  'Sprint':      ['Sprint Position','Sprint position gained','Sprint Position lost','Sprint Not Classified'],
-  'Overtakes':   ['race overtake bonus','Sprint overtake bonus'],
-  'Fastest Lap': ['Race Fastest lap','Sprint Fastest lap'],
-  'Bonuses':     ['Driver Of Day','Fastest Pitstop','2nd Fastest Pitstop'],
-};
-
-function buildDriverData(picks, prices, breakdowns) {
-  prices.sort((a,b) => a.race_number - b.race_number);
-  const scoredRaces = [...new Set(prices.filter(p => 'gameday_points' in p).map(p => p.race_number))].sort((a,b) => a-b);
-  const maxScoredRace = Math.max(...scoredRaces);
-
-  const entityData = {};
-  prices.forEach(p => {
-    const n = p.player_name;
-    if (!entityData[n]) {
-      const type = p.type || 'Driver';
-      entityData[n] = {
-        type,
-        perRace: {},
-        img: type === 'Driver'
-          ? 'images/portraits/'+(DRIVER_SLUG[n]||n.toLowerCase().replace(/ /g,'_'))+'.png'
-          : 'images/cars/'+(CON_SLUG_D[n]||n.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,''))+'.webp'
-      };
-    }
-    if ('gameday_points' in p) {
-      entityData[n].perRace[p.race_number] = p.gameday_points ?? 0;
-    }
-  });
-
-  const latestPrices = {};
-  prices.filter(p => p.race_number === maxScoredRace).forEach(p => latestPrices[p.player_name] = p);
-
-  const priceByEntity = {};
-  prices.forEach(p => {
-    if (!scoredRaces.includes(p.race_number)) return;
-    if (!priceByEntity[p.player_name]) priceByEntity[p.player_name] = [];
-    priceByEntity[p.player_name].push({
-      race: p.race_number,
-      price: p.price_this_race,
-      priceNext: p.price_next_race,
-      pct: p.price_change_pct
-    });
-  });
-
-  const maxPickRace = Math.max(...picks.map(p => p.race_number).filter(r => r <= maxScoredRace));
-  const totalUsers = new Set(picks.filter(p => p.race_number === maxPickRace).map(p => p.user_name)).size;
-  const ownerCounts = {};
-  picks.filter(p => p.race_number === maxPickRace).forEach(p => {
-    if (!ownerCounts[p.pick_name]) ownerCounts[p.pick_name] = new Set();
-    ownerCounts[p.pick_name].add(p.user_name);
-  });
-
-  const bdSeen = new Set();
-  const bdTotals = {};
-  breakdowns.forEach(b => {
-    const k = b.pick_name+'|'+b.race_number+'|'+b.breakdown_category;
-    if (bdSeen.has(k)) return; bdSeen.add(k);
-    if (!bdTotals[b.pick_name]) bdTotals[b.pick_name] = {};
-    bdTotals[b.pick_name][b.breakdown_category] = (bdTotals[b.pick_name][b.breakdown_category]||0) + b.breakdown_points;
-  });
-
-  const pickedNames = new Set(picks.map(p => p.pick_name));
-  const leagueAvg = {Driver:{}, Constructor:{}};
-  ['Driver','Constructor'].forEach(type => {
-    const names = [...pickedNames].filter(n => entityData[n]?.type === type);
-    Object.keys(DISPLAY_CATS).forEach(cat => {
-      const vals = names.map(n => {
-        const raw = bdTotals[n] || {};
-        return DISPLAY_CATS[cat].reduce((s,k) => s+(raw[k]||0), 0);
-      });
-      leagueAvg[type][cat] = vals.length ? Math.round(vals.reduce((a,b)=>a+b,0)/vals.length*10)/10 : 0;
-    });
-  });
-
-  Object.keys(entityData).forEach(n => {
-    const d = entityData[n];
-    const lp = latestPrices[n] || {};
-    const isPicked = pickedNames.has(n);
-    d.total_pts  = lp.total_points ?? 0;
-    d.per_race   = d.perRace;
-    d.price           = lp.price_next_race ?? lp.price_this_race ?? 0;
-    d.price_change    = lp.price_change    ?? 0;
-    d.price_change_pct= lp.price_change_pct?? 0;
-    d.pts_per_m = d.price > 0 && d.total_pts !== 0 ? Math.round(d.total_pts / d.price * 10) / 10 : 0;
-    d.ownership  = ownerCounts[n] ? Math.round(ownerCounts[n].size / totalUsers * 100) : 0;
-    d.notPicked  = !isPicked;
-    d.price_history = (priceByEntity[n] || []).map(ph => {
-      const pts = d.perRace[ph.race] ?? 0;
-      return { ...ph, eff: ph.price > 0 && pts !== 0 ? Math.round(pts/ph.price*100)/100 : 0 };
-    });
-    d.eff_history = d.price_history.map(ph => ({ race: ph.race, val: ph.eff }));
-    const raw = bdTotals[n] || null;
-    d.cat_totals = {};
-    Object.entries(DISPLAY_CATS).forEach(([cat, keys]) => {
-      d.cat_totals[cat] = raw !== null ? keys.reduce((s,k) => s+(raw[k]||0), 0) : null;
-    });
-    d.league_avg_cats = leagueAvg[d.type];
-  });
-
-  ['Driver','Constructor'].forEach(type => {
-    const peers = Object.keys(entityData).filter(n => entityData[n].type === type);
-    if (!peers.length) return;
-    const avg = key => Math.round(peers.reduce((s,n) => s+(entityData[n][key]||0), 0) / peers.length * 10) / 10;
-    const leagueStats = { pts_per_m: avg('pts_per_m'), total_pts: avg('total_pts'), price: avg('price'), ownership: avg('ownership') };
-    peers.forEach(n => { entityData[n].league_stats = leagueStats; });
-  });
-
-  const order = Object.entries(entityData)
-    .sort((a,b) => {
-      if (a[1].type !== b[1].type) return a[1].type === 'Constructor' ? -1 : 1;
-      return b[1].total_pts - a[1].total_pts;
-    })
-    .map(([n]) => n);
-
-  return { ENTITY_DATA: entityData, ENTITY_ORDER: order };
-}
-
-const CAT_COLORS = {'Qualifying':'#a6c8ff','Race Pos':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Fastest Lap':'#c084fc','Bonuses':'#fb923c'};
-
-function goToHistorical() {
-  window.location.href = 'historical.html?entity=' + encodeURIComponent(selectedEntity);
-}
-
+let selectedEntity = "Max Verstappen"; // Default
 let activeFilter = 'all';
-const _urlEntity = new URLSearchParams(window.location.search).get('entity') || '';
-let selectedEntity = _urlEntity || 'George Russell';
 
-function filteredEntities() {
-  return ENTITY_ORDER.filter(n => activeFilter === 'all' || ENTITY_DATA[n].type === activeFilter);
-}
-
-function svgLine(data, color, W, H, yKey='val') {
-  if (!data || data.length < 2) return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg"></svg>`;
-  const vals = data.map(d => d[yKey] ?? d);
-  const mn = Math.min(...vals), mx = Math.max(...vals);
-  const range = mx - mn || 1;
-  const pts = vals.map((v,i) => {
-    const x = 6 + (i/(data.length-1))*(W-12);
-    const y = H - 8 - ((v-mn)/range)*(H-16);
-    return [x,y];
-  });
-  const path = pts.map((p,i)=>`${i===0?'M':'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
-  const area = `M${pts[0][0].toFixed(1)},${H} `+pts.map(p=>`L${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ')+` L${pts[pts.length-1][0].toFixed(1)},${H} Z`;
-  const gId = `g${Math.random().toString(36).slice(2,6)}`;
-  const dots = pts.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3" fill="${color}"/>`).join('');
-  const raceLabels = data.map((d,i)=>{
-    const x = 6+(i/(data.length-1))*(W-12);
-    return `<text x="${x.toFixed(1)}" y="${H+11}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="rgba(229,226,225,0.3)">R${d.race||i+1}</text>`;
-  }).join('');
-  const valLabels = pts.map((p,i)=>{
-    const v = vals[i];
-    const display = Number.isInteger(v) ? v : v.toFixed(1);
-    const anchor = p[0] < 12 ? 'start' : p[0] > W-12 ? 'end' : 'middle';
-    const ly = Math.max(9, p[1]-5);
-    return `<text x="${p[0].toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anchor}" font-family="Inter,sans-serif" font-size="7.5" font-weight="800" fill="${color}" opacity="0.9">${display}</text>`;
-  }).join('');
-  return `<svg viewBox="0 0 ${W} ${H+14}" class="chart-svg">
-    <defs><linearGradient id="${gId}" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="${color}" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
-    </linearGradient></defs>
-    <path d="${area}" fill="url(#${gId})"/>
-    <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    ${dots}${valLabels}${raceLabels}
-  </svg>`;
-}
-
-function svgBars(data, color, W, H, valKey='val') {
-  if (!data || !data.length) return '';
-  const vals = data.map(d => d[valKey] ?? d);
-  const mx = Math.max(...vals.map(Math.abs), 1);
-  const bw = Math.floor((W - (data.length+1)*4) / data.length);
-  const baseline = H - 4;
-  const bars = vals.map((v,i) => {
-    const bh = Math.max(2, (Math.abs(v)/mx)*(H-16));
-    const x = 4 + i*(bw+4);
-    const isNeg = v < 0;
-    const barY = isNeg ? baseline : baseline - bh;
-    const barColor = isNeg ? 'rgba(255,180,168,0.7)' : color;
-    const display = Number.isInteger(v) ? v : v.toFixed(1);
-    const valY = isNeg ? baseline + bh + 9 : Math.max(9, baseline - bh - 3);
-    const valLabel = v !== 0 ? `<text x="${(x+bw/2).toFixed(1)}" y="${valY.toFixed(1)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="800" fill="${barColor}" opacity="0.9">${display}</text>` : '';
-    const raceLabel = `<text x="${(x+bw/2).toFixed(1)}" y="${H+11}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="rgba(229,226,225,0.3)">R${data[i].race||i+1}</text>`;
-    return `<rect x="${x}" y="${barY.toFixed(1)}" width="${bw}" height="${bh.toFixed(1)}" fill="${barColor}" rx="1"/>${valLabel}${raceLabel}`;
-  }).join('');
-  return `<svg viewBox="0 0 ${W} ${H+14}" class="chart-svg">${bars}</svg>`;
+// Mock Data Build (Replace with your actual fetch logic)
+function buildMockData() {
+    const names = ["Max Verstappen", "Lando Norris", "Charles Leclerc", "Mercedes", "Ferrari", "Red Bull Racing"];
+    names.forEach(n => {
+        const isCon = n === "Mercedes" || n === "Ferrari" || n === "Red Bull Racing";
+        ENTITY_DATA[n] = {
+            type: isCon ? 'Constructor' : 'Driver',
+            total_pts: Math.floor(Math.random() * 100),
+            img: isCon ? `images/cars/${n.toLowerCase().replace(/ /g,'_')}.webp` : `images/portraits/${n.toLowerCase().replace(/ /g,'_')}.png`
+        };
+        ENTITY_ORDER.push(n);
+    });
 }
 
 function buildSelector() {
-  const list = filteredEntities();
-  const el = document.getElementById('entity-scroll');
-  el.innerHTML = list.map(name => {
-    const d = ENTITY_DATA[name];
-    const isCon = d.type === 'Constructor';
-    const ptsLabel = d.notPicked ? '—' : d.total_pts;
-    return `<button class="entity-pill${name===selectedEntity?' active':''}" onclick="selectEntity('${name.replace(/'/g,"\\'")}')">
-      <img class="pill-thumb${isCon?' car':''}" src="${d.img}" alt="" onerror="this.style.opacity='0.3'"/>
-      <span class="pill-name">${name.split(' ').slice(-1)[0]}</span>
-      <span class="pill-pts">${ptsLabel}</span>
-    </button>`;
-  }).join('');
-  el.querySelector('.active')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-}
+    const list = ENTITY_ORDER.filter(n => activeFilter === 'all' || ENTITY_DATA[n].type === activeFilter);
+    
+    // Update Portrait Scroll
+    const scroll = document.getElementById('entity-scroll');
+    scroll.innerHTML = list.map(name => {
+        const d = ENTITY_DATA[name];
+        return `<button class="entity-pill ${name===selectedEntity?'active':''}" onclick="selectEntity('${name}')">
+            <img class="pill-thumb ${d.type==='Constructor'?'car':''}" src="${d.img}" />
+            <span class="pill-name">${name.split(' ').pop()}</span>
+            <span class="pill-pts">${d.total_pts}</span>
+        </button>`;
+    }).join('');
 
-function setFilter(f, btn) {
-  activeFilter = f;
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  buildSelector();
+    // Update Landscape Sidebar
+    const sidebar = document.getElementById('ls-sidebar');
+    sidebar.innerHTML = list.map(name => {
+        const d = ENTITY_DATA[name];
+        return `<button class="entity-pill ${name===selectedEntity?'active':''}" onclick="selectEntity('${name}')" style="width:100%; border-bottom:1px solid var(--on-08)">
+            <img class="pill-thumb ${d.type==='Constructor'?'car':''}" src="${d.img}" />
+            <span class="pill-name">${name}</span>
+        </button>`;
+    }).join('');
 }
 
 function selectEntity(name) {
-  selectedEntity = name;
-  buildSelector();
-  renderHero();
-  renderBento();
-  renderPortraitCharts();
-  renderLandscape();
-}
-
-function renderHero() {
-  const d = ENTITY_DATA[selectedEntity];
-  const isCon = d.type === 'Constructor';
-  const img = document.getElementById('hero-img');
-  img.src = d.img;
-  img.className = isCon ? 'hero-car' : 'hero-portrait';
-  
-  // FIX: Clear the layer/background and ensure color visibility
-  const imgWrap = document.querySelector('.hero-img-wrap');
-  if (imgWrap) imgWrap.style.background = 'transparent';
-  img.style.filter = 'none';
-
-  const overlay = document.querySelector('.hero-overlay');
-  if (overlay) overlay.style.display = isCon ? 'none' : 'block';
-
-  document.getElementById('hero-num').textContent = isCon ? '' : selectedEntity.split(' ').slice(-1)[0].slice(0,2).toUpperCase();
-  document.getElementById('hero-team').textContent = isCon ? 'Constructor' : '—';
-  document.getElementById('hero-name').textContent = selectedEntity;
-  document.getElementById('hero-price').textContent = `$${d.price.toFixed(1)}M`;
-
-  const pctEl = document.getElementById('hero-price-chg');
-  pctEl.textContent = `${d.price_change>=0?'+':''}$${d.price_change.toFixed(1)}M (${d.price_change_pct.toFixed(1)}%)`;
-  pctEl.className = `hero-stat-sub ${d.price_change>=0?'pos':'neg'}`;
-
-  document.getElementById('hero-pts').textContent = d.total_pts !== 0 ? d.total_pts : '—';
-  const scoredRaceCount = Object.values(d.per_race).filter(v => v !== null && v !== 0).length;
-  document.getElementById('hero-pts-sub').textContent = `${scoredRaceCount} race${scoredRaceCount!==1?'s':''}`;
-  document.getElementById('hero-eff').textContent = d.pts_per_m !== 0 ? d.pts_per_m : '—';
-  document.getElementById('hero-ownership').textContent = d.notPicked ? 'not picked' : `${d.ownership}% owned`;
-  document.getElementById('own-bar').style.width = `${d.ownership||0}%`;
-  document.getElementById('own-pct').textContent = `${d.ownership||0}%`;
-
-  const existing = document.getElementById('not-picked-banner');
-  if (existing) existing.remove();
-  if (d.notPicked) {
-    const banner = document.createElement('div');
-    banner.id = 'not-picked-banner';
-    banner.style.cssText = 'margin:8px 16px 0;padding:8px 14px;background:rgba(229,226,225,0.04);border-left:3px solid var(--on-20);font-size:0.52rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-40)';
-    banner.textContent = 'Not in any league team this season — no breakdown data available';
-    document.getElementById('hero').after(banner);
-  }
-}
-
-function renderBento() {
-  const d = ENTITY_DATA[selectedEntity];
-  if (d.notPicked) {
-    document.getElementById('breakdown-bars').innerHTML = `<div style="padding:14px 0;text-align:center;font-size:0.55rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-40)">No breakdown data — not in any league team</div>`;
-  } else {
-    const cats = Object.entries(d.cat_totals).filter(([,v]) => v !== null);
-    const maxCat = Math.max(...cats.map(([,v])=>Math.abs(v||0)), 1);
-    const avgCats = d.league_avg_cats || {};
-    const globalMax = Math.max(maxCat, Math.max(...Object.values(avgCats).map(Math.abs), 1));
-
-    document.getElementById('breakdown-bars').innerHTML = cats.map(([cat, val]) => {
-      const v = val ?? 0;
-      const playerPct = Math.max(0, (v/globalMax)*100);
-      const avgVal = avgCats[cat] || 0;
-      const avgPct = Math.max(0, (avgVal/globalMax)*100);
-      const color = CAT_COLORS[cat] || '#a6c8ff';
-      return `<div class="breakdown-row">
-        <div class="breakdown-label">${cat}</div>
-        <div class="breakdown-bars">
-          <div class="breakdown-bg"></div>
-          <div class="breakdown-fill avg" style="width:${avgPct.toFixed(1)}%"></div>
-          <div class="breakdown-fill player" style="width:${playerPct.toFixed(1)}%;background:${color}"></div>
-        </div>
-        <div class="breakdown-val${v<0?' neg':''}">${v}</div>
-      </div>`;
-    }).join('');
-  }
-
-  const ls = d.league_stats || {};
-  const compData = [
-    { label:'Pts / $M', player:d.pts_per_m, avg: ls.pts_per_m || 3.0 },
-    { label:'Total Pts', player:d.total_pts, avg: ls.total_pts || 50 },
-    { label:'Ownership', player:d.ownership, avg: ls.ownership || 20 },
-  ];
-  document.getElementById('comparison-bars').innerHTML = compData.map(c => {
-    const max = Math.max(Math.abs(c.player), Math.abs(c.avg), 1);
-    const playerPct = Math.max(0, (c.player/max)*100);
-    const avgPct = Math.max(0, (c.avg/max)*100);
-    const diff = c.player - c.avg;
-    return `<div class="comp-row">
-      <div class="comp-header">
-        <span class="comp-label">${c.label}</span>
-        <span class="comp-delta ${diff>=0?'pos':'neg'}">${diff>=0?'+':''}${diff.toFixed(1)} vs avg</span>
-      </div>
-      <div class="comp-bar-wrap">
-        <div class="comp-bar-fill" style="width:${avgPct.toFixed(1)}%;background:rgba(229,226,225,0.15)"></div>
-        <div class="comp-bar-fill" style="width:${playerPct.toFixed(1)}%;background:var(--blue);opacity:0.8"></div>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-function renderPortraitCharts() {
-  const d = ENTITY_DATA[selectedEntity];
-  const priceData = d.price_history.map(p=>({race:p.race, val:p.price}));
-  const ptsData = Object.entries(d.per_race).map(([r,v])=>({race:+r, val:v??0})).sort((a,b)=>a.race-b.race);
-  const effData = d.eff_history.map(e=>({race:e.race, val:e.val??0}));
-
-  document.getElementById('portrait-charts').innerHTML = `
-    <div class="chart-card">
-      <div class="chart-card-title">Price Evolution</div>
-      ${priceData.length >= 2 ? svgLine(priceData,'#a6c8ff',160,50) : '<div class="chart-card-val">N/A</div>'}
-    </div>
-    <div class="chart-card">
-      <div class="chart-card-title">Points/Race</div>
-      ${ptsData.length ? svgBars(ptsData,'#e10600',160,50) : '<div class="chart-card-val">N/A</div>'}
-    </div>`;
-}
-
-function renderLandscape() {
-  const lsSel = document.getElementById('ls-entity-select');
-  if (lsSel) {
-    lsSel.innerHTML = ENTITY_ORDER.map(n => `<option value="${n}" ${n===selectedEntity?'selected':''}>${n}</option>`).join('');
-  }
-  const d = ENTITY_DATA[selectedEntity];
-  document.getElementById('ls-hero-mini').innerHTML = `<div class="ls-name">${selectedEntity}</div>`;
-  document.getElementById('ls-stats-mini').innerHTML = `<div class="ls-stat"><span class="ls-stat-label">Price</span><span class="ls-stat-val">$${d.price.toFixed(1)}M</span></div>`;
-  // Simplify landscape chart population for this snippet
-  document.getElementById('landscape-charts').innerHTML = `<div style="padding:20px; color:var(--on-40)">Landscape detailed view for ${selectedEntity}</div>`;
-}
-
-async function init() {
-  try {
-    const [picks, prices, breakdowns] = await Promise.all([
-      fetch('picks.json').then(r=>r.json()),
-      fetch('prices.json').then(r=>r.json()),
-      fetch('breakdowns.json').then(r=>r.json()),
-    ]);
-    const result = buildDriverData(picks, prices, breakdowns);
-    ENTITY_DATA = result.ENTITY_DATA;
-    ENTITY_ORDER = result.ENTITY_ORDER;
+    selectedEntity = name;
+    const d = ENTITY_DATA[name];
     
-    if (_urlEntity && ENTITY_DATA[_urlEntity]) selectedEntity = _urlEntity;
-    else if (_urlEntity) {
-        const match = Object.keys(ENTITY_DATA).find(k => k.toLowerCase() === _urlEntity.toLowerCase());
-        selectedEntity = match || ENTITY_ORDER[0];
-    }
+    // Update UI
+    document.getElementById('hero-name').textContent = name;
+    document.getElementById('hero-pts').textContent = d.total_pts;
+    const img = document.getElementById('hero-img');
+    img.src = d.img;
+    img.className = d.type === 'Constructor' ? 'hero-car' : 'hero-portrait';
+    
+    // Landscape Title
+    const lsTitle = document.getElementById('ls-title');
+    if(lsTitle) lsTitle.textContent = name;
 
-    document.getElementById('loading-overlay')?.remove();
     buildSelector();
-    renderHero();
-    renderBento();
-    renderPortraitCharts();
-    renderLandscape();
-  } catch(e) {
-    console.error('Init error:', e);
-  }
 }
-document.addEventListener('DOMContentLoaded', init);
-window.addEventListener('resize', renderLandscape);
+
+function setFilter(f, btn) {
+    activeFilter = f;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    buildSelector();
+}
+
+function handleOrientation() {
+    const isLandscape = window.innerWidth > window.innerHeight;
+    document.getElementById('portrait-wrap').style.display = isLandscape ? 'none' : 'block';
+    document.getElementById('landscape-wrap').style.display = isLandscape ? 'flex' : 'none';
+}
+
+window.addEventListener('resize', handleOrientation);
+document.addEventListener('DOMContentLoaded', () => {
+    buildMockData();
+    handleOrientation();
+    selectEntity(selectedEntity);
+});
 </script>
 </body>
 </html>

@@ -171,7 +171,28 @@
   .delta-neg { color: var(--red-dim); }
   .delta-zero { color: var(--on-30); }
 
-  /* ── MVPs ── */
+  .round-btn.live-btn {
+    background: rgba(225,6,0,0.12); border-bottom: 2px solid var(--red);
+    color: var(--red); position: relative;
+  }
+  .round-btn.live-btn::before {
+    content: ''; display: inline-block;
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--red); margin-right: 5px;
+    animation: livePulse 1.2s ease-in-out infinite;
+    vertical-align: middle;
+  }
+  .round-btn.live-btn.active { background: rgba(225,6,0,0.2); }
+  @keyframes livePulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(0.7); } }
+
+  .live-meta {
+    font-size: 0.52rem; font-weight: 800; color: var(--red);
+    letter-spacing: 0.12em; text-transform: uppercase; margin-top: 4px;
+  }
+  .refresh-countdown {
+    display: inline-block; margin-left: 6px;
+    font-size: 0.48rem; font-weight: 600; color: var(--on-30);
+  }
   .mvp-section { margin: 24px 16px 0; }
   .mvp-title { font-size: 0.7rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
   .mvp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
@@ -273,6 +294,10 @@
       <div class="race-flag-label" id="race-flag-label"></div>
       <div class="race-title" id="race-title"></div>
       <div class="race-meta" id="race-meta"></div>
+      <div class="live-meta" id="live-meta" style="display:none">
+        ● Live · <span id="live-updated"></span>
+        <span class="refresh-countdown" id="refresh-countdown"></span>
+      </div>
     </div>
     <div>
       <span class="race-live-badge" id="race-live-badge">League Live</span>
@@ -311,27 +336,59 @@
 </nav>
 
 <script>
-async function init() {
+// ── LIVE CONFIG ────────────────────────────────────────────────────────────
+const LIVE_BASE = 'live/';                  // folder: live/results.json etc.
+const REFRESH_MS = 10 * 60 * 1000;         // 10 minutes
+const REFRESH_S  = REFRESH_MS / 1000;
+
+// ── MODULE STATE ───────────────────────────────────────────────────────────
+let RESULTS, PICKS, PRICES, RACES, CONFIG;
+let isLive = false;
+let liveAvailable = false;
+let selectedRace = null;
+let refreshTimer = null;
+let countdownTimer = null;
+let countdownSec = REFRESH_S;
+
+// ── HELPERS ────────────────────────────────────────────────────────────────
+async function tryFetch(url) {
   try {
-    const [results, picks, prices, races, config] = await Promise.all([
-      fetch('results.json').then(r => r.json()),
-      fetch('picks.json').then(r => r.json()),
-      fetch('prices.json').then(r => r.json()),
-      fetch('races.json').then(r => r.json()),
-      fetch('config.json').then(r => r.json()),
-    ]);
-    const RESULTS = results;
-    const PICKS = picks;
-    const PRICES = prices;
-    const RACES = races;
-    const CONFIG = config;
+    const r = await fetch(url + '?_=' + Date.now()); // cache-bust
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
 
-// ── DATA ──────────────────────────────────────────────────────────────────
+async function loadStatic() {
+  const [results, picks, prices, races, config] = await Promise.all([
+    fetch('results.json').then(r => r.json()),
+    fetch('picks.json').then(r => r.json()),
+    fetch('prices.json').then(r => r.json()),
+    fetch('races.json').then(r => r.json()),
+    fetch('config.json').then(r => r.json()),
+  ]);
+  RESULTS = results; PICKS = picks; PRICES = prices; RACES = races; CONFIG = config;
+}
 
+async function loadLive() {
+  const [results, picks, prices] = await Promise.all([
+    tryFetch(LIVE_BASE + 'results.json'),
+    tryFetch(LIVE_BASE + 'picks.json'),
+    tryFetch(LIVE_BASE + 'prices.json'),
+  ]);
+  if (!results) return false;
+  RESULTS = results;
+  if (picks)  PICKS  = picks;
+  if (prices) PRICES = prices;
+  return true;
+}
 
+async function checkLiveAvailable() {
+  const r = await tryFetch(LIVE_BASE + 'results.json');
+  return r !== null && r.length > 0;
+}
 
-
-// ── CIRCUIT IMAGE MAP (by race name) ──────────────────────────────────────
+// ── CIRCUIT IMAGE MAP ──────────────────────────────────────────────────────
 const CIRCUIT_MAP = {
   'Australian Grand Prix': null,
   'Chinese Grand Prix': 'images/circuits/round-04_shanghai.svg',
@@ -363,34 +420,94 @@ function slugify(name) {
   return name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '');
 }
 
-// ── STATE ─────────────────────────────────────────────────────────────────
-const racedRounds = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
-let selectedRace = Math.max(...racedRounds);
-
-// ── BUILD ROUND SWITCHER ──────────────────────────────────────────────────
+// ── ROUND SWITCHER ─────────────────────────────────────────────────────────
 function buildSwitcher() {
   const el = document.getElementById('round-switcher');
   el.innerHTML = '';
+
+  // Live button — shown only when live data is available
+  if (liveAvailable) {
+    const liveRaceNum = Math.max(...RESULTS.map(r => r.race_number)); // live race round
+    const btn = document.createElement('button');
+    btn.className = 'round-btn live-btn' + (isLive ? ' active' : '');
+    btn.textContent = 'LIVE';
+    btn.title = 'Live race data — refreshes every 10 min';
+    btn.onclick = () => enterLiveMode();
+    el.appendChild(btn);
+  }
+
+  // Static rounds
+  const racedRounds = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
   RACES.forEach(race => {
     const hasData = racedRounds.includes(race.round);
     const btn = document.createElement('button');
     btn.className = 'round-btn' +
       (race.cancelled ? ' cancelled' : '') +
       (!hasData && !race.cancelled ? ' cancelled' : '') +
-      (race.round === selectedRace ? ' active' : '');
+      (!isLive && race.round === selectedRace ? ' active' : '');
     btn.textContent = `R${String(race.round).padStart(2,'0')}`;
     btn.title = race.race_name + (race.cancelled ? ' — Cancelled' : !hasData ? ' — No data yet' : '');
     if (hasData && !race.cancelled) {
-      btn.onclick = () => { selectedRace = race.round; render(); };
+      btn.onclick = () => { exitLiveMode(); selectedRace = race.round; render(); };
     }
     el.appendChild(btn);
   });
-  // Scroll active into view
+
   const active = el.querySelector('.active');
   if (active) active.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
 }
 
-// ── RENDER ────────────────────────────────────────────────────────────────
+// ── LIVE MODE ENTER / EXIT ─────────────────────────────────────────────────
+async function enterLiveMode() {
+  isLive = true;
+  const ok = await loadLive();
+  if (!ok) { isLive = false; return; }
+  selectedRace = Math.max(...RESULTS.map(r => r.race_number));
+  startRefreshCycle();
+  render();
+}
+
+function exitLiveMode() {
+  isLive = false;
+  stopRefreshCycle();
+  document.getElementById('live-meta').style.display = 'none';
+}
+
+// ── REFRESH CYCLE ──────────────────────────────────────────────────────────
+function startRefreshCycle() {
+  stopRefreshCycle();
+  countdownSec = REFRESH_S;
+  updateCountdown();
+  countdownTimer = setInterval(() => {
+    countdownSec--;
+    updateCountdown();
+  }, 1000);
+  refreshTimer = setInterval(async () => {
+    const ok = await loadLive();
+    if (ok) {
+      selectedRace = Math.max(...RESULTS.map(r => r.race_number));
+      render();
+    }
+    countdownSec = REFRESH_S;
+  }, REFRESH_MS);
+}
+
+function stopRefreshCycle() {
+  clearInterval(refreshTimer);
+  clearInterval(countdownTimer);
+  refreshTimer = null;
+  countdownTimer = null;
+}
+
+function updateCountdown() {
+  const el = document.getElementById('refresh-countdown');
+  if (!el) return;
+  const m = Math.floor(countdownSec / 60);
+  const s = String(countdownSec % 60).padStart(2, '0');
+  el.textContent = `· refresh in ${m}:${s}`;
+}
+
+// ── RENDER ─────────────────────────────────────────────────────────────────
 function render() {
   document.getElementById("loading-overlay")?.remove();
   buildSwitcher();
@@ -414,12 +531,23 @@ function render() {
     `${sample.race_flag || ''} ${raceInfo.location || ''}`;
   document.getElementById('race-title').textContent = sample.race_name || '';
   document.getElementById('race-meta').textContent =
-    `${sample.race_date || ''} · Official Classification`;
+    `${sample.race_date || ''} · ${isLive ? 'Live Standings' : 'Official Classification'}`;
+
+  // Live meta bar
+  const liveMeta = document.getElementById('live-meta');
+  if (isLive) {
+    const now = new Date();
+    document.getElementById('live-updated').textContent =
+      `Updated ${now.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
+    liveMeta.style.display = 'block';
+  } else {
+    liveMeta.style.display = 'none';
+  }
 
   const sprintBadge = document.getElementById('sprint-badge');
   sprintBadge.style.display = raceInfo.sprint_weekend ? 'inline-block' : 'none';
 
-  // Player list — sorted by race_rank
+  // Player list
   const list = document.getElementById('player-list');
   list.innerHTML = '';
   raceResults.forEach((p, idx) => {
@@ -460,15 +588,14 @@ function render() {
     list.appendChild(row);
   });
 
-  // MVPs
   renderMVPs(selectedRace);
 }
 
+// ── MVPs ───────────────────────────────────────────────────────────────────
 function renderMVPs(raceNum) {
   const grid = document.getElementById('mvp-grid');
   grid.innerHTML = '';
 
-  // Top Driver
   const driverPicks = {};
   PICKS.filter(p => p.race_number === raceNum && p.pick_type === 'Driver').forEach(p => {
     if (!driverPicks[p.pick_name] || p.pick_points_gd > driverPicks[p.pick_name])
@@ -476,7 +603,6 @@ function renderMVPs(raceNum) {
   });
   const topDriver = Object.entries(driverPicks).sort((a,b) => b[1]-a[1])[0];
 
-  // Top Constructor
   const conPicks = {};
   PICKS.filter(p => p.race_number === raceNum && p.pick_type === 'Constructor').forEach(p => {
     if (!conPicks[p.pick_name] || p.pick_points_gd > conPicks[p.pick_name])
@@ -484,7 +610,6 @@ function renderMVPs(raceNum) {
   });
   const topCon = Object.entries(conPicks).sort((a,b) => b[1]-a[1])[0];
 
-  // Market riser/faller
   const racePrices = PRICES.filter(p => p.race_number === raceNum);
   const sorted = [...racePrices].sort((a,b) => b.price_change_pct - a.price_change_pct);
   const riser = sorted[0];
@@ -500,30 +625,10 @@ function renderMVPs(raceNum) {
   }
 
   const cards = [
-    topDriver ? {
-      cls: 'driver-card', label: 'Top Driver',
-      name: topDriver[0], sub: '—', value: `${topDriver[1]} PTS`,
-      img: `images/portraits/${driverSlug(topDriver[0])}.png`, imgCls: 'mvp-thumb'
-    } : null,
-    topCon ? {
-      cls: 'constructor-card', label: 'Top Constructor',
-      name: topCon[0], sub: '', value: `${topCon[1]} PTS`,
-      img: `images/logos/${conSlug(topCon[0])}.webp`, imgCls: 'mvp-logo'
-    } : null,
-    riser ? {
-      cls: 'riser-card', label: 'Market Riser',
-      name: riser.player_name, sub: riser.type.toUpperCase(),
-      value: `+${riser.price_change_pct.toFixed(1)}%`,
-      img: riser.type === 'Driver' ? `images/portraits/${driverSlug(riser.player_name)}.png` : `images/logos/${conSlug(riser.player_name)}.webp`,
-      imgCls: riser.type === 'Driver' ? 'mvp-thumb' : 'mvp-logo'
-    } : null,
-    faller ? {
-      cls: 'faller-card', label: 'Market Faller',
-      name: faller.player_name, sub: faller.type.toUpperCase(),
-      value: `${faller.price_change_pct.toFixed(1)}%`,
-      img: faller.type === 'Driver' ? `images/portraits/${driverSlug(faller.player_name)}.png` : `images/logos/${conSlug(faller.player_name)}.webp`,
-      imgCls: faller.type === 'Driver' ? 'mvp-thumb' : 'mvp-logo'
-    } : null,
+    topDriver ? { cls:'driver-card', label:'Top Driver', name:topDriver[0], sub:'—', value:`${topDriver[1]} PTS`, img:`images/portraits/${driverSlug(topDriver[0])}.png`, imgCls:'mvp-thumb' } : null,
+    topCon    ? { cls:'constructor-card', label:'Top Constructor', name:topCon[0], sub:'', value:`${topCon[1]} PTS`, img:`images/logos/${conSlug(topCon[0])}.webp`, imgCls:'mvp-logo' } : null,
+    riser     ? { cls:'riser-card', label:'Market Riser', name:riser.player_name, sub:riser.type.toUpperCase(), value:`+${riser.price_change_pct.toFixed(1)}%`, img:riser.type==='Driver'?`images/portraits/${driverSlug(riser.player_name)}.png`:`images/logos/${conSlug(riser.player_name)}.webp`, imgCls:riser.type==='Driver'?'mvp-thumb':'mvp-logo' } : null,
+    faller    ? { cls:'faller-card', label:'Market Faller', name:faller.player_name, sub:faller.type.toUpperCase(), value:`${faller.price_change_pct.toFixed(1)}%`, img:faller.type==='Driver'?`images/portraits/${driverSlug(faller.player_name)}.png`:`images/logos/${conSlug(faller.player_name)}.webp`, imgCls:faller.type==='Driver'?'mvp-thumb':'mvp-logo' } : null,
   ];
 
   cards.filter(Boolean).forEach(c => {
@@ -541,9 +646,23 @@ function renderMVPs(raceNum) {
   });
 }
 
-// ── INIT ──────────────────────────────────────────────────────────────────
-render();
+// ── INIT ───────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    await loadStatic();
+    const racedRounds = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
+    selectedRace = Math.max(...racedRounds);
 
+    // Check if live data exists — if so show the LIVE button and auto-enter live mode
+    liveAvailable = await checkLiveAvailable();
+    if (liveAvailable) {
+      isLive = true;
+      await loadLive();
+      selectedRace = Math.max(...RESULTS.map(r => r.race_number));
+      startRefreshCycle();
+    }
+
+    render();
   } catch(e) {
     console.error('results.html error:', e);
   }

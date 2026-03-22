@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -276,9 +276,7 @@
 <!-- TOP BAR -->
 <div id="loading-overlay" style="position:fixed;inset:0;background:#131313;z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
   <div style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;color:#e10600;letter-spacing:-0.02em;text-transform:uppercase">F1 Bolão</div>
-  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden">
-    <div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div>
-  </div>
+  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden"><div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div></div>
   <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
 </div>
 <header class="topbar">
@@ -360,37 +358,44 @@
 </nav>
 
 <script>
-async function init() {
-  try {
-    const [results] = await Promise.all([
-      fetch('results.json').then(r => r.json()),
-    ]);
-    const RESULTS = results;
 
 // ── DATA ──────────────────────────────────────────────────────────────────
 
-// Prizes: sum race_prize per player across all races
-function computePrizeTotals(results) {
-  const totals = {};
-  results.forEach(r => {
-    if (!totals[r.user_name]) totals[r.user_name] = 0;
-    totals[r.user_name] += r.race_prize || 0;
-  });
-  // Round to 2dp
-  Object.keys(totals).forEach(k => totals[k] = Math.round(totals[k] * 100) / 100);
-  return totals;
-}
+const PRIZE_TABLE = { 1: 19.25, 2: 11.55, 3: 7.70 };
 
 const CHART_COLORS = [
   '#e10600','#a6c8ff','#4ade80','#f59e0b','#c084fc',
   '#fb923c','#34d399','#f472b6','#60a5fa','#a3e635','#94a3b8'
 ];
 
-// ── COMPUTE ───────────────────────────────────────────────────────────────
+
+async function init() {
+  try {
+    document.getElementById('loading-overlay')?.remove();
+    const RESULTS = await fetch('results.json').then(r => r.json());
+    // ── COMPUTE ───────────────────────────────────────────────────────────────
 const maxRace = Math.max(...RESULTS.map(r => r.race_number));
 const latest  = RESULTS.filter(r => r.race_number === maxRace).sort((a,b) => a.season_rank - b.season_rank);
 
-const prizes = computePrizeTotals(RESULTS);
+// Prizes
+function computePrizes(standings) {
+  const prizes = {};
+  const groups = {};
+  standings.forEach(p => {
+    if (!groups[p.season_rank]) groups[p.season_rank] = [];
+    groups[p.season_rank].push(p.user_name);
+  });
+  [1,2,3].forEach(rank => {
+    const players = groups[rank] || [];
+    if (!players.length) return;
+    let pool = 0;
+    for (let i = 0; i < players.length; i++) pool += (PRIZE_TABLE[rank + i] || 0);
+    const share = Math.round((pool / players.length) * 100) / 100;
+    players.forEach(u => prizes[u] = share);
+  });
+  return prizes;
+}
+const prizes = computePrizes(latest);
 
 // Trophy race data
 const trophyData = {};
@@ -406,8 +411,7 @@ const highestBudget = Math.max(...latest.map(p => p.new_budget)).toFixed(1);
 
 // ── RENDER SPOTLIGHT ──────────────────────────────────────────────────────
 const p1 = latest[0];
-document.getElementById('loading-overlay')?.remove();
-  document.getElementById('race-context').textContent =
+document.getElementById('race-context').textContent =
   `${p1.race_flag} ${p1.race_name}  ·  Season 2026`;
 document.getElementById('spotlight-name').textContent = p1.user_name;
 document.getElementById('spotlight-team').textContent = p1.team_name;
@@ -567,9 +571,11 @@ function toggleRow(row) {
     legendEl.appendChild(el);
   });
 })();
+
   } catch(e) {
-    console.error('index.html fetch error:', e);
-    document.getElementById('loading-overlay').innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px">Failed to load data. Please refresh.</div>';
+    console.error('Standings error:', e);
+    const ov = document.getElementById('loading-overlay');
+    if (ov) ov.innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px;text-align:center">Failed to load data.<br>Please refresh.</div>';
   }
 }
 document.addEventListener('DOMContentLoaded', init);

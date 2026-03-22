@@ -286,113 +286,172 @@ td.right{text-align:right}
   <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
 </nav>
 
-<script>
-const DS = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
-const CS = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
+<script>let DATA = {};
+let SORTED_NAMES = [];
+let DRIVER_SLUG = {};
+let CON_SLUG = {};
 
-function buildHistData(picks, prices, races) {
+// ── DATA BUILDER ──────────────────────────────────────────────────────────
+// Sources of truth:
+//   prices.json     → entity list, type, price history, gameday_points, total_points,
+//                     season_high, season_low, pct_vs_high, pct_vs_low  (ALL entities)
+//   picks.json      → ownership counts, captain info  (only picked entities/races)
+//   breakdowns.json → points breakdown categories     (only picked entities)
+//   races.json      → sprint, cancelled flags
+//   config.json     → image slug overrides
+function buildHistData(picks, pricesData, races, breakdowns) {
+  // prices.json is now a wrapper object { prices: [...], updated_at, ... }
+  const prices = Array.isArray(pricesData) ? pricesData : (pricesData.prices || []);
+
+  // Race metadata by round number
   const raceMap = {};
   races.forEach(r => raceMap[r.round] = r);
 
-  const seen = new Set();
-  const deduped = picks.filter(p => {
-    const k = p.pick_name+'|'+p.race_number;
-    if(seen.has(k)) return false; seen.add(k); return true;
+  // ── BREAKDOWNS (only for picked entities) ────────────────────────────
+  const breakdownsByEntity = {}; // { name: { rn: [{category,points}] } }
+  breakdowns.forEach(b => {
+    if (!breakdownsByEntity[b.pick_name]) breakdownsByEntity[b.pick_name] = {};
+    if (!breakdownsByEntity[b.pick_name][b.race_number]) breakdownsByEntity[b.pick_name][b.race_number] = [];
+    breakdownsByEntity[b.pick_name][b.race_number].push({
+      category: b.breakdown_category,
+      points: b.breakdown_points
+    });
   });
 
-  // Entity pts per race
-  const ptsByRace = {};
-  deduped.forEach(p => {
-    if(!ptsByRace[p.pick_name]) ptsByRace[p.pick_name] = {type:p.pick_type, races:{}};
-    ptsByRace[p.pick_name].races[p.race_number] = p.pick_points_gd||0;
+  // ── OWNERSHIP from picks.json ─────────────────────────────────────────
+  const maxPickRace = picks.length > 0 ? Math.max(...picks.map(p => p.race_number)) : 0;
+  const totalUsers = Math.max(1, new Set(picks.filter(p => p.race_number === maxPickRace).map(p => p.user_name)).size);
+  const ownCounts = {}; // { name: Set<user_name> }
+  picks.filter(p => p.race_number === maxPickRace).forEach(p => {
+    if (!ownCounts[p.pick_name]) ownCounts[p.pick_name] = new Set();
+    ownCounts[p.pick_name].add(p.user_name);
   });
+  // Track which entities were ever picked (for was_picked flag)
+  const everPicked = new Set(picks.map(p => p.pick_name));
 
-  // Price history per entity
-  const priceByEntity = {};
+  // ── PRICES — build per-entity per-race lookup ─────────────────────────
+  const priceByEntity = {}; // { name: { type, byRace: { rn: {...} } } }
   prices.forEach(p => {
-    if(!priceByEntity[p.player_name]) priceByEntity[p.player_name] = {type:p.type, byRace:{}};
+    if (!priceByEntity[p.player_name]) priceByEntity[p.player_name] = { type: p.type, byRace: {} };
     priceByEntity[p.player_name].byRace[p.race_number] = {
-      price:p.price_this_race, priceNext:p.price_next_race,
-      chg:p.price_change, chgPct:p.price_change_pct
+      price:       p.price_this_race,
+      pricePrev:   p.price_prev_race,
+      priceNext:   p.price_next_race,
+      chg:         p.price_change,
+      chgPct:      p.price_change_pct,
+      // Points from gameday — null means race not yet played or entity didn't score
+      gamedayPts:  p.gameday_points ?? null,
+      totalPts:    p.total_points ?? null,
+      seasonHigh:  p.season_high ?? null,
+      seasonLow:   p.season_low ?? null,
+      pctVsHigh:   p.pct_vs_high ?? null,
+      pctVsLow:    p.pct_vs_low ?? null,
+      raceName:    p.race_name,
+      raceFlag:    p.race_flag,
+      raceDate:    p.race_date,
+      nextRaceName: p.next_race_name
     };
   });
 
-  // Latest prices
-  const maxCompleted = Math.max(...deduped.map(p=>p.race_number));
-  const next3 = {};
-  prices.filter(p=>p.race_number===maxCompleted+1).forEach(p=>next3[p.player_name]=p);
-  const lat2 = {};
-  prices.filter(p=>p.race_number===maxCompleted).forEach(p=>lat2[p.player_name]=p);
+  // All race numbers and entity names — canonical from prices.json
+  const allRaceNums = [...new Set(prices.map(p => p.race_number))].sort((a, b) => a - b);
+  const allNames    = [...new Set(prices.map(p => p.player_name))];
 
-  // Ownership
-  const totalUsers = new Set(picks.filter(p=>p.race_number===maxCompleted).map(p=>p.user_name)).size;
-  const ownCounts = {};
-  picks.filter(p=>p.race_number===maxCompleted).forEach(p=>{
-    if(!ownCounts[p.pick_name]) ownCounts[p.pick_name]=new Set();
-    ownCounts[p.pick_name].add(p.user_name);
-  });
+  // Latest race with actual price data (highest race_number)
+  const maxPriceRace = allRaceNums[allRaceNums.length - 1] || 1;
+  const latestPrice  = {};
+  prices.filter(p => p.race_number === maxPriceRace).forEach(p => latestPrice[p.player_name] = p);
 
-  // Build all race rounds from prices (has all entities across all races)
-  const allRaceNums = [...new Set(prices.map(p=>p.race_number))].sort((a,b)=>a-b);
-  const allNames = [...new Set(prices.map(p=>p.player_name))];
-
+  // ── BUILD DATA ────────────────────────────────────────────────────────
   const DATA = {};
   allNames.forEach(name => {
-    const pe = priceByEntity[name] || {type:'Driver', byRace:{}};
-    const totalPts = Object.values((ptsByRace[name]||{}).races||{}).reduce((s,v)=>s+v,0);
-    const curPrice = (lat2[name]||{}).price_next_race || (lat2[name]||{}).price_this_race || 0;
-    const np = next3[name] || lat2[name] || {};
+    const pe      = priceByEntity[name];
+    const wasPicked = everPicked.has(name);
+    const myBreakdowns = breakdownsByEntity[name] || null;
+
+    const lat      = latestPrice[name] || {};
+    // current price = price_next_race of latest entry, or price_this_race if next is null
+    const curPrice = lat.price_next_race ?? lat.price_this_race ?? 0;
+
+    // total_points from prices.json — take the max total_points seen (latest cumulative)
+    // For races with null total_points (future), skip
+    const totalPtsFromPrices = Math.max(
+      0,
+      ...Object.values(pe.byRace)
+        .map(r => r.totalPts)
+        .filter(v => v !== null)
+    );
 
     const rows = allRaceNums.map(rn => {
       const rInfo = raceMap[rn] || {};
-      const pr = pe.byRace[rn] || {};
-      const pts = (ptsByRace[name]||{}).races?.[rn];
-      const hasPts = pts !== undefined;
+      const pr    = pe.byRace[rn] || {};
       const price = pr.price || 0;
-      const eff = hasPts && price > 0 && pts !== 0 ? Math.round(pts/price*100)/100 : 0;
+
+      // gameday_points null = race not yet played (or entity didn't participate)
+      const gamedayPts = pr.gamedayPts ?? null;
+      const hasResult  = gamedayPts !== null;
+
+      const eff = hasResult && price > 0
+        ? Math.round(gamedayPts / price * 100) / 100
+        : null;
+
+      // Breakdown only if entity was picked
+      const breakdown = myBreakdowns ? (myBreakdowns[rn] || []) : null;
+
       return {
-        race: rn, race_name: rInfo.race_name||'', sprint: rInfo.sprint_weekend||false,
-        cancelled: rInfo.cancelled||false, pts: hasPts?pts:0, price,
-        price_next: pr.priceNext||null, price_chg: pr.chg||0, price_chg_pct: pr.chgPct||0,
-        eff, has_pts: hasPts
+        race:          rn,
+        race_name:     pr.raceName  || rInfo.race_name || '',
+        race_flag:     pr.raceFlag  || rInfo.race_flag || '',
+        race_date:     pr.raceDate  || rInfo.race_date || '',
+        sprint:        rInfo.sprint_weekend || false,
+        cancelled:     rInfo.cancelled     || false,
+        pts:           gamedayPts,    // null = future/no data
+        total_pts_at:  pr.totalPts ?? null, // running total at this race
+        has_result:    hasResult,
+        was_picked:    wasPicked,
+        price,
+        price_prev:    pr.pricePrev  || 0,
+        price_next:    pr.priceNext  ?? null,
+        price_chg:     pr.chg        || 0,
+        price_chg_pct: pr.chgPct     || 0,
+        season_high:   pr.seasonHigh ?? null,
+        season_low:    pr.seasonLow  ?? null,
+        pct_vs_high:   pr.pctVsHigh  ?? null,
+        pct_vs_low:    pr.pctVsLow   ?? null,
+        eff,
+        breakdown
       };
     });
 
     DATA[name] = {
-      type: pe.type||'Driver', total_pts: totalPts, current_price: curPrice,
-      next_price: np.price_this_race||curPrice,
-      next_price_chg: np.price_change||0, next_price_chg_pct: np.price_change_pct||0,
-      ownership: ownCounts[name] ? Math.round(ownCounts[name].size/totalUsers*100) : 0,
-      pts_per_m: curPrice>0&&totalPts>0 ? Math.round(totalPts/curPrice*10)/10 : 0,
+      type:              pe.type || 'Driver',
+      was_picked:        wasPicked,
+      total_pts:         totalPtsFromPrices,
+      current_price:     curPrice,
+      next_price:        lat.price_next_race ?? curPrice,
+      next_price_chg:    lat.price_change    || 0,
+      next_price_chg_pct: lat.price_change_pct || 0,
+      season_high:       lat.season_high  ?? null,
+      season_low:        lat.season_low   ?? null,
+      ownership:         ownCounts[name]
+                           ? Math.round(ownCounts[name].size / totalUsers * 100)
+                           : 0,
+      pts_per_m: curPrice > 0 && totalPtsFromPrices > 0
+                   ? Math.round(totalPtsFromPrices / curPrice * 10) / 10
+                   : 0,
       rows
     };
   });
 
-  const SORTED_NAMES = allNames.sort((a,b)=>DATA[b].total_pts-DATA[a].total_pts);
-  return {DATA, SORTED_NAMES};
+  // Sort by total_pts descending — all entities show, unpicked ones sort to bottom
+  const SORTED_NAMES = allNames.sort((a, b) => DATA[b].total_pts - DATA[a].total_pts);
+  return { DATA, SORTED_NAMES };
 }
 
-const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
-const CON_SLUG = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
-
-function imgPath(name, type) {
-  if (type === 'Driver') {
-    const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
-    return `images/portraits/${slug}.png`;
-  }
-  const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/,'').replace(/ /g,'_');
-  return `images/cars/${slug}.webp`;
-}
-
-const ENTITY_ORDER = ["Mercedes","Ferrari","Haas F1 Team","Racing Bulls","Red Bull Racing","McLaren","Audi","George Russell","Charles Leclerc","Lewis Hamilton","Kimi Antonelli","Oliver Bearman","Liam Lawson","Carlos Sainz","Esteban Ocon","Sergio Perez","Franco Colapinto","Arvid Lindblad","Isack Hadjar","Gabriel Bortoleto","Lando Norris","Valtteri Bottas","Nico Hulkenberg","Oscar Piastri","Alexander Albon","Fernando Alonso","Lance Stroll","Max Verstappen","Pierre Gasly","Sergio Perez","Isack Hadjar"];
-
-
-const SORTED_NAMES = Object.keys(DATA).sort((a,b) => DATA[b].total_pts - DATA[a].total_pts);
 const CAT_COLORS_COMP = ['#e10600','#a6c8ff','#4ade80','#f59e0b','#c084fc','#fb923c','#94a3b8'];
 
 let activeFilter = 'all';
-let selectedEntity = new URLSearchParams(window.location.search).get('entity') || 'George Russell';
-if (!DATA[selectedEntity]) selectedEntity = 'George Russell';
+let selectedEntity = new URLSearchParams(window.location.search).get('entity') || '';
 
 // ── HELPERS ───────────────────────────────────────────────────────────────
 function filteredNames() {
@@ -403,18 +462,37 @@ function isCon(name) { return DATA[name]?.type === 'Constructor'; }
 
 function heroImg(name) {
   if (isCon(name)) {
-    const slug = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'}[name]
-      || name.toLowerCase().replace(/ f1 team/,'').replace(/ /g,'_');
+    const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/,'').replace(/ /g,'_');
     return `images/cars/${slug}.webp`;
   }
-  const slug = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'}[name]
-    || name.toLowerCase().replace(/ /g,'_');
+  const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
   return `images/portraits/${slug}.png`;
 }
 
 function miniSvg(rows, W, H) {
-  const completed = rows.filter(r => r.has_pts);
-  if (completed.length < 1) return '';
+  const allRows = rows.filter(r => r.price > 0);
+  const completed = rows.filter(r => r.has_result);
+  if (allRows.length < 1) return '';
+
+  // If no pts data, show price-only chart
+  if (completed.length < 1) {
+    const prices = allRows.map(r => r.price);
+    const minP = Math.min(...prices), maxP = Math.max(...prices, minP + 0.1);
+    const pricePath = prices.map((v,i) => {
+      const x = 6 + (i / (allRows.length - 1 || 1)) * (W - 12);
+      const y = 8 + ((maxP - v) / (maxP - minP || 1)) * (H - 16);
+      return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
+    return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;overflow:visible">
+      <path d="${pricePath}" fill="none" stroke="#a6c8ff" stroke-width="1.5" stroke-dasharray="3,2" stroke-linejoin="round"/>
+      ${allRows.map((r,i) => {
+        const x = 6 + (i / (allRows.length - 1 || 1)) * (W - 12);
+        return `<text x="${x.toFixed(1)}" y="${H + 10}" text-anchor="middle" font-family="Inter" font-size="8" fill="rgba(229,226,225,0.3)">R${r.race}</text>`;
+      }).join('')}
+      <text x="${W/2}" y="${H/2}" text-anchor="middle" font-family="Inter" font-size="9" fill="rgba(229,226,225,0.25)">No picks data — price only</text>
+    </svg>`;
+  }
+
   const prices = completed.map(r => r.price);
   const pts    = completed.map(r => r.pts);
   const maxPts = Math.max(...pts.map(Math.abs), 1);
@@ -498,6 +576,9 @@ function renderHero() {
 
   const chgCls = d.next_price_chg > 0 ? 'pos' : d.next_price_chg < 0 ? 'neg' : 'flat';
   const chgStr = d.next_price_chg > 0 ? `+$${d.next_price_chg.toFixed(1)}M` : d.next_price_chg < 0 ? `-$${Math.abs(d.next_price_chg).toFixed(1)}M` : 'Stable';
+  const highLow = d.season_high && d.season_low
+    ? `H $${d.season_high.toFixed(1)} · L $${d.season_low.toFixed(1)}`
+    : '';
   document.getElementById('hero-stats').innerHTML = `
     <div class="hero-stat">
       <div class="hero-stat-label">Current Price</div>
@@ -506,27 +587,53 @@ function renderHero() {
     </div>
     <div class="hero-stat">
       <div class="hero-stat-label">Season Pts</div>
-      <div class="hero-stat-val">${d.total_pts}</div>
-      <div class="hero-stat-sub flat">${d.rows.filter(r=>r.has_pts).length} races</div>
+      <div class="hero-stat-val">${d.total_pts || '—'}</div>
+      <div class="hero-stat-sub flat">${d.rows.filter(r=>r.has_result).length} races${d.was_picked ? '' : ' · not picked'}</div>
     </div>
     <div class="hero-stat">
       <div class="hero-stat-label">Pts / $M</div>
-      <div class="hero-stat-val" style="color:var(--blue)">${d.pts_per_m}</div>
-      <div class="hero-stat-sub flat">${d.ownership}% owned</div>
+      <div class="hero-stat-val" style="color:${d.pts_per_m > 0 ? 'var(--blue)' : 'var(--on-40)'}">${d.pts_per_m || '—'}</div>
+      <div class="hero-stat-sub flat">${highLow || (d.was_picked ? `${d.ownership}% owned` : 'Price tracked')}</div>
     </div>`;
 }
 
 // ── FORECAST ──────────────────────────────────────────────────────────────
 function renderForecast() {
   const d = DATA[selectedEntity];
-  const completedRows = d.rows.filter(r => r.has_pts);
-  const bestRace = completedRows.length ? completedRows.reduce((a,b)=>a.pts>=b.pts?a:b) : null;
-  const stability = completedRows.length > 1
-    ? (100 - Math.round(Math.abs(completedRows[0].pts - completedRows[completedRows.length-1].pts) / Math.max(...completedRows.map(r=>Math.abs(r.pts)),1) * 100))
-    : 100;
+  const completedRows = d.rows.filter(r => r.has_result);
   const nextChg = d.next_price_chg;
   const nextCls = nextChg > 0 ? 'green' : nextChg < 0 ? 'red' : 'blue';
   const nextIcon = nextChg > 0 ? 'trending_up' : nextChg < 0 ? 'trending_down' : 'trending_flat';
+
+  // Season high/low card
+  const highLowCard = d.season_high && d.season_low
+    ? `<div class="fc-card blue">
+        <div class="fc-label">Season Range</div>
+        <span class="material-symbols-outlined fc-icon" style="color:var(--blue)">area_chart</span>
+        <div class="fc-val">$${d.season_low.toFixed(1)}–$${d.season_high.toFixed(1)}M</div>
+        <div class="fc-sub">${d.current_price < d.season_high ? `${Math.abs(d.next_price_chg_pct).toFixed(1)}% from high` : 'At season high'}</div>
+      </div>`
+    : `<div class="fc-card blue">
+        <div class="fc-label">Price Trend</div>
+        <span class="material-symbols-outlined fc-icon" style="color:var(--blue)">show_chart</span>
+        <div class="fc-val">${nextChg >= 0 ? '+' : ''}$${d.next_price_chg.toFixed(1)}M</div>
+        <div class="fc-sub">vs last race</div>
+      </div>`;
+
+  // Ownership / status card
+  const ownerCard = d.was_picked
+    ? `<div class="fc-card ${d.ownership > 60 ? 'red' : 'green'}">
+        <div class="fc-label">Ownership</div>
+        <span class="material-symbols-outlined fc-icon" style="color:var(--${d.ownership>60?'red-dim':'green'})">groups</span>
+        <div class="fc-val">${d.ownership}%</div>
+        <div class="fc-sub">${d.ownership > 60 ? 'High saturation' : d.ownership < 25 ? 'Differentiator' : 'Moderate'}</div>
+      </div>`
+    : `<div class="fc-card blue">
+        <div class="fc-label">Status</div>
+        <span class="material-symbols-outlined fc-icon" style="color:var(--blue)">visibility_off</span>
+        <div class="fc-val">Unowned</div>
+        <div class="fc-sub">No team picked this</div>
+      </div>`;
 
   document.getElementById('forecast-grid').innerHTML = `
     <div class="fc-card ${nextCls}">
@@ -535,18 +642,8 @@ function renderForecast() {
       <div class="fc-val">$${d.next_price.toFixed(1)}M</div>
       <div class="fc-sub">${nextChg >= 0 ? '+' : ''}${d.next_price_chg_pct.toFixed(1)}% projected</div>
     </div>
-    <div class="fc-card blue">
-      <div class="fc-label">Stability</div>
-      <span class="material-symbols-outlined fc-icon" style="color:var(--blue)">verified_user</span>
-      <div class="fc-val">${stability}%</div>
-      <div class="fc-sub">Score vs avg</div>
-    </div>
-    <div class="fc-card ${d.ownership > 60 ? 'red' : 'green'}">
-      <div class="fc-label">Ownership</div>
-      <span class="material-symbols-outlined fc-icon" style="color:var(--${d.ownership>60?'red-dim':'green'})">groups</span>
-      <div class="fc-val">${d.ownership}%</div>
-      <div class="fc-sub">${d.ownership > 60 ? 'High saturation' : d.ownership < 25 ? 'Differentiator' : 'Moderate'}</div>
-    </div>`;
+    ${highLowCard}
+    ${ownerCard}`;
 }
 
 // ── SEASON CHART ──────────────────────────────────────────────────────────
@@ -559,27 +656,34 @@ function renderChart() {
 // ── ROUND TABLE ───────────────────────────────────────────────────────────
 function renderTable() {
   const d = DATA[selectedEntity];
-  const completedRows = d.rows.filter(r => r.has_pts);
-  const bestPts = completedRows.length ? Math.max(...completedRows.map(r=>r.pts)) : 0;
-  const worstPts = completedRows.length > 1 ? Math.min(...completedRows.map(r=>r.pts)) : null;
+  const completedRows = d.rows.filter(r => r.has_result);
+  const bestPts = completedRows.length ? Math.max(...completedRows.map(r => r.pts)) : 0;
+  const worstPts = completedRows.length > 1 ? Math.min(...completedRows.map(r => r.pts)) : null;
 
   document.getElementById('round-tbody').innerHTML = d.rows.map(row => {
-    const isBest = row.has_pts && row.pts === bestPts && bestPts > 0;
-    const isWorst = row.has_pts && worstPts !== null && row.pts === worstPts && worstPts < bestPts;
-    const rowCls = row.cancelled ? 'cancelled' : !row.has_pts ? 'future' : isBest ? 'best-race' : isWorst ? 'worst-race' : row.sprint ? 'sprint' : 'completed';
-    const ptsClass = !row.has_pts ? 'future' : row.pts > 0 ? 'pos' : row.pts < 0 ? 'neg' : 'zero';
+    const isBest = row.has_result && row.pts === bestPts && bestPts > 0;
+    const isWorst = row.has_result && worstPts !== null && row.pts === worstPts && worstPts < bestPts;
+    const rowCls = row.cancelled ? 'cancelled' : !row.has_result && !d.was_picked ? 'future' : !row.has_result ? 'future' : isBest ? 'best-race' : isWorst ? 'worst-race' : row.sprint ? 'sprint' : 'completed';
+    const ptsClass = !row.has_result ? 'future' : row.pts > 0 ? 'pos' : row.pts < 0 ? 'neg' : 'zero';
     const chgCls = row.price_chg > 0 ? 'pos' : row.price_chg < 0 ? 'neg' : 'flat';
-    const effCls = row.eff > 0 ? '' : row.eff < 0 ? 'neg' : 'zero';
+    const effCls = row.eff > 0 ? '' : row.eff !== null && row.eff < 0 ? 'neg' : 'zero';
     const sprintTag = row.sprint ? '<span class="sprint-tag">Sprint</span>' : '';
     const cancelTag = row.cancelled ? '<span class="cancelled-tag">Cancelled</span>' : '';
-    const ptsDisplay = !row.has_pts ? '—' : row.pts;
-    const effDisplay = !row.has_pts ? '—' : row.eff;
+    const ptsDisplay = !row.has_result ? (d.was_picked ? 'n/p' : '—') : row.pts;
+    const effDisplay = row.eff !== null ? row.eff : '—';
+
+    // Breakdown tooltip if available
+    const bdList = row.breakdown && row.breakdown.length
+      ? row.breakdown.map(b => `${b.category}: ${b.points > 0 ? '+' : ''}${b.points}`).join(' · ')
+      : '';
+    const bdHint = bdList ? `<div style="font-size:0.45rem;color:var(--on-40);margin-top:2px;white-space:normal;max-width:180px">${bdList}</div>` : '';
+
     return `<tr class="${rowCls}">
       <td><span class="td-round">R${String(row.race).padStart(2,'0')}</span></td>
-      <td><span class="td-race">${row.race_name.replace(' Grand Prix','').replace(' GP','')}${sprintTag}${cancelTag}</span></td>
+      <td><span class="td-race">${row.race_name.replace(' Grand Prix','').replace(' GP','')}${sprintTag}${cancelTag}</span>${bdHint}</td>
       <td class="right"><span class="td-pts ${ptsClass}">${ptsDisplay}</span></td>
       <td class="right"><span class="td-price">$${row.price.toFixed(1)}M</span></td>
-      <td class="right"><span class="td-chg ${chgCls}">${row.price_chg>=0?'+':''}$${row.price_chg.toFixed(1)}M</span></td>
+      <td class="right"><span class="td-chg ${chgCls}">${row.price_chg >= 0 ? '+' : ''}$${row.price_chg.toFixed(1)}M</span></td>
       <td class="right"><span class="td-eff ${effCls}">${effDisplay}</span></td>
     </tr>`;
   }).join('');
@@ -619,12 +723,13 @@ function renderLandscape() {
     <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-top:2px">${d.type}</div>`;
 
   document.getElementById('ls-stats').innerHTML = [
-    {l:'Current Price', v:`$${d.current_price.toFixed(1)}M`, cls:'blue'},
-    {l:'Season Pts',    v:d.total_pts},
-    {l:'Pts / $M',     v:d.pts_per_m, cls:d.pts_per_m>5?'green':d.pts_per_m>0?'':'' },
-    {l:'Ownership',    v:`${d.ownership}%`},
-    {l:'Next Price',   v:`$${d.next_price.toFixed(1)}M`, cls:d.next_price_chg>0?'green':d.next_price_chg<0?'red':''},
-    {l:'Stability',    v: d.rows.filter(r=>r.has_pts).length > 1 ? `${100-Math.round(Math.abs((d.rows.filter(r=>r.has_pts)[0]?.pts||0)-(d.rows.filter(r=>r.has_pts).slice(-1)[0]?.pts||0))/Math.max(...d.rows.filter(r=>r.has_pts).map(r=>Math.abs(r.pts)),1)*100)}%` : 'N/A'},
+    {l:'Current Price', v:`$${d.current_price.toFixed(1)}M`,  cls:'blue'},
+    {l:'Next Price',    v:`$${d.next_price.toFixed(1)}M`,     cls:d.next_price_chg>0?'green':d.next_price_chg<0?'red':''},
+    {l:'Season Pts',   v: d.total_pts || '—'},
+    {l:'Pts / $M',     v: d.pts_per_m || '—',                cls:d.pts_per_m>5?'green':d.pts_per_m>0?'':''},
+    {l:'Season High',  v: d.season_high ? `$${d.season_high.toFixed(1)}M` : '—', cls:'green'},
+    {l:'Season Low',   v: d.season_low  ? `$${d.season_low.toFixed(1)}M`  : '—', cls:'red'},
+    {l:'Ownership',    v: d.was_picked ? `${d.ownership}%` : 'Not picked'},
   ].map(s=>`<div class="ls-stat-row"><span class="ls-stat-label">${s.l}</span><span class="ls-stat-val${s.cls?' '+s.cls:''}">${s.v}</span></div>`).join('');
 
   // Right panel
@@ -649,17 +754,25 @@ function renderLandscape() {
           <th style="font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);padding:7px 10px;text-align:right">Pts/$M</th>
         </tr></thead>
         <tbody>${d.rows.map(row=>{
-          const ptsC = !row.has_pts?'var(--on-20)':row.pts>0?'var(--on)':row.pts<0?'var(--red-dim)':'var(--on-40)';
+          const ptsC = !row.has_result?'var(--on-20)':row.pts>0?'var(--on)':row.pts<0?'var(--red-dim)':'var(--on-40)';
           const chgC = row.price_chg>0?'var(--green)':row.price_chg<0?'var(--red-dim)':'var(--on-40)';
-          const effC = row.eff>0?'var(--blue)':row.eff<0?'var(--red-dim)':'var(--on-40)';
+          const effC = row.eff>0?'var(--blue)':row.eff!==null&&row.eff<0?'var(--red-dim)':'var(--on-40)';
+          const ptsDisplay = !row.has_result ? (d.was_picked ? 'n/p' : '—') : row.pts;
+          const effDisplay = row.eff !== null ? row.eff : '—';
+          const bdList = row.breakdown && row.breakdown.length
+            ? row.breakdown.map(b=>`${b.category}: ${b.points>0?'+':''}${b.points}`).join(' · ')
+            : '';
           return `<tr style="border-bottom:1px solid var(--on-08)">
             <td style="padding:7px 10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.72rem;color:var(--on-40)">R${String(row.race).padStart(2,'0')}</td>
-            <td style="padding:7px 10px;font-size:0.65rem;font-weight:700;text-transform:uppercase">${row.race_name.replace(' Grand Prix','').replace(' GP','')}${row.sprint?'<span style="font-size:0.42rem;background:rgba(245,158,11,0.2);color:var(--amber);padding:1px 4px;margin-left:4px">S</span>':''}</td>
-            <td style="padding:7px 10px;text-align:right;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;color:${ptsC}">${row.has_pts?row.pts:'—'}</td>
+            <td style="padding:7px 10px;font-size:0.65rem;font-weight:700;text-transform:uppercase">
+              ${row.race_name.replace(' Grand Prix','').replace(' GP','')}${row.sprint?'<span style="font-size:0.42rem;background:rgba(245,158,11,0.2);color:var(--amber);padding:1px 4px;margin-left:4px">S</span>':''}
+              ${bdList?`<div style="font-size:0.43rem;color:var(--on-40);font-weight:400;margin-top:1px;white-space:normal">${bdList}</div>`:''}
+            </td>
+            <td style="padding:7px 10px;text-align:right;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;color:${ptsC}">${ptsDisplay}</td>
             <td style="padding:7px 10px;text-align:right;font-size:0.68rem;color:var(--on-60)">$${row.price.toFixed(1)}M</td>
             <td style="padding:7px 10px;text-align:right;font-size:0.65rem;font-weight:700;color:${chgC}">${row.price_chg>=0?'+':''}$${row.price_chg.toFixed(1)}M</td>
             <td style="padding:7px 10px;text-align:right;font-size:0.65rem;font-weight:700;color:${chgC}">${row.price_chg_pct>=0?'+':''}${row.price_chg_pct.toFixed(1)}%</td>
-            <td style="padding:7px 10px;text-align:right;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:700;color:${effC}">${row.has_pts?row.eff:'—'}</td>
+            <td style="padding:7px 10px;text-align:right;font-family:'Space Grotesk',sans-serif;font-size:0.72rem;font-weight:700;color:${effC}">${effDisplay}</td>
           </tr>`;
         }).join('')}</tbody>
       </table>
@@ -698,12 +811,29 @@ function renderAll() {
 
 async function init() {
   try {
-    const [picks, prices, races] = await Promise.all([
-      fetch('picks.json').then(r=>r.json()),
-      fetch('prices.json').then(r=>r.json()),
-      fetch('races.json').then(r=>r.json()),
+    const [cfg, picks, prices, races, breakdowns] = await Promise.all([
+      fetch('config.json').then(r => r.json()),
+      fetch('picks.json').then(r => r.json()),
+      fetch('prices.json').then(r => r.json()),
+      fetch('races.json').then(r => r.json()),
+      fetch('breakdowns.json').then(r => r.json()),
     ]);
-    const {DATA, SORTED_NAMES} = buildHistData(picks, prices, races);
+
+    // Load slug overrides from config.json
+    DRIVER_SLUG = cfg.driver_slug_overrides || {};
+    CON_SLUG = cfg.constructor_slug_overrides || {};
+
+    const result = buildHistData(picks, prices, races, breakdowns);
+    DATA = result.DATA;
+    SORTED_NAMES = result.SORTED_NAMES;
+
+    // Validate or pick a good default entity
+    // Prefer URL param → first entity with pts → first entity in SORTED_NAMES
+    if (!selectedEntity || !DATA[selectedEntity]) {
+      const firstWithPts = SORTED_NAMES.find(n => DATA[n].total_pts > 0);
+      selectedEntity = firstWithPts || SORTED_NAMES[0] || '';
+    }
+
     document.getElementById('loading-overlay')?.remove();
     buildSelector();
     renderAll();

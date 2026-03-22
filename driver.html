@@ -184,7 +184,7 @@ main{flex:1;padding-bottom:80px}
     <!-- Hero Card -->
     <div class="hero" id="hero">
       <div class="hero-img-wrap">
-        <img id="hero-img" src="" alt="" onerror="this.style.opacity='0.1'" class="hero-portrait"/>
+        <img id="hero-img" src="" alt="" class="hero-portrait"/>
         <div class="hero-overlay"></div>
         <div class="hero-num" id="hero-num"></div>
       </div>
@@ -554,6 +554,7 @@ function renderHero() {
   const isCon = d.type === 'Constructor';
   const img = document.getElementById('hero-img');
   img.src = d.img;
+  img.style.opacity = '1';
   img.className = isCon ? 'hero-car' : 'hero-portrait';
   const overlay = document.querySelector('.hero-overlay');
   if (overlay) overlay.style.display = isCon ? 'none' : 'block';

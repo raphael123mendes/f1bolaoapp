@@ -323,120 +323,322 @@ main{flex:1;padding-bottom:80px}
 </nav>
 
 <script>
-const _DS = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
-const _CS = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
+// ── LIVE CONFIG ────────────────────────────────────────────────────────────
+const LIVE_BASE   = 'live/';
+const REFRESH_MS  = 10 * 60 * 1000;   // 10 minutes
+const REFRESH_S   = REFRESH_MS / 1000;
 
-function buildRaceData(picks, breakdowns, results) {
-  const DRIVER_SLUG = _DS;
-  const CON_SLUG = _CS;
+// ── CONSTANTS ─────────────────────────────────────────────────────────────
+const CIRCUIT_MAP = {
+  'Australian Grand Prix':null,
+  'Chinese Grand Prix':'images/circuits/round-04_shanghai.svg',
+  'Japanese Grand Prix':'images/circuits/round-03_suzuka.svg',
+  'Bahrain Grand Prix':'images/circuits/round-01_sakhir.svg',
+  'Saudi Arabian Grand Prix':'images/circuits/round-02_jeddah.svg',
+  'Miami Grand Prix':'images/circuits/round-05_miami.svg',
+  'Canadian Grand Prix':'images/circuits/round-10_montreal.svg',
+  'Monaco Grand Prix':'images/circuits/round-07_montecarlo.svg',
+  'Barcelona-Catalunya Grand Prix':'images/circuits/round-08_catalunya.svg',
+  'Austrian Grand Prix':'images/circuits/round-11_spielberg.svg',
+  'British Grand Prix':'images/circuits/round-12_silverstone.svg',
+  'Belgian Grand Prix':'images/circuits/round-13_spa.svg',
+  'Hungarian Grand Prix':'images/circuits/round-14_hungaroring.svg',
+  'Dutch Grand Prix':'images/circuits/round-15_zandvoort.svg',
+  'Italian Grand Prix':'images/circuits/round-16_monza.svg',
+  'Spanish Grand Prix':'images/circuits/round-09_madring.svg',
+  'Azerbaijan Grand Prix':'images/circuits/round-17_baku.svg',
+  'Singapore Grand Prix':'images/circuits/round-18_singapore.svg',
+  'United States Grand Prix':'images/circuits/round-19_austin.svg',
+  'Mexico City Grand Prix':'images/circuits/round-20_mexicocity.svg',
+  'São Paulo Grand Prix':'images/circuits/round-21_interlagos.svg',
+  'Las Vegas Grand Prix':'images/circuits/round-22_lasvegas.svg',
+  'Qatar Grand Prix':'images/circuits/round-23_lusail.svg',
+  'Abu Dhabi Grand Prix':'images/circuits/round-24_yasmarinacircuit.svg',
+};
 
-  function driverImg(n) {
-    return 'images/portraits/'+(DRIVER_SLUG[n]||n.toLowerCase().replace(/ /g,'_'))+'.png';
-  }
-  function carImg(n) {
-    return 'images/cars/'+(CON_SLUG[n]||n.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,''))+'.webp';
-  }
+const AXES       = ['Qualifying','Race','Sprint','Overtakes','Pit/Bonus'];
+const AXIS_COLORS = {'Qualifying':'#a6c8ff','Race':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Pit/Bonus':'#c084fc'};
 
-  const completedRaces = [...new Set(picks.map(p=>p.race_number))].sort((a,b)=>a-b);
+// Map breakdown_category → radar axis
+const CAT_AXIS = {
+  'Qualifying Position':'Qualifying','Qualifying Delta':'Qualifying','Qualifying Beat Teammate':'Qualifying',
+  'Grid Position':'Qualifying',
+  'Race Position':'Race','Race Points':'Race','Race Beat Teammate':'Race','Fastest Lap':'Race',
+  'Race Finish':'Race','Race Result':'Race','Finish Position':'Race',
+  'Sprint Position':'Sprint','Sprint Points':'Sprint','Sprint Beat Teammate':'Sprint','Sprint Result':'Sprint',
+  'Overtakes':'Overtakes','Positions Gained':'Overtakes','Positions Gained/Lost':'Overtakes',
+  'Pit Stop':'Pit/Bonus','Pit Stop Time':'Pit/Bonus','Bonus':'Pit/Bonus',
+  'Driver of the Day':'Pit/Bonus','Clean Sheet':'Pit/Bonus','Extra DRS':'Pit/Bonus',
+};
 
-  // Ownership per entity per race
+// ── MODULE STATE ───────────────────────────────────────────────────────────
+let CONFIG = {};
+let RACES  = [];
+let STATIC_PICKS, STATIC_BREAKDOWNS, STATIC_RESULTS;
+let PICKS,        BREAKDOWNS,        RESULTS;
+let DATA = {};           // built DATA object
+let STATIC_DATA  = {};   // snapshot for live/static switching
+
+let isLive         = false;
+let liveAvailable  = false;
+let selectedRace   = null;
+let selectedUser   = null;
+let refreshTimer   = null;
+let countdownTimer = null;
+let countdownSec   = REFRESH_S;
+
+// ── HELPERS ────────────────────────────────────────────────────────────────
+async function tryFetch(url) {
+  try {
+    const r = await fetch(url + '?_=' + Date.now());
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
+
+function driverImg(name) {
+  const slug = (CONFIG.driver_slug_overrides && CONFIG.driver_slug_overrides[name])
+    ? CONFIG.driver_slug_overrides[name]
+    : name.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
+  return `images/portraits/${slug}.png`;
+}
+
+function carImg(name) {
+  const slug = (CONFIG.constructor_slug_overrides && CONFIG.constructor_slug_overrides[name])
+    ? CONFIG.constructor_slug_overrides[name]
+    : name.toLowerCase().replace(/\s+f1\s+team/i,'').replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'').replace(/_+$/,'');
+  return `images/cars/${slug}.webp`;
+}
+
+// ── DATA LOADING ───────────────────────────────────────────────────────────
+async function loadStatic() {
+  const [picks, breakdowns, results, races, config] = await Promise.all([
+    fetch('picks.json').then(r => r.json()),
+    fetch('breakdowns.json').then(r => r.json()),
+    fetch('results.json').then(r => r.json()),
+    fetch('races.json').then(r => r.json()),
+    fetch('config.json').then(r => r.json()),
+  ]);
+  CONFIG = config;
+  RACES  = races;
+  PICKS  = picks;        STATIC_PICKS  = picks;
+  BREAKDOWNS = breakdowns; STATIC_BREAKDOWNS = breakdowns;
+  RESULTS    = results;    STATIC_RESULTS    = results;
+  STATIC_DATA = buildRaceData(picks, breakdowns, results, races);
+  DATA = STATIC_DATA;
+}
+
+async function loadLive() {
+  const [results, picks, breakdowns] = await Promise.all([
+    tryFetch(LIVE_BASE + 'results.json'),
+    tryFetch(LIVE_BASE + 'picks.json'),
+    tryFetch(LIVE_BASE + 'breakdowns.json'),
+  ]);
+  if (!results) return false;
+  RESULTS    = results;
+  PICKS      = picks      || STATIC_PICKS;
+  BREAKDOWNS = breakdowns || STATIC_BREAKDOWNS;
+  DATA = buildRaceData(PICKS, BREAKDOWNS, RESULTS, RACES);
+  return true;
+}
+
+async function checkLiveAvailable() {
+  const r = await tryFetch(LIVE_BASE + 'results.json');
+  return r !== null && r.length > 0;
+}
+
+// ── BUILD DATA OBJECT ──────────────────────────────────────────────────────
+function buildRaceData(picks, breakdowns, results, races) {
+  const completedRaces = [...new Set(picks.map(p => p.race_number))].sort((a,b) => a-b);
+
+  // ── Ownership per entity per race ─────────────────────────────────────
   const ownership = {};
   completedRaces.forEach(rn => {
-    const racePicks = picks.filter(p=>p.race_number===rn);
-    const users = [...new Set(racePicks.map(p=>p.user_name))];
-    const total = users.length;
+    const rp = picks.filter(p => p.race_number === rn);
+    const users = [...new Set(rp.map(p => p.user_name))];
     const counts = {};
-    racePicks.forEach(p=>{
-      if(!counts[p.pick_name]) counts[p.pick_name]=new Set();
+    rp.forEach(p => {
+      if (!counts[p.pick_name]) counts[p.pick_name] = new Set();
       counts[p.pick_name].add(p.user_name);
     });
     ownership[rn] = {};
-    Object.entries(counts).forEach(([n,s])=>ownership[rn][n]=Math.round(s.size/total*100));
+    Object.entries(counts).forEach(([n,s]) => ownership[rn][n] = Math.round(s.size / users.length * 100));
   });
 
-  // Breakdown per user per race per pick (deduped)
-  const bdMap = {}; // race->user->pick->cat->pts
+  // ── Breakdown map: race→user→pick→cat→pts (deduped) ──────────────────
+  const bdMap  = {};
   const bdSeen = new Set();
   breakdowns.forEach(b => {
-    const k = b.race_number+'|'+b.user_name+'|'+b.pick_name+'|'+b.breakdown_category;
-    if(bdSeen.has(k)) return; bdSeen.add(k);
-    if(!bdMap[b.race_number]) bdMap[b.race_number]={};
-    if(!bdMap[b.race_number][b.user_name]) bdMap[b.race_number][b.user_name]={};
-    if(!bdMap[b.race_number][b.user_name][b.pick_name]) bdMap[b.race_number][b.user_name][b.pick_name]={};
+    const k = `${b.race_number}|${b.user_name}|${b.pick_name}|${b.breakdown_category}`;
+    if (bdSeen.has(k)) return; bdSeen.add(k);
+    if (!bdMap[b.race_number]) bdMap[b.race_number] = {};
+    if (!bdMap[b.race_number][b.user_name]) bdMap[b.race_number][b.user_name] = {};
+    if (!bdMap[b.race_number][b.user_name][b.pick_name]) bdMap[b.race_number][b.user_name][b.pick_name] = {};
     bdMap[b.race_number][b.user_name][b.pick_name][b.breakdown_category] =
-      (bdMap[b.race_number][b.user_name][b.pick_name][b.breakdown_category]||0) + b.breakdown_points;
+      (bdMap[b.race_number][b.user_name][b.pick_name][b.breakdown_category] || 0) + b.breakdown_points;
   });
 
-  // Build DATA per race per user
+  // ── Build DATA[rn] ────────────────────────────────────────────────────
   const DATA = {};
   completedRaces.forEach(rn => {
-    DATA[rn] = {};
-    const racePicks = picks.filter(p=>p.race_number===rn);
-    const users = [...new Set(racePicks.map(p=>p.user_name))];
+    const raceMeta  = (races || []).find(r => r.round === rn) || {};
+    const raceFlag  = (results.find(r => r.race_number === rn) || {}).race_flag || '';
+    const raceName  = raceMeta.race_name  || (results.find(r => r.race_number === rn) || {}).race_name || `Round ${rn}`;
+    const raceDate  = raceMeta.race_date  || '';
+    const isSprint  = raceMeta.sprint_weekend || false;
 
+    const racePicks = picks.filter(p => p.race_number === rn);
+    const users     = [...new Set(racePicks.map(p => p.user_name))];
+
+    // ── Per-user data ──────────────────────────────────────────────────
+    const usersData = {};
     users.forEach(user => {
-      const userPicks = racePicks.filter(p=>p.user_name===user);
-      const rResult = results.find(r=>r.race_number===rn&&r.user_name===user) || {};
+      const userPicks  = racePicks.filter(p => p.user_name === user);
+      const rResult    = results.find(r => r.race_number === rn && r.user_name === user) || {};
+      const userBdMap  = bdMap[rn]?.[user] || {};
 
-      const pickCards = userPicks.map(p => ({
-        name: p.pick_name, type: p.pick_type,
-        pts: p.pick_points_gd||0, is_captain: p.is_captain, is_megacap: p.is_megacap,
-        img: p.pick_type==='Driver' ? driverImg(p.pick_name) : carImg(p.pick_name),
-        ownership: (ownership[rn]||{})[p.pick_name]||0,
-        breakdown: bdMap[rn]?.[user]?.[p.pick_name]||{},
-      }));
+      // Build pick cards with per-pick breakdown
+      const pickCards = userPicks.map(p => {
+        const bd = userBdMap[p.pick_name] || {};
+        return {
+          name:       p.pick_name,
+          type:       p.pick_type,
+          pts:        p.pick_points_gd || 0,
+          is_captain: p.is_captain,
+          is_megacap: p.is_megacap,
+          img:        p.pick_type === 'Driver' ? driverImg(p.pick_name) : carImg(p.pick_name),
+          ownership:  (ownership[rn] || {})[p.pick_name] || 0,
+          breakdown:  bd,
+        };
+      });
 
-      DATA[rn][user] = {
-        race_rank: rResult.race_rank||0,
-        race_points: rResult.race_points||0,
-        season_points: rResult.season_points||0,
-        new_budget: rResult.new_budget||0,
-        cards_used: rResult.cards_used||'',
-        picks: pickCards,
+      // Radar axes: sum breakdown categories → axes
+      const radar      = Object.fromEntries(AXES.map(a => [a, 0]));
+      const axisDetail = Object.fromEntries(AXES.map(a => [a, {}]));
+      pickCards.forEach(pc => {
+        Object.entries(pc.breakdown).forEach(([cat, val]) => {
+          const axis = CAT_AXIS[cat] || 'Pit/Bonus';
+          radar[axis] = (radar[axis] || 0) + val;
+          axisDetail[axis][cat] = (axisDetail[axis][cat] || 0) + val;
+        });
+      });
+
+      // Strategic differentiators
+      const sorted    = [...pickCards].sort((a,b) => a.ownership - b.ownership);
+      const exclusive = sorted.filter(p => p.ownership < 50);
+      const common    = [...pickCards].sort((a,b) => b.ownership - a.ownership).filter(p => p.ownership >= 50);
+
+      usersData[user] = {
+        race_rank:    rResult.race_rank    || 0,
+        season_rank:  rResult.season_rank  || 0,
+        race_points:  rResult.race_points  || 0,
+        season_points:rResult.season_points|| 0,
+        new_budget:   rResult.new_budget   || 0,
+        cards_used:   rResult.cards_used   || '',
+        picks:        pickCards,
+        radar,
+        axis_detail:  axisDetail,
+        exclusive,
+        common,
       };
     });
+
+    // ── League averages & axis max across all users ────────────────────
+    const league_avg = Object.fromEntries(AXES.map(a => [a, 0]));
+    const axis_max   = Object.fromEntries(AXES.map(a => [a, 1]));
+    if (users.length) {
+      AXES.forEach(axis => {
+        const vals = users.map(u => usersData[u].radar[axis] || 0);
+        league_avg[axis] = Math.round(vals.reduce((s,v) => s+v, 0) / vals.length);
+        axis_max[axis]   = Math.max(...vals.map(Math.abs), Math.abs(league_avg[axis]), 1);
+      });
+    }
+
+    DATA[rn] = {
+      race_name:      raceName,
+      race_flag:      raceFlag,
+      race_date:      raceDate,
+      sprint_weekend: isSprint,
+      users:          usersData,
+      league_avg,
+      axis_max,
+    };
   });
 
   return DATA;
 }
 
-// ── DATA ─────────────────────────────────────────────────────────────────
-const RACES_META = [{"round":1,"race_name":"Australian Grand Prix","location":"Melbourne, Australia","race_date":"2026-03-08","sprint_weekend":false,"cancelled":false},{"round":2,"race_name":"Chinese Grand Prix","location":"Shanghai, China","race_date":"2026-03-15","sprint_weekend":true,"cancelled":false},{"round":3,"race_name":"Japanese Grand Prix","location":"Suzuka, Japan","race_date":"2026-03-29","sprint_weekend":false,"cancelled":false},{"round":4,"race_name":"Bahrain Grand Prix","location":"Sakhir, Bahrain","race_date":"2026-04-12","sprint_weekend":false,"cancelled":true},{"round":5,"race_name":"Saudi Arabian Grand Prix","location":"Jeddah, Saudi Arabia","race_date":"2026-04-19","sprint_weekend":false,"cancelled":true}];
+// ── GETTERS ────────────────────────────────────────────────────────────────
+function getRaceData()  { return DATA[selectedRace]; }
+function getUserData()  { return getRaceData().users[selectedUser]; }
+function getAllUsers()  { return Object.keys(getRaceData().users).sort(); }
+function racedRounds()  { return Object.keys(DATA).map(Number).sort((a,b) => a-b); }
 
-const CIRCUIT_MAP = {'Australian Grand Prix':null,'Chinese Grand Prix':'images/circuits/round-04_shanghai.svg','Japanese Grand Prix':'images/circuits/round-03_suzuka.svg','Bahrain Grand Prix':'images/circuits/round-01_sakhir.svg','Saudi Arabian Grand Prix':'images/circuits/round-02_jeddah.svg','Miami Grand Prix':'images/circuits/round-05_miami.svg','Canadian Grand Prix':'images/circuits/round-10_montreal.svg','Monaco Grand Prix':'images/circuits/round-07_montecarlo.svg','Barcelona-Catalunya Grand Prix':'images/circuits/round-08_catalunya.svg','Austrian Grand Prix':'images/circuits/round-11_spielberg.svg','British Grand Prix':'images/circuits/round-12_silverstone.svg','Belgian Grand Prix':'images/circuits/round-13_spa.svg','Hungarian Grand Prix':'images/circuits/round-14_hungaroring.svg','Dutch Grand Prix':'images/circuits/round-15_zandvoort.svg','Italian Grand Prix':'images/circuits/round-16_monza.svg','Spanish Grand Prix':'images/circuits/round-09_madring.svg','Azerbaijan Grand Prix':'images/circuits/round-17_baku.svg','Singapore Grand Prix':'images/circuits/round-18_singapore.svg','United States Grand Prix':'images/circuits/round-19_austin.svg','Mexico City Grand Prix':'images/circuits/round-20_mexicocity.svg','São Paulo Grand Prix':'images/circuits/round-21_interlagos.svg','Las Vegas Grand Prix':'images/circuits/round-22_lasvegas.svg','Qatar Grand Prix':'images/circuits/round-23_lusail.svg','Abu Dhabi Grand Prix':'images/circuits/round-24_yasmarinacircuit.svg'};
+// ── LIVE BUTTON CSS ────────────────────────────────────────────────────────
+(function injectLiveStyle() {
+  const s = document.createElement('style');
+  s.textContent = `
+    .round-btn.live-btn{background:rgba(225,6,0,0.12);border-bottom:2px solid var(--red);color:var(--red);position:relative}
+    .round-btn.live-btn::before{content:'';display:inline-block;width:6px;height:6px;border-radius:50%;
+      background:var(--red);margin-right:5px;animation:livePulse 1.2s ease-in-out infinite;vertical-align:middle}
+    .round-btn.live-btn.active{background:rgba(225,6,0,0.2)}
+    @keyframes livePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.7)}}
+    .live-meta-bar{font-size:0.52rem;font-weight:800;color:var(--red);letter-spacing:0.12em;
+      text-transform:uppercase;margin-top:4px;padding:0 20px 8px}
+    .refresh-countdown{display:inline-block;margin-left:6px;font-size:0.48rem;font-weight:600;color:var(--on-40)}
+    .round-btn.cancelled{color:var(--on-20);text-decoration:line-through;cursor:not-allowed}
+  `;
+  document.head.appendChild(s);
+})();
 
-const AXES = ['Qualifying','Race','Sprint','Overtakes','Pit/Bonus'];
-const AXIS_COLORS = {'Qualifying':'#a6c8ff','Race':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Pit/Bonus':'#c084fc'};
-
-// Embedded race data
-
-// ── STATE ─────────────────────────────────────────────────────────────────
-const racedRounds = Object.keys(DATA).map(Number).sort((a,b)=>a-b);
-let selectedRace = Math.max(...racedRounds);
-let selectedUser = null;
-
-// ── HELPERS ───────────────────────────────────────────────────────────────
-function getRaceData() { return DATA[selectedRace]; }
-function getUserData() { return getRaceData().users[selectedUser]; }
-function getAllUsers() { return Object.keys(getRaceData().users).sort(); }
-
-// ── ROUND SWITCHER ────────────────────────────────────────────────────────
+// ── ROUND SWITCHER ─────────────────────────────────────────────────────────
 function buildSwitcher() {
   const el = document.getElementById('round-switcher');
   el.innerHTML = '';
-  const allRounds = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
-  allRounds.forEach(r => {
-    const hasData = racedRounds.includes(r);
+
+  // LIVE button — only when live data available
+  if (liveAvailable) {
     const btn = document.createElement('button');
-    btn.className = 'round-btn' + (r === selectedRace ? ' active' : '') + (!hasData ? ' no-data' : '');
-    btn.textContent = `R${String(r).padStart(2,'0')}`;
-    if (hasData) btn.onclick = () => { selectedRace = r; init(); };
+    btn.className = 'round-btn live-btn' + (isLive ? ' active' : '');
+    btn.textContent = 'LIVE';
+    btn.title = 'Live race data — refreshes every 10 min';
+    btn.onclick = () => enterLiveMode();
+    el.appendChild(btn);
+  }
+
+  // Static rounds from races.json
+  const raced = [...new Set(STATIC_RESULTS.map(r => r.race_number))];
+  RACES.forEach(race => {
+    const hasData = raced.includes(race.round);
+    const btn = document.createElement('button');
+    btn.className = 'round-btn'
+      + (race.cancelled ? ' cancelled' : '')
+      + (!hasData && !race.cancelled ? ' cancelled' : '')
+      + (!isLive && race.round === selectedRace ? ' active' : '');
+    btn.textContent = `R${String(race.round).padStart(2,'0')}`;
+    btn.title = race.race_name + (race.cancelled ? ' — Cancelled' : !hasData ? ' — No data yet' : '');
+    if (hasData && !race.cancelled) {
+      btn.onclick = () => {
+        isLive = false;
+        stopRefreshCycle();
+        hideLiveMeta();
+        DATA = STATIC_DATA;
+        PICKS = STATIC_PICKS; BREAKDOWNS = STATIC_BREAKDOWNS; RESULTS = STATIC_RESULTS;
+        selectedRace = race.round;
+        // Keep user if still present, else pick P1
+        if (!DATA[selectedRace] || !DATA[selectedRace].users[selectedUser]) {
+          selectedUser = pickDefaultUser();
+        }
+        renderPage();
+      };
+    }
     el.appendChild(btn);
   });
+
   el.querySelector('.active')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
 }
 
-// ── PLAYER SELECTS ────────────────────────────────────────────────────────
+// ── PLAYER SELECTS ─────────────────────────────────────────────────────────
 function buildSelects() {
   const users = getAllUsers();
   ['player-select','ls-player-select'].forEach(id => {
@@ -455,16 +657,85 @@ function syncPlayer(user) {
   renderAll();
 }
 
-// ── RACE HEADER ───────────────────────────────────────────────────────────
-function renderHeader() {
-  const rd = getRaceData();
-  document.getElementById('race-label').textContent = `${rd.race_flag} Strategy Portal`;
-  document.getElementById('race-title').textContent = rd.race_name;
-  document.getElementById('race-sub').textContent = `${rd.sprint_weekend ? '⚡ Sprint Weekend · ' : ''}Round ${selectedRace} · 2026`;
-  document.getElementById('telemetry-race-label').textContent = `${rd.race_name} Live Feed`;
+// ── LIVE MODE ──────────────────────────────────────────────────────────────
+async function enterLiveMode() {
+  isLive = true;
+  const ok = await loadLive();
+  if (!ok) { isLive = false; return; }
+  selectedRace = Math.max(...racedRounds());
+  if (!DATA[selectedRace].users[selectedUser]) selectedUser = pickDefaultUser();
+  startRefreshCycle();
+  renderPage();
 }
 
-// ── STATS STRIP ───────────────────────────────────────────────────────────
+function startRefreshCycle() {
+  stopRefreshCycle();
+  countdownSec = REFRESH_S;
+  updateCountdown();
+  countdownTimer = setInterval(() => { countdownSec--; updateCountdown(); }, 1000);
+  refreshTimer = setInterval(async () => {
+    const ok = await loadLive();
+    if (ok) {
+      selectedRace = Math.max(...racedRounds());
+      renderPage();
+    }
+    countdownSec = REFRESH_S;
+  }, REFRESH_MS);
+}
+
+function stopRefreshCycle() {
+  clearInterval(refreshTimer);
+  clearInterval(countdownTimer);
+  refreshTimer = countdownTimer = null;
+}
+
+function updateCountdown() {
+  const el = document.getElementById('race-refresh-countdown');
+  if (!el) return;
+  const m = Math.floor(countdownSec / 60);
+  const s = String(countdownSec % 60).padStart(2,'0');
+  el.textContent = `· refresh in ${m}:${s}`;
+}
+
+function showLiveMeta() {
+  let bar = document.getElementById('race-live-meta-bar');
+  if (!bar) {
+    bar = document.createElement('div');
+    bar.id = 'race-live-meta-bar';
+    bar.className = 'live-meta-bar';
+    // Insert after race-header
+    const header = document.querySelector('.race-header');
+    header?.parentNode?.insertBefore(bar, header.nextSibling);
+  }
+  const now = new Date();
+  bar.innerHTML = `● Live · Updated ${now.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}<span class="refresh-countdown" id="race-refresh-countdown"></span>`;
+  bar.style.display = 'block';
+  updateCountdown();
+}
+
+function hideLiveMeta() {
+  const bar = document.getElementById('race-live-meta-bar');
+  if (bar) bar.style.display = 'none';
+}
+
+// ── DEFAULT USER ───────────────────────────────────────────────────────────
+function pickDefaultUser() {
+  const rd = DATA[selectedRace];
+  if (!rd) return null;
+  const sorted = Object.entries(rd.users).sort((a,b) => (a[1].race_rank||99) - (b[1].race_rank||99));
+  return sorted[0]?.[0] || Object.keys(rd.users)[0];
+}
+
+// ── RENDER: HEADER ─────────────────────────────────────────────────────────
+function renderHeader() {
+  const rd = getRaceData();
+  document.getElementById('race-label').textContent  = `${rd.race_flag} Strategy Portal`;
+  document.getElementById('race-title').textContent  = rd.race_name;
+  document.getElementById('race-sub').textContent    = `${rd.sprint_weekend ? '⚡ Sprint Weekend · ' : ''}Round ${selectedRace} · 2026${isLive ? ' · Live' : ''}`;
+  document.getElementById('telemetry-race-label').textContent = `${rd.race_name}${isLive ? ' Live Feed' : ''}`;
+}
+
+// ── RENDER: STATS STRIP ────────────────────────────────────────────────────
 function renderStrip() {
   const ud = getUserData();
   const el = document.getElementById('stats-strip');
@@ -472,20 +743,20 @@ function renderStrip() {
     {l:'Race Rank', v:`P${ud.race_rank}`},
     {l:'Race Pts',  v:ud.race_points},
     {l:'Season',    v:ud.season_points},
-    {l:'Budget',    v:`$${ud.new_budget.toFixed(1)}M`},
+    {l:'Budget',    v:`$${Number(ud.new_budget).toFixed(1)}M`},
   ].map(s=>`<div class="strip-card"><div class="strip-label">${s.l}</div><div class="strip-val">${s.v}</div></div>`).join('');
   if (ud.cards_used) {
     el.innerHTML += `<div class="strip-card" style="grid-column:1/-1;border-left:2px solid var(--red)"><div class="strip-label">Card Used</div><div class="strip-val" style="font-size:0.75rem">${ud.cards_used}</div></div>`;
   }
 }
 
-// ── PICK GRID ─────────────────────────────────────────────────────────────
+// ── RENDER: PICK GRID ──────────────────────────────────────────────────────
 function renderPickGrid() {
   const ud = getUserData();
   const el = document.getElementById('pick-grid');
   el.innerHTML = ud.picks.map(p => {
     const ptsClass = p.pts < 0 ? 'neg' : 'pos';
-    const isLogo = p.type === 'Constructor';
+    const isLogo   = p.type === 'Constructor';
     return `<div class="pick-card${p.is_captain?' captain':''}" onclick="showPickPopup('${p.name.replace(/'/g,"\\'")}')">
       ${p.is_captain ? '<div class="captain-badge">2× Captain</div>' : ''}
       <img class="pick-thumb${isLogo?' logo':''}" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'"/>
@@ -499,18 +770,17 @@ function renderPickGrid() {
   }).join('');
 }
 
-// ── RADAR CHART ───────────────────────────────────────────────────────────
+// ── RENDER: RADAR CHART ────────────────────────────────────────────────────
 function renderRadar() {
-  const ud = getUserData();
-  const rd = getRaceData();
+  const ud  = getUserData();
+  const rd  = getRaceData();
   const svg = document.getElementById('radar-svg');
-  const cx = 120, cy = 110, r = 85;
-  const n = AXES.length;
+  const cx  = 120, cy = 110, r = 85, n = AXES.length;
 
   function point(axis, value, maxVal, radius) {
-    const i = AXES.indexOf(axis);
+    const i    = AXES.indexOf(axis);
     const angle = (i * 2 * Math.PI / n) - Math.PI / 2;
-    const norm = Math.max(0, Math.min(1, value / (maxVal || 1)));
+    const norm  = Math.max(0, Math.min(1, value / (maxVal || 1)));
     return [cx + radius * norm * Math.cos(angle), cy + radius * norm * Math.sin(angle)];
   }
 
@@ -520,55 +790,47 @@ function renderRadar() {
   }
 
   let html = '';
-
-  // Grid rings
   [0.25, 0.5, 0.75, 1].forEach(frac => {
     const pts = AXES.map((_,i) => axisPoint(i, frac).join(',')).join(' ');
     html += `<polygon points="${pts}" fill="none" stroke="rgba(229,226,225,0.07)" stroke-width="1"/>`;
   });
 
-  // Axis lines + labels
   AXES.forEach((axis, i) => {
-    const [x2, y2] = axisPoint(i, 1);
-    const [lx, ly] = axisPoint(i, 1.22);
-    const isZeroAxis = axis === 'Sprint' && rd.sprint_weekend === false;
+    const [x2,y2] = axisPoint(i, 1);
+    const [lx,ly] = axisPoint(i, 1.22);
+    const noSprint = axis === 'Sprint' && !rd.sprint_weekend;
     html += `<line x1="${cx}" y1="${cy}" x2="${x2}" y2="${y2}" stroke="rgba(229,226,225,0.1)" stroke-width="1"/>`;
-    // Clickable label
     html += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="central"
-      font-family="Inter,sans-serif" font-size="9" font-weight="800" fill="${isZeroAxis?'rgba(229,226,225,0.2)':AXIS_COLORS[axis]}"
+      font-family="Inter,sans-serif" font-size="9" font-weight="800"
+      fill="${noSprint?'rgba(229,226,225,0.2)':AXIS_COLORS[axis]}"
       style="cursor:pointer;text-transform:uppercase;letter-spacing:0.06em"
-      onclick="showAxisPopup('${axis}')">${axis}${isZeroAxis?' (N/A)':''}</text>`;
+      onclick="showAxisPopup('${axis}')">${axis}${noSprint?' (N/A)':''}</text>`;
   });
 
-  // League avg polygon
   const avgPts = AXES.map(axis => {
     const [x,y] = point(axis, rd.league_avg[axis], rd.axis_max[axis], r);
     return `${x},${y}`;
   }).join(' ');
   html += `<polygon points="${avgPts}" fill="rgba(166,200,255,0.08)" stroke="rgba(166,200,255,0.4)" stroke-width="1.5" stroke-dasharray="3,3"/>`;
 
-  // Player polygon
   const playerPts = AXES.map(axis => {
-    const val = Math.max(0, ud.radar[axis]);
-    const [x,y] = point(axis, val, rd.axis_max[axis], r);
+    const [x,y] = point(axis, Math.max(0, ud.radar[axis]), rd.axis_max[axis], r);
     return `${x},${y}`;
   }).join(' ');
   html += `<polygon points="${playerPts}" fill="rgba(225,6,0,0.2)" stroke="rgba(225,6,0,0.9)" stroke-width="2"/>`;
 
-  // Dots on player polygon
   AXES.forEach(axis => {
-    const val = Math.max(0, ud.radar[axis]);
-    const [x,y] = point(axis, val, rd.axis_max[axis], r);
+    const [x,y] = point(axis, Math.max(0, ud.radar[axis]), rd.axis_max[axis], r);
     html += `<circle cx="${x}" cy="${y}" r="4" fill="${AXIS_COLORS[axis]}" stroke="var(--surface)" stroke-width="1.5" style="cursor:pointer" onclick="showAxisPopup('${axis}')"/>`;
   });
 
   svg.innerHTML = html;
 }
 
-// ── STRATEGIC ─────────────────────────────────────────────────────────────
+// ── RENDER: STRATEGIC ──────────────────────────────────────────────────────
 function renderStrategic() {
-  const ud = getUserData();
-  const el = document.getElementById('strat-grid');
+  const ud   = getUserData();
+  const el   = document.getElementById('strat-grid');
   const excl = ud.exclusive.slice(0,3);
   const comm = ud.common.slice(0,3);
 
@@ -593,14 +855,14 @@ function renderStrategic() {
     </div>`;
 }
 
-// ── TELEMETRY TABLE ───────────────────────────────────────────────────────
+// ── RENDER: TELEMETRY TABLE ────────────────────────────────────────────────
 function renderTable() {
   const ud = getUserData();
   const el = document.getElementById('tbl-body');
-  el.innerHTML = ud.picks.sort((a,b)=>b.pts-a.pts).map(p => {
-    const cats = Object.entries(p.breakdown).filter(([,v])=>v!==0)
-      .sort((a,b)=>b[1]-a[1]).slice(0,3)
-      .map(([k,v])=>`${k}: ${v>0?'+':''}${v}`).join(' · ');
+  el.innerHTML = [...ud.picks].sort((a,b) => b.pts-a.pts).map(p => {
+    const cats = Object.entries(p.breakdown).filter(([,v]) => v!==0)
+      .sort((a,b) => b[1]-a[1]).slice(0,3)
+      .map(([k,v]) => `${k}: ${v>0?'+':''}${v}`).join(' · ');
     return `<div class="tbl-row" onclick="showPickPopup('${p.name.replace(/'/g,"\\'")}')">
       <div>
         <div class="tbl-pick${p.is_captain?' cap':''}">${p.name}</div>
@@ -612,29 +874,21 @@ function renderTable() {
   }).join('');
 }
 
-// ── LANDSCAPE BAR CHART ───────────────────────────────────────────────────
+// ── RENDER: LANDSCAPE BAR CHART ────────────────────────────────────────────
 function renderLandscape() {
-  const ud = getUserData();
-  const rd = getRaceData();
-  const right = document.getElementById('landscape-right');
+  const ud     = getUserData();
+  const rd     = getRaceData();
+  const right  = document.getElementById('landscape-right');
   const lsPicks = document.getElementById('ls-picks');
 
-  // Picks sidebar
-  lsPicks.innerHTML = ud.picks.sort((a,b)=>b.pts-a.pts).map(p=>`
+  lsPicks.innerHTML = [...ud.picks].sort((a,b) => b.pts-a.pts).map(p => `
     <div class="ls-pick">
       <img class="ls-thumb${p.type==='Constructor'?' logo':''}" src="${p.img}" alt="" onerror="this.style.display='none'"/>
       <div class="ls-name">${p.name.split(' ').slice(-1)[0]}${p.is_captain?' (C)':''}</div>
       <div class="ls-pts${p.pts<0?' neg':''}">${p.pts>0?'+':''}${p.pts}</div>
     </div>`).join('');
 
-  // Bar chart: all categories grouped by axis
-  const globalMax = Math.max(...AXES.map(axis => {
-    const playerVal = Math.abs(ud.radar[axis]);
-    const avgVal = Math.abs(rd.league_avg[axis]);
-    return Math.max(playerVal, avgVal, 1);
-  }));
-
-  let html = `<div class="ls-title">${rd.race_name} · ${Object.keys(rd.users).find(u=>u===selectedUser)}</div>`;
+  let html = `<div class="ls-title">${rd.race_name} · ${selectedUser}</div>`;
   html += `<div class="ls-legend">
     <div class="ls-legend-item"><div class="ls-legend-dot" style="background:var(--red)"></div>Your Team</div>
     <div class="ls-legend-item"><div class="ls-legend-dot" style="background:var(--blue);opacity:0.5"></div>League Avg</div>
@@ -642,17 +896,16 @@ function renderLandscape() {
 
   AXES.forEach(axis => {
     const playerVal = ud.radar[axis];
-    const avgVal = rd.league_avg[axis];
-    const axisMax = Math.max(Math.abs(playerVal), Math.abs(avgVal), 1);
-    const isSprint = axis === 'Sprint' && !rd.sprint_weekend;
-    const color = AXIS_COLORS[axis];
+    const avgVal    = rd.league_avg[axis];
+    const axisMax   = Math.max(Math.abs(playerVal), Math.abs(avgVal), 1);
+    const isSprint  = axis === 'Sprint' && !rd.sprint_weekend;
+    const color     = AXIS_COLORS[axis];
 
-    html += `<div class="axis-header" style="color:${color}">${axis}${isSprint?' (No Sprint)':''} — ${playerVal > 0 ? '+' : ''}${playerVal} pts</div>`;
+    html += `<div class="axis-header" style="color:${color}">${axis}${isSprint?' (No Sprint)':''} — ${playerVal>0?'+':''}${playerVal} pts</div>`;
     html += `<div class="bar-group">`;
 
-    // Axis total bar
     const pPct = Math.max(0, (playerVal / axisMax) * 100);
-    const aPct = Math.max(0, (avgVal / axisMax) * 100);
+    const aPct = Math.max(0, (avgVal    / axisMax) * 100);
     html += `<div class="bar-row">
       <div class="bar-label">Total</div>
       <div class="bar-track">
@@ -662,10 +915,8 @@ function renderLandscape() {
       <div class="bar-val${playerVal<0?' neg':''}">${playerVal>0?'+':''}${playerVal}</div>
     </div>`;
 
-    // Category detail bars
-    const detail = ud.axis_detail[axis];
-    Object.entries(detail).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1])).forEach(([cat,val]) => {
-      const catPct = Math.min(100, Math.max(0, (Math.abs(val) / axisMax) * 100));
+    Object.entries(ud.axis_detail[axis]).sort((a,b) => Math.abs(b[1])-Math.abs(a[1])).forEach(([cat,val]) => {
+      const catPct   = Math.min(100, Math.max(0, (Math.abs(val) / axisMax) * 100));
       const catColor = val < 0 ? 'var(--red-dim)' : color;
       html += `<div class="bar-row">
         <div class="bar-label">${cat}</div>
@@ -681,24 +932,24 @@ function renderLandscape() {
   right.innerHTML = html;
 }
 
-// ── POPUPS ────────────────────────────────────────────────────────────────
+// ── POPUPS ─────────────────────────────────────────────────────────────────
 function showAxisPopup(axis) {
-  const ud = getUserData();
-  const rd = getRaceData();
+  const ud     = getUserData();
+  const rd     = getRaceData();
   const detail = ud.axis_detail[axis];
-  const total = ud.radar[axis];
-  const avg = rd.league_avg[axis];
-  const color = AXIS_COLORS[axis];
+  const total  = ud.radar[axis];
+  const avg    = rd.league_avg[axis];
+  const color  = AXIS_COLORS[axis];
 
   document.getElementById('popup-title').textContent = axis;
-  document.getElementById('popup-sub').textContent = `${getRaceData().race_name} · ${selectedUser}`;
+  document.getElementById('popup-sub').textContent   = `${rd.race_name} · ${selectedUser}`;
   const totEl = document.getElementById('popup-total');
-  totEl.textContent = `${total > 0 ? '+' : ''}${total} pts`;
+  totEl.textContent = `${total>0?'+':''}${total} pts`;
   totEl.style.color = color;
 
-  const rows = Object.entries(detail).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
+  const rows = Object.entries(detail).sort((a,b) => Math.abs(b[1])-Math.abs(a[1]));
   document.getElementById('popup-rows').innerHTML = rows.length
-    ? rows.map(([cat,val])=>`<div class="popup-row">
+    ? rows.map(([cat,val]) => `<div class="popup-row">
         <span class="popup-cat">${cat}</span>
         <span class="popup-pts ${val>0?'pos':'neg'}">${val>0?'+':''}${val}</span>
       </div>`).join('')
@@ -709,19 +960,19 @@ function showAxisPopup(axis) {
 }
 
 function showPickPopup(name) {
-  const ud = getUserData();
+  const ud   = getUserData();
   const pick = ud.picks.find(p => p.name === name);
   if (!pick) return;
 
   document.getElementById('popup-title').textContent = name;
-  document.getElementById('popup-sub').textContent = `${pick.type} · ${getRaceData().race_name}`;
+  document.getElementById('popup-sub').textContent   = `${pick.type} · ${getRaceData().race_name}`;
   const totEl = document.getElementById('popup-total');
-  totEl.textContent = `${pick.pts > 0 ? '+' : ''}${pick.pts} pts`;
-  totEl.style.color = pick.pts < 0 ? 'var(--red-dim)' : 'var(--red)';
+  totEl.textContent = `${pick.pts>0?'+':''}${pick.pts} pts`;
+  totEl.style.color  = pick.pts < 0 ? 'var(--red-dim)' : 'var(--red)';
 
-  const rows = Object.entries(pick.breakdown).sort((a,b)=>Math.abs(b[1])-Math.abs(a[1]));
+  const rows = Object.entries(pick.breakdown).sort((a,b) => Math.abs(b[1])-Math.abs(a[1]));
   document.getElementById('popup-rows').innerHTML = rows.length
-    ? rows.map(([cat,val])=>`<div class="popup-row">
+    ? rows.map(([cat,val]) => `<div class="popup-row">
         <span class="popup-cat">${cat}</span>
         <span class="popup-pts ${val>0?'pos':'neg'}">${val>0?'+':''}${val}</span>
       </div>`).join('')
@@ -736,7 +987,7 @@ function closePopup(e) {
     document.getElementById('popup-overlay').classList.remove('open');
 }
 
-// ── INIT ──────────────────────────────────────────────────────────────────
+// ── RENDER ALL ─────────────────────────────────────────────────────────────
 function renderAll() {
   renderHeader();
   renderStrip();
@@ -747,45 +998,48 @@ function renderAll() {
   renderLandscape();
 }
 
-function init() {
+function renderPage() {
   buildSwitcher();
-  const users = getAllUsers();
-  // Default: P1 player for this race
-  const p1 = Object.entries(getRaceData().users).sort((a,b)=>a[1].season_rank-b[1].season_rank)[0];
-  selectedUser = selectedUser && users.includes(selectedUser) ? selectedUser : p1[0];
   buildSelects();
   renderAll();
+  if (isLive) showLiveMeta(); else hideLiveMeta();
 }
 
-init();
+// ── INIT ───────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    await loadStatic();
+
+    // Default to latest raced round
+    const raced = racedRounds();
+    selectedRace = raced[raced.length - 1];
+    selectedUser = pickDefaultUser();
+
+    // Check live
+    liveAvailable = await checkLiveAvailable();
+    if (liveAvailable) {
+      isLive = true;
+      await loadLive();
+      selectedRace = Math.max(...racedRounds());
+      selectedUser = pickDefaultUser();
+      startRefreshCycle();
+    }
+
+    document.getElementById('loading-overlay')?.remove();
+    renderPage();
+
+  } catch(e) {
+    console.error('race.html error:', e);
+    const ol = document.getElementById('loading-overlay');
+    if (ol) ol.innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px;text-align:center">Failed to load data.<br>Please refresh.</div>';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', init);
 
 // Orientation change — re-render landscape
 window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
-window.addEventListener('resize', () => {
-  if (window.innerWidth > window.innerHeight) renderLandscape();
-});
-
-async function initPage() {
-  try {
-    const [picks, breakdowns, results] = await Promise.all([
-      fetch('picks.json').then(r=>r.json()),
-      fetch('breakdowns.json').then(r=>r.json()),
-      fetch('results.json').then(r=>r.json()),
-    ]);
-    const DATA = buildRaceData(picks, breakdowns, results);
-    document.getElementById('loading-overlay')?.remove();
-    // Set up round switcher with available rounds
-    const completedRaces = Object.keys(DATA).map(Number).sort((a,b)=>a-b);
-    buildRoundSwitcher(completedRaces);
-    const defaultRound = completedRaces[completedRaces.length-1];
-    const defaultUser = getDefaultUser(DATA, defaultRound);
-    renderRound(defaultRound, defaultUser, DATA);
-  } catch(e) {
-    console.error('race.html error:', e);
-    document.getElementById('loading-overlay').innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px;text-align:center">Failed to load data.<br>Please refresh.</div>';
-  }
-}
-document.addEventListener('DOMContentLoaded', initPage);
+window.addEventListener('resize', () => { if (window.innerWidth > window.innerHeight) renderLandscape(); });
 </script>
 </body>
 </html>

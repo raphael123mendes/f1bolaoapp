@@ -52,7 +52,7 @@ main{flex:1;padding-bottom:80px}
 .hero{margin:0 16px 4px;background:var(--surface-low);overflow:hidden;position:relative;border-left:4px solid var(--red)}
 .hero-inner{display:flex;align-items:stretch;min-height:120px}
 .hero-img-wrap{width:90px;flex-shrink:0;overflow:hidden;background:var(--surface-high);position:relative}
-.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top;filter:grayscale(40%);display:block}
+.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .hero-car{width:100%;height:100%;object-fit:contain;padding:8px;display:block}
 .hero-content{flex:1;padding:16px;min-width:0}
 .hero-badge{display:inline-block;background:var(--red);color:#fff;font-size:0.5rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;padding:2px 7px;margin-bottom:6px}
@@ -152,12 +152,16 @@ td.right{text-align:right}
   width:100%;
 }
 .ls-left{width:220px;flex-shrink:0;background:var(--surface-low);overflow-y:auto;border-right:1px solid var(--on-08);display:flex;flex-direction:column}
-.ls-right{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
-.ls-entity-sel{padding:8px 10px;border-bottom:1px solid var(--on-08)}
+.ls-right{flex:1;overflow:hidden;padding:0;display:flex;flex-direction:column}
+.ls-right-inner{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.ls-entity-sel{padding:8px 10px;border-bottom:1px solid var(--on-08);flex-shrink:0}
 .ls-select{width:100%;background:var(--surface-high);border:1px solid var(--red);color:var(--on);font-family:'Space Grotesk',sans-serif;font-size:0.65rem;font-weight:700;text-transform:uppercase;padding:5px 8px;cursor:pointer;outline:none;appearance:none}
-.ls-hero{padding:12px;border-left:3px solid var(--red);border-bottom:1px solid var(--on-08)}
+.ls-hero{flex-shrink:0;border-left:3px solid var(--red);border-bottom:1px solid var(--on-08);overflow:hidden}
+.ls-hero-img{width:100%;height:130px;object-fit:cover;object-position:top;display:block}
+.ls-hero-img.car{object-fit:contain;padding:10px;background:var(--surface-mid)}
+.ls-hero-meta{padding:10px 12px 12px}
 .ls-name{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase}
-.ls-stats{flex:1;overflow-y:auto}
+.ls-stats{flex:1;overflow-y:auto;min-height:0}
 .ls-stat-row{display:flex;justify-content:space-between;padding:7px 12px;border-bottom:1px solid var(--on-08);font-size:0.52rem}
 .ls-stat-label{font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--on-40)}
 .ls-stat-val{font-family:'Space Grotesk',sans-serif;font-weight:700}
@@ -170,7 +174,27 @@ td.right{text-align:right}
 .ls-chart-card{background:var(--surface-low);padding:10px}
 .ls-chart-title{font-size:0.55rem;font-weight:900;letter-spacing:0.14em;text-transform:uppercase;color:var(--on-40);margin-bottom:8px}
 
-/* ── BOTTOM NAV ── */
+/* ── BREAKDOWN POPUP (mobile) ── */
+.bd-popup{position:fixed;inset:0;z-index:200;display:flex;align-items:flex-end;justify-content:center}
+.bd-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.6)}
+.bd-sheet{position:relative;width:100%;max-width:480px;background:var(--surface-mid);border-top:3px solid var(--red);padding:0;max-height:70dvh;display:flex;flex-direction:column;border-radius:0}
+.bd-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px;border-bottom:1px solid var(--on-08);flex-shrink:0}
+.bd-title{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:-0.01em}
+.bd-close{background:none;border:none;cursor:pointer;color:var(--on-40);padding:4px;display:flex;align-items:center}
+.bd-body{overflow-y:auto;padding:12px 16px 20px}
+.bd-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--on-08)}
+.bd-row:last-child{border-bottom:none}
+.bd-cat{font-size:0.62rem;font-weight:600;color:var(--on-60)}
+.bd-pts{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700}
+.bd-pts.pos{color:var(--green)}
+.bd-pts.neg{color:var(--red-dim)}
+.bd-pts.zero{color:var(--on-40)}
+.bd-total{display:flex;justify-content:space-between;padding:10px 0 0;margin-top:4px}
+.bd-total-label{font-size:0.55rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40)}
+.bd-total-val{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:700}
+
+/* ── LANDSCAPE table fills height ── */
+.ls-tbl-wrap{flex:1;overflow-y:auto;background:var(--surface-low);min-height:0}
 .bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
 .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;text-decoration:none;color:rgba(166,200,255,0.35);font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.15s;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .nav-item.active{color:var(--red);border-top:2px solid var(--red);background:var(--surface-low)}
@@ -206,7 +230,7 @@ td.right{text-align:right}
     <div class="ls-hero" id="ls-hero"></div>
     <div class="ls-stats" id="ls-stats"></div>
   </div>
-  <div class="ls-right" id="ls-right"></div>
+  <div class="ls-right" id="ls-right"><div class="ls-right-inner" id="ls-right-inner"></div></div>
 </div>
 
 <!-- PORTRAIT -->
@@ -242,10 +266,10 @@ td.right{text-align:right}
         Rotate for full table
       </div>
     </div>
-    <svg id="season-chart" class="chart-svg" viewBox="0 0 340 100"></svg>
-    <div style="display:flex;gap:14px;margin-top:8px">
-      <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:3px;background:var(--red)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">Points</span></div>
-      <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:3px;background:var(--blue)"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">Price $M</span></div>
+    <svg id="season-chart" class="chart-svg" viewBox="0 0 340 140"></svg>
+    <div style="display:flex;gap:14px;margin-top:6px">
+      <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:3px;background:var(--red);border-radius:1px"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">Points</span></div>
+      <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:2px;background:var(--blue);border-radius:1px;opacity:0.7"></div><span style="font-size:0.48rem;font-weight:700;text-transform:uppercase;color:var(--on-40)">Price $M</span></div>
     </div>
   </div>
 
@@ -278,6 +302,18 @@ td.right{text-align:right}
     <div class="comp-grid" id="comp-grid"></div>
   </div>
 </main>
+
+<!-- BREAKDOWN POPUP -->
+<div id="bd-popup" class="bd-popup" style="display:none" onclick="closeBdPopup(event)">
+  <div class="bd-backdrop"></div>
+  <div class="bd-sheet">
+    <div class="bd-header">
+      <div class="bd-title" id="bd-title">Breakdown</div>
+      <button class="bd-close" onclick="closeBdPopup()"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="bd-body" id="bd-body"></div>
+  </div>
+</div>
 
 <nav class="bottom-nav portrait-only">
   <a class="nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
@@ -469,62 +505,134 @@ function heroImg(name) {
   return `images/portraits/${slug}.png`;
 }
 
+// ── BREAKDOWN POPUP ───────────────────────────────────────────────────────
+function showBreakdown(evt, raceName, raceNum) {
+  evt.stopPropagation();
+  const d = DATA[selectedEntity];
+  const row = d.rows.find(r => r.race === raceNum);
+  if (!row || !row.breakdown || !row.breakdown.length) return;
+
+  const total = row.pts;
+  document.getElementById('bd-title').textContent =
+    `${raceName.replace(' Grand Prix','').replace(' GP','')} · ${selectedEntity.split(' ').slice(-1)[0]}`;
+
+  document.getElementById('bd-body').innerHTML =
+    row.breakdown.map(b => {
+      const cls = b.points > 0 ? 'pos' : b.points < 0 ? 'neg' : 'zero';
+      return `<div class="bd-row">
+        <span class="bd-cat">${b.category}</span>
+        <span class="bd-pts ${cls}">${b.points > 0 ? '+' : ''}${b.points}</span>
+      </div>`;
+    }).join('') +
+    `<div class="bd-total">
+      <span class="bd-total-label">Total GD Points</span>
+      <span class="bd-total-val" style="color:${total>0?'var(--green)':total<0?'var(--red-dim)':'var(--on-40)'}">${total>0?'+':''}${total}</span>
+    </div>`;
+
+  document.getElementById('bd-popup').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeBdPopup(evt) {
+  if (evt && evt.target.closest && evt.target.closest('.bd-sheet') && !evt.target.closest('.bd-close')) return;
+  document.getElementById('bd-popup').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// ── miniSvg — with data point labels ─────────────────────────────────────
 function miniSvg(rows, W, H) {
   const allRows = rows.filter(r => r.price > 0);
   const completed = rows.filter(r => r.has_result);
   if (allRows.length < 1) return '';
 
-  // If no pts data, show price-only chart
+  // Price-only chart (no pts data)
   if (completed.length < 1) {
     const prices = allRows.map(r => r.price);
     const minP = Math.min(...prices), maxP = Math.max(...prices, minP + 0.1);
-    const pricePath = prices.map((v,i) => {
-      const x = 6 + (i / (allRows.length - 1 || 1)) * (W - 12);
-      const y = 8 + ((maxP - v) / (maxP - minP || 1)) * (H - 16);
-      return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
-    }).join(' ');
-    return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;overflow:visible">
-      <path d="${pricePath}" fill="none" stroke="#a6c8ff" stroke-width="1.5" stroke-dasharray="3,2" stroke-linejoin="round"/>
-      ${allRows.map((r,i) => {
-        const x = 6 + (i / (allRows.length - 1 || 1)) * (W - 12);
-        return `<text x="${x.toFixed(1)}" y="${H + 10}" text-anchor="middle" font-family="Inter" font-size="8" fill="rgba(229,226,225,0.3)">R${r.race}</text>`;
-      }).join('')}
-      <text x="${W/2}" y="${H/2}" text-anchor="middle" font-family="Inter" font-size="9" fill="rgba(229,226,225,0.25)">No picks data — price only</text>
+    const PAD = { l:6, r:6, t:16, b:20 };
+    const IH = H - PAD.t - PAD.b;
+    const IW = W - PAD.l - PAD.r;
+    const pts = prices.map((v,i) => [
+      PAD.l + (i / (allRows.length - 1 || 1)) * IW,
+      PAD.t + ((maxP - v) / (maxP - minP || 1)) * IH
+    ]);
+    const path = pts.map((p,i) => `${i===0?'M':'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+    return `<svg viewBox="0 0 ${W} ${H + PAD.b}" style="width:100%;display:block;overflow:visible">
+      <path d="${path}" fill="none" stroke="#a6c8ff" stroke-width="1.5" stroke-dasharray="3,2" stroke-linejoin="round"/>
+      ${pts.map((p,i) => `
+        <circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="2.5" fill="#a6c8ff"/>
+        <text x="${p[0].toFixed(1)}" y="${(p[1]-6).toFixed(1)}" text-anchor="middle" font-family="Inter" font-size="7.5" font-weight="700" fill="#a6c8ff">$${prices[i].toFixed(1)}M</text>
+        <text x="${p[0].toFixed(1)}" y="${(H + PAD.b - 4).toFixed(1)}" text-anchor="middle" font-family="Inter" font-size="7.5" fill="rgba(229,226,225,0.3)">R${allRows[i].race}</text>
+      `).join('')}
+      <text x="${W/2}" y="${H/2+4}" text-anchor="middle" font-family="Inter" font-size="9" fill="rgba(229,226,225,0.2)">Price only — no picks data</text>
     </svg>`;
   }
 
-  const prices = completed.map(r => r.price);
-  const pts    = completed.map(r => r.pts);
-  const maxPts = Math.max(...pts.map(Math.abs), 1);
-  const minP = Math.min(...prices), maxP = Math.max(...prices, minP+0.1);
+  const PAD = { l:6, r:6, t:18, b:20 };
+  const IW = W - PAD.l - PAD.r;
+  // Split chart vertically: top half = pts, bottom half = price
+  const halfH = (H - PAD.t - PAD.b) / 2;
 
-  function px(i, arr, mn, mx) {
-    const x = 6 + (i/(completed.length-1||1))*(W-12);
-    const y = H/2-4 - ((arr[i]-mn)/(mx-mn||1))*(H/2-8);
-    return [x, y];
-  }
+  const priceVals = completed.map(r => r.price);
+  const ptsVals   = completed.map(r => r.pts);
+  const maxPts    = Math.max(...ptsVals.map(Math.abs), 1);
+  const minP = Math.min(...priceVals), maxP = Math.max(...priceVals, minP + 0.1);
+  const N = completed.length;
 
-  const ptsPath = pts.map((v,i) => {
-    const x = 6 + (i/(completed.length-1||1))*(W-12);
-    const y = H-4 - (Math.max(0,v)/maxPts)*(H/2-8);
-    return `${i===0?'M':'L'}${x.toFixed(1)},${y.toFixed(1)}`;
-  }).join(' ');
-  const pricePoints = prices.map((v,i) => px(i,prices,minP,maxP));
-  const pricePath = pricePoints.map((p,i)=>`${i===0?'M':'L'}${p[0].toFixed(1)},${(p[1]+H/2).toFixed(1)}`).join(' ');
-  const gId = 'g'+Math.random().toString(36).slice(2,5);
-  return `<svg viewBox="0 0 ${W} ${H}" style="width:100%;display:block;overflow:visible">
-    <defs><linearGradient id="${gId}" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e10600" stop-opacity="0.2"/>
-      <stop offset="100%" stop-color="#e10600" stop-opacity="0"/>
-    </linearGradient></defs>
-    <line x1="6" y1="${H/2}" x2="${W-6}" y2="${H/2}" stroke="rgba(229,226,225,0.06)" stroke-width="1"/>
-    <path d="${ptsPath} L${(6+(completed.length-1/(completed.length-1||1))*(W-12)).toFixed(1)},${H} L6,${H} Z" fill="url(#${gId})"/>
+  // Pts line (top area)
+  const ptsPoints = ptsVals.map((v, i) => [
+    PAD.l + (i / (N - 1 || 1)) * IW,
+    PAD.t + halfH - (Math.max(0, v) / maxPts) * (halfH - 4)
+  ]);
+  // Price line (bottom area)
+  const pricePoints = priceVals.map((v, i) => [
+    PAD.l + (i / (N - 1 || 1)) * IW,
+    PAD.t + halfH + 6 + ((maxP - v) / (maxP - minP || 1)) * (halfH - 10)
+  ]);
+
+  const ptsPath   = ptsPoints.map((p,i)=>`${i===0?'M':'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  const pricePath = pricePoints.map((p,i)=>`${i===0?'M':'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+
+  const gId = 'g' + Math.random().toString(36).slice(2,6);
+  const bottomY = PAD.t + halfH * 2;
+
+  // Value label placement: avoid overlap by alternating above/below
+  const ptsLabels = ptsPoints.map((p, i) => {
+    const above = i % 2 === 0;
+    const ly = above ? p[1] - 6 : p[1] + 13;
+    return `<text x="${p[0].toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" font-family="Inter" font-size="7" font-weight="700" fill="#e10600">${ptsVals[i]>0?'+':''}${ptsVals[i]}</text>`;
+  }).join('');
+
+  const priceLabels = pricePoints.map((p, i) => {
+    const above = i % 2 !== 0;
+    const ly = above ? p[1] - 5 : p[1] + 12;
+    return `<text x="${p[0].toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="middle" font-family="Inter" font-size="7" font-weight="600" fill="rgba(166,200,255,0.75)">$${priceVals[i].toFixed(1)}M</text>`;
+  }).join('');
+
+  const raceLabels = completed.map((r, i) => {
+    const x = PAD.l + (i / (N - 1 || 1)) * IW;
+    return `<text x="${x.toFixed(1)}" y="${(bottomY + PAD.b - 4).toFixed(1)}" text-anchor="middle" font-family="Inter" font-size="7.5" fill="rgba(229,226,225,0.3)">R${r.race}</text>`;
+  }).join('');
+
+  // Gradient fill under pts line
+  const fillPath = `${ptsPath} L${ptsPoints[N-1][0].toFixed(1)},${(PAD.t+halfH).toFixed(1)} L${PAD.l},${(PAD.t+halfH).toFixed(1)} Z`;
+
+  return `<svg viewBox="0 0 ${W} ${bottomY + PAD.b}" style="width:100%;display:block;overflow:visible">
+    <defs>
+      <linearGradient id="${gId}" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#e10600" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#e10600" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <line x1="${PAD.l}" y1="${(PAD.t+halfH).toFixed(1)}" x2="${(W-PAD.r).toFixed(1)}" y2="${(PAD.t+halfH).toFixed(1)}" stroke="rgba(229,226,225,0.06)" stroke-width="1"/>
+    <path d="${fillPath}" fill="url(#${gId})"/>
     <path d="${ptsPath}" fill="none" stroke="#e10600" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${ptsPoints.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="2.5" fill="#e10600"/>`).join('')}
+    ${ptsLabels}
     <path d="${pricePath}" fill="none" stroke="#a6c8ff" stroke-width="1.5" stroke-dasharray="3,2" stroke-linejoin="round"/>
-    ${completed.map((r,i)=>{
-      const x = 6+(i/(completed.length-1||1))*(W-12);
-      return `<text x="${x.toFixed(1)}" y="${H+10}" text-anchor="middle" font-family="Inter" font-size="8" fill="rgba(229,226,225,0.3)">R${r.race}</text>`;
-    }).join('')}
+    ${pricePoints.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="2" fill="#a6c8ff" opacity="0.8"/>`).join('')}
+    ${priceLabels}
+    ${raceLabels}
   </svg>`;
 }
 
@@ -650,7 +758,8 @@ function renderForecast() {
 function renderChart() {
   const d = DATA[selectedEntity];
   const svg = document.getElementById('season-chart');
-  svg.innerHTML = miniSvg(d.rows, 340, 90) || '<text x="170" y="50" text-anchor="middle" font-family="Inter" font-size="11" fill="rgba(229,226,225,0.3)">No data yet</text>';
+  // H=110 gives enough room for value labels above/below data points
+  svg.innerHTML = miniSvg(d.rows, 340, 110) || '<text x="170" y="55" text-anchor="middle" font-family="Inter" font-size="11" fill="rgba(229,226,225,0.3)">No data yet</text>';
 }
 
 // ── ROUND TABLE ───────────────────────────────────────────────────────────
@@ -672,15 +781,15 @@ function renderTable() {
     const ptsDisplay = !row.has_result ? (d.was_picked ? 'n/p' : '—') : row.pts;
     const effDisplay = row.eff !== null ? row.eff : '—';
 
-    // Breakdown tooltip if available
-    const bdList = row.breakdown && row.breakdown.length
-      ? row.breakdown.map(b => `${b.category}: ${b.points > 0 ? '+' : ''}${b.points}`).join(' · ')
+    // Breakdown — mobile shows tap button, not inline text
+    const hasBd = row.breakdown && row.breakdown.length > 0;
+    const bdBtn = hasBd
+      ? `<button onclick="showBreakdown(event,'${row.race_name.replace(/'/g,"\\'")}',${row.race})" style="background:rgba(161,198,255,0.1);border:none;cursor:pointer;color:var(--blue);font-size:0.42rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:2px 6px;margin-left:6px;vertical-align:middle">BD</button>`
       : '';
-    const bdHint = bdList ? `<div style="font-size:0.45rem;color:var(--on-40);margin-top:2px;white-space:normal;max-width:180px">${bdList}</div>` : '';
 
-    return `<tr class="${rowCls}">
+    return `<tr class="${rowCls}" data-race="${row.race}">
       <td><span class="td-round">R${String(row.race).padStart(2,'0')}</span></td>
-      <td><span class="td-race">${row.race_name.replace(' Grand Prix','').replace(' GP','')}${sprintTag}${cancelTag}</span>${bdHint}</td>
+      <td><span class="td-race">${row.race_name.replace(' Grand Prix','').replace(' GP','')}${sprintTag}${cancelTag}${bdBtn}</span></td>
       <td class="right"><span class="td-pts ${ptsClass}">${ptsDisplay}</span></td>
       <td class="right"><span class="td-price">$${row.price.toFixed(1)}M</span></td>
       <td class="right"><span class="td-chg ${chgCls}">${row.price_chg >= 0 ? '+' : ''}$${row.price_chg.toFixed(1)}M</span></td>
@@ -718,9 +827,11 @@ function renderLandscape() {
   if (lsSel) lsSel.innerHTML = SORTED_NAMES.map(n=>`<option value="${n}"${n===selectedEntity?' selected':''}>${n}</option>`).join('');
 
   document.getElementById('ls-hero').innerHTML = `
-    <img src="${heroImg(selectedEntity)}" alt="" style="width:100%;max-height:80px;object-fit:${isCon(selectedEntity)?'contain':'cover'};object-position:top;opacity:0.8;margin-bottom:8px" onerror="this.style.display='none'"/>
-    <div class="ls-name">${selectedEntity}</div>
-    <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-top:2px">${d.type}</div>`;
+    <img src="${heroImg(selectedEntity)}" alt="" class="ls-hero-img${isCon(selectedEntity)?' car':''}" onerror="this.style.display='none'"/>
+    <div class="ls-hero-meta">
+      <div class="ls-name">${selectedEntity}</div>
+      <div style="font-size:0.52rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-top:2px">${d.type}</div>
+    </div>`;
 
   document.getElementById('ls-stats').innerHTML = [
     {l:'Current Price', v:`$${d.current_price.toFixed(1)}M`,  cls:'blue'},
@@ -732,14 +843,21 @@ function renderLandscape() {
     {l:'Ownership',    v: d.was_picked ? `${d.ownership}%` : 'Not picked'},
   ].map(s=>`<div class="ls-stat-row"><span class="ls-stat-label">${s.l}</span><span class="ls-stat-val${s.cls?' '+s.cls:''}">${s.v}</span></div>`).join('');
 
-  // Right panel
+  // Right panel — chart uses taller H to accommodate labels
   const W = 500;
-  document.getElementById('ls-right').innerHTML = `
+  const CHART_H = 110;
+  document.getElementById('ls-right-inner').innerHTML = `
     <div class="ls-title">${selectedEntity} — Full Historical View</div>
 
     <div class="ls-chart-card">
-      <div class="ls-chart-title">Points & Price — all ${d.rows.length} rounds</div>
-      ${miniSvg(d.rows, W, 100) || '<div style="color:var(--on-40);font-size:0.7rem;padding:8px">No completed races yet</div>'}
+      <div class="ls-chart-title" style="display:flex;justify-content:space-between;align-items:center">
+        <span>Points &amp; Price — all ${d.rows.filter(r=>r.has_result).length} rounds</span>
+        <span style="display:flex;gap:12px">
+          <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:3px;background:#e10600;border-radius:1px"></span><span style="font-size:0.44rem;font-weight:700;letter-spacing:0.1em;color:var(--on-40)">POINTS</span></span>
+          <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:10px;height:2px;background:#a6c8ff;border-radius:1px;opacity:0.7"></span><span style="font-size:0.44rem;font-weight:700;letter-spacing:0.1em;color:var(--on-40)">PRICE $M</span></span>
+        </span>
+      </div>
+      ${miniSvg(d.rows, W, CHART_H) || '<div style="color:var(--on-40);font-size:0.7rem;padding:8px">No completed races yet</div>'}
     </div>
 
     <div class="ls-tbl-wrap">
@@ -759,14 +877,14 @@ function renderLandscape() {
           const effC = row.eff>0?'var(--blue)':row.eff!==null&&row.eff<0?'var(--red-dim)':'var(--on-40)';
           const ptsDisplay = !row.has_result ? (d.was_picked ? 'n/p' : '—') : row.pts;
           const effDisplay = row.eff !== null ? row.eff : '—';
-          const bdList = row.breakdown && row.breakdown.length
-            ? row.breakdown.map(b=>`${b.category}: ${b.points>0?'+':''}${b.points}`).join(' · ')
+          const bdHasBd = row.breakdown && row.breakdown.length > 0;
+          const lsBdBtn = bdHasBd
+            ? `<button onclick="showBreakdown(event,'${row.race_name.replace(/'/g,"\\'")}',${row.race})" style="background:rgba(161,198,255,0.1);border:none;cursor:pointer;color:var(--blue);font-size:0.42rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;padding:2px 5px;margin-left:5px;vertical-align:middle">BD</button>`
             : '';
           return `<tr style="border-bottom:1px solid var(--on-08)">
             <td style="padding:7px 10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.72rem;color:var(--on-40)">R${String(row.race).padStart(2,'0')}</td>
             <td style="padding:7px 10px;font-size:0.65rem;font-weight:700;text-transform:uppercase">
-              ${row.race_name.replace(' Grand Prix','').replace(' GP','')}${row.sprint?'<span style="font-size:0.42rem;background:rgba(245,158,11,0.2);color:var(--amber);padding:1px 4px;margin-left:4px">S</span>':''}
-              ${bdList?`<div style="font-size:0.43rem;color:var(--on-40);font-weight:400;margin-top:1px;white-space:normal">${bdList}</div>`:''}
+              ${row.race_name.replace(' Grand Prix','').replace(' GP','')}${row.sprint?'<span style="font-size:0.42rem;background:rgba(245,158,11,0.2);color:var(--amber);padding:1px 4px;margin-left:4px">S</span>':''}${lsBdBtn}
             </td>
             <td style="padding:7px 10px;text-align:right;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:0.9rem;color:${ptsC}">${ptsDisplay}</td>
             <td style="padding:7px 10px;text-align:right;font-size:0.68rem;color:var(--on-60)">$${row.price.toFixed(1)}M</td>

@@ -51,7 +51,8 @@ main{flex:1;padding-bottom:80px}
 /* ── HERO ── */
 .hero{position:relative;margin:0 16px;overflow:hidden;background:var(--surface-low)}
 .hero-img-wrap{position:relative;height:200px;overflow:hidden;background:var(--surface-high)}
-.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(60%) contrast(1.1);display:block}
+.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(60%) contrast(1.1);display:block;transition:filter 0.4s ease}
+.hero-portrait.colored{filter:grayscale(0%) contrast(1.05) saturate(1.2) brightness(1.05) drop-shadow(0 0 18px rgba(225,6,0,0.35))}
 .hero-car{width:100%;height:100%;object-fit:contain;object-position:center;padding:16px 24px;display:block}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--surface-low) 0%,transparent 50%)}
 .hero-num{position:absolute;bottom:12px;left:16px;font-family:'Space Grotesk',sans-serif;font-size:6rem;font-weight:900;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;user-select:none}
@@ -338,10 +339,16 @@ function buildDriverData(picks, prices, breakdowns) {
       priceByEntity[p.player_name].push({race:p.race_number, price:p.price_this_race, priceNext:p.price_next_race, pct:p.price_change_pct});
   });
 
-  // Latest prices (race 2)
-  const maxCompleted = Math.max(...deduped.map(p=>p.race_number));
+  // Latest prices
+  const allRaces = [...new Set(prices.map(p=>p.race_number))].sort((a,b)=>a-b);
+  const maxCompleted = Math.max(...allRaces);
   const latestPrices = {};
   prices.filter(p=>p.race_number===maxCompleted).forEach(p=>latestPrices[p.player_name]=p);
+
+  // Ensure every entity has an entry for every completed race (0 if not picked that race)
+  Object.keys(entityData).forEach(n => {
+    allRaces.forEach(r => { if (!(r in entityData[n].perRace)) entityData[n].perRace[r] = 0; });
+  });
 
   // Ownership
   const totalUsers = new Set(picks.filter(p=>p.race_number===maxCompleted).map(p=>p.user_name)).size;
@@ -388,8 +395,60 @@ function buildDriverData(picks, prices, breakdowns) {
     d.eff_history = d.priceHistory.map(ph=>({race:ph.race, val:ph.eff}));
   });
 
+  // ── Stub entries for entities in prices but never picked ────────────────
+  // Build once per entity (prices has multiple rows per entity)
+  const stubSeen = new Set();
+  prices.sort((a,b)=>a.race_number-b.race_number).forEach(p => {
+    const n = p.player_name;
+    if (entityData[n]) return; // already fully built from picks
+    const type = p.type || 'Driver';
+    if (!stubSeen.has(n)) {
+      stubSeen.add(n);
+      entityData[n] = {
+        type,
+        totalPts: 0, perRace: {}, catTotals: {}, leagueAvgCats: {},
+        notPicked: true,
+        img: type === 'Driver'
+          ? 'images/portraits/'+(DRIVER_SLUG[n]||n.toLowerCase().replace(/ /g,'_'))+'.png'
+          : 'images/cars/'+(CON_SLUG_D[n]||n.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,''))+'.webp',
+        // Initialise accumulators
+        _priceRows: []
+      };
+      Object.keys(DISPLAY_CATS).forEach(cat => { entityData[n].catTotals[cat] = null; }); // null = no data
+      allRaces.forEach(r => { entityData[n].perRace[r] = null; }); // null = no data
+    }
+    entityData[n]._priceRows.push(p);
+  });
+
+  // Assemble price fields for stubs
+  Object.keys(entityData).forEach(n => {
+    const d = entityData[n];
+    if (!d.notPicked) return;
+    const rows = (d._priceRows || []);
+    const lp = rows.find(r => r.race_number === maxCompleted) || rows[rows.length-1] || {};
+    d.price          = lp.price_next_race ?? lp.price_this_race ?? 0;
+    d.price_change   = lp.price_change    ?? 0;
+    d.price_change_pct = lp.price_change_pct ?? 0;
+    d.total_pts      = 0;
+    d.pts_per_m      = 0;
+    d.ownership      = 0;
+    d.per_race       = d.perRace;
+    d.cat_totals     = d.catTotals;
+    d.league_avg_cats = d.leagueAvgCats;
+    // Price history from all price rows
+    d.price_history  = rows.map(r => ({race:r.race_number, price:r.price_this_race, pct:r.price_change_pct, eff:0}));
+    d.eff_history    = rows.map(r => ({race:r.race_number, val:0}));
+    delete d._priceRows;
+  });
+
   const order = Object.entries(entityData)
-    .sort((a,b) => { if(a[1].type!==b[1].type) return a[1].type==='Constructor'?-1:1; return b[1].totalPts-a[1].totalPts; })
+    .sort((a,b) => {
+      // Picked entities first, then unpicked; within each group sort by pts desc
+      const aP = a[1].notPicked ? 1 : 0, bP = b[1].notPicked ? 1 : 0;
+      if (aP !== bP) return aP - bP;
+      if(a[1].type!==b[1].type) return a[1].type==='Constructor'?-1:1;
+      return b[1].totalPts-a[1].totalPts;
+    })
     .map(([n])=>n);
 
   return { ENTITY_DATA: entityData, ENTITY_ORDER: order };
@@ -428,34 +487,50 @@ function svgLine(data, color, W, H, yKey='val') {
   const area = `M${pts[0][0].toFixed(1)},${H} `+pts.map(p=>`L${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ')+` L${pts[pts.length-1][0].toFixed(1)},${H} Z`;
   const gId = `g${Math.random().toString(36).slice(2,6)}`;
   const dots = pts.map(p=>`<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3" fill="${color}"/>`).join('');
-  const labels = data.map((d,i)=>{
+  const raceLabels = data.map((d,i)=>{
     const x = 6+(i/(data.length-1))*(W-12);
-    return `<text x="${x.toFixed(1)}" y="${H}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="rgba(229,226,225,0.3)">R${d.race||i+1}</text>`;
+    return `<text x="${x.toFixed(1)}" y="${H+11}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="rgba(229,226,225,0.3)">R${d.race||i+1}</text>`;
   }).join('');
-  return `<svg viewBox="0 0 ${W} ${H+12}" class="chart-svg">
+  const valLabels = pts.map((p,i)=>{
+    const v = vals[i];
+    const display = Number.isInteger(v) ? v : v.toFixed(1);
+    const anchor = p[0] < 12 ? 'start' : p[0] > W-12 ? 'end' : 'middle';
+    const ly = Math.max(9, p[1]-5);
+    return `<text x="${p[0].toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anchor}" font-family="Inter,sans-serif" font-size="7.5" font-weight="800" fill="${color}" opacity="0.9">${display}</text>`;
+  }).join('');
+  return `<svg viewBox="0 0 ${W} ${H+14}" class="chart-svg">
     <defs><linearGradient id="${gId}" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="${color}" stop-opacity="0.25"/>
       <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
     </linearGradient></defs>
     <path d="${area}" fill="url(#${gId})"/>
     <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    ${dots}${labels}
+    ${dots}${valLabels}${raceLabels}
   </svg>`;
 }
 
 function svgBars(data, color, W, H, valKey='val') {
   if (!data || !data.length) return '';
-  const vals = data.map(d => Math.max(0, d[valKey] ?? d));
-  const mx = Math.max(...vals, 1);
+  const vals = data.map(d => d[valKey] ?? d);
+  const hasNeg = vals.some(v => v < 0);
+  const absVals = vals.map(v => Math.abs(v));
+  const mx = Math.max(...absVals, 1);
   const bw = Math.floor((W - (data.length+1)*4) / data.length);
+  const baseline = H - 4;
   const bars = vals.map((v,i) => {
-    const bh = Math.max(2, (v/mx)*(H-12));
+    const bh = Math.max(2, (Math.abs(v)/mx)*(H-16));
     const x = 4 + i*(bw+4);
-    const y = H-4-bh;
-    const label = `<text x="${(x+bw/2).toFixed(1)}" y="${H+10}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="rgba(229,226,225,0.3)">R${data[i].race||i+1}</text>`;
-    return `<rect x="${x}" y="${y.toFixed(1)}" width="${bw}" height="${bh.toFixed(1)}" fill="${color}" rx="1"/>${label}`;
+    const isNeg = v < 0;
+    const barY = isNeg ? baseline : baseline - bh;
+    const barColor = isNeg ? 'rgba(255,180,168,0.7)' : color;
+    const display = Number.isInteger(v) ? v : v.toFixed(1);
+    const valY = isNeg ? baseline + bh + 9 : Math.max(9, baseline - bh - 3);
+    const valLabel = v !== 0 ? `<text x="${(x+bw/2).toFixed(1)}" y="${valY.toFixed(1)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7.5" font-weight="800" fill="${barColor}" opacity="0.9">${display}</text>` : '';
+    const raceLabel = `<text x="${(x+bw/2).toFixed(1)}" y="${H+11}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="rgba(229,226,225,0.3)">R${data[i].race||i+1}</text>`;
+    return `<rect x="${x}" y="${barY.toFixed(1)}" width="${bw}" height="${bh.toFixed(1)}" fill="${barColor}" rx="1"/>${valLabel}${raceLabel}`;
   }).join('');
-  return `<svg viewBox="0 0 ${W} ${H+14}" class="chart-svg">${bars}</svg>`;
+  const baseline_line = hasNeg ? `<line x1="0" y1="${baseline}" x2="${W}" y2="${baseline}" stroke="rgba(229,226,225,0.15)" stroke-width="1"/>` : '';
+  return `<svg viewBox="0 0 ${W} ${H+14}" class="chart-svg">${baseline_line}${bars}</svg>`;
 }
 
 // ── ENTITY SELECTOR ───────────────────────────────────────────────────────
@@ -465,10 +540,12 @@ function buildSelector() {
   el.innerHTML = list.map(name => {
     const d = ENTITY_DATA[name];
     const isCon = d.type === 'Constructor';
+    const ptsLabel = d.notPicked ? '—' : d.total_pts;
+    const dimStyle = d.notPicked ? 'opacity:0.4' : '';
     return `<button class="entity-pill${name===selectedEntity?' active':''}" onclick="selectEntity('${name.replace(/'/g,"\\'")}')">
-      <img class="pill-thumb${isCon?' car':''}" src="${d.img}" alt="" onerror="this.style.opacity='0.3'"/>
-      <span class="pill-name">${name.split(' ').slice(-1)[0]}</span>
-      <span class="pill-pts">${d.total_pts}</span>
+      <img class="pill-thumb${isCon?' car':''}" src="${d.img}" alt="" onerror="this.style.opacity='0.3'" style="${dimStyle}"/>
+      <span class="pill-name" style="${dimStyle}">${name.split(' ').slice(-1)[0]}</span>
+      <span class="pill-pts">${ptsLabel}</span>
     </button>`;
   }).join('');
   el.querySelector('.active')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
@@ -496,7 +573,13 @@ function renderHero() {
   const isCon = d.type === 'Constructor';
   const img = document.getElementById('hero-img');
   img.src = d.img;
-  img.className = isCon ? 'hero-car' : 'hero-portrait';
+  if (isCon) {
+    img.className = 'hero-car';
+    img.style.filter = '';
+  } else {
+    img.className = 'hero-portrait colored';
+    img.style.filter = '';
+  }
 
   document.getElementById('hero-num').textContent = isCon ? '' : selectedEntity.split(' ').slice(-1)[0].slice(0,2).toUpperCase();
   document.getElementById('hero-team').textContent = isCon ? 'Constructor' : '—';
@@ -507,27 +590,49 @@ function renderHero() {
   pctEl.textContent = `${d.price_change>=0?'+':''}$${d.price_change.toFixed(1)}M (${d.price_change_pct.toFixed(1)}%)`;
   pctEl.className = `hero-stat-sub ${d.price_change>=0?'pos':'neg'}`;
 
-  document.getElementById('hero-pts').textContent = d.total_pts;
-  const races = Object.keys(d.per_race).length;
-  document.getElementById('hero-pts-sub').textContent = `${races} race${races!==1?'s':''}`;
+  document.getElementById('hero-pts').textContent = d.notPicked ? '—' : d.total_pts;
+  const races = Object.values(d.per_race).filter(v=>v!==0).length;
+  document.getElementById('hero-pts-sub').textContent = d.notPicked ? 'not picked' : `${races} race${races!==1?'s':''}`;
   document.getElementById('hero-eff').textContent = d.pts_per_m > 0 ? d.pts_per_m : '—';
-  document.getElementById('hero-ownership').textContent = `${d.ownership}% owned`;
-  document.getElementById('own-bar').style.width = `${d.ownership}%`;
-  document.getElementById('own-pct').textContent = `${d.ownership}%`;
+  document.getElementById('hero-ownership').textContent = d.notPicked ? '0% owned' : `${d.ownership}% owned`;
+  document.getElementById('own-bar').style.width = `${d.ownership||0}%`;
+  document.getElementById('own-pct').textContent = `${d.ownership||0}%`;
+
+  // Not-picked banner
+  const existing = document.getElementById('not-picked-banner');
+  if (existing) existing.remove();
+  if (d.notPicked) {
+    const banner = document.createElement('div');
+    banner.id = 'not-picked-banner';
+    banner.style.cssText = 'margin:8px 16px 0;padding:10px 14px;background:rgba(245,158,11,0.08);border-left:3px solid #f59e0b;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#f59e0b';
+    banner.textContent = '⚠ Not picked by any league member this season — price data only';
+    document.getElementById('hero').after(banner);
+  }
 }
 
 // ── BENTO ─────────────────────────────────────────────────────────────────
 function renderBento() {
   const d = ENTITY_DATA[selectedEntity];
+
+  // ── Breakdown bars ────────────────────────────────────────────────────────
+  if (d.notPicked) {
+    // No breakdown data available — show a clear message instead of zero bars
+    document.getElementById('breakdown-bars').innerHTML =
+      `<div style="padding:14px 0;text-align:center;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-40)">No breakdown data — entity not picked this season</div>`;
+    document.getElementById('comparison-bars').innerHTML =
+      `<div style="padding:14px 0;text-align:center;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-40)">No league comparison available</div>`;
+    return;
+  }
+
   const cats = Object.entries(d.cat_totals);
-  const maxCat = Math.max(...cats.map(([,v])=>Math.abs(v)), 1);
-  const avgCats = d.league_avg_cats;
-  const maxAvg = Math.max(...Object.values(avgCats), 1);
+  const maxCat = Math.max(...cats.map(([,v])=>Math.abs(v||0)), 1);
+  const avgCats = d.league_avg_cats || {};
+  const maxAvg = Math.max(...Object.values(avgCats).map(v=>Math.abs(v||0)), 1);
   const globalMax = Math.max(maxCat, maxAvg);
 
-  // Breakdown bars
   document.getElementById('breakdown-bars').innerHTML = cats.map(([cat, val]) => {
-    const playerPct = Math.max(0, (val/globalMax)*100);
+    const v = val ?? 0;
+    const playerPct = Math.max(0, (v/globalMax)*100);
     const avgVal = avgCats[cat] || 0;
     const avgPct = Math.max(0, (avgVal/globalMax)*100);
     const color = CAT_COLORS[cat] || '#a6c8ff';
@@ -538,7 +643,7 @@ function renderBento() {
         <div class="breakdown-fill avg" style="width:${avgPct.toFixed(1)}%"></div>
         <div class="breakdown-fill player" style="width:${playerPct.toFixed(1)}%;background:${color}"></div>
       </div>
-      <div class="breakdown-val${val<0?' neg':''}">${val}</div>
+      <div class="breakdown-val${v<0?' neg':''}">${v}</div>
     </div>`;
   }).join('');
 
@@ -576,33 +681,33 @@ function renderBento() {
 // ── PORTRAIT CHARTS ───────────────────────────────────────────────────────
 function renderPortraitCharts() {
   const d = ENTITY_DATA[selectedEntity];
+  const noData = `<div style="height:50px;display:flex;align-items:center;justify-content:center;font-size:0.52rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-40)">No data</div>`;
   const priceData = d.price_history.map(p=>({race:p.race, val:p.price}));
-  const ptsData = Object.entries(d.per_race).map(([r,v])=>({race:+r, val:v})).sort((a,b)=>a.race-b.race);
-  const effData = d.eff_history.map(e=>({race:e.race, val:e.eff}));
-  const latestPts = ptsData[ptsData.length-1]?.val || 0;
-  const latestEff = effData[effData.length-1]?.eff || effData[effData.length-1]?.val || 0;
+  const ptsData = d.notPicked ? [] : Object.entries(d.per_race).map(([r,v])=>({race:+r, val:v??0})).sort((a,b)=>a.race-b.race);
+  const effData = d.notPicked ? [] : d.eff_history.map(e=>({race:e.race, val:e.eff??e.val??0}));
+  const latestPts = ptsData[ptsData.length-1]?.val ?? 0;
 
   document.getElementById('portrait-charts').innerHTML = `
     <div class="chart-card">
       <div class="chart-card-title">Price Evolution</div>
       <div class="chart-card-val">$${d.price.toFixed(1)}M</div>
-      ${svgLine(priceData,'#a6c8ff',160,50,'val')}
+      ${priceData.length >= 2 ? svgLine(priceData,'#a6c8ff',160,50,'val') : noData}
     </div>
     <div class="chart-card">
       <div class="chart-card-title">Points/Race</div>
-      <div class="chart-card-val">${latestPts > 0 ? '+' : ''}${latestPts}</div>
-      ${svgBars(ptsData,'#e10600',160,50,'val')}
+      <div class="chart-card-val">${d.notPicked ? '—' : (latestPts > 0 ? '+' : '') + latestPts}</div>
+      ${ptsData.length ? svgBars(ptsData,'#e10600',160,50,'val') : noData}
     </div>
     <div class="chart-card">
       <div class="chart-card-title">Pts / $M Trend</div>
-      <div class="chart-card-val">${d.pts_per_m}</div>
-      ${svgLine(effData,'#4ade80',160,50,'val')}
+      <div class="chart-card-val">${d.notPicked ? '—' : d.pts_per_m}</div>
+      ${effData.length >= 2 ? svgLine(effData,'#4ade80',160,50,'val') : noData}
     </div>
     <div class="chart-card">
       <div class="chart-card-title">Ownership</div>
-      <div class="chart-card-val">${d.ownership}%</div>
+      <div class="chart-card-val">${d.notPicked ? '0%' : d.ownership+'%'}</div>
       <div style="height:50px;display:flex;align-items:flex-end">
-        <div style="width:100%;height:${d.ownership}%;background:var(--amber);min-height:4px;transition:height 0.5s"></div>
+        <div style="width:100%;height:${d.ownership||0}%;background:var(--amber);min-height:${d.notPicked?'0':'4'}px;transition:height 0.5s"></div>
       </div>
     </div>`;
 }

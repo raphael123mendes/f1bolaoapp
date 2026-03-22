@@ -438,8 +438,8 @@ function buildSwitcher() {
     el.appendChild(btn);
   }
 
-  // Static rounds
-  const racedRounds = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
+  // Static rounds — always derived from static data so live mode doesn't hide past races
+  const racedRounds = [...new Set(STATIC_RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
   RACES.forEach(race => {
     const hasData = racedRounds.includes(race.round);
     const btn = document.createElement('button');
@@ -659,8 +659,7 @@ function renderMVPs(raceNum) {
 async function init() {
   try {
     await loadStatic();
-    const racedRounds = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
-    selectedRace = Math.max(...racedRounds);
+    selectedRace = Math.max(...STATIC_RESULTS.map(r => r.race_number));
 
     // Check if live data exists — if so show the LIVE button and auto-enter live mode
     liveAvailable = await checkLiveAvailable();

@@ -245,7 +245,7 @@ td.right{text-align:right}
   <div class="hero" id="hero">
     <div class="hero-inner">
       <div class="hero-img-wrap" id="hero-img-wrap">
-        <img id="hero-img" src="" alt="" onerror="this.style.opacity='0.1'"/>
+        <img id="hero-img" src="" alt=""/>
       </div>
       <div class="hero-content">
         <div class="hero-bg-abbr" id="hero-abbr"></div>
@@ -643,7 +643,7 @@ function buildSelector() {
   el.innerHTML = names.map(name => {
     const d = DATA[name];
     return `<button class="entity-pill${name===selectedEntity?' active':''}" onclick="selectEntity('${name.replace(/'/g,"\\'")}')">
-      <img class="pill-thumb${isCon(name)?' car':''}" src="${heroImg(name)}" alt="" onerror="this.style.opacity='0.2'"/>
+      <img class="pill-thumb${isCon(name)?' car':''}" src="${heroImg(name)}" alt=""/>
       <span class="pill-name">${name.split(' ').slice(-1)[0]}</span>
       <span class="pill-pts">${d.total_pts}</span>
     </button>`;
@@ -675,6 +675,7 @@ function renderHero() {
   const con = isCon(selectedEntity);
   const img = document.getElementById('hero-img');
   img.src = heroImg(selectedEntity);
+  img.style.opacity = '1';
   img.className = con ? 'hero-car' : 'hero-portrait';
   document.getElementById('hero-abbr').textContent = selectedEntity.split(' ').slice(-1)[0].slice(0,3).toUpperCase();
   const badge = document.getElementById('hero-badge');

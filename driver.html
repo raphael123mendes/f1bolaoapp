@@ -274,7 +274,10 @@ main{flex:1;padding-bottom:80px}
   <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
 </nav>
 
-<script>
+<script>let ENTITY_DATA = {};
+let ENTITY_ORDER = [];
+
+
 const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
 const CON_SLUG_D = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
 const DISPLAY_CATS = {
@@ -403,8 +406,8 @@ function goToHistorical() {
 
 // ── STATE ─────────────────────────────────────────────────────────────────
 let activeFilter = 'all';
-let selectedEntity = new URLSearchParams(window.location.search).get('entity') || 'George Russell';
-if (!ENTITY_DATA[selectedEntity]) selectedEntity = 'George Russell';
+const _urlEntity = new URLSearchParams(window.location.search).get('entity') || '';
+let selectedEntity = _urlEntity || 'George Russell'; // placeholder until data loads
 
 // ── HELPERS ───────────────────────────────────────────────────────────────
 function filteredEntities() {
@@ -539,12 +542,13 @@ function renderBento() {
     </div>`;
   }).join('');
 
-  // Comparison bars
+  // Comparison bars — use live league averages computed from the loaded data
+  const ls = d.league_stats || {};
   const compData = [
-    { label:'Pts / $M', player:d.pts_per_m, avg:d.type==='Driver'?3.0:5.0 },
-    { label:'Total Pts', player:d.total_pts, avg:d.type==='Driver'?28.7:92.4 },
-    { label:'Ownership', player:d.ownership, avg:35 },
-    { label:'Price $M',  player:d.price, avg:d.type==='Driver'?14.8:16.7 },
+    { label:'Pts / $M', player:d.pts_per_m, avg: ls.pts_per_m  ?? (d.type==='Driver'?3.0:5.0)   },
+    { label:'Total Pts', player:d.total_pts, avg: ls.total_pts  ?? (d.type==='Driver'?28.7:92.4) },
+    { label:'Ownership', player:d.ownership, avg: ls.ownership  ?? 35                             },
+    { label:'Price $M',  player:d.price,     avg: ls.price      ?? (d.type==='Driver'?14.8:16.7) },
   ];
   document.getElementById('comparison-bars').innerHTML = compData.map(c => {
     const max = Math.max(Math.abs(c.player), Math.abs(c.avg), 1);
@@ -698,7 +702,36 @@ async function init() {
       fetch('prices.json').then(r=>r.json()),
       fetch('breakdowns.json').then(r=>r.json()),
     ]);
-    const { ENTITY_DATA, ENTITY_ORDER } = buildDriverData(picks, prices, breakdowns);
+    const result = buildDriverData(picks, prices, breakdowns);
+    ENTITY_DATA = result.ENTITY_DATA;
+    ENTITY_ORDER = result.ENTITY_ORDER;
+
+    // ── Resolve URL param now that data is loaded ──────────────────────────
+    if (_urlEntity && ENTITY_DATA[_urlEntity]) {
+      selectedEntity = _urlEntity;
+    } else if (_urlEntity) {
+      // Try case-insensitive match (e.g. "mercedes" → "Mercedes")
+      const match = Object.keys(ENTITY_DATA).find(
+        k => k.toLowerCase() === _urlEntity.toLowerCase()
+      );
+      selectedEntity = match || ENTITY_ORDER[0] || 'George Russell';
+    } else {
+      selectedEntity = ENTITY_ORDER[0] || 'George Russell';
+    }
+
+    // ── Compute live league averages for "vs League Average" bento ─────────
+    ['Driver','Constructor'].forEach(type => {
+      const peers = ENTITY_ORDER.filter(n => ENTITY_DATA[n].type === type);
+      if (!peers.length) return;
+      const avg = (key) => Math.round(peers.reduce((s,n) => s + (ENTITY_DATA[n][key]||0), 0) / peers.length * 10) / 10;
+      const leagueStats = {
+        pts_per_m:  avg('pts_per_m'),
+        total_pts:  avg('total_pts'),
+        price:      avg('price'),
+        ownership:  avg('ownership'),
+      };
+      peers.forEach(n => { ENTITY_DATA[n].league_stats = leagueStats; });
+    });
     document.getElementById('loading-overlay')?.remove();
     buildSelector();
     renderHero();

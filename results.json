@@ -73,7 +73,7 @@
     "cards_used": "Limitless (GD2)",
     "current_budget": 100.0,
     "new_budget": 102.5,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 1,
@@ -92,7 +92,7 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 103.1,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 1,
@@ -111,7 +111,7 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 102.1,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 1,
@@ -130,7 +130,7 @@
     "cards_used": "No Negative (GD1)",
     "current_budget": 100.0,
     "new_budget": 101.5,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 1,
@@ -149,7 +149,7 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 101.1,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 1,
@@ -168,7 +168,7 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 101.3,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 1,
@@ -187,7 +187,7 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 100.4,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 1,
@@ -206,7 +206,7 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 99.8,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -215,7 +215,7 @@
     "race_date": "2026-03-15",
     "season_rank": 1,
     "race_rank": 2,
-    "rank_change": 0,
+    "rank_change": 1,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "season_points": 719.0,
@@ -234,7 +234,7 @@
     "race_date": "2026-03-15",
     "season_rank": 2,
     "race_rank": 1,
-    "rank_change": 0,
+    "rank_change": 2,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "season_points": 714.0,
@@ -253,7 +253,7 @@
     "race_date": "2026-03-15",
     "season_rank": 3,
     "race_rank": 3,
-    "rank_change": 0,
+    "rank_change": -2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "season_points": 691.0,
@@ -272,7 +272,7 @@
     "race_date": "2026-03-15",
     "season_rank": 4,
     "race_rank": 4,
-    "rank_change": 0,
+    "rank_change": 1,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "season_points": 643.0,
@@ -282,7 +282,7 @@
     "cards_used": "",
     "current_budget": 103.1,
     "new_budget": 105.2,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -291,7 +291,7 @@
     "race_date": "2026-03-15",
     "season_rank": 5,
     "race_rank": 6,
-    "rank_change": 0,
+    "rank_change": 2,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "season_points": 599.0,
@@ -301,7 +301,7 @@
     "cards_used": "",
     "current_budget": 101.5,
     "new_budget": 103.6,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -320,7 +320,7 @@
     "cards_used": "",
     "current_budget": 102.1,
     "new_budget": 104.2,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -329,7 +329,7 @@
     "race_date": "2026-03-15",
     "season_rank": 7,
     "race_rank": 5,
-    "rank_change": 0,
+    "rank_change": 2,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "season_points": 563.0,
@@ -339,7 +339,7 @@
     "cards_used": "",
     "current_budget": 101.3,
     "new_budget": 103.4,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -358,7 +358,7 @@
     "cards_used": "",
     "current_budget": 101.1,
     "new_budget": 102.0,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -367,7 +367,7 @@
     "race_date": "2026-03-15",
     "season_rank": 9,
     "race_rank": 9,
-    "rank_change": 0,
+    "rank_change": -6,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "season_points": 546.0,
@@ -377,7 +377,7 @@
     "cards_used": "",
     "current_budget": 102.9,
     "new_budget": 105.3,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -396,7 +396,7 @@
     "cards_used": "",
     "current_budget": 100.4,
     "new_budget": 100.4,
-    "race_prize": 0.0
+    "race_prize": 0
   },
   {
     "race_number": 2,
@@ -415,6 +415,6 @@
     "cards_used": "",
     "current_budget": 99.8,
     "new_budget": 99.8,
-    "race_prize": 0.0
+    "race_prize": 0
   }
 ]

@@ -342,6 +342,7 @@ const REFRESH_MS = 10 * 60 * 1000;         // 10 minutes
 const REFRESH_S  = REFRESH_MS / 1000;
 
 // ── MODULE STATE ───────────────────────────────────────────────────────────
+let STATIC_RESULTS, STATIC_PICKS, STATIC_PRICES;
 let RESULTS, PICKS, PRICES, RACES, CONFIG;
 let isLive = false;
 let liveAvailable = false;
@@ -368,6 +369,7 @@ async function loadStatic() {
     fetch('config.json').then(r => r.json()),
   ]);
   RESULTS = results; PICKS = picks; PRICES = prices; RACES = races; CONFIG = config;
+  STATIC_RESULTS = results; STATIC_PICKS = picks; STATIC_PRICES = prices;
 }
 
 async function loadLive() {
@@ -448,7 +450,14 @@ function buildSwitcher() {
     btn.textContent = `R${String(race.round).padStart(2,'0')}`;
     btn.title = race.race_name + (race.cancelled ? ' — Cancelled' : !hasData ? ' — No data yet' : '');
     if (hasData && !race.cancelled) {
-      btn.onclick = () => { exitLiveMode(); selectedRace = race.round; render(); };
+      btn.onclick = () => {
+        isLive = false;
+        stopRefreshCycle();
+        document.getElementById('live-meta').style.display = 'none';
+        RESULTS = STATIC_RESULTS; PICKS = STATIC_PICKS; PRICES = STATIC_PRICES;
+        selectedRace = race.round;
+        render();
+      };
     }
     el.appendChild(btn);
   });

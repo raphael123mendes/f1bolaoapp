@@ -686,12 +686,6 @@ function renderLandscape() {
 }
 
 // ── INIT ──────────────────────────────────────────────────────────────────
-buildSelector();
-renderHero();
-renderBento();
-renderPortraitCharts();
-renderLandscape();
-
 window.addEventListener('resize', renderLandscape);
 window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
 

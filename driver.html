@@ -50,11 +50,10 @@ main{flex:1;padding-bottom:80px}
 
 /* ── HERO ── */
 .hero{position:relative;margin:0 16px;overflow:hidden;background:var(--surface-low)}
-.hero-img-wrap{position:relative;height:200px;overflow:hidden;background:var(--surface-high)}
-.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top center;filter:grayscale(60%) contrast(1.1);display:block;transition:filter 0.4s ease}
-.hero-portrait.colored{filter:grayscale(0%) contrast(1.05) saturate(1.2) brightness(1.05) drop-shadow(0 0 18px rgba(225,6,0,0.35))}
+.hero-img-wrap{position:relative;height:260px;overflow:hidden;background:var(--surface-high)}
+.hero-portrait{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .hero-car{width:100%;height:100%;object-fit:contain;object-position:center;padding:16px 24px;display:block}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--surface-low) 0%,transparent 50%)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,var(--surface-low) 0%,transparent 55%)}
 .hero-num{position:absolute;bottom:12px;left:16px;font-family:'Space Grotesk',sans-serif;font-size:6rem;font-weight:900;color:rgba(255,255,255,0.06);line-height:1;pointer-events:none;user-select:none}
 .hero-info{padding:16px 16px 20px;border-left:4px solid var(--red)}
 .hero-team{font-size:0.55rem;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:4px}
@@ -339,21 +338,27 @@ function buildDriverData(picks, prices, breakdowns) {
       priceByEntity[p.player_name].push({race:p.race_number, price:p.price_this_race, priceNext:p.price_next_race, pct:p.price_change_pct});
   });
 
-  // Latest prices
-  const allRaces = [...new Set(prices.map(p=>p.race_number))].sort((a,b)=>a-b);
-  const maxCompleted = Math.max(...allRaces);
-  const latestPrices = {};
-  prices.filter(p=>p.race_number===maxCompleted).forEach(p=>latestPrices[p.player_name]=p);
+  // Two separate maxes:
+  // maxPickRace = last race with scored picks (source of truth for ownership + latestPrices)
+  // allRaces    = all races in prices (used only to fill perRace gaps with 0)
+  const maxPickRace = Math.max(...deduped.map(p=>p.race_number));
+  const allRaces    = [...new Set(prices.map(p=>p.race_number))].sort((a,b)=>a-b);
 
-  // Ensure every entity has an entry for every completed race (0 if not picked that race)
+  // Latest prices: use maxPickRace row — this has valid price_next_race and real price_change
+  const latestPrices = {};
+  prices.filter(p=>p.race_number===maxPickRace).forEach(p=>latestPrices[p.player_name]=p);
+
+  // Ensure every entity has an entry for every scored race (0 if not picked that race)
+  // Only fill up to maxPickRace — future races have no pts data yet
+  const scoredRaces = allRaces.filter(r => r <= maxPickRace);
   Object.keys(entityData).forEach(n => {
-    allRaces.forEach(r => { if (!(r in entityData[n].perRace)) entityData[n].perRace[r] = 0; });
+    scoredRaces.forEach(r => { if (!(r in entityData[n].perRace)) entityData[n].perRace[r] = 0; });
   });
 
-  // Ownership
-  const totalUsers = new Set(picks.filter(p=>p.race_number===maxCompleted).map(p=>p.user_name)).size;
+  // Ownership: based on maxPickRace picks (not prices, which has future races)
+  const totalUsers = new Set(picks.filter(p=>p.race_number===maxPickRace).map(p=>p.user_name)).size;
   const ownerCounts = {};
-  picks.filter(p=>p.race_number===maxCompleted).forEach(p=>{
+  picks.filter(p=>p.race_number===maxPickRace).forEach(p=>{
     if(!ownerCounts[p.pick_name]) ownerCounts[p.pick_name]=new Set();
     ownerCounts[p.pick_name].add(p.user_name);
   });
@@ -415,7 +420,7 @@ function buildDriverData(picks, prices, breakdowns) {
         _priceRows: []
       };
       Object.keys(DISPLAY_CATS).forEach(cat => { entityData[n].catTotals[cat] = null; }); // null = no data
-      allRaces.forEach(r => { entityData[n].perRace[r] = null; }); // null = no data
+      scoredRaces.forEach(r => { entityData[n].perRace[r] = null; }); // null = no data (not picked)
     }
     entityData[n]._priceRows.push(p);
   });
@@ -425,7 +430,7 @@ function buildDriverData(picks, prices, breakdowns) {
     const d = entityData[n];
     if (!d.notPicked) return;
     const rows = (d._priceRows || []);
-    const lp = rows.find(r => r.race_number === maxCompleted) || rows[rows.length-1] || {};
+    const lp = rows.find(r => r.race_number === maxPickRace) || rows[rows.length-1] || {};
     d.price          = lp.price_next_race ?? lp.price_this_race ?? 0;
     d.price_change   = lp.price_change    ?? 0;
     d.price_change_pct = lp.price_change_pct ?? 0;
@@ -573,13 +578,7 @@ function renderHero() {
   const isCon = d.type === 'Constructor';
   const img = document.getElementById('hero-img');
   img.src = d.img;
-  if (isCon) {
-    img.className = 'hero-car';
-    img.style.filter = '';
-  } else {
-    img.className = 'hero-portrait colored';
-    img.style.filter = '';
-  }
+  img.className = isCon ? 'hero-car' : 'hero-portrait';
 
   document.getElementById('hero-num').textContent = isCon ? '' : selectedEntity.split(' ').slice(-1)[0].slice(0,2).toUpperCase();
   document.getElementById('hero-team').textContent = isCon ? 'Constructor' : '—';

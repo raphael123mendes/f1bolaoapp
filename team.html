@@ -281,9 +281,9 @@ main{flex:1;padding-bottom:80px}
 </nav>
 
 <script>
-const DRIVER_SLUG = {'Alexander Albon':'alex_albon','Kimi Antonelli':'kimi_antonelli'};
-const CON_SLUG = {'Red Bull Racing':'red_bull','Haas F1 Team':'haas','Racing Bulls':'racing_bulls'};
-const ALL_CARDS = ['No Negative','Autopilot','Extra DRS','Limitless','Final Fix','Wildcard'];
+let DRIVER_SLUG = {};
+let CON_SLUG = {};
+let ALL_CARDS = [];
 
 function cleanCard(c) { return c.replace(/\s*\(GD\d\)/,'').trim(); }
 function driverImg(name) {
@@ -299,7 +299,7 @@ function buildData(results, picks, prices) {
   const maxRace = Math.max(...results.map(r=>r.race_number));
   const users = [...new Set(results.map(r=>r.user_name))].sort();
   const latestPrices = {};
-  prices.filter(p=>p.race_number===2).forEach(p=>latestPrices[p.player_name]=p.price_next_race);
+  prices.filter(p=>p.race_number===maxRace).forEach(p=>latestPrices[p.player_name]=p.price_next_race);
 
   const DATA = {};
   users.forEach(user => {
@@ -356,16 +356,17 @@ function buildData(results, picks, prices) {
 
 async function init() {
   try {
-    const [results, picks, prices] = await Promise.all([
+    const [results, picks, prices, config] = await Promise.all([
       fetch('results.json').then(r=>r.json()),
       fetch('picks.json').then(r=>r.json()),
       fetch('prices.json').then(r=>r.json()),
+      fetch('config.json').then(r=>r.json()),
     ]);
+    DRIVER_SLUG = config.driver_slug_overrides || {};
+    CON_SLUG    = config.constructor_slug_overrides || {};
+    ALL_CARDS   = config.all_cards || [];
     const DATA = buildData(results, picks, prices);
     document.getElementById('loading-overlay')?.remove();
-
-const ALL_CARDS = ['No Negative','Autopilot','Extra DRS','Limitless','Final Fix','Wildcard'];
-
 
 // ── NAVIGATION HELPER ────────────────────────────────────────────────────
 function navToDriver(name) {

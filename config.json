@@ -1,0 +1,23 @@
+{
+  "driver_slug_overrides": {
+    "Alexander Albon": "alex_albon",
+    "Kimi Antonelli": "kimi_antonelli"
+  },
+  "constructor_slug_overrides": {
+    "Red Bull Racing": "red_bull",
+    "Haas F1 Team": "haas",
+    "Racing Bulls": "racing_bulls"
+  },
+  "all_cards": [
+    "No Negative",
+    "Autopilot",
+    "Extra DRS",
+    "Limitless",
+    "Final Fix",
+    "Wildcard"
+  ],
+  "tier_thresholds": {
+    "podium": 3,
+    "mid": 7
+  }
+}

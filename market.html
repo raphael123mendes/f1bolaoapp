@@ -388,13 +388,6 @@ async function init() {
       seen.add(key); return true;
     });
 
-    // Season pts per entity
-    const entityPts = {};
-    deduped.forEach(p => {
-      if (!entityPts[p.pick_name]) entityPts[p.pick_name] = {pts:0, type:p.pick_type};
-      entityPts[p.pick_name].pts += (p.pick_points_gd || 0);
-    });
-
     // Latest prices
     const maxRace = Math.max(...prices.filter(p=>p.price_change_pct!==0||p.race_number===1).map(p=>p.race_number));
     const latestPrices = {};
@@ -411,7 +404,7 @@ async function init() {
 
     // Populate global MARKET array
     MARKET = Object.entries(latestPrices).map(([name, pd]) => {
-      const pts = (entityPts[name]||{}).pts || 0;
+      const pts = pd.total_points || 0;
       const price = pd.price_next_race || pd.price_this_race || 0;
       const ownership = ownerCounts[name] ? Math.round(ownerCounts[name].size/totalUsers*100) : 0;
       return {

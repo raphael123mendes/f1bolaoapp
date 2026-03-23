@@ -4,8 +4,9 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Full Grid Sweep — Market</title>
+<!-- Material Symbols font (REQUIRED for nav icons) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,300;0,900;1,300;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
   :root {
     --red: #e10600; --red-dim: #ffb4a8;
@@ -25,18 +26,32 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   html { background: var(--surface); color: var(--on-surface); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
   body { min-height: 100dvh; display: flex; flex-direction: column; overflow-x: hidden; }
-  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; font-family:'Material Symbols Outlined'; }
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+  }
   .fill { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
 
   /* ── TOP BAR ── */
   .topbar { position: sticky; top: 0; z-index: 50; background: var(--surface); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
   .topbar-inner { display: flex; justify-content: space-between; align-items: center; height: 56px; padding: 0 20px; }
-  /* new start */
   .brand { display: inline-flex; align-items: center; font-size: 1.2rem; font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -0.02em; border-left: 5px solid var(--red); padding-left: 18px; line-height: 1; }
   .app-name { color: var(--red); }
   .sep { color: #333; margin: 0 12px; font-weight: 300; }
   .page-name { color: #ffffff; font-weight: 300; opacity: 0.9; }
-  /* new end */
   .icon-btn { background: none; border: none; cursor: pointer; color: var(--on-40); padding: 6px; display: flex; align-items: center; }
   .icon-btn:hover { color: var(--on-surface); }
 
@@ -112,8 +127,11 @@
 
   /* ── TABLE ── */
   .market-table-wrap { margin: 0 16px; background: var(--surface-low); overflow: hidden; }
+
+  /* FIX: wider columns — entity flex, pts 38px, price 62px, eff 54px, chg 80px */
   .table-head {
-    display: grid; grid-template-columns: minmax(0,1fr) 40px 56px 44px 78px;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 38px 62px 54px 80px;
     padding: 8px 14px; gap: 4px;
     font-size: 0.5rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-40);
     border-bottom: 1px solid var(--on-08);
@@ -121,7 +139,8 @@
   .table-head span:not(:first-child) { text-align: right; }
 
   .market-row {
-    display: grid; grid-template-columns: minmax(0,1fr) 40px 56px 44px 78px;
+    display: grid;
+    grid-template-columns: minmax(0,1fr) 38px 62px 54px 80px;
     padding: 11px 14px; gap: 4px; align-items: center;
     border-bottom: 1px solid var(--on-08);
     transition: background 0.1s;
@@ -139,29 +158,40 @@
   .entity-type-bar { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; }
   .entity-type-bar.driver { background: var(--red-dim); }
   .entity-type-bar.constructor { background: var(--blue); }
-  .entity-name { font-family:'Space Grotesk',sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: -0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+  .entity-name {
+    font-family:'Space Grotesk',sans-serif; font-size: 0.68rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: -0.04em;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    max-width: 100%; display: block;
+  }
   .entity-type-tag { font-size: 0.48rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-40); margin-top: 2px; }
 
-  .pts-cell { text-align: right; }
+  .pts-cell { text-align: right; display: flex; align-items: center; justify-content: flex-end; }
   .pts-val { font-family:'Space Grotesk',sans-serif; font-size: 0.82rem; font-weight: 700; line-height: 1; }
   .pts-val.neg { color: var(--red-dim); }
   .pts-val.zero { color: var(--on-40); }
 
-  .price-cell { text-align: right; }
-  .price-val { font-family:'Space Grotesk',sans-serif; font-size: 0.95rem; font-weight: 600; }
+  .price-cell { text-align: right; display: flex; align-items: center; justify-content: flex-end; }
+  .price-val { font-family:'Space Grotesk',sans-serif; font-size: 0.88rem; font-weight: 600; white-space: nowrap; }
 
-  .eff-cell { text-align: right; }
+  /* FIX: eff badge — wider, no truncation */
+  .eff-cell { text-align: right; display: flex; align-items: center; justify-content: flex-end; }
   .eff-badge {
-    display: inline-block; background: var(--surface-highest);
-    padding: 2px 6px; font-size: 0.6rem; font-weight: 700;
-    font-family:'Space Grotesk',sans-serif; min-width: 36px; text-align: center;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: var(--surface-highest);
+    padding: 3px 7px;
+    font-size: 0.62rem; font-weight: 700;
+    font-family:'Space Grotesk',sans-serif;
+    min-width: 42px;
+    white-space: nowrap;
+    text-align: center;
   }
   .eff-badge.top { background: rgba(225,6,0,0.2); color: var(--red-dim); }
   .eff-badge.good { background: rgba(74,222,128,0.12); color: var(--green); }
 
   .chg-cell { text-align: right; }
   .chg-inner { display: flex; align-items: center; justify-content: flex-end; gap: 2px; }
-  .chg-val { font-size: 0.65rem; font-weight: 900; }
+  .chg-val { font-size: 0.65rem; font-weight: 900; white-space: nowrap; }
   .chg-val.pos { color: var(--green); }
   .chg-val.neg { color: var(--red-dim); }
   .chg-val.flat { color: var(--on-40); }
@@ -189,8 +219,11 @@
     -webkit-tap-highlight-color: transparent;
   }
   .nav-item.active { color: var(--red); border-top: 2px solid var(--red); background: var(--surface-low); }
-  .nav-item .material-symbols-outlined { font-size: 1.3rem; }
+  /* FIX: force icon font size in nav */
+  .nav-item .material-symbols-outlined { font-size: 1.4rem; }
   .nav-item.active .material-symbols-outlined { font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24; }
+  /* FIX: nav label must not be swallowed by icon font class */
+  .nav-label { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; font-family: 'Inter', sans-serif; }
 </style>
 </head>
 <body>
@@ -202,21 +235,22 @@
   </div>
   <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
 </div>
+
 <header class="topbar">
   <div class="topbar-inner">
-      <div class="brand">
+    <div class="brand">
       <span class="app-name">Full Grid Sweep</span>
       <span class="sep">-</span>
       <span class="page-name">Market</span>
-   </div>
-   </div>
+    </div>
+  </div>
 </header>
 
 <main>
   <!-- HERO -->
   <div class="hero">
     <div class="hero-sentiment">
-      <div class="hero-sentiment-bg" id="sentiment-icon">trending_up</div>
+      <div class="hero-sentiment-bg material-symbols-outlined" id="sentiment-icon">trending_up</div>
       <div class="hero-label">Market Sentiment</div>
       <div class="hero-title" id="sentiment-title">—</div>
       <div class="hero-sentiment-stats" id="sentiment-stats"></div>
@@ -247,7 +281,7 @@
       <button class="filter-btn" onclick="setFilter('Constructor', this)">Constructors</button>
     </div>
     <div class="sort-wrap">
-      <span class="material-symbols-outlined sort-label" style="font-size:0.9rem">sort</span>
+      <span class="material-symbols-outlined" style="font-size:0.9rem;color:var(--on-40)">sort</span>
       <span class="sort-label">Sort:</span>
       <select class="sort-select" id="sort-select" onchange="renderTable()">
         <option value="pts">Points</option>
@@ -279,15 +313,27 @@
   </div>
 </main>
 
+<!-- FIX: nav items use explicit <span class="nav-label"> so text isn't consumed by icon font -->
 <nav class="bottom-nav">
-  <a class="nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
-  <a class="nav-item" href="results.html"><span class="material-symbols-outlined">flag</span><span>Results</span></a>
-  <a class="nav-item active" href="market.html"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
-  <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
+  <a class="nav-item" href="index.html">
+    <span class="material-symbols-outlined">leaderboard</span>
+    <span class="nav-label">Standings</span>
+  </a>
+  <a class="nav-item" href="results.html">
+    <span class="material-symbols-outlined">flag</span>
+    <span class="nav-label">Results</span>
+  </a>
+  <a class="nav-item active" href="market.html">
+    <span class="material-symbols-outlined">monetization_on</span>
+    <span class="nav-label">Market</span>
+  </a>
+  <a class="nav-item" href="race.html">
+    <span class="material-symbols-outlined">sports_motorsports</span>
+    <span class="nav-label">Race</span>
+  </a>
 </nav>
 
 <script>
-// ── GLOBALS (must be accessible by inline HTML handlers) ───────────────────
 let MARKET = [];
 let activeFilter = 'all';
 
@@ -310,8 +356,6 @@ function renderTable() {
     return 0;
   });
 
-  const maxPts = Math.max(...data.map(d => d.season_pts), 1);
-
   const list = document.getElementById('market-list');
   list.innerHTML = '';
 
@@ -324,6 +368,7 @@ function renderTable() {
     const chgIcon  = isPos ? 'arrow_drop_up' : isNeg ? 'arrow_drop_down' : 'remove';
     const chgStr   = isPos ? `+${m.price_change_pct.toFixed(1)}%` : `${m.price_change_pct.toFixed(1)}%`;
 
+    // FIX: ensure pts_per_m is always shown if > 0, no rounding to zero
     let effClass = '';
     if (m.pts_per_m >= 10) effClass = 'top';
     else if (m.pts_per_m >= 5) effClass = 'good';
@@ -339,7 +384,7 @@ function renderTable() {
           <img class="entity-thumb${isLogo ? ' logo' : ''}" src="${m.img}" alt="${m.name}" onerror="this.style.display='none'"/>
           <div class="entity-type-bar ${m.type.toLowerCase()}"></div>
         </div>
-        <div style="min-width:0;overflow:hidden">
+        <div style="min-width:0;overflow:hidden;flex:1">
           <div class="entity-name">${m.name}</div>
           <div class="entity-type-tag">${m.type}</div>
         </div>
@@ -364,7 +409,6 @@ function renderTable() {
   });
 }
 
-// ── INIT ───────────────────────────────────────────────────────────────────
 async function init() {
   try {
     const [picks, prices, config] = await Promise.all([
@@ -373,7 +417,6 @@ async function init() {
       fetch('config.json').then(r => r.json()),
     ]);
 
-    // Slug overrides from config.json
     const DRIVER_SLUG = config.driver_slug_overrides || {};
     const CON_SLUG    = config.constructor_slug_overrides || {};
 
@@ -386,7 +429,6 @@ async function init() {
       return 'images/logos/' + slug + '.webp';
     }
 
-    // Deduplicate picks
     const seen = new Set();
     const deduped = picks.filter(p => {
       const key = p.pick_name + '|' + p.race_number;
@@ -394,12 +436,10 @@ async function init() {
       seen.add(key); return true;
     });
 
-    // Latest prices
     const maxRace = Math.max(...prices.filter(p=>p.price_change_pct!==0||p.race_number===1).map(p=>p.race_number));
     const latestPrices = {};
     prices.filter(p=>p.race_number===maxRace).forEach(p=>latestPrices[p.player_name]=p);
 
-    // Ownership
     const maxPickRace = Math.max(...picks.map(p=>p.race_number));
     const totalUsers = new Set(picks.filter(p=>p.race_number===maxPickRace).map(p=>p.user_name)).size;
     const ownerCounts = {};
@@ -408,7 +448,6 @@ async function init() {
       ownerCounts[p.pick_name].add(p.user_name);
     });
 
-    // Populate global MARKET array
     MARKET = Object.entries(latestPrices).map(([name, pd]) => {
       const pts = pd.total_points || 0;
       const price = pd.price_next_race || pd.price_this_race || 0;
@@ -422,7 +461,6 @@ async function init() {
       };
     });
 
-    // ── HERO ────────────────────────────────────────────────────────────────
     const sorted = [...MARKET].sort((a,b) => b.price_change_pct - a.price_change_pct);
     const riser   = sorted[0];
     const faller  = sorted[sorted.length - 1];
@@ -432,14 +470,12 @@ async function init() {
     const volatile = [...MARKET].sort((a,b) => Math.abs(b.price_change_pct) - Math.abs(a.price_change_pct))[0];
     const bestEff  = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
 
-  
-const title = document.getElementById('sentiment-title');
-const bullishText = 'DRS MOMENTUM';   // ← change this
-const bearishText = 'TRENDS';   // ← change this
-
-title.textContent = bullish ? bullishText : bearishText;
-title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
-document.getElementById('sentiment-icon').textContent = bullish ? 'trending_up' : 'trending_down';
+    const title = document.getElementById('sentiment-title');
+    title.textContent = bullish ? 'DRS MOMENTUM' : 'TRENDS';
+    title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
+    // FIX: sentiment icon element needs material-symbols-outlined class
+    const sentIcon = document.getElementById('sentiment-icon');
+    sentIcon.textContent = bullish ? 'trending_up' : 'trending_down';
 
     const statsEl = document.getElementById('sentiment-stats');
     function statHTML(label, entity, pct, absDelta, valClass, isLogo) {
@@ -471,7 +507,6 @@ document.getElementById('sentiment-icon').textContent = bullish ? 'trending_up' 
     document.getElementById('vol-delta').textContent = `${volSign}$${Math.abs(volatile.price_change).toFixed(1)}M`;
 
     renderTable();
-
     document.getElementById("loading-overlay")?.remove();
   } catch(e) {
     console.error('market.html error:', e);

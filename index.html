@@ -45,8 +45,10 @@
     display: flex; justify-content: space-between; align-items: center;
     height: 56px;
   }
-  .brand { font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.04em; color: var(--red); text-transform: uppercase; }
-  .brand span { color: var(--on-surface); opacity: 0.4; }
+.brand { display: inline-flex; align-items: center; font-size: 1.2rem; font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -0.02em; border-left: 5px solid var(--red); padding-left: 18px; line-height: 1; }
+.app-name { color: var(--red); }
+.sep { color: #333; margin: 0 12px; font-weight: 300; }
+.page-name { color: #ffffff; font-weight: 300; opacity: 0.9; }
   .topbar-sub {
     padding: 6px 0 10px;
     font-size: 0.6rem; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
@@ -286,7 +288,11 @@
 </div>
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="brand">Full Grid Sweep - Overall</div>
+    <div class="brand">
+    <span class="app-name">Full Grid Sweep</span>
+    <span class="sep">-</span>
+    <span class="page-name">Standings</span>
+</div>
     <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
   </div>
   <div class="topbar-sub" id="race-context">Global League · Season 2026</div>

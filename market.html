@@ -427,9 +427,9 @@ async function init() {
     const bestEff  = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
 
     const title = document.getElementById('sentiment-title');
-    title.textContent = bullish ? 'BULLISH MOMENTUM' : 'BEARISH PRESSURE';
+    title.textContent = bullish ? 'DRS MOMENTUM' : 'BEARISH PRESSURE';
     title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
-    document.getElementById('sentiment-icon').textContent = bullish ? 'trending_up' : 'trending_down';
+    document.getElementById('sentiment-icon').textContent = bullish ? 'TRENDS' : 'trending_down';
 
     const statsEl = document.getElementById('sentiment-stats');
     function statHTML(label, entity, pct, absDelta, valClass, isLogo) {

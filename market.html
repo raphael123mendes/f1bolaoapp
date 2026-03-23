@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Full Grid Sweep — Market</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,300;0,900;1,300;1,900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+/*  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/> */
 <style>
   :root {
     --red: #e10600; --red-dim: #ffb4a8;
@@ -13,6 +14,9 @@
     --green: #4ade80; --green-dim: rgba(74,222,128,0.15);
     --surface: #131313; --surface-low: #1c1b1b;
     --surface-mid: #201f1f; --surface-high: #2a2a2a;
+    --f1-red: #e10600;
+    --bg-dark: #0b0e11;
+    --text-dim: #666;
     --surface-highest: #353534;
     --on-surface: #e5e2e1;
     --on-60: rgba(229,226,225,0.6); --on-40: rgba(229,226,225,0.4);
@@ -28,9 +32,16 @@
   /* ── TOP BAR ── */
   .topbar { position: sticky; top: 0; z-index: 50; background: var(--surface); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
   .topbar-inner { display: flex; justify-content: space-between; align-items: center; height: 56px; padding: 0 20px; }
-  .brand { display: flex; align-items: center; gap: 10px; }
+  /*.brand { display: flex; align-items: center; gap: 10px; }
   .brand-icon { color: var(--red); font-size: 1.3rem; }
   .brand-text { font-family:'Space Grotesk',sans-serif; font-weight: 900; font-size: 1.1rem; letter-spacing: -0.02em; color: var(--red-dim); text-transform: uppercase; font-style: italic; }
+  */
+  /* new start */
+  .brand { display: inline-flex; align-items: center; font-size: 2rem; font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -0.02em; border-left: 5px solid var(--red); padding-left: 18px; line-height: 1; }
+  .app-name { color: var(--red); }
+  .sep { color: #333; margin: 0 12px; font-weight: 300; }
+  .page-name { color: #ffffff; font-weight: 300; opacity: 0.9; }
+  /* new end */
   .icon-btn { background: none; border: none; cursor: pointer; color: var(--on-40); padding: 6px; display: flex; align-items: center; }
   .icon-btn:hover { color: var(--on-surface); }
 
@@ -198,9 +209,14 @@
 </div>
 <header class="topbar">
   <div class="topbar-inner">
-    <div class="brand">
+/*    <div class="brand">
       <span class="material-symbols-outlined brand-icon fill">monitoring</span>
-      <span class="brand-text">Full Grid Sweep — Market</span>
+      <span class="brand-text">Full Grid Sweep — Market</span> */
+      <div class="brand">
+      <span class="app-name">Full Grid Sweep</span>
+      <span class="sep">-</span>
+      <span class="page-name">Market</span>
+</div>
     </div>
     <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
   </div>

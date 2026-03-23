@@ -209,6 +209,7 @@
       <span class="sep">-</span>
       <span class="page-name">Market</span>
    </div>
+   </div>
 </header>
 
 <main>
@@ -431,10 +432,14 @@ async function init() {
     const volatile = [...MARKET].sort((a,b) => Math.abs(b.price_change_pct) - Math.abs(a.price_change_pct))[0];
     const bestEff  = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
 
-    const title = document.getElementById('sentiment-title');
-    title.textContent = bullish ? 'DRS MOMENTUM' : 'BEARISH PRESSURE';
-    title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
-    document.getElementById('sentiment-icon').textContent = bullish ? 'TRENDS' : 'trending_down';
+  
+const title = document.getElementById('sentiment-title');
+const bullishText = 'DRS MOMENTUM';   // ← change this
+const bearishText = 'TRENDS';   // ← change this
+
+title.textContent = bullish ? bullishText : bearishText;
+title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
+document.getElementById('sentiment-icon').textContent = bullish ? 'trending_up' : 'trending_down';
 
     const statsEl = document.getElementById('sentiment-stats');
     function statHTML(label, entity, pct, absDelta, valClass, isLogo) {

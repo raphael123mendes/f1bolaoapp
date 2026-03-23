@@ -356,20 +356,63 @@ const CIRCUIT_MAP = {
   'Abu Dhabi Grand Prix':'images/circuits/round-24_yasmarinacircuit.svg',
 };
 
-const AXES       = ['Qualifying','Race','Sprint','Overtakes','Pit/Bonus'];
-const AXIS_COLORS = {'Qualifying':'#a6c8ff','Race':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Pit/Bonus':'#c084fc'};
+const AXES        = ['Qualifying', 'Race', 'Sprint', 'Overtakes', 'Pit/Bonus'];
+const AXIS_COLORS = {
+  'Qualifying': '#a6c8ff', 
+  'Race':       '#e10600', 
+  'Sprint':     '#4ade80', 
+  'Overtakes':  '#f59e0b', 
+  'Pit/Bonus':  '#c084fc'
+};
 
 // Map breakdown_category → radar axis
 const CAT_AXIS = {
-  'Qualifying Position':'Qualifying','Qualifying Delta':'Qualifying','Qualifying Beat Teammate':'Qualifying',
-  'Grid Position':'Qualifying',
-  'Race Position':'Race','Race Points':'Race','Race Beat Teammate':'Race','Fastest Lap':'Race',
-  'Race Finish':'Race','Race Result':'Race','Finish Position':'Race',
-  'Sprint Position':'Sprint','Sprint Points':'Sprint','Sprint Beat Teammate':'Sprint','Sprint Result':'Sprint',
-  'Overtakes':'Overtakes','Positions Gained':'Overtakes','Positions Gained/Lost':'Overtakes',
-  'Pit Stop':'Pit/Bonus','Pit Stop Time':'Pit/Bonus','Bonus':'Pit/Bonus',
-  'Driver of the Day':'Pit/Bonus','Clean Sheet':'Pit/Bonus','Extra DRS':'Pit/Bonus',
+  // Qualifying Axis
+  'Qualifying Position':   'Qualifying',
+  'Both Driver Q2':        'Qualifying',
+  'Both Driver Q3':        'Qualifying',
+  'One Driver Q3':         'Qualifying',
+  'QF not classified':     'Qualifying',
+
+  // Race Axis
+  'Race Position':         'Race',
+  'Race Position gained':  'Race',
+  'Race Position lost':    'Race',
+  'Race not classified':   'Race',
+  'Race Fastest lap':      'Race',
+
+  // Sprint Axis
+  'Sprint Position':       'Sprint',
+  'Sprint position gained':'Sprint',
+  'Sprint Position lost':  'Sprint',
+  'Sprint Not Classified': 'Sprint',
+  'Sprint Fastest lap':    'Sprint',
+
+  // Overtakes Axis
+  'race overtake bonus':   'Overtakes',
+  'Sprint overtake bonus': 'Overtakes',
+
+  // Pit/Bonus Axis
+  'Driver Of Day':         'Pit/Bonus',
+  'Fastest Pitstop':       'Pit/Bonus',
+  '2nd Fastest Pitstop':   'Pit/Bonus'
 };
+
+
+//const AXES       = ['Qualifying','Race','Sprint','Overtakes','Pit/Bonus'];
+//const AXIS_COLORS = {'Qualifying':'#a6c8ff','Race':'#e10600','Sprint':'#4ade80','Overtakes':'#f59e0b','Pit/Bonus':'#c084fc'};
+
+// Map breakdown_category → radar axis
+//const CAT_AXIS = {
+//  'Qualifying Position':'Qualifying','Qualifying Delta':'Qualifying','Qualifying Beat Teammate':'Qualifying',
+//  'Grid Position':'Qualifying',
+// 'Race Position':'Race','Race Points':'Race','Race Beat Teammate':'Race','Fastest Lap':'Race',
+//  'Race Finish':'Race','Race Result':'Race','Finish Position':'Race',
+//  'Sprint Position':'Sprint','Sprint Points':'Sprint','Sprint Beat Teammate':'Sprint','Sprint Result':'Sprint',
+//  'Overtakes':'Overtakes','Positions Gained':'Overtakes','Positions Gained/Lost':'Overtakes',
+//  'Pit Stop':'Pit/Bonus','Pit Stop Time':'Pit/Bonus','Bonus':'Pit/Bonus',
+//  'Driver of the Day':'Pit/Bonus','Clean Sheet':'Pit/Bonus','Extra DRS':'Pit/Bonus',
+//};
 
 // ── MODULE STATE ───────────────────────────────────────────────────────────
 let CONFIG = {};

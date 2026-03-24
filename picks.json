@@ -145,7 +145,7 @@
     "pick_id": "124",
     "pick_name": "George Russell",
     "pick_type": "Driver",
-    "is_captain": true,
+    "is_captain": false,
     "is_megacap": true,
     "pick_points_gd": 39,
     "price_this_race": 27.4,
@@ -1476,7 +1476,7 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": false,
-    "is_megacap": false,
+    "is_megacap": true,
     "pick_points_gd": 45,
     "price_this_race": 27.7,
     "price_next_race": 28.0

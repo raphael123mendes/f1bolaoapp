@@ -78,7 +78,10 @@ main{flex:1;padding-bottom:80px}
 .pick-card{background:var(--surface-high);padding:10px;display:flex;align-items:center;gap:10px;position:relative;overflow:hidden;cursor:pointer;transition:background 0.1s}
 .pick-card:hover{background:var(--surface-highest)}
 .pick-card.captain{border:2px solid var(--red)}
+.pick-card.megacap{border:2px solid #f59e0b}
 .captain-badge{position:absolute;top:-1px;right:-1px;background:var(--red);color:#fff;
+  font-size:0.44rem;font-weight:900;letter-spacing:0.1em;padding:2px 5px;text-transform:uppercase}
+.megacap-badge{position:absolute;top:-1px;right:-1px;background:#f59e0b;color:#000;
   font-size:0.44rem;font-weight:900;letter-spacing:0.1em;padding:2px 5px;text-transform:uppercase}
 .pick-thumb{width:40px;height:40px;object-fit:cover;object-position:top;background:var(--surface-highest);flex-shrink:0}
 .pick-thumb.logo{object-fit:contain;object-position:center;padding:4px}
@@ -169,6 +172,7 @@ main{flex:1;padding-bottom:80px}
 .tbl-row:last-child{border-bottom:none}
 .tbl-pick{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:700;text-transform:uppercase}
 .tbl-pick.cap::after{content:'(C)';font-size:0.55rem;color:var(--red);margin-left:4px}
+.tbl-pick.mega::after{content:'(M)';font-size:0.55rem;color:#f59e0b;margin-left:4px}
 .tbl-cats{font-size:0.5rem;color:var(--on-40);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .tbl-total{font-family:'Space Grotesk',sans-serif;font-size:1rem;font-weight:700;text-align:right}
 .tbl-total.neg{color:var(--red-dim)}
@@ -798,10 +802,16 @@ function renderPickGrid() {
   const ud = getUserData();
   const el = document.getElementById('pick-grid');
   el.innerHTML = ud.picks.map(p => {
-    const ptsClass = p.pts < 0 ? 'neg' : 'pos';
-    const isLogo   = p.type === 'Constructor';
-    return `<div class="pick-card${p.is_captain?' captain':''}" onclick="showPickPopup('${p.name.replace(/'/g,"\\'")}')">
-      ${p.is_captain ? '<div class="captain-badge">2× Captain</div>' : ''}
+    const ptsClass  = p.pts < 0 ? 'neg' : 'pos';
+    const isLogo    = p.type === 'Constructor';
+    const cardClass = p.is_megacap ? ' megacap' : p.is_captain ? ' captain' : '';
+    const badge     = p.is_megacap
+      ? '<div class="megacap-badge">3× Mega Cap</div>'
+      : p.is_captain
+        ? '<div class="captain-badge">2× Captain</div>'
+        : '';
+    return `<div class="pick-card${cardClass}" onclick="showPickPopup('${p.name.replace(/'/g,"\\'")}')">
+      ${badge}
       <img class="pick-thumb${isLogo?' logo':''}" src="${p.img}" alt="${p.name}" onerror="this.style.display='none'"/>
       <div style="min-width:0;flex:1">
         <div class="pick-name">${p.name}</div>
@@ -908,7 +918,7 @@ function renderTable() {
       .map(([k,v]) => `${k}: ${v>0?'+':''}${v}`).join(' · ');
     return `<div class="tbl-row" onclick="showPickPopup('${p.name.replace(/'/g,"\\'")}')">
       <div>
-        <div class="tbl-pick${p.is_captain?' cap':''}">${p.name}</div>
+        <div class="tbl-pick${p.is_megacap?' mega':p.is_captain?' cap':''}">${p.name}</div>
         <div class="tbl-cats">${cats||'—'}</div>
       </div>
       <div></div>
@@ -927,7 +937,7 @@ function renderLandscape() {
   lsPicks.innerHTML = [...ud.picks].sort((a,b) => b.pts-a.pts).map(p => `
     <div class="ls-pick">
       <img class="ls-thumb${p.type==='Constructor'?' logo':''}" src="${p.img}" alt="" onerror="this.style.display='none'"/>
-      <div class="ls-name">${p.name.split(' ').slice(-1)[0]}${p.is_captain?' (C)':''}</div>
+      <div class="ls-name">${p.name.split(' ').slice(-1)[0]}${p.is_megacap?' (M)':p.is_captain?' (C)':''}</div>
       <div class="ls-pts${p.pts<0?' neg':''}">${p.pts>0?'+':''}${p.pts}</div>
     </div>`).join('');
 
@@ -1007,11 +1017,12 @@ function showPickPopup(name) {
   const pick = ud.picks.find(p => p.name === name);
   if (!pick) return;
 
+  const role = pick.is_megacap ? ' · 3× Mega Cap' : pick.is_captain ? ' · 2× Captain' : '';
   document.getElementById('popup-title').textContent = name;
-  document.getElementById('popup-sub').textContent   = `${pick.type} · ${getRaceData().race_name}`;
+  document.getElementById('popup-sub').textContent   = `${pick.type} · ${getRaceData().race_name}${role}`;
   const totEl = document.getElementById('popup-total');
   totEl.textContent = `${pick.pts>0?'+':''}${pick.pts} pts`;
-  totEl.style.color  = pick.pts < 0 ? 'var(--red-dim)' : 'var(--red)';
+  totEl.style.color  = pick.is_megacap ? '#f59e0b' : pick.pts < 0 ? 'var(--red-dim)' : 'var(--red)';
 
   const rows = Object.entries(pick.breakdown).sort((a,b) => Math.abs(b[1])-Math.abs(a[1]));
   document.getElementById('popup-rows').innerHTML = rows.length

@@ -1,0 +1,59 @@
+name: F1 Fantasy Standings
+
+on:
+  schedule:
+    # Runs every 10 minutes, Saturdays + Sundays, 03:00-22:00 UTC
+    - cron: "*/10 3-22 * * 0,6"
+
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: "Force send even outside race window"
+        required: false
+        default: "0"
+        type: choice
+        options: ["0", "1"]
+
+jobs:
+  standings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write   # needed to push live/ JSON files via GITHUB_TOKEN
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests playwright
+
+      - name: Install Playwright Chromium
+        run: playwright install --with-deps chromium
+
+      - name: Write cookie
+        run: echo "${{ secrets.F1_COOKIE }}" > bot/cookie.txt
+
+      - name: Run F1 standings bot
+        env:
+          FORCE_RUN: ${{ github.event.inputs.force_run || '0' }}
+          WA_PHONE_NUMBER_ID: ${{ secrets.WA_PHONE_NUMBER_ID }}
+          WA_ACCESS_TOKEN: ${{ secrets.WA_ACCESS_TOKEN }}
+          WA_TO_PHONE: ${{ secrets.WA_TO_PHONE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python bot/f1_quick.py
+
+      - name: Commit state and image
+        if: always()
+        run: |
+          git config user.name "F1 Bot"
+          git config user.email "f1bot@github.com"
+          [ -f bot/last_standings.json ] && git add bot/last_standings.json || true
+          [ -f bot/standings_card.png  ] && git add bot/standings_card.png  || true
+          git diff --staged --quiet || git commit -m "standings update [skip ci]"
+          git push

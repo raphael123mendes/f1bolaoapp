@@ -593,7 +593,12 @@ def generate_image(race, results, mode="live"):
         from f1_image import generate_standings_image, apply_nicknames
         results_with_names = apply_nicknames(results, NICKNAMES)
         is_live = (mode == "live")
-        img_path = generate_standings_image(race, results_with_names, LEAGUE_NAME, is_live=is_live)
+        # Pass IMG_PATH explicitly so PNG always lands next to this script
+        # regardless of the working directory the process was started from
+        img_path = generate_standings_image(
+            race, results_with_names, LEAGUE_NAME,
+            is_live=is_live, output_path=IMG_PATH
+        )
         print(f"  PNG generated: {img_path}")
         return img_path
     except Exception as e:
@@ -635,13 +640,16 @@ def upload_image_meta(img_path):
 
 def send_image_meta(media_id, caption=""):
     """Send image message via Meta API using media_id."""
+    # Meta requires phone without leading + e.g. "971565256000"
+    to_phone = META_TO_PHONE.lstrip("+")
     url = f"{META_API_URL}/{META_PHONE_ID}/messages"
     payload = {
         "messaging_product": "whatsapp",
-        "to":   META_TO_PHONE,
+        "to":   to_phone,
         "type": "image",
         "image": {"id": media_id, "caption": caption},
     }
+    print(f"  Sending to: {to_phone} via phone_id: {META_PHONE_ID}")
     try:
         r = requests.post(
             url,
@@ -652,11 +660,12 @@ def send_image_meta(media_id, caption=""):
             json=payload,
             timeout=15,
         )
+        print(f"  Meta response ({r.status_code}): {r.text[:300]}")
         if r.status_code == 200:
             msg_id = r.json().get("messages", [{}])[0].get("id", "?")
             print(f"  Image sent via Meta — message_id: {msg_id}")
             return True
-        print(f"  Image send failed ({r.status_code}): {r.text[:200]}")
+        print(f"  Image send failed ({r.status_code}): {r.text[:300]}")
         return False
     except Exception as e:
         print(f"  Image send error: {e}")
@@ -898,20 +907,10 @@ def export_json_data(race, results, lv, gameday_id, last_state=None):
         _save_local("races.json",      races_data)
         return
 
-    # Fetch existing data from repo and append new rows
-    existing_picks      = _fetch_json_from_repo(owner, repo, branch, "picks.json",      token) or []
-    existing_breakdowns = _fetch_json_from_repo(owner, repo, branch, "breakdowns.json", token) or []
-    existing_results    = _fetch_json_from_repo(owner, repo, branch, "results.json",    token) or []
-
-    race_num = race["meeting_number"]
-    # Remove any existing rows for this race (re-run safety)
-    existing_picks      = [r for r in existing_picks      if r.get("race_number") != race_num]
-    existing_breakdowns = [r for r in existing_breakdowns if r.get("race_number") != race_num]
-    existing_results    = [r for r in existing_results    if r.get("race_number") != race_num]
-
-    push_json_to_repo("picks.json",      existing_picks      + new_picks)
-    push_json_to_repo("breakdowns.json", existing_breakdowns + new_breakdowns)
-    push_json_to_repo("results.json",    existing_results    + new_results)
+    # Always overwrite with current race data only — app expects latest race, not history
+    push_json_to_repo("picks.json",      new_picks)
+    push_json_to_repo("breakdowns.json", new_breakdowns)
+    push_json_to_repo("results.json",    new_results)
     push_json_to_repo("races.json",      races_data)
 
 

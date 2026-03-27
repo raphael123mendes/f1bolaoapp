@@ -13,13 +13,17 @@ on:
         default: "0"
         type: choice
         options: ["0", "1"]
+      force_round:
+        description: "Force a specific round number (e.g. 3 for Japan). Requires force_run=1."
+        required: false
+        default: ""
 
 jobs:
   standings:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      contents: write   # needed to push live/ JSON files via GITHUB_TOKEN
+      contents: write
 
     steps:
       - name: Checkout
@@ -41,11 +45,12 @@ jobs:
 
       - name: Run F1 standings bot
         env:
-          FORCE_RUN: ${{ github.event.inputs.force_run || '0' }}
+          FORCE_RUN:         ${{ github.event.inputs.force_run || '0' }}
+          FORCE_ROUND:       ${{ github.event.inputs.force_round || '' }}
           WA_PHONE_NUMBER_ID: ${{ secrets.WA_PHONE_NUMBER_ID }}
-          WA_ACCESS_TOKEN: ${{ secrets.WA_ACCESS_TOKEN }}
-          WA_TO_PHONE: ${{ secrets.WA_TO_PHONE }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WA_ACCESS_TOKEN:   ${{ secrets.WA_ACCESS_TOKEN }}
+          WA_TO_PHONE:       ${{ secrets.WA_TO_PHONE }}
+          GITHUB_TOKEN:      ${{ secrets.GITHUB_TOKEN }}
         run: python bot/f1_quick.py
 
       - name: Commit state and image

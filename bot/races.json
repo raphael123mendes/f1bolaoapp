@@ -48,9 +48,9 @@
     "race_name": "Saudi Arabian Grand Prix",
     "location": "Jeddah, Saudi Arabia",
     "venue": "Jeddah Corniche Circuit",
-    "race_date": "2026-03-22",
+    "race_date": "2026-04-19",
     "sprint_weekend": false,
-    "cancelled": false,
+    "cancelled": true,
     "cancellation_reason": "Middle East conflict",
     "notes": ""
   },

@@ -1,0 +1,378 @@
+{
+  "meta": {
+    "season": 2026,
+    "description": "F1 2026 session schedule for GitHub Actions automation",
+    "generated": "2026-03-14",
+    "notes": [
+      "All timestamps are in UTC ISO 8601 format",
+      "Rounds 4 (Bahrain) and 5 (Saudi Arabia) are cancelled due to Middle East conflict",
+      "session_type values: fp1, fp2, fp3, sprint_qualifying, sprint, qualifying, race",
+      "is_competitive is true for sprint_qualifying, sprint, qualifying and race sessions"
+    ]
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "name": "Australian Grand Prix",
+      "location": "Melbourne, Australia",
+      "venue": "Albert Park Circuit",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-03-06T01:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-03-06T05:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-03-07T01:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-03-07T05:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-03-08T04:00:00Z" }
+      ]
+    },
+    {
+      "round": 2,
+      "name": "Chinese Grand Prix",
+      "location": "Shanghai, China",
+      "venue": "Shanghai International Circuit",
+      "cancelled": false,
+      "sprint_weekend": true,
+      "sessions": [
+        { "session_type": "fp1",               "is_competitive": false, "utc_start": "2026-03-13T03:30:00Z" },
+        { "session_type": "sprint_qualifying",  "is_competitive": true,  "utc_start": "2026-03-13T07:30:00Z" },
+        { "session_type": "sprint",             "is_competitive": true,  "utc_start": "2026-03-14T03:00:00Z" },
+        { "session_type": "qualifying",         "is_competitive": true,  "utc_start": "2026-03-14T07:00:00Z" },
+        { "session_type": "race",               "is_competitive": true,  "utc_start": "2026-03-15T07:00:00Z" }
+      ]
+    },
+    {
+      "round": 3,
+      "name": "Japanese Grand Prix",
+      "location": "Suzuka, Japan",
+      "venue": "Suzuka International Racing Course",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-03-27T02:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-03-27T06:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-03-28T02:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-03-28T06:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-03-29T05:00:00Z" }
+      ]
+    },
+    {
+      "round": 4,
+      "name": "Bahrain Grand Prix",
+      "location": "Sakhir, Bahrain",
+      "venue": "Bahrain International Circuit",
+      "cancelled": true,
+      "cancellation_reason": "Middle East conflict",
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-04-10T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-04-10T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-04-11T12:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-04-11T16:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-04-12T15:00:00Z" }
+      ]
+    },
+    {
+      "round": 5,
+      "name": "Saudi Arabian Grand Prix",
+      "location": "Jeddah, Saudi Arabia",
+      "venue": "Jeddah Corniche Circuit",
+      "cancelled": true,
+      "cancellation_reason": "Middle East conflict",
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-04-17T13:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-04-17T17:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-04-18T13:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-04-18T17:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-04-19T17:00:00Z" }
+      ]
+    },
+    {
+      "round": 6,
+      "name": "Miami Grand Prix",
+      "location": "Miami, Florida, USA",
+      "venue": "Miami International Autodrome",
+      "cancelled": false,
+      "sprint_weekend": true,
+      "sessions": [
+        { "session_type": "fp1",               "is_competitive": false, "utc_start": "2026-05-01T16:30:00Z" },
+        { "session_type": "sprint_qualifying",  "is_competitive": true,  "utc_start": "2026-05-01T20:30:00Z" },
+        { "session_type": "sprint",             "is_competitive": true,  "utc_start": "2026-05-02T16:00:00Z" },
+        { "session_type": "qualifying",         "is_competitive": true,  "utc_start": "2026-05-02T20:00:00Z" },
+        { "session_type": "race",               "is_competitive": true,  "utc_start": "2026-05-03T20:00:00Z" }
+      ]
+    },
+    {
+      "round": 7,
+      "name": "Canadian Grand Prix",
+      "location": "Montreal, Canada",
+      "venue": "Circuit Gilles Villeneuve",
+      "cancelled": false,
+      "sprint_weekend": true,
+      "sessions": [
+        { "session_type": "fp1",               "is_competitive": false, "utc_start": "2026-05-22T16:30:00Z" },
+        { "session_type": "sprint_qualifying",  "is_competitive": true,  "utc_start": "2026-05-22T20:30:00Z" },
+        { "session_type": "sprint",             "is_competitive": true,  "utc_start": "2026-05-23T16:00:00Z" },
+        { "session_type": "qualifying",         "is_competitive": true,  "utc_start": "2026-05-23T20:00:00Z" },
+        { "session_type": "race",               "is_competitive": true,  "utc_start": "2026-05-24T18:00:00Z" }
+      ]
+    },
+    {
+      "round": 8,
+      "name": "Monaco Grand Prix",
+      "location": "Monte Carlo, Monaco",
+      "venue": "Circuit de Monaco",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-06-05T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-06-05T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-06-06T10:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-06-06T14:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-06-07T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 9,
+      "name": "Barcelona-Catalunya Grand Prix",
+      "location": "Barcelona, Spain",
+      "venue": "Circuit de Barcelona-Catalunya",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-06-12T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-06-12T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-06-13T10:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-06-13T14:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-06-14T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 10,
+      "name": "Austrian Grand Prix",
+      "location": "Spielberg, Austria",
+      "venue": "Red Bull Ring",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-06-26T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-06-26T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-06-27T10:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-06-27T14:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-06-28T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 11,
+      "name": "British Grand Prix",
+      "location": "Silverstone, United Kingdom",
+      "venue": "Silverstone Circuit",
+      "cancelled": false,
+      "sprint_weekend": true,
+      "sessions": [
+        { "session_type": "fp1",               "is_competitive": false, "utc_start": "2026-07-03T12:30:00Z" },
+        { "session_type": "sprint_qualifying",  "is_competitive": true,  "utc_start": "2026-07-03T16:00:00Z" },
+        { "session_type": "sprint",             "is_competitive": true,  "utc_start": "2026-07-04T11:00:00Z" },
+        { "session_type": "qualifying",         "is_competitive": true,  "utc_start": "2026-07-04T15:00:00Z" },
+        { "session_type": "race",               "is_competitive": true,  "utc_start": "2026-07-05T14:00:00Z" }
+      ]
+    },
+    {
+      "round": 12,
+      "name": "Belgian Grand Prix",
+      "location": "Spa-Francorchamps, Belgium",
+      "venue": "Circuit de Spa-Francorchamps",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-07-17T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-07-17T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-07-18T10:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-07-18T14:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-07-19T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 13,
+      "name": "Hungarian Grand Prix",
+      "location": "Budapest, Hungary",
+      "venue": "Hungaroring",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-07-24T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-07-24T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-07-25T10:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-07-25T14:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-07-26T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 14,
+      "name": "Dutch Grand Prix",
+      "location": "Zandvoort, Netherlands",
+      "venue": "Circuit Zandvoort",
+      "cancelled": false,
+      "sprint_weekend": true,
+      "sessions": [
+        { "session_type": "fp1",               "is_competitive": false, "utc_start": "2026-08-21T11:30:00Z" },
+        { "session_type": "sprint_qualifying",  "is_competitive": true,  "utc_start": "2026-08-21T15:00:00Z" },
+        { "session_type": "sprint",             "is_competitive": true,  "utc_start": "2026-08-22T10:00:00Z" },
+        { "session_type": "qualifying",         "is_competitive": true,  "utc_start": "2026-08-22T14:00:00Z" },
+        { "session_type": "race",               "is_competitive": true,  "utc_start": "2026-08-23T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 15,
+      "name": "Italian Grand Prix",
+      "location": "Monza, Italy",
+      "venue": "Autodromo Nazionale Monza",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-09-04T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-09-04T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-09-05T10:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-09-05T14:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-09-06T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 16,
+      "name": "Spanish Grand Prix",
+      "location": "Madrid, Spain",
+      "venue": "Madring — Madrid Street Circuit",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "notes": "New venue debut — subject to FIA circuit homologation",
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-09-11T11:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-09-11T15:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-09-12T10:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-09-12T14:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-09-13T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 17,
+      "name": "Azerbaijan Grand Prix",
+      "location": "Baku, Azerbaijan",
+      "venue": "Baku City Circuit",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "notes": "Race on Saturday — accommodates Azerbaijan Remembrance Day",
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-09-25T07:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-09-25T11:00:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-09-26T07:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-09-26T11:00:00Z" }
+      ]
+    },
+    {
+      "round": 18,
+      "name": "Singapore Grand Prix",
+      "location": "Singapore",
+      "venue": "Marina Bay Street Circuit",
+      "cancelled": false,
+      "sprint_weekend": true,
+      "sessions": [
+        { "session_type": "fp1",               "is_competitive": false, "utc_start": "2026-10-09T10:30:00Z" },
+        { "session_type": "sprint_qualifying",  "is_competitive": true,  "utc_start": "2026-10-09T14:30:00Z" },
+        { "session_type": "sprint",             "is_competitive": true,  "utc_start": "2026-10-10T10:00:00Z" },
+        { "session_type": "qualifying",         "is_competitive": true,  "utc_start": "2026-10-10T14:00:00Z" },
+        { "session_type": "race",               "is_competitive": true,  "utc_start": "2026-10-11T12:00:00Z" }
+      ]
+    },
+    {
+      "round": 19,
+      "name": "United States Grand Prix",
+      "location": "Austin, Texas, USA",
+      "venue": "Circuit of the Americas",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-10-23T16:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-10-23T20:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-10-24T16:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-10-24T20:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-10-25T19:00:00Z" }
+      ]
+    },
+    {
+      "round": 20,
+      "name": "Mexico City Grand Prix",
+      "location": "Mexico City, Mexico",
+      "venue": "Autódromo Hermanos Rodríguez",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-10-30T18:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-10-30T22:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-10-31T18:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-10-31T22:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-11-01T20:00:00Z" }
+      ]
+    },
+    {
+      "round": 21,
+      "name": "São Paulo Grand Prix",
+      "location": "São Paulo, Brazil",
+      "venue": "Interlagos",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-11-06T15:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-11-06T19:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-11-07T14:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-11-07T18:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-11-08T17:00:00Z" }
+      ]
+    },
+    {
+      "round": 22,
+      "name": "Las Vegas Grand Prix",
+      "location": "Las Vegas, Nevada, USA",
+      "venue": "Las Vegas Strip Circuit",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "notes": "Race on Saturday night local time",
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-11-21T04:00:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-11-21T08:00:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-11-22T04:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-11-22T06:00:00Z" }
+      ]
+    },
+    {
+      "round": 23,
+      "name": "Qatar Grand Prix",
+      "location": "Lusail, Qatar",
+      "venue": "Lusail International Circuit",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-11-27T13:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-11-27T17:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-11-28T14:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-11-28T18:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-11-29T16:00:00Z" }
+      ]
+    },
+    {
+      "round": 24,
+      "name": "Abu Dhabi Grand Prix",
+      "location": "Abu Dhabi, UAE",
+      "venue": "Yas Marina Circuit",
+      "cancelled": false,
+      "sprint_weekend": false,
+      "sessions": [
+        { "session_type": "fp1",        "is_competitive": false, "utc_start": "2026-12-04T08:30:00Z" },
+        { "session_type": "fp2",        "is_competitive": false, "utc_start": "2026-12-04T12:00:00Z" },
+        { "session_type": "fp3",        "is_competitive": false, "utc_start": "2026-12-05T09:30:00Z" },
+        { "session_type": "qualifying", "is_competitive": true,  "utc_start": "2026-12-05T13:00:00Z" },
+        { "session_type": "race",       "is_competitive": true,  "utc_start": "2026-12-06T13:00:00Z" }
+      ]
+    }
+  ]
+}

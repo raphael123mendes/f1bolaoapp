@@ -1,0 +1,20 @@
+{
+  "league_id":   "1692401",
+  "league_name": "Bolão F1",
+  "whatsapp": [
+    {"phone": "+971565256000", "apikey": "6999974"}
+  ],
+  "nicknames": {
+    "Danilo Iglesias":       "DAN",
+    "Eduardo Santos Lima":   "EDU",
+    "Fabio Mucci":           "FAB",
+    "Guilherme Figueiredo":  "GUI",
+    "Liberio Junior":        "LIB",
+    "Priscila Rigotto":      "PRI",
+    "Rafael Dias":           "RAF",
+    "Raphael Stein":         "STE",
+    "Ricardo Mucci":         "RIC",
+    "Robson Jardim":         "ROB",
+    "Vinicius Agostini":     "VIN"
+  }
+}

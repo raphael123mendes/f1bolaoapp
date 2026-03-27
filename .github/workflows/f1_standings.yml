@@ -45,12 +45,12 @@ jobs:
 
       - name: Run F1 standings bot
         env:
-          FORCE_RUN:         ${{ github.event.inputs.force_run || '0' }}
-          FORCE_ROUND:       ${{ github.event.inputs.force_round || '' }}
+          FORCE_RUN:          ${{ github.event.inputs.force_run || '0' }}
+          FORCE_ROUND:        ${{ github.event.inputs.force_round || '' }}
           WA_PHONE_NUMBER_ID: ${{ secrets.WA_PHONE_NUMBER_ID }}
-          WA_ACCESS_TOKEN:   ${{ secrets.WA_ACCESS_TOKEN }}
-          WA_TO_PHONE:       ${{ secrets.WA_TO_PHONE }}
-          GITHUB_TOKEN:      ${{ secrets.GITHUB_TOKEN }}
+          WA_ACCESS_TOKEN:    ${{ secrets.WA_ACCESS_TOKEN }}
+          WA_TO_PHONE:        ${{ secrets.WA_TO_PHONE }}
+          GITHUB_TOKEN:       ${{ secrets.GITHUB_TOKEN }}
         run: python bot/f1_quick.py
 
       - name: Commit state and image
@@ -60,5 +60,4 @@ jobs:
           git config user.email "f1bot@github.com"
           [ -f bot/last_standings.json ] && git add bot/last_standings.json || true
           [ -f bot/standings_card.png  ] && git add bot/standings_card.png  || true
-          git diff --staged --quiet || git commit -m "standings update [skip ci]"
-          git push
+          git diff --staged --quiet || (git commit -m "standings update [skip ci]" && git pull --rebase && git push)

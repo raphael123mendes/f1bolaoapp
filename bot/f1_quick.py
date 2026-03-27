@@ -640,16 +640,14 @@ def upload_image_meta(img_path):
 
 def send_image_meta(media_id, caption=""):
     """Send image message via Meta API using media_id."""
-    # Meta requires phone without leading + e.g. "971565256000"
-    to_phone = META_TO_PHONE.lstrip("+")
     url = f"{META_API_URL}/{META_PHONE_ID}/messages"
     payload = {
         "messaging_product": "whatsapp",
-        "to":   to_phone,
+        "to":   META_TO_PHONE,
         "type": "image",
         "image": {"id": media_id, "caption": caption},
     }
-    print(f"  Sending to: {to_phone} via phone_id: {META_PHONE_ID}")
+    print(f"  Sending to: {META_TO_PHONE} via phone_id: {META_PHONE_ID}")
     try:
         r = requests.post(
             url,

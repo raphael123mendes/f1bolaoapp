@@ -189,6 +189,18 @@ def get_current_race():
                 "flag":           flag,
             })
 
+    # Priority 0: FORCE_ROUND override — pick a specific round by number
+    force_round = os.environ.get("FORCE_ROUND", "").strip()
+    if force_round:
+        matched = [s for s in sessions if str(s["meeting_number"]) == force_round]
+        if matched:
+            # Prefer race session, then qualifying, then sprint
+            order = {"race": 0, "qualifying": 1, "sprint": 2}
+            s = min(matched, key=lambda x: order.get(x["session_type"], 9))
+            print(f"  FORCE_ROUND={force_round} → {s['meeting_name']} {s['session_type']}")
+            return s, -999999   # treat as far past so use_gdpoints=True
+        print(f"  WARNING: FORCE_ROUND={force_round} not found in schedule")
+
     # Priority 1: live right now
     for s in sessions:
         if s["window_start"] <= now <= s["window_end"]:
@@ -813,7 +825,7 @@ def push_json_to_repo(filename, data):
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept":        "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2026-11-28",
+        "X-GitHub-Api-Version": "2022-11-28",
     }
 
     # Check if file exists to get its SHA (required for updates)
@@ -910,7 +922,7 @@ def _fetch_json_from_repo(owner, repo, branch, filename, token):
     headers = {
         "Authorization": f"Bearer {token}",
         "Accept":        "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2026-11-28",
+        "X-GitHub-Api-Version": "2022-11-28",
     }
     try:
         r = requests.get(api_url, headers=headers, params={"ref": branch}, timeout=15)

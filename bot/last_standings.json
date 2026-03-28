@@ -1,8 +1,9 @@
 {
   "gameday_id": "3",
   "session_type": "qualifying",
-  "ranking_hash": "094b4293ed0d9cb551cd884103da6ecd",
+  "ranking_hash": "55225b37b578dd0f98b449fb44dfef4d",
   "scores": {
+    "Eduardo Santos Lima": 4,
     "Fabio Mucci": 0,
     "Liberio Junior": 0,
     "Rafael Dias": 0,
@@ -11,10 +12,9 @@
     "Vinicius Agostini": 0,
     "Danilo Iglesias": 0,
     "Priscila Rigotto": 0,
-    "Eduardo Santos Lima": 0,
     "Ricardo Mucci": 0,
     "Guilherme Figueiredo": -10
   },
   "post_race_sent": false,
-  "saved_at": "2026-03-28T05:44:14.664242+00:00"
+  "saved_at": "2026-03-28T06:03:52.224350+00:00"
 }

@@ -562,13 +562,14 @@ function render() {
   const list = document.getElementById('player-list');
   list.innerHTML = '';
   raceResults.forEach((p, idx) => {
-    const delta = Math.round((p.new_budget - p.current_budget) * 10) / 10;
-    const deltaStr = delta > 0 ? `+$${delta.toFixed(1)}M` : delta < 0 ? `-$${Math.abs(delta).toFixed(1)}M` : '—';
-    const deltaClass = delta > 0 ? 'delta-pos' : delta < 0 ? 'delta-neg' : 'delta-zero';
-    const deltaIcon = delta > 0 ? 'trending_up' : delta < 0 ? 'trending_down' : 'remove';
+    const hasBudget = p.new_budget != null && p.current_budget != null;
+    const delta = hasBudget ? Math.round((p.new_budget - p.current_budget) * 10) / 10 : null;
+    const deltaStr = delta == null ? '—' : delta > 0 ? `+$${delta.toFixed(1)}M` : delta < 0 ? `-$${Math.abs(delta).toFixed(1)}M` : '—';
+    const deltaClass = delta == null ? 'delta-zero' : delta > 0 ? 'delta-pos' : delta < 0 ? 'delta-neg' : 'delta-zero';
+    const deltaIcon = delta == null ? 'remove' : delta > 0 ? 'trending_up' : delta < 0 ? 'trending_down' : 'remove';
     const rankClass = p.race_rank === 1 ? 'rank-1' : p.race_rank === 2 ? 'rank-2' : p.race_rank === 3 ? 'rank-3' : '';
     const hasCard = p.cards_used && p.cards_used.trim();
-    const hasPrize = p.race_prize && p.race_prize > 0;
+    const hasPrize = p.race_prize != null && p.race_prize > 0;
 
     const row = document.createElement('div');
     row.className = `player-row ${rankClass}`;
@@ -586,11 +587,11 @@ function render() {
           : `<div class="p-prize-val no-prize">—</div>`}
       </div>
       <div class="p-pts">
-        <div class="p-pts-race">${p.race_points.toFixed(0)}</div>
-        <div class="p-pts-season">${p.season_points.toFixed(0)} TOT</div>
+        <div class="p-pts-race">${(p.race_points ?? 0).toFixed(0)}</div>
+        <div class="p-pts-season">${(p.season_points ?? 0).toFixed(0)} TOT</div>
       </div>
       <div class="p-budget">
-        <div class="p-budget-val">$${p.new_budget.toFixed(1)}M</div>
+        <div class="p-budget-val">${hasBudget ? `$${p.new_budget.toFixed(1)}M` : '—'}</div>
         <div class="p-budget-delta ${deltaClass}">
           <span class="material-symbols-outlined" style="font-size:0.7rem">${deltaIcon}</span>
           ${deltaStr}

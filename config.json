@@ -20,4 +20,18 @@
     "podium": 3,
     "mid": 7
   }
+  "nicknames": {
+    "Danilo Iglesias":       "DAN",
+    "Eduardo Santos Lima":   "EDU",
+    "Fabio Mucci":           "FAB",
+    "Guilherme Figueiredo":  "GUI",
+    "Liberio Junior":        "LIB",
+    "Priscila Rigotto":      "PRI",
+    "Rafael Dias":           "RAF",
+    "Raphael Stein":         "STE",
+    "Ricardo Mucci":         "RIC",
+    "Robson Jardim":         "ROB",
+    "Vinicius Agostini":     "VIN"
+  }
+  
 }

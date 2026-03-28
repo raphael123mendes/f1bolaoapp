@@ -468,12 +468,13 @@ def get_standings(gameday_id, score=0):
         else:
             total = 0.0
             for p in picks:
-                pid        = p["id"]
-                components = get_player_components(pid, gameday_id, lv)
-                cap_mult   = 2 if (cap_id     and pid == cap_id)     else 1
-                mega_mult  = 3 if (megacap_id and pid == megacap_id) else 1
-                mult       = cap_mult * mega_mult
-                for _cat, val in components:
+                pid       = p["id"]
+                cap_mult  = 2 if (cap_id     and pid == cap_id)     else 1
+                mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
+                mult      = cap_mult * mega_mult
+                # reuse components already fetched for pick_components above
+                comps = get_player_components(pid, gameday_id, lv)
+                for _cat, val in comps:
                     no_neg_factor = 0 if (has_no_neg and val < 0) else 1
                     total += val * mult * no_neg_factor
                 time.sleep(0.05)
@@ -488,6 +489,22 @@ def get_standings(gameday_id, score=0):
             if sub_penalty or inactive_pen:
                 print(f"    Penalties: transfers={sub_penalty} inactive={inactive_pen}")
             print(f"    → Calculated: {total} (gdpoints={gdpoints})")
+
+        # Compute per-pick points from components for every pick
+        # This gives individual scores regardless of live vs post-race mode
+        pick_components = {}
+        for p in picks:
+            pid       = p["id"]
+            cap_mult  = 2 if (cap_id     and pid == cap_id)     else 1
+            mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
+            mult      = cap_mult * mega_mult
+            comps     = get_player_components(pid, gameday_id, lv)
+            pts       = sum(
+                val * mult * (0 if (has_no_neg and val < 0) else 1)
+                for _cat, val in comps
+            )
+            pick_components[pid] = int(pts)
+            time.sleep(0.05)
 
         pick_details = []
         for p in picks:
@@ -504,6 +521,7 @@ def get_standings(gameday_id, score=0):
                 "skill":       skill,
                 "iscaptain":   p.get("iscaptain", 0),
                 "ismgcaptain": p.get("ismgcaptain", 0),
+                "pick_pts":    pick_components.get(pid, 0),
             })
 
         results.append({
@@ -769,7 +787,7 @@ def build_picks_rows(race, results):
                 "pick_type":        p["pick_type"],
                 "is_captain":       bool(p["iscaptain"]),
                 "is_megacap":       bool(p["ismgcaptain"]),
-                "pick_points_gd":   int(team["points"]),
+                "pick_points_gd":   p["pick_pts"],
                 "price_this_race":  None,
                 "price_next_race":  None,
             })
@@ -794,7 +812,7 @@ def build_breakdowns_rows(race, results, lv, gameday_id):
                     "pick_name":          p["full_name"],
                     "pick_type":          p["pick_type"],
                     "is_captain":         bool(p["iscaptain"]),
-                    "pick_points_gd":     int(team["points"]),
+                    "pick_points_gd":     p["pick_pts"],
                     "breakdown_category": category,
                     "breakdown_points":   points,
                 })

@@ -415,8 +415,15 @@ def get_standings(gameday_id, score=0):
         drivers_data = get(f"{BASE_FEEDS}/drivers/1_en.json?buster={buster()}")
         for p in drivers_data["Data"]["Value"]:
             pid  = str(p.get("PlayerId", ""))
-            full = p.get("DisplayName") or p.get("DriverTLA") or pid
-            tla  = p.get("DriverTLA")  or p.get("DisplayName") or pid
+            tla  = p.get("DriverTLA") or p.get("DisplayName") or pid
+            # DisplayName can come back abbreviated e.g. "C. Leclerc"
+            # FirstName + LastName gives the full name when available
+            first = p.get("FirstName", "")
+            last  = p.get("LastName", "")
+            if first and last:
+                full = f"{first} {last}"
+            else:
+                full = p.get("DisplayName") or tla
             player_names[pid]  = full
             player_tlas[pid]   = tla
             player_skills[pid] = p.get("Skill", 1)

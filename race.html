@@ -481,17 +481,12 @@ async function loadLive() {
     tryFetch(LIVE_BASE + 'picks.json'),
     tryFetch(LIVE_BASE + 'breakdowns.json'),
   ]);
-  if (!results) return false;
+  if (!results || results.length === 0) return false;
   RESULTS    = results;
   PICKS      = picks      || STATIC_PICKS;
   BREAKDOWNS = breakdowns || STATIC_BREAKDOWNS;
   DATA = buildRaceData(PICKS, BREAKDOWNS, RESULTS, RACES);
   return true;
-}
-
-async function checkLiveAvailable() {
-  const r = await tryFetch(LIVE_BASE + 'results.json');
-  return r !== null && r.length > 0;
 }
 
 // ── BUILD DATA OBJECT ──────────────────────────────────────────────────────
@@ -1069,11 +1064,11 @@ async function init() {
     selectedRace = raced[raced.length - 1];
     selectedUser = pickDefaultUser();
 
-    // Check live
-    liveAvailable = await checkLiveAvailable();
-    if (liveAvailable) {
+    // Try live — single fetch, no double request
+    const liveLoaded = await loadLive();
+    if (liveLoaded) {
       isLive = true;
-      await loadLive();
+      liveAvailable = true;
       selectedRace = Math.max(...racedRounds());
       selectedUser = pickDefaultUser();
       startRefreshCycle();

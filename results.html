@@ -362,14 +362,15 @@ async function tryFetch(url) {
 
 async function loadStatic() {
   const [results, picks, prices, races, config] = await Promise.all([
-    fetch('results.json').then(r => r.json()),
-    fetch('picks.json').then(r => r.json()),
-    fetch('prices.json').then(r => r.json()),
-    fetch('races.json').then(r => r.json()),
-    fetch('config.json').then(r => r.json()),
+    tryFetch('results.json'),
+    tryFetch('picks.json'),
+    tryFetch('prices.json'),
+    tryFetch('races.json'),
+    tryFetch('config.json'),
   ]);
-  RESULTS = results; PICKS = picks; PRICES = prices; RACES = races; CONFIG = config;
-  STATIC_RESULTS = results; STATIC_PICKS = picks; STATIC_PRICES = prices;
+  if (!results || !races || !config) throw new Error('Failed to load static data files');
+  RESULTS = results; PICKS = picks || []; PRICES = prices || []; RACES = races; CONFIG = config;
+  STATIC_RESULTS = results; STATIC_PICKS = PICKS; STATIC_PRICES = PRICES;
 }
 
 async function loadLive() {
@@ -378,16 +379,17 @@ async function loadLive() {
     tryFetch(LIVE_BASE + 'picks.json'),
     tryFetch(LIVE_BASE + 'prices.json'),
   ]);
-  if (!results) return false;
+  if (!results || results.length === 0) return false;
   RESULTS = results;
   if (picks)  PICKS  = picks;
   if (prices) PRICES = prices;
   return true;
 }
 
+// checkLiveAvailable now reuses loadLive to avoid fetching live/results.json twice
 async function checkLiveAvailable() {
   const r = await tryFetch(LIVE_BASE + 'results.json');
-  return r !== null && r.length > 0;
+  return r !== null && Array.isArray(r) && r.length > 0;
 }
 
 // ── CIRCUIT IMAGE MAP ──────────────────────────────────────────────────────
@@ -661,11 +663,13 @@ async function init() {
     await loadStatic();
     selectedRace = Math.max(...STATIC_RESULTS.map(r => r.race_number));
 
-    // Check if live data exists — if so show the LIVE button and auto-enter live mode
-    liveAvailable = await checkLiveAvailable();
-    if (liveAvailable) {
+    // Try to load live data — loadLive() returns true only if live/results.json
+    // is reachable AND non-empty, so checkLiveAvailable is folded in here to
+    // avoid fetching the same file twice.
+    const liveLoaded = await loadLive();
+    liveAvailable = liveLoaded;
+    if (liveLoaded) {
       isLive = true;
-      await loadLive();
       selectedRace = Math.max(...RESULTS.map(r => r.race_number));
       startRefreshCycle();
     }

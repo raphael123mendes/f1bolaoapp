@@ -1,498 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-<title>Live Circuit — Full Grid Sweep</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Full Grid Sweep — Race Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
-:root {
-  --red:#e10600; --red-dim:#ffb4a8;
-  --blue:#a6c8ff; --blue-bright:#3192fc;
-  --surface:#131313; --surface-low:#1c1b1b; --surface-mid:#201f1f;
-  --surface-high:#2a2a2a; --surface-highest:#353534;
-  --on:#e5e2e1; --on-60:rgba(229,226,225,0.6); --on-40:rgba(229,226,225,0.4);
-  --on-20:rgba(229,226,225,0.2); --on-08:rgba(229,226,225,0.08);
-}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html,body{
-  background:var(--surface);color:var(--on);
-  font-family:'Inter',sans-serif;
-  width:100%;height:100%;overflow:hidden;
-  -webkit-font-smoothing:antialiased;
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
+
+/*
+  LAYOUT STRATEGY
+  ───────────────
+  The trick for perfect dot-over-image alignment:
+    #circuit-wrap  → position:relative, sized by its parent
+    #circuit-bg img → position:absolute, inset:0, width:100%, height:100%, object-fit:contain
+    #dots-svg      → position:absolute, inset:0, width:100%, height:100%, viewBox="0 0 121 85", preserveAspectRatio="xMidYMid meet"
+
+  Both the img and the SVG use the same scaling rule (contain / meet = same thing).
+  They both fill the same box. Coords always align perfectly.
+
+  The map section uses flex:1 with min-height:0 and min-width:0 so it
+  ALWAYS gets priority and can shrink the sidebar, not itself.
+  The sidebar uses a fixed width with overflow:hidden so it never pushes the map.
+*/
+
+/* Map section: takes all remaining space, never shrinks below 0 */
+#map-section {
+  flex: 1 1 0;          /* grow AND shrink freely */
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #111;
+  position: relative;
 }
 
-/* ── LANDSCAPE WRAPPER ─────────── */
-.wrap{
-  display:flex;flex-direction:row;
-  width:100vw;height:100vh;
-  overflow:hidden;
+/* The area that holds the circuit — fills map-section vertically */
+#circuit-area {
+  flex: 1 1 0;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
 }
 
-/* ── LEFT: CIRCUIT PANEL ───────── */
-.circuit-panel{
-  flex:1;
-  background:var(--surface-low);
-  display:flex;flex-direction:column;
-  position:relative;overflow:hidden;
+/*
+  circuit-wrap: sized to whichever is smaller — full width OR full height
+  constrained to 121:85 ratio. Uses padding-top trick as fallback but
+  actually we just let the browser pick via the img contain sizing.
+  We make it position:relative so the SVG overlay can be absolute inside it.
+*/
+#circuit-wrap {
+  position: relative;
+  /* fill the available area but never exceed it in either dimension */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.circuit-header{
-  padding:20px 24px 0;
-  display:flex;justify-content:space-between;align-items:flex-start;
-  flex-shrink:0;
-  z-index:10;
-}
-.circuit-title{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:clamp(1.4rem,3vw,2.4rem);
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:-0.03em;
-  line-height:1;
-}
-.circuit-title span{color:var(--red)}
-.live-tag{
-  display:flex;align-items:center;gap:8px;
-  margin-top:10px;
-}
-.live-dot{
-  width:10px;height:10px;background:var(--red);
-  animation:blink 1.1s ease-in-out infinite;
-}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.2}}
-.live-label{
-  font-size:0.55rem;font-weight:900;letter-spacing:0.2em;
-  text-transform:uppercase;color:var(--on-60);
+/* Inner container that actually has the 121:85 ratio and holds both layers */
+#circuit-inner {
+  position: relative;
+  /* Take as much space as possible without overflowing */
+  max-width: 100%;
+  max-height: 100%;
+  /* aspect-ratio keeps the box at 121:85 */
+  aspect-ratio: 121 / 85;
+  /* In each dimension, don't exceed the parent */
+  width: 100%;        /* try to be full width … */
+  height: 100%;       /* … and full height; aspect-ratio + object-fit resolves the conflict */
 }
 
-.race-info{
-  text-align:right;
-  font-family:'Space Grotesk',sans-serif;
+/* Background: the original SVG circuit file */
+#circuit-bg {
+  position: absolute;
+  inset: 0;
+  background: #111;
 }
-.race-info .round{
-  font-size:0.5rem;font-weight:700;letter-spacing:0.2em;
-  text-transform:uppercase;color:var(--on-40);
-}
-.race-info .gp-name{
-  font-size:1rem;font-weight:900;text-transform:uppercase;
-  letter-spacing:-0.02em;color:var(--on);
-}
-.race-info .venue{
-  font-size:0.5rem;font-weight:600;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--on-40);margin-top:2px;
+#circuit-bg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* invert dark fills to show as subtle asphalt lines on dark bg */
+  filter: invert(1) brightness(0.15);
 }
 
-/* ── CIRCUIT MAP ───────────────── */
-.circuit-map{
-  flex:1;
-  position:relative;
-  display:flex;align-items:center;justify-content:center;
-  padding:12px 20px;
+/* Dot overlay: identical coordinate space to the image */
+#dots-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
 }
 
-#circuit-svg-wrap{
-  position:relative;
-  width:100%;height:100%;
-  display:flex;align-items:center;justify-content:center;
+/* Sidebar: fixed width, never shrinks the map */
+#sidebar {
+  flex: 0 0 260px;   /* no grow, no shrink */
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-left: 1px solid #1a1a1a;
+  background: #0f0f0f;
 }
 
-/* The actual SVG overlay sits on top of the track image */
-#overlay-svg{
-  position:absolute;
-  top:0;left:0;width:100%;height:100%;
-  pointer-events:none;
-  filter:drop-shadow(0 0 12px rgba(225,6,0,0.15));
+/* On narrow screens (portrait mobile) sidebar collapses fully */
+@media (max-width: 640px) {
+  #sidebar { display: none; }
 }
 
-/* Track image rendered as SVG background */
-#track-img{
-  max-width:80%;
-  max-height:80%;
-  width:auto;height:auto;
-  opacity:0.18;
-  filter:invert(1) brightness(2);
-}
+/* Animations */
+@keyframes ring-pulse{0%,100%{r:6;opacity:.12}50%{r:9;opacity:.03}}
+.leader-ring{animation:ring-pulse 1.9s ease-in-out infinite}
+@keyframes ghost-pulse{0%,100%{opacity:.18}50%{opacity:.5}}
+.ghost-dot{animation:ghost-pulse 2.5s ease-in-out infinite}
 
-/* ── RIGHT: LEADERBOARD ─────────── */
-.leaderboard-panel{
-  width:300px;
-  flex-shrink:0;
-  background:var(--surface-mid);
-  display:flex;flex-direction:column;
-  border-left:1px solid var(--on-08);
-}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:#0a0a0a}
+::-webkit-scrollbar-thumb{background:#252525}
+.rank-row{transition:filter .12s}.rank-row:hover{filter:brightness(1.14)}
 
-.lb-header{
-  padding:16px 20px;
-  border-bottom:1px solid var(--on-08);
-  background:var(--surface-low);
-  display:flex;justify-content:space-between;align-items:center;
-  flex-shrink:0;
+/* Bottom nav */
+#bottom-nav{
+  display:flex;background:#0a0a0a;border-top:1px solid #1a1a1a;flex-shrink:0;
+  padding-bottom:env(safe-area-inset-bottom,0px);
 }
-.lb-title{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:0.8rem;font-weight:900;
-  text-transform:uppercase;letter-spacing:0.05em;
-  font-style:italic;
+#bottom-nav a{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:7px 4px 9px;gap:2px;font-family:'Space Grotesk',sans-serif;
+  font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  text-decoration:none;color:#333;transition:color .15s;
 }
-
-.lb-list{
-  flex:1;overflow-y:auto;
-}
-.lb-list::-webkit-scrollbar{width:2px}
-.lb-list::-webkit-scrollbar-track{background:transparent}
-.lb-list::-webkit-scrollbar-thumb{background:var(--on-20)}
-
-.lb-row{
-  display:flex;align-items:center;
-  padding:10px 16px;
-  gap:10px;
-  border-bottom:1px solid var(--on-08);
-  transition:background 0.1s;
-  cursor:default;
-}
-.lb-row:hover{background:var(--surface-high)}
-.lb-row.leader{
-  background:var(--surface-high);
-  border-left:3px solid var(--red);
-}
-.lb-rank{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:1.1rem;font-weight:900;font-style:italic;
-  width:24px;flex-shrink:0;
-  color:var(--on-40);
-}
-.lb-row.leader .lb-rank{color:var(--red-dim)}
-
-.lb-dot{
-  width:10px;height:10px;flex-shrink:0;
-}
-.lb-name{
-  flex:1;min-width:0;
-  font-family:'Space Grotesk',sans-serif;
-  font-size:0.78rem;font-weight:700;
-  text-transform:uppercase;letter-spacing:-0.01em;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
-}
-.lb-pts{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:0.95rem;font-weight:700;
-  flex-shrink:0;
-}
-.lb-gap{
-  font-size:0.5rem;font-weight:700;
-  letter-spacing:0.08em;
-  color:var(--on-40);
-  flex-shrink:0;
-  text-align:right;
-  min-width:36px;
-}
-.lb-gap.lead{color:var(--red-dim)}
-
-.lb-footer{
-  padding:14px 16px;
-  background:var(--surface-low);
-  border-top:1px solid var(--on-08);
-  flex-shrink:0;
-}
-.lb-footer-label{
-  font-size:0.45rem;font-weight:900;
-  letter-spacing:0.2em;text-transform:uppercase;
-  color:var(--blue);margin-bottom:4px;
-}
-.lb-footer-val{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:0.85rem;font-weight:700;
-  text-transform:uppercase;letter-spacing:-0.01em;
-}
-
-/* ── CAR LABELS on track ─────── */
-.car-label{
-  position:absolute;
-  display:flex;align-items:center;gap:4px;
-  transform:translate(-50%,-50%);
-  pointer-events:none;
-  white-space:nowrap;
-}
-.car-dot{
-  width:11px;height:11px;
-  flex-shrink:0;
-}
-.car-dot.leader-dot{
-  width:13px;height:13px;
-  box-shadow:0 0 0 2px rgba(255,180,168,0.4);
-}
-.car-name{
-  font-family:'Space Grotesk',sans-serif;
-  font-size:0.5rem;font-weight:900;
-  text-transform:uppercase;letter-spacing:0.06em;
-  color:var(--on);
-  text-shadow:0 0 6px rgba(0,0,0,0.9), 0 0 12px rgba(0,0,0,0.8);
-}
-.car-pts-badge{
-  font-size:0.42rem;font-weight:700;
-  color:var(--on-60);
-  text-shadow:0 0 6px rgba(0,0,0,0.9);
-}
-
-/* ── PULSE RING for leader ─────── */
-@keyframes pulseRing{
-  0%{transform:translate(-50%,-50%) scale(1);opacity:0.6}
-  100%{transform:translate(-50%,-50%) scale(2.2);opacity:0}
-}
-.pulse-ring{
-  position:absolute;
-  width:13px;height:13px;
-  border:2px solid var(--red-dim);
-  border-radius:50%;
-  animation:pulseRing 1.4s ease-out infinite;
-  pointer-events:none;
-  transform-origin:center;
-}
+#bottom-nav a.active,#bottom-nav a:hover{color:#e10600}
+#bottom-nav .material-symbols-outlined{font-size:20px}
 </style>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{
+  fontFamily:{headline:["Space Grotesk"],body:["Inter"]},
+  borderRadius:{DEFAULT:"0px",lg:"0px",xl:"0px",full:"9999px"}
+}}}
+</script>
 </head>
-<body>
+<body class="bg-[#111] text-[#e5e2e1] font-body h-[100dvh] overflow-hidden flex flex-col">
 
-<div class="wrap">
+<!-- HEADER -->
+<header class="bg-[#0a0a0a] flex items-center gap-3 px-4 py-3 flex-shrink-0 border-b border-[#1a1a1a]">
+  <a href="results.html" class="text-[#e10600] flex items-center active:opacity-60 transition-opacity">
+    <span class="material-symbols-outlined" style="font-size:22px">arrow_back</span>
+  </a>
+  <div class="flex flex-col leading-none">
+    <span class="text-[17px] font-black text-[#e5e2e1] tracking-tight font-headline">Full Grid Sweep</span>
+    <span id="hdr-sub" class="text-[8px] font-bold uppercase tracking-[.15em] text-[#3a3a3a] mt-0.5">Race Map</span>
+  </div>
+  <div class="ml-auto flex items-center gap-2">
+    <div class="flex items-center gap-1.5 px-2 py-0.5 bg-[#e10600]/10">
+      <div class="w-1.5 h-1.5 bg-[#e10600] rounded-full animate-pulse"></div>
+      <span class="text-[7px] font-black uppercase tracking-widest text-[#e10600] font-headline">Live</span>
+    </div>
+    <button onclick="init()" class="p-1.5 hover:bg-[#1a1a1a] active:scale-95 transition-all">
+      <span class="material-symbols-outlined text-[#444]" style="font-size:18px">refresh</span>
+    </button>
+    <button class="p-1.5 hover:bg-[#1a1a1a] active:scale-95 transition-all">
+      <span class="material-symbols-outlined text-[#444]" style="font-size:18px">settings</span>
+    </button>
+  </div>
+</header>
 
-  <!-- ── LEFT: CIRCUIT ── -->
-  <section class="circuit-panel">
-    <div class="circuit-header">
-      <div>
-        <div class="circuit-title">
-          <span id="gp-label">Japanese GP:</span><br/>
-          Live Track Position
-        </div>
-        <div class="live-tag">
-          <div class="live-dot"></div>
-          <span class="live-label" id="live-label">Live Results · Round 3</span>
+<!-- MAIN ROW: map + sidebar -->
+<div class="flex-1 flex flex-row overflow-hidden min-h-0">
+
+  <!-- MAP SECTION -->
+  <section id="map-section">
+
+    <!-- Thin info strip above circuit -->
+    <div class="flex items-center justify-between px-4 py-2 bg-[#0d0d0d] border-b border-[#1a1a1a] flex-shrink-0">
+      <div class="flex items-center gap-2 min-w-0">
+        <span id="race-flag" class="text-base leading-none flex-shrink-0">🏁</span>
+        <div class="min-w-0">
+          <p id="race-title" class="font-headline font-black uppercase tracking-tighter text-[13px] leading-none truncate">RACE MAP</p>
+          <p id="race-meta" class="text-[7px] font-bold uppercase tracking-widest text-[#3a3a3a] mt-0.5 truncate">Loading…</p>
         </div>
       </div>
-      <div class="race-info">
-        <div class="round" id="round-label">ROUND 3 OF 24</div>
-        <div class="gp-name" id="venue-name">Suzuka Circuit</div>
-        <div class="venue" id="venue-country">Suzuka, Japan</div>
+      <div class="flex gap-1 flex-shrink-0 ml-2">
+        <div class="bg-[#1a1a1a] border-l-2 border-[#e10600] px-2 py-1 text-center">
+          <p class="text-[6px] uppercase tracking-widest text-[#444]">RD</p>
+          <p id="round-badge" class="font-headline font-black text-[14px] leading-none">—</p>
+        </div>
+        <div class="bg-[#1a1a1a] px-2 py-1 text-center">
+          <p class="text-[6px] uppercase tracking-widest text-[#444]">LEAD</p>
+          <p id="leader-badge" class="font-headline font-black text-[14px] leading-none text-[#e10600]">—</p>
+        </div>
       </div>
     </div>
 
-    <div class="circuit-map">
-      <div id="circuit-svg-wrap">
-        <!-- Track image — will be set by JS as inline SVG -->
-        <div id="track-img-container"></div>
-        <!-- Cars overlaid absolutely -->
-        <div id="cars-container" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none"></div>
+    <!-- Circuit area: fills remaining height of map-section -->
+    <div id="circuit-area">
+      <div id="circuit-wrap">
+        <div id="circuit-inner">
+
+          <!-- Circuit image layer -->
+          <div id="circuit-bg">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIxIiBoZWlnaHQ9Ijg1IiB2aWV3Qm94PSIwIDAgMTIxIDg1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMzA0Ml80MTkpIj4KPHBhdGggZD0iTTQ3LjE0IDI2LjE0MTNDNDcuMjQyNSAyNS45MTMxIDQ4Ljc4MzQgMjIuNDkwNiA0OS4wMTU4IDIxLjk5ODRDNDkuMTA4NSAyMS44MDExIDQ5LjExOTkgMjEuNjQxNCA0OS4xMDUyIDIxLjYwMzlDNDkuMTAwNCAyMS41OTU4IDQ5LjA2MTMgMjEuNTU5OSA0OC45NjcxIDIxLjUxOTJDNDguODc3NyAyMS40ODAxIDQ4Ljc3ODUgMjEuNDM3NyA0OC42NjQ3IDIxLjU4MTFDNDguMzkzMyAyMi4wMDgxIDQ0LjY4ODggMjcuODM2MyA0NC4xMTY3IDI4LjYzMTZDNDMuMzkxNyAyOS42MzQgNDIuNTA3NSAzMC40NjM1IDQxLjE1ODMgMzEuNDA1NkMzOS42NTE1IDMyLjQ1ODQgMzcuNjU1NCAzMi43MjI0IDM3LjM0ODIgMzIuNzU4M0MzNi45Nzc2IDMyLjgyMDIgMzMuODY2NSAzMy4zMTI0IDMxLjI0MjkgMzIuNzgyOEMyOC43MTIxIDMyLjI3NDMgMjYuMDc1NiAzMS4xNzI1IDI1LjczNDIgMzEuMDI3NUMyNS4zOTc4IDMwLjkwODUgMjMuMTg4NyAzMC4wODM4IDIwLjg1NzggMjguMTQ0M0MxOC4zMzY3IDI2LjA0MzUgMTYuNzc0NiAyMi4zNTIgMTYuNzA5NiAyMi4xOTU2QzE2LjY4MzYgMjIuMTMzNiAxNC4zOTAxIDE2LjU1ODEgMTMuOTUyOCAxNS41ODE4QzEzLjczODMgMTUuMDk5NCAxMy41Njc2IDE0LjcxOTcgMTIuODAzNiAxNC4xNTI1QzEyLjQzNzkgMTMuODgxOSAxMS4wMDEgMTMuODE1MSA5LjkzOTUzIDEzLjkyNDNDOS45MzE0MSAxMy45MjQzIDkuOTIzMjggMTMuOTI0MyA5LjkxNTE1IDEzLjkyNTlDOC44MjkzNCAxNC4wMTQgNy4wNTQzMiAxNC40MTY1IDYuNTA5NzkgMTUuMDM1OEM1LjgwNTk2IDE1LjgzNzcgNS44NDQ5OCAxNi44OTM4IDUuODUxNDggMTcuMDIwOUM1Ljg4MDc0IDE3LjIwNjcgNi4xOTc3IDE5LjAwMTEgNy45ODczNCAyMC40NjMxQzEwLjMzOTQgMjIuMzg0NiAxMi41NTgyIDI0LjA0MjEgMTUuMTg2NiAyNS44Mzk4QzE3Ljc5NTQgMjcuNjI0NCAyMi44NTM5IDMwLjAxNTMgMjMuMzA0MSAzMC4yMjcyTDMyLjI2NTQgMzMuNjMwMkw0MC44ODA0IDM2LjcwODlMNDguNDk1NyAzOS40MDc5QzQ3LjcwOSAzNS4zMTcxIDQ2Ljg2NTMgMzAuOTAwMyA0Ni42OTc5IDI5LjkwNzhDNDYuMzU4MiAyNy45MTEzIDQ3LjA0MDkgMjYuMzUzMiA0Ny4xNCAyNi4xMzk3VjI2LjE0MTNaIiBmaWxsPSIjMTUxNTFFIi8+CjxwYXRoIGQ9Ik0xMTguNTI5IDYwLjQxMTJDMTE2LjY1OCA1OC4xMzYgMTA1LjA4IDQzLjkwNjIgMTA0Ljk2MSA0My43NjExTDkzLjU5MjcgMjkuODAzNUM5My4xNDQxIDI5LjIzMTQgOTAuODc5OCAyNi40NzIyIDg3LjcxNjcgMjQuODI5M0M4NC4wMTU1IDIyLjkwOTQgODAuNTE0MiAyMi40MzAzIDc3LjMxMDQgMjMuNDAzMkM3Ni45NzIzIDIzLjUwNTkgNzYuMTcwOSAyMy43NDg4IDc0Ljc4OTMgMjQuNjU4MkM3My4wMjQgMjMuNzA5NiA3MC44MzI5IDIzLjgwNTggNjkuMDU2MyAyNC45NzkzTDY4Ljg2NzcgMjUuMTAzMUM2OC4xMzc5IDI1LjU3NzQgNjYuNzgwNiAyNi40NjI0IDY1LjcyMDggMjcuNDMzN0w2MS4zMTc0IDMxLjQ3MjRMNTguNTAwNSAzMy45OTIxQzU4LjQ0MzYgMzQuMDQyNiA1OC4zNzY5IDM0LjA5NDcgNTguMzA1NCAzNC4xNDM2QzU3LjA4NjMgMzQuOTgxNCA1NS44Mjk4IDM1LjcwOTkgNTUuMDIzNiAzNi4wNDg5QzU0LjY1OTUgMzYuMjAyMSA1NC4yODA3IDM2LjMzOSA1My44OTA2IDM2LjQ2MjhDNTMuMDg5MyAzMi4yODU3IDUyLjU4MjEgMjkuNTk2NSA1Mi40NjgzIDI4LjkyMzRDNTIuNDM3NSAyOC43NDU3IDUyLjQ3NDggMjguNTgyOCA1Mi40OTExIDI4LjUyMjRDNTMuMTIwMSAyNy4xMjczIDU0LjE1MjMgMjQuODM1OCA1NC4zMDg0IDI0LjUwNUM1NS4wNzU2IDIyLjg3NTIgNTUuMTczMSAyMS4xMTAxIDU0LjU4MTUgMTkuNTM1N0M1NC4wMTA5IDE4LjAxNjcgNTIuODQyMiAxNi44MDkxIDUxLjI5MzEgMTYuMTM2QzQ4LjE3MjIgMTQuNzgxNiA0NS4xNDIzIDE2LjIzODYgNDMuNzYyMyAxOC4zODAyQzQzLjc1NTggMTguMzkgNDMuNzUwOSAxOC4zOTk3IDQzLjc0NDQgMTguNDA3OUM0MS44NzAzIDIxLjM1NzggMzkuNzIxNCAyNC43MDU1IDM5LjM3ODQgMjUuMTkxMUMzOS4yMjA4IDI1LjQwOTUgMzguOTI2NSAyNS44MTcgMzcuODE2MyAyNi41OTI4QzM3LjYzMjcgMjYuNzEzNCAzNy4wODk4IDI2Ljg3NjQgMzYuNzAyOSAyNi45Mjg1QzM2LjU2OCAyNi45Mzk5IDM2LjUzNzEgMjYuOTQ2NCAzNi4zOTI0IDI2Ljk3MjVDMzUuNDg3IDI3LjEyNDEgMzMuNjAxNSAyNy4yNzU3IDMyLjM5NTQgMjcuMDMyOEMzMC43MDQ5IDI2LjY5MjIgMjguNjUzNiAyNS45MDAxIDI4LjAwOTkgMjUuNjI0N0MyNy44NjM2IDI1LjU2MTEgMjcuODAzNSAyNS41MzUgMjcuNjYyIDI1LjQ4OTRDMjcuNDY3IDI1LjQxNDQgMjYuMDY0MiAyNC44NTM4IDI0LjU5OTYgMjMuNjM0N0MyMy41MzgyIDIyLjc0OTcgMjIuNDY3IDIwLjc2NjIgMjIuMTA2MiAxOS45MjUyQzIxLjgxNjggMTkuMjIxMiAxOS43NTA5IDE0LjIwNjMgMTkuMjk0MSAxMy4xODQ0QzE4Ljc2OTEgMTIuMDA3NyAxOC4wNDA5IDEwLjczOTcgMTYuMjg3IDkuNDM5MUMxNC4yNzk1IDcuOTUxMDkgMTEuNDQzMSA3Ljg3Nzc1IDkuMzkzMzggOC4wODQ3M0M3Ljg1ODkzIDguMjEzNDkgNC4yMjExMyA4Ljc2NzYyIDIuMTE5NCAxMS4xNjAyQy0wLjIyNzc4MiAxMy44MzMgLTAuMDMxMDk5OCAxNy4wMjI2IDAuMDMyMjkzNSAxNy42MzU0QzAuMDM1NTQ0NSAxNy42NjYzIDAuMDM4Nzk1NCAxNy42OTU3IDAuMDQyMDQ2MyAxNy43MjY2QzAuMTI4MTk2IDE4LjQzNTYgMC43NDA5OTkgMjIuMTE1NyA0LjI5MjY1IDI1LjAxNTFDNi43NzYzNyAyNy4wNDQyIDkuMTIwMyAyOC43OTQ2IDExLjg4ODUgMzAuNjg4NUMxNC45NDc2IDMyLjc4MTEgMjAuMjY5NCAzNS4yODQ1IDIwLjg2NTkgMzUuNTYzMkMyMC45NzQ5IDM1LjYxMzcgMjEuMDg1NCAzNS42NjEgMjEuMTk1OSAzNS43MDM0TDMwLjE5OTQgMzkuMTIyN0MzMC4yMjg3IDM5LjEzNDEgMzAuMjU5NSAzOS4xNDU1IDMwLjI4ODggMzkuMTU1M0wzOC45MjQ5IDQyLjI0MjFMNDUuNTE0NiA0NC41Nzc2QzQ1LjYwMjQgNDUuMDM3MiA0NS42ODg1IDQ1LjQ3NzMgNDUuNzY4MiA0NS44OTI5TDQ1Ljc4NzcgNDYuMDAwNUM0NS45ODExIDQ3LjI2MzUgNDYuNTg5IDQ4LjQ1NDkgNDcuNDk5MyA0OS4zNTNDNDguNzU3NCA1MC41OTY1IDUwLjUxNDUgNTEuMjI3MiA1Mi40NDg4IDUxLjEzNzZDNTQuMDMwNCA1MS4wNjEgNTkuMjA1OSA1MC42MTEyIDYwLjAzOTggNTAuNTM3OEM2MS4xODc0IDUwLjQ1OTYgNjIuOTQyOSA0OS45NzM5IDY0LjUzNTggNDguMDQ3NUM2NS4xNDU0IDQ3LjMxMDggNjkuNDI1MiA0Mi4xNTkgNjkuOTI3NSA0MS41NTQzQzcwLjE5OSA0MS4yNTYxIDcxLjA2NTMgNDAuNDI4MiA3MS45MTU1IDQwLjA3NjFDNzIuMjAxNSAzOS45NTcxIDcyLjQ2MTYgMzkuODQ2MyA3Mi43MDM4IDM5Ljc0MkM3My45ODk2IDM5LjE5MTEgNzQuMDk1MiAzOS4xNDU1IDc1Ljk2OTQgMzkuMjA5MUM3Ny4wNzE0IDM5LjI0NjUgNzguNzE5NyAzOS45NzE4IDc5LjkxMjggNDAuNjkwNkM3OS41OTU4IDQxLjU2NTggNzkuMTI2IDQyLjg4NzUgNzguODE1NiA0My43NjZMNzguNjUzIDQ0LjIyNEM3OC4yOTU0IDQ1LjIzNzcgNzguMTI0OCA0Ni4yODczIDc4LjE0NDMgNDcuMzUxNkM3OC4xODMzIDQ5LjIwNzkgNzguNzQ4OSA1MC45NDUzIDc5Ljc4MTEgNTIuMzc5NUM4MS41OTM1IDU0Ljg5MjYgODMuODM2NyA1NS44MiA4NC40Nzg3IDU2LjA0MzNDODUuMDU0MSA1Ni4yNDM4IDg2LjU1NDQgNTYuNzA5OSA4OC4wNzEgNTYuNzEzMUM4OC41NTg2IDU2LjcxMzEgODkuMzQzNyA1Ni43MzYgODkuNzU1IDU2Ljc0OUM4OS43NzI5IDU2Ljc1MzkgODkuNzg5MSA1Ni43NTg4IDg5LjgwNTQgNTYuNzYzN0M5MC4xNjE0IDU4LjAzMTYgOTAuODMyNyA2MC41MzM0IDkwLjg0MDggNjAuNTYxMUM5MC44NTg3IDYwLjYyOTYgOTAuODc4MiA2MC42OTY0IDkwLjg5OTMgNjAuNzYzMkM5MS43NjA4IDYzLjQ5OTYgOTQuMzk0MSA2Ni40MyA5OC4zMzI2IDY2LjgxM0M5OC45NTM1IDY2Ljg3MzMgOTkuNTEyNyA2Ni45MDEgOTkuOTYyOSA2Ni45MjM4QzEwMC4wOTEgNjYuOTMwNCAxMDAuMjM4IDY2LjkzNjkgMTAwLjM3OSA2Ni45NDVDMTAyLjAzMSA2OS40MjcyIDEwNS4yMTggNzQuNDc2MyAxMDUuMjQ3IDc0LjUyMzZDMTA2LjI4MSA3Ni4xNjgxIDEwOC42NTggNzcuOTk4NCAxMTIuMDYgNzcuOTk4NEMxMTIuMjYgNzcuOTk4NCAxMTIuNDY0IDc3Ljk5MTggMTEyLjY3MiA3Ny45Nzg4QzExNi40ODMgNzcuNzM3NiAxMTkuMDI1IDc0LjkzMTEgMTE5Ljg1MiA3Mi4yNTQ5QzExOS44NTUgNzIuMjQzNSAxMTkuODU5IDcyLjIzMDUgMTE5Ljg2NCA3Mi4yMTkxTDEyMC42ODYgNjkuNDg5MkMxMjAuNjkxIDY5LjQ3MjkgMTIwLjY5NiA2OS40NTQ5IDEyMC43MDEgNjkuNDM4NkMxMjEuMzMxIDY3LjI1OCAxMjEuMTQzIDYzLjU4NiAxMTguNTMyIDYwLjQwNzlMMTE4LjUyOSA2MC40MTEyWk0xMTYuOTUxIDY4LjM1MTZMMTE2LjEyNyA3MS4wOTEyQzExNi4wODkgNzEuMjEzNSAxMTUuMjI2IDczLjg5OTQgMTEyLjQyNSA3NC4wNzdDMTEyLjMgNzQuMDg1MiAxMTIuMTggNzQuMDg4NSAxMTIuMDYxIDc0LjA4ODVDMTEwLjExNyA3NC4wODg1IDEwOC45NDUgNzMuMDczMSAxMDguNTQ3IDcyLjQzOTFDMTA4LjUxMSA3Mi4zODIgMTA0LjgxMiA2Ni41MjQ1IDEwMy4yNzIgNjQuMjUxQzEwMi41MTggNjMuMTM0NiAxMDEuNzc3IDYzLjA5ODcgMTAwLjE1NiA2My4wMTcyQzk5LjcyNzIgNjIuOTk2IDk5LjIzOTYgNjIuOTcxNiA5OC43MTEzIDYyLjkxOTRDOTUuNjExNiA2Mi42MTk1IDk0LjY2MDcgNTkuNzEwMyA5NC42MjE3IDU5LjU4NjVDOTQuNjE2OCA1OS41NzM0IDk0LjYxMzUgNTkuNTU4OCA5NC42MTAzIDU5LjU0NTdDOTQuNjAyMSA1OS41MTQ4IDkzLjc3MTUgNTYuNDIzIDkzLjQ1NDYgNTUuMzIyOUM5My4yMTQgNTQuNDg4NSA5Mi45MDY4IDU0LjIwOTggOTIuMjk3MiA1My42NTczTDkyLjI2NDcgNTMuNjI3OUM5Mi4wMDE0IDUzLjM4ODMgOTEuMzQ5NiA1My4xMTYyIDkwLjU2NDUgNTIuOTE5QzkwLjM5NTQgNTIuODc2NiA5MC4yMTk5IDUyLjg1MjEgOTAuMDQxMSA1Mi44NDU2Qzg5LjcwNzkgNTIuODM1OCA4OC42OTY4IDUyLjgwMzIgODguMDcyNiA1Mi44MDMyQzg3LjA4NDMgNTIuODAzMiA4NS44OTQ1IDUyLjM5NzQgODUuNzYxMiA1Mi4zNTAyQzg1LjYwMDMgNTIuMjkzMSA4NC4xNDM5IDUxLjc1MiA4Mi45NDU5IDUwLjA4OTZDODIuMzgxOSA0OS4zMDQxIDgyLjA3MTQgNDguMzI5NCA4Mi4wNDg2IDQ3LjI3MDFDODIuMDM3MyA0Ni42ODMzIDgyLjEzMzIgNDYuMDk4MiA4Mi4zMzQ3IDQ1LjUyOTRMODIuNDk1NiA0NS4wNzhDODIuODA5NCA0NC4xOTQ2IDgzLjI4NCA0Mi44NTgyIDgzLjU5NjEgNDEuOTk2QzgzLjk5NDMgNDAuOTAwOCA4My45MTE0IDQwLjI4NDcgODMuNjQzMiAzOS4yMzE5QzgzLjU1MDYgMzguODY4NCA4My4xNjg2IDM4LjMzMzkgODIuNjQzNiAzNy44MzY4QzgyLjU0NiAzNy43NDM5IDgyLjQzODggMzcuNjU5MSA4Mi4zMjUgMzcuNTg1OEM4MS43NTc3IDM3LjIyMDcgNzguNzg3OSAzNS4zOTIxIDc2LjEwNzYgMzUuMzAwOEM3My4zNjU0IDM1LjIwOTUgNzIuNzY4OCAzNS40NjM4IDcxLjE3NzUgMzYuMTQ1QzcwLjk0ODMgMzYuMjQyOCA3MC43MDI5IDM2LjM0ODggNzAuNDMxNCAzNi40NjEyQzY4LjQ3OTIgMzcuMjcxMiA2Ni45OTE5IDM4Ljk4NTggNjYuOTc1NyAzOS4wMDM3QzY2Ljk3NTcgMzkuMDAzNyA2Mi4xODcgNDQuNzY4MyA2MS41NDE3IDQ1LjU1MDZDNjAuNzcxMiA0Ni40ODEyIDYwLjA2NTggNDYuNjMxMiA1OS43Mjc3IDQ2LjYzOTNDNTkuMTcwMiA0Ni42ODgyIDUzLjc5OCA0Ny4xNTYgNTIuMjcxNyA0Ny4yMjkzQzUwLjU1ODQgNDcuMzA3NiA0OS43OTEyIDQ2LjI5NTQgNDkuNjUzIDQ1LjQwMjNDNDkuNjQxNiA0NS4zMzA2IDQ5LjYzMTkgNDUuMjY4NyA0OS42MjA1IDQ1LjIwNjdMNDkuNjA5MSA0NS4xNDQ4QzQ5LjQzMDMgNDQuMjIwNyA0OS4xOTYzIDQzLjAwODEgNDguOTM5NCA0MS42NzE3QzQ4LjQ5NDEgNDEuNDk4OSA0OC4xMjM1IDQxLjM1MjMgNDcuOTc1NSA0MS4yOTM2QzQ3Ljk2MjUgNDEuMjkwMyA0Ny45NTEyIDQxLjI4NTQgNDcuOTM4MiA0MS4yODA1TDQwLjIzNTEgMzguNTUwNkwzMS42MDg3IDM1LjQ2ODdDMzEuNjA4NyAzNS40Njg3IDMxLjU5NzMgMzUuNDYzOCAzMS41OTA4IDM1LjQ2MjFMMjIuNTg3MyAzMi4wNDI4QzIyLjU2NDYgMzIuMDM0NyAyMi41NDM0IDMyLjAyNDkgMjIuNTIwNyAzMi4wMTUxQzIyLjI5NDcgMzEuOTA5MiAxNi45NDUzIDI5LjQwNTggMTQuMDk1OSAyNy40NTQ5QzExLjQyMiAyNS42MjQ3IDkuMTYwOTMgMjMuOTM2MiA2Ljc2NDk5IDIxLjk3ODhDNC4yNzk2NSAxOS45NDk3IDMuOTM2NjcgMTcuMzU1IDMuOTIzNjcgMTcuMjQ1OEMzLjkyMzY3IDE3LjIzOTMgMy45MjM2NyAxNy4yMzQ0IDMuOTIyMDQgMTcuMjI3OUMzLjkxMzkyIDE3LjE0ODEgMy43MzM0OSAxNS4yNDkzIDUuMDU2NjIgMTMuNzQzNEM2LjMyMjg2IDEyLjMwMjcgOS4zNTc2MiAxMi4wMTA5IDkuNzYwNzMgMTEuOTc4M0MxMC40Nzc2IDExLjkwNSAxMi44Mzc3IDExLjczNzEgMTMuOTc1NiAxMi41ODE0QzE1LjA2MTQgMTMuMzg4MSAxNS40MTkgMTQuMDU0NyAxNS43NDQxIDE0Ljc4MzJDMTYuMTkyNyAxNS43ODU1IDE4LjQyNjEgMjEuMjE0NCAxOC41MjIgMjEuNDQ1OEMxOC41MzM0IDIxLjQ3MzYgMTkuOTY4NyAyNC44NTA1IDIyLjExNzYgMjYuNjQxN0MyNC4yOTg5IDI4LjQ1ODkgMjYuMzg5MyAyOS4xODI1IDI2LjQxMDQgMjkuMTkwN0MyNi40MzQ4IDI5LjE5ODggMjYuNDU5MiAyOS4yMDg2IDI2LjQ4MzYgMjkuMjE4NEMyNi41MDk2IDI5LjIyOTggMjkuMTg4NCAzMC4zNzM5IDMxLjY0MTIgMzAuODY3N0MzNC4wMTI3IDMxLjM0NTMgMzcuMDI5NiAzMC44MzM1IDM3LjA2MDUgMzAuODI4NkMzNy4wODMzIDMwLjgyNTQgMzcuMTA2IDMwLjgyMjEgMzcuMTI4OCAzMC44MTg4QzM3LjE0NSAzMC44MTcyIDM4Ljg3NzggMzAuNjI4MiA0MC4wNTYyIDI5LjgwMzVDNDEuNTA5NCAyOC43ODgxIDQyLjExNDEgMjguMDg4OSA0Mi41NDk3IDI3LjQ4NTlDNDMuMDA0OCAyNi44NTM1IDQ1Ljk1MTggMjIuMjM0NyA0Ny4wNDc0IDIwLjUwODdDNDcuMzkyIDE5Ljk3NTggNDguMzk0OSAxOS4xMzMyIDQ5Ljc1NTQgMTkuNzI0OEM1MC40ODY5IDIwLjA0MjYgNTAuODA1NSAyMC41NDYyIDUwLjk0MzYgMjAuOTE0NUM1MS4yMzQ2IDIxLjY4ODcgNTAuOTc0NSAyMi40NDk4IDUwLjc5MjUgMjIuODM0NEM1MC41NjQ5IDIzLjMxNjkgNDguOTQ0MyAyNi45MTcxIDQ4LjkyODEgMjYuOTUzQzQ4LjkyMzIgMjYuOTYyNyA0OC45MTgzIDI2Ljk3MjUgNDguOTEzNCAyNi45ODIzQzQ4LjkxMTggMjYuOTg3MiA0OC4zODUyIDI4LjEyMzEgNDguNjMyMiAyOS41ODAyQzQ4LjgxNDMgMzAuNjU1OSA0OS44MTA3IDM1Ljg2MzEgNTAuNjUyNyA0MC4yMzQyQzUwLjg3NyA0MC4zMTkgNTEuMDkzMiA0MC4zOTg4IDUxLjI4NjYgNDAuNDY4OUM1MS42MjYzIDQwLjU5MTEgNTEuOTk4NiA0MC42ODA4IDUyLjM2MTEgNDAuNzI2NEM1Mi41OTAyIDQwLjc1NTcgNTIuODIyNyA0MC43NDc2IDUzLjA1MTkgNDAuNzAyQzU0LjI4NTYgNDAuNDYyNCA1NS40NTc2IDQwLjExMDMgNTYuNTQxOCAzOS42NTU2QzU4LjA1MTggMzkuMDIxNiA1OS44MjY4IDM3Ljg0NjUgNjAuNTIwOSAzNy4zNzA2QzYwLjczMjIgMzcuMjI1NiA2MC45MzIyIDM3LjA2OTEgNjEuMTEyNiAzNi45MDYyTDYzLjk0NzQgMzQuMzcwMkw2OC4zNjM4IDMwLjMyMDFDNjkuMTg2MyAyOS41NjU1IDcwLjM2OCAyOC43OTYzIDcxLjAwMzYgMjguMzgyM0w3MS4yMTMzIDI4LjI0NTRDNzEuOTY0MiAyNy43NDk5IDcyLjc1NDIgMjcuODk5OSA3My4yMDQ1IDI4LjI2OThDNzMuMjE1OCAyOC4yNzk2IDczLjIyNTYgMjguMjg3OCA3My4yMzcgMjguMjk3NUM3My4yNjMgMjguMzIyIDczLjg5MzcgMjguODg5MiA3NC41ODYxIDI5LjU1OUM3NC42NDMgMjkuNjEyOCA3NC42NTYgMjkuNjEyOCA3NC43MTYxIDI5LjU5NjVDNzQuNzY0OSAyOS41ODM1IDc0LjgxNTMgMjkuNTU1NyA3NC44NjQxIDI5LjUxNUM3NS43MzUzIDI4Ljc3MTggNzcuMzU1OSAyNy40Nzk0IDc4LjQ1NDcgMjcuMTQ2OUM4MC42NTQgMjYuNDc4NyA4My4xNzAyIDI2Ljg2ODIgODUuOTM4NCAyOC4zMDI0Qzg4LjUwMTggMjkuNjM0IDkwLjM4NTcgMzIuMDIxNiA5MC41NTggMzIuMjQ0OUwxMDEuOTUzIDQ2LjIzNTFDMTAyLjA3IDQ2LjM3ODYgMTEzLjY1NCA2MC42MTQ5IDExNS41MzIgNjIuODk4MkMxMTcuNzMzIDY1LjU3NzYgMTE2Ljk5NiA2OC4yMzkxIDExNi45NjQgNjguMzUxNkgxMTYuOTUxWiIgZmlsbD0iIzE1MTUxRSIvPgo8cGF0aCBkPSJNMTAwLjQyOCA0Ny40NzIyTDg5LjAyNTIgMzMuNDcyMkM4OS4wMjUyIDMzLjQ3MjIgODkuMDEyMiAzMy40NTU5IDg5LjAwNzMgMzMuNDQ5M0M4OC45OTEgMzMuNDI4MiA4Ny4yNjY0IDMxLjIwMzUgODUuMDI4MSAzMC4wMzk4QzgyLjcyODEgMjguODQ2OCA4MC43MDI4IDI4LjUwMjkgNzkuMDA3NCAyOS4wMTc5Qzc4LjQ4NTYgMjkuMTc2IDc3LjMyMzQgMjkuOTc0NiA3Ni4xMTczIDMxLjAwM0M3NS44NDI2IDMxLjIzNzcgNzUuNTIwNyAzMS40MDcyIDc1LjE4NTkgMzEuNDkxOUM3NC40NjQyIDMxLjY3NzcgNzMuNzY1MiAzMS40OTE5IDczLjIyMjMgMzAuOTY3MkM3Mi43OTk3IDMwLjU1ODEgNzIuMzkzMyAzMC4xODE2IDcyLjE1MTIgMjkuOTU5OUM3Mi4xMjAzIDI5Ljk3OTUgNzIuMDg5NCAzMC4wMDA3IDcyLjA1NTIgMzAuMDIxOUM3MS40NjY4IDMwLjQwNDkgNzAuMzcyOSAzMS4xMTcxIDY5LjY2OTEgMzEuNzYyNUw2NS4yNDQ1IDM1LjgyMDdMNjIuNDAxNiAzOC4zNjMyQzYyLjE1OTQgMzguNTggNjEuODk0NCAzOC43ODg2IDYxLjYxMzIgMzguOTgyNUM2MC42OSAzOS42MTY1IDU4LjkwMDMgNDAuNzgwMiA1Ny4yODQ2IDQxLjQ1OThDNTYuMDc4NSA0MS45NjY3IDU0Ljc3NjUgNDIuMzU3OCA1My40MTYgNDIuNjIxOUM1Mi45ODUyIDQyLjcwNjYgNTIuNTQzMSA0Mi43MjI5IDUyLjEwNTkgNDIuNjY3NUM1MS43NTY0IDQyLjYyMzUgNTEuNDA4NSA0Mi41NTE4IDUxLjA3MDQgNDIuNDU1NkM1MS4yMzk1IDQzLjMzNDEgNTEuMzkyMyA0NC4xMjQ1IDUxLjUxNzQgNDQuNzc0OEw1MS41Mjg4IDQ0LjgzMzVDNTEuNTQ1MSA0NC45MTY2IDUxLjU1OTcgNDUuMDA0NiA1MS41NzI3IDQ1LjA5MUM1MS42MDg1IDQ1LjI5MTUgNTIuMDc4MiA0NS4yODAxIDUyLjE3MjUgNDUuMjc1MkM1My43MTAyIDQ1LjIwMDIgNTkuNTMyNiA0NC42OTE3IDU5LjU5MTEgNDQuNjg2OEM1OS41OTc2IDQ0LjY4NjggNTkuNjAyNSA0NC42ODY4IDU5LjYwOSA0NC42ODY4QzU5LjY2MjcgNDQuNjYwNyA1OS44MTM4IDQ0LjU2OTUgNjAuMDM0OSA0NC4zMDIyQzYwLjY4MzUgNDMuNTE4MyA2NS40ODE4IDM3Ljc0MjIgNjUuNDgxOCAzNy43NDIyQzY1LjU2MzEgMzcuNjQ3NyA2Ny4yODYxIDM1LjY0NzkgNjkuNjgwNCAzNC42NTU0QzY5Ljk0MzggMzQuNTQ2MiA3MC4xODQzIDM0LjQ0MzUgNzAuNDA3IDM0LjM0NzRDNzIuMjAxNSAzMy41Nzk3IDczLjEyMzIgMzMuMjQ0IDc2LjE2OTMgMzMuMzQ2N0M3OS4yNzg4IDMzLjQ1MjYgODIuNDcxMyAzNS4zNTk1IDgzLjM3NSAzNS45NDEzQzgzLjU5MTIgMzYuMDc5OCA4My43OTQ0IDM2LjI0MTIgODMuOTgxMyAzNi40MTcyQzg0LjU1NjcgMzYuOTYzMiA4NS4yOTE1IDM3LjgxMjMgODUuNTMwNCAzOC43NTExQzg1LjgzNzYgMzkuOTU4OCA4Ni4wMjQ1IDQxLjAxNDkgODUuNDI2NCA0Mi42NjU5Qzg1LjExNTkgNDMuNTIxNSA4NC42NDI5IDQ0Ljg1MzEgODQuMzMwOCA0NS43MzQ4TDg0LjE3MTUgNDYuMTg0NkM4NC4wNDk2IDQ2LjUzMDEgODMuOTkxMSA0Ni44ODM4IDgzLjk5NzYgNDcuMjMyNkM4NC4wMDczIDQ3LjY5MjIgODQuMTA2NSA0OC4zNjUzIDg0LjUyNTkgNDguOTQ3MUM4NS4zNjYyIDUwLjExNDEgODYuMzk4NCA1MC41MDM2IDg2LjQwODEgNTAuNTA4NUM4Ni42NzQ3IDUwLjYwMTQgODcuNTEzNSA1MC44NDkxIDg4LjA3MjYgNTAuODQ5MUM4OC42NTc4IDUwLjg0OTEgODkuNTA5NSA1MC44NzM2IDkwLjA5OTYgNTAuODkxNUM5MC40MTgyIDUwLjkwMTMgOTAuNzM1MiA1MC45NDUzIDkxLjAzOTEgNTEuMDIzNUM5MS44MzIzIDUxLjIyMjMgOTIuOTE4MSA1MS41ODU4IDkzLjU3MTYgNTIuMTc5TDkzLjYwNDEgNTIuMjA4NEM5NC4yODY4IDUyLjgyNzcgOTQuOTMyMSA1My40MTI4IDk1LjMyNzEgNTQuNzgxOEM5NS42MzU5IDU1Ljg1NTkgOTYuMzk1IDU4LjY3ODcgOTYuNDg0NCA1OS4wMTEyQzk2LjU0NDYgNTkuMTgwNyA5Ny4xNTc0IDYwLjgwNTYgOTguODk4MyA2MC45NzUxQzk5LjM4MSA2MS4wMjIzIDk5LjgyNDggNjEuMDQzNSAxMDAuMjUyIDYxLjA2NDdDMTAyLjA0IDYxLjE1NDMgMTAzLjU4NCA2MS4yMzA5IDEwNC44ODUgNjMuMTUyNUMxMDYuNDA4IDY1LjQgMTA5Ljk5NSA3MS4wNzY2IDExMC4xODcgNzEuMzgzQzExMC4yMzkgNzEuNDU0NyAxMTAuODI2IDcyLjIxOTEgMTEyLjMwMiA3Mi4xMjQ1QzExMy43NDkgNzIuMDMzMyAxMTQuMjQzIDcwLjU3MyAxMTQuMjY0IDcwLjUxMUwxMTUuMDc3IDY3LjgxMDVDMTE1LjExMSA2Ny42NzUyIDExNS41MDcgNjUuOTYwNiAxMTQuMDE0IDY0LjE0MzRDMTEyLjEzNCA2MS44NTY4IDEwMC41NDUgNDcuNjE3MiAxMDAuNDI4IDQ3LjQ3MzhWNDcuNDcyMlpNMTAwLjQ0NiA1Ny4xNTgxQzEwMC4zMDEgNTcuMTUxNiAxMDAuMTYgNTcuMTQzNCAxMDAuMDIgNTcuMTM2OUM5OS43NDM1IDU2LjExMzQgOTkuMjk4MSA1NC40NzM4IDk5LjA3MzggNTMuNjk2NEM5OC4zNzE2IDUxLjI1ODIgOTcuMDc3NyA1MC4wODQ3IDk2LjIyMTEgNDkuMzA4OUw5Ni4xOTAyIDQ5LjI3OTZDOTUuMTcyNyA0OC4zNTU1IDkzLjc5NzUgNDcuNjg0IDkxLjk5NjUgNDcuMjMyNkM5MS40MTk1IDQ3LjA4NTkgOTAuODIxMyA0Ny4wMDI4IDkwLjIyMTUgNDYuOTgzMkM4OS42MzggNDYuOTY1MyA4OC44MDQxIDQ2Ljk0MDggODguMTc4MyA0Ni45Mzc2Qzg4LjE0NDEgNDYuOTMxMSA4OC4xMDAzIDQ2LjkyMjkgODguMDUxNSA0Ni45MTE1Qzg4LjM2MiA0Ni4wMzc5IDg4Ljc5OTIgNDQuODAyNSA4OS4wOTAyIDQ0LjAwMzlDODkuNTc0NiA0Mi42NjkxIDg5LjczMjIgNDEuNTIxOCA4OS43MTkyIDQwLjUwOTZMOTcuNDA2MSA0OS45NDYyQzk3LjY0MzQgNTAuMjM3OSAxMDAuNTU1IDUzLjgxNTMgMTAzLjY0OCA1Ny42MTI4QzEwMi40NSA1Ny4yNTc1IDEwMS4zMTcgNTcuMjAyMSAxMDAuNDQ2IDU3LjE1ODFaIiBmaWxsPSIjMTUxNTFFIi8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfMzA0Ml80MTkiPgo8cmVjdCB3aWR0aD0iMTIxIiBoZWlnaHQ9Ijg1IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=" alt="Suzuka circuit"/>
+          </div>
+
+          <!-- Dot overlay — same viewBox as circuit JSON coords (0 0 121 85) -->
+          <svg id="dots-svg" viewBox="0 0 121 85"
+               preserveAspectRatio="xMidYMid meet"
+               xmlns="http://www.w3.org/2000/svg">
+            <!-- Start/finish marker -->
+            <line x1="118.5" y1="57.5" x2="118.5" y2="63.2"
+                  stroke="#e10600" stroke-width="1" stroke-linecap="square" opacity="0.85"/>
+            <polygon points="117.4,57.3 119.6,57.3 118.5,55.6" fill="#e10600" opacity="0.75"/>
+            <g id="driver-layer"></g>
+            <g id="ghost-layer"></g>
+          </svg>
+
+          <!-- Corner labels -->
+          <div style="position:absolute;top:4%;right:2%;font-size:6px;font-weight:900;letter-spacing:.1em;color:#e10600;background:rgba(10,10,10,.9);padding:1px 4px;pointer-events:none">S/F</div>
+          <div style="position:absolute;bottom:3%;left:2%;font-size:6px;font-weight:900;letter-spacing:.08em;color:#2a2a2a;background:rgba(10,10,10,.8);padding:1px 4px;pointer-events:none">SUZUKA</div>
+        </div>
       </div>
+    </div>
+
+    <!-- Legend strip -->
+    <div class="flex items-center justify-between px-4 py-1.5 bg-[#0d0d0d] border-t border-[#1a1a1a] flex-shrink-0">
+      <div class="flex gap-3">
+        <div class="flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-[#e10600]"></div><span class="text-[6px] font-bold uppercase tracking-widest text-[#3a3a3a]">P1</span></div>
+        <div class="flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-[#a6c8ff]"></div><span class="text-[6px] font-bold uppercase tracking-widest text-[#3a3a3a]">P2–3</span></div>
+        <div class="flex items-center gap-1"><div class="w-2 h-2 rounded-full bg-[#555]"></div><span class="text-[6px] font-bold uppercase tracking-widest text-[#3a3a3a]">Field</span></div>
+      </div>
+      <span class="text-[6px] text-[#2a2a2a] font-headline">1 pt = 1 circuit step</span>
     </div>
   </section>
 
-  <!-- ── RIGHT: LEADERBOARD ── -->
-  <aside class="leaderboard-panel">
-    <div class="lb-header">
-      <div class="lb-title">Live Ranking</div>
-      <div id="lb-race-name" style="font-size:0.5rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-40)">GD · R3</div>
+  <!-- SIDEBAR -->
+  <aside id="sidebar">
+    <div class="px-4 py-2.5 bg-[#0a0a0a] border-b border-[#1a1a1a] flex-shrink-0 flex justify-between items-center">
+      <span class="font-headline font-black italic text-[11px] uppercase tracking-tight">Race Order</span>
+      <span id="sidebar-flag" class="text-sm">🇯🇵</span>
     </div>
-    <div class="lb-list" id="lb-list"></div>
-    <div class="lb-footer">
-      <div class="lb-footer-label">Leader</div>
-      <div class="lb-footer-val" id="lb-leader-name">—</div>
+
+    <div id="leaderboard" class="flex-1 overflow-y-auto min-h-0"></div>
+
+    <!-- Gap summary -->
+    <div class="px-4 py-3 bg-[#0a0a0a] border-t border-[#1a1a1a] flex-shrink-0">
+      <p class="text-[6px] font-bold uppercase tracking-widest text-[#3192fc] mb-1.5">Track Positions</p>
+      <div class="space-y-1.5">
+        <div class="flex justify-between">
+          <span class="text-[7px] text-[#3a3a3a]">Leader at</span>
+          <span id="g-p1" class="text-[7px] font-black text-[#e10600]">—</span>
+        </div>
+        <div>
+          <div class="flex justify-between mb-0.5">
+            <span class="text-[7px] text-[#3a3a3a]">P2 gap</span>
+            <span id="g-p2" class="text-[7px] font-bold">—</span>
+          </div>
+          <div class="h-[2px] bg-[#1e1e1e]"><div id="g-p2-bar" class="h-full bg-[#a6c8ff]" style="width:100%"></div></div>
+        </div>
+        <div>
+          <div class="flex justify-between mb-0.5">
+            <span class="text-[7px] text-[#3a3a3a]">Last gap</span>
+            <span id="g-last" class="text-[7px] font-bold">—</span>
+          </div>
+          <div class="h-[2px] bg-[#1e1e1e]"><div id="g-last-bar" class="h-full bg-[#e10600]" style="width:0%"></div></div>
+        </div>
+      </div>
     </div>
   </aside>
-
 </div>
 
+<!-- BOTTOM NAV -->
+<nav id="bottom-nav">
+  <a href="index.html"><span class="material-symbols-outlined">leaderboard</span>Standings</a>
+  <a href="results.html"><span class="material-symbols-outlined">flag</span>Results</a>
+  <a href="market.html"><span class="material-symbols-outlined">monetization_on</span>Market</a>
+  <a href="race.html" class="active"><span class="material-symbols-outlined">sports_motorsports</span>Race</a>
+</nav>
+
 <script>
-// ── SUZUKA CENTERLINE WAYPOINTS (viewBox 121 × 85) ──────────────────────────
-// Sampled along the track centerline; cars are interpolated between these
-const SUZUKA_TRACK = [
-  [8,60],[12,55],[15,48],[15,38],[16,30],[18,22],[22,16],[28,11],
-  [36,10],[42,12],[46,18],[47,25],[48,32],[50,38],[52,43],[53,48],
-  [54,50],[56,50],[60,49],[63,47],[66,43],[69,39],[71,37],[74,36],
-  [76,36],[79,37],[81,40],[83,43],[85,47],[86,50],[86,54],[84,57],
-  [91,60],[96,63],[99,65],[103,65],[107,67],[110,70],[112,73],
-  [112,75],[109,76],[105,75],[100,73],[95,70],[90,66],
-  [85,62],[80,59],[74,56],[68,54],[62,52],[56,51],[52,48],
-  [50,43],[49,38],[48,33],[47,27],[44,22],[40,17],[35,13],
-  [28,11],[20,13],[14,17],[10,24],[8,34],[7,44],[8,54],[8,60]
-];
+const NICKNAMES   = {"Danilo Iglesias": "DAN", "Eduardo Santos Lima": "EDU", "Fabio Mucci": "FAB", "Guilherme Figueiredo": "GUI", "Liberio Junior": "LIB", "Priscila Rigotto": "PRI", "Rafael Dias": "RAF", "Raphael Stein": "STE", "Ricardo Mucci": "RIC", "Robson Jardim": "ROB", "Vinicius Agostini": "VIN"};
+const CIRCUIT_PTS = [{"index": 0, "x": 118.529, "y": 60.411}, {"index": 1, "x": 117.065, "y": 58.621}, {"index": 2, "x": 115.602, "y": 56.828}, {"index": 3, "x": 114.141, "y": 55.035}, {"index": 4, "x": 112.68, "y": 53.241}, {"index": 5, "x": 111.219, "y": 51.448}, {"index": 6, "x": 109.758, "y": 49.654}, {"index": 7, "x": 108.298, "y": 47.86}, {"index": 8, "x": 106.838, "y": 46.066}, {"index": 9, "x": 105.377, "y": 44.272}, {"index": 10, "x": 103.917, "y": 42.479}, {"index": 11, "x": 102.456, "y": 40.685}, {"index": 12, "x": 100.995, "y": 38.892}, {"index": 13, "x": 99.534, "y": 37.098}, {"index": 14, "x": 98.073, "y": 35.304}, {"index": 15, "x": 96.612, "y": 33.511}, {"index": 16, "x": 95.151, "y": 31.717}, {"index": 17, "x": 93.691, "y": 29.924}, {"index": 18, "x": 92.157, "y": 28.193}, {"index": 19, "x": 90.445, "y": 26.64}, {"index": 20, "x": 88.559, "y": 25.304}, {"index": 21, "x": 86.502, "y": 24.248}, {"index": 22, "x": 84.33, "y": 23.458}, {"index": 23, "x": 82.066, "y": 22.998}, {"index": 24, "x": 79.757, "y": 22.946}, {"index": 25, "x": 77.483, "y": 23.352}, {"index": 26, "x": 75.377, "y": 24.29}, {"index": 27, "x": 73.269, "y": 24.116}, {"index": 28, "x": 70.973, "y": 24.156}, {"index": 29, "x": 68.876, "y": 25.098}, {"index": 30, "x": 66.971, "y": 26.409}, {"index": 31, "x": 65.208, "y": 27.904}, {"index": 32, "x": 63.503, "y": 29.468}, {"index": 33, "x": 61.798, "y": 31.031}, {"index": 34, "x": 60.08, "y": 32.58}, {"index": 35, "x": 58.348, "y": 34.113}, {"index": 36, "x": 56.394, "y": 35.35}, {"index": 37, "x": 54.301, "y": 36.326}, {"index": 38, "x": 53.537, "y": 34.616}, {"index": 39, "x": 53.104, "y": 32.344}, {"index": 40, "x": 52.677, "y": 30.07}, {"index": 41, "x": 52.797, "y": 27.845}, {"index": 42, "x": 53.748, "y": 25.737}, {"index": 43, "x": 54.658, "y": 23.612}, {"index": 44, "x": 54.955, "y": 21.33}, {"index": 45, "x": 54.398, "y": 19.1}, {"index": 46, "x": 53.03, "y": 17.253}, {"index": 47, "x": 51.072, "y": 16.045}, {"index": 48, "x": 48.814, "y": 15.612}, {"index": 49, "x": 46.561, "y": 16.067}, {"index": 50, "x": 44.636, "y": 17.325}, {"index": 51, "x": 43.257, "y": 19.174}, {"index": 52, "x": 42.013, "y": 21.124}, {"index": 53, "x": 40.764, "y": 23.07}, {"index": 54, "x": 39.502, "y": 25.009}, {"index": 55, "x": 37.829, "y": 26.584}, {"index": 56, "x": 35.584, "y": 27.077}, {"index": 57, "x": 33.274, "y": 27.14}, {"index": 58, "x": 31.012, "y": 26.686}, {"index": 59, "x": 28.82, "y": 25.948}, {"index": 60, "x": 26.695, "y": 25.038}, {"index": 61, "x": 24.765, "y": 23.77}, {"index": 62, "x": 23.259, "y": 22.027}, {"index": 63, "x": 22.141, "y": 20.005}, {"index": 64, "x": 21.257, "y": 17.867}, {"index": 65, "x": 20.371, "y": 15.73}, {"index": 66, "x": 19.474, "y": 13.598}, {"index": 67, "x": 18.395, "y": 11.557}, {"index": 68, "x": 16.827, "y": 9.865}, {"index": 69, "x": 14.869, "y": 8.654}, {"index": 70, "x": 12.631, "y": 8.096}, {"index": 71, "x": 10.322, "y": 8.016}, {"index": 72, "x": 8.023, "y": 8.262}, {"index": 73, "x": 5.785, "y": 8.836}, {"index": 74, "x": 3.7, "y": 9.827}, {"index": 75, "x": 1.965, "y": 11.341}, {"index": 76, "x": 0.754, "y": 13.304}, {"index": 77, "x": 0.111, "y": 15.519}, {"index": 78, "x": 0.055, "y": 17.824}, {"index": 79, "x": 0.66, "y": 20.051}, {"index": 80, "x": 1.705, "y": 22.111}, {"index": 81, "x": 3.126, "y": 23.932}, {"index": 82, "x": 4.852, "y": 25.469}, {"index": 83, "x": 6.667, "y": 26.902}, {"index": 84, "x": 8.514, "y": 28.296}, {"index": 85, "x": 10.39, "y": 29.648}, {"index": 86, "x": 12.295, "y": 30.96}, {"index": 87, "x": 14.27, "y": 32.164}, {"index": 88, "x": 16.296, "y": 33.28}, {"index": 89, "x": 18.352, "y": 34.341}, {"index": 90, "x": 20.43, "y": 35.357}, {"index": 91, "x": 22.572, "y": 36.226}, {"index": 92, "x": 24.735, "y": 37.047}, {"index": 93, "x": 26.897, "y": 37.869}, {"index": 94, "x": 29.06, "y": 38.69}, {"index": 95, "x": 31.23, "y": 39.492}, {"index": 96, "x": 33.408, "y": 40.27}, {"index": 97, "x": 35.586, "y": 41.049}, {"index": 98, "x": 37.764, "y": 41.827}, {"index": 99, "x": 39.944, "y": 42.603}, {"index": 100, "x": 42.124, "y": 43.376}, {"index": 101, "x": 44.304, "y": 44.149}, {"index": 102, "x": 45.709, "y": 45.588}, {"index": 103, "x": 46.365, "y": 47.795}, {"index": 104, "x": 47.776, "y": 49.61}, {"index": 105, "x": 49.767, "y": 50.762}, {"index": 106, "x": 52.037, "y": 51.146}, {"index": 107, "x": 54.346, "y": 51.01}, {"index": 108, "x": 56.652, "y": 50.826}, {"index": 109, "x": 58.957, "y": 50.632}, {"index": 110, "x": 61.244, "y": 50.321}, {"index": 111, "x": 63.287, "y": 49.266}, {"index": 112, "x": 64.897, "y": 47.612}, {"index": 113, "x": 66.374, "y": 45.832}, {"index": 114, "x": 67.852, "y": 44.053}, {"index": 115, "x": 69.33, "y": 42.273}, {"index": 116, "x": 70.957, "y": 40.64}, {"index": 117, "x": 73.018, "y": 39.608}, {"index": 118, "x": 75.267, "y": 39.19}, {"index": 119, "x": 77.537, "y": 39.556}, {"index": 120, "x": 79.633, "y": 40.527}, {"index": 121, "x": 79.242, "y": 42.563}, {"index": 122, "x": 78.486, "y": 44.749}, {"index": 123, "x": 78.144, "y": 47.03}, {"index": 124, "x": 78.394, "y": 49.324}, {"index": 125, "x": 79.215, "y": 51.479}, {"index": 126, "x": 80.567, "y": 53.349}, {"index": 127, "x": 82.294, "y": 54.882}, {"index": 128, "x": 84.32, "y": 55.985}, {"index": 129, "x": 86.553, "y": 56.576}, {"index": 130, "x": 88.859, "y": 56.724}, {"index": 131, "x": 90.168, "y": 58.078}, {"index": 132, "x": 90.773, "y": 60.311}, {"index": 133, "x": 91.647, "y": 62.445}, {"index": 134, "x": 93.048, "y": 64.277}, {"index": 135, "x": 94.868, "y": 65.695}, {"index": 136, "x": 96.999, "y": 66.577}, {"index": 137, "x": 99.287, "y": 66.887}, {"index": 138, "x": 101.05, "y": 67.963}, {"index": 139, "x": 102.306, "y": 69.905}, {"index": 140, "x": 103.553, "y": 71.854}, {"index": 141, "x": 104.794, "y": 73.806}, {"index": 142, "x": 106.166, "y": 75.66}, {"index": 143, "x": 108.026, "y": 77.022}, {"index": 144, "x": 110.194, "y": 77.806}, {"index": 145, "x": 112.494, "y": 77.988}, {"index": 146, "x": 114.759, "y": 77.563}, {"index": 147, "x": 116.801, "y": 76.494}, {"index": 148, "x": 118.458, "y": 74.89}, {"index": 149, "x": 119.621, "y": 72.899}, {"index": 150, "x": 120.323, "y": 70.696}, {"index": 151, "x": 120.91, "y": 68.461}, {"index": 152, "x": 120.954, "y": 66.154}, {"index": 153, "x": 120.47, "y": 63.897}, {"index": 154, "x": 119.509, "y": 61.798}, {"index": 155, "x": 116.776, "y": 68.934}, {"index": 156, "x": 116.108, "y": 71.149}, {"index": 157, "x": 114.846, "y": 73.061}, {"index": 158, "x": 112.787, "y": 74.039}, {"index": 159, "x": 110.502, "y": 73.846}, {"index": 160, "x": 108.625, "y": 72.555}, {"index": 161, "x": 107.383, "y": 70.603}, {"index": 162, "x": 106.139, "y": 68.653}, {"index": 163, "x": 104.887, "y": 66.708}, {"index": 164, "x": 103.621, "y": 64.772}, {"index": 165, "x": 101.979, "y": 63.227}, {"index": 166, "x": 99.683, "y": 62.993}, {"index": 167, "x": 97.413, "y": 62.609}, {"index": 168, "x": 95.571, "y": 61.251}, {"index": 169, "x": 94.521, "y": 59.213}, {"index": 170, "x": 93.915, "y": 56.98}, {"index": 171, "x": 93.248, "y": 54.768}, {"index": 172, "x": 91.572, "y": 53.242}, {"index": 173, "x": 89.316, "y": 52.825}, {"index": 174, "x": 87.011, "y": 52.686}, {"index": 175, "x": 84.854, "y": 51.893}, {"index": 176, "x": 83.144, "y": 50.352}, {"index": 177, "x": 82.163, "y": 48.281}, {"index": 178, "x": 82.196, "y": 45.988}, {"index": 179, "x": 82.949, "y": 43.802}, {"index": 180, "x": 83.719, "y": 41.621}, {"index": 181, "x": 83.671, "y": 39.341}, {"index": 182, "x": 82.274, "y": 37.553}, {"index": 183, "x": 80.244, "y": 36.448}, {"index": 184, "x": 78.082, "y": 35.631}, {"index": 185, "x": 75.801, "y": 35.292}, {"index": 186, "x": 73.493, "y": 35.384}, {"index": 187, "x": 71.299, "y": 36.093}, {"index": 188, "x": 69.22, "y": 37.1}, {"index": 189, "x": 67.418, "y": 38.543}, {"index": 190, "x": 65.906, "y": 40.292}, {"index": 191, "x": 64.428, "y": 42.072}, {"index": 192, "x": 62.95, "y": 43.852}, {"index": 193, "x": 61.473, "y": 45.632}, {"index": 194, "x": 59.487, "y": 46.66}, {"index": 195, "x": 57.183, "y": 46.857}, {"index": 196, "x": 54.877, "y": 47.045}, {"index": 197, "x": 52.57, "y": 47.213}, {"index": 198, "x": 50.38, "y": 46.687}, {"index": 199, "x": 49.506, "y": 44.611}, {"index": 200, "x": 49.068, "y": 42.34}, {"index": 201, "x": 47.412, "y": 41.094}, {"index": 202, "x": 45.232, "y": 40.321}, {"index": 203, "x": 43.051, "y": 39.549}, {"index": 204, "x": 40.871, "y": 38.776}, {"index": 205, "x": 38.692, "y": 37.999}, {"index": 206, "x": 36.514, "y": 37.221}, {"index": 207, "x": 34.335, "y": 36.443}, {"index": 208, "x": 32.157, "y": 35.665}, {"index": 209, "x": 29.991, "y": 34.854}, {"index": 210, "x": 27.828, "y": 34.033}, {"index": 211, "x": 25.665, "y": 33.212}, {"index": 212, "x": 23.503, "y": 32.391}, {"index": 213, "x": 21.383, "y": 31.471}, {"index": 214, "x": 19.313, "y": 30.438}, {"index": 215, "x": 17.268, "y": 29.356}, {"index": 216, "x": 15.263, "y": 28.204}, {"index": 217, "x": 13.333, "y": 26.929}, {"index": 218, "x": 11.447, "y": 25.59}, {"index": 219, "x": 9.591, "y": 24.21}, {"index": 220, "x": 7.766, "y": 22.787}, {"index": 221, "x": 6.011, "y": 21.283}, {"index": 222, "x": 4.665, "y": 19.412}, {"index": 223, "x": 3.923, "y": 17.232}, {"index": 224, "x": 4.296, "y": 14.97}, {"index": 225, "x": 5.711, "y": 13.183}, {"index": 226, "x": 7.839, "y": 12.305}, {"index": 227, "x": 10.121, "y": 11.947}, {"index": 228, "x": 12.429, "y": 12.015}, {"index": 229, "x": 14.481, "y": 12.991}, {"index": 230, "x": 15.785, "y": 14.876}, {"index": 231, "x": 16.685, "y": 17.007}, {"index": 232, "x": 17.572, "y": 19.143}, {"index": 233, "x": 18.454, "y": 21.282}, {"index": 234, "x": 19.496, "y": 23.345}, {"index": 235, "x": 20.792, "y": 25.259}, {"index": 236, "x": 22.424, "y": 26.89}, {"index": 237, "x": 24.335, "y": 28.19}, {"index": 238, "x": 26.416, "y": 29.193}, {"index": 239, "x": 28.579, "y": 30.011}, {"index": 240, "x": 30.795, "y": 30.675}, {"index": 241, "x": 33.074, "y": 31.045}, {"index": 242, "x": 35.385, "y": 31.018}, {"index": 243, "x": 37.679, "y": 30.729}, {"index": 244, "x": 39.843, "y": 29.943}, {"index": 245, "x": 41.659, "y": 28.515}, {"index": 246, "x": 43.078, "y": 26.696}, {"index": 247, "x": 44.335, "y": 24.754}, {"index": 248, "x": 45.583, "y": 22.807}, {"index": 249, "x": 46.827, "y": 20.856}, {"index": 250, "x": 48.613, "y": 19.535}, {"index": 251, "x": 50.658, "y": 20.404}, {"index": 252, "x": 50.891, "y": 22.602}, {"index": 253, "x": 49.939, "y": 24.711}, {"index": 254, "x": 48.988, "y": 26.819}, {"index": 255, "x": 48.575, "y": 29.071}, {"index": 256, "x": 48.956, "y": 31.352}, {"index": 257, "x": 49.386, "y": 33.625}, {"index": 258, "x": 49.82, "y": 35.897}, {"index": 259, "x": 50.256, "y": 38.169}, {"index": 260, "x": 50.849, "y": 40.308}, {"index": 261, "x": 53.097, "y": 40.693}, {"index": 262, "x": 55.333, "y": 40.108}, {"index": 263, "x": 57.467, "y": 39.221}, {"index": 264, "x": 59.469, "y": 38.064}, {"index": 265, "x": 61.337, "y": 36.706}, {"index": 266, "x": 63.061, "y": 35.164}, {"index": 267, "x": 64.775, "y": 33.611}, {"index": 268, "x": 66.48, "y": 32.048}, {"index": 269, "x": 68.185, "y": 30.484}, {"index": 270, "x": 69.999, "y": 29.052}, {"index": 271, "x": 72.005, "y": 27.943}, {"index": 272, "x": 73.968, "y": 28.971}, {"index": 273, "x": 75.749, "y": 28.791}, {"index": 274, "x": 77.66, "y": 27.493}, {"index": 275, "x": 79.87, "y": 26.867}, {"index": 276, "x": 82.174, "y": 26.968}, {"index": 277, "x": 84.395, "y": 27.601}, {"index": 278, "x": 86.477, "y": 28.603}, {"index": 279, "x": 88.347, "y": 29.96}, {"index": 280, "x": 89.997, "y": 31.579}, {"index": 281, "x": 91.469, "y": 33.363}, {"index": 282, "x": 92.93, "y": 35.157}, {"index": 283, "x": 94.391, "y": 36.95}, {"index": 284, "x": 95.851, "y": 38.744}, {"index": 285, "x": 97.312, "y": 40.537}, {"index": 286, "x": 98.773, "y": 42.331}, {"index": 287, "x": 100.234, "y": 44.125}, {"index": 288, "x": 101.695, "y": 45.918}, {"index": 289, "x": 103.155, "y": 47.712}, {"index": 290, "x": 104.616, "y": 49.506}, {"index": 291, "x": 106.076, "y": 51.3}, {"index": 292, "x": 107.536, "y": 53.094}, {"index": 293, "x": 108.997, "y": 54.887}, {"index": 294, "x": 110.458, "y": 56.681}, {"index": 295, "x": 111.92, "y": 58.474}, {"index": 296, "x": 113.381, "y": 60.267}, {"index": 297, "x": 114.844, "y": 62.059}, {"index": 298, "x": 116.232, "y": 63.906}, {"index": 299, "x": 117.019, "y": 66.068}];
+const TOTAL_LAP   = 300;
+const BUNDLED     = [{"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 1, "race_rank": 1, "team_name": "Stradale Mucci", "user_name": "Fabio Mucci", "season_points": 97, "race_points": 97, "cards_used": "Limitless (GD3)"}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 7, "race_rank": 2, "team_name": "qq um menos o Liberio", "user_name": "Vinicius Agostini", "season_points": 73, "race_points": 73, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 8, "race_rank": 3, "team_name": "Yas Bombs", "user_name": "Danilo Iglesias", "season_points": 72, "race_points": 72, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 9, "race_rank": 3, "team_name": "Prisci Prisci", "user_name": "Priscila Rigotto", "season_points": 72, "race_points": 72, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 3, "race_rank": 5, "team_name": "Semi-aquatic-mammals", "user_name": "Guilherme Figueiredo", "season_points": 64, "race_points": 64, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 2, "race_rank": 6, "team_name": "Liberius", "user_name": "Liberio Junior", "season_points": 56, "race_points": 56, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 10, "race_rank": 7, "team_name": "Edu Lima", "user_name": "Eduardo Santos Lima", "season_points": 54, "race_points": 54, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 11, "race_rank": 7, "team_name": "Mucci Senior", "user_name": "Ricardo Mucci", "season_points": 54, "race_points": 54, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 5, "race_rank": 9, "team_name": "CarretaFuracao", "user_name": "Robson Jardim", "season_points": 52, "race_points": 52, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 6, "race_rank": 10, "team_name": "Ixxtain", "user_name": "Raphael Stein", "season_points": 50, "race_points": 50, "cards_used": ""}, {"race_number": 3, "race_name": "Japanese Grand Prix", "race_flag": "🇯🇵", "race_date": "2026-03-28", "season_rank": 4, "race_rank": 11, "team_name": "Fiat147", "user_name": "Rafael Dias", "season_points": 44, "race_points": 44, "cards_used": ""}];
 
-// ── PLAYER COLORS ─────────────────────────────────────────────────────────────
-const PLAYER_COLORS = [
-  '#e10600','#3192fc','#4ade80','#f59e0b','#c084fc',
-  '#fb923c','#22d3ee','#a3e635','#f472b6','#94a3b8','#fbbf24'
-];
+function nick(n) { return NICKNAMES[n] || n.split(" ")[0].substring(0,3).toUpperCase(); }
+function dotColor(r) { return r===1?"#e10600":r<=3?"#a6c8ff":"#888"; }
 
-// ── INTERPOLATE point along track (t = 0..1) ─────────────────────────────────
-function trackPoint(waypoints, t) {
-  const pts = waypoints;
-  const n = pts.length - 1;
-  const f = ((t % 1) + 1) % 1;
-  const raw = f * n;
-  const i = Math.floor(raw);
-  const frac = raw - i;
-  const a = pts[i], b = pts[(i+1) % pts.length];
-  return [a[0] + (b[0]-a[0])*frac, a[1] + (b[1]-a[1])*frac];
-}
-
-// ── MAP SVG COORDS to container pixel coords ──────────────────────────────────
-function svgToPixel(svgX, svgY, containerW, containerH, svgW, svgH, padding) {
-  // The SVG image is rendered inside the container, centered, with padding
-  const scaleX = (containerW - padding*2) / svgW;
-  const scaleY = (containerH - padding*2) / svgH;
-  const scale = Math.min(scaleX, scaleY);
-  const imgW = svgW * scale, imgH = svgH * scale;
-  const offsetX = (containerW - imgW) / 2;
-  const offsetY = (containerH - imgH) / 2;
-  return [offsetX + svgX * scale, offsetY + svgY * scale];
-}
-
-// ── CALCULATE track positions from pts (proportional gap) ────────────────────
-function calcPositions(players) {
-  const sorted = [...players].sort((a,b) => b.race_points - a.race_points);
-  const maxPts = sorted[0].race_points;
-  const minPts = sorted[sorted.length-1].race_points;
-  const range = Math.max(maxPts - minPts, 1);
-  // Leader at t=0.02, others fall behind proportionally; max lag = 0.40 of circuit
-  const positions = {};
-  sorted.forEach(p => {
-    const lag = ((maxPts - p.race_points) / range) * 0.40;
-    positions[p.user_name] = ((0.02 - lag) + 1) % 1;
-  });
-  return positions;
-}
-
-// ── RENDER ────────────────────────────────────────────────────────────────────
-function render(results) {
-  if (!results || results.length === 0) return;
-
-  const sorted = [...results].sort((a,b) => b.race_points - a.race_points);
-  const positions = calcPositions(results);
-
-  // ── Leaderboard ──
-  const lb = document.getElementById('lb-list');
-  lb.innerHTML = '';
-  sorted.forEach((p, i) => {
-    const gap = i === 0 ? 0 : sorted[0].race_points - p.race_points;
-    const color = PLAYER_COLORS[i] || '#888';
-    const row = document.createElement('div');
-    row.className = 'lb-row' + (i===0?' leader':'');
-    row.innerHTML = `
-      <div class="lb-rank">${String(i+1).padStart(2,'0')}</div>
-      <div class="lb-dot" style="background:${color}"></div>
-      <div class="lb-name">${p.user_name}</div>
-      <div class="lb-pts" style="color:${i===0?'var(--red-dim)':'var(--on)'}">${p.race_points}</div>
-      <div class="lb-gap ${i===0?'lead':''}">${i===0?'LEAD':'-'+gap}</div>
-    `;
-    lb.appendChild(row);
-  });
-  document.getElementById('lb-leader-name').textContent = sorted[0].user_name;
-
-  // ── Cars on circuit ──
-  const container = document.getElementById('cars-container');
-  container.innerHTML = '';
-  const cW = container.offsetWidth, cH = container.offsetHeight;
-  if (!cW || !cH) return;
-
-  const SVG_W = 121, SVG_H = 85, PAD = 24;
-
-  sorted.forEach((p, i) => {
-    const color = PLAYER_COLORS[i] || '#888';
-    const t = positions[p.user_name];
-    const [sx, sy] = trackPoint(SUZUKA_TRACK, t);
-    const [px, py] = svgToPixel(sx, sy, cW, cH, SVG_W, SVG_H, PAD);
-    const isLeader = i === 0;
-
-    if (isLeader) {
-      const ring = document.createElement('div');
-      ring.className = 'pulse-ring';
-      ring.style.cssText = `left:${px}px;top:${py}px;border-color:${color}`;
-      container.appendChild(ring);
-    }
-
-    const el = document.createElement('div');
-    el.className = 'car-label';
-    el.style.cssText = `left:${px}px;top:${py}px`;
-
-    const initials = p.user_name.split(' ').map(w=>w[0]).join('').substring(0,3).toUpperCase();
-    const shortName = p.user_name.split(' ')[0].substring(0,6).toUpperCase();
-
-    el.innerHTML = `
-      <div class="${isLeader?'car-dot leader-dot':'car-dot'}" style="background:${color};border-radius:50%"></div>
-      <div>
-        <div class="car-name" style="color:${color}">${shortName}</div>
-        <div class="car-pts-badge">${p.race_points} pts</div>
-      </div>
-    `;
-    container.appendChild(el);
-  });
-}
-
-// ── LOAD TRACK IMAGE + DATA ───────────────────────────────────────────────────
 async function init() {
-  // Load circuit image
+  let data = null;
   try {
-    const svgRes = await fetch('images/circuits/round-03_suzuka.svg');
-    if (svgRes.ok) {
-      const svgText = await svgRes.text();
-      const container = document.getElementById('track-img-container');
-      // Re-color SVG to match design (make track visible as subtle outline)
-      const recolored = svgText
-        .replace(/fill="#15151E"/g, 'fill="#353534"')
-        .replace(/width="121"/, 'width="100%"')
-        .replace(/height="85"/, 'height="100%"');
-      container.innerHTML = recolored;
-      const svg = container.querySelector('svg');
-      if (svg) {
-        svg.style.cssText = 'max-width:75%;max-height:75%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.35;filter:drop-shadow(0 0 20px rgba(225,6,0,0.12))';
-      }
-    }
-  } catch(e) { console.warn('Track image not loaded:', e); }
+    const r = await fetch("live/results.json", {cache:"no-cache"});
+    if (r.ok) data = await r.json();
+  } catch(_) {}
+  if (!data) data = BUNDLED;
 
-  // Load live results
+  let pts = CIRCUIT_PTS;
+  const cn = detectCircuit(data);
   try {
-    const res = await fetch('live/results.json?_=' + Date.now());
-    if (res.ok) {
-      const data = await res.json();
-      if (data && data.length > 0) {
-        // Update header info
-        const first = data[0];
-        const round = first.race_number;
-        document.getElementById('gp-label').textContent = first.race_name.replace(' Grand Prix','') + ' GP:';
-        document.getElementById('live-label').textContent = `Live Results · Round ${round}`;
-        document.getElementById('round-label').textContent = `ROUND ${round} OF 24`;
-        document.getElementById('lb-race-name').textContent = `GD · R${round}`;
-        render(data);
-      }
-    }
-  } catch(e) {
-    console.warn('Live data not available, using sample data');
-    // Sample data for preview
-    render([
-      {user_name:'Fabio Mucci',      race_points:70, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Vinicius Agostini',race_points:61, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Liberio Junior',   race_points:58, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Raphael Stein',    race_points:52, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Rafael Dias',      race_points:49, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Eduardo Lima',     race_points:45, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Robson Jardim',    race_points:41, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Priscila Rigotto', race_points:38, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Danilo Iglesias',  race_points:35, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Ricardo Mucci',    race_points:32, race_number:3, race_name:'Japanese Grand Prix'},
-      {user_name:'Guilherme F.',     race_points:28, race_number:3, race_name:'Japanese Grand Prix'},
-    ]);
-  }
+    const r = await fetch("plots/circuit-"+cn+".json", {cache:"no-cache"});
+    if (r.ok) { const j = await r.json(); if (j.points) pts = j.points; }
+  } catch(_) {}
 
-  // Re-render on resize
-  window.addEventListener('resize', () => {
-    // Just re-render cars at new size
-    const container = document.getElementById('cars-container');
-    if (container.children.length > 0) {
-      // Re-trigger render with cached data — simplified: page reload handles resize
-    }
-  });
+  render(data, pts);
 }
 
-document.addEventListener('DOMContentLoaded', init);
+function detectCircuit(d) {
+  const n = (d[0]?.race_name||"").toLowerCase();
+  if (n.includes("japan")||n.includes("suzuka")) return "suzuka";
+  if (n.includes("china")||n.includes("shanghai")) return "shanghai";
+  if (n.includes("bahrain")) return "bahrain";
+  return "suzuka";
+}
+
+function render(raw, pts) {
+  const players = [...raw].sort((a,b) => a.race_rank - b.race_rank || b.race_points - a.race_points);
+  const leader  = players[0];
+  const maxPts  = leader.race_points;
+  const minPts  = players[players.length-1].race_points;
+
+  // Header
+  document.getElementById("hdr-sub").textContent      = (leader.race_name||"").replace(" Grand Prix"," GP") + " · Rd " + leader.race_number;
+  document.getElementById("race-flag").textContent    = leader.race_flag || "";
+  document.getElementById("race-title").textContent   = (leader.race_name||"Race").replace(" Grand Prix"," GP").toUpperCase();
+  document.getElementById("race-meta").textContent    = "Rd " + leader.race_number + " · " + (leader.race_date||"") + " · " + players.length + " players";
+  document.getElementById("round-badge").textContent  = String(leader.race_number).padStart(2,"0");
+  document.getElementById("leader-badge").textContent = maxPts;
+  document.getElementById("sidebar-flag").textContent = leader.race_flag || "";
+
+  // Gap panel
+  const p2   = players[1];
+  const last = players[players.length-1];
+  document.getElementById("g-p1").textContent       = "idx " + maxPts + " / " + TOTAL_LAP;
+  document.getElementById("g-p2").textContent       = "-" + (maxPts - p2.race_points) + " pts";
+  document.getElementById("g-last").textContent     = "-" + (maxPts - minPts) + " pts";
+  document.getElementById("g-p2-bar").style.width   = Math.round(p2.race_points / maxPts * 100) + "%";
+  document.getElementById("g-last-bar").style.width = Math.round(minPts / maxPts * 100) + "%";
+
+  // Dots — 1:1 mapping: race_points = circuit index
+  const dL = document.getElementById("driver-layer");
+  const gL = document.getElementById("ghost-layer");
+  dL.innerHTML = ""; gL.innerHTML = "";
+
+  // Group tied players to offset their labels
+  const byIdx = {};
+  players.forEach(p => {
+    const k = p.race_points;
+    if (!byIdx[k]) byIdx[k] = [];
+    byIdx[k].push(p);
+  });
+
+  [...players].reverse().forEach((p, ri) => {
+    const rank  = p.race_rank;
+    const ci    = p.race_points;          // 1:1 — points = circuit index
+    const pt    = pts[ci];
+    const color = dotColor(rank);
+    const label = nick(p.user_name);
+    const isP1  = rank === 1;
+
+    // Offset dots sharing the same index
+    const sibs   = byIdx[ci];
+    const sibI   = sibs.indexOf(p);
+    const sibOff = sibs.length > 1 ? (sibI - (sibs.length-1)/2) * 3.5 : 0;
+
+    const cx = pt.x;
+    const cy = pt.y + sibOff;
+
+    if (isP1) {
+      dL.innerHTML += `<g>
+        <circle cx="${cx}" cy="${cy}" r="7" fill="${color}" opacity="0.1" class="leader-ring"/>
+        <circle cx="${cx}" cy="${cy}" r="3.5" fill="${color}"/>
+        <rect x="${cx+4.5}" y="${cy-3.8}" width="${label.length*2.5+4}" height="5.8" fill="#000" opacity="0.7"/>
+        <text x="${cx+6.2}" y="${cy+0.5}" font-family="Space Grotesk" font-size="3" font-weight="900" fill="#fff">${label}</text>
+        <text x="${cx+6.2}" y="${cy-2.2}" font-family="Inter" font-size="1.8" fill="${color}">${ci}pts</text>
+      </g>`;
+    } else {
+      const up  = ri % 2 === 0;
+      const ldy = up ? -3.8 : 4.8;
+      const rc  = rank <= 3 ? "#a6c8ff" : "#505050";
+      dL.innerHTML += `<g>
+        <circle cx="${cx}" cy="${cy}" r="2.3" fill="${color}" opacity="0.9"/>
+        <text x="${cx}" y="${cy+ldy}" text-anchor="middle"
+              font-family="Space Grotesk" font-size="2.4" font-weight="700" fill="#ddd">${label}</text>
+        <text x="${cx}" y="${cy+ldy+(up?-2.1:2.1)}" text-anchor="middle"
+              font-family="Inter" font-size="1.7" fill="${rc}">P${rank}</text>
+      </g>`;
+    }
+  });
+
+  // Leaderboard
+  document.getElementById("leaderboard").innerHTML = players.map(p => {
+    const rank   = p.race_rank;
+    const gap    = maxPts - p.race_points;
+    const gapTxt = gap === 0 ? "LEADER" : "-"+gap+" pts";
+    const barW   = Math.round(p.race_points / maxPts * 100);
+    const label  = nick(p.user_name);
+    const rC  = rank===1?"#e10600":rank<=3?"#a6c8ff":"#404040";
+    const bg  = rank===1?"#1e1414":rank<=3?"#121820":"#161616";
+    const bl  = rank===1?"border-l-2 border-[#e10600]":rank<=3?"border-l-2 border-[#a6c8ff]":"border-l-2 border-transparent";
+    return `<div class="rank-row ${bl} px-3 py-2 mb-[1px] flex items-center gap-2" style="background:${bg}">
+      <div class="flex-shrink-0 w-9 flex flex-col items-center leading-none">
+        <span class="font-headline font-black text-[10px] italic" style="color:${rC}">${String(rank).padStart(2,"0")}</span>
+        <span class="font-headline font-black text-[16px] mt-0.5" style="color:${rank===1?"#e10600":"#e5e2e1"}">${label}</span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <div class="flex justify-between items-center gap-1">
+          <p class="text-[8px] text-[#444] truncate">${p.team_name}</p>
+          <div class="flex-shrink-0 text-right">
+            <span class="font-headline font-black text-[13px] leading-none" style="color:${rank===1?"#e10600":"#c0bdb9"}">${p.race_points}</span>
+            <span class="text-[6px] font-bold ml-1" style="color:${rank===1?"#ffb4a8":"#343434"}">${gapTxt}</span>
+          </div>
+        </div>
+        <div class="mt-1 h-[2px] bg-[#1e1e1e]">
+          <div style="width:${barW}%;height:100%;background:${rank===1?"#e10600":rank<=3?"#a6c8ff":"#242424"}"></div>
+        </div>
+        <div class="flex justify-between mt-0.5">
+          <span class="text-[6px] text-[#252525]">Season ${p.season_points}pts</span>
+          <span class="text-[6px] text-[#252525]">S#${p.season_rank}</span>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+init();
 </script>
 </body>
 </html>

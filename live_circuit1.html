@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Full Grid Sweep — Race Map</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;900&family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24}
+
+/*
+  LAYOUT STRATEGY
+  ───────────────
+  The trick for perfect dot-over-image alignment:
+    #circuit-wrap  → position:relative, sized by its parent
+    #circuit-bg img → position:absolute, inset:0, width:100%, height:100%, object-fit:contain
+    #dots-svg      → position:absolute, inset:0, width:100%, height:100%, viewBox="0 0 121 85", preserveAspectRatio="xMidYMid meet"
+
+  Both the img and the SVG use the same scaling rule (contain / meet = same thing).
+  They both fill the same box. Coords always align perfectly.
+
+  The map section uses flex:1 with min-height:0 and min-width:0 so it
+  Map fills all space. Header = back button + race name only.
+  No sidebar, no bottom nav — circuit is the full experience.
+*/
+
+/* Map section: takes all remaining space, never shrinks below 0 */
+#map-section {
+  flex: 1 1 0;          /* grow AND shrink freely */
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #111;
+  position: relative;
+}
+
+/* The area that holds the circuit — fills map-section vertically */
+#circuit-area {
+  flex: 1 1 0;
+  min-height: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #111;
+}
+
+/*
+  circuit-wrap: sized to whichever is smaller — full width OR full height
+  constrained to 121:85 ratio. Uses padding-top trick as fallback but
+  actually we just let the browser pick via the img contain sizing.
+  We make it position:relative so the SVG overlay can be absolute inside it.
+*/
+#circuit-wrap {
+  position: relative;
+  /* fill the available area but never exceed it in either dimension */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner container that actually has the 121:85 ratio and holds both layers */
+#circuit-inner {
+  position: relative;
+  /* Take as much space as possible without overflowing */
+  max-width: 100%;
+  max-height: 100%;
+  /* aspect-ratio keeps the box at 121:85 */
+  aspect-ratio: 121 / 85;
+  /* In each dimension, don't exceed the parent */
+  width: 100%;        /* try to be full width … */
+  height: 100%;       /* … and full height; aspect-ratio + object-fit resolves the conflict */
+}
+
+/* Background: the original SVG circuit file */
+#circuit-bg {
+  position: absolute;
+  inset: 0;
+  background: #111;
+}
+#circuit-bg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  /* invert dark fills to show as subtle asphalt lines on dark bg */
+  filter: invert(1) brightness(0.15);
+}
+
+/* Dot overlay: identical coordinate space to the image */
+#dots-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Portrait mobile: map fills everything */
+@media (max-width: 640px) {
+  #map-section { flex: 1; }
+}
+@keyframes ring-pulse{0%,100%{r:6;opacity:.12}50%{r:9;opacity:.03}}
+.leader-ring{animation:ring-pulse 1.9s ease-in-out infinite}
+@keyframes ghost-pulse{0%,100%{opacity:.18}50%{opacity:.5}}
+.ghost-dot{animation:ghost-pulse 2.5s ease-in-out infinite}
+
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:#0a0a0a}
+::-webkit-scrollbar-thumb{background:#252525}
+</style>
+<script>
+tailwind.config={darkMode:"class",theme:{extend:{
+  fontFamily:{headline:["Space Grotesk"],body:["Inter"]},
+  borderRadius:{DEFAULT:"0px",lg:"0px",xl:"0px",full:"9999px"}
+}}}
+</script>
+</head>
+<body class="bg-[#111] text-[#e5e2e1] font-body h-[100dvh] overflow-hidden flex flex-col">
+
+<!-- HEADER — back button + race name only -->
+<header class="bg-[#0a0a0a] flex items-center gap-3 px-4 py-3 flex-shrink-0 border-b border-[#1a1a1a]">
+  <a href="results.html" class="text-[#e10600] flex items-center active:opacity-60 transition-opacity flex-shrink-0">
+    <span class="material-symbols-outlined" style="font-size:22px">arrow_back</span>
+  </a>
+  <div class="flex flex-col leading-none min-w-0">
+    <span id="race-title" class="text-[15px] font-black text-[#e5e2e1] tracking-tight font-headline truncate">RACE MAP</span>
+    <span id="hdr-sub" class="text-[8px] font-bold uppercase tracking-[.15em] text-[#3a3a3a] mt-0.5">Loading…</span>
+  </div>
+  <div class="ml-auto flex items-center gap-2 flex-shrink-0">
+    <div class="flex items-center gap-1.5 px-2 py-0.5 bg-[#e10600]/10">
+      <div class="w-1.5 h-1.5 bg-[#e10600] rounded-full animate-pulse"></div>
+      <span class="text-[7px] font-black uppercase tracking-widest text-[#e10600] font-headline">Live</span>
+    </div>
+    <button onclick="init()" class="p-1.5 hover:bg-[#1a1a1a] active:scale-95 transition-all">
+      <span class="material-symbols-outlined text-[#444]" style="font-size:18px">refresh</span>
+    </button>
+  </div>
+</header>
+
+<!-- MAIN — map fills all remaining space -->
+<div class="flex-1 flex overflow-hidden min-h-0">
+
+  <!-- MAP SECTION — full width, full height -->
+  <section id="map-section" style="flex:1;display:flex;flex-direction:column;position:relative;overflow:hidden;background:#111">
+
+    <!-- Circuit area fills everything -->
+    <div id="circuit-area">
+      <div id="circuit-wrap">
+        <div id="circuit-inner">
+          <div id="circuit-bg">
+            <img id="circuit-img" src="" alt=""/>
+          </div>
+          <svg id="dots-svg" viewBox="0 0 121 85" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118.5" y1="57.5" x2="118.5" y2="63.2" stroke="#e10600" stroke-width="1" stroke-linecap="square" opacity="0.85"/>
+            <polygon points="117.4,57.3 119.6,57.3 118.5,55.6" fill="#e10600" opacity="0.75"/>
+            <g id="driver-layer"></g>
+            <g id="ghost-layer"></g>
+          </svg>
+          <!-- S/F label -->
+          <div style="position:absolute;top:4%;right:2%;font-size:6px;font-weight:900;letter-spacing:.1em;color:#e10600;background:rgba(10,10,10,.85);padding:1px 5px;pointer-events:none">S/F</div>
+          <!-- Circuit name bottom-left -->
+          <div id="circuit-name-label" style="position:absolute;bottom:3%;left:2%;font-size:6px;font-weight:900;letter-spacing:.08em;color:#2a2a2a;background:rgba(10,10,10,.75);padding:1px 4px;pointer-events:none"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const NICKNAMES   = {"Danilo Iglesias": "DAN", "Eduardo Santos Lima": "EDU", "Fabio Mucci": "FAB", "Guilherme Figueiredo": "GUI", "Liberio Junior": "LIB", "Priscila Rigotto": "PRI", "Rafael Dias": "RAF", "Raphael Stein": "STE", "Ricardo Mucci": "RIC", "Robson Jardim": "ROB", "Vinicius Agostini": "VIN"};
+const CIRCUIT_PTS = null; // loaded from plots/circuit-{name}.json
+const TOTAL_LAP   = 300;
+const BUNDLED = null; // loaded from live/results.json
+
+function nick(n) { return NICKNAMES[n] || n.split(" ")[0].substring(0,3).toUpperCase(); }
+
+// Unique color per driver — gray only if they scored 0 (no points this race)
+const DRIVER_COLORS = {
+  "Fabio Mucci":          "#e10600",  // red
+  "Vinicius Agostini":    "#ff8c00",  // orange
+  "Danilo Iglesias":      "#a6c8ff",  // blue
+  "Priscila Rigotto":     "#c084fc",  // purple
+  "Guilherme Figueiredo": "#34d399",  // emerald
+  "Liberio Junior":       "#fbbf24",  // amber
+  "Eduardo Santos Lima":  "#f472b6",  // pink
+  "Ricardo Mucci":        "#fb923c",  // orange-red
+  "Robson Jardim":        "#38bdf8",  // sky
+  "Raphael Stein":        "#a3e635",  // lime
+  "Rafael Dias":          "#e879f9",  // fuchsia
+};
+function dotColor(name, pts, maxPts) {
+  if (pts < maxPts) return DRIVER_COLORS[name] || "#aaa";  // full color if on circuit
+  return DRIVER_COLORS[name] || "#aaa";  // leader also gets their color
+}
+function dotColorFaded(name) { return "#444"; }  // gray = fell off / no pts
+
+async function init() {
+  // 1. Load race results — show nothing if missing
+  let data = null;
+  try {
+    const r = await fetch("live/results.json", {cache:"no-cache"});
+    if (r.ok) data = await r.json();
+  } catch(_) {}
+  if (!data) { showError("No race data found (live/results.json)"); return; }
+
+  // 2. Detect circuit from race name
+  const cn = detectCircuit(data);
+  if (!cn) { showError("Unknown race: " + (data[0]?.race_name || "?")); return; }
+
+  // 3. Load circuit SVG image — same path as results.html
+  const img = document.getElementById("circuit-img");
+  if (img) img.src = "images/circuits/" + cn.img;
+
+  // 4. Load circuit plot points — plots/circuit-{slug}.json
+  let pts = null;
+  try {
+    const r = await fetch("plots/circuit-" + cn.slug + ".json", {cache:"no-cache"});
+    if (r.ok) { const j = await r.json(); if (j.points) pts = j.points; }
+  } catch(_) {}
+  if (!pts) { showError("No plot data: plots/circuit-" + cn.slug + ".json"); return; }
+
+  render(data, pts);
+}
+
+function showError(msg) {
+  document.getElementById("driver-layer").innerHTML =
+    '<text x="60" y="42" text-anchor="middle" font-family="Space Grotesk" ' +
+    'font-size="4" fill="#444" font-weight="700">' + msg + '</text>';
+}
+
+// Exact filenames as used in results.html — keyed by race_name from results.json
+// SVG image:  images/circuits/{imgFile}
+// Plot JSON:  plots/circuit-{slug}.json  (slug = part after round-XX_)
+const CIRCUIT_MAP = {
+  'Australian Grand Prix':          { img: 'round-02_AlbertPark_AUstralia.svg', slug: 'AlbertPark_AUstralia' },
+  'Chinese Grand Prix':             { img: 'round-04_shanghai.svg',             slug: 'shanghai'             },
+  'Japanese Grand Prix':            { img: 'round-03_suzuka.svg',               slug: 'suzuka'               },
+  'Bahrain Grand Prix':             { img: 'round-01_sakhir.svg',               slug: 'sakhir'               },
+  'Saudi Arabian Grand Prix':       { img: 'round-02_jeddah.svg',               slug: 'jeddah'               },
+  'Miami Grand Prix':               { img: 'round-05_miami.svg',                slug: 'miami'                },
+  'Emilia Romagna Grand Prix':      { img: 'round-06_imola.svg',                slug: 'imola'                },
+  'Monaco Grand Prix':              { img: 'round-07_montecarlo.svg',           slug: 'montecarlo'           },
+  'Barcelona-Catalunya Grand Prix': { img: 'round-08_catalunya.svg',            slug: 'catalunya'            },
+  'Spanish Grand Prix':             { img: 'round-09_madring.svg',              slug: 'madring'              },
+  'Canadian Grand Prix':            { img: 'round-10_montreal.svg',             slug: 'montreal'             },
+  'Austrian Grand Prix':            { img: 'round-11_spielberg.svg',            slug: 'spielberg'            },
+  'British Grand Prix':             { img: 'round-12_silverstone.svg',          slug: 'silverstone'          },
+  'Belgian Grand Prix':             { img: 'round-13_spa.svg',                  slug: 'spa'                  },
+  'Hungarian Grand Prix':           { img: 'round-14_hungaroring.svg',          slug: 'hungaroring'          },
+  'Dutch Grand Prix':               { img: 'round-15_zandvoort.svg',            slug: 'zandvoort'            },
+  'Italian Grand Prix':             { img: 'round-16_monza.svg',                slug: 'monza'                },
+  'Azerbaijan Grand Prix':          { img: 'round-17_baku.svg',                 slug: 'baku'                 },
+  'Singapore Grand Prix':           { img: 'round-18_singapore.svg',            slug: 'singapore'            },
+  'United States Grand Prix':       { img: 'round-19_austin.svg',               slug: 'austin'               },
+  'Mexico City Grand Prix':         { img: 'round-20_mexicocity.svg',           slug: 'mexicocity'           },
+  'São Paulo Grand Prix':           { img: 'round-21_interlagos.svg',           slug: 'interlagos'           },
+  'Las Vegas Grand Prix':           { img: 'round-22_lasvegas.svg',             slug: 'lasvegas'             },
+  'Qatar Grand Prix':               { img: 'round-23_lusail.svg',               slug: 'lusail'               },
+  'Abu Dhabi Grand Prix':           { img: 'round-24_yasmarinacircuit.svg',     slug: 'yasmarinacircuit'     },
+};
+
+function detectCircuit(d) {
+  const raceName = d[0]?.race_name || "";
+  return CIRCUIT_MAP[raceName] || null;
+}
+
+function render(raw, pts) {
+  const players = [...raw].sort((a,b) => a.race_rank - b.race_rank || b.race_points - a.race_points);
+  const leader  = players[0];
+  const maxPts  = leader.race_points;
+
+  // Header
+  const raceName = (leader.race_name||"Race").replace(" Grand Prix"," GP").toUpperCase();
+  document.getElementById("race-title").textContent = raceName;
+  document.getElementById("hdr-sub").textContent    = (leader.race_flag||"") + "  Rd " + leader.race_number + " · " + (leader.race_date||"");
+
+  // Circuit name label on map
+  const cnLabel = document.getElementById("circuit-name-label");
+  if (cnLabel) cnLabel.textContent = (leader.race_name||"").replace(" Grand Prix","").toUpperCase();
+
+  // Dots — 1:1 mapping: race_points = circuit index
+  const dL = document.getElementById("driver-layer");
+  const gL = document.getElementById("ghost-layer");
+  dL.innerHTML = ""; gL.innerHTML = "";
+
+  // Group tied players to offset their dots
+  const byIdx = {};
+  players.forEach(p => {
+    const k = p.race_points;
+    if (!byIdx[k]) byIdx[k] = [];
+    byIdx[k].push(p);
+  });
+
+  [...players].reverse().forEach((p, ri) => {
+    const rank  = p.race_rank;
+    const ci    = p.race_points;
+    const pt    = pts[ci];
+    const color = p.race_points > 0 ? (DRIVER_COLORS[p.user_name] || "#aaa") : "#444";
+    const label = nick(p.user_name);
+    const isP1  = rank === 1;
+
+    // Offset tied players
+    const sibs   = byIdx[ci];
+    const sibI   = sibs.indexOf(p);
+    const sibOff = sibs.length > 1 ? (sibI - (sibs.length-1)/2) * 3.5 : 0;
+
+    const cx = pt.x;
+    const cy = pt.y + sibOff;
+
+    // Label alternates above/below to reduce overlap
+    const up  = ri % 2 === 0;
+    const ldy = up ? -3.2 : 4.0;
+
+    if (isP1) {
+      // Leader: bigger dot + pulse ring + label with pts
+      dL.innerHTML += `<g>
+        <circle cx="${cx}" cy="${cy}" r="5" fill="${color}" opacity="0.12" class="leader-ring"/>
+        <circle cx="${cx}" cy="${cy}" r="2.6" fill="${color}"/>
+        <rect x="${cx+3.2}" y="${cy-3.6}" width="${label.length*2.4+3}" height="5.4" fill="#000" opacity="0.72"/>
+        <text x="${cx+4.8}" y="${cy+0.5}" font-family="Space Grotesk" font-size="2.8" font-weight="900" fill="#fff">${label}</text>
+        <text x="${cx+4.8}" y="${cy-1.8}" font-family="Inter" font-size="1.8" fill="${color}">${ci}pts</text>
+      </g>`;
+    } else {
+      // Field: small dot + nick above/below + pts in driver color
+      dL.innerHTML += `<g>
+        <circle cx="${cx}" cy="${cy}" r="1.8" fill="${color}" opacity="0.95"/>
+        <text x="${cx}" y="${cy+ldy}" text-anchor="middle"
+              font-family="Space Grotesk" font-size="2.2" font-weight="700" fill="${color}">${label}</text>
+        <text x="${cx}" y="${cy+ldy+(up?-2.1:2.1)}" text-anchor="middle"
+              font-family="Inter" font-size="1.7" fill="${color}" opacity="0.7">${ci}</text>
+      </g>`;
+    }
+  });
+}
+
+init();
+</script>
+</body>
+</html>

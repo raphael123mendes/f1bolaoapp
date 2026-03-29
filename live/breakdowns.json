@@ -12,7 +12,7 @@
     "pick_name": "Lewis Hamilton",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 23,
+    "pick_points_gd": 16,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5
   },
@@ -29,9 +29,9 @@
     "pick_name": "Lewis Hamilton",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 23,
+    "pick_points_gd": 16,
     "breakdown_category": "Race Position",
-    "breakdown_points": 15
+    "breakdown_points": 10
   },
   {
     "race_number": 3,
@@ -46,9 +46,9 @@
     "pick_name": "Lewis Hamilton",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 23,
+    "pick_points_gd": 16,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -114,7 +114,7 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7
   },
@@ -131,9 +131,26 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12
+    "breakdown_points": 15
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 1,
+    "race_rank": 1,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "115",
+    "pick_name": "Charles Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "pick_points_gd": 23,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -199,7 +216,7 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9
   },
@@ -216,9 +233,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10
+    "breakdown_points": 12
   },
   {
     "race_number": 3,
@@ -233,9 +250,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -250,7 +267,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -267,7 +284,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -284,7 +301,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -301,7 +318,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -318,9 +335,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -335,9 +352,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -352,7 +369,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 19
   },
@@ -369,7 +386,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -386,7 +403,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -403,9 +420,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35
+    "breakdown_points": 37
   },
   {
     "race_number": 3,
@@ -420,7 +437,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -437,9 +454,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -454,7 +471,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2
   },
@@ -471,7 +488,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -488,9 +505,9 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -4
   },
   {
     "race_number": 3,
@@ -556,7 +573,7 @@
     "pick_name": "Nico Hulkenberg",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 0,
+    "pick_points_gd": 1,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0
   },
@@ -573,9 +590,26 @@
     "pick_name": "Nico Hulkenberg",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 0,
+    "pick_points_gd": 1,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 7,
+    "race_rank": 2,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "111",
+    "pick_name": "Nico Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "pick_points_gd": 1,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -692,7 +726,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -709,7 +743,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -726,7 +760,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -743,7 +777,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -760,9 +794,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -777,9 +811,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -794,7 +828,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 19
   },
@@ -811,7 +845,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -828,7 +862,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -845,9 +879,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35
+    "breakdown_points": 37
   },
   {
     "race_number": 3,
@@ -862,7 +896,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -879,9 +913,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -1134,7 +1168,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -1151,7 +1185,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -1168,7 +1202,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -1185,7 +1219,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -1202,9 +1236,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -1219,9 +1253,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -1236,7 +1270,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 19
   },
@@ -1253,7 +1287,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -1270,7 +1304,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -1287,9 +1321,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35
+    "breakdown_points": 37
   },
   {
     "race_number": 3,
@@ -1304,7 +1338,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -1321,9 +1355,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -1338,7 +1372,7 @@
     "pick_name": "Nico Hulkenberg",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 0,
+    "pick_points_gd": 1,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0
   },
@@ -1355,9 +1389,26 @@
     "pick_name": "Nico Hulkenberg",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 0,
+    "pick_points_gd": 1,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 8,
+    "race_rank": 4,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "111",
+    "pick_name": "Nico Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "pick_points_gd": 1,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -1559,7 +1610,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -1576,7 +1627,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -1593,7 +1644,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -1610,7 +1661,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -1627,9 +1678,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -1644,9 +1695,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -1661,7 +1712,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 19
   },
@@ -1678,7 +1729,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -1695,7 +1746,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -1712,9 +1763,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35
+    "breakdown_points": 37
   },
   {
     "race_number": 3,
@@ -1729,7 +1780,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -1746,9 +1797,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -1814,7 +1865,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2
   },
@@ -1831,7 +1882,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -1848,9 +1899,9 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -4
   },
   {
     "race_number": 3,
@@ -2001,7 +2052,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -2018,7 +2069,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -2035,7 +2086,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -2052,7 +2103,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -2069,9 +2120,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -2086,9 +2137,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -2103,7 +2154,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 19
   },
@@ -2120,7 +2171,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -2137,7 +2188,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -2154,9 +2205,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35
+    "breakdown_points": 37
   },
   {
     "race_number": 3,
@@ -2171,7 +2222,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -2188,9 +2239,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -2409,7 +2460,7 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7
   },
@@ -2426,9 +2477,26 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12
+    "breakdown_points": 15
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 6,
+    "race_rank": 6,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "115",
+    "pick_name": "Charles Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "pick_points_gd": 23,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -2443,7 +2511,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -2460,7 +2528,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -2477,7 +2545,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -2494,7 +2562,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -2511,9 +2579,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -2528,9 +2596,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -2664,7 +2732,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2
   },
@@ -2681,7 +2749,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -2698,9 +2766,9 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -4
   },
   {
     "race_number": 3,
@@ -2766,7 +2834,7 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7
   },
@@ -2783,9 +2851,26 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12
+    "breakdown_points": 15
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 5,
+    "race_rank": 7,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "115",
+    "pick_name": "Charles Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "pick_points_gd": 23,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -2851,7 +2936,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -2868,7 +2953,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -2885,7 +2970,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -2902,7 +2987,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -2919,9 +3004,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -2936,9 +3021,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -3344,7 +3429,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 19
   },
@@ -3361,7 +3446,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -3378,7 +3463,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -3395,9 +3480,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35
+    "breakdown_points": 37
   },
   {
     "race_number": 3,
@@ -3412,7 +3497,7 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -3429,9 +3514,9 @@
     "pick_name": "Mercedes Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 79,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -3497,7 +3582,7 @@
     "pick_name": "Nico Hulkenberg",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 0,
+    "pick_points_gd": 1,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0
   },
@@ -3514,9 +3599,26 @@
     "pick_name": "Nico Hulkenberg",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 0,
+    "pick_points_gd": 1,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 2,
+    "race_rank": 9,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "111",
+    "pick_name": "Nico Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "pick_points_gd": 1,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -3633,7 +3735,7 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9
   },
@@ -3650,9 +3752,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10
+    "breakdown_points": 12
   },
   {
     "race_number": 3,
@@ -3667,9 +3769,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -3684,7 +3786,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -3701,7 +3803,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -3718,7 +3820,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -3735,7 +3837,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -3752,9 +3854,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -3769,9 +3871,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -3854,7 +3956,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2
   },
@@ -3871,7 +3973,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -3888,9 +3990,9 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -4
   },
   {
     "race_number": 3,
@@ -3956,7 +4058,7 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 38,
+    "pick_points_gd": 46,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7
   },
@@ -3973,9 +4075,26 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 38,
+    "pick_points_gd": 46,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12
+    "breakdown_points": 15
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "115",
+    "pick_name": "Charles Leclerc",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "pick_points_gd": 46,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -4041,7 +4160,7 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 19,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9
   },
@@ -4058,9 +4177,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10
+    "breakdown_points": 12
   },
   {
     "race_number": 3,
@@ -4075,9 +4194,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,
@@ -4092,7 +4211,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -4109,7 +4228,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -4126,7 +4245,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -4143,7 +4262,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -4160,9 +4279,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race Position",
-    "breakdown_points": 27
+    "breakdown_points": 25
   },
   {
     "race_number": 3,
@@ -4177,9 +4296,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 67,
+    "pick_points_gd": 64,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3
+    "breakdown_points": 2
   },
   {
     "race_number": 3,
@@ -4279,7 +4398,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2
   },
@@ -4296,7 +4415,7 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -4313,9 +4432,9 @@
     "pick_name": "Gabriel Bortoleto",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": -2,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -4
   },
   {
     "race_number": 3,
@@ -4432,7 +4551,7 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7
   },
@@ -4449,9 +4568,26 @@
     "pick_name": "Charles Leclerc",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 19,
+    "pick_points_gd": 23,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12
+    "breakdown_points": 15
+  },
+  {
+    "race_number": 3,
+    "race_name": "Japanese Grand Prix",
+    "race_flag": "🇯🇵",
+    "race_date": "2026-03-29",
+    "season_rank": 4,
+    "race_rank": 11,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "115",
+    "pick_name": "Charles Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "pick_points_gd": 23,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -4466,7 +4602,7 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9
   },
@@ -4483,9 +4619,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10
+    "breakdown_points": 12
   },
   {
     "race_number": 3,
@@ -4500,9 +4636,9 @@
     "pick_name": "George Russell",
     "pick_type": "Driver",
     "is_captain": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 38,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3
+    "breakdown_points": -2
   },
   {
     "race_number": 3,

@@ -398,38 +398,91 @@ function rankDelta(history, idx) {
 }
 
 // ── SVG CHART HELPERS ─────────────────────────────────────────────────────
-function miniLineChart(data, color, W=200, H=60) {
+function miniLineChart(data, color, W=200, H=60, labels=null) {
   if (data.length < 2) return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg"></svg>`;
   const mn = Math.min(...data), mx = Math.max(...data);
   const range = mx - mn || 1;
+  const PAD_TOP = 14, PAD_BOT = 8, PAD_SIDE = 2;
   const pts = data.map((v, i) => {
-    const x = (i / (data.length-1)) * (W-4) + 2;
-    const y = H - 8 - ((v - mn) / range) * (H - 16);
+    const x = PAD_SIDE + (i / (data.length-1)) * (W - PAD_SIDE*2);
+    const y = PAD_TOP + (1 - (v - mn) / range) * (H - PAD_TOP - PAD_BOT);
     return [x, y];
   });
-  const path = pts.map((p,i) => `${i===0?'M':'L'}${p[0]},${p[1]}`).join(' ');
-  const area = `M${pts[0][0]},${H} ` + pts.map(p=>`L${p[0]},${p[1]}`).join(' ') + ` L${pts[pts.length-1][0]},${H} Z`;
-  const dots = pts.map(p => `<circle cx="${p[0]}" cy="${p[1]}" r="3" fill="${color}"/>`).join('');
+  const path = pts.map((p,i) => `${i===0?'M':'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  const area = `M${pts[0][0].toFixed(1)},${H} ` + pts.map(p=>`L${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ') + ` L${pts[pts.length-1][0].toFixed(1)},${H} Z`;
+  const gid = 'g' + color.replace('#','') + W;
+  const dots = pts.map(p => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3" fill="${color}"/>`).join('');
+  const lbls = labels ? pts.map((p, i) => {
+    const lbl = labels[i];
+    if (!lbl) return '';
+    // Position label above dot, nudge first left, last right, middle centre
+    const anchor = i === 0 ? 'start' : i === data.length-1 ? 'end' : 'middle';
+    return `<text x="${p[0].toFixed(1)}" y="${(p[1] - 5).toFixed(1)}" text-anchor="${anchor}" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="${color}">${lbl}</text>`;
+  }).join('') : '';
   return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg">
-    <defs><linearGradient id="g${color.replace('#','')}" x1="0" y1="0" x2="0" y2="1">
+    <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="${color}" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
     </linearGradient></defs>
-    <path d="${area}" fill="url(#g${color.replace('#','')})" />
+    <path d="${area}" fill="url(#${gid})" />
     <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-    ${dots}
+    ${dots}${lbls}
   </svg>`;
 }
 
-function miniBarChart(data, color, W=200, H=60) {
+function miniRankChart(ranks, color, W=200, H=60) {
+  // Rank chart: P1 at top, P15 at bottom. Higher on chart = better rank.
+  if (ranks.length < 2) return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg"></svg>`;
+  const MAX_RANK = 15;
+  const PAD_TOP = 14, PAD_BOT = 8, PAD_SIDE = 2;
+  const pts = ranks.map((rank, i) => {
+    const x = PAD_SIDE + (i / (ranks.length-1)) * (W - PAD_SIDE*2);
+    const y = PAD_TOP + ((rank - 1) / (MAX_RANK - 1)) * (H - PAD_TOP - PAD_BOT);
+    return [x, y, rank];
+  });
+  const path = pts.map((p,i) => `${i===0?'M':'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+  const area = `M${pts[0][0].toFixed(1)},${H} ` + pts.map(p=>`L${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ') + ` L${pts[pts.length-1][0].toFixed(1)},${H} Z`;
+  const gid = 'grank' + W;
+  const dots = pts.map(p => `<circle cx="${p[0].toFixed(1)}" cy="${p[1].toFixed(1)}" r="3" fill="${color}"/>`).join('');
+  const lbls = pts.map((p, i) => {
+    const anchor = i === 0 ? 'start' : i === ranks.length-1 ? 'end' : 'middle';
+    return `<text x="${p[0].toFixed(1)}" y="${(p[1] - 5).toFixed(1)}" text-anchor="${anchor}" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="${color}">P${p[2]}</text>`;
+  }).join('');
+  // P1 / P15 axis labels
+  const axisLbls = `
+    <text x="${PAD_SIDE}" y="${PAD_TOP - 2}" font-family="Inter,sans-serif" font-size="6" fill="rgba(229,226,225,0.25)" text-anchor="start">P1</text>
+    <text x="${PAD_SIDE}" y="${H - 1}" font-family="Inter,sans-serif" font-size="6" fill="rgba(229,226,225,0.25)" text-anchor="start">P15</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg">
+    <defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="${area}" fill="url(#${gid})" />
+    <path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+    ${dots}${lbls}${axisLbls}
+  </svg>`;
+}
+
+function miniBarChart(data, color, W=200, H=60, labels=null, raceLbls=null) {
   if (!data.length) return '';
   const mx = Math.max(...data, 1);
+  const PAD_TOP = labels ? 14 : 4;
+  const PAD_BOT = raceLbls ? 12 : 4;
   const bw = (W - 8) / data.length - 3;
   const bars = data.map((v,i) => {
-    const bh = Math.max(2, ((v / mx) * (H - 12)));
+    const bh = Math.max(v > 0 ? 2 : 0, ((v / mx) * (H - PAD_TOP - PAD_BOT)));
     const x = 4 + i * ((W-8)/data.length);
-    const y = H - 4 - bh;
-    return `<rect x="${x}" y="${y}" width="${bw}" height="${bh}" fill="${color}" rx="1"/>`;
+    const y = H - PAD_BOT - bh;
+    let out = `<rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${bw.toFixed(1)}" height="${bh.toFixed(1)}" fill="${color}" rx="1"/>`;
+    // Value label above bar
+    if (labels && labels[i]) {
+      out += `<text x="${(x + bw/2).toFixed(1)}" y="${(y - 2).toFixed(1)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="${color}">${labels[i]}</text>`;
+    }
+    // Race label below bar
+    if (raceLbls && raceLbls[i]) {
+      out += `<text x="${(x + bw/2).toFixed(1)}" y="${(H - 1).toFixed(1)}" text-anchor="middle" font-family="Inter,sans-serif" font-size="6" font-weight="700" fill="rgba(229,226,225,0.3)">${raceLbls[i]}</text>`;
+    }
+    return out;
   }).join('');
   return `<svg viewBox="0 0 ${W} ${H}" class="chart-svg">${bars}</svg>`;
 }
@@ -460,23 +513,28 @@ const budgets = d.rank_history.map(r => r.new_budget);
 const racePoints = d.rank_history.map(r => r.race_points);
 const prizes = d.rank_history.map(r => r.race_prize);
 const cumPrizes = prizes.reduce((acc, v) => { acc.push((acc.length ? acc[acc.length-1] : 0) + v); return acc; }, []);
+const raceLbls = d.rank_history.map(r => `R${r.race}`);
+const budgetLbls = budgets.map(v => `$${v.toFixed(1)}M`);
+const pointLbls = racePoints.map(v => `${v}`);
+const prizeLbls = prizes.map(v => v > 0 ? `$${v.toFixed(2)}` : '');
+const seasonRanks = d.rank_history.map(r => r.season_rank);
 
 document.getElementById('charts-grid').innerHTML = `
   <div class="chart-card">
     <div class="chart-header"><div class="chart-title">Budget Evolution</div><div class="chart-sub">$${budgets[budgets.length-1].toFixed(1)}M current</div></div>
-    ${miniLineChart(budgets, '#a6c8ff')}
+    ${miniLineChart(budgets, '#a6c8ff', 200, 60, budgetLbls)}
   </div>
   <div class="chart-card">
     <div class="chart-header red"><div class="chart-title">Points per Race</div><div class="chart-sub">Latest: ${racePoints[racePoints.length-1]} pts</div></div>
-    ${miniBarChart(racePoints, '#e10600')}
+    ${miniBarChart(racePoints, '#e10600', 200, 60, pointLbls, raceLbls)}
   </div>
   <div class="chart-card">
     <div class="chart-header green"><div class="chart-title">Prize Earnings</div><div class="chart-sub">Total: $${d.total_prize.toFixed(2)}</div></div>
-    ${miniBarChart(prizes, '#4ade80')}
+    ${miniBarChart(prizes, '#4ade80', 200, 60, prizeLbls, raceLbls)}
   </div>
   <div class="chart-card">
-    <div class="chart-header"><div class="chart-title">Season Rank</div><div class="chart-sub">Lower = better</div></div>
-    ${miniLineChart(d.rank_history.map(r => -r.season_rank + 12), '#f59e0b')}
+    <div class="chart-header"><div class="chart-title">Season Rank</div><div class="chart-sub">Higher = better</div></div>
+    ${miniRankChart(seasonRanks, '#f59e0b', 200, 60)}
   </div>`;
 
 // Cards
@@ -575,15 +633,15 @@ function renderLandscape() {
   document.getElementById('ls-charts-grid').innerHTML = `
     <div class="ls-chart-card">
       <div class="chart-header" style="margin-bottom:8px"><div class="chart-title">Budget</div></div>
-      ${miniLineChart(budgets, '#a6c8ff', 180, 50)}
+      ${miniLineChart(budgets, '#a6c8ff', 180, 50, budgetLbls)}
     </div>
     <div class="ls-chart-card">
       <div class="chart-header red" style="margin-bottom:8px"><div class="chart-title">Race Points</div></div>
-      ${miniBarChart(racePoints, '#e10600', 180, 50)}
+      ${miniBarChart(racePoints, '#e10600', 180, 50, pointLbls, raceLbls)}
     </div>
     <div class="ls-chart-card">
       <div class="chart-header green" style="margin-bottom:8px"><div class="chart-title">Prizes</div></div>
-      ${miniBarChart(prizes, '#4ade80', 180, 50)}
+      ${miniBarChart(prizes, '#4ade80', 180, 50, prizeLbls, raceLbls)}
     </div>`;
 
   // Rank table

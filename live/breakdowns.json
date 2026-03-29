@@ -12,7 +12,7 @@
     "pick_name": "Lewis Hamilton",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 13,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5
   },
@@ -29,26 +29,9 @@
     "pick_name": "Lewis Hamilton",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 13,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10
-  },
-  {
-    "race_number": 3,
-    "race_name": "Japanese Grand Prix",
-    "race_flag": "🇯🇵",
-    "race_date": "2026-03-29",
-    "season_rank": 1,
-    "race_rank": 1,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "110",
-    "pick_name": "Lewis Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "pick_points_gd": 16,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1
+    "breakdown_points": 8
   },
   {
     "race_number": 3,
@@ -165,7 +148,7 @@
     "pick_name": "Lando Norris",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 13,
+    "pick_points_gd": 16,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6
   },
@@ -182,26 +165,9 @@
     "pick_name": "Lando Norris",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 13,
+    "pick_points_gd": 16,
     "breakdown_category": "Race Position",
-    "breakdown_points": 8
-  },
-  {
-    "race_number": 3,
-    "race_name": "Japanese Grand Prix",
-    "race_flag": "🇯🇵",
-    "race_date": "2026-03-29",
-    "season_rank": 1,
-    "race_rank": 1,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "117",
-    "pick_name": "Lando Norris",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "pick_points_gd": 13,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1
+    "breakdown_points": 10
   },
   {
     "race_number": 3,
@@ -267,7 +233,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -284,7 +250,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -301,7 +267,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -318,7 +284,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -335,9 +301,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -352,9 +318,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -726,7 +692,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -743,7 +709,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -760,7 +726,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -777,7 +743,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -794,9 +760,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -811,9 +777,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -1185,7 +1151,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -1202,7 +1168,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -1219,7 +1185,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -1236,7 +1202,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -1253,9 +1219,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -1270,9 +1236,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -1644,7 +1610,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -1661,7 +1627,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -1678,7 +1644,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -1695,7 +1661,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -1712,9 +1678,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -1729,9 +1695,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -2103,7 +2069,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -2120,7 +2086,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -2137,7 +2103,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -2154,7 +2120,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -2171,9 +2137,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -2188,9 +2154,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -2562,7 +2528,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -2579,7 +2545,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -2596,7 +2562,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -2613,7 +2579,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -2630,9 +2596,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -2647,9 +2613,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -2987,7 +2953,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -3004,7 +2970,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -3021,7 +2987,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -3038,7 +3004,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -3055,9 +3021,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -3072,9 +3038,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -3837,7 +3803,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -3854,7 +3820,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -3871,7 +3837,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -3888,7 +3854,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -3905,9 +3871,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -3922,9 +3888,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,
@@ -4262,7 +4228,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12
   },
@@ -4279,7 +4245,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -4296,7 +4262,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10
   },
@@ -4313,7 +4279,7 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -4330,9 +4296,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race Position",
-    "breakdown_points": 25
+    "breakdown_points": 23
   },
   {
     "race_number": 3,
@@ -4347,9 +4313,9 @@
     "pick_name": "Ferrari Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 64,
+    "pick_points_gd": 61,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2
+    "breakdown_points": 1
   },
   {
     "race_number": 3,

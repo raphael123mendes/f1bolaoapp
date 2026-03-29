@@ -424,8 +424,10 @@ function trendHTML(change) {
 const list = document.getElementById('standings-list');
 latest.forEach((p, idx) => {
   const avgPts = (p.season_points / p.race_number).toFixed(1);
-  const prize = p.race_prize ? `$${p.race_prize.toFixed(2)}` : '—';
-  const prizeClass = p.race_prize ? 'prize-val' : '';
+  const totalPrize = RESULTS.filter(r => r.user_name === p.user_name)
+    .reduce((sum, r) => sum + (r.race_prize || 0), 0);
+  const prize = totalPrize > 0 ? `$${totalPrize.toFixed(2)}` : '—';
+  const prizeClass = totalPrize > 0 ? 'prize-val' : '';
   const rankNum = String(p.season_rank).padStart(2, '0');
   const hasCard = p.cards_used && p.cards_used.trim() !== '';
 
@@ -488,7 +490,7 @@ window.toggleRow = function(row) {
 (function buildChart() {
   const svg = document.getElementById('trophy-chart');
   const W = 340, H = 160;
-  const PAD = { top: 12, right: 12, bottom: 24, left: 28 };
+  const PAD = { top: 12, right: 72, bottom: 24, left: 28 };
   const chartW = W - PAD.left - PAD.right;
   const chartH = H - PAD.top - PAD.bottom;
 
@@ -540,9 +542,20 @@ window.toggleRow = function(row) {
     const points = data.map(d => `${xPos(d.race)},${yPos(d.rank)}`).join(' ');
     svgHTML += `<polyline points="${points}" fill="none" stroke="${color}" stroke-width="${strokeW}" stroke-linecap="round" stroke-linejoin="round" opacity="${opacity}"/>`;
 
-    // Dots at each point
+    // Dots + labels at each point
+    const firstName = userName.split(' ')[0];
+    const lastRace = Math.max(...data.map(d => d.race));
     data.forEach(d => {
-      svgHTML += `<circle cx="${xPos(d.race)}" cy="${yPos(d.rank)}" r="${isTop3 ? 3.5 : 2}" fill="${color}" opacity="${opacity}"/>`;
+      const cx = xPos(d.race);
+      const cy = yPos(d.rank);
+      svgHTML += `<circle cx="${cx}" cy="${cy}" r="${isTop3 ? 3.5 : 2}" fill="${color}" opacity="${opacity}"/>`;
+      // Label only on last race column to avoid clutter on intermediate points
+      if (d.race === lastRace) {
+        const labelX = cx + 6;
+        const labelY = cy + 3.5;
+        const label = `P${d.rank} ${firstName}`;
+        svgHTML += `<text x="${labelX}" y="${labelY}" font-family="Inter,sans-serif" font-size="${isTop3 ? 7 : 6}" font-weight="${isTop3 ? '700' : '500'}" fill="${color}" opacity="${isTop3 ? 1 : 0.5}">${label}</text>`;
+      }
     });
 
     legendItems.push({ color, name: userName.split(' ')[0], rank: userLatest ? userLatest.season_rank : 99, isTop3 });

@@ -329,12 +329,15 @@ def scores_changed(race, results, last_state):
 
 # ── Step 4: Fetch team picks + cards ─────────────────────────────
 
-def get_team_details(gameday_id, user_guid, team_no=1):
+def get_team_details(gameday_id, user_guid, team_no=1, ftmdid=None, cumdid=None):
     if not AUTH_HEADERS:
         return None, [], {}, {}
 
+    # URL format: /opponentgamedayplayerteamget/{ftmdid}/{user_guid}/{team_no}/{cumdid}/{ftmdid}
+    _ftmdid = ftmdid if ftmdid is not None else gameday_id
+    _cumdid = cumdid if cumdid is not None else gameday_id
     url = (f"{BASE_SERVICES}/opponentteam/opponentgamedayplayerteamget"
-           f"/{gameday_id}/{user_guid}/{team_no}/{gameday_id}/{gameday_id}"
+           f"/{_ftmdid}/{user_guid}/{team_no}/{_cumdid}/{_ftmdid}"
            f"?buster={buster()}")
     try:
         r = requests.get(url, headers=AUTH_HEADERS, timeout=15)
@@ -343,8 +346,8 @@ def get_team_details(gameday_id, user_guid, team_no=1):
         print(f"    DEBUG raw keys: {list(raw.get('Data', {}).get('Value', {}).keys()) if isinstance(raw.get('Data', {}).get('Value'), dict) else raw.get('Data', {}).get('Value')}")
         data      = raw["Data"]["Value"]
         user_team = data.get("userTeam", []) if isinstance(data, dict) else []
+        print(f"    DEBUG userTeam length: {len(user_team)}, value: {str(user_team)[:500]}")
         if not user_team:
-            print(f"    DEBUG: userTeam empty or missing. data type={type(data)}, data={str(data)[:300]}")
             return None, [], {}, {}
 
         team_data  = user_team[0]
@@ -427,9 +430,12 @@ def get_standings(gameday_id, score=0):
                 f"?buster={buster()}",
                 headers=AUTH_HEADERS, timeout=15
             ).json()
-            cugdid = gd_data["Data"]["Value"][0]["cugdid"]
+            gd_val = gd_data["Data"]["Value"][0]
+            cugdid = gd_val["cugdid"]
+            ftmdid = gd_val["ftmdid"]
+            cumdid = gd_val["cumdid"]
             api_gameday_id = cugdid
-            print(f"  API gameday ID : {api_gameday_id} (round={gameday_id})")
+            print(f"  API gameday ID : cugdid={cugdid} ftmdid={ftmdid} cumdid={cumdid} (round={gameday_id})")
     except Exception as e:
         print(f"  WARNING: could not fetch cugdid, using round number {gameday_id}: {e}")
 
@@ -476,7 +482,7 @@ def get_standings(gameday_id, score=0):
 
         print(f"  Fetching: {user_name} ({team_name})")
 
-        gdpoints, picks, cards, team_data = get_team_details(api_gameday_id, user_guid, team_no)
+        gdpoints, picks, cards, team_data = get_team_details(api_gameday_id, user_guid, team_no, ftmdid=ftmdid, cumdid=cumdid)
         time.sleep(0.15)
 
         no_neg_gd  = cards.get("NoNeg")
@@ -999,7 +1005,7 @@ def _save_local(filename, data):
 
 # ── Main ──────────────────────────────────────────────────────────
 
-VERSION = "2.2.0-debug"
+VERSION = "2.4.0-urlfix"
 
 def main():
     print(f"\n{'='*50}")

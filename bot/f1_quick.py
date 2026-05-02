@@ -339,9 +339,12 @@ def get_team_details(gameday_id, user_guid, team_no=1):
     try:
         r = requests.get(url, headers=AUTH_HEADERS, timeout=15)
         r.raise_for_status()
-        data      = r.json()["Data"]["Value"]
-        user_team = data.get("userTeam", [])
+        raw = r.json()
+        print(f"    DEBUG raw keys: {list(raw.get('Data', {}).get('Value', {}).keys()) if isinstance(raw.get('Data', {}).get('Value'), dict) else raw.get('Data', {}).get('Value')}")
+        data      = raw["Data"]["Value"]
+        user_team = data.get("userTeam", []) if isinstance(data, dict) else []
         if not user_team:
+            print(f"    DEBUG: userTeam empty or missing. data type={type(data)}, data={str(data)[:300]}")
             return None, [], {}, {}
 
         team_data  = user_team[0]
@@ -996,7 +999,7 @@ def _save_local(filename, data):
 
 # ── Main ──────────────────────────────────────────────────────────
 
-VERSION = "2.1.0-cugdid"
+VERSION = "2.2.0-debug"
 
 def main():
     print(f"\n{'='*50}")

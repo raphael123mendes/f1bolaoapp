@@ -409,6 +409,27 @@ def get_standings(gameday_id, score=0):
 
     lv = get(f"{BASE_FEEDS}/live/mixapi.json?buster={buster()}")["Value"]["lv"]
 
+    # Fetch the real internal gameday ID (cugdid) from the API.
+    # The round number in the schedule differs from the API's internal ID.
+    api_gameday_id = gameday_id  # fallback to round number if fetch fails
+    try:
+        leaderboard_tmp = get(
+            f"{BASE_FEEDS}/leaderboard/privateleague/list_2_{LEAGUE_ID}_1_1.json"
+            f"?buster={buster()}"
+        )["Value"]["leaderboard"]
+        if leaderboard_tmp:
+            first_guid = leaderboard_tmp[0]["user_guid"]
+            gd_data = requests.get(
+                f"{BASE_SERVICES}/gameplay/{first_guid}/getusergamedaysv1/1"
+                f"?buster={buster()}",
+                headers=AUTH_HEADERS, timeout=15
+            ).json()
+            cugdid = gd_data["Data"]["Value"][0]["cugdid"]
+            api_gameday_id = cugdid
+            print(f"  API gameday ID : {api_gameday_id} (round={gameday_id})")
+    except Exception as e:
+        print(f"  WARNING: could not fetch cugdid, using round number {gameday_id}: {e}")
+
     player_names     = {}   # pid -> full display name  (for JSON export + WhatsApp fallback)
     player_tlas      = {}   # pid -> TLA                 (for WhatsApp message display)
     player_skills    = {}   # pid -> 1 (Driver) | 2 (Constructor)
@@ -452,11 +473,11 @@ def get_standings(gameday_id, score=0):
 
         print(f"  Fetching: {user_name} ({team_name})")
 
-        gdpoints, picks, cards, team_data = get_team_details(gameday_id, user_guid, team_no)
+        gdpoints, picks, cards, team_data = get_team_details(api_gameday_id, user_guid, team_no)
         time.sleep(0.15)
 
         no_neg_gd  = cards.get("NoNeg")
-        has_no_neg = (no_neg_gd is not None and int(no_neg_gd) == int(gameday_id))
+        has_no_neg = (no_neg_gd is not None and int(no_neg_gd) == int(api_gameday_id))
         cap_id     = next((p["id"] for p in picks if p.get("iscaptain")),   None)
         megacap_id = next((p["id"] for p in picks if p.get("ismgcaptain")), None)
 
@@ -478,7 +499,7 @@ def get_standings(gameday_id, score=0):
                 mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
                 mult      = cap_mult * mega_mult
                 # reuse components already fetched for pick_components above
-                comps = get_player_components(pid, gameday_id, lv)
+                comps = get_player_components(pid, api_gameday_id, lv)
                 for _cat, val in comps:
                     no_neg_factor = 0 if (has_no_neg and val < 0) else 1
                     total += val * mult * no_neg_factor
@@ -503,7 +524,7 @@ def get_standings(gameday_id, score=0):
             cap_mult  = 2 if (cap_id     and pid == cap_id)     else 1
             mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
             mult      = cap_mult * mega_mult
-            comps     = get_player_components(pid, gameday_id, lv)
+            comps     = get_player_components(pid, api_gameday_id, lv)
             pts       = sum(
                 val * mult * (0 if (has_no_neg and val < 0) else 1)
                 for _cat, val in comps

@@ -510,7 +510,7 @@ def get_standings(gameday_id, score=0):
                 mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
                 mult      = cap_mult * mega_mult
                 # reuse components already fetched for pick_components above
-                comps = get_player_components(pid, api_gameday_id, lv)
+                comps = get_player_components(pid, cumdid, lv)
                 for _cat, val in comps:
                     no_neg_factor = 0 if (has_no_neg and val < 0) else 1
                     total += val * mult * no_neg_factor
@@ -541,7 +541,7 @@ def get_standings(gameday_id, score=0):
             cap_mult  = 2 if (cap_id     and pid == cap_id)     else 1
             mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
             mult      = cap_mult * mega_mult
-            comps     = get_player_components(pid, api_gameday_id, lv)
+            comps     = get_player_components(pid, cumdid, lv)
             pts       = sum(
                 val * mult * (0 if (has_no_neg and val < 0) else 1)
                 for _cat, val in comps
@@ -1013,7 +1013,7 @@ def _save_local(filename, data):
 
 # ── Main ──────────────────────────────────────────────────────────
 
-VERSION = "2.6.0-debug-components"
+VERSION = "2.7.0-cumdid-components"
 
 def main():
     print(f"\n{'='*50}")

@@ -345,7 +345,7 @@ def get_team_details(gameday_id, user_guid, team_no=1):
             return None, [], {}, {}
 
         team_data  = user_team[0]
-        picks      = team_data.get("playerid", [])
+        picks      = team_data.get("playerid") or []
         gdpoints   = team_data.get("gdpoints")
 
         mgcap_pid = str(team_data.get("mgcapplayerid") or "")

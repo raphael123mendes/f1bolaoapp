@@ -387,6 +387,8 @@ def get_player_components(pid, gameday_id, lv):
     """
     try:
         data = get(f"{BASE_FEEDS}/popup/playerstats_{pid}.json?buster={lv}")
+        available_gds = [gd["GamedayId"] for gd in data["Value"]["GamedayWiseStats"]]
+        print(f"      [components] pid={pid} looking for gd={gameday_id} available={available_gds}")
         for gd in data["Value"]["GamedayWiseStats"]:
             if int(gd["GamedayId"]) == int(gameday_id):
                 components = []
@@ -524,6 +526,12 @@ def get_standings(gameday_id, score=0):
             if sub_penalty or inactive_pen:
                 print(f"    Penalties: transfers={sub_penalty} inactive={inactive_pen}")
             print(f"    → Calculated: {total} (gdpoints={gdpoints})")
+
+            # Fall back to gdpoints if component calc returned 0 but gdpoints has a value
+            # This happens during live sessions when player stats feed isn't updated yet
+            if total == 0.0 and gdpoints is not None and float(gdpoints) != 0.0:
+                total = float(gdpoints)
+                print(f"    → Falling back to gdpoints={total} (components not available yet)")
 
         # Compute per-pick points from components for every pick
         # This gives individual scores regardless of live vs post-race mode
@@ -1005,7 +1013,7 @@ def _save_local(filename, data):
 
 # ── Main ──────────────────────────────────────────────────────────
 
-VERSION = "2.4.0-urlfix"
+VERSION = "2.6.0-debug-components"
 
 def main():
     print(f"\n{'='*50}")

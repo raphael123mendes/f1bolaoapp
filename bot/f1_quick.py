@@ -996,9 +996,11 @@ def _save_local(filename, data):
 
 # ── Main ──────────────────────────────────────────────────────────
 
+VERSION = "2.1.0-cugdid"
+
 def main():
     print(f"\n{'='*50}")
-    print(f"F1 Quick Standings | {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
+    print(f"F1 Quick Standings v{VERSION} | {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
     print(f"{'='*50}")
 
     # ── 1. Detect race & window ───────────────────────────────────

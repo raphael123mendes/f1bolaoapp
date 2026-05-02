@@ -342,7 +342,7 @@ def get_team_details(gameday_id, user_guid, team_no=1):
         data      = r.json()["Data"]["Value"]
         user_team = data.get("userTeam", [])
         if not user_team:
-            return None, [], {}
+            return None, [], {}, {}
 
         team_data  = user_team[0]
         picks      = team_data.get("playerid", [])

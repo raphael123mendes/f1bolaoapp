@@ -1,8 +1,20 @@
 {
   "gameday_id": "6",
   "session_type": "sprint",
-  "ranking_hash": "d41d8cd98f00b204e9800998ecf8427e",
-  "scores": {},
+  "ranking_hash": "24045b0ef4525908e3e69a4aa0b9b7e7",
+  "scores": {
+    "Fabio Mucci": 0,
+    "Liberio Junior": 0,
+    "Rafael Dias": 0,
+    "Robson Jardim": 0,
+    "Raphael Stein": 0,
+    "Vinicius Agostini": 0,
+    "Danilo Iglesias": 0,
+    "Priscila Rigotto": 0,
+    "Eduardo Santos Lima": 0,
+    "Guilherme Figueiredo": -10,
+    "Ricardo Mucci": -20
+  },
   "post_race_sent": false,
-  "saved_at": "2026-05-02T16:20:50.997671+00:00"
+  "saved_at": "2026-05-02T17:14:27.787987+00:00"
 }

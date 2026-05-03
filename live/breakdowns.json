@@ -17,7 +17,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -4,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -37,7 +37,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -57,7 +57,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -77,7 +77,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -97,7 +97,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -117,7 +117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -137,7 +137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -157,7 +157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 6,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -176,8 +176,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 285
+    "breakdown_points": 1,
+    "pick_points_gd": 260
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 9,
+    "race_rank": 1,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -7,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -197,7 +217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -217,7 +237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -237,7 +257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -257,7 +277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -277,7 +297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -297,7 +317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -317,7 +337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -337,7 +357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 4,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -356,8 +376,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 285
+    "breakdown_points": 10,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -376,8 +396,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8,
-    "pick_points_gd": 285
+    "breakdown_points": -3,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -397,7 +417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -417,7 +437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 4,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -437,7 +457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 7,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -456,8 +476,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 285
+    "breakdown_points": 15,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -476,8 +496,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 285
+    "breakdown_points": 4,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -497,7 +517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -517,7 +537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -537,7 +557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -557,7 +577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -576,8 +596,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 285
+    "breakdown_points": 13,
+    "pick_points_gd": 260
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 9,
+    "race_rank": 1,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -597,7 +637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -2,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -617,7 +657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 16,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -637,7 +677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -657,7 +697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 285
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -676,8 +716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 28,
-    "pick_points_gd": 285
+    "breakdown_points": 22,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -696,8 +736,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 285
+    "breakdown_points": -4,
+    "pick_points_gd": 260
   },
   {
     "race_number": 6,
@@ -717,7 +757,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -737,7 +777,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -756,28 +796,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 215
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 222
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 2,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": true,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -797,7 +837,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -817,7 +857,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -837,7 +877,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -856,8 +896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 222
+    "breakdown_points": 8,
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -877,7 +917,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -897,7 +937,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -917,7 +957,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -937,7 +977,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -4,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -957,7 +997,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -977,7 +1017,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -997,7 +1037,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1017,7 +1057,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1037,7 +1077,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1057,7 +1097,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1077,7 +1117,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1097,7 +1137,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1117,7 +1157,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1137,7 +1177,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1157,7 +1197,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1176,8 +1216,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 222
+    "breakdown_points": 13,
+    "pick_points_gd": 215
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1197,7 +1257,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1217,7 +1277,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1237,7 +1297,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 11,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1257,7 +1317,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 15,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1277,7 +1337,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1296,8 +1356,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
-    "breakdown_points": 37,
-    "pick_points_gd": 222
+    "breakdown_points": 40,
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1317,7 +1377,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 222
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1336,8 +1396,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 222
+    "breakdown_points": 7,
+    "pick_points_gd": 215
   },
   {
     "race_number": 6,
@@ -1357,7 +1417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1377,7 +1437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1397,7 +1457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1416,8 +1476,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 193
+    "breakdown_points": 8,
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1437,7 +1497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -2,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1457,7 +1517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1477,7 +1537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1496,8 +1556,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 193
+    "breakdown_points": 8,
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1516,8 +1576,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 193
+    "breakdown_points": 2,
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1537,7 +1597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1557,7 +1617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1577,7 +1637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1597,7 +1657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -4,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1617,7 +1677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1637,7 +1697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1657,7 +1717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1677,7 +1737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1697,7 +1757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1717,7 +1777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1737,7 +1797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1757,7 +1817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1777,7 +1837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1797,7 +1857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1817,7 +1877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1837,7 +1897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1857,7 +1917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1876,8 +1936,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 193
+    "breakdown_points": 13,
+    "pick_points_gd": 186
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 7,
+    "race_rank": 3,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1897,7 +1977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1917,7 +1997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1937,7 +2017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 11,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1957,7 +2037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 15,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1977,7 +2057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -1996,8 +2076,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 37,
-    "pick_points_gd": 193
+    "breakdown_points": 40,
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -2017,7 +2097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -2036,8 +2116,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 193
+    "breakdown_points": 7,
+    "pick_points_gd": 186
   },
   {
     "race_number": 6,
@@ -2057,7 +2137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -2,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2077,7 +2157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2097,7 +2177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2116,8 +2196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 174
+    "breakdown_points": 8,
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2136,8 +2216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 174
+    "breakdown_points": 2,
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2157,7 +2237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2177,7 +2257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2197,7 +2277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2217,7 +2297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2237,7 +2317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2257,7 +2337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2276,8 +2356,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 174
+    "breakdown_points": 2,
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2297,7 +2377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -4,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2317,7 +2397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2337,7 +2417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2357,7 +2437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2377,7 +2457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2397,7 +2477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2417,7 +2497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2437,7 +2517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2457,7 +2537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2476,8 +2556,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 174
+    "breakdown_points": 13,
+    "pick_points_gd": 164
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 8,
+    "race_rank": 4,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2497,7 +2597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2517,7 +2617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2537,7 +2637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 11,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2557,7 +2657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 15,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2577,7 +2677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2596,8 +2696,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 37,
-    "pick_points_gd": 174
+    "breakdown_points": 40,
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2617,7 +2717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2636,8 +2736,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 174
+    "breakdown_points": 7,
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2657,7 +2757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2677,7 +2777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2697,7 +2797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2717,7 +2817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 164
   },
   {
     "race_number": 6,
@@ -2736,68 +2836,688 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 174
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 173
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 173
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 173
+    "pick_points_gd": 164
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 8,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Not Classified",
+    "breakdown_points": -10,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race not classified ",
+    "breakdown_points": -20,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position lost",
+    "breakdown_points": -4,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -1,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race not classified ",
+    "breakdown_points": -20,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Fastest lap",
+    "breakdown_points": 5,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 11,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 40,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 7,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position lost",
+    "breakdown_points": -2,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 16,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 22,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -4,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position lost",
+    "breakdown_points": -1,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 3,
+    "race_rank": 5,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 159
   },
   {
     "race_number": 6,
@@ -2805,7 +3525,67 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 6,
+    "race_rank": 6,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 6,
+    "race_rank": 6,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 6,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11031",
@@ -2816,8 +3596,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 173
+    "breakdown_points": 1,
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2825,7 +3605,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11059",
@@ -2837,7 +3617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -2,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2845,7 +3625,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11059",
@@ -2857,7 +3637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2865,7 +3645,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11059",
@@ -2877,7 +3657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2885,7 +3665,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11059",
@@ -2896,8 +3676,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 173
+    "breakdown_points": 8,
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2905,7 +3685,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11059",
@@ -2916,8 +3696,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 173
+    "breakdown_points": 2,
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2925,7 +3705,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11161",
@@ -2937,7 +3717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -4,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2945,7 +3725,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11161",
@@ -2957,7 +3737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2965,7 +3745,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11161",
@@ -2977,7 +3757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -2985,7 +3765,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11161",
@@ -2997,7 +3777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3005,7 +3785,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11161",
@@ -3017,7 +3797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3025,7 +3805,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "114",
@@ -3037,7 +3817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3045,7 +3825,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "114",
@@ -3057,7 +3837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3065,7 +3845,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "114",
@@ -3077,7 +3857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3085,7 +3865,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "117",
@@ -3097,7 +3877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3105,7 +3885,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "117",
@@ -3117,7 +3897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3125,7 +3905,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "117",
@@ -3137,7 +3917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3145,7 +3925,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "117",
@@ -3157,7 +3937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3165,7 +3945,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "117",
@@ -3177,7 +3957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3185,7 +3965,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "117",
@@ -3197,7 +3977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3205,7 +3985,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -3217,7 +3997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3225,7 +4005,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -3237,7 +4017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3245,7 +4025,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -3257,7 +4037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3265,7 +4045,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -3277,7 +4057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3285,7 +4065,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -3296,8 +4076,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 173
+    "breakdown_points": 13,
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3305,7 +4085,27 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 6,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "2636",
@@ -3317,7 +4117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3325,7 +4125,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "2636",
@@ -3337,7 +4137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3345,7 +4145,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "2636",
@@ -3357,7 +4157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q2",
     "breakdown_points": 1,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3365,7 +4165,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "2636",
@@ -3377,7 +4177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3385,7 +4185,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "2636",
@@ -3397,7 +4197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
@@ -3405,7 +4205,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 6,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "2636",
@@ -3416,20 +4216,20 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 173
+    "breakdown_points": -7,
+    "pick_points_gd": 158
   },
   {
     "race_number": 6,
     "race_name": "Miami Grand Prix",
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -3437,19 +4237,19 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 164
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
     "race_name": "Miami Grand Prix",
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -3457,19 +4257,19 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 164
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
     "race_name": "Miami Grand Prix",
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -3477,39 +4277,319 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 164
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
     "race_name": "Miami Grand Prix",
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 164
+    "breakdown_points": 1,
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
     "race_name": "Miami Grand Prix",
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position lost",
+    "breakdown_points": -2,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position lost",
+    "breakdown_points": -4,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -1,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -3517,1227 +4597,167 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 164
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
     "race_name": "Miami Grand Prix",
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Sprint Not Classified",
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "23",
+    "pick_name": "Alpine",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 4,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "23",
+    "pick_name": "Alpine",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "23",
+    "pick_name": "Alpine",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "23",
+    "pick_name": "Alpine",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "23",
+    "pick_name": "Alpine",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
     "breakdown_points": -10,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race not classified ",
-    "breakdown_points": -20,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position lost",
-    "breakdown_points": -4,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race not classified ",
-    "breakdown_points": -20,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Fastest lap",
-    "breakdown_points": 5,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 37,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position lost",
-    "breakdown_points": -2,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 16,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 28,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 3,
-    "race_rank": 6,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 164
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position lost",
-    "breakdown_points": -4,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race not classified ",
-    "breakdown_points": -20,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 13,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "26",
-    "pick_name": "Haas F1 Team",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "26",
-    "pick_name": "Haas F1 Team",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "26",
-    "pick_name": "Haas F1 Team",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "26",
-    "pick_name": "Haas F1 Team",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "26",
-    "pick_name": "Haas F1 Team",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 138
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "26",
-    "pick_name": "Haas F1 Team",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 138
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
@@ -4745,547 +4765,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position lost",
-    "breakdown_points": -2,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position lost",
-    "breakdown_points": -4,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "23",
-    "pick_name": "Alpine",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "23",
-    "pick_name": "Alpine",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "23",
-    "pick_name": "Alpine",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "23",
-    "pick_name": "Alpine",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "23",
-    "pick_name": "Alpine",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -11,
-    "pick_points_gd": 134
-  },
-  {
-    "race_number": 6,
-    "race_name": "Miami Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-05-03",
-    "season_rank": 11,
-    "race_rank": 8,
+    "race_rank": 7,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "25",
@@ -5297,7 +4777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 134
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
@@ -5305,7 +4785,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 11,
-    "race_rank": 8,
+    "race_rank": 7,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "25",
@@ -5317,7 +4797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 134
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
@@ -5325,7 +4805,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 11,
-    "race_rank": 8,
+    "race_rank": 7,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "25",
@@ -5337,7 +4817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 134
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
@@ -5345,7 +4825,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 11,
-    "race_rank": 8,
+    "race_rank": 7,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "25",
@@ -5357,7 +4837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 134
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
@@ -5365,7 +4845,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 11,
-    "race_rank": 8,
+    "race_rank": 7,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "25",
@@ -5376,8 +4856,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 134
+    "breakdown_points": 13,
+    "pick_points_gd": 125
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 11,
+    "race_rank": 7,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 125
   },
   {
     "race_number": 6,
@@ -5385,7 +4885,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -5397,7 +4897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5405,7 +4905,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -5417,7 +4917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5425,7 +4925,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -5437,7 +4937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5445,7 +4945,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -5456,8 +4956,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 124
+    "breakdown_points": 8,
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5465,7 +4965,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -5477,7 +4977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -4,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5485,7 +4985,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -5497,7 +4997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5505,7 +5005,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -5517,7 +5017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5525,7 +5025,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -5537,7 +5037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5545,7 +5045,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -5557,7 +5057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5565,7 +5065,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "114",
@@ -5577,7 +5077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5585,7 +5085,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "114",
@@ -5597,7 +5097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5605,7 +5105,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "114",
@@ -5617,7 +5117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5625,7 +5125,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "115",
@@ -5637,7 +5137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5645,7 +5145,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "115",
@@ -5657,7 +5157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5665,7 +5165,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "115",
@@ -5677,7 +5177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 6,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5685,7 +5185,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "115",
@@ -5696,8 +5196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 124
+    "breakdown_points": 1,
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5705,7 +5205,27 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -7,
+    "pick_points_gd": 101
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 4,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "117",
@@ -5717,7 +5237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5725,7 +5245,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "117",
@@ -5737,7 +5257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5745,7 +5265,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "117",
@@ -5757,7 +5277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5765,7 +5285,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "117",
@@ -5777,7 +5297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5785,7 +5305,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "117",
@@ -5797,7 +5317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5805,7 +5325,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "117",
@@ -5817,7 +5337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5825,7 +5345,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "26",
@@ -5837,7 +5357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5845,7 +5365,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "26",
@@ -5857,7 +5377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5865,7 +5385,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "26",
@@ -5877,7 +5397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5885,7 +5405,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "26",
@@ -5897,7 +5417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5905,7 +5425,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "26",
@@ -5916,8 +5436,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 124
+    "breakdown_points": 0,
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5925,7 +5445,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "26",
@@ -5936,8 +5456,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 124
+    "breakdown_points": 3,
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5945,7 +5465,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -5957,7 +5477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5965,7 +5485,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -5977,7 +5497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -5985,7 +5505,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -5997,7 +5517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q2",
     "breakdown_points": 1,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -6005,7 +5525,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -6017,7 +5537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -6025,7 +5545,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -6037,7 +5557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 124
+    "pick_points_gd": 101
   },
   {
     "race_number": 6,
@@ -6045,7 +5565,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-05-03",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -6056,8 +5576,688 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 124
+    "breakdown_points": -7,
+    "pick_points_gd": 101
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position lost",
+    "breakdown_points": -4,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -1,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race not classified ",
+    "breakdown_points": -20,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 6,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -7,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 13,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 13,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "26",
+    "pick_name": "Haas F1 Team",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q2",
+    "breakdown_points": 3,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "26",
+    "pick_name": "Haas F1 Team",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "26",
+    "pick_name": "Haas F1 Team",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "26",
+    "pick_name": "Haas F1 Team",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "26",
+    "pick_name": "Haas F1 Team",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 98
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 5,
+    "race_rank": 9,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "26",
+    "pick_name": "Haas F1 Team",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 3,
+    "pick_points_gd": 98
   },
   {
     "race_number": 6,
@@ -6077,7 +6277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6097,7 +6297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6117,7 +6317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6137,7 +6337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -4,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6157,7 +6357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6177,7 +6377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6197,7 +6397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6217,7 +6417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6237,7 +6437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6257,7 +6457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6277,7 +6477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6297,7 +6497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6317,7 +6517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6337,7 +6537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6357,7 +6557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6377,7 +6577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6397,7 +6597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6417,7 +6617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6437,7 +6637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6456,8 +6656,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 122
+    "breakdown_points": 13,
+    "pick_points_gd": 97
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 1,
+    "race_rank": 10,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6477,7 +6697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -2,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6497,7 +6717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 16,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6517,7 +6737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6537,7 +6757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6556,8 +6776,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 28,
-    "pick_points_gd": 122
+    "breakdown_points": 22,
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6576,8 +6796,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 122
+    "breakdown_points": -4,
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6597,7 +6817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6617,7 +6837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6637,7 +6857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6657,7 +6877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 122
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6676,8 +6896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 122
+    "breakdown_points": 1,
+    "pick_points_gd": 97
   },
   {
     "race_number": 6,
@@ -6697,7 +6917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6717,7 +6937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6737,7 +6957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6756,8 +6976,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 119
+    "breakdown_points": 8,
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6777,7 +6997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6797,7 +7017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6817,7 +7037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6837,7 +7057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6857,7 +7077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6877,7 +7097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 6,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6896,8 +7116,28 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 119
+    "breakdown_points": 1,
+    "pick_points_gd": 55
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 10,
+    "race_rank": 11,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -7,
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6917,7 +7157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6937,7 +7177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6957,7 +7197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6977,7 +7217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -6997,7 +7237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7017,7 +7257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7037,7 +7277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7056,8 +7296,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 119
+    "breakdown_points": 4,
+    "pick_points_gd": 55
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 10,
+    "race_rank": 11,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "124",
+    "pick_name": "G. Russell",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7077,7 +7337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7097,7 +7357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 13,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7117,7 +7377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7137,7 +7397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7156,8 +7416,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 23,
-    "pick_points_gd": 119
+    "breakdown_points": 13,
+    "pick_points_gd": 55
+  },
+  {
+    "race_number": 6,
+    "race_name": "Miami Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-05-03",
+    "season_rank": 10,
+    "race_rank": 11,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7177,7 +7457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7197,7 +7477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7217,7 +7497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q2",
     "breakdown_points": 1,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7237,7 +7517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7257,7 +7537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 55
   },
   {
     "race_number": 6,
@@ -7276,7 +7556,7 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -2,
-    "pick_points_gd": 119
+    "breakdown_points": -1,
+    "pick_points_gd": 55
   }
 ]

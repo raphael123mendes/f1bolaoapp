@@ -519,20 +519,44 @@ def get_standings(gameday_id, score=0):
             print(f"    ERROR: no cookie or cookie expired for {user_name} — skipping.")
             continue
 
+        # pick_scores captures the per-pick effective subtotal so build_picks_rows()
+        # can write a correct pick_points_gd per row instead of the team total.
+        pick_scores = {str(p["id"]): 0.0 for p in picks}
+
         if use_gdpoints:
+            # gdpoints is a finalised team total from the API — no per-pick breakdown.
+            # We still fetch components to approximate per-pick scores so pick cards
+            # show meaningful individual values rather than the team total on every row.
             total = float(gdpoints) if gdpoints is not None else 0.0
             print(f"    → Post-event: using gdpoints={total}")
+            for p in picks:
+                pid        = str(p["id"])
+                components = get_player_components(p["id"], gameday_id, lv)
+                cap_mult   = 2 if (cap_id     and p["id"] == cap_id)     else 1
+                mega_mult  = 3 if (megacap_id and p["id"] == megacap_id) else 1
+                mult       = cap_mult * mega_mult
+                pick_sub   = 0.0
+                for _cat, val in components:
+                    no_neg_factor = 0 if (has_no_neg and val < 0) else 1
+                    pick_sub += val * mult * no_neg_factor
+                pick_scores[pid] = pick_sub
+                time.sleep(0.05)
         else:
             total = 0.0
             for p in picks:
-                pid        = p["id"]
-                components = get_player_components(pid, gameday_id, lv)
-                cap_mult   = 2 if (cap_id     and pid == cap_id)     else 1
-                mega_mult  = 3 if (megacap_id and pid == megacap_id) else 1
+                pid        = str(p["id"])
+                components = get_player_components(p["id"], gameday_id, lv)
+                cap_mult   = 2 if (cap_id     and p["id"] == cap_id)     else 1
+                mega_mult  = 3 if (megacap_id and p["id"] == megacap_id) else 1
                 mult       = cap_mult * mega_mult
+                if mult == 6:
+                    print(f"    WARNING: {pid} is both captain AND mega captain — applying 6× mult")
+                pick_sub = 0.0
                 for _cat, val in components:
                     no_neg_factor = 0 if (has_no_neg and val < 0) else 1
-                    total += val * mult * no_neg_factor
+                    pick_sub += val * mult * no_neg_factor
+                pick_scores[pid] = pick_sub
+                total += pick_sub
                 time.sleep(0.05)
 
             usersubs    = team_data.get("usersubs", 0) or 0
@@ -561,6 +585,7 @@ def get_standings(gameday_id, score=0):
                 "skill":       skill,
                 "iscaptain":   p.get("iscaptain", 0),
                 "ismgcaptain": p.get("ismgcaptain", 0),
+                "pick_score":  pick_scores.get(str(pid), 0.0),
             })
 
         results.append({
@@ -819,7 +844,8 @@ def build_picks_rows(race, results):
                 "pick_type":        p["pick_type"],
                 "is_captain":       bool(p["iscaptain"]),
                 "is_megacap":       bool(p["ismgcaptain"]),
-                "pick_points_gd":   int(team["points"]),
+                "pick_points_gd":   round(p.get("pick_score", 0.0), 1),  # per-pick effective subtotal
+                "team_points_gd":   int(team["points"]),                  # full team total (for reference)
                 "price_this_race":  None,
                 "price_next_race":  None,
             })
@@ -827,26 +853,54 @@ def build_picks_rows(race, results):
 
 
 def build_breakdowns_rows(race, results, lv, gameday_id):
-    """Build the breakdowns.json rows for this race by re-fetching player components."""
+    """
+    Build the breakdowns.json rows for this race by re-fetching player components.
+
+    breakdown_points always stores the RAW component value from the API —
+    no multipliers or card effects are applied. Context columns are included
+    so any downstream tool can reconstruct the effective points:
+
+      effective = 0                          if no_neg_applied and breakdown_points < 0
+      effective = breakdown_points * cap_multiplier   otherwise
+
+    Context columns:
+      • is_megacap      — this pick is the mega captain (3× role)
+      • cap_multiplier  — combined multiplier for this pick: 1 / 2 / 3 / 6
+      • no_neg_applied  — True if this pick's team has NoNeg active this gameday
+                          (consumer must zero negatives when True)
+    """
     meta = _race_meta(race)
     rows = []
+
     for team in results:
+        has_no_neg = "NoNeg" in team["cards"]
+        cap_id     = next((p["id"] for p in team["pick_details"] if p.get("iscaptain")),   None)
+        megacap_id = next((p["id"] for p in team["pick_details"] if p.get("ismgcaptain")), None)
+
         for p in team["pick_details"]:
-            components = get_player_components(p["id"], gameday_id, lv)
-            for category, points in components:
+            pid        = p["id"]
+            cap_mult   = 2 if (cap_id     and pid == cap_id)     else 1
+            mega_mult  = 3 if (megacap_id and pid == megacap_id) else 1
+            multiplier = cap_mult * mega_mult   # 1, 2, 3, or 6
+
+            components = get_player_components(pid, gameday_id, lv)
+            for category, raw_points in components:
                 rows.append({
                     **meta,
                     "season_rank":        team["season_rank"],
                     "race_rank":          team["rank"],
                     "team_name":          team["team_name"],
                     "user_name":          team["user_name"],
-                    "pick_id":            p["id"],
+                    "pick_id":            pid,
                     "pick_name":          p["full_name"],
                     "pick_type":          p["pick_type"],
                     "is_captain":         bool(p["iscaptain"]),
-                    "pick_points_gd":     int(team["points"]),
+                    "is_megacap":         bool(p["ismgcaptain"]),
+                    "cap_multiplier":     multiplier,
+                    "no_neg_applied":     has_no_neg,
                     "breakdown_category": category,
-                    "breakdown_points":   points,
+                    "breakdown_points":   raw_points,   # always raw — apply context cols to reconstruct
+                    "pick_points_gd":     int(team["points"]),
                 })
             time.sleep(0.05)
     return rows

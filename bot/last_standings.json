@@ -1,11 +1,11 @@
 {
-  "gameday_id": "6",
-  "session_type": "qualifying",
-  "ranking_hash": "77afedcae58fbacb7410b2c4f2d7ae97",
+  "gameday_id": "4",
+  "session_type": "sprint",
+  "ranking_hash": "2cf75661565e73007d8b34332fed1b9e",
   "scores": {
     "Priscila Rigotto": 142,
+    "Liberio Junior": 100,
     "Vinicius Agostini": 87,
-    "Liberio Junior": 82,
     "Robson Jardim": 76,
     "Raphael Stein": 73,
     "Danilo Iglesias": 72,
@@ -15,6 +15,6 @@
     "Ricardo Mucci": 52,
     "Rafael Dias": 51
   },
-  "post_race_sent": true,
-  "saved_at": "2026-05-02T22:51:58.536084+00:00"
+  "post_race_sent": false,
+  "saved_at": "2026-05-03T06:20:43.761238+00:00"
 }

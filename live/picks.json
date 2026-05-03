@@ -14,7 +14,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 142,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 142,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -33,7 +34,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 142,
+    "pick_points_gd": 15.0,
+    "team_points_gd": 142,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -52,7 +54,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 142,
+    "pick_points_gd": 20.0,
+    "team_points_gd": 142,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -71,7 +74,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 142,
+    "pick_points_gd": 13.0,
+    "team_points_gd": 142,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -90,7 +94,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 142,
+    "pick_points_gd": 12.0,
+    "team_points_gd": 142,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -109,7 +114,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 142,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 142,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -128,7 +134,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 142,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 142,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -147,7 +154,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 100,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -166,7 +174,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 100,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -185,7 +194,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 100,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -204,7 +214,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 100,
+    "pick_points_gd": 26.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -223,7 +234,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 100,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -242,7 +254,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 100,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -261,7 +274,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 100,
+    "pick_points_gd": 42.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -280,7 +294,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 87,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 87,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -299,7 +314,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 87,
+    "pick_points_gd": 1.0,
+    "team_points_gd": 87,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -318,7 +334,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 87,
+    "pick_points_gd": -10.0,
+    "team_points_gd": 87,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -337,7 +354,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 87,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 87,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -356,7 +374,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 87,
+    "pick_points_gd": 4.0,
+    "team_points_gd": 87,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -375,7 +394,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 87,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 87,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -394,7 +414,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 87,
+    "pick_points_gd": 42.0,
+    "team_points_gd": 87,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -413,7 +434,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 76,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -432,7 +454,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 76,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -451,7 +474,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 76,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -470,7 +494,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 15.0,
+    "team_points_gd": 76,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -489,7 +514,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 4.0,
+    "team_points_gd": 76,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -508,7 +534,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 76,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -527,7 +554,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 76,
+    "pick_points_gd": 7.0,
+    "team_points_gd": 76,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -546,7 +574,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 73,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 73,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -565,7 +594,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 73,
+    "pick_points_gd": 1.0,
+    "team_points_gd": 73,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -584,7 +614,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 73,
+    "pick_points_gd": 9.0,
+    "team_points_gd": 73,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -603,7 +634,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 73,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 73,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -622,7 +654,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 73,
+    "pick_points_gd": 40.0,
+    "team_points_gd": 73,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -641,7 +674,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 73,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 73,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -660,7 +694,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 73,
+    "pick_points_gd": -9.0,
+    "team_points_gd": 73,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -679,7 +714,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 72,
+    "pick_points_gd": 1.0,
+    "team_points_gd": 72,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -698,7 +734,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 72,
+    "pick_points_gd": -10.0,
+    "team_points_gd": 72,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -717,7 +754,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 72,
+    "pick_points_gd": -10.0,
+    "team_points_gd": 72,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -736,7 +774,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 72,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 72,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -755,7 +794,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 72,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 72,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -774,7 +814,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 72,
+    "pick_points_gd": 42.0,
+    "team_points_gd": 72,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -793,7 +834,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 72,
+    "pick_points_gd": -1.0,
+    "team_points_gd": 72,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -812,7 +854,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": -10.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -831,7 +874,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -850,7 +894,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -869,7 +914,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -888,7 +934,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -907,7 +954,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -926,7 +974,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": -1.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -945,7 +994,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -964,7 +1014,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": -10.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -983,7 +1034,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1002,7 +1054,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1021,7 +1074,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 42.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1040,7 +1094,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1059,7 +1114,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": -1.0,
+    "team_points_gd": 71,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1078,7 +1134,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 66,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 66,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1097,7 +1154,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 66,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 66,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1116,7 +1174,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 66,
+    "pick_points_gd": 30.0,
+    "team_points_gd": 66,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1135,7 +1194,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 66,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 66,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1154,7 +1214,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 66,
+    "pick_points_gd": 13.0,
+    "team_points_gd": 66,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1173,7 +1234,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 66,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 66,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1192,7 +1254,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 66,
+    "pick_points_gd": -9.0,
+    "team_points_gd": 66,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1211,7 +1274,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 52,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 52,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1230,7 +1294,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 52,
+    "pick_points_gd": 2.0,
+    "team_points_gd": 52,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1249,7 +1314,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 52,
+    "pick_points_gd": 1.0,
+    "team_points_gd": 52,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1268,7 +1334,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 52,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 52,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1287,7 +1354,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 52,
+    "pick_points_gd": 4.0,
+    "team_points_gd": 52,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1306,7 +1374,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 52,
+    "pick_points_gd": 15.0,
+    "team_points_gd": 52,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1325,7 +1394,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 52,
+    "pick_points_gd": 32.0,
+    "team_points_gd": 52,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1344,7 +1414,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 51,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 51,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1363,7 +1434,8 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 51,
+    "pick_points_gd": 18.0,
+    "team_points_gd": 51,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1382,7 +1454,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 51,
+    "pick_points_gd": 0.0,
+    "team_points_gd": 51,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1401,7 +1474,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 51,
+    "pick_points_gd": 15.0,
+    "team_points_gd": 51,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1420,7 +1494,8 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 51,
+    "pick_points_gd": 20.0,
+    "team_points_gd": 51,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1439,7 +1514,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 51,
+    "pick_points_gd": 7.0,
+    "team_points_gd": 51,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -1458,7 +1534,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 51,
+    "pick_points_gd": -9.0,
+    "team_points_gd": 51,
     "price_this_race": null,
     "price_next_race": null
   }

@@ -173,6 +173,19 @@ def get_current_race():
             continue
         country = r.get("location", "")
         flag    = next((v for k, v in FLAG_MAP.items() if k.lower() in country.lower()), "🏁")
+
+        # ── GAMEDAY ID FIX ────────────────────────────────────────────────
+        # F1 Fantasy assigns gameday_id sequentially across ONLY races that
+        # actually happen. When races are cancelled, the sequential IDs shift
+        # (e.g. Miami was GD6 but after 2 cancellations it became GD4).
+        # We read "gameday_id" from the schedule JSON if present; otherwise
+        # fall back to "round" (old behaviour — will be wrong after cancellations).
+        gameday_id = r.get("gameday_id", r["round"])
+        if "gameday_id" not in r:
+            print(f"  WARNING: round {r['round']} ({r.get('name','?')}) has no "
+                  f"'gameday_id' field — using round number as fallback. "
+                  f"Update f1_2026_schedule.json if races were cancelled!")
+
         for s in r["sessions"]:
             if s["session_type"] not in SCORED_TYPES:
                 continue
@@ -182,7 +195,7 @@ def get_current_race():
                 "meeting_name":   r["name"],
                 "session_type":   s["session_type"],
                 "country":        country,
-                "gameday_id":     r["round"],
+                "gameday_id":     gameday_id,   # ← now decoupled from round number
                 "start_dt":       start_dt,
                 "window_start":   start_dt - timedelta(minutes=30),
                 "window_end":     start_dt + timedelta(hours=2),
@@ -222,6 +235,57 @@ def get_current_race():
             return s, score
 
     return None, None
+
+
+# ── Step 1b: Validate / auto-correct gameday_id from live API ────
+# The F1 Fantasy API exposes the current active gameday in mixapi.json.
+# We compare it against what the schedule file says. If they differ
+# we warn loudly and auto-correct so the run still works.
+
+def validate_gameday_id(race):
+    """
+    Cross-check race['gameday_id'] against the live F1 Fantasy API.
+
+    mixapi.json contains:
+      'gd'  = active/current gameday id (0 if between events)
+      'lgd' = last completed gameday id
+
+    Returns the (possibly corrected) int gameday_id and prints a warning
+    if the schedule file appears to be out of date after cancellations.
+    """
+    if race is None:
+        return None
+
+    try:
+        data  = get(f"{BASE_FEEDS}/live/mixapi.json?buster={buster()}")
+        value = data.get("Value", {})
+        live_gd = int(value.get("gd",  0) or 0)
+        last_gd = int(value.get("lgd", 0) or 0)
+        sched_gd = int(race["gameday_id"])
+
+        candidates = [g for g in [live_gd, last_gd] if g > 0]
+        if not candidates:
+            print("  [validate_gameday_id] No active gameday in API — cannot cross-check.")
+            return sched_gd
+
+        if sched_gd in candidates:
+            print(f"  [validate_gameday_id] ✓ gameday_id={sched_gd} confirmed by API.")
+            return sched_gd
+
+        # Mismatch — auto-correct to nearest API value
+        nearest = min(candidates, key=lambda g: abs(g - sched_gd))
+        diff    = nearest - sched_gd
+        print(f"\n  ⚠️  GAMEDAY ID MISMATCH DETECTED!")
+        print(f"     Schedule file says gameday_id={sched_gd} for '{race['meeting_name']}'")
+        print(f"     F1 Fantasy API reports live_gd={live_gd}, last_gd={last_gd}")
+        print(f"     Difference: {diff:+d}  (likely {abs(diff)} cancelled race(s) shifted IDs)")
+        print(f"     → Auto-correcting to gameday_id={nearest} for this run")
+        print(f"     → ACTION REQUIRED: update 'gameday_id' in f1_2026_schedule.json\n")
+        return nearest
+
+    except Exception as e:
+        print(f"  [validate_gameday_id] Could not reach API ({e}) — using schedule value.")
+        return int(race["gameday_id"])
 
 
 # ── Step 2: Check if we should run and what mode ──────────────────
@@ -329,29 +393,23 @@ def scores_changed(race, results, last_state):
 
 # ── Step 4: Fetch team picks + cards ─────────────────────────────
 
-def get_team_details(gameday_id, user_guid, team_no=1, ftmdid=None, cumdid=None):
+def get_team_details(gameday_id, user_guid, team_no=1):
     if not AUTH_HEADERS:
-        return None, [], {}, {}
+        return None, [], {}
 
-    # URL format: /opponentgamedayplayerteamget/{ftmdid}/{user_guid}/{team_no}/{cumdid}/{ftmdid}
-    _ftmdid = ftmdid if ftmdid is not None else gameday_id
-    _cumdid = cumdid if cumdid is not None else gameday_id
     url = (f"{BASE_SERVICES}/opponentteam/opponentgamedayplayerteamget"
-           f"/{_ftmdid}/{user_guid}/{team_no}/{_cumdid}/{_ftmdid}"
+           f"/{gameday_id}/{user_guid}/{team_no}/{gameday_id}/{gameday_id}"
            f"?buster={buster()}")
     try:
         r = requests.get(url, headers=AUTH_HEADERS, timeout=15)
         r.raise_for_status()
-        raw = r.json()
-        print(f"    DEBUG raw keys: {list(raw.get('Data', {}).get('Value', {}).keys()) if isinstance(raw.get('Data', {}).get('Value'), dict) else raw.get('Data', {}).get('Value')}")
-        data      = raw["Data"]["Value"]
-        user_team = data.get("userTeam", []) if isinstance(data, dict) else []
-        print(f"    DEBUG userTeam length: {len(user_team)}, value: {str(user_team)[:500]}")
+        data      = r.json()["Data"]["Value"]
+        user_team = data.get("userTeam", [])
         if not user_team:
-            return None, [], {}, {}
+            return None, [], {}
 
         team_data  = user_team[0]
-        picks      = team_data.get("playerid") or []
+        picks      = team_data.get("playerid", [])
         gdpoints   = team_data.get("gdpoints")
 
         mgcap_pid = str(team_data.get("mgcapplayerid") or "")
@@ -380,15 +438,12 @@ def get_team_details(gameday_id, user_guid, team_no=1, ftmdid=None, cumdid=None)
         return None, [], {}, {}
 
 
-
 def get_player_components(pid, gameday_id, lv):
     """Returns list of (category, value) tuples for a player in a gameday.
     Skips the 'Total' row — that is a sum, not a component.
     """
     try:
         data = get(f"{BASE_FEEDS}/popup/playerstats_{pid}.json?buster={lv}")
-        available_gds = [gd["GamedayId"] for gd in data["Value"]["GamedayWiseStats"]]
-        print(f"      [components] pid={pid} looking for gd={gameday_id} available={available_gds}")
         for gd in data["Value"]["GamedayWiseStats"]:
             if int(gd["GamedayId"]) == int(gameday_id):
                 components = []
@@ -417,30 +472,6 @@ def get_standings(gameday_id, score=0):
 
     lv = get(f"{BASE_FEEDS}/live/mixapi.json?buster={buster()}")["Value"]["lv"]
 
-    # Fetch the real internal gameday ID (cugdid) from the API.
-    # The round number in the schedule differs from the API's internal ID.
-    api_gameday_id = gameday_id  # fallback to round number if fetch fails
-    try:
-        leaderboard_tmp = get(
-            f"{BASE_FEEDS}/leaderboard/privateleague/list_2_{LEAGUE_ID}_1_1.json"
-            f"?buster={buster()}"
-        )["Value"]["leaderboard"]
-        if leaderboard_tmp:
-            first_guid = leaderboard_tmp[0]["user_guid"]
-            gd_data = requests.get(
-                f"{BASE_SERVICES}/gameplay/{first_guid}/getusergamedaysv1/1"
-                f"?buster={buster()}",
-                headers=AUTH_HEADERS, timeout=15
-            ).json()
-            gd_val = gd_data["Data"]["Value"][0]
-            cugdid = gd_val["cugdid"]
-            ftmdid = gd_val["ftmdid"]
-            cumdid = gd_val["cumdid"]
-            api_gameday_id = cugdid
-            print(f"  API gameday ID : cugdid={cugdid} ftmdid={ftmdid} cumdid={cumdid} (round={gameday_id})")
-    except Exception as e:
-        print(f"  WARNING: could not fetch cugdid, using round number {gameday_id}: {e}")
-
     player_names     = {}   # pid -> full display name  (for JSON export + WhatsApp fallback)
     player_tlas      = {}   # pid -> TLA                 (for WhatsApp message display)
     player_skills    = {}   # pid -> 1 (Driver) | 2 (Constructor)
@@ -448,15 +479,8 @@ def get_standings(gameday_id, score=0):
         drivers_data = get(f"{BASE_FEEDS}/drivers/1_en.json?buster={buster()}")
         for p in drivers_data["Data"]["Value"]:
             pid  = str(p.get("PlayerId", ""))
-            tla  = p.get("DriverTLA") or p.get("DisplayName") or pid
-            # DisplayName can come back abbreviated e.g. "C. Leclerc"
-            # FirstName + LastName gives the full name when available
-            first = p.get("FirstName", "")
-            last  = p.get("LastName", "")
-            if first and last:
-                full = f"{first} {last}"
-            else:
-                full = p.get("DisplayName") or tla
+            full = p.get("DisplayName") or p.get("DriverTLA") or pid
+            tla  = p.get("DriverTLA")  or p.get("DisplayName") or pid
             player_names[pid]  = full
             player_tlas[pid]   = tla
             player_skills[pid] = p.get("Skill", 1)
@@ -469,10 +493,6 @@ def get_standings(gameday_id, score=0):
         f"?buster={buster()}"
     )["Value"]["leaderboard"]
 
-    if not leaderboard:
-        print("  ERROR: leaderboard returned None or empty — check LEAGUE_ID and cookie.")
-        return [], lv
-
     results = []
 
     for season_rank_0, entry in enumerate(leaderboard):
@@ -484,11 +504,11 @@ def get_standings(gameday_id, score=0):
 
         print(f"  Fetching: {user_name} ({team_name})")
 
-        gdpoints, picks, cards, team_data = get_team_details(api_gameday_id, user_guid, team_no, ftmdid=ftmdid, cumdid=cumdid)
+        gdpoints, picks, cards, team_data = get_team_details(gameday_id, user_guid, team_no)
         time.sleep(0.15)
 
         no_neg_gd  = cards.get("NoNeg")
-        has_no_neg = (no_neg_gd is not None and int(no_neg_gd) == int(api_gameday_id))
+        has_no_neg = (no_neg_gd is not None and int(no_neg_gd) == int(gameday_id))
         cap_id     = next((p["id"] for p in picks if p.get("iscaptain")),   None)
         megacap_id = next((p["id"] for p in picks if p.get("ismgcaptain")), None)
 
@@ -505,13 +525,12 @@ def get_standings(gameday_id, score=0):
         else:
             total = 0.0
             for p in picks:
-                pid       = p["id"]
-                cap_mult  = 2 if (cap_id     and pid == cap_id)     else 1
-                mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
-                mult      = cap_mult * mega_mult
-                # reuse components already fetched for pick_components above
-                comps = get_player_components(pid, cumdid, lv)
-                for _cat, val in comps:
+                pid        = p["id"]
+                components = get_player_components(pid, gameday_id, lv)
+                cap_mult   = 2 if (cap_id     and pid == cap_id)     else 1
+                mega_mult  = 3 if (megacap_id and pid == megacap_id) else 1
+                mult       = cap_mult * mega_mult
+                for _cat, val in components:
                     no_neg_factor = 0 if (has_no_neg and val < 0) else 1
                     total += val * mult * no_neg_factor
                 time.sleep(0.05)
@@ -526,28 +545,6 @@ def get_standings(gameday_id, score=0):
             if sub_penalty or inactive_pen:
                 print(f"    Penalties: transfers={sub_penalty} inactive={inactive_pen}")
             print(f"    → Calculated: {total} (gdpoints={gdpoints})")
-
-            # Fall back to gdpoints if component calc returned 0 but gdpoints has a value
-            # This happens during live sessions when player stats feed isn't updated yet
-            if total == 0.0 and gdpoints is not None and float(gdpoints) != 0.0:
-                total = float(gdpoints)
-                print(f"    → Falling back to gdpoints={total} (components not available yet)")
-
-        # Compute per-pick points from components for every pick
-        # This gives individual scores regardless of live vs post-race mode
-        pick_components = {}
-        for p in picks:
-            pid       = p["id"]
-            cap_mult  = 2 if (cap_id     and pid == cap_id)     else 1
-            mega_mult = 3 if (megacap_id and pid == megacap_id) else 1
-            mult      = cap_mult * mega_mult
-            comps     = get_player_components(pid, cumdid, lv)
-            pts       = sum(
-                val * mult * (0 if (has_no_neg and val < 0) else 1)
-                for _cat, val in comps
-            )
-            pick_components[pid] = int(pts)
-            time.sleep(0.05)
 
         pick_details = []
         for p in picks:
@@ -564,7 +561,6 @@ def get_standings(gameday_id, score=0):
                 "skill":       skill,
                 "iscaptain":   p.get("iscaptain", 0),
                 "ismgcaptain": p.get("ismgcaptain", 0),
-                "pick_pts":    pick_components.get(pid, 0),
             })
 
         results.append({
@@ -661,12 +657,7 @@ def generate_image(race, results, mode="live"):
         from f1_image import generate_standings_image, apply_nicknames
         results_with_names = apply_nicknames(results, NICKNAMES)
         is_live = (mode == "live")
-        # Pass IMG_PATH explicitly so PNG always lands next to this script
-        # regardless of the working directory the process was started from
-        img_path = generate_standings_image(
-            race, results_with_names, LEAGUE_NAME,
-            is_live=is_live, output_path=IMG_PATH
-        )
+        img_path = generate_standings_image(race, results_with_names, LEAGUE_NAME, is_live=is_live)
         print(f"  PNG generated: {img_path}")
         return img_path
     except Exception as e:
@@ -715,7 +706,6 @@ def send_image_meta(media_id, caption=""):
         "type": "image",
         "image": {"id": media_id, "caption": caption},
     }
-    print(f"  Sending to: {META_TO_PHONE} via phone_id: {META_PHONE_ID}")
     try:
         r = requests.post(
             url,
@@ -726,12 +716,11 @@ def send_image_meta(media_id, caption=""):
             json=payload,
             timeout=15,
         )
-        print(f"  Meta response ({r.status_code}): {r.text[:300]}")
         if r.status_code == 200:
             msg_id = r.json().get("messages", [{}])[0].get("id", "?")
             print(f"  Image sent via Meta — message_id: {msg_id}")
             return True
-        print(f"  Image send failed ({r.status_code}): {r.text[:300]}")
+        print(f"  Image send failed ({r.status_code}): {r.text[:200]}")
         return False
     except Exception as e:
         print(f"  Image send error: {e}")
@@ -830,7 +819,7 @@ def build_picks_rows(race, results):
                 "pick_type":        p["pick_type"],
                 "is_captain":       bool(p["iscaptain"]),
                 "is_megacap":       bool(p["ismgcaptain"]),
-                "pick_points_gd":   p["pick_pts"],
+                "pick_points_gd":   int(team["points"]),
                 "price_this_race":  None,
                 "price_next_race":  None,
             })
@@ -855,7 +844,7 @@ def build_breakdowns_rows(race, results, lv, gameday_id):
                     "pick_name":          p["full_name"],
                     "pick_type":          p["pick_type"],
                     "is_captain":         bool(p["iscaptain"]),
-                    "pick_points_gd":     p["pick_pts"],
+                    "pick_points_gd":     int(team["points"]),
                     "breakdown_category": category,
                     "breakdown_points":   points,
                 })
@@ -973,10 +962,20 @@ def export_json_data(race, results, lv, gameday_id, last_state=None):
         _save_local("races.json",      races_data)
         return
 
-    # Always overwrite with current race data only — app expects latest race, not history
-    push_json_to_repo("picks.json",      new_picks)
-    push_json_to_repo("breakdowns.json", new_breakdowns)
-    push_json_to_repo("results.json",    new_results)
+    # Fetch existing data from repo and append new rows
+    existing_picks      = _fetch_json_from_repo(owner, repo, branch, "picks.json",      token) or []
+    existing_breakdowns = _fetch_json_from_repo(owner, repo, branch, "breakdowns.json", token) or []
+    existing_results    = _fetch_json_from_repo(owner, repo, branch, "results.json",    token) or []
+
+    race_num = race["meeting_number"]
+    # Remove any existing rows for this race (re-run safety)
+    existing_picks      = [r for r in existing_picks      if r.get("race_number") != race_num]
+    existing_breakdowns = [r for r in existing_breakdowns if r.get("race_number") != race_num]
+    existing_results    = [r for r in existing_results    if r.get("race_number") != race_num]
+
+    push_json_to_repo("picks.json",      existing_picks      + new_picks)
+    push_json_to_repo("breakdowns.json", existing_breakdowns + new_breakdowns)
+    push_json_to_repo("results.json",    existing_results    + new_results)
     push_json_to_repo("races.json",      races_data)
 
 
@@ -1013,11 +1012,9 @@ def _save_local(filename, data):
 
 # ── Main ──────────────────────────────────────────────────────────
 
-VERSION = "2.7.0-cumdid-components"
-
 def main():
     print(f"\n{'='*50}")
-    print(f"F1 Quick Standings v{VERSION} | {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
+    print(f"F1 Quick Standings | {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}")
     print(f"{'='*50}")
 
     # ── 1. Detect race & window ───────────────────────────────────
@@ -1027,13 +1024,23 @@ def main():
     if race:
         print(f"  Race    : {race['meeting_name']} (#{race['meeting_number']})")
         print(f"  Session : {race['session_type']}")
-        print(f"  Gameday : {race['gameday_id']}")
+        print(f"  Gameday : {race['gameday_id']} (from schedule)")
         if race.get("start_dt"):
             print(f"  Start   : {race['start_dt'].strftime('%Y-%m-%d %H:%M')} UTC")
             print(f"  Window  : {race['window_start'].strftime('%H:%M')} - "
                   f"{race['window_end'].strftime('%H:%M')} UTC")
         status = "live" if score == 0 else "past" if score < 0 else "future"
         print(f"  Status  : {status} ({score:.0f}s)")
+
+        # ── Validate gameday_id against live API ──────────────────
+        print("\n[1b] Validating gameday_id against F1 Fantasy API...")
+        orig_gd      = int(race["gameday_id"])
+        corrected_gd = validate_gameday_id(race)
+        if corrected_gd != orig_gd:
+            race = {**race, "gameday_id": corrected_gd}
+            print(f"  Gameday : {corrected_gd} (auto-corrected ← was {orig_gd})")
+        else:
+            print(f"  Gameday : {corrected_gd} ✓")
 
     force = os.environ.get("FORCE_RUN", "0") == "1"
     if force:
@@ -1068,7 +1075,7 @@ def main():
 
     # ── 3. Fetch standings ────────────────────────────────────────
     print("\n[3/5] Fetching standings...")
-    results, lv = get_standings(race["gameday_id"], score if score is not None else 0)
+    results, lv = get_standings(race["gameday_id"], score)
     for t in results:
         cards_str = f" [{', '.join(t['cards'].keys())}]" if t["cards"] else ""
         print(f"  {t['rank']}. {t['user_name']} ({t['team_name']}) — "

@@ -33,28 +33,6 @@
     "notes": ""
   },
   {
-    "round": null,
-    "race_name": "Bahrain Grand Prix",
-    "location": "Sakhir, Bahrain",
-    "venue": "Bahrain International Circuit",
-    "race_date": "2026-04-12",
-    "sprint_weekend": false,
-    "cancelled": true,
-    "cancellation_reason": "Middle East conflict",
-    "notes": "Originally round 4 — cancelled, no round assigned"
-  },
-  {
-    "round": null,
-    "race_name": "Saudi Arabian Grand Prix",
-    "location": "Jeddah, Saudi Arabia",
-    "venue": "Jeddah Corniche Circuit",
-    "race_date": "2026-04-19",
-    "sprint_weekend": false,
-    "cancelled": true,
-    "cancellation_reason": "Middle East conflict",
-    "notes": "Originally round 5 — cancelled, no round assigned"
-  },
-  {
     "round": 4,
     "race_name": "Miami Grand Prix",
     "location": "Miami, Florida, USA",

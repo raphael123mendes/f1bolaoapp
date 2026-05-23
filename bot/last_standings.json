@@ -1,8 +1,8 @@
 {
   "gameday_id": "5",
-  "session_type": "qualifying",
+  "session_type": "sprint",
   "ranking_hash": "d41d8cd98f00b204e9800998ecf8427e",
   "scores": {},
-  "post_race_sent": true,
-  "saved_at": "2026-05-23T21:03:51.950831+00:00"
+  "post_race_sent": false,
+  "saved_at": "2026-05-23T23:10:36.626270+00:00"
 }

@@ -398,7 +398,7 @@ def get_team_details(gameday_id, user_guid, team_no=1):
         return None, [], {}
 
     url = (f"{BASE_SERVICES}/opponentteam/opponentgamedayplayerteamget"
-           f"/{gameday_id}/{user_guid}/{team_no}/{gameday_id}/{gameday_id}"
+           f"/1/{user_guid}/1/{gameday_id}/1"
            f"?buster={buster()}")
     try:
         r = requests.get(url, headers=AUTH_HEADERS, timeout=15)

@@ -27,18 +27,10 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests openpyxl gspread oauth2client playwright
+        run: pip install requests openpyxl gspread oauth2client
 
-      - name: Install Playwright Chromium
-        run: playwright install --with-deps chromium
-
-      - name: Auto-login and get cookie
-        env:
-          F1_EMAIL:    ${{ secrets.F1_EMAIL }}
-          F1_PASSWORD: ${{ secrets.F1_PASSWORD }}
-        run: |
-          python bot/f1_login.py --out results_SC/cookie.txt
-          cp results_SC/cookie.txt bot/cookie.txt
+      - name: Prepare cookie
+        run: cp bot/cookie.txt results_SC/cookie.txt
 
       - name: Write Google credentials
         env:

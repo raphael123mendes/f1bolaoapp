@@ -40,12 +40,6 @@ jobs:
       - name: Install Playwright Chromium
         run: playwright install --with-deps chromium
 
-      - name: Auto-login and get cookie
-        env:
-          F1_EMAIL:    ${{ secrets.F1_EMAIL }}
-          F1_PASSWORD: ${{ secrets.F1_PASSWORD }}
-        run: python bot/f1_login.py --out bot/cookie.txt
-
       - name: Run F1 standings bot
         env:
           FORCE_RUN:          ${{ github.event.inputs.force_run || '0' }}

@@ -1,7 +1,6 @@
 # Secrets — never commit
 results_SC/cookie.txt
 results_SC/google_credentials.json
-bot/cookie.txt
 
 # Auto-copied by workflow, not source-of-truth
 results_SC/data/f1_2026_schedule.json

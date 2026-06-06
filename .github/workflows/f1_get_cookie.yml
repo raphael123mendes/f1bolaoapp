@@ -1,0 +1,39 @@
+name: F1 Refresh Cookie
+
+# Run this manually when the standings or results workflow fails due to
+# an expired cookie. Takes ~1-2 min. Once done, the other workflows
+# will automatically use the fresh cookie on their next run.
+on:
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Playwright
+        run: pip install playwright && playwright install --with-deps chromium
+
+      - name: Login and extract cookie
+        env:
+          F1_EMAIL:    ${{ secrets.F1_EMAIL }}
+          F1_PASSWORD: ${{ secrets.F1_PASSWORD }}
+        run: python bot/f1_login.py --out bot/cookie.txt
+
+      - name: Commit fresh cookie
+        run: |
+          git config user.name "F1 Bot"
+          git config user.email "f1bot@github.com"
+          git add bot/cookie.txt
+          git diff --staged --quiet || (git commit -m "refresh cookie [skip ci]" && git push)

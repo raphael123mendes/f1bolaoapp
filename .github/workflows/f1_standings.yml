@@ -35,10 +35,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests playwright
-
-      - name: Install Playwright Chromium
-        run: playwright install --with-deps chromium
+        run: pip install requests
 
       - name: Run F1 standings bot
         env:

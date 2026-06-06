@@ -342,7 +342,7 @@ EXAMPLES:
         metavar="N",
         help="Race number to fetch (e.g. --race 1). Defaults to latest completed race.",
     )
-    args = parser.parse_args()
+    args, _ = parser.parse_known_args()
 
     print("=" * 68)
     print("  F1 FANTASY — PRICE TRACKER")

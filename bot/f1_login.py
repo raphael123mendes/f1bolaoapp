@@ -1,11 +1,9 @@
 """
 f1_login.py — Auto-login to F1 Fantasy and extract session cookie
 ==================================================================
-Uses Playwright (headless Chromium) to log in with email + password,
-then writes the full cookie string to cookie.txt.
-
-Called at the start of both GitHub Actions workflows so the cookie
-is always fresh — no manual DevTools copy needed.
+Uses Playwright (headless Chromium) to log in via account.formula1.com,
+then navigates to the league leaderboard to build a comprehensive cookie,
+and writes the full cookie string to cookie.txt.
 
 USAGE:
   python f1_login.py                          # reads F1_EMAIL / F1_PASSWORD from env
@@ -17,6 +15,10 @@ import sys
 import argparse
 import time
 from pathlib import Path
+
+LOGIN_URL     = "https://account.formula1.com/#/en/login"
+LEAGUE_URL    = "https://fantasy.formula1.com/en/leagues/leaderboard/private/1692401"
+FANTASY_BASE  = "https://fantasy.formula1.com"
 
 
 def login(email: str, password: str, out_path: str, headless: bool = True) -> bool:
@@ -41,65 +43,30 @@ def login(email: str, password: str, out_path: str, headless: bool = True) -> bo
         page = context.new_page()
 
         try:
-            # ── 1. Open F1 Fantasy ─────────────────────────────────────────────
-            print("  Navigating to fantasy.formula1.com ...")
-            page.goto("https://fantasy.formula1.com/", wait_until="domcontentloaded", timeout=30000)
-            time.sleep(2)
+            # ── 1. Go directly to F1 login page ───────────────────────────────
+            print(f"  Navigating to {LOGIN_URL} ...")
+            page.goto(LOGIN_URL, wait_until="domcontentloaded", timeout=30000)
+            time.sleep(3)  # SPA needs time to render after hash navigation
 
-            # ── 2. Dismiss cookie consent banner if present ────────────────────
+            # ── 2. Dismiss cookie consent if present ──────────────────────────
             for sel in [
                 "button:has-text('Accept All')",
                 "button:has-text('Accept')",
                 "button:has-text('Agree')",
                 "#onetrust-accept-btn-handler",
+                ".cookie-accept",
             ]:
                 try:
                     btn = page.locator(sel).first
-                    if btn.is_visible(timeout=3000):
+                    if btn.is_visible(timeout=2000):
                         btn.click()
-                        print("  Dismissed cookie consent banner.")
+                        print("  Dismissed cookie consent.")
                         time.sleep(1)
                         break
                 except Exception:
                     pass
 
-            # ── 3. Click Sign In ───────────────────────────────────────────────
-            print("  Clicking Sign In...")
-            signed_in = False
-            for sel in [
-                "a:has-text('Sign In')",
-                "button:has-text('Sign In')",
-                "a:has-text('Log in')",
-                "button:has-text('Log in')",
-                "[data-testid='sign-in']",
-            ]:
-                try:
-                    btn = page.locator(sel).first
-                    if btn.is_visible(timeout=4000):
-                        btn.click()
-                        signed_in = True
-                        break
-                except Exception:
-                    pass
-
-            if not signed_in:
-                # Maybe already on a login page
-                print("  Sign In button not found — checking if already on login page...")
-
-            # ── 4. Wait for identity.formula1.com ─────────────────────────────
-            print("  Waiting for login page...")
-            try:
-                page.wait_for_url("**/account/**", timeout=15000)
-            except PWTimeout:
-                pass
-            try:
-                page.wait_for_url("**/login**", timeout=10000)
-            except PWTimeout:
-                pass
-            time.sleep(2)
-            print(f"  Current URL: {page.url}")
-
-            # ── 5. Fill email ──────────────────────────────────────────────────
+            # ── 3. Fill email ──────────────────────────────────────────────────
             print("  Filling email...")
             email_filled = False
             for sel in [
@@ -108,41 +75,26 @@ def login(email: str, password: str, out_path: str, headless: bool = True) -> bo
                 'input[id="email"]',
                 'input[placeholder*="email" i]',
                 'input[autocomplete="email"]',
+                'input[autocomplete="username"]',
             ]:
                 try:
                     field = page.locator(sel).first
-                    if field.is_visible(timeout=4000):
-                        field.fill(email)
-                        email_filled = True
-                        print(f"  Email filled via: {sel}")
-                        break
+                    field.wait_for(state="visible", timeout=8000)
+                    field.fill(email)
+                    email_filled = True
+                    print(f"  Email filled ({sel})")
+                    break
                 except Exception:
                     pass
 
             if not email_filled:
                 print("ERROR: Could not find email field.")
-                _save_debug(page)
+                _save_debug(page, "login_debug_email.png")
                 return False
 
             time.sleep(0.5)
 
-            # Some flows have a "Continue" button after email before showing password
-            for sel in [
-                "button:has-text('Continue')",
-                "button:has-text('Next')",
-                'button[type="submit"]:has-text("Continue")',
-            ]:
-                try:
-                    btn = page.locator(sel).first
-                    if btn.is_visible(timeout=2000):
-                        btn.click()
-                        print("  Clicked Continue after email.")
-                        time.sleep(2)
-                        break
-                except Exception:
-                    pass
-
-            # ── 6. Fill password ───────────────────────────────────────────────
+            # ── 4. Fill password ───────────────────────────────────────────────
             print("  Filling password...")
             pwd_filled = False
             for sel in [
@@ -153,23 +105,23 @@ def login(email: str, password: str, out_path: str, headless: bool = True) -> bo
             ]:
                 try:
                     field = page.locator(sel).first
-                    if field.is_visible(timeout=4000):
-                        field.fill(password)
-                        pwd_filled = True
-                        print(f"  Password filled via: {sel}")
-                        break
+                    field.wait_for(state="visible", timeout=5000)
+                    field.fill(password)
+                    pwd_filled = True
+                    print(f"  Password filled ({sel})")
+                    break
                 except Exception:
                     pass
 
             if not pwd_filled:
                 print("ERROR: Could not find password field.")
-                _save_debug(page)
+                _save_debug(page, "login_debug_password.png")
                 return False
 
             time.sleep(0.5)
 
-            # ── 7. Submit ──────────────────────────────────────────────────────
-            print("  Submitting login form...")
+            # ── 5. Submit ──────────────────────────────────────────────────────
+            print("  Submitting...")
             submitted = False
             for sel in [
                 'button[type="submit"]',
@@ -183,66 +135,62 @@ def login(email: str, password: str, out_path: str, headless: bool = True) -> bo
                     if btn.is_visible(timeout=3000):
                         btn.click()
                         submitted = True
-                        print(f"  Submitted via: {sel}")
+                        print(f"  Submitted ({sel})")
                         break
                 except Exception:
                     pass
 
             if not submitted:
                 page.keyboard.press("Enter")
-                print("  Submitted via Enter key.")
+                print("  Submitted via Enter.")
 
-            # ── 8. Wait for redirect back to F1 Fantasy ───────────────────────
-            print("  Waiting for redirect to fantasy.formula1.com...")
-            try:
-                page.wait_for_url("*fantasy.formula1.com*", timeout=30000)
-            except PWTimeout:
-                print("  WARNING: Timed out waiting for redirect — continuing anyway.")
+            # ── 6. Wait for login to complete ──────────────────────────────────
+            print("  Waiting for login to complete...")
+            time.sleep(5)
+            print(f"  URL after login: {page.url}")
 
-            time.sleep(3)
+            # ── 7. Navigate to league leaderboard to build full cookie ─────────
+            print(f"  Navigating to league leaderboard...")
+            page.goto(LEAGUE_URL, wait_until="domcontentloaded", timeout=30000)
+            time.sleep(4)
             print(f"  Final URL: {page.url}")
 
-            # ── 9. Extract cookies ─────────────────────────────────────────────
+            # Verify we landed on fantasy (not back on login)
+            if "account.formula1.com" in page.url or "login" in page.url.lower():
+                print("ERROR: Still on login page — credentials may be wrong.")
+                _save_debug(page, "login_debug_failed.png")
+                return False
+
+            # ── 8. Extract cookies ─────────────────────────────────────────────
             cookies = context.cookies()
             if not cookies:
-                print("ERROR: No cookies found after login.")
-                _save_debug(page)
+                print("ERROR: No cookies found.")
+                _save_debug(page, "login_debug_nocookie.png")
                 return False
 
             cookie_str = "; ".join(f"{c['name']}={c['value']}" for c in cookies)
             print(f"  Extracted {len(cookies)} cookies ({len(cookie_str)} chars)")
 
-            # Basic sanity check — F1 Fantasy session has known cookie names
-            known = {"reese84", "bm_sv", "ak_bmsc", "fantasy"}
-            found = {c["name"] for c in cookies}
-            overlap = known & found
-            if not overlap:
-                print("  WARNING: Expected F1 session cookies not found — login may have failed.")
-                _save_debug(page)
-            else:
-                print(f"  Session cookies confirmed: {overlap}")
-
-            # ── 10. Write cookie.txt ───────────────────────────────────────────
+            # ── 9. Write cookie.txt ────────────────────────────────────────────
             Path(out_path).parent.mkdir(parents=True, exist_ok=True)
             Path(out_path).write_text(cookie_str, encoding="utf-8")
-            print(f"  Cookie written to: {out_path}")
+            print(f"  Cookie written → {out_path}")
             return True
 
         except Exception as e:
             print(f"ERROR during login: {e}")
-            _save_debug(page)
+            _save_debug(page, "login_debug_exception.png")
             return False
 
         finally:
             browser.close()
 
 
-def _save_debug(page):
-    """Save a screenshot for debugging failed logins."""
+def _save_debug(page, filename="login_debug.png"):
     try:
-        path = Path(__file__).parent / "login_debug.png"
+        path = Path(__file__).parent / filename
         page.screenshot(path=str(path))
-        print(f"  Debug screenshot saved: {path}")
+        print(f"  Debug screenshot: {path}")
     except Exception:
         pass
 
@@ -250,7 +198,7 @@ def _save_debug(page):
 def main():
     parser = argparse.ArgumentParser(description="F1 Fantasy auto-login")
     parser.add_argument("--out", default=None, help="Output path for cookie.txt")
-    parser.add_argument("--no-headless", action="store_true", help="Show browser window (debug)")
+    parser.add_argument("--no-headless", action="store_true", help="Show browser (debug)")
     args = parser.parse_args()
 
     email    = os.environ.get("F1_EMAIL", "").strip()
@@ -260,7 +208,6 @@ def main():
         print("ERROR: F1_EMAIL and F1_PASSWORD environment variables must be set.")
         sys.exit(1)
 
-    # Default output: cookie.txt next to this script
     out_path = args.out or str(Path(__file__).parent / "cookie.txt")
 
     print(f"\n{'='*50}")
@@ -274,7 +221,7 @@ def main():
     if ok:
         print("\n✅ Login successful — cookie ready.")
     else:
-        print("\n❌ Login failed — check login_debug.png for screenshot.")
+        print("\n❌ Login failed — check debug screenshot in bot/ folder.")
         sys.exit(1)
 
 

@@ -1,0 +1,21 @@
+{
+  "_comment": "F1 Fantasy — shared config for all scripts. Update once, all scripts pick it up.",
+
+  "league_id":          "1692401",
+  "league_name":        "Bolão F1",
+  "user_uuid":          "af5b6c4a-11b7-11f1-a6ba-3bae984dbbac",
+
+  "save_folder":        "G:/My Drive/FantasyF1-26",
+  "google_creds_file":  "google_credentials.json",
+  "sheet_name":         "F1 Fantasy Dashboard",
+
+  "enable_sheets":      true,
+  "enable_whatsapp":    true,
+  "enable_image":       true,
+
+  "drive_share_url":    "https://drive.google.com/file/d/18V86J5g7vU1aYBD-NFR-0UJ2y-IJagTk/view?usp=drive_link",
+
+  "whatsapp": [
+    {"phone": "+971565256000", "apikey": "6999974"}
+  ]
+}

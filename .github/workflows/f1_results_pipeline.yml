@@ -1,0 +1,73 @@
+name: F1 Results Pipeline
+
+# Triggered manually from the GitHub UI or mobile app.
+# Go to: Actions → F1 Results Pipeline → Run workflow
+on:
+  workflow_dispatch:
+    inputs:
+      race_number:
+        description: "Race number override (e.g. 3). Leave blank to auto-detect."
+        required: false
+        default: ""
+
+jobs:
+  results:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests openpyxl gspread oauth2client
+
+      - name: Write cookie
+        run: echo "${{ secrets.F1_COOKIE }}" > results_SC/cookie.txt
+
+      - name: Write Google credentials
+        if: ${{ secrets.GOOGLE_CREDENTIALS != '' }}
+        run: echo '${{ secrets.GOOGLE_CREDENTIALS }}' > results_SC/google_credentials.json
+
+      - name: Prepare data folder
+        run: |
+          mkdir -p results_SC/data
+          cp results_SC/f1_2026_schedule.json results_SC/data/f1_2026_schedule.json
+
+      - name: Fetch league data
+        env:
+          F1_SAVE_FOLDER: ${{ github.workspace }}/results_SC/data
+        run: |
+          cd results_SC
+          if [ -n "${{ github.event.inputs.race_number }}" ]; then
+            python run_all.py --no-image --race ${{ github.event.inputs.race_number }}
+          else
+            python run_all.py --no-image
+          fi
+
+      - name: Build final JSON files
+        env:
+          F1_SAVE_FOLDER: ${{ github.workspace }}/results_SC/data
+        run: |
+          cd results_SC
+          python build_fantasy_f1.py data
+
+      - name: Copy JSON files to repo root
+        run: |
+          for f in races prices results picks breakdowns; do
+            [ -f results_SC/data/${f}.json ] && cp results_SC/data/${f}.json ./${f}.json && echo "Copied ${f}.json"
+          done
+
+      - name: Commit and push
+        run: |
+          git config user.name "F1 Bot"
+          git config user.email "f1bot@github.com"
+          git add results_SC/data/ races.json prices.json results.json picks.json breakdowns.json
+          git diff --staged --quiet || (git commit -m "results update [skip ci]" && git pull --rebase && git push)

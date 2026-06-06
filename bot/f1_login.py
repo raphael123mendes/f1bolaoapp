@@ -17,6 +17,8 @@ import time
 from pathlib import Path
 
 LOGIN_URL     = "https://account.formula1.com/#/en/login"
+FANTASY_HOME  = "https://fantasy.formula1.com/en/home"
+MY_TEAM_URL   = "https://fantasy.formula1.com/en/my-team"
 LEAGUE_URL    = "https://fantasy.formula1.com/en/leagues/leaderboard/private/1692401"
 FANTASY_BASE  = "https://fantasy.formula1.com"
 
@@ -149,17 +151,27 @@ def login(email: str, password: str, out_path: str, headless: bool = True) -> bo
             time.sleep(5)
             print(f"  URL after login: {page.url}")
 
-            # ── 7. Navigate to league leaderboard to build full cookie ─────────
-            print(f"  Navigating to league leaderboard...")
-            page.goto(LEAGUE_URL, wait_until="domcontentloaded", timeout=30000)
-            time.sleep(4)
-            print(f"  Final URL: {page.url}")
+            # ── 7. Navigate through key fantasy pages to build full cookie ───────
+            print(f"  Navigating to fantasy home...")
+            page.goto(FANTASY_HOME, wait_until="domcontentloaded", timeout=30000)
+            time.sleep(3)
+            print(f"  URL: {page.url}")
 
-            # Verify we landed on fantasy (not back on login)
+            # Verify login succeeded (not bounced back to login)
             if "account.formula1.com" in page.url or "login" in page.url.lower():
                 print("ERROR: Still on login page — credentials may be wrong.")
                 _save_debug(page, "login_debug_failed.png")
                 return False
+
+            print(f"  Navigating to my-team (establishes user service session)...")
+            page.goto(MY_TEAM_URL, wait_until="domcontentloaded", timeout=30000)
+            time.sleep(3)
+            print(f"  URL: {page.url}")
+
+            print(f"  Navigating to league leaderboard...")
+            page.goto(LEAGUE_URL, wait_until="domcontentloaded", timeout=30000)
+            time.sleep(3)
+            print(f"  Final URL: {page.url}")
 
             # ── 8. Extract cookies ─────────────────────────────────────────────
             cookies = context.cookies()

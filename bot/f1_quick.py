@@ -88,12 +88,17 @@ HEADERS = {
 COOKIE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cookie.txt")
 
 def load_cookie():
+    cookie = os.environ.get("F1_COOKIE", "").strip()
+    if cookie:
+        print(f"  Cookie loaded from F1_COOKIE secret ({len(cookie)} chars)")
+        return cookie
+    # Fallback to file for local dev
     if os.path.exists(COOKIE_FILE):
         cookie = open(COOKIE_FILE, encoding="utf-8").read().strip()
         if cookie:
-            print(f"  Cookie loaded ({len(cookie)} chars)")
+            print(f"  Cookie loaded from file ({len(cookie)} chars)")
             return cookie
-    print("  WARNING: cookie.txt not found or empty — will use cur_points (delayed during race).")
+    print("  WARNING: no cookie found (set F1_COOKIE secret or cookie.txt).")
     return None
 
 COOKIE = load_cookie()

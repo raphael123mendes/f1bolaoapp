@@ -48,6 +48,7 @@ jobs:
           WA_ACCESS_TOKEN:    ${{ secrets.WA_ACCESS_TOKEN }}
           WA_TO_PHONE:        ${{ secrets.WA_TO_PHONE }}
           GITHUB_TOKEN:       ${{ secrets.GITHUB_TOKEN }}
+          F1_COOKIE:          ${{ secrets.F1_COOKIE }}
         run: python bot/f1_quick.py
 
       - name: Commit state and image

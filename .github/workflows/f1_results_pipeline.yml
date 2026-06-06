@@ -30,7 +30,9 @@ jobs:
         run: pip install requests openpyxl gspread oauth2client
 
       - name: Prepare cookie
-        run: cp bot/cookie.txt results_SC/cookie.txt
+        env:
+          F1_COOKIE: ${{ secrets.F1_COOKIE }}
+        run: echo "$F1_COOKIE" > results_SC/cookie.txt
 
       - name: Write Google credentials
         env:

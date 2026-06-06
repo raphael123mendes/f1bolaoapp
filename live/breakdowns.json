@@ -1775,8 +1775,8 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
+    "breakdown_category": "Both Driver Q2",
+    "breakdown_points": 3,
     "pick_points_gd": 48
   },
   {
@@ -1795,8 +1795,8 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
     "pick_points_gd": 48
   },
   {
@@ -1955,8 +1955,8 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
+    "breakdown_category": "Both Driver Q2",
+    "breakdown_points": 3,
     "pick_points_gd": 46
   },
   {
@@ -1975,8 +1975,8 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
     "pick_points_gd": 46
   }
 ]

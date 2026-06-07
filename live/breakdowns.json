@@ -17,7 +17,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -37,7 +37,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -57,7 +57,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -77,27 +77,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 240
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 5,
-    "race_rank": 1,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": true,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -117,7 +97,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -137,7 +117,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -157,7 +137,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -177,7 +157,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -196,8 +176,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 240
+    "breakdown_points": 4,
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -216,8 +196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 240
+    "breakdown_points": 7,
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -237,7 +217,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -257,7 +237,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -277,7 +257,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -297,7 +277,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -317,7 +297,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -337,7 +317,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -357,7 +337,7 @@
     "no_neg_applied": true,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -376,8 +356,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 240
+    "breakdown_points": 18,
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -396,8 +376,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 240
+    "breakdown_points": -12,
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -417,7 +397,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -437,7 +417,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -457,7 +437,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -477,7 +457,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 37,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -497,7 +477,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -517,7 +497,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 240
+    "pick_points_gd": 239
   },
   {
     "race_number": 8,
@@ -537,7 +517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -557,27 +537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -597,7 +557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -617,7 +577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -637,7 +597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -657,7 +617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -677,7 +637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -697,7 +657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -717,7 +677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -737,7 +697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -756,8 +716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 236
+    "breakdown_points": 6,
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -777,7 +737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -797,7 +757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -817,7 +777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -837,7 +797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -857,7 +817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -877,7 +837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -897,7 +857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -916,8 +876,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 236
+    "breakdown_points": 18,
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -936,8 +896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 236
+    "breakdown_points": -12,
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -957,7 +917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -977,7 +937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -997,7 +957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -1017,7 +977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 37,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -1037,7 +997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -1057,7 +1017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 236
+    "pick_points_gd": 225
   },
   {
     "race_number": 8,
@@ -1077,7 +1037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1097,7 +1057,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1117,7 +1097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1136,8 +1116,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 226
+    "breakdown_points": 4,
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1156,8 +1136,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 226
+    "breakdown_points": 7,
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1177,7 +1157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1197,7 +1177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1217,7 +1197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1237,7 +1217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1257,7 +1237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1277,7 +1257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1297,7 +1277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1317,7 +1297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1337,7 +1317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1357,7 +1337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1377,7 +1357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1397,7 +1377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1416,8 +1396,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 226
+    "breakdown_points": 18,
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1436,8 +1416,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 226
+    "breakdown_points": -12,
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1457,7 +1437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1477,7 +1457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1497,7 +1477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1517,7 +1497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 37,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1537,7 +1517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1557,7 +1537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 226
+    "pick_points_gd": 217
   },
   {
     "race_number": 8,
@@ -1577,7 +1557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1597,27 +1577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 211
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1637,7 +1597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1657,7 +1617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1677,7 +1637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1697,7 +1657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1717,7 +1677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1737,7 +1697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1757,7 +1717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1777,7 +1737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1797,7 +1757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1817,7 +1777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1837,7 +1797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1857,7 +1817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1877,7 +1837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1897,7 +1857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1917,7 +1877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1936,8 +1896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 211
+    "breakdown_points": 18,
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1956,8 +1916,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 211
+    "breakdown_points": -12,
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1977,7 +1937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -1997,7 +1957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -2017,7 +1977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -2037,7 +1997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 37,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -2057,7 +2017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -2077,7 +2037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 211
+    "pick_points_gd": 199
   },
   {
     "race_number": 8,
@@ -2097,7 +2057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2117,27 +2077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 188
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 8,
-    "race_rank": 5,
-    "team_name": "Yas Bombs",
-    "user_name": "Danilo Iglesias",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2157,7 +2097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2177,7 +2117,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 8,
+    "race_rank": 5,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2197,7 +2157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2216,8 +2176,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 188
+    "breakdown_points": 4,
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2236,8 +2196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 188
+    "breakdown_points": 7,
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2257,7 +2217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2277,7 +2237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2297,7 +2257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2317,7 +2277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2337,7 +2297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2357,7 +2317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2377,7 +2337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2397,7 +2357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2417,7 +2377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2437,7 +2397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2456,8 +2416,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 188
+    "breakdown_points": 18,
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2476,8 +2436,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 188
+    "breakdown_points": -12,
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2497,7 +2457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2517,7 +2477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2537,7 +2497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2557,7 +2517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -18,
-    "pick_points_gd": 188
+    "pick_points_gd": 180
   },
   {
     "race_number": 8,
@@ -2577,7 +2537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2597,27 +2557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 4,
-    "race_rank": 6,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2637,7 +2577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2657,7 +2597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2677,7 +2617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2697,7 +2637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2717,7 +2657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2737,7 +2677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2757,7 +2697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2777,7 +2717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2797,7 +2737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 4,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2817,7 +2757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 8,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2837,7 +2777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2857,7 +2797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2877,7 +2817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "No Driver Q2",
     "breakdown_points": -1,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2897,7 +2837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2916,8 +2856,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 174
+    "breakdown_points": 5,
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2937,7 +2877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2957,7 +2897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2977,7 +2917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -2997,7 +2937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 37,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -3017,7 +2957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -3037,7 +2977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 174
+    "pick_points_gd": 176
   },
   {
     "race_number": 8,
@@ -3057,7 +2997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3077,27 +3017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 3,
-    "race_rank": 7,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3117,7 +3037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3137,7 +3057,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 3,
+    "race_rank": 7,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3157,7 +3097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3177,7 +3117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3197,7 +3137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3217,7 +3157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3237,7 +3177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3257,7 +3197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3277,7 +3217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3297,7 +3237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3317,7 +3257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3337,7 +3277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3357,7 +3297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 8,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3377,7 +3317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -10,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3397,7 +3337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3417,7 +3357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3437,7 +3377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3457,7 +3397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 37,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3477,7 +3417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3497,7 +3437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 173
+    "pick_points_gd": 175
   },
   {
     "race_number": 8,
@@ -3517,7 +3457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3537,27 +3477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 2,
-    "race_rank": 8,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3577,7 +3497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3597,7 +3517,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 2,
+    "race_rank": 8,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3617,7 +3557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3637,7 +3577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3657,7 +3597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3677,7 +3617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3696,8 +3636,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 166
+    "breakdown_points": 0,
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3716,8 +3656,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -4,
-    "pick_points_gd": 166
+    "breakdown_points": -13,
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3737,7 +3677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3757,7 +3697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3776,8 +3716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 166
+    "breakdown_points": 6,
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3797,7 +3737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3817,7 +3757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3837,7 +3777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3857,7 +3797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3876,8 +3816,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 166
+    "breakdown_points": 18,
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3896,8 +3836,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 166
+    "breakdown_points": -12,
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3917,7 +3857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3937,7 +3877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3957,7 +3897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3977,7 +3917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 37,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -3997,7 +3937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -4017,7 +3957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 166
+    "pick_points_gd": 130
   },
   {
     "race_number": 8,
@@ -4037,7 +3977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4057,7 +3997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4077,7 +4017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4097,7 +4037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4117,7 +4057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4137,7 +4077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4157,7 +4097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4177,27 +4117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 126
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 7,
-    "race_rank": 9,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4217,7 +4137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4236,8 +4156,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 126
+    "breakdown_points": 0,
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4256,8 +4176,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -4,
-    "pick_points_gd": 126
+    "breakdown_points": -13,
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4277,7 +4197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4297,7 +4217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4316,8 +4236,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 126
+    "breakdown_points": 6,
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4337,7 +4257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4357,7 +4277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4377,7 +4297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4397,7 +4317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4416,8 +4336,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 126
+    "breakdown_points": 18,
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4436,8 +4356,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 126
+    "breakdown_points": -12,
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4457,7 +4377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4477,7 +4397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4497,7 +4417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4517,7 +4437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4537,7 +4457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 126
+    "pick_points_gd": 89
   },
   {
     "race_number": 8,
@@ -4557,7 +4477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4577,27 +4497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 10,
-    "race_rank": 10,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4617,7 +4517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4637,7 +4537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4657,7 +4557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4677,7 +4577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4696,8 +4596,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 113
+    "breakdown_points": 0,
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4716,8 +4616,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -4,
-    "pick_points_gd": 113
+    "breakdown_points": -13,
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4737,7 +4637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4757,7 +4657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4777,7 +4677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4797,7 +4697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4817,7 +4717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 12,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4837,7 +4737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4857,7 +4757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4877,7 +4777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4897,7 +4797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4917,7 +4817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4936,8 +4836,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 113
+    "breakdown_points": 18,
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4956,8 +4856,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 113
+    "breakdown_points": -12,
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4977,7 +4877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -4997,7 +4897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -5017,7 +4917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -5037,7 +4937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -5057,7 +4957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 113
+    "pick_points_gd": 75
   },
   {
     "race_number": 8,
@@ -5077,7 +4977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5097,7 +4997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5117,7 +5017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5137,7 +5037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5157,7 +5057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5177,7 +5077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5197,7 +5097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5217,7 +5117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5237,7 +5137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5256,8 +5156,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 104
+    "breakdown_points": 0,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5276,8 +5176,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -4,
-    "pick_points_gd": 104
+    "breakdown_points": -13,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5297,7 +5197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5317,7 +5217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5336,8 +5236,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 104
+    "breakdown_points": 6,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5357,7 +5257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5377,7 +5277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5397,7 +5297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 10,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5417,7 +5317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5437,7 +5337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5457,7 +5357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5477,7 +5377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 10,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5497,7 +5397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 104
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5516,8 +5416,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 104
+    "breakdown_points": 18,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -5536,7 +5436,7 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 104
+    "breakdown_points": -12,
+    "pick_points_gd": 66
   }
 ]

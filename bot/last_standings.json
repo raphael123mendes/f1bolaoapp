@@ -1,7 +1,7 @@
 {
   "gameday_id": "6",
   "session_type": "race",
-  "ranking_hash": "95826cc5659d01f44a72f0547eee5ea9",
+  "ranking_hash": "2c33c05e19fd8c6c5ac562a9c4005960",
   "scores": {
     "Robson Jardim": 234,
     "Raphael Stein": 216,
@@ -11,10 +11,10 @@
     "Rafael Dias": 175,
     "Guilherme Figueiredo": 168,
     "Liberio Junior": 121,
-    "Vinicius Agostini": 109,
+    "Vinicius Agostini": 99,
     "Eduardo Santos Lima": 72,
     "Ricardo Mucci": 60
   },
-  "post_race_sent": false,
-  "saved_at": "2026-06-07T15:32:31.751873+00:00"
+  "post_race_sent": true,
+  "saved_at": "2026-06-07T15:48:19.646945+00:00"
 }

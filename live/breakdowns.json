@@ -17,7 +17,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -37,7 +37,27 @@
     "no_neg_applied": true,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 5,
+    "race_rank": 1,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -57,7 +77,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -77,7 +97,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -96,8 +116,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 235
+    "breakdown_points": 5,
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -117,7 +137,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -137,27 +157,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 235
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 5,
-    "race_rank": 1,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": true,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -177,7 +177,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 8,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -197,7 +197,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -217,7 +217,27 @@
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
     "breakdown_points": 9,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 5,
+    "race_rank": 1,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 4,
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -237,7 +257,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Driver Of Day",
     "breakdown_points": 10,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -257,7 +277,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -277,7 +297,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -297,7 +317,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -317,7 +337,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -337,7 +357,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -357,7 +377,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -377,7 +397,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -397,7 +417,27 @@
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 5,
+    "race_rank": 1,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -417,7 +457,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -437,7 +477,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -457,7 +497,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -476,8 +516,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 235
+    "breakdown_points": -6,
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -497,7 +537,67 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 235
+    "pick_points_gd": 262
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 5,
+    "race_rank": 1,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 262
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 5,
+    "race_rank": 1,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 262
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 5,
+    "race_rank": 1,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 262
   },
   {
     "race_number": 8,
@@ -517,7 +617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -537,7 +637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -556,8 +656,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 209
+    "breakdown_points": 5,
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -577,7 +677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -597,27 +697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 209
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -637,7 +717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Driver Of Day",
     "breakdown_points": 10,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -657,7 +737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -677,7 +757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -697,7 +777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -717,7 +797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -737,7 +817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -757,7 +837,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 8,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -776,8 +876,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 209
+    "breakdown_points": 0,
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -797,7 +897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -816,8 +916,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 8,
-    "pick_points_gd": 209
+    "breakdown_points": 3,
+    "pick_points_gd": 234
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 5,
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -837,7 +957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -857,7 +977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -877,7 +997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -897,7 +1017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -917,7 +1037,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -937,7 +1077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -957,7 +1097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -977,7 +1117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -996,8 +1136,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 209
+    "breakdown_points": -6,
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -1017,7 +1157,67 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 209
+    "pick_points_gd": 234
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 234
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 234
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 234
   },
   {
     "race_number": 8,
@@ -1037,7 +1237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 199
+    "pick_points_gd": 229
   },
   {
     "race_number": 8,
@@ -1057,7 +1257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 199
+    "pick_points_gd": 229
   },
   {
     "race_number": 8,
@@ -1075,9 +1275,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 199
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 3,
+    "pick_points_gd": 229
   },
   {
     "race_number": 8,
@@ -1097,7 +1297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 8,
-    "pick_points_gd": 199
+    "pick_points_gd": 229
   },
   {
     "race_number": 8,
@@ -1117,7 +1317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 199
+    "pick_points_gd": 229
   },
   {
     "race_number": 8,
@@ -1137,7 +1337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 9,
-    "pick_points_gd": 199
+    "pick_points_gd": 229
   },
   {
     "race_number": 8,
@@ -1148,436 +1348,536 @@
     "race_rank": 3,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Driver Of Day",
-    "breakdown_points": 10,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 25,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race not classified ",
-    "breakdown_points": -20,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race not classified ",
-    "breakdown_points": -20,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 25,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 199
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 8,
-    "race_rank": 4,
-    "team_name": "Yas Bombs",
-    "user_name": "Danilo Iglesias",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 192
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 8,
-    "race_rank": 4,
-    "team_name": "Yas Bombs",
-    "user_name": "Danilo Iglesias",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 192
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 8,
-    "race_rank": 4,
-    "team_name": "Yas Bombs",
-    "user_name": "Danilo Iglesias",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
+    "breakdown_category": "race overtake bonus",
     "breakdown_points": 4,
-    "pick_points_gd": 192
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Driver Of Day",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 25,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 5,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race not classified ",
+    "breakdown_points": -20,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race not classified ",
+    "breakdown_points": -20,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 25,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -6,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 229
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 8,
+    "race_rank": 4,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 206
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 8,
+    "race_rank": 4,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 206
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 8,
+    "race_rank": 4,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 5,
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1597,7 +1897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1617,7 +1917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1635,9 +1935,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 192
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 3,
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1657,7 +1957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 8,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1677,7 +1977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1697,7 +1997,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 9,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 8,
+    "race_rank": 4,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 4,
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1717,7 +2037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Driver Of Day",
     "breakdown_points": 10,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1737,7 +2057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1757,7 +2077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1777,7 +2097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1797,7 +2117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 10,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1817,7 +2137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1837,7 +2157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1857,7 +2177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1877,7 +2197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1897,7 +2217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1917,7 +2237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1937,7 +2257,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 8,
+    "race_rank": 4,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1957,7 +2297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1977,7 +2317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -1997,7 +2337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -2017,7 +2357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -2037,7 +2377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 192
+    "pick_points_gd": 206
   },
   {
     "race_number": 8,
@@ -2057,7 +2397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2077,7 +2417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2096,8 +2436,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 179
+    "breakdown_points": 5,
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2117,7 +2457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2137,27 +2477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 179
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 9,
-    "race_rank": 5,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2177,7 +2497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Driver Of Day",
     "breakdown_points": 10,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2197,7 +2517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2217,7 +2537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2237,7 +2557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2256,8 +2576,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 179
+    "breakdown_points": 0,
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2277,7 +2597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2296,8 +2616,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 8,
-    "pick_points_gd": 179
+    "breakdown_points": 3,
+    "pick_points_gd": 202
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 5,
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2317,7 +2657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2337,7 +2677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2357,7 +2697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2377,7 +2717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2397,7 +2737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2417,7 +2757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2437,7 +2777,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2457,7 +2817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2477,7 +2837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2497,7 +2857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2516,8 +2876,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 179
+    "breakdown_points": -6,
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2537,7 +2897,67 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 179
+    "pick_points_gd": 202
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 202
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 202
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 202
   },
   {
     "race_number": 8,
@@ -2557,7 +2977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2577,7 +2997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2596,8 +3016,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 174
+    "breakdown_points": 5,
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2617,7 +3037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2637,7 +3057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2655,9 +3075,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 174
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 3,
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2677,7 +3097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Driver Of Day",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2697,7 +3117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2717,7 +3137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2737,7 +3157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2757,7 +3177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2777,7 +3197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2797,7 +3217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2817,7 +3237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2837,7 +3257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2857,7 +3277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 12,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2877,7 +3297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2897,7 +3317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2917,7 +3337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2937,7 +3357,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 3,
+    "race_rank": 6,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2957,7 +3397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2977,7 +3417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -2997,7 +3437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -3016,8 +3456,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 174
+    "breakdown_points": -6,
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -3037,7 +3477,67 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 201
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 3,
+    "race_rank": 6,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 201
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 3,
+    "race_rank": 6,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 201
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 3,
+    "race_rank": 6,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 201
   },
   {
     "race_number": 8,
@@ -3057,7 +3557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3077,7 +3577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3096,8 +3596,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 171
+    "breakdown_points": 5,
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3117,7 +3617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Driver Of Day",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3137,7 +3637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3157,7 +3657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3177,7 +3677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3197,7 +3697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3217,7 +3717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3237,7 +3737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3257,7 +3757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3277,7 +3777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3297,7 +3797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 12,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3317,7 +3817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 4,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3337,7 +3837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3357,7 +3857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3377,7 +3877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3397,7 +3897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3417,7 +3917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "No Driver Q2",
     "breakdown_points": -1,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3437,7 +3937,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 8,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "26",
+    "pick_name": "Haas F1 Team",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 3,
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3457,7 +3977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3477,7 +3997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3497,7 +4017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3516,8 +4036,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 171
+    "breakdown_points": -6,
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3537,7 +4057,67 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 192
   },
   {
     "race_number": 8,
@@ -3557,7 +4137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3577,7 +4157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3597,7 +4177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3617,7 +4197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3637,7 +4217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3657,7 +4237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3677,7 +4257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3697,7 +4277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3716,8 +4296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 98
+    "breakdown_points": 5,
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3737,7 +4317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3757,7 +4337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3777,7 +4357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3797,7 +4377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3817,7 +4397,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 8,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 7,
+    "race_rank": 8,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3837,7 +4437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3857,7 +4457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3877,7 +4477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3897,7 +4497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3917,7 +4517,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 7,
+    "race_rank": 8,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3937,7 +4557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3957,7 +4577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3977,7 +4597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -3996,8 +4616,48 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
+    "breakdown_points": 5,
+    "pick_points_gd": 121
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 7,
+    "race_rank": 8,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 121
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 7,
+    "race_rank": 8,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 98
+    "pick_points_gd": 121
   },
   {
     "race_number": 8,
@@ -4017,7 +4677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4037,7 +4697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4056,8 +4716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 80
+    "breakdown_points": 5,
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4077,7 +4737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4097,7 +4757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4115,9 +4775,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 80
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 3,
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4137,7 +4797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 10,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4157,7 +4817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4177,7 +4837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4197,7 +4857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4217,7 +4877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4237,7 +4897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4257,7 +4917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4277,7 +4937,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 8,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 2,
+    "race_rank": 9,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4297,7 +4977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4317,7 +4997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4337,7 +5017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4357,7 +5037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4377,7 +5057,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 2,
+    "race_rank": 9,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4397,7 +5097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4417,7 +5117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4437,7 +5137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4456,8 +5156,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 80
+    "breakdown_points": -6,
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4477,7 +5177,67 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 80
+    "pick_points_gd": 109
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 2,
+    "race_rank": 9,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 109
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 2,
+    "race_rank": 9,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 109
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 2,
+    "race_rank": 9,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 109
   },
   {
     "race_number": 8,
@@ -4497,7 +5257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4517,7 +5277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4536,8 +5296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 31
+    "breakdown_points": 5,
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4557,7 +5317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 10,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4577,7 +5337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4597,7 +5357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4617,7 +5377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4637,7 +5397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4656,8 +5416,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 31
+    "breakdown_points": 0,
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4677,7 +5437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4696,8 +5456,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 8,
-    "pick_points_gd": 31
+    "breakdown_points": 3,
+    "pick_points_gd": 53
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 5,
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4717,7 +5497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4737,7 +5517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4756,8 +5536,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -7,
-    "pick_points_gd": 31
+    "breakdown_points": -6,
+    "pick_points_gd": 53
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "124",
+    "pick_name": "G. Russell",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4777,7 +5577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4797,7 +5597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4817,7 +5617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4837,7 +5637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4857,7 +5657,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4877,7 +5697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4897,7 +5717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4917,7 +5737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4936,8 +5756,48 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
+    "breakdown_points": 5,
+    "pick_points_gd": 53
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 10,
+    "pick_points_gd": 53
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 31
+    "pick_points_gd": 53
   },
   {
     "race_number": 8,
@@ -4957,7 +5817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -4977,7 +5837,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 11,
+    "race_rank": 11,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -4997,7 +5877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5017,7 +5897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5037,7 +5917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5057,7 +5937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5077,27 +5957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 24
-  },
-  {
-    "race_number": 8,
-    "race_name": "Monaco Grand Prix",
-    "race_flag": "🇲🇨",
-    "race_date": "2026-06-07",
-    "season_rank": 11,
-    "race_rank": 11,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5117,7 +5977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5137,7 +5997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5157,7 +6017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5177,7 +6037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5197,7 +6057,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 8,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 11,
+    "race_rank": 11,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5217,7 +6097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5237,7 +6117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5257,7 +6137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5276,8 +6156,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 24
+    "breakdown_points": 2,
+    "pick_points_gd": 36
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 11,
+    "race_rank": 11,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "23",
+    "pick_name": "Alpine",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "race overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5297,7 +6197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5317,7 +6217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5337,7 +6237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5357,7 +6257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
   },
   {
     "race_number": 8,
@@ -5377,6 +6277,26 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 24
+    "pick_points_gd": 36
+  },
+  {
+    "race_number": 8,
+    "race_name": "Monaco Grand Prix",
+    "race_flag": "🇲🇨",
+    "race_date": "2026-06-07",
+    "season_rank": 11,
+    "race_rank": 11,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 36
   }
 ]

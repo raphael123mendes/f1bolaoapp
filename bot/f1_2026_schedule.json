@@ -44,34 +44,6 @@
     },
     {
       "round": 4,
-      "gameday_id": null,
-      "name": "Bahrain Grand Prix",
-      "location": "Bahrain",
-      "circuit": "Bahrain International Circuit, Sakhir",
-      "sprint": false,
-      "cancelled": true,
-      "cancellation_reason": "Cancelled due to Middle East conflict (Iran war)",
-      "sessions": [
-        { "session_type": "qualifying", "utc_start": "2026-04-11T15:00:00Z" },
-        { "session_type": "race",       "utc_start": "2026-04-12T15:00:00Z" }
-      ]
-    },
-    {
-      "round": 5,
-      "gameday_id": null,
-      "name": "Saudi Arabian Grand Prix",
-      "location": "Saudi Arabia",
-      "circuit": "Jeddah Corniche Circuit",
-      "sprint": false,
-      "cancelled": true,
-      "cancellation_reason": "Cancelled due to Middle East conflict (Iran war)",
-      "sessions": [
-        { "session_type": "qualifying", "utc_start": "2026-04-18T17:00:00Z" },
-        { "session_type": "race",       "utc_start": "2026-04-19T17:00:00Z" }
-      ]
-    },
-    {
-      "round": 6,
       "gameday_id": 4,
       "name": "Miami Grand Prix",
       "location": "Miami",
@@ -85,7 +57,7 @@
       ]
     },
     {
-      "round": 7,
+      "round": 5,
       "gameday_id": 5,
       "name": "Canadian Grand Prix",
       "location": "Canada",
@@ -99,7 +71,7 @@
       ]
     },
     {
-      "round": 8,
+      "round": 6,
       "gameday_id": 6,
       "name": "Monaco Grand Prix",
       "location": "Monaco",
@@ -112,7 +84,7 @@
       ]
     },
     {
-      "round": 9,
+      "round": 7,
       "gameday_id": 7,
       "name": "Barcelona-Catalunya Grand Prix",
       "location": "Spain",
@@ -125,7 +97,7 @@
       ]
     },
     {
-      "round": 10,
+      "round": 8,
       "gameday_id": 8,
       "name": "Austrian Grand Prix",
       "location": "Austria",
@@ -138,7 +110,7 @@
       ]
     },
     {
-      "round": 11,
+      "round": 9,
       "gameday_id": 9,
       "name": "British Grand Prix",
       "location": "United Kingdom",
@@ -152,7 +124,7 @@
       ]
     },
     {
-      "round": 12,
+      "round": 10,
       "gameday_id": 10,
       "name": "Belgian Grand Prix",
       "location": "Belgium",
@@ -165,7 +137,7 @@
       ]
     },
     {
-      "round": 13,
+      "round": 11,
       "gameday_id": 11,
       "name": "Hungarian Grand Prix",
       "location": "Hungary",
@@ -178,7 +150,7 @@
       ]
     },
     {
-      "round": 14,
+      "round": 12,
       "gameday_id": 12,
       "name": "Dutch Grand Prix",
       "location": "Netherlands",
@@ -192,7 +164,7 @@
       ]
     },
     {
-      "round": 15,
+      "round": 13,
       "gameday_id": 13,
       "name": "Italian Grand Prix",
       "location": "Italy",
@@ -205,7 +177,7 @@
       ]
     },
     {
-      "round": 16,
+      "round": 14,
       "gameday_id": 14,
       "name": "Spanish Grand Prix",
       "location": "Spain",
@@ -218,7 +190,7 @@
       ]
     },
     {
-      "round": 17,
+      "round": 15,
       "gameday_id": 15,
       "name": "Azerbaijan Grand Prix",
       "location": "Azerbaijan",
@@ -232,7 +204,7 @@
       ]
     },
     {
-      "round": 18,
+      "round": 16,
       "gameday_id": 16,
       "name": "Singapore Grand Prix",
       "location": "Singapore",
@@ -246,7 +218,7 @@
       ]
     },
     {
-      "round": 19,
+      "round": 17,
       "gameday_id": 17,
       "name": "United States Grand Prix",
       "location": "United States",
@@ -259,7 +231,7 @@
       ]
     },
     {
-      "round": 20,
+      "round": 18,
       "gameday_id": 18,
       "name": "Mexico City Grand Prix",
       "location": "Mexico",
@@ -272,7 +244,7 @@
       ]
     },
     {
-      "round": 21,
+      "round": 19,
       "gameday_id": 19,
       "name": "Sao Paulo Grand Prix",
       "location": "Brazil",
@@ -285,7 +257,7 @@
       ]
     },
     {
-      "round": 22,
+      "round": 20,
       "gameday_id": 20,
       "name": "Las Vegas Grand Prix",
       "location": "Las Vegas",
@@ -298,7 +270,7 @@
       ]
     },
     {
-      "round": 23,
+      "round": 21,
       "gameday_id": 21,
       "name": "Qatar Grand Prix",
       "location": "Qatar",
@@ -311,7 +283,7 @@
       ]
     },
     {
-      "round": 24,
+      "round": 22,
       "gameday_id": 22,
       "name": "Abu Dhabi Grand Prix",
       "location": "Abu Dhabi",

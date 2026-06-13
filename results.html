@@ -259,6 +259,94 @@
   .riser-card .mvp-value { color: var(--green); }
   .faller-card .mvp-value { color: var(--red-dim); }
 
+  /* ── LIVE INSIGHTS ── */
+  .insights-section { margin: 24px 16px 0; }
+  .insights-title { font-size: 0.7rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 12px; }
+  .insight-tabs {
+    display: flex; gap: 6px; margin-bottom: 10px;
+    overflow-x: auto; scrollbar-width: none;
+  }
+  .insight-tabs::-webkit-scrollbar { display: none; }
+  .insight-tab {
+    flex-shrink: 0;
+    background: var(--surface-high); border: none; color: var(--on-50);
+    font-family: 'Inter', sans-serif; font-size: 0.6rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 7px 12px; cursor: pointer; transition: all 0.15s;
+  }
+  .insight-tab.active { background: rgba(225,6,0,0.15); color: var(--red); }
+
+  .insight-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 12px; background: var(--surface-low);
+    border-bottom: 1px solid var(--on-08);
+  }
+  .insight-row:first-child { border-top-left-radius: 4px; border-top-right-radius: 4px; }
+  .insight-row:last-child { border-bottom: none; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+  .insight-pick {
+    flex-shrink: 0; width: 44px;
+    font-family: 'Space Grotesk', sans-serif; font-size: 0.78rem; font-weight: 800;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .insight-pick-name {
+    flex-shrink: 0; width: 88px;
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.04em;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    color: var(--on-50); text-transform: uppercase;
+  }
+  .insight-owners {
+    flex: 1; display: flex; flex-wrap: wrap; gap: 6px;
+    justify-content: flex-end;
+  }
+  .owner-chip {
+    display: flex; align-items: center; gap: 4px;
+    background: var(--surface-high); padding: 3px 8px;
+    font-size: 0.6rem; font-weight: 700; white-space: nowrap;
+  }
+  .owner-chip .owner-pts { font-family: 'Space Grotesk', sans-serif; color: var(--red); }
+  .owner-chip .owner-pts.neg { color: var(--red-dim); }
+  .owner-chip sup { font-size: 0.65em; color: var(--red); margin-left: 1px; }
+  .insight-empty {
+    padding: 20px 12px; text-align: center;
+    color: var(--on-30); font-size: 0.66rem;
+    font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    background: var(--surface-low);
+  }
+
+  /* ── COMPARE TAB ── */
+  .compare-selectors {
+    display: flex; align-items: center; gap: 8px; margin-bottom: 10px;
+  }
+  .compare-select {
+    flex: 1; background: var(--surface-high); color: var(--on-surface);
+    border: none; padding: 8px 10px; font-family: 'Inter', sans-serif;
+    font-size: 0.66rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .compare-vs {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 900;
+    color: var(--on-30); font-size: 0.7rem;
+  }
+  .compare-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .compare-col { background: var(--surface-low); }
+  .compare-col-header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 8px 10px; border-bottom: 1px solid var(--on-08);
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .compare-col-total { color: var(--red); font-weight: 800; font-size: 0.85rem; }
+  .compare-pick-row {
+    display: flex; align-items: center; gap: 6px;
+    padding: 6px 10px; font-size: 0.62rem; font-weight: 700;
+    border-bottom: 1px solid var(--on-08);
+  }
+  .compare-pick-row:last-child { border-bottom: none; }
+  .compare-pick-row .insight-pick { width: 40px; font-size: 0.7rem; }
+  .compare-pick-row .compare-pick-pts {
+    margin-left: auto; font-family: 'Space Grotesk', sans-serif; color: var(--red);
+  }
+  .compare-pick-row.shared { opacity: 0.4; }
+
   /* ── BOTTOM NAV ── */
   .bottom-nav {
     position: fixed; bottom: 0; left: 0; right: 0; z-index: 50;
@@ -326,8 +414,19 @@
     <div id="player-list"></div>
   </div>
 
+  <!-- LIVE INSIGHTS (shown during live races) -->
+  <div class="insights-section" id="insights-section" style="display:none">
+    <div class="insights-title">Live Insights</div>
+    <div class="insight-tabs" id="insight-tabs">
+      <button class="insight-tab active" data-tab="points">Pick Points</button>
+      <button class="insight-tab" data-tab="diff">Differentiators</button>
+      <button class="insight-tab" data-tab="compare">Compare Teams</button>
+    </div>
+    <div id="insights-content"></div>
+  </div>
+
   <!-- WEEKEND MVPs -->
-  <div class="mvp-section">
+  <div class="mvp-section" id="mvp-section">
     <div class="mvp-title">Weekend MVPs &amp; Market Shifters</div>
     <div class="mvp-grid" id="mvp-grid"></div>
   </div>
@@ -363,6 +462,9 @@ let selectedRace = null;
 let refreshTimer = null;
 let countdownTimer = null;
 let countdownSec = REFRESH_S;
+let activeInsightTab = 'points';
+let compareUserA = null;
+let compareUserB = null;
 
 // ── HELPERS ────────────────────────────────────────────────────────────────
 async function tryFetch(url) {
@@ -638,7 +740,14 @@ function render() {
     list.appendChild(row);
   });
 
-  renderMVPs(selectedRace);
+  // Live insights vs. weekend MVPs
+  document.getElementById('insights-section').style.display = isLive ? 'block' : 'none';
+  document.getElementById('mvp-section').style.display = isLive ? 'none' : 'block';
+  if (isLive) {
+    renderInsights(selectedRace);
+  } else {
+    renderMVPs(selectedRace);
+  }
 }
 
 // ── Live picks helpers ──────────────────────────────────────────────────
@@ -683,6 +792,149 @@ function formatPicksHtml(picks) {
     if (pp.is_captain)  return `<span class="pick-c">${tla}<sup>C</sup></span>`;
     return `<span class="pick-d">${tla}</span>`;
   }).join('');
+}
+
+// ── LIVE INSIGHTS ────────────────────────────────────────────────────────
+function shortName(userName) {
+  return (userName || '').split(' ')[0];
+}
+
+function fmtPts(pts) {
+  const v = Math.round(pts || 0);
+  return v > 0 ? `+${v}` : `${v}`;
+}
+
+// Groups picks by pick_id: { pick_id, pick_name, pick_type, tla, owners: [...] }
+function buildPickGroups(raceNum) {
+  const groups = {};
+  (PICKS || []).filter(p => p.race_number === raceNum).forEach(p => {
+    if (!groups[p.pick_id]) {
+      groups[p.pick_id] = {
+        pick_id:   p.pick_id,
+        pick_name: p.pick_name,
+        pick_type: p.pick_type,
+        tla:       lookupTla(p),
+        owners:    [],
+      };
+    }
+    groups[p.pick_id].owners.push({
+      user_name:   p.user_name,
+      points:      p.pick_points_gd ?? 0,
+      is_captain:  p.is_captain,
+      is_megacap:  p.is_megacap,
+    });
+  });
+  return Object.values(groups);
+}
+
+function ownerChipsHtml(owners) {
+  return owners
+    .slice()
+    .sort((a, b) => b.points - a.points)
+    .map(o => {
+      const cls = o.points < 0 ? 'neg' : '';
+      const tag = o.is_megacap ? '<sup>MC</sup>' : o.is_captain ? '<sup>C</sup>' : '';
+      return `<span class="owner-chip">${shortName(o.user_name)}${tag} <span class="owner-pts ${cls}">${fmtPts(o.points)}</span></span>`;
+    })
+    .join('');
+}
+
+function renderInsights(raceNum) {
+  renderInsightContent(raceNum);
+}
+
+function renderInsightContent(raceNum) {
+  const el = document.getElementById('insights-content');
+  if (activeInsightTab === 'points') {
+    renderPickPointsTab(el, raceNum, false);
+  } else if (activeInsightTab === 'diff') {
+    renderPickPointsTab(el, raceNum, true);
+  } else {
+    renderCompareTab(el, raceNum);
+  }
+}
+
+function renderPickPointsTab(el, raceNum, diffOnly) {
+  let groups = buildPickGroups(raceNum);
+  if (diffOnly) groups = groups.filter(g => g.owners.length === 1);
+
+  if (groups.length === 0) {
+    el.innerHTML = `<div class="insight-empty">${diffOnly ? 'No unique picks this race — everyone owns the same drivers.' : 'No live pick data yet.'}</div>`;
+    return;
+  }
+
+  groups.sort((a, b) => {
+    const maxA = Math.max(...a.owners.map(o => o.points));
+    const maxB = Math.max(...b.owners.map(o => o.points));
+    return maxB - maxA;
+  });
+
+  el.innerHTML = groups.map(g => `
+    <div class="insight-row">
+      <div class="insight-pick">${g.tla}</div>
+      <div class="insight-pick-name">${g.pick_name}</div>
+      <div class="insight-owners">${ownerChipsHtml(g.owners)}</div>
+    </div>`).join('');
+}
+
+function renderCompareTab(el, raceNum) {
+  const teams = RESULTS.filter(r => r.race_number === raceNum)
+    .sort((a, b) => a.race_rank - b.race_rank);
+
+  if (teams.length < 2) {
+    el.innerHTML = `<div class="insight-empty">Not enough teams to compare yet.</div>`;
+    return;
+  }
+
+  const names = teams.map(t => t.user_name);
+  if (!names.includes(compareUserA)) compareUserA = names[0];
+  if (!names.includes(compareUserB) || compareUserB === compareUserA) {
+    compareUserB = names.find(n => n !== compareUserA) || names[1];
+  }
+
+  const options = (selected) => names.map(n =>
+    `<option value="${n}" ${n === selected ? 'selected' : ''}>${n}</option>`).join('');
+
+  const picksA = picksForTeam(raceNum, compareUserA);
+  const picksB = picksForTeam(raceNum, compareUserB);
+  const idsB = new Set(picksB.map(p => p.pick_id));
+  const idsA = new Set(picksA.map(p => p.pick_id));
+
+  const totalA = teams.find(t => t.user_name === compareUserA)?.race_points ?? 0;
+  const totalB = teams.find(t => t.user_name === compareUserB)?.race_points ?? 0;
+
+  const colHtml = (picks, sharedIds, total, userName) => `
+    <div class="compare-col">
+      <div class="compare-col-header">
+        <span>${shortName(userName)}</span>
+        <span class="compare-col-total">${Math.round(total)}</span>
+      </div>
+      ${picks.slice().sort((a, b) => (b.pick_points_gd ?? 0) - (a.pick_points_gd ?? 0)).map(p => `
+        <div class="compare-pick-row ${sharedIds.has(p.pick_id) ? 'shared' : ''}">
+          <div class="insight-pick">${lookupTla(p)}</div>
+          <div class="compare-pick-pts">${fmtPts(p.pick_points_gd)}</div>
+        </div>`).join('')}
+    </div>`;
+
+  el.innerHTML = `
+    <div class="compare-selectors">
+      <select class="compare-select" id="compare-select-a">${options(compareUserA)}</select>
+      <span class="compare-vs">VS</span>
+      <select class="compare-select" id="compare-select-b">${options(compareUserB)}</select>
+    </div>
+    <div class="compare-cols">
+      ${colHtml(picksA, idsB, totalA, compareUserA)}
+      ${colHtml(picksB, idsA, totalB, compareUserB)}
+    </div>`;
+
+  document.getElementById('compare-select-a').addEventListener('change', (e) => {
+    compareUserA = e.target.value;
+    renderCompareTab(el, raceNum);
+  });
+  document.getElementById('compare-select-b').addEventListener('change', (e) => {
+    compareUserB = e.target.value;
+    renderCompareTab(el, raceNum);
+  });
 }
 
 // ── MVPs ───────────────────────────────────────────────────────────────────
@@ -743,6 +995,14 @@ function renderMVPs(raceNum) {
 // ── INIT ───────────────────────────────────────────────────────────────────
 async function init() {
   try {
+    document.getElementById('insight-tabs').addEventListener('click', (e) => {
+      const btn = e.target.closest('.insight-tab');
+      if (!btn) return;
+      activeInsightTab = btn.dataset.tab;
+      document.querySelectorAll('.insight-tab').forEach(t => t.classList.toggle('active', t === btn));
+      renderInsightContent(selectedRace);
+    });
+
     await loadStatic();
     selectedRace = Math.max(...STATIC_RESULTS.map(r => r.race_number));
 

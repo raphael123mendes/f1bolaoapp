@@ -33,5 +33,6 @@ jobs:
 
       - name: Save cookie to GitHub Secret
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}  # ← change this line
         run: gh secret set F1_COOKIE < /tmp/cookie.txt
+

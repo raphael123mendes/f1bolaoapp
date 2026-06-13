@@ -55,6 +55,7 @@ jobs:
         run: |
           git config user.name "F1 Bot"
           git config user.email "f1bot@github.com"
-          [ -f bot/last_standings.json ] && git add bot/last_standings.json || true
-          [ -f bot/standings_card.png  ] && git add bot/standings_card.png  || true
+          [ -f bot/last_standings.json ]       && git add bot/last_standings.json       || true
+          [ -f bot/standings_card.png ]        && git add bot/standings_card.png        || true
+          [ -f live/live_standings_card.png ]  && git add live/live_standings_card.png  || true
           git diff --staged --quiet || (git commit -m "standings update [skip ci]" && git pull --rebase && git push)

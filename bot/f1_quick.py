@@ -687,8 +687,21 @@ def generate_image(race, results, mode="live"):
         from f1_image import generate_standings_image, apply_nicknames
         results_with_names = apply_nicknames(results, NICKNAMES)
         is_live = (mode == "live")
-        img_path = generate_standings_image(race, results_with_names, LEAGUE_NAME, is_live=is_live)
+        img_path = generate_standings_image(race, results_with_names, LEAGUE_NAME, output_path=IMG_PATH, is_live=is_live)
         print(f"  PNG generated: {img_path}")
+
+        # Also copy a separate version for the website, so the WhatsApp
+        # image and the website image can be chosen independently.
+        try:
+            import shutil
+            repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+            web_path  = os.path.join(repo_root, "live", "live_standings_card.png")
+            os.makedirs(os.path.dirname(web_path), exist_ok=True)
+            shutil.copy(img_path, web_path)
+            print(f"  PNG copied for website: {web_path}")
+        except Exception as e:
+            print(f"  WARNING: could not copy PNG for website: {e}")
+
         return img_path
     except Exception as e:
         print(f"  WARNING: could not generate PNG: {e}")

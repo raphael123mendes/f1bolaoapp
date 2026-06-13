@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-13T08:04:05.503490+00:00",
+  "updated_at": "2026-06-13T10:25:38.295467+00:00",
   "total_rows": 44,
   "races_covered": [
     1,
@@ -1337,12 +1337,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 229.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 102.9,
+      "budget": 0.8,
+      "ov_points": 1786.0,
+      "gd_points": 229.0,
+      "ov_rank": 2704,
+      "gd_rank": 65909,
       "picks": [
         "11161",
         "111",
@@ -1366,7 +1366,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:01.861079+00:00"
+      "fetched_at": "2026-06-13T10:25:33.704463+00:00"
     },
     {
       "user_guid": "0f3b086c-1381-11f1-8199-6735aa542fc4-0-179110003",
@@ -1377,12 +1377,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 202.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 106.0,
+      "budget": 0.9,
+      "ov_points": 1698.0,
+      "gd_points": 202.0,
+      "ov_rank": 9528,
+      "gd_rank": 165945,
       "picks": [
         "13",
         "11051",
@@ -1406,7 +1406,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:02.722355+00:00"
+      "fetched_at": "2026-06-13T10:25:34.905839+00:00"
     },
     {
       "user_guid": "77e7bf9e-11c0-11f1-b2fa-290a04809184-0-178880123",
@@ -1417,12 +1417,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 109.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 106.7,
+      "budget": 0.2,
+      "ov_points": 1617.0,
+      "gd_points": 109.0,
+      "ov_rank": 24853,
+      "gd_rank": 825622,
       "picks": [
         "11051",
         "115",
@@ -1446,7 +1446,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:04.442560+00:00"
+      "fetched_at": "2026-06-13T10:25:37.038519+00:00"
     },
     {
       "user_guid": "2165dde2-11b9-11f1-94eb-47ffa4421334-0-178889519",
@@ -1457,12 +1457,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 192.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 108.7,
+      "budget": 1.8,
+      "ov_points": 1536.0,
+      "gd_points": 192.0,
+      "ov_rank": 51235,
+      "gd_rank": 212337,
       "picks": [
         "1982",
         "13",
@@ -1486,7 +1486,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:03.581502+00:00"
+      "fetched_at": "2026-06-13T10:25:35.970110+00:00"
     },
     {
       "user_guid": "7f6dff66-11fd-11f1-bed2-d5a4efa941d4-0-178877659",
@@ -1497,12 +1497,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 121.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 104.3,
+      "budget": 2.4,
+      "ov_points": 1535.0,
+      "gd_points": 121.0,
+      "ov_rank": 51707,
+      "gd_rank": 707210,
       "picks": [
         "11032",
         "110",
@@ -1526,7 +1526,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:04.012284+00:00"
+      "fetched_at": "2026-06-13T10:25:36.503201+00:00"
     },
     {
       "user_guid": "d16d9b66-1840-11f1-8fd8-f70cd60e50e6-0-202971566",
@@ -1537,12 +1537,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 201.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 106.3,
+      "budget": 0.5,
+      "ov_points": 1528.0,
+      "gd_points": 201.0,
+      "ov_rank": 54489,
+      "gd_rank": 172761,
       "picks": [
         "114",
         "111",
@@ -1566,7 +1566,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:03.151864+00:00"
+      "fetched_at": "2026-06-13T10:25:35.439483+00:00"
     },
     {
       "user_guid": "23694378-196a-11f1-95f5-bf4745e2ae8a-0-190698143",
@@ -1577,12 +1577,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 262.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 109.7,
+      "budget": 0.8,
+      "ov_points": 1521.0,
+      "gd_points": 262.0,
+      "ov_rank": 57417,
+      "gd_rank": 12378,
       "picks": [
         "11059",
         "11161",
@@ -1606,7 +1606,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:00.991191+00:00"
+      "fetched_at": "2026-06-13T10:25:32.648008+00:00"
     },
     {
       "user_guid": "6cbc08a2-1844-11f1-a808-cb32621ceb82-0-34753001",
@@ -1617,12 +1617,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 206.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 102.3,
+      "budget": 0.0,
+      "ov_points": 1520.0,
+      "gd_points": 206.0,
+      "ov_rank": 57860,
+      "gd_rank": 147060,
       "picks": [
         "11161",
         "111",
@@ -1646,7 +1646,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:02.292137+00:00"
+      "fetched_at": "2026-06-13T10:25:34.236670+00:00"
     },
     {
       "user_guid": "af5b6c4a-11b7-11f1-a6ba-3bae984dbbac-0-34875001",
@@ -1657,12 +1657,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 234.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 111.4,
+      "budget": 0.3,
+      "ov_points": 1484.0,
+      "gd_points": 234.0,
+      "ov_rank": 76891,
+      "gd_rank": 54668,
       "picks": [
         "11051",
         "11059",
@@ -1686,7 +1686,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:01.421509+00:00"
+      "fetched_at": "2026-06-13T10:25:33.177286+00:00"
     },
     {
       "user_guid": "7f451c50-11bb-11f1-89ff-6508e30e59f0-0-34802661",
@@ -1697,12 +1697,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 36.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 104.0,
+      "budget": 0.6,
+      "ov_points": 1042.0,
+      "gd_points": 36.0,
+      "ov_rank": 837661,
+      "gd_rank": 1625308,
       "picks": [
         "115",
         "11059",
@@ -1726,7 +1726,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:05.303295+00:00"
+      "fetched_at": "2026-06-13T10:25:38.095237+00:00"
     },
     {
       "user_guid": "88597cc6-190b-11f1-aa99-f79ef14ce400-0-45799881",
@@ -1737,12 +1737,12 @@
       "race_name": "Monaco Grand Prix",
       "race_flag": "🇲🇨",
       "race_date": "2026-06-07",
-      "team_value": null,
-      "budget": null,
-      "ov_points": 53.0,
-      "gd_points": null,
-      "ov_rank": null,
-      "gd_rank": null,
+      "team_value": 102.1,
+      "budget": 0.0,
+      "ov_points": 965.0,
+      "gd_points": 53.0,
+      "ov_rank": 1056743,
+      "gd_rank": 1442157,
       "picks": [
         "115",
         "124",
@@ -1766,7 +1766,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-06-13T08:04:04.872526+00:00"
+      "fetched_at": "2026-06-13T10:25:37.568584+00:00"
     }
   ]
 }

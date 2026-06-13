@@ -859,6 +859,7 @@ def build_picks_rows(race, results):
                 "cards_used":       cards_str,
                 "pick_id":          p["id"],
                 "pick_name":        p["full_name"],
+                "pick_tla":         p["tla"],
                 "pick_type":        p["pick_type"],
                 "is_captain":       bool(p["iscaptain"]),
                 "is_megacap":       bool(p["ismgcaptain"]),

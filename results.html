@@ -651,9 +651,34 @@ function picksForTeam(raceNum, userName) {
     });
 }
 
+// Fallback TLA lookups for picks.json rows saved before pick_tla was exported.
+// Keyed by last word of pick_name (driver last name, or full constructor name).
+const DRIVER_TLA = {
+  'albon':'ALB', 'lindblad':'LIN', 'sainz':'SAI', 'leclerc':'LEC', 'ocon':'OCO',
+  'alonso':'ALO', 'colapinto':'COL', 'bortoleto':'BOR', 'russell':'RUS', 'hadjar':'HAD',
+  'antonelli':'ANT', 'stroll':'STR', 'norris':'NOR', 'hamilton':'HAM', 'lawson':'LAW',
+  'verstappen':'VER', 'hulkenberg':'HUL', 'bearman':'BEA', 'piastri':'PIA', 'gasly':'GAS',
+  'perez':'PER', 'bottas':'BOT',
+};
+const CONSTRUCTOR_TLA = {
+  'alpine':'ALP', 'aston martin':'AM', 'audi':'AUD', 'cadillac':'CAD', 'ferrari':'FER',
+  'haas f1 team':'HAA', 'haas':'HAA', 'mclaren':'MCL', 'mercedes':'MER',
+  'racing bulls':'RB', 'red bull racing':'RBR', 'williams':'WIL',
+};
+
+function lookupTla(pp) {
+  if (pp.pick_tla) return pp.pick_tla.toUpperCase();
+  const name = (pp.pick_name || '').trim();
+  if (pp.pick_type === 'Constructor') {
+    return CONSTRUCTOR_TLA[name.toLowerCase()] || name.slice(0, 3).toUpperCase();
+  }
+  const lastName = name.split(/[\s.]+/).filter(Boolean).pop() || name;
+  return DRIVER_TLA[lastName.toLowerCase()] || name.slice(0, 3).toUpperCase();
+}
+
 function formatPicksHtml(picks) {
   return picks.map(pp => {
-    const tla = pp.pick_tla || (pp.pick_name || '').slice(0, 3).toUpperCase();
+    const tla = lookupTla(pp);
     if (pp.is_megacap) return `<span class="pick-mc">${tla}<sup>MC</sup></span>`;
     if (pp.is_captain)  return `<span class="pick-c">${tla}<sup>C</sup></span>`;
     return `<span class="pick-d">${tla}</span>`;

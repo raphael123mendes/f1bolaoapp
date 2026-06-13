@@ -236,7 +236,7 @@ def recalculate_ranks(results):
     Also computes rank change vs cached API rank.
     """
     def assign_ranks(items, key):
-        sorted_items = sorted(items, key=lambda x: x[key], reverse=True)
+        sorted_items = sorted(items, key=lambda x: x[key] if x[key] is not None else 0, reverse=True)
         rank = 1
         for i, t in enumerate(sorted_items):
             if i > 0 and t[key] == sorted_items[i-1][key]:
@@ -331,8 +331,8 @@ def fetch_all():
             detail     = get_team_detail(user_guid)
             budget     = detail["team_info"]["teamBal"]
             team_value = detail["team_info"]["teamVal"]
-            gd_points  = detail["gdpoints"]
-            ovpoints   = detail["ovpoints"]
+            gd_points  = detail["gdpoints"] or 0
+            ovpoints   = detail["ovpoints"] or 0
             player_ids = detail["playerid"]
         except Exception as e:
             print(f"    ⚠ Team detail error: {e}")

@@ -1,20 +1,20 @@
 {
   "gameday_id": "7",
   "session_type": "race",
-  "ranking_hash": "d258d7e3f1b0e1846f788a3eec2bdd6d",
+  "ranking_hash": "d32857223e200c3e829fafefaaa6b336",
   "scores": {
-    "Ricardo Mucci": 264,
-    "Liberio Junior": 224,
-    "Fabio Mucci": 185,
-    "Raphael Stein": 176,
-    "Danilo Iglesias": 173,
-    "Robson Jardim": 169,
-    "Guilherme Figueiredo": 165,
-    "Rafael Dias": 159,
-    "Priscila Rigotto": 158,
-    "Vinicius Agostini": 148,
-    "Eduardo Santos Lima": 127
+    "Ricardo Mucci": 269,
+    "Liberio Junior": 203,
+    "Raphael Stein": 188,
+    "Guilherme Figueiredo": 173,
+    "Robson Jardim": 171,
+    "Fabio Mucci": 162,
+    "Danilo Iglesias": 155,
+    "Rafael Dias": 140,
+    "Vinicius Agostini": 140,
+    "Priscila Rigotto": 140,
+    "Eduardo Santos Lima": 130
   },
   "post_race_sent": false,
-  "saved_at": "2026-06-14T13:19:30.799671+00:00"
+  "saved_at": "2026-06-14T13:37:05.133241+00:00"
 }

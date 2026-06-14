@@ -17,7 +17,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -37,7 +37,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -57,7 +57,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -77,7 +77,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -97,7 +97,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -117,7 +117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 12,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -137,7 +137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -157,7 +157,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 11,
+    "race_rank": 1,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "124",
+    "pick_name": "G. Russell",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -177,7 +197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 4,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -196,28 +216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 250
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 11,
-    "race_rank": 1,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "1982",
-    "pick_name": "O. Piastri",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 250
+    "breakdown_points": 6,
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -237,7 +237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 11,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -257,7 +257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -276,28 +276,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 20,
-    "pick_points_gd": 250
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 11,
-    "race_rank": 1,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 250
+    "breakdown_points": 18,
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -317,7 +297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -337,7 +317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -357,7 +337,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 250
+    "pick_points_gd": 264
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 11,
+    "race_rank": 1,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 264
   },
   {
     "race_number": 7,
@@ -377,7 +377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -397,7 +397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -417,7 +417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -437,7 +437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -456,28 +456,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 193
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 2,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 193
+    "breakdown_points": 0,
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -497,7 +477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -517,7 +497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -537,7 +517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -557,7 +537,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "124",
+    "pick_name": "G. Russell",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -577,7 +577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -597,7 +597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -616,8 +616,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 24,
-    "pick_points_gd": 193
+    "breakdown_points": 26,
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -636,8 +636,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 193
+    "breakdown_points": 4,
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -657,7 +657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -677,7 +677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -697,7 +697,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -717,7 +737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -737,7 +757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 193
+    "pick_points_gd": 224
   },
   {
     "race_number": 7,
@@ -757,7 +777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -776,28 +796,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 174
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 1,
-    "race_rank": 3,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 174
+    "breakdown_points": 0,
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -817,7 +817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -837,7 +837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -857,7 +857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -877,7 +877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -897,7 +897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -917,7 +917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -937,7 +937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -957,7 +957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -976,8 +976,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 24,
-    "pick_points_gd": 174
+    "breakdown_points": 26,
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -996,8 +996,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 174
+    "breakdown_points": 4,
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -1017,7 +1017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -1037,7 +1037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -1057,7 +1057,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 1,
+    "race_rank": 3,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -1077,7 +1097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
   },
   {
     "race_number": 7,
@@ -1097,7 +1117,427 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 174
+    "pick_points_gd": 185
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 5,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -4,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11059",
+    "pick_name": "F. Colapinto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 26,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 40,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 176
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 6,
+    "race_rank": 4,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 176
   },
   {
     "race_number": 7,
@@ -1105,7 +1545,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11051",
@@ -1117,7 +1557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1125,7 +1565,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11051",
@@ -1137,7 +1577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1145,7 +1585,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11051",
@@ -1157,7 +1597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1165,7 +1605,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11149",
@@ -1177,7 +1617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1185,7 +1625,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11149",
@@ -1196,8 +1636,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 162
+    "breakdown_points": 0,
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1205,27 +1645,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
-    "team_name": "Yas Bombs",
-    "user_name": "Danilo Iglesias",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 162
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11161",
@@ -1237,7 +1657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1245,7 +1665,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11161",
@@ -1257,7 +1677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1265,7 +1685,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "13",
@@ -1277,7 +1697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1285,7 +1705,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "13",
@@ -1297,7 +1717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1305,7 +1725,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -1317,7 +1737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1325,7 +1745,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -1337,7 +1757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1345,7 +1765,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -1356,8 +1776,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 24,
-    "pick_points_gd": 162
+    "breakdown_points": 26,
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1365,7 +1785,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -1376,8 +1796,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 162
+    "breakdown_points": 4,
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1385,7 +1805,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -1397,7 +1817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1405,7 +1825,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -1417,7 +1837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1425,7 +1845,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -1437,7 +1857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1445,7 +1865,27 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 173
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 8,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "111",
@@ -1457,7 +1897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1465,7 +1905,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 8,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "111",
@@ -1477,7 +1917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 162
+    "pick_points_gd": 173
   },
   {
     "race_number": 7,
@@ -1485,7 +1925,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -1497,7 +1937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1505,7 +1945,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -1517,7 +1957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1525,7 +1965,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -1537,7 +1977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1545,7 +1985,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11051",
@@ -1557,7 +1997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1565,7 +2005,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11051",
@@ -1577,7 +2017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1585,7 +2025,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11051",
@@ -1597,7 +2037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1605,7 +2045,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11059",
@@ -1617,7 +2057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1625,7 +2065,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11059",
@@ -1637,7 +2077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1645,7 +2085,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11059",
@@ -1656,8 +2096,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 159
+    "breakdown_points": 1,
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1665,7 +2105,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11149",
@@ -1677,7 +2117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1685,7 +2125,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11149",
@@ -1696,8 +2136,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 159
+    "breakdown_points": 0,
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1705,27 +2145,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -1737,7 +2157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1745,7 +2165,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -1757,7 +2177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1765,7 +2185,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -1777,7 +2197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1785,7 +2205,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -1797,7 +2217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1805,7 +2225,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -1816,8 +2236,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 24,
-    "pick_points_gd": 159
+    "breakdown_points": 26,
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1825,7 +2245,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -1836,8 +2256,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 159
+    "breakdown_points": 4,
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1845,7 +2265,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -1857,7 +2277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1865,7 +2285,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -1877,7 +2297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -1885,7 +2305,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 5,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -1897,317 +2317,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
     "race_name": "Barcelona-Catalunya Grand Prix",
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -8,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -5,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11059",
-    "pick_name": "F. Colapinto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 24,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
+    "season_rank": 5,
+    "race_rank": 6,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
     "pick_id": "28",
     "pick_name": "Mercedes",
     "pick_type": "Constructor",
@@ -2215,89 +2335,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
+    "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 40,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 159
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 6,
-    "race_rank": 5,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 159
+    "pick_points_gd": 169
   },
   {
     "race_number": 7,
@@ -2317,7 +2357,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2337,7 +2377,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2357,7 +2397,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2377,7 +2417,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2396,28 +2436,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 3,
-    "race_rank": 7,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": true,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 153
+    "breakdown_points": 0,
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2437,7 +2457,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2457,7 +2477,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2477,7 +2497,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2497,7 +2517,27 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 3,
+    "race_rank": 7,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "12",
+    "pick_name": "F. Alonso",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": true,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2517,7 +2557,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2537,7 +2577,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2557,7 +2597,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2577,7 +2617,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2596,8 +2636,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
-    "breakdown_points": 24,
-    "pick_points_gd": 153
+    "breakdown_points": 26,
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2616,8 +2656,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 153
+    "breakdown_points": 4,
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2637,7 +2677,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2657,7 +2697,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -2677,387 +2717,27 @@
     "no_neg_applied": true,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
     "race_name": "Barcelona-Catalunya Grand Prix",
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
-    "season_rank": 9,
+    "season_rank": 3,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -5,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "27",
-    "pick_name": "McLaren",
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
+    "no_neg_applied": true,
+    "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 20,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 153
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 40,
-    "pick_points_gd": 153
+    "pick_points_gd": 165
   },
   {
     "race_number": 7,
@@ -3065,7 +2745,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "110",
@@ -3077,7 +2757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3085,7 +2765,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "110",
@@ -3097,7 +2777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3105,7 +2785,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -3117,7 +2797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3125,7 +2805,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -3137,7 +2817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3145,7 +2825,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -3157,7 +2837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3165,7 +2845,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11059",
@@ -3177,7 +2857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3185,7 +2865,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11059",
@@ -3197,7 +2877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3205,7 +2885,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11059",
@@ -3216,8 +2896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 152
+    "breakdown_points": 1,
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3225,7 +2905,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -3237,7 +2917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3245,7 +2925,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -3257,7 +2937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3265,7 +2945,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "13",
@@ -3277,7 +2957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3285,7 +2965,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "13",
@@ -3297,7 +2977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3305,7 +2985,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -3317,7 +2997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3325,7 +3005,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -3337,7 +3017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3345,7 +3025,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -3356,8 +3036,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 152
+    "breakdown_points": 4,
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3365,27 +3045,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "pick_id": "2636",
-    "pick_name": "Racing Bulls",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 152
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "28",
@@ -3397,7 +3057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3405,7 +3065,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "28",
@@ -3417,7 +3077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
   },
   {
     "race_number": 7,
@@ -3425,7 +3085,7 @@
     "race_flag": "🇪🇸",
     "race_date": "2026-06-14",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "28",
@@ -3437,7 +3097,387 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 152
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 4,
+    "race_rank": 8,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 159
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 11,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 40,
+    "pick_points_gd": 158
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 9,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 158
   },
   {
     "race_number": 7,
@@ -3457,7 +3497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3476,8 +3516,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 136
+    "breakdown_points": 1,
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3496,8 +3536,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8,
-    "pick_points_gd": 136
+    "breakdown_points": -4,
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3517,7 +3557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3537,7 +3577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3556,8 +3596,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 136
+    "breakdown_points": 1,
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3577,7 +3617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3597,7 +3637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 15,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3617,7 +3657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3637,7 +3677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3657,7 +3697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3677,7 +3717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3697,7 +3737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3717,7 +3757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3737,7 +3777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3756,28 +3796,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 136
-  },
-  {
-    "race_number": 7,
-    "race_name": "Barcelona-Catalunya Grand Prix",
-    "race_flag": "🇪🇸",
-    "race_date": "2026-06-14",
-    "season_rank": 7,
-    "race_rank": 10,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "2636",
-    "pick_name": "Racing Bulls",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 136
+    "breakdown_points": 4,
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3797,7 +3817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3817,7 +3837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3837,7 +3857,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 40,
-    "pick_points_gd": 136
+    "pick_points_gd": 148
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 7,
+    "race_rank": 10,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 148
   },
   {
     "race_number": 7,
@@ -3857,7 +3897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -3877,7 +3917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -3897,7 +3937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -3917,7 +3957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -3937,7 +3977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -3957,7 +3997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -3976,8 +4016,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 108
+    "breakdown_points": 8,
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -3996,8 +4036,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 108
+    "breakdown_points": 4,
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4017,7 +4057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4037,7 +4077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4057,7 +4097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4077,7 +4117,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
+  },
+  {
+    "race_number": 7,
+    "race_name": "Barcelona-Catalunya Grand Prix",
+    "race_flag": "🇪🇸",
+    "race_date": "2026-06-14",
+    "season_rank": 10,
+    "race_rank": 11,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "124",
+    "pick_name": "G. Russell",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4097,7 +4157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4117,7 +4177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4136,8 +4196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 24,
-    "pick_points_gd": 108
+    "breakdown_points": 26,
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4156,8 +4216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 108
+    "breakdown_points": 4,
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4177,7 +4237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4197,7 +4257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4217,7 +4277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   },
   {
     "race_number": 7,
@@ -4237,6 +4297,6 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 108
+    "pick_points_gd": 127
   }
 ]

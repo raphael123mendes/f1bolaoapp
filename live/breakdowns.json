@@ -7004,188 +7004,8 @@
     "race_name": "Austrian Grand Prix",
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 17,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 17,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 9,
-    "race_rank": 1,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 62
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11032",
@@ -7196,8 +7016,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 60
+    "breakdown_points": 3,
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7205,7 +7025,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "111",
@@ -7217,7 +7037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 60
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7225,7 +7045,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11149",
@@ -7236,8 +7056,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 60
+    "breakdown_points": 1,
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7245,7 +7065,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11161",
@@ -7256,8 +7076,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 60
+    "breakdown_points": 7,
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7265,7 +7085,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "18",
@@ -7277,7 +7097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 60
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7285,7 +7105,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -7296,8 +7116,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 60
+    "breakdown_points": 17,
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7305,7 +7125,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -7315,9 +7135,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 60
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7325,7 +7145,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "28",
@@ -7337,7 +7157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 60
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7345,7 +7165,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 6,
-    "race_rank": 2,
+    "race_rank": 1,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "28",
@@ -7355,9 +7175,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 60
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 72
   },
   {
     "race_number": 8,
@@ -7365,7 +7185,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "111",
@@ -7377,7 +7197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 59
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7385,7 +7205,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "11149",
@@ -7396,8 +7216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 59
+    "breakdown_points": 1,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7405,7 +7225,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "11161",
@@ -7416,8 +7236,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 59
+    "breakdown_points": 7,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7425,7 +7245,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "114",
@@ -7436,8 +7256,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 59
+    "breakdown_points": 2,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7445,7 +7265,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "13",
@@ -7457,7 +7277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 59
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7465,7 +7285,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "25",
@@ -7476,8 +7296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 59
+    "breakdown_points": 17,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7485,7 +7305,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "25",
@@ -7495,9 +7315,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 59
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7505,7 +7325,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "28",
@@ -7517,7 +7337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 59
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7525,7 +7345,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 1,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "pick_id": "28",
@@ -7535,9 +7355,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 59
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7545,7 +7365,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11051",
@@ -7557,7 +7377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 59
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7565,7 +7385,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "111",
@@ -7577,7 +7397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 59
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7585,7 +7405,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11149",
@@ -7596,8 +7416,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 59
+    "breakdown_points": 1,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7605,7 +7425,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11161",
@@ -7616,8 +7436,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 59
+    "breakdown_points": 7,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7625,7 +7445,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "114",
@@ -7636,8 +7456,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 59
+    "breakdown_points": 2,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7645,7 +7465,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "25",
@@ -7656,8 +7476,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 59
+    "breakdown_points": 17,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7665,7 +7485,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "25",
@@ -7675,9 +7495,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 59
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7685,7 +7505,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -7697,7 +7517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 59
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7705,7 +7525,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 2,
-    "race_rank": 3,
+    "race_rank": 2,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -7715,189 +7535,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 59
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
+    "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "2636",
-    "pick_name": "Racing Bulls",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "2636",
-    "pick_name": "Racing Bulls",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 17,
-    "pick_points_gd": 57
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-27",
-    "season_rank": 7,
-    "race_rank": 5,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 57
+    "pick_points_gd": 71
   },
   {
     "race_number": 8,
@@ -7905,7 +7545,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11051",
@@ -7917,7 +7557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -7925,7 +7565,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11149",
@@ -7936,8 +7576,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 56
+    "breakdown_points": 1,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -7945,7 +7585,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11161",
@@ -7956,8 +7596,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 56
+    "breakdown_points": 7,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -7965,7 +7605,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "12",
@@ -7977,7 +7617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -7985,7 +7625,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "121",
@@ -7997,7 +7637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8005,7 +7645,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "25",
@@ -8016,8 +7656,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 56
+    "breakdown_points": 17,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8025,7 +7665,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "25",
@@ -8035,9 +7675,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 56
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8045,7 +7685,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "28",
@@ -8057,7 +7697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8065,7 +7705,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 3,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "28",
@@ -8075,9 +7715,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 56
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8085,7 +7725,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -8097,7 +7737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8105,7 +7745,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11051",
@@ -8117,7 +7757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8125,7 +7765,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11059",
@@ -8137,7 +7777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8145,7 +7785,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11149",
@@ -8156,8 +7796,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 56
+    "breakdown_points": 1,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8165,7 +7805,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -8176,8 +7816,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 56
+    "breakdown_points": 7,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8185,7 +7825,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -8196,8 +7836,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 56
+    "breakdown_points": 17,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8205,7 +7845,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -8215,9 +7855,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 56
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8225,7 +7865,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -8237,7 +7877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8245,7 +7885,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 5,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -8255,9 +7895,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 56
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8265,7 +7905,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11051",
@@ -8277,7 +7917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8285,7 +7925,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "111",
@@ -8297,7 +7937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8305,7 +7945,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11149",
@@ -8316,8 +7956,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 56
+    "breakdown_points": 1,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8325,7 +7965,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11161",
@@ -8336,8 +7976,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 56
+    "breakdown_points": 7,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8345,7 +7985,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "13",
@@ -8357,7 +7997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8365,7 +8005,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -8376,8 +8016,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 56
+    "breakdown_points": 17,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8385,7 +8025,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -8395,9 +8035,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 56
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8405,7 +8045,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -8417,7 +8057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 56
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8425,7 +8065,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 8,
-    "race_rank": 6,
+    "race_rank": 4,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -8435,9 +8075,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 56
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 69
   },
   {
     "race_number": 8,
@@ -8445,7 +8085,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "110",
@@ -8456,8 +8096,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 55
+    "breakdown_points": 8,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8465,7 +8105,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11051",
@@ -8477,7 +8117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 55
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8485,7 +8125,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11149",
@@ -8496,8 +8136,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 55
+    "breakdown_points": 1,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8505,7 +8145,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "11161",
@@ -8516,8 +8156,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 55
+    "breakdown_points": 7,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8525,7 +8165,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "114",
@@ -8536,8 +8176,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 55
+    "breakdown_points": 2,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8545,7 +8185,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -8556,8 +8196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 55
+    "breakdown_points": 3,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8565,7 +8205,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "2636",
@@ -8575,9 +8215,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 55
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8585,7 +8225,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "28",
@@ -8597,7 +8237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 55
+    "pick_points_gd": 66
   },
   {
     "race_number": 8,
@@ -8605,7 +8245,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 4,
-    "race_rank": 9,
+    "race_rank": 7,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "pick_id": "28",
@@ -8615,9 +8255,369 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 66
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 7,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 9,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 17,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 61
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 55
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 7,
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "2636",
+    "pick_name": "Racing Bulls",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "2636",
+    "pick_name": "Racing Bulls",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 17,
+    "pick_points_gd": 60
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-27",
+    "season_rank": 7,
+    "race_rank": 9,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8625,7 +8625,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "11051",
@@ -8637,7 +8637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 37
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8645,7 +8645,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "114",
@@ -8656,8 +8656,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 37
+    "breakdown_points": 2,
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8665,7 +8665,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "115",
@@ -8676,8 +8676,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 37
+    "breakdown_points": 9,
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8685,7 +8685,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "121",
@@ -8697,7 +8697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 37
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8705,7 +8705,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "124",
@@ -8716,8 +8716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 7,
-    "pick_points_gd": 37
+    "breakdown_points": 10,
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8725,7 +8725,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "25",
@@ -8736,8 +8736,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 37
+    "breakdown_points": 17,
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8745,7 +8745,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "25",
@@ -8755,9 +8755,9 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 37
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8765,7 +8765,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "2640",
@@ -8777,7 +8777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 37
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8785,7 +8785,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 10,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
     "pick_id": "2640",
@@ -8797,7 +8797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 37
+    "pick_points_gd": 60
   },
   {
     "race_number": 8,
@@ -8805,7 +8805,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "11031",
@@ -8825,7 +8825,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "11032",
@@ -8836,7 +8836,7 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 4,
+    "breakdown_points": 3,
     "pick_points_gd": 37
   },
   {
@@ -8845,7 +8845,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "11059",
@@ -8865,7 +8865,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "11161",
@@ -8876,7 +8876,7 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
+    "breakdown_points": 7,
     "pick_points_gd": 37
   },
   {
@@ -8885,7 +8885,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "118",
@@ -8905,7 +8905,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "2640",
@@ -8925,7 +8925,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "2640",
@@ -8945,7 +8945,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "28",
@@ -8965,7 +8965,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-27",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 11,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "28",
@@ -8975,8 +8975,8 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
     "pick_points_gd": 37
   }
 ]

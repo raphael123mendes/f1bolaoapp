@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-19T15:02:48.365572+00:00",
+  "updated_at": "2026-06-28T14:36:00.075829+00:00",
   "total_rows": 55,
   "races_covered": [
     1,
@@ -1920,9 +1920,9 @@
       "race_date": "2026-06-14",
       "team_value": 102.2,
       "budget": 0.8,
-      "ov_points": 1855.0,
+      "ov_points": 1926.0,
       "gd_points": 75.0,
-      "ov_rank": 4669,
+      "ov_rank": 4513,
       "gd_rank": 1736905,
       "picks": [
         "11161",
@@ -1946,8 +1946,8 @@
       "transfers_out_names": [],
       "transfers_in": [],
       "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:47.322704+00:00"
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:59.350447+00:00"
     },
     {
       "user_guid": "0f3b086c-1381-11f1-8199-6735aa542fc4-0-179110003",
@@ -1960,9 +1960,9 @@
       "race_date": "2026-06-14",
       "team_value": 107.7,
       "budget": 0.1,
-      "ov_points": 1803.0,
+      "ov_points": 1864.0,
       "gd_points": 105.0,
-      "ov_rank": 9646,
+      "ov_rank": 10527,
       "gd_rank": 1212175,
       "picks": [
         "13",
@@ -1986,8 +1986,8 @@
       "transfers_out_names": [],
       "transfers_in": [],
       "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:45.804007+00:00"
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:58.291488+00:00"
     },
     {
       "user_guid": "77e7bf9e-11c0-11f1-b2fa-290a04809184-0-178880123",
@@ -2000,9 +2000,9 @@
       "race_date": "2026-06-14",
       "team_value": 107.1,
       "budget": 0.1,
-      "ov_points": 1778.0,
+      "ov_points": 1849.0,
       "gd_points": 164.0,
-      "ov_rank": 13579,
+      "ov_rank": 13023,
       "gd_rank": 298213,
       "picks": [
         "11051",
@@ -2022,12 +2022,20 @@
         "Mercedes",
         "Ferrari"
       ],
-      "transfers_out": [],
-      "transfers_out_names": [],
-      "transfers_in": [],
-      "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:41.240822+00:00"
+      "transfers_out": [
+        "124"
+      ],
+      "transfers_out_names": [
+        "George Russell"
+      ],
+      "transfers_in": [
+        "11161"
+      ],
+      "transfers_in_names": [
+        "Kimi Antonelli"
+      ],
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:54.786257+00:00"
     },
     {
       "user_guid": "d16d9b66-1840-11f1-8fd8-f70cd60e50e6-0-202971566",
@@ -2040,9 +2048,9 @@
       "race_date": "2026-06-14",
       "team_value": 106.2,
       "budget": 0.7,
-      "ov_points": 1673.0,
+      "ov_points": 1742.0,
       "gd_points": 151.0,
-      "ov_rank": 40901,
+      "ov_rank": 39642,
       "gd_rank": 465689,
       "picks": [
         "11149",
@@ -2066,48 +2074,8 @@
       "transfers_out_names": [],
       "transfers_in": [],
       "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:42.087330+00:00"
-    },
-    {
-      "user_guid": "2165dde2-11b9-11f1-94eb-47ffa4421334-0-178889519",
-      "social_id": "178889519",
-      "team_name": "Fiat147",
-      "user_name": "Rafael Dias",
-      "race_number": 7,
-      "race_name": "Barcelona Grand Prix",
-      "race_flag": "🏁",
-      "race_date": "2026-06-14",
-      "team_value": 108.8,
-      "budget": 2.4,
-      "ov_points": 1641.0,
-      "gd_points": 111.0,
-      "ov_rank": 53911,
-      "gd_rank": 1099908,
-      "picks": [
-        "110",
-        "13",
-        "11161",
-        "11059",
-        "11051",
-        "28",
-        "2636"
-      ],
-      "picks_names": [
-        "Lewis Hamilton",
-        "Valtteri Bottas",
-        "Kimi Antonelli",
-        "Franco Colapinto",
-        "Gabriel Bortoleto",
-        "Mercedes",
-        "Racing Bulls"
-      ],
-      "transfers_out": [],
-      "transfers_out_names": [],
-      "transfers_in": [],
-      "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:44.949726+00:00"
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:55.365934+00:00"
     },
     {
       "user_guid": "23694378-196a-11f1-95f5-bf4745e2ae8a-0-190698143",
@@ -2120,9 +2088,9 @@
       "race_date": "2026-06-14",
       "team_value": 110.2,
       "budget": 0.8,
-      "ov_points": 1640.0,
+      "ov_points": 1709.0,
       "gd_points": 122.0,
-      "ov_rank": 54769,
+      "ov_rank": 52432,
       "gd_rank": 919348,
       "picks": [
         "11059",
@@ -2146,8 +2114,60 @@
       "transfers_out_names": [],
       "transfers_in": [],
       "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:42.868537+00:00"
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:55.896305+00:00"
+    },
+    {
+      "user_guid": "2165dde2-11b9-11f1-94eb-47ffa4421334-0-178889519",
+      "social_id": "178889519",
+      "team_name": "Fiat147",
+      "user_name": "Rafael Dias",
+      "race_number": 7,
+      "race_name": "Barcelona Grand Prix",
+      "race_flag": "🏁",
+      "race_date": "2026-06-14",
+      "team_value": 108.8,
+      "budget": 2.4,
+      "ov_points": 1707.0,
+      "gd_points": 111.0,
+      "ov_rank": 53263,
+      "gd_rank": 1099908,
+      "picks": [
+        "110",
+        "13",
+        "11161",
+        "11059",
+        "11051",
+        "28",
+        "2636"
+      ],
+      "picks_names": [
+        "Lewis Hamilton",
+        "Valtteri Bottas",
+        "Kimi Antonelli",
+        "Franco Colapinto",
+        "Gabriel Bortoleto",
+        "Mercedes",
+        "Racing Bulls"
+      ],
+      "transfers_out": [
+        "13",
+        "11059"
+      ],
+      "transfers_out_names": [
+        "Valtteri Bottas",
+        "Franco Colapinto"
+      ],
+      "transfers_in": [
+        "114",
+        "11149"
+      ],
+      "transfers_in_names": [
+        "Liam Lawson",
+        "Arvid Lindblad"
+      ],
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:57.761192+00:00"
     },
     {
       "user_guid": "7f6dff66-11fd-11f1-bed2-d5a4efa941d4-0-178877659",
@@ -2160,9 +2180,9 @@
       "race_date": "2026-06-14",
       "team_value": 105.1,
       "budget": 1.1,
-      "ov_points": 1636.0,
+      "ov_points": 1696.0,
       "gd_points": 105.0,
-      "ov_rank": 56563,
+      "ov_rank": 57881,
       "gd_rank": 1212175,
       "picks": [
         "11032",
@@ -2182,12 +2202,24 @@
         "Mercedes",
         "Racing Bulls"
       ],
-      "transfers_out": [],
-      "transfers_out_names": [],
-      "transfers_in": [],
-      "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:46.702553+00:00"
+      "transfers_out": [
+        "11059",
+        "118"
+      ],
+      "transfers_out_names": [
+        "Franco Colapinto",
+        "Esteban Ocon"
+      ],
+      "transfers_in": [
+        "18",
+        "11149"
+      ],
+      "transfers_in_names": [
+        "Pierre Gasly",
+        "Arvid Lindblad"
+      ],
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:58.822412+00:00"
     },
     {
       "user_guid": "af5b6c4a-11b7-11f1-a6ba-3bae984dbbac-0-34875001",
@@ -2200,9 +2232,9 @@
       "race_date": "2026-06-14",
       "team_value": 110.9,
       "budget": 2.5,
-      "ov_points": 1596.0,
+      "ov_points": 1668.0,
       "gd_points": 112.0,
-      "ov_rank": 76545,
+      "ov_rank": 71391,
       "gd_rank": 1084294,
       "picks": [
         "11051",
@@ -2222,12 +2254,24 @@
         "Ferrari",
         "Mercedes"
       ],
-      "transfers_out": [],
-      "transfers_out_names": [],
-      "transfers_in": [],
-      "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:43.720610+00:00"
+      "transfers_out": [
+        "11051",
+        "11059"
+      ],
+      "transfers_out_names": [
+        "Gabriel Bortoleto",
+        "Franco Colapinto"
+      ],
+      "transfers_in": [
+        "18",
+        "11149"
+      ],
+      "transfers_in_names": [
+        "Pierre Gasly",
+        "Arvid Lindblad"
+      ],
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:56.700830+00:00"
     },
     {
       "user_guid": "6cbc08a2-1844-11f1-a808-cb32621ceb82-0-34753001",
@@ -2240,9 +2284,9 @@
       "race_date": "2026-06-14",
       "team_value": 99.7,
       "budget": 2.5,
-      "ov_points": 1583.0,
+      "ov_points": 1652.0,
       "gd_points": 73.0,
-      "ov_rank": 85038,
+      "ov_rank": 80360,
       "gd_rank": 1759406,
       "picks": [
         "11161",
@@ -2266,8 +2310,8 @@
       "transfers_out_names": [],
       "transfers_in": [],
       "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:48.165321+00:00"
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:59.875594+00:00"
     },
     {
       "user_guid": "7f451c50-11bb-11f1-89ff-6508e30e59f0-0-34802661",
@@ -2280,9 +2324,9 @@
       "race_date": "2026-06-14",
       "team_value": 104.2,
       "budget": 0.6,
-      "ov_points": 1275.0,
+      "ov_points": 1312.0,
       "gd_points": 224.0,
-      "ov_rank": 536887,
+      "ov_rank": 583282,
       "gd_rank": 26026,
       "picks": [
         "11161",
@@ -2302,12 +2346,36 @@
         "Mercedes",
         "McLaren"
       ],
-      "transfers_out": [],
-      "transfers_out_names": [],
-      "transfers_in": [],
-      "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:40.625386+00:00"
+      "transfers_out": [
+        "124",
+        "117",
+        "27",
+        "110",
+        "1982"
+      ],
+      "transfers_out_names": [
+        "George Russell",
+        "Lando Norris",
+        "McLaren",
+        "Lewis Hamilton",
+        "Oscar Piastri"
+      ],
+      "transfers_in": [
+        "2640",
+        "11059",
+        "11032",
+        "11031",
+        "118"
+      ],
+      "transfers_in_names": [
+        "Audi",
+        "Franco Colapinto",
+        "Isack Hadjar",
+        "Oliver Bearman",
+        "Esteban Ocon"
+      ],
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:54.258133+00:00"
     },
     {
       "user_guid": "88597cc6-190b-11f1-aa99-f79ef14ce400-0-45799881",
@@ -2320,9 +2388,9 @@
       "race_date": "2026-06-14",
       "team_value": 101.4,
       "budget": 0.0,
-      "ov_points": 1074.0,
+      "ov_points": 1134.0,
       "gd_points": 112.0,
-      "ov_rank": 1082651,
+      "ov_rank": 1054040,
       "gd_rank": 1084294,
       "picks": [
         "115",
@@ -2346,8 +2414,8 @@
       "transfers_out_names": [],
       "transfers_in": [],
       "transfers_in_names": [],
-      "transfer_window_open": false,
-      "fetched_at": "2026-06-19T15:02:44.334691+00:00"
+      "transfer_window_open": true,
+      "fetched_at": "2026-06-28T14:35:57.232833+00:00"
     }
   ]
 }

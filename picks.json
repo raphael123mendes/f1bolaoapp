@@ -10246,7 +10246,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 1,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -10255,9 +10255,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -10265,7 +10265,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 1,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -10274,9 +10274,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 5,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 8,
@@ -10284,7 +10284,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 1,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -10293,9 +10293,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -17,
     "price_this_race": 3.3,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 8,
@@ -10303,7 +10303,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 1,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -10312,9 +10312,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
@@ -10322,7 +10322,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 1,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -10331,9 +10331,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 7,
     "price_this_race": 8.7,
-    "price_next_race": null
+    "price_next_race": 8.9
   },
   {
     "race_number": 8,
@@ -10341,7 +10341,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 1,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -10350,9 +10350,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 48,
+    "pick_points_gd": 56,
     "price_this_race": 25.4,
-    "price_next_race": null
+    "price_next_race": 25.7
   },
   {
     "race_number": 8,
@@ -10360,7 +10360,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 1,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -10369,9 +10369,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -10379,6 +10379,139 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "cards_used": "",
+    "pick_id": "11051",
+    "pick_name": "Gabriel Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "pick_points_gd": 5,
+    "price_this_race": 5.8,
+    "price_next_race": 6.0
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-28",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "cards_used": "",
+    "pick_id": "11161",
+    "pick_name": "Kimi Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "pick_points_gd": 35,
+    "price_this_race": 25.3,
+    "price_next_race": 25.4
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-28",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "cards_used": "",
+    "pick_id": "11149",
+    "pick_name": "Arvid Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "pick_points_gd": 6,
+    "price_this_race": 5.6,
+    "price_next_race": 6.2
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-28",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "cards_used": "",
+    "pick_id": "114",
+    "pick_name": "Liam Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "pick_points_gd": 7,
+    "price_this_race": 8.7,
+    "price_next_race": 8.9
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-28",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "cards_used": "",
+    "pick_id": "111",
+    "pick_name": "Nico Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "pick_points_gd": 5,
+    "price_this_race": 3.0,
+    "price_next_race": 3.0
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-28",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "cards_used": "",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "pick_points_gd": 85,
+    "price_this_race": 31.4,
+    "price_next_race": 31.7
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-28",
+    "season_rank": 2,
+    "race_rank": 2,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "cards_used": "",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "pick_points_gd": 56,
+    "price_this_race": 25.4,
+    "price_next_race": 25.7
+  },
+  {
+    "race_number": 8,
+    "race_name": "Austrian Grand Prix",
+    "race_flag": "🇦🇹",
+    "race_date": "2026-06-28",
+    "season_rank": 3,
     "race_rank": 10,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
@@ -10388,16 +10521,16 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -17,
     "price_this_race": 3.3,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 8,
     "race_name": "Austrian Grand Prix",
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
-    "season_rank": 2,
+    "season_rank": 3,
     "race_rank": 10,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
@@ -10407,16 +10540,16 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 5,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.0
   },
   {
     "race_number": 8,
     "race_name": "Austrian Grand Prix",
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
-    "season_rank": 2,
+    "season_rank": 3,
     "race_rank": 10,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
@@ -10426,16 +10559,16 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
     "race_name": "Austrian Grand Prix",
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
-    "season_rank": 2,
+    "season_rank": 3,
     "race_rank": 10,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
@@ -10445,16 +10578,16 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -17,
     "price_this_race": 6.2,
-    "price_next_race": null
+    "price_next_race": 5.6
   },
   {
     "race_number": 8,
     "race_name": "Austrian Grand Prix",
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
-    "season_rank": 2,
+    "season_rank": 3,
     "race_rank": 10,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
@@ -10464,16 +10597,16 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
     "race_name": "Austrian Grand Prix",
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
-    "season_rank": 2,
+    "season_rank": 3,
     "race_rank": 10,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
@@ -10483,16 +10616,16 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 44,
+    "pick_points_gd": 49,
     "price_this_race": 29.8,
-    "price_next_race": null
+    "price_next_race": 30.1
   },
   {
     "race_number": 8,
     "race_name": "Austrian Grand Prix",
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
-    "season_rank": 2,
+    "season_rank": 3,
     "race_rank": 10,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
@@ -10502,142 +10635,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-28",
-    "season_rank": 3,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "cards_used": "",
-    "pick_id": "11051",
-    "pick_name": "Gabriel Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "pick_points_gd": 1,
-    "price_this_race": 5.8,
-    "price_next_race": null
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-28",
-    "season_rank": 3,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "cards_used": "",
-    "pick_id": "11161",
-    "pick_name": "Kimi Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "pick_points_gd": 33,
-    "price_this_race": 25.3,
-    "price_next_race": null
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-28",
-    "season_rank": 3,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "cards_used": "",
-    "pick_id": "11149",
-    "pick_name": "Arvid Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "pick_points_gd": 2,
-    "price_this_race": 5.6,
-    "price_next_race": null
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-28",
-    "season_rank": 3,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "cards_used": "",
-    "pick_id": "114",
-    "pick_name": "Liam Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "pick_points_gd": 4,
-    "price_this_race": 8.7,
-    "price_next_race": null
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-28",
-    "season_rank": 3,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "cards_used": "",
-    "pick_id": "111",
-    "pick_name": "Nico Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "pick_points_gd": 2,
-    "price_this_race": 3.0,
-    "price_next_race": null
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-28",
-    "season_rank": 3,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "cards_used": "",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "pick_points_gd": 83,
-    "price_this_race": 31.4,
-    "price_next_race": null
-  },
-  {
-    "race_number": 8,
-    "race_name": "Austrian Grand Prix",
-    "race_flag": "🇦🇹",
-    "race_date": "2026-06-28",
-    "season_rank": 3,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "cards_used": "",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "pick_points_gd": 48,
-    "price_this_race": 25.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -10654,9 +10654,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
@@ -10673,9 +10673,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 3,
+    "pick_points_gd": 7,
     "price_this_race": 6.2,
-    "price_next_race": null
+    "price_next_race": 5.6
   },
   {
     "race_number": 8,
@@ -10692,9 +10692,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 5,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.0
   },
   {
     "race_number": 8,
@@ -10711,9 +10711,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -10730,9 +10730,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -17,
     "price_this_race": 6.2,
-    "price_next_race": null
+    "price_next_race": 5.6
   },
   {
     "race_number": 8,
@@ -10749,9 +10749,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -10768,9 +10768,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 48,
+    "pick_points_gd": 56,
     "price_this_race": 25.4,
-    "price_next_race": null
+    "price_next_race": 25.7
   },
   {
     "race_number": 8,
@@ -10787,9 +10787,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 10,
     "price_this_race": 10.0,
-    "price_next_race": null
+    "price_next_race": 9.8
   },
   {
     "race_number": 8,
@@ -10806,9 +10806,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -10825,9 +10825,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": 1,
     "price_this_race": 7.6,
-    "price_next_race": null
+    "price_next_race": 7.0
   },
   {
     "race_number": 8,
@@ -10844,9 +10844,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 5,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.0
   },
   {
     "race_number": 8,
@@ -10863,9 +10863,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
@@ -10882,9 +10882,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 48,
+    "pick_points_gd": 56,
     "price_this_race": 25.4,
-    "price_next_race": null
+    "price_next_race": 25.7
   },
   {
     "race_number": 8,
@@ -10901,9 +10901,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -10911,7 +10911,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 6,
-    "race_rank": 8,
+    "race_rank": 4,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -10920,9 +10920,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 27,
     "price_this_race": 24.2,
-    "price_next_race": null
+    "price_next_race": 24.5
   },
   {
     "race_number": 8,
@@ -10930,7 +10930,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 6,
-    "race_rank": 8,
+    "race_rank": 4,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -10939,9 +10939,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 5,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.0
   },
   {
     "race_number": 8,
@@ -10949,7 +10949,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 6,
-    "race_rank": 8,
+    "race_rank": 4,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -10958,9 +10958,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -10968,7 +10968,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 6,
-    "race_rank": 8,
+    "race_rank": 4,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -10977,9 +10977,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
@@ -10987,7 +10987,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 6,
-    "race_rank": 8,
+    "race_rank": 4,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -10996,9 +10996,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 7,
     "price_this_race": 8.7,
-    "price_next_race": null
+    "price_next_race": 8.9
   },
   {
     "race_number": 8,
@@ -11006,7 +11006,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 6,
-    "race_rank": 8,
+    "race_rank": 4,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -11015,9 +11015,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -11025,7 +11025,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 6,
-    "race_rank": 8,
+    "race_rank": 4,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -11034,9 +11034,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 21,
+    "pick_points_gd": 38,
     "price_this_race": 10.5,
-    "price_next_race": null
+    "price_next_race": 11.1
   },
   {
     "race_number": 8,
@@ -11044,7 +11044,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 7,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -11053,9 +11053,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 13,
+    "pick_points_gd": 15,
     "price_this_race": 12.1,
-    "price_next_race": null
+    "price_next_race": 12.7
   },
   {
     "race_number": 8,
@@ -11063,7 +11063,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 7,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -11072,9 +11072,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -11082,7 +11082,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 7,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -11091,9 +11091,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -2,
+    "pick_points_gd": 3,
     "price_this_race": 12.2,
-    "price_next_race": null
+    "price_next_race": 12.8
   },
   {
     "race_number": 8,
@@ -11101,7 +11101,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 7,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -11110,9 +11110,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
@@ -11120,7 +11120,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 7,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -11129,9 +11129,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 7,
     "price_this_race": 8.7,
-    "price_next_race": null
+    "price_next_race": 8.9
   },
   {
     "race_number": 8,
@@ -11139,7 +11139,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 7,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -11148,9 +11148,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -11158,7 +11158,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 7,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -11167,9 +11167,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 21,
+    "pick_points_gd": 38,
     "price_this_race": 10.5,
-    "price_next_race": null
+    "price_next_race": 11.1
   },
   {
     "race_number": 8,
@@ -11186,9 +11186,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -2,
+    "pick_points_gd": 3,
     "price_this_race": 12.2,
-    "price_next_race": null
+    "price_next_race": 12.8
   },
   {
     "race_number": 8,
@@ -11205,9 +11205,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
@@ -11224,9 +11224,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -11243,9 +11243,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 5,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 8,
@@ -11262,9 +11262,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 13,
+    "pick_points_gd": 15,
     "price_this_race": 12.1,
-    "price_next_race": null
+    "price_next_race": 12.7
   },
   {
     "race_number": 8,
@@ -11281,9 +11281,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 48,
+    "pick_points_gd": 56,
     "price_this_race": 25.4,
-    "price_next_race": null
+    "price_next_race": 25.7
   },
   {
     "race_number": 8,
@@ -11300,9 +11300,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -11310,7 +11310,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 9,
-    "race_rank": 7,
+    "race_rank": 8,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -11319,9 +11319,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -11329,7 +11329,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 9,
-    "race_rank": 7,
+    "race_rank": 8,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -11338,9 +11338,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 5,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 8,
@@ -11348,7 +11348,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 9,
-    "race_rank": 7,
+    "race_rank": 8,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -11357,9 +11357,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 5,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.0
   },
   {
     "race_number": 8,
@@ -11367,7 +11367,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 9,
-    "race_rank": 7,
+    "race_rank": 8,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -11376,9 +11376,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 6,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 6.2
   },
   {
     "race_number": 8,
@@ -11386,7 +11386,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 9,
-    "race_rank": 7,
+    "race_rank": 8,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -11395,9 +11395,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -17,
     "price_this_race": 3.3,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 8,
@@ -11405,7 +11405,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 9,
-    "race_rank": 7,
+    "race_rank": 8,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -11414,9 +11414,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -11424,7 +11424,7 @@
     "race_flag": "🇦🇹",
     "race_date": "2026-06-28",
     "season_rank": 9,
-    "race_rank": 7,
+    "race_rank": 8,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -11433,9 +11433,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 48,
+    "pick_points_gd": 56,
     "price_this_race": 25.4,
-    "price_next_race": null
+    "price_next_race": 25.7
   },
   {
     "race_number": 8,
@@ -11452,9 +11452,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 35,
     "price_this_race": 25.3,
-    "price_next_race": null
+    "price_next_race": 25.4
   },
   {
     "race_number": 8,
@@ -11471,9 +11471,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 10,
     "price_this_race": 10.0,
-    "price_next_race": null
+    "price_next_race": 9.8
   },
   {
     "race_number": 8,
@@ -11490,9 +11490,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": 7,
     "price_this_race": 10.3,
-    "price_next_race": null
+    "price_next_race": 10.1
   },
   {
     "race_number": 8,
@@ -11509,9 +11509,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": 1,
     "price_this_race": 7.6,
-    "price_next_race": null
+    "price_next_race": 7.0
   },
   {
     "race_number": 8,
@@ -11528,9 +11528,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 13,
+    "pick_points_gd": 15,
     "price_this_race": 12.1,
-    "price_next_race": null
+    "price_next_race": 12.7
   },
   {
     "race_number": 8,
@@ -11547,9 +11547,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 83,
+    "pick_points_gd": 85,
     "price_this_race": 31.4,
-    "price_next_race": null
+    "price_next_race": 31.7
   },
   {
     "race_number": 8,
@@ -11566,9 +11566,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 8,
+    "pick_points_gd": 15,
     "price_this_race": 4.4,
-    "price_next_race": null
+    "price_next_race": 5.0
   },
   {
     "race_number": 8,
@@ -11585,9 +11585,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 7,
+    "pick_points_gd": 9,
     "price_this_race": 23.5,
-    "price_next_race": null
+    "price_next_race": 23.2
   },
   {
     "race_number": 8,
@@ -11606,7 +11606,7 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 27.8
   },
   {
     "race_number": 8,
@@ -11623,9 +11623,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -17,
     "price_this_race": 6.2,
-    "price_next_race": null
+    "price_next_race": 5.6
   },
   {
     "race_number": 8,
@@ -11642,9 +11642,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 7,
     "price_this_race": 8.7,
-    "price_next_race": null
+    "price_next_race": 8.9
   },
   {
     "race_number": 8,
@@ -11661,9 +11661,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 5,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.0
   },
   {
     "race_number": 8,
@@ -11680,9 +11680,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 48,
+    "pick_points_gd": 56,
     "price_this_race": 25.4,
-    "price_next_race": null
+    "price_next_race": 25.7
   },
   {
     "race_number": 8,
@@ -11699,8 +11699,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 8,
+    "pick_points_gd": 15,
     "price_this_race": 4.4,
-    "price_next_race": null
+    "price_next_race": 5.0
   }
 ]

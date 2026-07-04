@@ -119,6 +119,12 @@ main{flex:1;padding-bottom:80px}
   font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;
   text-transform:uppercase;padding:6px 10px;cursor:pointer;outline:none;appearance:none}
 .landscape-picks{flex:1;overflow-y:auto;padding:8px}
+.landscape-nav{border-top:1px solid var(--on-08);padding:6px;display:flex;flex-direction:column;gap:1px;flex-shrink:0}
+.landscape-nav-item{display:flex;align-items:center;gap:8px;padding:6px 8px;text-decoration:none;
+  color:var(--on-40);font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.15s}
+.landscape-nav-item:hover{color:var(--on)}
+.landscape-nav-item.active{color:var(--red)}
+.landscape-nav-item .material-symbols-outlined{font-size:1rem}
 .ls-pick{display:flex;align-items:center;gap:6px;padding:6px 4px;border-bottom:1px solid var(--on-08)}
 .ls-thumb{width:28px;height:28px;object-fit:cover;object-position:top;background:var(--surface-highest);flex-shrink:0}
 .ls-thumb.logo{object-fit:contain;padding:2px}
@@ -228,6 +234,12 @@ main{flex:1;padding-bottom:80px}
       <select class="landscape-select" id="ls-player-select" onchange="syncPlayer(this.value)"></select>
     </div>
     <div class="landscape-picks" id="ls-picks"></div>
+    <nav class="landscape-nav">
+      <a class="landscape-nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span>Standings</a>
+      <a class="landscape-nav-item" href="results.html"><span class="material-symbols-outlined">flag</span>Results</a>
+      <a class="landscape-nav-item" href="market.html"><span class="material-symbols-outlined">monetization_on</span>Market</a>
+      <a class="landscape-nav-item active" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span>Race</a>
+    </nav>
   </div>
   <div class="landscape-right" id="landscape-right">
     <!-- built by JS -->

@@ -1,6 +1,6 @@
 {
   "gameday_id": "9",
-  "session_type": "race",
+  "session_type": "qualifying",
   "ranking_hash": "fb03bb4b417ccd8b4f560854a71cd907",
   "scores": {
     "Robson Jardim": 72,
@@ -16,5 +16,5 @@
     "Vinicius Agostini": 2
   },
   "post_race_sent": false,
-  "saved_at": "2026-07-04T12:51:41.162432+00:00"
+  "saved_at": "2026-07-04T14:04:08.135480+00:00"
 }

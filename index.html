@@ -242,10 +242,11 @@
     font-size: 0.46rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase;
     color: var(--on-surface-30); padding: 0 3px 8px; text-align: center; white-space: nowrap;
   }
-  .cards-matrix th.cm-name-header { text-align: left; padding-right: 12px; min-width: 60px; }
-  .cm-player-name {
-    font-size: 0.58rem; font-weight: 700; text-transform: uppercase;
-    color: var(--on-surface); white-space: nowrap; padding: 4px 12px 4px 0; text-align: left;
+  .cards-matrix th.cm-name-header { text-align: left; padding-right: 12px; min-width: 100px; }
+  .cm-card-name {
+    font-size: 0.56rem; font-weight: 700; text-transform: uppercase;
+    color: var(--on-surface); white-space: nowrap; padding: 4px 14px 4px 0; text-align: left;
+    letter-spacing: 0.06em;
   }
   .cm-cell { text-align: center; width: 24px; padding: 3px; }
   .cm-used {
@@ -585,29 +586,37 @@ window.toggleRow = function(row) {
 
 // ── CARDS MATRIX ──────────────────────────────────────────────────────────
 (function buildCardsMatrix() {
-  const allRaces = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
   const sortedPlayers = [...latest].sort((a,b) => a.season_rank - b.season_rank);
 
-  const cardMap = {};
+  function normalizeCard(name) {
+    return name.replace(/\s*\(GD\d*x?\)\s*/gi, '').trim();
+  }
+
+  // Build map: normalized card name → Set of user_names who used it
+  const cardPlayerMap = {};
   RESULTS.forEach(r => {
-    if (!cardMap[r.user_name]) cardMap[r.user_name] = {};
     if (r.cards_used && r.cards_used.trim()) {
-      cardMap[r.user_name][r.race_number] = r.cards_used.trim();
+      const card = normalizeCard(r.cards_used);
+      if (!cardPlayerMap[card]) cardPlayerMap[card] = new Set();
+      cardPlayerMap[card].add(r.user_name);
     }
   });
 
+  const allCards = Object.keys(cardPlayerMap).sort();
+  if (allCards.length === 0) return;
+
   const table = document.getElementById('cards-matrix');
   let html = '<thead><tr><th class="cm-name-header"></th>';
-  allRaces.forEach(r => { html += `<th>R${String(r).padStart(2,'0')}</th>`; });
+  sortedPlayers.forEach(p => {
+    html += `<th>${p.user_name.split(' ')[0]}</th>`;
+  });
   html += '</tr></thead><tbody>';
 
-  sortedPlayers.forEach(p => {
-    const firstName = p.user_name.split(' ')[0];
-    html += `<tr><td class="cm-player-name">${firstName}</td>`;
-    allRaces.forEach(r => {
-      const card = cardMap[p.user_name]?.[r];
-      if (card) {
-        html += `<td class="cm-cell"><span class="cm-used" title="${card}">×</span></td>`;
+  allCards.forEach(card => {
+    html += `<tr><td class="cm-card-name">${card}</td>`;
+    sortedPlayers.forEach(p => {
+      if (cardPlayerMap[card].has(p.user_name)) {
+        html += `<td class="cm-cell"><span class="cm-used">×</span></td>`;
       } else {
         html += `<td class="cm-cell"><span class="cm-empty">·</span></td>`;
       }

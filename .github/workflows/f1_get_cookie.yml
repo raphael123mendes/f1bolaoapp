@@ -1,7 +1,7 @@
 name: F1 Refresh Cookie
 
 # Run this manually when the standings or results workflow fails due to
-# an expired cookie. Takes ~1-2 min. Once done, the other workflows
+# an expired cookie. Takes ~2-3 min. Once done, the other workflows
 # will automatically use the fresh cookie on their next run.
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     permissions:
       contents: write
 
@@ -22,8 +22,10 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install Playwright
-        run: pip install playwright && playwright install --with-deps chromium
+      - name: Install dependencies
+        run: |
+          pip install playwright
+          playwright install --with-deps chromium
 
       - name: Login and extract cookie
         env:
@@ -31,8 +33,28 @@ jobs:
           F1_PASSWORD: ${{ secrets.F1_PASSWORD }}
         run: python bot/f1_login.py --out /tmp/cookie.txt
 
+      - name: Upload debug screenshots (always, even on failure)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: login-debug-screenshots
+          path: bot/debug_*.png
+          if-no-files-found: ignore
+          retention-days: 3
+
+      - name: Verify cookie has required fields
+        run: |
+          COOKIE=$(cat /tmp/cookie.txt)
+          echo "Cookie length: ${#COOKIE}"
+          for key in F1_FANTASY_007 reese84 LEAGUE_BUSTER TEAM_BUSTER; do
+            if echo "$COOKIE" | grep -q "$key"; then
+              echo "✅  $key found"
+            else
+              echo "⚠️  $key MISSING"
+            fi
+          done
+
       - name: Save cookie to GitHub Secret
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}  # ← change this line
+          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: gh secret set F1_COOKIE < /tmp/cookie.txt
-

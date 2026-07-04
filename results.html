@@ -156,9 +156,8 @@
   .p-prize-val.no-prize { color: var(--on-30); font-size: 0.6rem; }
   .p-pts-race {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem; font-weight: 700; color: var(--red); line-height: 1;
+    font-size: 1rem; font-weight: 700; color: var(--on-surface); line-height: 1;
   }
-  .player-row:not(.rank-1) .p-pts-race { color: var(--on-surface); }
   .p-pts-season {
     font-size: 0.52rem; font-weight: 700; color: var(--on-30);
     text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px;
@@ -239,23 +238,23 @@
     height: 36px; width: 36px; object-fit: contain; opacity: 0.3;
   }
 
+  .mvp-name-row {
+    display: flex; align-items: baseline; justify-content: space-between;
+    position: relative; z-index: 1; margin-bottom: 4px;
+  }
   .mvp-name {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.05rem; font-weight: 700; line-height: 1.1;
     text-transform: uppercase; letter-spacing: -0.02em;
-    position: relative; z-index: 1;
   }
-  .mvp-sub {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-top: 8px; position: relative; z-index: 1;
-  }
-  .mvp-team-label { font-size: 0.52rem; font-weight: 600; color: var(--on-30); text-transform: uppercase; letter-spacing: 0.1em; }
+  .mvp-team-label { font-size: 0.52rem; font-weight: 600; color: var(--on-surface); text-transform: uppercase;
+  letter-spacing: 0.1em; position: relative; z-index: 1; }
   .mvp-value {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem; font-weight: 700;
+    font-size: 0.82rem; font-weight: 700; flex-shrink: 0; margin-left: 6px;
   }
   .driver-card .mvp-value,
-  .constructor-card .mvp-value { color: var(--red); }
+  .constructor-card .mvp-value { color: var(--on-surface); }
   .riser-card .mvp-value { color: var(--green); }
   .faller-card .mvp-value { color: var(--red-dim); }
 
@@ -982,11 +981,11 @@ function renderMVPs(raceNum) {
     el.className = `mvp-card ${c.cls}`;
     el.innerHTML = `
       <div class="mvp-card-label">${c.label}</div>
-      <div class="mvp-name">${c.name}</div>
-      <div class="mvp-sub">
-        <span class="mvp-team-label">${c.sub}</span>
+      <div class="mvp-name-row">
+        <div class="mvp-name">${c.name}</div>
         <span class="mvp-value">${c.value}</span>
       </div>
+      ${c.sub ? `<div class="mvp-team-label">${c.sub}</div>` : ''}
       <img class="${c.imgCls}" src="${c.img}" alt="" onerror="this.style.display='none'"/>`;
     grid.appendChild(el);
   });

@@ -234,16 +234,30 @@
   .legend-dot { width: 8px; height: 8px; flex-shrink: 0; }
   .legend-name { font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--on-surface-50); }
 
-  /* ── FOOTER STATS ── */
-  .footer-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 20px 16px 0; }
-  .footer-card { background: var(--surface-high); padding: 16px; }
-  .footer-card.blue-accent { border-left: 2px solid var(--blue); }
-  .footer-card.red-accent { border-left: 2px solid var(--red); }
-  .footer-card-label { font-size: 0.5rem; font-weight: 900; letter-spacing: 0.16em; text-transform: uppercase; color: var(--on-surface-30); margin-bottom: 4px; }
-  .footer-card-value {
-    font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 700;
+  /* ── CARDS MATRIX ── */
+  .cards-matrix-section { margin: 32px 16px 0; }
+  .cards-matrix-wrap { background: var(--surface-low); padding: 16px 12px; overflow-x: auto; }
+  .cards-matrix { border-collapse: collapse; }
+  .cards-matrix th {
+    font-size: 0.46rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--on-surface-30); padding: 0 3px 8px; text-align: center; white-space: nowrap;
   }
-  .footer-card-unit { font-size: 0.58rem; font-weight: 400; color: var(--on-surface-30); }
+  .cards-matrix th.cm-name-header { text-align: left; padding-right: 12px; min-width: 60px; }
+  .cm-player-name {
+    font-size: 0.58rem; font-weight: 700; text-transform: uppercase;
+    color: var(--on-surface); white-space: nowrap; padding: 4px 12px 4px 0; text-align: left;
+  }
+  .cm-cell { text-align: center; width: 24px; padding: 3px; }
+  .cm-used {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px;
+    background: rgba(225,6,0,0.1); border: 1px solid rgba(225,6,0,0.3);
+    color: var(--red); font-size: 0.7rem; font-weight: 900; line-height: 1;
+  }
+  .cm-empty {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 20px; height: 20px; color: var(--on-surface-15); font-size: 0.55rem;
+  }
 
   /* ── BOTTOM NAV ── */
   .bottom-nav {
@@ -333,15 +347,12 @@
     </div>
   </div>
 
-  <!-- FOOTER STATS -->
-  <div class="footer-stats">
-    <div class="footer-card blue-accent">
-      <div class="footer-card-label">League Average</div>
-      <div class="footer-card-value"><span id="league-avg">—</span> <span class="footer-card-unit">PTS</span></div>
-    </div>
-    <div class="footer-card red-accent">
-      <div class="footer-card-label">Highest Budget</div>
-      <div class="footer-card-value"><span id="highest-budget">—</span> <span class="footer-card-unit">M</span></div>
+  <!-- CARDS MATRIX -->
+  <div class="cards-matrix-section">
+    <div class="chart-title">Cards Used</div>
+    <div class="chart-sub">Per-race card usage tracker</div>
+    <div class="cards-matrix-wrap">
+      <table class="cards-matrix" id="cards-matrix"></table>
     </div>
   </div>
 
@@ -394,8 +405,8 @@ RESULTS.forEach(r => {
 Object.values(trophyData).forEach(arr => arr.sort((a,b) => a.race - b.race));
 
 // Stats
-const leagueAvg = (latest.reduce((s,p) => s + p.season_points, 0) / latest.length).toFixed(1);
-const highestBudget = Math.max(...latest.map(p => p.new_budget)).toFixed(1);
+const maxBudgetVal = Math.max(...latest.map(p => p.new_budget));
+const minBudgetVal = Math.min(...latest.map(p => p.new_budget));
 
 // ── RENDER SPOTLIGHT ──────────────────────────────────────────────────────
 const p1 = latest[0];
@@ -405,8 +416,6 @@ document.getElementById('spotlight-name').textContent = p1.user_name;
 document.getElementById('spotlight-team').textContent = p1.team_name;
 document.getElementById('spotlight-pts').textContent = p1.season_points.toFixed(0);
 document.getElementById('player-count').textContent = `${latest.length} Players Tracked`;
-document.getElementById('league-avg').textContent = leagueAvg;
-document.getElementById('highest-budget').textContent = highestBudget;
 
 // ── RENDER STANDINGS ──────────────────────────────────────────────────────
 function rankClass(rank) {
@@ -430,6 +439,7 @@ latest.forEach((p, idx) => {
   const prizeClass = totalPrize > 0 ? 'prize-val' : '';
   const rankNum = String(p.season_rank).padStart(2, '0');
   const hasCard = p.cards_used && p.cards_used.trim() !== '';
+  const budgetColor = p.new_budget === maxBudgetVal ? '#4ade80' : p.new_budget === minBudgetVal ? '#ffb4a8' : null;
 
   const row = document.createElement('div');
   row.className = `player-row ${rankClass(p.season_rank)}`;
@@ -447,7 +457,7 @@ latest.forEach((p, idx) => {
       <div class="player-right">
         <div class="stat-block budget">
           <div class="stat-label">Budget</div>
-          <div class="stat-value dim" style="font-size:.9rem">$${p.new_budget.toFixed(1)}M</div>
+          <div class="stat-value${budgetColor ? '' : ' dim'}" style="font-size:.9rem${budgetColor ? `;color:${budgetColor}` : ''}">$${p.new_budget.toFixed(1)}M</div>
         </div>
         <div class="stat-block">
           <div class="stat-label">Points</div>
@@ -571,6 +581,42 @@ window.toggleRow = function(row) {
     el.innerHTML = `<div class="legend-dot" style="background:${item.color};opacity:${item.isTop3 ? 1 : 0.4}"></div><span class="legend-name" style="opacity:${item.isTop3 ? 0.8 : 0.4}">${item.name}</span>`;
     legendEl.appendChild(el);
   });
+})();
+
+// ── CARDS MATRIX ──────────────────────────────────────────────────────────
+(function buildCardsMatrix() {
+  const allRaces = [...new Set(RESULTS.map(r => r.race_number))].sort((a,b) => a-b);
+  const sortedPlayers = [...latest].sort((a,b) => a.season_rank - b.season_rank);
+
+  const cardMap = {};
+  RESULTS.forEach(r => {
+    if (!cardMap[r.user_name]) cardMap[r.user_name] = {};
+    if (r.cards_used && r.cards_used.trim()) {
+      cardMap[r.user_name][r.race_number] = r.cards_used.trim();
+    }
+  });
+
+  const table = document.getElementById('cards-matrix');
+  let html = '<thead><tr><th class="cm-name-header"></th>';
+  allRaces.forEach(r => { html += `<th>R${String(r).padStart(2,'0')}</th>`; });
+  html += '</tr></thead><tbody>';
+
+  sortedPlayers.forEach(p => {
+    const firstName = p.user_name.split(' ')[0];
+    html += `<tr><td class="cm-player-name">${firstName}</td>`;
+    allRaces.forEach(r => {
+      const card = cardMap[p.user_name]?.[r];
+      if (card) {
+        html += `<td class="cm-cell"><span class="cm-used" title="${card}">×</span></td>`;
+      } else {
+        html += `<td class="cm-cell"><span class="cm-empty">·</span></td>`;
+      }
+    });
+    html += '</tr>';
+  });
+
+  html += '</tbody>';
+  table.innerHTML = html;
 })();
 
   } catch(e) {

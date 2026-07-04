@@ -302,9 +302,13 @@
     background: var(--surface-high); padding: 3px 8px;
     font-size: 0.6rem; font-weight: 700; white-space: nowrap;
   }
-  .owner-chip .owner-pts { font-family: 'Space Grotesk', sans-serif; color: var(--red); }
-  .owner-chip .owner-pts.neg { color: var(--red-dim); }
   .owner-chip sup { font-size: 0.65em; color: var(--red); margin-left: 1px; }
+  .pick-base-pts {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.82rem; font-weight: 700; flex-shrink: 0;
+    color: var(--on-surface); min-width: 36px;
+  }
+  .pick-base-pts.neg { color: var(--red-dim); }
   .insight-empty {
     padding: 20px 12px; text-align: center;
     color: var(--on-30); font-size: 0.66rem;
@@ -342,7 +346,7 @@
   .compare-pick-row:last-child { border-bottom: none; }
   .compare-pick-row .insight-pick { width: 40px; font-size: 0.7rem; }
   .compare-pick-row .compare-pick-pts {
-    margin-left: auto; font-family: 'Space Grotesk', sans-serif; color: var(--red);
+    margin-left: auto; font-family: 'Space Grotesk', sans-serif; color: var(--on-surface);
   }
   .compare-pick-row.shared { opacity: 0.4; }
 
@@ -831,9 +835,8 @@ function ownerChipsHtml(owners) {
     .slice()
     .sort((a, b) => b.points - a.points)
     .map(o => {
-      const cls = o.points < 0 ? 'neg' : '';
       const tag = o.is_megacap ? '<sup>MC</sup>' : o.is_captain ? '<sup>C</sup>' : '';
-      return `<span class="owner-chip">${shortName(o.user_name)}${tag} <span class="owner-pts ${cls}">${fmtPts(o.points)}</span></span>`;
+      return `<span class="owner-chip">${shortName(o.user_name)}${tag}</span>`;
     })
     .join('');
 }
@@ -868,12 +871,17 @@ function renderPickPointsTab(el, raceNum, diffOnly) {
     return maxB - maxA;
   });
 
-  el.innerHTML = groups.map(g => `
+  el.innerHTML = groups.map(g => {
+    const baseScore = Math.min(...g.owners.map(o => o.points));
+    const ptsCls = baseScore < 0 ? 'neg' : '';
+    return `
     <div class="insight-row">
       <div class="insight-pick">${g.tla}</div>
       <div class="insight-pick-name">${g.pick_name}</div>
+      <div class="pick-base-pts ${ptsCls}">${fmtPts(baseScore)}</div>
       <div class="insight-owners">${ownerChipsHtml(g.owners)}</div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function renderCompareTab(el, raceNum) {

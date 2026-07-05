@@ -124,6 +124,27 @@ CARD_FIELDS = {
     "isfinalfixtaken":   "FinFix",
 }
 
+RACE_PHASE_CATEGORIES = {
+    'race position', 'race position gained', 'race position lost',
+    'race fastest lap', 'race not classified', 'race overtake bonus',
+    'driver of day', 'fastest pitstop', '2nd fastest pitstop',
+}
+
+def _is_race_cat(cat: str) -> bool:
+    return cat.strip().lower() in RACE_PHASE_CATEGORIES
+
+def _cap_mult(pid, cap_id):
+    return 2 if (cap_id and pid == cap_id) else 1
+
+def _mega_mult(pid, megacap_id):
+    return 3 if (megacap_id and pid == megacap_id) else 1
+
+def _finfx_mult(picks, finalfix_in_pid, cap_id, megacap_id):
+    in_pick = next((p for p in picks if str(p["id"]) == finalfix_in_pid), None)
+    if in_pick is None:
+        return 1
+    return _cap_mult(in_pick["id"], cap_id) * _mega_mult(in_pick["id"], megacap_id)
+
 
 # ── Helpers ───────────────────────────────────────────────────────
 
@@ -430,11 +451,27 @@ def get_team_details(gameday_id, user_guid, team_no=1):
             if gd_used is not None and int(gd_used) == int(gameday_id):
                 cards[label] = gd_used
 
+        finalfix_out_pid = str(
+            team_data.get("finalfixreplacedplayerid") or
+            team_data.get("finalfixoutpid") or
+            team_data.get("replacedplayerid") or
+            ""
+        )
+        finalfix_in_pid = str(
+            team_data.get("finalfixplayerid") or
+            team_data.get("finalfixinpid") or
+            next((str(p["id"]) for p in picks
+                  if p.get("isfinalfix") or p.get("is_final_fix")), "") or
+            ""
+        )
+
         team_info = {
             "usersubs":                        team_data.get("usersubs", 0),
             "subsallowed":                     team_data.get("subsallowed", 2),
             "extrasubscost":                   team_data.get("extrasubscost", 10),
             "inactive_driver_penality_points": team_data.get("inactive_driver_penality_points", 0),
+            "finalfix_out_pid":               finalfix_out_pid,
+            "finalfix_in_pid":                finalfix_in_pid,
         }
         return gdpoints, picks, cards, team_info
 
@@ -514,68 +551,114 @@ def get_standings(gameday_id, score=0):
 
         no_neg_gd  = cards.get("NoNeg")
         has_no_neg = (no_neg_gd is not None and int(no_neg_gd) == int(gameday_id))
+        finfx_gd      = cards.get("FinFix")
+        has_final_fix = (finfx_gd is not None and int(finfx_gd) == int(gameday_id))
         cap_id     = next((p["id"] for p in picks if p.get("iscaptain")),   None)
         megacap_id = next((p["id"] for p in picks if p.get("ismgcaptain")), None)
 
+        finalfix_out_pid = str(team_data.get("finalfix_out_pid") or "")
+        finalfix_in_pid  = str(team_data.get("finalfix_in_pid")  or "")
+
         print(f"    cap={cap_id} mega={megacap_id} no_neg={has_no_neg} "
+              f"final_fix={has_final_fix} "
+              f"ff_out={finalfix_out_pid or '?'} ff_in={finalfix_in_pid or '?'} "
               f"cards={list(cards.keys())} gdpoints={gdpoints}")
 
         if not picks:
             print(f"    ERROR: no cookie or cookie expired for {user_name} — skipping.")
             continue
 
-        # pick_scores captures the per-pick effective subtotal so build_picks_rows()
-        # can write a correct pick_points_gd per row instead of the team total.
+        def score_components(components, mult, race_only=False, pre_race_only=False):
+            sub = 0.0
+            for cat, val in components:
+                if race_only     and not _is_race_cat(cat): continue
+                if pre_race_only and     _is_race_cat(cat): continue
+                factor = 0 if (has_no_neg and val < 0) else 1
+                sub += val * mult * factor
+            return sub
+
         pick_scores = {str(p["id"]): 0.0 for p in picks}
+        smart_finfx = has_final_fix and bool(finalfix_out_pid)
 
         if use_gdpoints:
-            # gdpoints is a finalised team total from the API — no per-pick breakdown.
-            # We still fetch components to approximate per-pick scores so pick cards
-            # show meaningful individual values rather than the team total on every row.
             total = float(gdpoints) if gdpoints is not None else 0.0
             print(f"    → Post-event: using gdpoints={total}")
-            for p in picks:
-                pid        = str(p["id"])
-                components = get_player_components(p["id"], gameday_id, lv)
-                cap_mult   = 2 if (cap_id     and p["id"] == cap_id)     else 1
-                mega_mult  = 3 if (megacap_id and p["id"] == megacap_id) else 1
-                mult       = cap_mult * mega_mult
-                pick_sub   = 0.0
-                for _cat, val in components:
-                    no_neg_factor = 0 if (has_no_neg and val < 0) else 1
-                    pick_sub += val * mult * no_neg_factor
-                pick_scores[pid] = pick_sub
+
+            if smart_finfx:
+                out_mult  = _finfx_mult(picks, finalfix_in_pid, cap_id, megacap_id)
+                out_comps = get_player_components(int(finalfix_out_pid), gameday_id, lv)
+                pick_scores[finalfix_out_pid] = score_components(out_comps, out_mult, pre_race_only=True)
+                print(f"    FF out-driver ({finalfix_out_pid}) pre-race pts: "
+                      f"{pick_scores[finalfix_out_pid]:.0f}")
                 time.sleep(0.05)
+
+            for p in picks:
+                pid       = str(p["id"])
+                comps     = get_player_components(p["id"], gameday_id, lv)
+                mult      = _cap_mult(p["id"], cap_id) * _mega_mult(p["id"], megacap_id)
+                race_only = smart_finfx and pid == finalfix_in_pid
+                pick_scores[pid] = score_components(comps, mult, race_only=race_only)
+                time.sleep(0.05)
+
         else:
             total = 0.0
+
+            if smart_finfx:
+                out_mult  = _finfx_mult(picks, finalfix_in_pid, cap_id, megacap_id)
+                out_comps = get_player_components(int(finalfix_out_pid), gameday_id, lv)
+                out_sub   = score_components(out_comps, out_mult, pre_race_only=True)
+                pick_scores[finalfix_out_pid] = out_sub
+                total += out_sub
+                print(f"    FF out-driver ({finalfix_out_pid}) pre-race pts: {out_sub:.0f}")
+                time.sleep(0.05)
+
             for p in picks:
-                pid        = str(p["id"])
-                components = get_player_components(p["id"], gameday_id, lv)
-                cap_mult   = 2 if (cap_id     and p["id"] == cap_id)     else 1
-                mega_mult  = 3 if (megacap_id and p["id"] == megacap_id) else 1
-                mult       = cap_mult * mega_mult
+                pid       = str(p["id"])
+                comps     = get_player_components(p["id"], gameday_id, lv)
+                mult      = _cap_mult(p["id"], cap_id) * _mega_mult(p["id"], megacap_id)
                 if mult == 6:
-                    print(f"    WARNING: {pid} is both captain AND mega captain — applying 6× mult")
-                pick_sub = 0.0
-                for _cat, val in components:
-                    no_neg_factor = 0 if (has_no_neg and val < 0) else 1
-                    pick_sub += val * mult * no_neg_factor
+                    print(f"    WARNING: {pid} is both captain AND mega captain — applying 6×")
+                race_only = smart_finfx and pid == finalfix_in_pid
+                pick_sub  = score_components(comps, mult, race_only=race_only)
                 pick_scores[pid] = pick_sub
                 total += pick_sub
                 time.sleep(0.05)
 
             usersubs    = team_data.get("usersubs", 0) or 0
             subsallowed = team_data.get("subsallowed", 2) or 2
-            extra_subs  = max(0, usersubs - subsallowed)
+            subsallowed_effective = subsallowed + (1 if has_final_fix else 0)
+            extra_subs  = max(0, usersubs - subsallowed_effective)
             sub_penalty = extra_subs * -(team_data.get("extrasubscost", 10) or 10)
             inactive_pen = team_data.get("inactive_driver_penality_points", 0) or 0
             total += sub_penalty + inactive_pen
 
             if sub_penalty or inactive_pen:
                 print(f"    Penalties: transfers={sub_penalty} inactive={inactive_pen}")
-            print(f"    → Calculated: {total} (gdpoints={gdpoints})")
+
+            if has_final_fix and not smart_finfx and gdpoints is not None:
+                print(f"    → Final Fix fallback: component total={total:.0f}, "
+                      f"using gdpoints={float(gdpoints):.0f} (out-driver ID unknown)")
+                total = float(gdpoints)
+            else:
+                print(f"    → Calculated: {total:.0f} (gdpoints={gdpoints})")
 
         pick_details = []
+
+        if smart_finfx and finalfix_out_pid in pick_scores:
+            out_id   = int(finalfix_out_pid)
+            out_mult = _finfx_mult(picks, finalfix_in_pid, cap_id, megacap_id)
+            pick_details.append({
+                "id":              out_id,
+                "full_name":       player_names.get(out_id, f"#{out_id}"),
+                "tla":             player_tlas.get(out_id, f"#{out_id}"),
+                "pick_type":       "Constructor" if player_skills.get(out_id, 1) == 2 else "Driver",
+                "skill":           player_skills.get(out_id, 1),
+                "iscaptain":       1 if out_mult >= 2 and out_mult < 3 else 0,
+                "ismgcaptain":     1 if out_mult == 3 or out_mult == 6 else 0,
+                "pick_score":      pick_scores[finalfix_out_pid],
+                "is_finalfix_out": True,
+            })
+
         for p in picks:
             pid       = p["id"]
             full_name = player_names.get(pid, f"#{pid}")
@@ -857,16 +940,17 @@ def build_picks_rows(race, results):
                 "team_name":        team["team_name"],
                 "user_name":        team["user_name"],
                 "cards_used":       cards_str,
-                "pick_id":          p["id"],
-                "pick_name":        p["full_name"],
-                "pick_tla":         p["tla"],
-                "pick_type":        p["pick_type"],
-                "is_captain":       bool(p["iscaptain"]),
-                "is_megacap":       bool(p["ismgcaptain"]),
-                "pick_points_gd":   round(p.get("pick_score", 0.0), 1),  # per-pick effective subtotal
-                "team_points_gd":   int(team["points"]),                  # full team total (for reference)
-                "price_this_race":  None,
-                "price_next_race":  None,
+                "pick_id":            p["id"],
+                "pick_name":          p["full_name"],
+                "pick_tla":           p["tla"],
+                "pick_type":          p["pick_type"],
+                "is_captain":         bool(p["iscaptain"]),
+                "is_megacap":         bool(p["ismgcaptain"]),
+                "is_finalfix_out":    bool(p.get("is_finalfix_out", False)),
+                "pick_points_gd":     round(p.get("pick_score", 0.0), 1),
+                "team_points_gd":     int(team["points"]),
+                "price_this_race":    None,
+                "price_next_race":    None,
             })
     return rows
 

@@ -1,6 +1,6 @@
 {
   "gameday_id": "9",
-  "session_type": "sprint",
+  "session_type": "race",
   "ranking_hash": "6e712e7b833ca1187694c9f0ea25bbf1",
   "scores": {
     "Robson Jardim": 209,
@@ -15,6 +15,6 @@
     "Eduardo Santos Lima": 112,
     "Vinicius Agostini": 97
   },
-  "post_race_sent": true,
-  "saved_at": "2026-07-04T20:00:55.149327+00:00"
+  "post_race_sent": false,
+  "saved_at": "2026-07-05T13:56:53.942918+00:00"
 }

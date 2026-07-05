@@ -1,11 +1,14 @@
 {
   "gameday_id": "9",
   "session_type": "race",
-  "ranking_hash": "d1dda62c7923bf8c770a86eb275face7",
+  "ranking_hash": "5d514785421ccc34d939276ccc2d9604",
   "scores": {
     "Liberio Junior": 326,
     "Danilo Iglesias": 326,
+    "Robson Jardim": 318,
     "Eduardo Santos Lima": 256,
+    "Rafael Dias": 248,
+    "Priscila Rigotto": 247,
     "Guilherme Figueiredo": 243,
     "Fabio Mucci": 240,
     "Raphael Stein": 232,
@@ -13,5 +16,5 @@
     "Ricardo Mucci": 188
   },
   "post_race_sent": false,
-  "saved_at": "2026-07-05T15:37:26.645544+00:00"
+  "saved_at": "2026-07-05T15:41:17.958794+00:00"
 }

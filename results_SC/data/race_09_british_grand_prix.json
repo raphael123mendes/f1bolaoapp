@@ -6,150 +6,12 @@
     "race_date": "2026-07-05",
     "rank": 1,
     "overall_rank": 1,
-    "live_gd_rank": 8,
-    "rank_change": 0,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "total_points": 2235.0,
-    "gd_points": 240.0,
-    "budget_remaining": 0.8,
-    "team_value": 103.9,
-    "cards_used": [],
-    "picks": [
-      {
-        "id": "11161",
-        "name": "Kimi Antonelli",
-        "type": "Driver",
-        "is_captain": true,
-        "is_megacap": false,
-        "points_gd": 21,
-        "breakdown": [
-          "Sprint Fastest lap: +5",
-          "Sprint position gained: +1",
-          "Sprint overtake bonus: +2",
-          "Qualifying Position: +10",
-          "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
-        ]
-      },
-      {
-        "id": "111",
-        "name": "Nico Hulkenberg",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": -7,
-        "breakdown": [
-          "Sprint Position lost: -2",
-          "Sprint overtake bonus: +5",
-          "Qualifying Position: +0",
-          "Sprint Position: +0",
-          "Race Position: +0",
-          "Race Position lost: -10"
-        ]
-      },
-      {
-        "id": "13",
-        "name": "Valtteri Bottas",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 3,
-        "breakdown": [
-          "Sprint overtake bonus: +2",
-          "Qualifying Position: +0",
-          "Sprint Position: +0",
-          "Race Position: +0",
-          "Race position gained: +1"
-        ]
-      },
-      {
-        "id": "11149",
-        "name": "Arvid Lindblad",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 14,
-        "breakdown": [
-          "Sprint overtake bonus: +4",
-          "Qualifying Position: +2",
-          "Sprint Position: +0",
-          "Race Position: +6",
-          "Race position gained: +2"
-        ]
-      },
-      {
-        "id": "114",
-        "name": "Liam Lawson",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 19,
-        "breakdown": [
-          "Sprint position gained: +1",
-          "Sprint overtake bonus: +4",
-          "Qualifying Position: +1",
-          "Sprint Position: +1",
-          "Race Position: +8",
-          "Race position gained: +4"
-        ]
-      },
-      {
-        "id": "25",
-        "name": "Ferrari",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 87,
-        "breakdown": [
-          "Sprint Position lost: -2",
-          "Sprint overtake bonus: +5",
-          "Qualifying Position: +17",
-          "Sprint Position: +11",
-          "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
-          "Race position gained: +1"
-        ]
-      },
-      {
-        "id": "28",
-        "name": "Mercedes",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 82,
-        "breakdown": [
-          "Sprint Fastest lap: +5",
-          "Sprint position gained: +2",
-          "Sprint overtake bonus: +10",
-          "Qualifying Position: +17",
-          "Sprint Position: +13",
-          "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
-        ]
-      }
-    ]
-  },
-  {
-    "race_number": 9,
-    "race_name": "British Grand Prix",
-    "race_flag": "🇬🇧",
-    "race_date": "2026-07-05",
-    "rank": 2,
-    "overall_rank": 2,
     "live_gd_rank": 1,
     "rank_change": 0,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
-    "total_points": 2209.0,
-    "gd_points": 326.0,
+    "total_points": 2333.0,
+    "gd_points": 321.0,
     "budget_remaining": 2.7,
     "team_value": 106.9,
     "cards_used": [
@@ -165,9 +27,9 @@
         "points_gd": 29,
         "breakdown": [
           "Sprint Position lost: -1",
+          "Race Position: +15",
           "Qualifying Position: +8",
-          "Sprint Position: +7",
-          "Race Position: +15"
+          "Sprint Position: +7"
         ]
       },
       {
@@ -181,11 +43,11 @@
           "Sprint Fastest lap: +5",
           "Sprint position gained: +1",
           "Sprint overtake bonus: +2",
+          "Race Position: +0",
           "Qualifying Position: +10",
           "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -198,9 +60,9 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +8",
+          "Race Position: +18",
           "Qualifying Position: +7",
           "Sprint Position: +5",
-          "Race Position: +18",
           "Race position gained: +2"
         ]
       },
@@ -210,13 +72,14 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 43,
+        "points_gd": 53,
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +5",
+          "Driver Of Day: +10",
+          "Race Position: +25",
           "Qualifying Position: +9",
           "Sprint Position: +4",
-          "Race Position: +25",
           "Race position gained: +1"
         ]
       },
@@ -230,9 +93,9 @@
         "breakdown": [
           "Sprint Position lost: -3",
           "Sprint overtake bonus: +3",
+          "Race Position: +0",
           "Qualifying Position: +4",
           "Sprint Position: +3",
-          "Race Position: +0",
           "Race Position lost: -13"
         ]
       },
@@ -242,19 +105,17 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 82,
+        "points_gd": 72,
         "breakdown": [
           "Sprint Fastest lap: +5",
           "Sprint position gained: +2",
           "Sprint overtake bonus: +10",
+          "Race Position: +18",
           "Qualifying Position: +17",
           "Sprint Position: +13",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -263,15 +124,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 87,
+        "points_gd": 82,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
+          "Race Position: +40",
           "Qualifying Position: +17",
           "Sprint Position: +11",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
           "Race position gained: +1"
         ]
       }
@@ -282,48 +142,64 @@
     "race_name": "British Grand Prix",
     "race_flag": "🇬🇧",
     "race_date": "2026-07-05",
-    "rank": 3,
-    "overall_rank": 3,
-    "live_gd_rank": 6,
+    "rank": 2,
+    "overall_rank": 2,
+    "live_gd_rank": 8,
     "rank_change": 0,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "total_points": 2153.0,
-    "gd_points": 247.0,
-    "budget_remaining": 1.2,
-    "team_value": 106.9,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "total_points": 2282.0,
+    "gd_points": 215.0,
+    "budget_remaining": 0.8,
+    "team_value": 103.9,
     "cards_used": [],
     "picks": [
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 21,
+        "breakdown": [
+          "Sprint Fastest lap: +5",
+          "Sprint position gained: +1",
+          "Sprint overtake bonus: +2",
+          "Race Position: +0",
+          "Qualifying Position: +10",
+          "Sprint Position: +8",
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
+        ]
+      },
       {
         "id": "111",
         "name": "Nico Hulkenberg",
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -7,
+        "points_gd": -17,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +0",
-          "Race Position lost: -10"
+          "Race not classified : -20"
         ]
       },
       {
-        "id": "11051",
-        "name": "Gabriel Bortoleto",
+        "id": "13",
+        "name": "Valtteri Bottas",
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 10,
+        "points_gd": 3,
         "breakdown": [
-          "Sprint Position lost: -1",
-          "Sprint overtake bonus: +4",
+          "Sprint overtake bonus: +2",
+          "Race Position: +0",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +4",
-          "Race position gained: +3"
+          "Race position gained: +1"
         ]
       },
       {
@@ -335,9 +211,9 @@
         "points_gd": 14,
         "breakdown": [
           "Sprint overtake bonus: +4",
+          "Race Position: +6",
           "Qualifying Position: +2",
           "Sprint Position: +0",
-          "Race Position: +6",
           "Race position gained: +2"
         ]
       },
@@ -351,9 +227,126 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +4",
+          "Race Position: +8",
           "Qualifying Position: +1",
           "Sprint Position: +1",
+          "Race position gained: +4"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 82,
+        "breakdown": [
+          "Sprint Position lost: -2",
+          "Sprint overtake bonus: +5",
+          "Race Position: +40",
+          "Qualifying Position: +17",
+          "Sprint Position: +11",
+          "Both Driver Q3: +10",
+          "Race position gained: +1"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 72,
+        "breakdown": [
+          "Sprint Fastest lap: +5",
+          "Sprint position gained: +2",
+          "Sprint overtake bonus: +10",
+          "Race Position: +18",
+          "Qualifying Position: +17",
+          "Sprint Position: +13",
+          "Both Driver Q3: +10",
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 9,
+    "race_name": "British Grand Prix",
+    "race_flag": "🇬🇧",
+    "race_date": "2026-07-05",
+    "rank": 3,
+    "overall_rank": 3,
+    "live_gd_rank": 7,
+    "rank_change": 0,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "total_points": 2206.0,
+    "gd_points": 222.0,
+    "budget_remaining": 1.2,
+    "team_value": 106.9,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -17,
+        "breakdown": [
+          "Sprint Position lost: -2",
+          "Sprint overtake bonus: +5",
+          "Qualifying Position: +0",
+          "Sprint Position: +0",
+          "Race not classified : -20"
+        ]
+      },
+      {
+        "id": "11051",
+        "name": "Gabriel Bortoleto",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 10,
+        "breakdown": [
+          "Sprint Position lost: -1",
+          "Sprint overtake bonus: +4",
+          "Race Position: +4",
+          "Qualifying Position: +0",
+          "Sprint Position: +0",
+          "Race position gained: +3"
+        ]
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 14,
+        "breakdown": [
+          "Sprint overtake bonus: +4",
+          "Race Position: +6",
+          "Qualifying Position: +2",
+          "Sprint Position: +0",
+          "Race position gained: +2"
+        ]
+      },
+      {
+        "id": "114",
+        "name": "Liam Lawson",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 19,
+        "breakdown": [
+          "Sprint position gained: +1",
+          "Sprint overtake bonus: +4",
           "Race Position: +8",
+          "Qualifying Position: +1",
+          "Sprint Position: +1",
           "Race position gained: +4"
         ]
       },
@@ -368,11 +361,11 @@
           "Sprint Fastest lap: +5",
           "Sprint position gained: +1",
           "Sprint overtake bonus: +2",
+          "Race Position: +0",
           "Qualifying Position: +10",
           "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -381,15 +374,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 87,
+        "points_gd": 82,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
+          "Race Position: +40",
           "Qualifying Position: +17",
           "Sprint Position: +11",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
           "Race position gained: +1"
         ]
       },
@@ -399,19 +391,17 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 82,
+        "points_gd": 72,
         "breakdown": [
           "Sprint Fastest lap: +5",
           "Sprint position gained: +2",
           "Sprint overtake bonus: +10",
+          "Race Position: +18",
           "Qualifying Position: +17",
           "Sprint Position: +13",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
         ]
       }
     ]
@@ -427,8 +417,8 @@
     "rank_change": 0,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
-    "total_points": 2082.0,
-    "gd_points": 318.0,
+    "total_points": 2186.0,
+    "gd_points": 313.0,
     "budget_remaining": 0.8,
     "team_value": 111.8,
     "cards_used": [
@@ -444,9 +434,9 @@
         "points_gd": 29,
         "breakdown": [
           "Sprint Position lost: -1",
+          "Race Position: +15",
           "Qualifying Position: +8",
-          "Sprint Position: +7",
-          "Race Position: +15"
+          "Sprint Position: +7"
         ]
       },
       {
@@ -460,11 +450,11 @@
           "Sprint Fastest lap: +5",
           "Sprint position gained: +1",
           "Sprint overtake bonus: +2",
+          "Race Position: +0",
           "Qualifying Position: +10",
           "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -477,9 +467,9 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +8",
+          "Race Position: +18",
           "Qualifying Position: +7",
           "Sprint Position: +5",
-          "Race Position: +18",
           "Race position gained: +2"
         ]
       },
@@ -489,13 +479,14 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 43,
+        "points_gd": 53,
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +5",
+          "Driver Of Day: +10",
+          "Race Position: +25",
           "Qualifying Position: +9",
           "Sprint Position: +4",
-          "Race Position: +25",
           "Race position gained: +1"
         ]
       },
@@ -509,9 +500,9 @@
         "breakdown": [
           "Sprint Position lost: -3",
           "Sprint overtake bonus: +3",
+          "Race Position: +0",
           "Qualifying Position: +4",
           "Sprint Position: +3",
-          "Race Position: +0",
           "Race Position lost: -13"
         ]
       },
@@ -521,15 +512,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 87,
+        "points_gd": 82,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
+          "Race Position: +40",
           "Qualifying Position: +17",
           "Sprint Position: +11",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
           "Race position gained: +1"
         ]
       },
@@ -539,19 +529,17 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 82,
+        "points_gd": 72,
         "breakdown": [
           "Sprint Fastest lap: +5",
           "Sprint position gained: +2",
           "Sprint overtake bonus: +10",
+          "Race Position: +18",
           "Qualifying Position: +17",
           "Sprint Position: +13",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
         ]
       }
     ]
@@ -563,286 +551,12 @@
     "race_date": "2026-07-05",
     "rank": 5,
     "overall_rank": 5,
-    "live_gd_rank": 7,
-    "rank_change": 0,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "total_points": 2044.0,
-    "gd_points": 243.0,
-    "budget_remaining": 0.7,
-    "team_value": 106.2,
-    "cards_used": [],
-    "picks": [
-      {
-        "id": "11149",
-        "name": "Arvid Lindblad",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 14,
-        "breakdown": [
-          "Sprint overtake bonus: +4",
-          "Qualifying Position: +2",
-          "Sprint Position: +0",
-          "Race Position: +6",
-          "Race position gained: +2"
-        ]
-      },
-      {
-        "id": "12",
-        "name": "Fernando Alonso",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 6,
-        "breakdown": [
-          "Sprint overtake bonus: +3",
-          "Qualifying Position: +0",
-          "Sprint Position: +0",
-          "Race Position: +0",
-          "Race position gained: +3"
-        ]
-      },
-      {
-        "id": "11051",
-        "name": "Gabriel Bortoleto",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 10,
-        "breakdown": [
-          "Sprint Position lost: -1",
-          "Sprint overtake bonus: +4",
-          "Qualifying Position: +0",
-          "Sprint Position: +0",
-          "Race Position: +4",
-          "Race position gained: +3"
-        ]
-      },
-      {
-        "id": "11161",
-        "name": "Kimi Antonelli",
-        "type": "Driver",
-        "is_captain": true,
-        "is_megacap": false,
-        "points_gd": 21,
-        "breakdown": [
-          "Sprint Fastest lap: +5",
-          "Sprint position gained: +1",
-          "Sprint overtake bonus: +2",
-          "Qualifying Position: +10",
-          "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
-        ]
-      },
-      {
-        "id": "121",
-        "name": "Sergio Perez",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 2,
-        "breakdown": [
-          "Sprint Position lost: -4",
-          "Sprint overtake bonus: +1",
-          "Qualifying Position: +0",
-          "Sprint Position: +0",
-          "Race Position: +0",
-          "Race position gained: +5"
-        ]
-      },
-      {
-        "id": "28",
-        "name": "Mercedes",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 82,
-        "breakdown": [
-          "Sprint Fastest lap: +5",
-          "Sprint position gained: +2",
-          "Sprint overtake bonus: +10",
-          "Qualifying Position: +17",
-          "Sprint Position: +13",
-          "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
-        ]
-      },
-      {
-        "id": "25",
-        "name": "Ferrari",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 87,
-        "breakdown": [
-          "Sprint Position lost: -2",
-          "Sprint overtake bonus: +5",
-          "Qualifying Position: +17",
-          "Sprint Position: +11",
-          "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
-          "Race position gained: +1"
-        ]
-      }
-    ]
-  },
-  {
-    "race_number": 9,
-    "race_name": "British Grand Prix",
-    "race_flag": "🇬🇧",
-    "race_date": "2026-07-05",
-    "rank": 6,
-    "overall_rank": 6,
-    "live_gd_rank": 5,
-    "rank_change": 0,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "total_points": 2024.0,
-    "gd_points": 248.0,
-    "budget_remaining": 0.4,
-    "team_value": 114.8,
-    "cards_used": [],
-    "picks": [
-      {
-        "id": "110",
-        "name": "Lewis Hamilton",
-        "type": "Driver",
-        "is_captain": true,
-        "is_megacap": false,
-        "points_gd": 29,
-        "breakdown": [
-          "Sprint Position lost: -1",
-          "Qualifying Position: +8",
-          "Sprint Position: +7",
-          "Race Position: +15"
-        ]
-      },
-      {
-        "id": "11031",
-        "name": "Oliver Bearman",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 6,
-        "breakdown": [
-          "Sprint position gained: +2",
-          "Sprint overtake bonus: +4",
-          "Qualifying Position: +0",
-          "Sprint Position: +0",
-          "Race Position: +0"
-        ]
-      },
-      {
-        "id": "11161",
-        "name": "Kimi Antonelli",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 21,
-        "breakdown": [
-          "Sprint Fastest lap: +5",
-          "Sprint position gained: +1",
-          "Sprint overtake bonus: +2",
-          "Qualifying Position: +10",
-          "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
-        ]
-      },
-      {
-        "id": "11149",
-        "name": "Arvid Lindblad",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 14,
-        "breakdown": [
-          "Sprint overtake bonus: +4",
-          "Qualifying Position: +2",
-          "Sprint Position: +0",
-          "Race Position: +6",
-          "Race position gained: +2"
-        ]
-      },
-      {
-        "id": "114",
-        "name": "Liam Lawson",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 19,
-        "breakdown": [
-          "Sprint position gained: +1",
-          "Sprint overtake bonus: +4",
-          "Qualifying Position: +1",
-          "Sprint Position: +1",
-          "Race Position: +8",
-          "Race position gained: +4"
-        ]
-      },
-      {
-        "id": "28",
-        "name": "Mercedes",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 82,
-        "breakdown": [
-          "Sprint Fastest lap: +5",
-          "Sprint position gained: +2",
-          "Sprint overtake bonus: +10",
-          "Qualifying Position: +17",
-          "Sprint Position: +13",
-          "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
-        ]
-      },
-      {
-        "id": "2636",
-        "name": "Racing Bulls",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 48,
-        "breakdown": [
-          "Sprint position gained: +1",
-          "Sprint overtake bonus: +8",
-          "Qualifying Position: +3",
-          "Sprint Position: +1",
-          "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +14",
-          "Race position gained: +6"
-        ]
-      }
-    ]
-  },
-  {
-    "race_number": 9,
-    "race_name": "British Grand Prix",
-    "race_flag": "🇬🇧",
-    "race_date": "2026-07-05",
-    "rank": 7,
-    "overall_rank": 7,
     "live_gd_rank": 1,
     "rank_change": 0,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
-    "total_points": 1990.0,
-    "gd_points": 326.0,
+    "total_points": 2114.0,
+    "gd_points": 321.0,
     "budget_remaining": 2.5,
     "team_value": 101.0,
     "cards_used": [
@@ -860,11 +574,11 @@
           "Sprint Fastest lap: +5",
           "Sprint position gained: +1",
           "Sprint overtake bonus: +2",
+          "Race Position: +0",
           "Qualifying Position: +10",
           "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -876,9 +590,9 @@
         "points_gd": 29,
         "breakdown": [
           "Sprint Position lost: -1",
+          "Race Position: +15",
           "Qualifying Position: +8",
-          "Sprint Position: +7",
-          "Race Position: +15"
+          "Sprint Position: +7"
         ]
       },
       {
@@ -891,9 +605,9 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +8",
+          "Race Position: +18",
           "Qualifying Position: +7",
           "Sprint Position: +5",
-          "Race Position: +18",
           "Race position gained: +2"
         ]
       },
@@ -907,9 +621,9 @@
         "breakdown": [
           "Sprint Position lost: -3",
           "Sprint overtake bonus: +3",
+          "Race Position: +0",
           "Qualifying Position: +4",
           "Sprint Position: +3",
-          "Race Position: +0",
           "Race Position lost: -13"
         ]
       },
@@ -919,13 +633,14 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 43,
+        "points_gd": 53,
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +5",
+          "Driver Of Day: +10",
+          "Race Position: +25",
           "Qualifying Position: +9",
           "Sprint Position: +4",
-          "Race Position: +25",
           "Race position gained: +1"
         ]
       },
@@ -935,19 +650,17 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 82,
+        "points_gd": 72,
         "breakdown": [
           "Sprint Fastest lap: +5",
           "Sprint position gained: +2",
           "Sprint overtake bonus: +10",
+          "Race Position: +18",
           "Qualifying Position: +17",
           "Sprint Position: +13",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -956,16 +669,283 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 87,
+        "points_gd": 82,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
+          "Race Position: +40",
           "Qualifying Position: +17",
           "Sprint Position: +11",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
           "Race position gained: +1"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 9,
+    "race_name": "British Grand Prix",
+    "race_flag": "🇬🇧",
+    "race_date": "2026-07-05",
+    "rank": 6,
+    "overall_rank": 6,
+    "live_gd_rank": 6,
+    "rank_change": 0,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "total_points": 2113.0,
+    "gd_points": 228.0,
+    "budget_remaining": 0.7,
+    "team_value": 106.2,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 14,
+        "breakdown": [
+          "Sprint overtake bonus: +4",
+          "Race Position: +6",
+          "Qualifying Position: +2",
+          "Sprint Position: +0",
+          "Race position gained: +2"
+        ]
+      },
+      {
+        "id": "12",
+        "name": "Fernando Alonso",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Sprint overtake bonus: +3",
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Sprint Position: +0",
+          "Race position gained: +3"
+        ]
+      },
+      {
+        "id": "11051",
+        "name": "Gabriel Bortoleto",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 10,
+        "breakdown": [
+          "Sprint Position lost: -1",
+          "Sprint overtake bonus: +4",
+          "Race Position: +4",
+          "Qualifying Position: +0",
+          "Sprint Position: +0",
+          "Race position gained: +3"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 21,
+        "breakdown": [
+          "Sprint Fastest lap: +5",
+          "Sprint position gained: +1",
+          "Sprint overtake bonus: +2",
+          "Race Position: +0",
+          "Qualifying Position: +10",
+          "Sprint Position: +8",
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
+        ]
+      },
+      {
+        "id": "121",
+        "name": "Sergio Perez",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 2,
+        "breakdown": [
+          "Sprint Position lost: -4",
+          "Sprint overtake bonus: +1",
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Sprint Position: +0",
+          "Race position gained: +5"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 72,
+        "breakdown": [
+          "Sprint Fastest lap: +5",
+          "Sprint position gained: +2",
+          "Sprint overtake bonus: +10",
+          "Race Position: +18",
+          "Qualifying Position: +17",
+          "Sprint Position: +13",
+          "Both Driver Q3: +10",
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 82,
+        "breakdown": [
+          "Sprint Position lost: -2",
+          "Sprint overtake bonus: +5",
+          "Race Position: +40",
+          "Qualifying Position: +17",
+          "Sprint Position: +11",
+          "Both Driver Q3: +10",
+          "Race position gained: +1"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 9,
+    "race_name": "British Grand Prix",
+    "race_flag": "🇬🇧",
+    "race_date": "2026-07-05",
+    "rank": 7,
+    "overall_rank": 7,
+    "live_gd_rank": 5,
+    "rank_change": 0,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "total_points": 2104.0,
+    "gd_points": 233.0,
+    "budget_remaining": 0.4,
+    "team_value": 114.8,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "110",
+        "name": "Lewis Hamilton",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 29,
+        "breakdown": [
+          "Sprint Position lost: -1",
+          "Race Position: +15",
+          "Qualifying Position: +8",
+          "Sprint Position: +7"
+        ]
+      },
+      {
+        "id": "11031",
+        "name": "Oliver Bearman",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Sprint position gained: +2",
+          "Sprint overtake bonus: +4",
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Sprint Position: +0"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 21,
+        "breakdown": [
+          "Sprint Fastest lap: +5",
+          "Sprint position gained: +1",
+          "Sprint overtake bonus: +2",
+          "Race Position: +0",
+          "Qualifying Position: +10",
+          "Sprint Position: +8",
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
+        ]
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 14,
+        "breakdown": [
+          "Sprint overtake bonus: +4",
+          "Race Position: +6",
+          "Qualifying Position: +2",
+          "Sprint Position: +0",
+          "Race position gained: +2"
+        ]
+      },
+      {
+        "id": "114",
+        "name": "Liam Lawson",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 19,
+        "breakdown": [
+          "Sprint position gained: +1",
+          "Sprint overtake bonus: +4",
+          "Race Position: +8",
+          "Qualifying Position: +1",
+          "Sprint Position: +1",
+          "Race position gained: +4"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 72,
+        "breakdown": [
+          "Sprint Fastest lap: +5",
+          "Sprint position gained: +2",
+          "Sprint overtake bonus: +10",
+          "Race Position: +18",
+          "Qualifying Position: +17",
+          "Sprint Position: +13",
+          "Both Driver Q3: +10",
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
+        ]
+      },
+      {
+        "id": "2636",
+        "name": "Racing Bulls",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 43,
+        "breakdown": [
+          "Sprint position gained: +1",
+          "Sprint overtake bonus: +8",
+          "Race Position: +14",
+          "Qualifying Position: +3",
+          "Sprint Position: +1",
+          "Both Driver Q3: +10",
+          "Race position gained: +6"
         ]
       }
     ]
@@ -981,8 +961,8 @@
     "rank_change": 0,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
-    "total_points": 1987.0,
-    "gd_points": 232.0,
+    "total_points": 2043.0,
+    "gd_points": 207.0,
     "budget_remaining": 4.4,
     "team_value": 113.6,
     "cards_used": [
@@ -999,9 +979,9 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +4",
+          "Race Position: +8",
           "Qualifying Position: +1",
           "Sprint Position: +1",
-          "Race Position: +8",
           "Race position gained: +4"
         ]
       },
@@ -1014,9 +994,9 @@
         "points_gd": 14,
         "breakdown": [
           "Sprint overtake bonus: +4",
+          "Race Position: +6",
           "Qualifying Position: +2",
           "Sprint Position: +0",
-          "Race Position: +6",
           "Race position gained: +2"
         ]
       },
@@ -1029,9 +1009,9 @@
         "points_gd": 29,
         "breakdown": [
           "Sprint Position lost: -1",
+          "Race Position: +15",
           "Qualifying Position: +8",
-          "Sprint Position: +7",
-          "Race Position: +15"
+          "Sprint Position: +7"
         ]
       },
       {
@@ -1040,14 +1020,13 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -7,
+        "points_gd": -17,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +0",
-          "Race Position lost: -10"
+          "Race not classified : -20"
         ]
       },
       {
@@ -1060,9 +1039,9 @@
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +4",
+          "Race Position: +10",
           "Qualifying Position: +6",
-          "Sprint Position: +0",
-          "Race Position: +10"
+          "Sprint Position: +0"
         ]
       },
       {
@@ -1071,15 +1050,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 87,
+        "points_gd": 82,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
+          "Race Position: +40",
           "Qualifying Position: +17",
           "Sprint Position: +11",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
           "Race position gained: +1"
         ]
       },
@@ -1089,19 +1067,17 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 82,
+        "points_gd": 72,
         "breakdown": [
           "Sprint Fastest lap: +5",
           "Sprint position gained: +2",
           "Sprint overtake bonus: +10",
+          "Race Position: +18",
           "Qualifying Position: +17",
           "Sprint Position: +13",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -1115,11 +1091,11 @@
           "Sprint Fastest lap: +5",
           "Sprint position gained: +1",
           "Sprint overtake bonus: +2",
+          "Race Position: +0",
           "Qualifying Position: +10",
           "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
         ]
       }
     ]
@@ -1135,8 +1111,8 @@
     "rank_change": 0,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
-    "total_points": 1957.0,
-    "gd_points": 213.0,
+    "total_points": 2033.0,
+    "gd_points": 173.0,
     "budget_remaining": 1.3,
     "team_value": 111.1,
     "cards_used": [],
@@ -1151,9 +1127,9 @@
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +4",
+          "Race Position: +10",
           "Qualifying Position: +6",
-          "Sprint Position: +0",
-          "Race Position: +10"
+          "Sprint Position: +0"
         ]
       },
       {
@@ -1165,9 +1141,9 @@
         "points_gd": 29,
         "breakdown": [
           "Sprint Position lost: -1",
+          "Race Position: +15",
           "Qualifying Position: +8",
-          "Sprint Position: +7",
-          "Race Position: +15"
+          "Sprint Position: +7"
         ]
       },
       {
@@ -1180,9 +1156,9 @@
         "breakdown": [
           "Sprint Position lost: -3",
           "Sprint overtake bonus: +3",
+          "Race Position: +0",
           "Qualifying Position: +4",
           "Sprint Position: +3",
-          "Race Position: +0",
           "Race Position lost: -13"
         ]
       },
@@ -1195,9 +1171,9 @@
         "points_gd": 14,
         "breakdown": [
           "Sprint overtake bonus: +4",
+          "Race Position: +6",
           "Qualifying Position: +2",
           "Sprint Position: +0",
-          "Race Position: +6",
           "Race position gained: +2"
         ]
       },
@@ -1207,14 +1183,13 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -7,
+        "points_gd": -17,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +0",
-          "Race Position lost: -10"
+          "Race not classified : -20"
         ]
       },
       {
@@ -1223,15 +1198,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 87,
+        "points_gd": 82,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
+          "Race Position: +40",
           "Qualifying Position: +17",
           "Sprint Position: +11",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
           "Race position gained: +1"
         ]
       },
@@ -1241,15 +1215,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 48,
+        "points_gd": 43,
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +8",
+          "Race Position: +14",
           "Qualifying Position: +3",
           "Sprint Position: +1",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +14",
           "Race position gained: +6"
         ]
       }
@@ -1266,8 +1239,8 @@
     "rank_change": 0,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
-    "total_points": 1614.0,
-    "gd_points": 188.0,
+    "total_points": 1631.0,
+    "gd_points": 163.0,
     "budget_remaining": 5.1,
     "team_value": 101.7,
     "cards_used": [],
@@ -1283,11 +1256,11 @@
           "Sprint Fastest lap: +5",
           "Sprint position gained: +1",
           "Sprint overtake bonus: +2",
+          "Race Position: +0",
           "Qualifying Position: +10",
           "Sprint Position: +8",
-          "Race Position: +0",
-          "Race Fastest lap: +10",
-          "Race Position lost: -15"
+          "Race Position lost: -15",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -1300,9 +1273,9 @@
         "breakdown": [
           "Sprint position gained: +2",
           "Sprint overtake bonus: +5",
+          "Race Position: +2",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +2",
           "Race position gained: +10"
         ]
       },
@@ -1316,9 +1289,9 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +5",
+          "Race Position: +0",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +0",
           "Race position gained: +3"
         ]
       },
@@ -1332,9 +1305,9 @@
         "breakdown": [
           "Sprint position gained: +2",
           "Sprint overtake bonus: +4",
+          "Race Position: +0",
           "Qualifying Position: +0",
-          "Sprint Position: +0",
-          "Race Position: +0"
+          "Sprint Position: +0"
         ]
       },
       {
@@ -1347,9 +1320,9 @@
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +4",
+          "Race Position: +10",
           "Qualifying Position: +6",
-          "Sprint Position: +0",
-          "Race Position: +10"
+          "Sprint Position: +0"
         ]
       },
       {
@@ -1358,19 +1331,17 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 82,
+        "points_gd": 72,
         "breakdown": [
           "Sprint Fastest lap: +5",
           "Sprint position gained: +2",
           "Sprint overtake bonus: +10",
+          "Race Position: +18",
           "Qualifying Position: +17",
           "Sprint Position: +13",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "2nd Fastest Pitstop: +5",
-          "Race Position: +18",
-          "Race Fastest lap: +10",
-          "Race Position lost: -13"
+          "Race Position lost: -13",
+          "Race Fastest lap: +10"
         ]
       },
       {
@@ -1379,16 +1350,16 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 11,
+        "points_gd": -4,
         "breakdown": [
           "Both Driver Q2: +3",
           "Sprint Position lost: -3",
           "Sprint overtake bonus: +9",
+          "Race Position: +4",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Fastest Pitstop: +5",
-          "Race Position: +4",
-          "Race Position lost: -7"
+          "Race not classified : -20",
+          "Race position gained: +3"
         ]
       }
     ]
@@ -1404,7 +1375,7 @@
     "rank_change": 0,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
-    "total_points": 1305.0,
+    "total_points": 1449.0,
     "gd_points": 256.0,
     "budget_remaining": 0.0,
     "team_value": 102.2,
@@ -1416,13 +1387,14 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 43,
+        "points_gd": 53,
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +5",
+          "Driver Of Day: +10",
+          "Race Position: +25",
           "Qualifying Position: +9",
           "Sprint Position: +4",
-          "Race Position: +25",
           "Race position gained: +1"
         ]
       },
@@ -1436,9 +1408,9 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +8",
+          "Race Position: +18",
           "Qualifying Position: +7",
           "Sprint Position: +5",
-          "Race Position: +18",
           "Race position gained: +2"
         ]
       },
@@ -1452,9 +1424,9 @@
         "breakdown": [
           "Sprint Position lost: -4",
           "Sprint overtake bonus: +1",
+          "Race Position: +0",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +0",
           "Race position gained: +5"
         ]
       },
@@ -1468,9 +1440,9 @@
         "breakdown": [
           "Sprint position gained: +1",
           "Sprint overtake bonus: +4",
+          "Race Position: +8",
           "Qualifying Position: +1",
           "Sprint Position: +1",
-          "Race Position: +8",
           "Race position gained: +4"
         ]
       },
@@ -1484,9 +1456,9 @@
         "breakdown": [
           "Sprint Position lost: -1",
           "Sprint overtake bonus: +4",
+          "Race Position: +4",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Race Position: +4",
           "Race position gained: +3"
         ]
       },
@@ -1496,15 +1468,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 87,
+        "points_gd": 82,
         "breakdown": [
           "Sprint Position lost: -2",
           "Sprint overtake bonus: +5",
+          "Race Position: +40",
           "Qualifying Position: +17",
           "Sprint Position: +11",
           "Both Driver Q3: +10",
-          "Fastest Pitstop: +5",
-          "Race Position: +40",
           "Race position gained: +1"
         ]
       },
@@ -1514,16 +1485,16 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 11,
+        "points_gd": -4,
         "breakdown": [
           "Both Driver Q2: +3",
           "Sprint Position lost: -3",
           "Sprint overtake bonus: +9",
+          "Race Position: +4",
           "Qualifying Position: +0",
           "Sprint Position: +0",
-          "Fastest Pitstop: +5",
-          "Race Position: +4",
-          "Race Position lost: -7"
+          "Race not classified : -20",
+          "Race position gained: +3"
         ]
       }
     ]

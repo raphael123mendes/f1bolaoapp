@@ -6086,13 +6086,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 33,
-    "total_points": 270,
+    "gameday_points": 31,
+    "total_points": 268,
     "season_high": 17.3,
     "season_low": 12.5,
     "pct_vs_high": 0.0,
     "pct_vs_low": 38.4,
-    "fetched_at": "2026-07-05T15:40:37.124735+00:00"
+    "fetched_at": "2026-07-05T17:18:01.316625+00:00"
   },
   {
     "player_id": "24",
@@ -6115,7 +6115,7 @@
     "season_low": 6.3,
     "pct_vs_high": -38.83,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:37.617799+00:00"
+    "fetched_at": "2026-07-05T17:18:01.854371+00:00"
   },
   {
     "player_id": "2640",
@@ -6132,13 +6132,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 11,
-    "total_points": 52,
+    "gameday_points": -4,
+    "total_points": 37,
     "season_high": 6.6,
     "season_low": 3.8,
     "pct_vs_high": -24.24,
     "pct_vs_low": 31.58,
-    "fetched_at": "2026-07-05T15:40:38.117435+00:00"
+    "fetched_at": "2026-07-05T17:18:02.391123+00:00"
   },
   {
     "player_id": "2641",
@@ -6155,13 +6155,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 6,
-    "total_points": -11,
+    "gameday_points": 4,
+    "total_points": -13,
     "season_high": 6.2,
     "season_low": 4.8,
     "pct_vs_high": -22.58,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:38.616958+00:00"
+    "fetched_at": "2026-07-05T17:18:02.921497+00:00"
   },
   {
     "player_id": "25",
@@ -6178,13 +6178,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 87,
-    "total_points": 619,
+    "gameday_points": 82,
+    "total_points": 614,
     "season_high": 25.7,
     "season_low": 23.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 10.3,
-    "fetched_at": "2026-07-05T15:40:39.113026+00:00"
+    "fetched_at": "2026-07-05T17:18:03.455014+00:00"
   },
   {
     "player_id": "26",
@@ -6207,7 +6207,7 @@
     "season_low": 7.4,
     "pct_vs_high": -3.77,
     "pct_vs_low": 37.84,
-    "fetched_at": "2026-07-05T15:40:39.607506+00:00"
+    "fetched_at": "2026-07-05T17:18:03.987188+00:00"
   },
   {
     "player_id": "27",
@@ -6224,13 +6224,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 56,
-    "total_points": 413,
+    "gameday_points": 51,
+    "total_points": 408,
     "season_high": 30.1,
     "season_low": 28.5,
     "pct_vs_high": 0.0,
     "pct_vs_low": 5.61,
-    "fetched_at": "2026-07-05T15:40:40.099956+00:00"
+    "fetched_at": "2026-07-05T17:18:04.515744+00:00"
   },
   {
     "player_id": "28",
@@ -6247,13 +6247,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 82,
-    "total_points": 759,
+    "gameday_points": 72,
+    "total_points": 749,
     "season_high": 31.7,
     "season_low": 29.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 8.19,
-    "fetched_at": "2026-07-05T15:40:40.590636+00:00"
+    "fetched_at": "2026-07-05T17:18:05.044456+00:00"
   },
   {
     "player_id": "2636",
@@ -6270,13 +6270,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 48,
-    "total_points": 275,
+    "gameday_points": 43,
+    "total_points": 270,
     "season_high": 11.1,
     "season_low": 6.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 76.19,
-    "fetched_at": "2026-07-05T15:40:41.089724+00:00"
+    "fetched_at": "2026-07-05T17:18:05.666017+00:00"
   },
   {
     "player_id": "29",
@@ -6293,13 +6293,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 25,
-    "total_points": 357,
+    "gameday_points": 23,
+    "total_points": 355,
     "season_high": 30.0,
     "season_low": 28.2,
     "pct_vs_high": 0.0,
     "pct_vs_low": 6.38,
-    "fetched_at": "2026-07-05T15:40:41.592195+00:00"
+    "fetched_at": "2026-07-05T17:18:06.207172+00:00"
   },
   {
     "player_id": "210",
@@ -6316,13 +6316,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 9,
-    "total_points": 112,
+    "gameday_points": -8,
+    "total_points": 95,
     "season_high": 15.6,
     "season_low": 12.0,
     "pct_vs_high": -7.69,
     "pct_vs_low": 20.0,
-    "fetched_at": "2026-07-05T15:40:42.091501+00:00"
+    "fetched_at": "2026-07-05T17:18:06.745145+00:00"
   },
   {
     "player_id": "11",
@@ -6345,7 +6345,7 @@
     "season_low": 7.6,
     "pct_vs_high": -34.48,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:26.224659+00:00"
+    "fetched_at": "2026-07-05T17:17:49.654291+00:00"
   },
   {
     "player_id": "11149",
@@ -6368,7 +6368,7 @@
     "season_low": 5.6,
     "pct_vs_high": -18.42,
     "pct_vs_low": 10.71,
-    "fetched_at": "2026-07-05T15:40:26.721708+00:00"
+    "fetched_at": "2026-07-05T17:17:50.184574+00:00"
   },
   {
     "player_id": "125",
@@ -6391,7 +6391,7 @@
     "season_low": 11.4,
     "pct_vs_high": -12.31,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:27.217973+00:00"
+    "fetched_at": "2026-07-05T17:17:50.713849+00:00"
   },
   {
     "player_id": "115",
@@ -6408,13 +6408,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 43,
-    "total_points": 204,
+    "gameday_points": 53,
+    "total_points": 214,
     "season_high": 24.1,
     "season_low": 22.8,
     "pct_vs_high": -3.73,
     "pct_vs_low": 1.75,
-    "fetched_at": "2026-07-05T15:40:27.709804+00:00"
+    "fetched_at": "2026-07-05T17:17:51.281926+00:00"
   },
   {
     "player_id": "118",
@@ -6437,7 +6437,7 @@
     "season_low": 7.3,
     "pct_vs_high": -1.94,
     "pct_vs_low": 38.36,
-    "fetched_at": "2026-07-05T15:40:28.205582+00:00"
+    "fetched_at": "2026-07-05T17:17:51.823140+00:00"
   },
   {
     "player_id": "12",
@@ -6460,7 +6460,7 @@
     "season_low": 5.6,
     "pct_vs_high": -44.0,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:28.700149+00:00"
+    "fetched_at": "2026-07-05T17:17:52.361510+00:00"
   },
   {
     "player_id": "11059",
@@ -6483,7 +6483,7 @@
     "season_low": 6.2,
     "pct_vs_high": -2.0,
     "pct_vs_low": 58.06,
-    "fetched_at": "2026-07-05T15:40:29.194921+00:00"
+    "fetched_at": "2026-07-05T17:17:52.893953+00:00"
   },
   {
     "player_id": "11051",
@@ -6506,7 +6506,7 @@
     "season_low": 5.2,
     "pct_vs_high": -14.29,
     "pct_vs_low": 15.38,
-    "fetched_at": "2026-07-05T15:40:29.694789+00:00"
+    "fetched_at": "2026-07-05T17:17:53.423771+00:00"
   },
   {
     "player_id": "124",
@@ -6529,7 +6529,7 @@
     "season_low": 27.4,
     "pct_vs_high": -2.8,
     "pct_vs_low": 1.46,
-    "fetched_at": "2026-07-05T15:40:30.191104+00:00"
+    "fetched_at": "2026-07-05T17:17:53.958105+00:00"
   },
   {
     "player_id": "11032",
@@ -6552,7 +6552,7 @@
     "season_low": 11.5,
     "pct_vs_high": -15.89,
     "pct_vs_low": 10.43,
-    "fetched_at": "2026-07-05T15:40:30.683298+00:00"
+    "fetched_at": "2026-07-05T17:17:54.497550+00:00"
   },
   {
     "player_id": "11161",
@@ -6575,7 +6575,7 @@
     "season_low": 23.2,
     "pct_vs_high": 0.0,
     "pct_vs_low": 9.48,
-    "fetched_at": "2026-07-05T15:40:31.176177+00:00"
+    "fetched_at": "2026-07-05T17:17:54.893047+00:00"
   },
   {
     "player_id": "129",
@@ -6598,7 +6598,7 @@
     "season_low": 3.6,
     "pct_vs_high": -55.0,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:31.667213+00:00"
+    "fetched_at": "2026-07-05T17:17:55.425795+00:00"
   },
   {
     "player_id": "117",
@@ -6621,7 +6621,7 @@
     "season_low": 25.6,
     "pct_vs_high": -5.88,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:32.161067+00:00"
+    "fetched_at": "2026-07-05T17:17:55.961683+00:00"
   },
   {
     "player_id": "110",
@@ -6644,7 +6644,7 @@
     "season_low": 22.5,
     "pct_vs_high": 0.0,
     "pct_vs_low": 8.89,
-    "fetched_at": "2026-07-05T15:40:32.657483+00:00"
+    "fetched_at": "2026-07-05T17:17:56.488419+00:00"
   },
   {
     "player_id": "114",
@@ -6667,7 +6667,7 @@
     "season_low": 6.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 41.27,
-    "fetched_at": "2026-07-05T15:40:33.164120+00:00"
+    "fetched_at": "2026-07-05T17:17:57.013981+00:00"
   },
   {
     "player_id": "131",
@@ -6690,7 +6690,7 @@
     "season_low": 27.7,
     "pct_vs_high": -1.76,
     "pct_vs_low": 0.72,
-    "fetched_at": "2026-07-05T15:40:33.656326+00:00"
+    "fetched_at": "2026-07-05T17:17:57.544885+00:00"
   },
   {
     "player_id": "111",
@@ -6707,13 +6707,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -7,
-    "total_points": -45,
+    "gameday_points": -17,
+    "total_points": -55,
     "season_high": 6.8,
     "season_low": 3.0,
     "pct_vs_high": -55.88,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:34.152987+00:00"
+    "fetched_at": "2026-07-05T17:17:58.072346+00:00"
   },
   {
     "player_id": "11031",
@@ -6736,7 +6736,7 @@
     "season_low": 7.0,
     "pct_vs_high": -25.53,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:34.649435+00:00"
+    "fetched_at": "2026-07-05T17:17:58.614503+00:00"
   },
   {
     "player_id": "1982",
@@ -6759,7 +6759,7 @@
     "season_low": 24.6,
     "pct_vs_high": -2.35,
     "pct_vs_low": 1.22,
-    "fetched_at": "2026-07-05T15:40:35.149047+00:00"
+    "fetched_at": "2026-07-05T17:17:59.160336+00:00"
   },
   {
     "player_id": "18",
@@ -6782,7 +6782,7 @@
     "season_low": 11.6,
     "pct_vs_high": -1.54,
     "pct_vs_low": 10.34,
-    "fetched_at": "2026-07-05T15:40:35.642830+00:00"
+    "fetched_at": "2026-07-05T17:17:59.697417+00:00"
   },
   {
     "player_id": "121",
@@ -6805,7 +6805,7 @@
     "season_low": 5.6,
     "pct_vs_high": -26.32,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:36.135984+00:00"
+    "fetched_at": "2026-07-05T17:18:00.241714+00:00"
   },
   {
     "player_id": "13",
@@ -6828,6 +6828,6 @@
     "season_low": 3.0,
     "pct_vs_high": -49.15,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-07-05T15:40:36.629455+00:00"
+    "fetched_at": "2026-07-05T17:18:00.779733+00:00"
   }
 ]

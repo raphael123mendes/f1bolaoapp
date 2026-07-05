@@ -1,7 +1,7 @@
 {
   "gameday_id": "9",
   "session_type": "race",
-  "ranking_hash": "5d514785421ccc34d939276ccc2d9604",
+  "ranking_hash": "3099f3b3e012c160d57f4234bf55131f",
   "scores": {
     "Liberio Junior": 326,
     "Danilo Iglesias": 326,
@@ -12,9 +12,9 @@
     "Guilherme Figueiredo": 243,
     "Fabio Mucci": 240,
     "Raphael Stein": 232,
-    "Vinicius Agostini": 213,
+    "Vinicius Agostini": 193,
     "Ricardo Mucci": 188
   },
   "post_race_sent": false,
-  "saved_at": "2026-07-05T15:41:17.958794+00:00"
+  "saved_at": "2026-07-05T15:48:59.252702+00:00"
 }

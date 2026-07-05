@@ -37,6 +37,9 @@
   .brand span { color: var(--on-surface); opacity: 0.4; }
   .icon-btn { background: none; border: none; cursor: pointer; color: var(--on-surface); padding: 6px; display: flex; align-items: center; }
   .icon-btn:hover { color: var(--red-dim); }
+  .icon-btn.spinning { pointer-events: none; }
+  .icon-btn.spinning span { animation: spin 0.7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
 
   main { flex: 1; padding-bottom: 80px; }
 
@@ -382,7 +385,7 @@
 <header class="topbar">
   <div class="topbar-inner">
     <div class="brand">Full Grid Sweep - Race Results</div>
-    <button class="icon-btn"><span class="material-symbols-outlined">settings</span></button>
+    <button class="icon-btn" id="refresh-btn" title="Refresh now" onclick="manualRefresh()"><span class="material-symbols-outlined">refresh</span></button>
   </div>
 </header>
 
@@ -454,7 +457,7 @@
 <script>
 // ── LIVE CONFIG ────────────────────────────────────────────────────────────
 const LIVE_BASE = 'live/';                  // folder: live/results.json etc.
-const REFRESH_MS = 10 * 60 * 1000;         // 10 minutes
+const REFRESH_MS = 2 * 60 * 1000;          // 2 minutes
 const REFRESH_S  = REFRESH_MS / 1000;
 
 // ── MODULE STATE ───────────────────────────────────────────────────────────
@@ -635,6 +638,19 @@ function updateCountdown() {
   const m = Math.floor(countdownSec / 60);
   const s = String(countdownSec % 60).padStart(2, '0');
   el.textContent = `· refresh in ${m}:${s}`;
+}
+
+async function manualRefresh() {
+  if (!isLive) return;
+  const btn = document.getElementById('refresh-btn');
+  btn.classList.add('spinning');
+  const ok = await loadLive();
+  if (ok) {
+    selectedRace = Math.max(...RESULTS.map(r => r.race_number));
+    render();
+  }
+  btn.classList.remove('spinning');
+  startRefreshCycle();
 }
 
 // ── RENDER ─────────────────────────────────────────────────────────────────

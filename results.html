@@ -182,6 +182,7 @@
   }
   .p-picks sup { font-size: 0.65em; margin-left: 1px; }
   .p-picks .pick-c, .p-picks .pick-mc { color: var(--red); }
+  .p-picks .pick-ff-out { color: var(--on-30); text-decoration: line-through; }
 
   .round-btn.live-btn {
     background: rgba(225,6,0,0.12); border-bottom: 2px solid var(--red);
@@ -758,7 +759,7 @@ function picksForTeam(raceNum, userName) {
   return (PICKS || [])
     .filter(pp => pp.race_number === raceNum && pp.user_name === userName)
     .sort((a, b) => {
-      const order = x => x.is_megacap ? 0 : x.is_captain ? 1 : x.pick_type === 'Driver' ? 2 : 3;
+      const order = x => x.is_finalfix_out ? 0 : x.is_megacap ? 1 : x.is_captain ? 2 : x.pick_type === 'Driver' ? 3 : 4;
       return order(a) - order(b);
     });
 }
@@ -791,6 +792,7 @@ function lookupTla(pp) {
 function formatPicksHtml(picks) {
   return picks.map(pp => {
     const tla = lookupTla(pp);
+    if (pp.is_finalfix_out) return `<span class="pick-ff-out" title="Swapped out via Final Fix (qualifying pts only)">${tla}<sup>FF</sup></span>`;
     if (pp.is_megacap) return `<span class="pick-mc">${tla}<sup>MC</sup></span>`;
     if (pp.is_captain)  return `<span class="pick-c">${tla}<sup>C</sup></span>`;
     return `<span class="pick-d">${tla}</span>`;

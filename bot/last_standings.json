@@ -1,6 +1,6 @@
 {
   "gameday_id": "10",
-  "session_type": "qualifying",
+  "session_type": "race",
   "ranking_hash": "6e19783b8c009cc55c0948e3c336d1ab",
   "scores": {
     "Fabio Mucci": 0,
@@ -16,5 +16,5 @@
     "Ricardo Mucci": 0
   },
   "post_race_sent": false,
-  "saved_at": "2026-07-18T12:38:36.774637+00:00"
+  "saved_at": "2026-07-18T13:26:55.541902+00:00"
 }

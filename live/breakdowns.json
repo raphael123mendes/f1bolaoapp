@@ -22076,8 +22076,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 90
+    "breakdown_points": 5,
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22096,8 +22096,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 90
+    "breakdown_points": 6,
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22116,8 +22116,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 90
+    "breakdown_points": 8,
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22136,8 +22136,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 90
+    "breakdown_points": 7,
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22156,8 +22156,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 7,
-    "pick_points_gd": 90
+    "breakdown_points": 9,
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22176,8 +22176,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 90
+    "breakdown_points": 11,
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22197,7 +22197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 90
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22216,8 +22216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 90
+    "breakdown_points": 17,
+    "pick_points_gd": 88
   },
   {
     "race_number": 10,
@@ -22237,7 +22237,187 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 90
+    "pick_points_gd": 88
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "13",
+    "pick_name": "V. Bottas",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "131",
+    "pick_name": "M. Verstappen",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 9,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "2636",
+    "pick_name": "Racing Bulls",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "2636",
+    "pick_name": "Racing Bulls",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "One Driver Q3",
+    "breakdown_points": 5,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 17,
+    "pick_points_gd": 75
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 9,
+    "race_rank": 2,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 75
   },
   {
     "race_number": 10,
@@ -22245,7 +22425,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11051",
@@ -22257,7 +22437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22265,7 +22445,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "111",
@@ -22277,7 +22457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22285,7 +22465,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11149",
@@ -22297,7 +22477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22305,7 +22485,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11161",
@@ -22316,8 +22496,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 71
+    "breakdown_points": 10,
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22325,7 +22505,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "114",
@@ -22337,7 +22517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22345,7 +22525,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "25",
@@ -22356,8 +22536,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 71
+    "breakdown_points": 11,
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22365,7 +22545,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "25",
@@ -22377,7 +22557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22385,7 +22565,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -22396,8 +22576,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 71
+    "breakdown_points": 17,
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22405,7 +22585,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -22417,7 +22597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22425,7 +22605,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -22437,7 +22617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22445,7 +22625,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11051",
@@ -22457,7 +22637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22465,7 +22645,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11059",
@@ -22477,7 +22657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22485,7 +22665,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11149",
@@ -22497,7 +22677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22505,7 +22685,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -22516,8 +22696,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 71
+    "breakdown_points": 10,
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22525,7 +22705,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -22536,8 +22716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 71
+    "breakdown_points": 11,
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22545,7 +22725,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "25",
@@ -22557,7 +22737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22565,7 +22745,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -22576,8 +22756,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 71
+    "breakdown_points": 17,
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22585,7 +22765,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 5,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -22597,7 +22777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 71
+    "pick_points_gd": 73
   },
   {
     "race_number": 10,
@@ -22605,7 +22785,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11032",
@@ -22617,7 +22797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 70
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22625,7 +22805,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "111",
@@ -22637,7 +22817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22645,7 +22825,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11149",
@@ -22657,7 +22837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 70
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22665,7 +22845,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "11161",
@@ -22676,8 +22856,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 70
+    "breakdown_points": 10,
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22685,7 +22865,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "114",
@@ -22697,7 +22877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22705,7 +22885,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -22716,8 +22896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 70
+    "breakdown_points": 11,
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22725,7 +22905,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "25",
@@ -22737,7 +22917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 70
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22745,7 +22925,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "28",
@@ -22756,8 +22936,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 70
+    "breakdown_points": 17,
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22765,7 +22945,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 6,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
     "pick_id": "28",
@@ -22777,187 +22957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 70
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "13",
-    "pick_name": "V. Bottas",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 69
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 1,
-    "race_rank": 5,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 69
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22977,7 +22977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 69
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -22997,7 +22997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 69
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -23016,8 +23016,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 69
+    "breakdown_points": 10,
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -23037,7 +23037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 69
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -23057,7 +23057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 69
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -23076,8 +23076,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 69
+    "breakdown_points": 12,
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -23097,7 +23097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 69
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -23116,8 +23116,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 69
+    "breakdown_points": 17,
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
@@ -23137,17 +23137,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 69
+    "pick_points_gd": 72
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
     "pick_id": "111",
     "pick_name": "N. Hulkenberg",
     "pick_type": "Driver",
@@ -23157,17 +23157,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 64
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
     "pick_id": "11149",
     "pick_name": "A. Lindblad",
     "pick_type": "Driver",
@@ -23177,17 +23177,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 64
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
     "pick_id": "11161",
     "pick_name": "K. Antonelli",
     "pick_type": "Driver",
@@ -23196,18 +23196,38 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 64
+    "breakdown_points": 10,
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 71
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 1,
+    "race_rank": 7,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
     "pick_id": "13",
     "pick_name": "V. Bottas",
     "pick_type": "Driver",
@@ -23217,77 +23237,57 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 64
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "131",
-    "pick_name": "M. Verstappen",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 7,
-    "pick_points_gd": 64
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 9,
-    "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "2636",
-    "pick_name": "Racing Bulls",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 64
+    "breakdown_points": 11,
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "2636",
-    "pick_name": "Racing Bulls",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "One Driver Q3",
-    "breakdown_points": 5,
-    "pick_points_gd": 64
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
     "pick_id": "28",
     "pick_name": "Mercedes",
     "pick_type": "Constructor",
@@ -23296,18 +23296,18 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 64
+    "breakdown_points": 17,
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
     "race_name": "Belgian Grand Prix",
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
-    "season_rank": 9,
+    "season_rank": 1,
     "race_rank": 7,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
     "pick_id": "28",
     "pick_name": "Mercedes",
     "pick_type": "Constructor",
@@ -23317,7 +23317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 64
+    "pick_points_gd": 71
   },
   {
     "race_number": 10,
@@ -23336,8 +23336,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 56
+    "breakdown_points": 5,
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23357,7 +23357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23377,7 +23377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 56
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23396,8 +23396,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 56
+    "breakdown_points": 10,
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23417,7 +23417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 56
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23437,7 +23437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 56
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23457,7 +23457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 56
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23476,8 +23476,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 56
+    "breakdown_points": 17,
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23497,187 +23497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 56
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "114",
-    "pick_name": "L. Lawson",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "124",
-    "pick_name": "G. Russell",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 54
-  },
-  {
-    "race_number": 10,
-    "race_name": "Belgian Grand Prix",
-    "race_flag": "🇧🇪",
-    "race_date": "2026-07-18",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "One Driver Q3",
-    "breakdown_points": 5,
-    "pick_points_gd": 54
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23685,7 +23505,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "11059",
@@ -23697,7 +23517,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 53
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23705,7 +23525,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "11149",
@@ -23717,7 +23537,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 53
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23725,7 +23545,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "11161",
@@ -23736,8 +23556,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 53
+    "breakdown_points": 10,
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23745,7 +23565,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "114",
@@ -23757,7 +23577,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 53
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23765,7 +23585,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "118",
@@ -23777,7 +23597,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 53
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23785,7 +23605,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "2636",
@@ -23797,7 +23617,7 @@
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 53
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23805,7 +23625,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "2636",
@@ -23817,7 +23637,7 @@
     "no_neg_applied": true,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 53
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23825,7 +23645,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "28",
@@ -23836,8 +23656,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": true,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 53
+    "breakdown_points": 17,
+    "pick_points_gd": 58
   },
   {
     "race_number": 10,
@@ -23845,7 +23665,7 @@
     "race_flag": "🇧🇪",
     "race_date": "2026-07-18",
     "season_rank": 11,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
     "pick_id": "28",
@@ -23857,7 +23677,187 @@
     "no_neg_applied": true,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 53
+    "pick_points_gd": 58
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "114",
+    "pick_name": "L. Lawson",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "115",
+    "pick_name": "C. Leclerc",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 6,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "124",
+    "pick_name": "G. Russell",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 7,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 11,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 49
+  },
+  {
+    "race_number": 10,
+    "race_name": "Belgian Grand Prix",
+    "race_flag": "🇧🇪",
+    "race_date": "2026-07-18",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "One Driver Q3",
+    "breakdown_points": 5,
+    "pick_points_gd": 49
   },
   {
     "race_number": 10,
@@ -23876,8 +23876,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 48
+    "breakdown_points": 5,
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -23897,7 +23897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 48
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -23917,7 +23917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 48
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -23937,7 +23937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 48
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -23957,7 +23957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 48
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -23976,8 +23976,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 14,
-    "pick_points_gd": 48
+    "breakdown_points": 11,
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -23997,7 +23997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 48
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -24017,7 +24017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 48
+    "pick_points_gd": 43
   },
   {
     "race_number": 10,
@@ -24037,6 +24037,6 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 48
+    "pick_points_gd": 43
   }
 ]

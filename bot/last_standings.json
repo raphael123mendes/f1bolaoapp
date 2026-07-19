@@ -1,6 +1,6 @@
 {
   "gameday_id": "10",
-  "session_type": "qualifying",
+  "session_type": "race",
   "ranking_hash": "b5f1f806798bec04be7235d0ea57a431",
   "scores": {
     "Guilherme Figueiredo": 88,
@@ -15,6 +15,6 @@
     "Eduardo Santos Lima": 49,
     "Vinicius Agostini": 43
   },
-  "post_race_sent": true,
-  "saved_at": "2026-07-18T15:14:46.282454+00:00"
+  "post_race_sent": false,
+  "saved_at": "2026-07-19T12:34:42.035272+00:00"
 }

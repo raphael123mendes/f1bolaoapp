@@ -10,8 +10,8 @@
     "rank_change": 0,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
-    "total_points": 2759.0,
-    "gd_points": 170.0,
+    "total_points": 2823.0,
+    "gd_points": 234.0,
     "budget_remaining": 2.7,
     "team_value": 111.5,
     "cards_used": [],
@@ -22,11 +22,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +7"
         ]
       },
       {
@@ -35,11 +36,12 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -48,11 +50,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +1",
           "Qualifying Position: +2",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -61,11 +64,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 7,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -74,11 +78,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 4,
+        "points_gd": 9,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -87,12 +92,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 45,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +21",
           "Qualifying Position: +11",
           "Both Driver Q3: +10",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
         ]
       },
       {
@@ -101,13 +108,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 57,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +22",
           "Qualifying Position: +17",
           "Both Driver Q3: +10",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
         ]
       }
     ]
@@ -119,12 +128,12 @@
     "race_date": "2026-07-26",
     "rank": 2,
     "overall_rank": 2,
-    "live_gd_rank": 6,
+    "live_gd_rank": 7,
     "rank_change": 0,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
-    "total_points": 2684.0,
-    "gd_points": 147.0,
+    "total_points": 2745.0,
+    "gd_points": 208.0,
     "budget_remaining": 0.8,
     "team_value": 107.3,
     "cards_used": [],
@@ -135,11 +144,12 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -148,11 +158,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 4,
+        "points_gd": 9,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -161,10 +172,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -20,
+        "points_gd": -16,
         "breakdown": [
           "Qualifying Position: +0",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +4"
         ]
       },
       {
@@ -173,11 +185,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +1",
           "Qualifying Position: +2",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -186,11 +199,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 7,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -199,13 +213,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 57,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +22",
           "Qualifying Position: +17",
           "Both Driver Q3: +10",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
         ]
       },
       {
@@ -214,124 +230,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 45,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +21",
           "Qualifying Position: +11",
           "Both Driver Q3: +10",
-          "Race position gained: +3"
-        ]
-      }
-    ]
-  },
-  {
-    "race_number": 11,
-    "race_name": "Hungarian Grand Prix",
-    "race_flag": "🇭🇺",
-    "race_date": "2026-07-26",
-    "rank": 3,
-    "overall_rank": 3,
-    "live_gd_rank": 5,
-    "rank_change": 0,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "total_points": 2627.0,
-    "gd_points": 153.0,
-    "budget_remaining": 0.6,
-    "team_value": 111.5,
-    "cards_used": [],
-    "picks": [
-      {
-        "id": "111",
-        "name": "Nico Hulkenberg",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 4,
-        "breakdown": [
-          "Race Position: +2",
-          "Qualifying Position: +1",
-          "Race position gained: +1"
-        ]
-      },
-      {
-        "id": "13",
-        "name": "Valtteri Bottas",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": -20,
-        "breakdown": [
-          "Qualifying Position: +0",
-          "Race not classified : -20"
-        ]
-      },
-      {
-        "id": "11149",
-        "name": "Arvid Lindblad",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 2,
-        "breakdown": [
-          "Race Position: +1",
-          "Qualifying Position: +2",
-          "Race Position lost: -1"
-        ]
-      },
-      {
-        "id": "11032",
-        "name": "Isack Hadjar",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 13,
-        "breakdown": [
-          "Race Position: +8",
-          "Qualifying Position: +3",
-          "Race position gained: +2"
-        ]
-      },
-      {
-        "id": "11161",
-        "name": "Kimi Antonelli",
-        "type": "Driver",
-        "is_captain": true,
-        "is_megacap": false,
-        "points_gd": 26,
-        "breakdown": [
-          "Race Position: +15",
-          "Qualifying Position: +7",
-          "Race position gained: +4"
-        ]
-      },
-      {
-        "id": "25",
-        "name": "Ferrari",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 57,
-        "breakdown": [
-          "Race Position: +22",
-          "Qualifying Position: +17",
-          "Both Driver Q3: +10",
-          "Race Position lost: -2",
-          "Race Fastest lap: +10"
-        ]
-      },
-      {
-        "id": "28",
-        "name": "Mercedes",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 45,
-        "breakdown": [
-          "Race Position: +21",
-          "Qualifying Position: +11",
-          "Both Driver Q3: +10",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
         ]
       }
     ]
@@ -342,13 +248,13 @@
     "race_flag": "🇭🇺",
     "race_date": "2026-07-26",
     "rank": 4,
-    "overall_rank": 4,
+    "overall_rank": 3,
     "live_gd_rank": 3,
-    "rank_change": 0,
+    "rank_change": 1,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
-    "total_points": 2625.0,
-    "gd_points": 176.0,
+    "total_points": 2685.0,
+    "gd_points": 236.0,
     "budget_remaining": 2.3,
     "team_value": 115.7,
     "cards_used": [],
@@ -359,11 +265,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 13,
+        "points_gd": 15,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +3",
-          "Race position gained: +2"
+          "Race position gained: +2",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -372,11 +279,12 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -385,11 +293,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 4,
+        "points_gd": 9,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -398,11 +307,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +7"
         ]
       },
       {
@@ -411,11 +321,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +1",
           "Qualifying Position: +2",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -424,13 +335,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 57,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +22",
           "Qualifying Position: +17",
           "Both Driver Q3: +10",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
         ]
       },
       {
@@ -439,12 +352,135 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 45,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +21",
           "Qualifying Position: +11",
           "Both Driver Q3: +10",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 11,
+    "race_name": "Hungarian Grand Prix",
+    "race_flag": "🇭🇺",
+    "race_date": "2026-07-26",
+    "rank": 3,
+    "overall_rank": 4,
+    "live_gd_rank": 6,
+    "rank_change": -1,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "total_points": 2684.0,
+    "gd_points": 210.0,
+    "budget_remaining": 0.6,
+    "team_value": 111.5,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 9,
+        "breakdown": [
+          "Race Position: +2",
+          "Qualifying Position: +1",
+          "Race position gained: +1",
+          "race overtake bonus: +5"
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Valtteri Bottas",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -16,
+        "breakdown": [
+          "Qualifying Position: +0",
+          "Race not classified : -20",
+          "race overtake bonus: +4"
+        ]
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 4,
+        "breakdown": [
+          "Race Position: +1",
+          "Qualifying Position: +2",
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
+        ]
+      },
+      {
+        "id": "11032",
+        "name": "Isack Hadjar",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +8",
+          "Qualifying Position: +3",
+          "Race position gained: +2",
+          "race overtake bonus: +2"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +15",
+          "Qualifying Position: +7",
+          "Race position gained: +4",
+          "race overtake bonus: +2"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 71,
+        "breakdown": [
+          "Race Position: +22",
+          "Qualifying Position: +17",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 71,
+        "breakdown": [
+          "Race Position: +21",
+          "Qualifying Position: +11",
+          "Both Driver Q3: +10",
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
         ]
       }
     ]
@@ -456,12 +492,12 @@
     "race_date": "2026-07-26",
     "rank": 5,
     "overall_rank": 5,
-    "live_gd_rank": 8,
+    "live_gd_rank": 9,
     "rank_change": 0,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
-    "total_points": 2556.0,
-    "gd_points": 141.0,
+    "total_points": 2617.0,
+    "gd_points": 202.0,
     "budget_remaining": 0.7,
     "team_value": 108.8,
     "cards_used": [],
@@ -472,11 +508,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +1",
           "Qualifying Position: +2",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -485,11 +522,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +2"
+          "Race position gained: +2",
+          "race overtake bonus: +8"
         ]
       },
       {
@@ -498,11 +536,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +7"
         ]
       },
       {
@@ -511,11 +550,12 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -536,12 +576,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 45,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +21",
           "Qualifying Position: +11",
           "Both Driver Q3: +10",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
         ]
       },
       {
@@ -550,13 +592,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 57,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +22",
           "Qualifying Position: +17",
           "Both Driver Q3: +10",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
         ]
       }
     ]
@@ -568,12 +612,12 @@
     "race_date": "2026-07-26",
     "rank": 6,
     "overall_rank": 6,
-    "live_gd_rank": 1,
+    "live_gd_rank": 2,
     "rank_change": 0,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
-    "total_points": 2516.0,
-    "gd_points": 179.0,
+    "total_points": 2574.0,
+    "gd_points": 237.0,
     "budget_remaining": 1.5,
     "team_value": 121.5,
     "cards_used": [],
@@ -584,10 +628,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 35,
+        "points_gd": 37,
         "breakdown": [
           "Race Position: +25",
-          "Qualifying Position: +10"
+          "Qualifying Position: +10",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -596,11 +641,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 7,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -609,11 +655,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -622,11 +669,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 4,
+        "points_gd": 9,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -635,10 +683,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 19,
+        "points_gd": 25,
         "breakdown": [
           "Race Position: +10",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -647,13 +696,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 57,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +22",
           "Qualifying Position: +17",
           "Both Driver Q3: +10",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
         ]
       },
       {
@@ -662,12 +713,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 12,
+        "points_gd": 29,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +1",
           "One Driver Q3: +5",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +12"
         ]
       }
     ]
@@ -679,12 +732,12 @@
     "race_date": "2026-07-26",
     "rank": 7,
     "overall_rank": 7,
-    "live_gd_rank": 7,
+    "live_gd_rank": 8,
     "rank_change": 0,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
-    "total_points": 2484.0,
-    "gd_points": 143.0,
+    "total_points": 2546.0,
+    "gd_points": 205.0,
     "budget_remaining": 1.9,
     "team_value": 104.8,
     "cards_used": [],
@@ -695,11 +748,12 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -708,11 +762,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 4,
+        "points_gd": 9,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -721,11 +776,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +7"
         ]
       },
       {
@@ -734,11 +790,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +1",
           "Qualifying Position: +2",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -747,10 +804,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -20,
+        "points_gd": -16,
         "breakdown": [
           "Qualifying Position: +0",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +4"
         ]
       },
       {
@@ -759,12 +817,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 45,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +21",
           "Qualifying Position: +11",
           "Both Driver Q3: +10",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
         ]
       },
       {
@@ -773,13 +833,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 57,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +22",
           "Qualifying Position: +17",
           "Both Driver Q3: +10",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
         ]
       }
     ]
@@ -791,125 +853,12 @@
     "race_date": "2026-07-26",
     "rank": 8,
     "overall_rank": 8,
-    "live_gd_rank": 2,
-    "rank_change": 0,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "total_points": 2445.0,
-    "gd_points": 177.0,
-    "budget_remaining": 1.2,
-    "team_value": 116.5,
-    "cards_used": [],
-    "picks": [
-      {
-        "id": "11032",
-        "name": "Isack Hadjar",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 13,
-        "breakdown": [
-          "Race Position: +8",
-          "Qualifying Position: +3",
-          "Race position gained: +2"
-        ]
-      },
-      {
-        "id": "115",
-        "name": "Charles Leclerc",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 28,
-        "breakdown": [
-          "Race Position: +12",
-          "Qualifying Position: +8",
-          "Race Position lost: -2",
-          "Race Fastest lap: +10"
-        ]
-      },
-      {
-        "id": "117",
-        "name": "Lando Norris",
-        "type": "Driver",
-        "is_captain": true,
-        "is_megacap": false,
-        "points_gd": 35,
-        "breakdown": [
-          "Race Position: +25",
-          "Qualifying Position: +10"
-        ]
-      },
-      {
-        "id": "11149",
-        "name": "Arvid Lindblad",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 2,
-        "breakdown": [
-          "Race Position: +1",
-          "Qualifying Position: +2",
-          "Race Position lost: -1"
-        ]
-      },
-      {
-        "id": "11051",
-        "name": "Gabriel Bortoleto",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 3,
-        "breakdown": [
-          "Race Position: +0",
-          "Qualifying Position: +0",
-          "Race position gained: +3"
-        ]
-      },
-      {
-        "id": "25",
-        "name": "Ferrari",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 57,
-        "breakdown": [
-          "Race Position: +22",
-          "Qualifying Position: +17",
-          "Both Driver Q3: +10",
-          "Race Position lost: -2",
-          "Race Fastest lap: +10"
-        ]
-      },
-      {
-        "id": "2636",
-        "name": "Racing Bulls",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 14,
-        "breakdown": [
-          "Race Position: +5",
-          "Qualifying Position: +2",
-          "One Driver Q3: +5",
-          "Race position gained: +2"
-        ]
-      }
-    ]
-  },
-  {
-    "race_number": 11,
-    "race_name": "Hungarian Grand Prix",
-    "race_flag": "🇭🇺",
-    "race_date": "2026-07-26",
-    "rank": 8,
-    "overall_rank": 8,
-    "live_gd_rank": 9,
+    "live_gd_rank": 5,
     "rank_change": 0,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
-    "total_points": 2445.0,
-    "gd_points": 130.0,
+    "total_points": 2531.0,
+    "gd_points": 216.0,
     "budget_remaining": 0.4,
     "team_value": 119.6,
     "cards_used": [],
@@ -920,10 +869,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 19,
+        "points_gd": 25,
         "breakdown": [
           "Race Position: +10",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -932,11 +882,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -2,
+        "points_gd": 3,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -945,11 +896,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -958,11 +910,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +1",
           "Qualifying Position: +2",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -971,11 +924,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 7,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -984,12 +938,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 45,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +21",
           "Qualifying Position: +11",
           "Both Driver Q3: +10",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
         ]
       },
       {
@@ -998,12 +954,138 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 14,
+        "points_gd": 47,
         "breakdown": [
           "Race Position: +5",
           "Qualifying Position: +2",
           "One Driver Q3: +5",
-          "Race position gained: +2"
+          "Race position gained: +2",
+          "Fastest Pitstop: +20",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +8"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 11,
+    "race_name": "Hungarian Grand Prix",
+    "race_flag": "🇭🇺",
+    "race_date": "2026-07-26",
+    "rank": 8,
+    "overall_rank": 9,
+    "live_gd_rank": 1,
+    "rank_change": -1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "total_points": 2510.0,
+    "gd_points": 242.0,
+    "budget_remaining": 1.2,
+    "team_value": 116.5,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11032",
+        "name": "Isack Hadjar",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +8",
+          "Qualifying Position: +3",
+          "Race position gained: +2",
+          "race overtake bonus: +2"
+        ]
+      },
+      {
+        "id": "115",
+        "name": "Charles Leclerc",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 31,
+        "breakdown": [
+          "Race Position: +12",
+          "Qualifying Position: +8",
+          "Race Position lost: -2",
+          "Race Fastest lap: +10",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "117",
+        "name": "Lando Norris",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 37,
+        "breakdown": [
+          "Race Position: +25",
+          "Qualifying Position: +10",
+          "race overtake bonus: +2"
+        ]
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 4,
+        "breakdown": [
+          "Race Position: +1",
+          "Qualifying Position: +2",
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
+        ]
+      },
+      {
+        "id": "11051",
+        "name": "Gabriel Bortoleto",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 10,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +3",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 71,
+        "breakdown": [
+          "Race Position: +22",
+          "Qualifying Position: +17",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
+        ]
+      },
+      {
+        "id": "2636",
+        "name": "Racing Bulls",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 47,
+        "breakdown": [
+          "Race Position: +5",
+          "Qualifying Position: +2",
+          "One Driver Q3: +5",
+          "Race position gained: +2",
+          "Fastest Pitstop: +20",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +8"
         ]
       }
     ]
@@ -1015,12 +1097,12 @@
     "race_date": "2026-07-26",
     "rank": 10,
     "overall_rank": 10,
-    "live_gd_rank": 11,
+    "live_gd_rank": 10,
     "rank_change": 0,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
-    "total_points": 2008.0,
-    "gd_points": 117.0,
+    "total_points": 2089.0,
+    "gd_points": 198.0,
     "budget_remaining": 3.2,
     "team_value": 108.8,
     "cards_used": [],
@@ -1031,11 +1113,12 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 26,
+        "points_gd": 28,
         "breakdown": [
           "Race Position: +15",
           "Qualifying Position: +7",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -1044,11 +1127,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -2,
+        "points_gd": 3,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -1057,11 +1141,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -1070,11 +1155,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +1",
           "Qualifying Position: +2",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +2"
         ]
       },
       {
@@ -1083,11 +1169,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 7,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -1096,12 +1183,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 45,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +21",
           "Qualifying Position: +11",
           "Both Driver Q3: +10",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "Fastest Pitstop: +10",
+          "race overtake bonus: +16"
         ]
       },
       {
@@ -1110,12 +1199,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 14,
+        "points_gd": 47,
         "breakdown": [
           "Race Position: +5",
           "Qualifying Position: +2",
           "One Driver Q3: +5",
-          "Race position gained: +2"
+          "Race position gained: +2",
+          "Fastest Pitstop: +20",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +8"
         ]
       }
     ]
@@ -1127,12 +1219,12 @@
     "race_date": "2026-07-26",
     "rank": 11,
     "overall_rank": 11,
-    "live_gd_rank": 10,
+    "live_gd_rank": 11,
     "rank_change": 0,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
-    "total_points": 1774.0,
-    "gd_points": 124.0,
+    "total_points": 1838.0,
+    "gd_points": 188.0,
     "budget_remaining": 0.0,
     "team_value": 105.4,
     "cards_used": [],
@@ -1143,12 +1235,13 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 28,
+        "points_gd": 31,
         "breakdown": [
           "Race Position: +12",
           "Qualifying Position: +8",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "race overtake bonus: +3"
         ]
       },
       {
@@ -1157,11 +1250,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 23,
         "breakdown": [
           "Race Position: +6",
           "Qualifying Position: +4",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -1182,11 +1276,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 7,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -1195,11 +1290,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +7"
         ]
       },
       {
@@ -1208,13 +1304,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 57,
+        "points_gd": 71,
         "breakdown": [
           "Race Position: +22",
           "Qualifying Position: +17",
           "Both Driver Q3: +10",
           "Race Position lost: -2",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +9"
         ]
       },
       {
@@ -1223,12 +1321,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 12,
+        "points_gd": 29,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +1",
           "One Driver Q3: +5",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +12"
         ]
       }
     ]

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T14:53:37.256063+00:00",
+  "updated_at": "2026-07-26T16:05:53.757889+00:00",
   "total_rows": 88,
   "races_covered": [
     1,
@@ -3590,7 +3590,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:33.587555+00:00"
+      "fetched_at": "2026-07-26T16:05:50.406918+00:00"
     },
     {
       "user_guid": "0b3f0038-1368-11f1-a688-fd3d4158bf79-0-35279052",
@@ -3630,7 +3630,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:34.164961+00:00"
+      "fetched_at": "2026-07-26T16:05:50.928731+00:00"
     },
     {
       "user_guid": "0f3b086c-1381-11f1-8199-6735aa542fc4-0-179110003",
@@ -3666,12 +3666,12 @@
         "Mercedes"
       ],
       "transfers_out": [
-        "131",
-        "2636"
+        "2636",
+        "131"
       ],
       "transfers_out_names": [
-        "Max Verstappen",
-        "Racing Bulls"
+        "Racing Bulls",
+        "Max Verstappen"
       ],
       "transfers_in": [
         "11032",
@@ -3682,7 +3682,7 @@
         "Ferrari"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:33.006760+00:00"
+      "fetched_at": "2026-07-26T16:05:49.884546+00:00"
     },
     {
       "user_guid": "23694378-196a-11f1-95f5-bf4745e2ae8a-0-190698143",
@@ -3734,7 +3734,7 @@
         "Nico Hulkenberg"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:32.431285+00:00"
+      "fetched_at": "2026-07-26T16:05:49.362484+00:00"
     },
     {
       "user_guid": "d16d9b66-1840-11f1-8fd8-f70cd60e50e6-0-202971566",
@@ -3770,35 +3770,35 @@
         "Ferrari"
       ],
       "transfers_out": [
+        "110",
+        "115",
         "131",
         "117",
-        "124",
-        "110",
-        "115"
+        "124"
       ],
       "transfers_out_names": [
+        "Lewis Hamilton",
+        "Charles Leclerc",
         "Max Verstappen",
         "Lando Norris",
-        "George Russell",
-        "Lewis Hamilton",
-        "Charles Leclerc"
+        "George Russell"
       ],
       "transfers_in": [
+        "11161",
         "12",
         "121",
         "11051",
-        "11149",
-        "11161"
+        "11149"
       ],
       "transfers_in_names": [
+        "Kimi Antonelli",
         "Fernando Alonso",
         "Sergio Perez",
         "Gabriel Bortoleto",
-        "Arvid Lindblad",
-        "Kimi Antonelli"
+        "Arvid Lindblad"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:31.279622+00:00"
+      "fetched_at": "2026-07-26T16:05:48.319933+00:00"
     },
     {
       "user_guid": "6cbc08a2-1844-11f1-a808-cb32621ceb82-0-34753001",
@@ -3842,15 +3842,15 @@
         "Lance Stroll"
       ],
       "transfers_in": [
-        "11051",
-        "25"
+        "25",
+        "11051"
       ],
       "transfers_in_names": [
-        "Gabriel Bortoleto",
-        "Ferrari"
+        "Ferrari",
+        "Gabriel Bortoleto"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:35.896605+00:00"
+      "fetched_at": "2026-07-26T16:05:52.512955+00:00"
     },
     {
       "user_guid": "af5b6c4a-11b7-11f1-a6ba-3bae984dbbac-0-34875001",
@@ -3896,17 +3896,17 @@
         "Arvid Lindblad"
       ],
       "transfers_in": [
-        "2640",
         "110",
-        "117"
+        "117",
+        "2640"
       ],
       "transfers_in_names": [
-        "Audi",
         "Lewis Hamilton",
-        "Lando Norris"
+        "Lando Norris",
+        "Audi"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:31.853522+00:00"
+      "fetched_at": "2026-07-26T16:05:48.840364+00:00"
     },
     {
       "user_guid": "2165dde2-11b9-11f1-94eb-47ffa4421334-0-178889519",
@@ -3946,7 +3946,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:36.476595+00:00"
+      "fetched_at": "2026-07-26T16:05:53.034939+00:00"
     },
     {
       "user_guid": "7f6dff66-11fd-11f1-bed2-d5a4efa941d4-0-178877659",
@@ -3982,27 +3982,27 @@
         "Racing Bulls"
       ],
       "transfers_out": [
-        "114",
         "110",
+        "114",
         "11059"
       ],
       "transfers_out_names": [
-        "Liam Lawson",
         "Lewis Hamilton",
+        "Liam Lawson",
         "Franco Colapinto"
       ],
       "transfers_in": [
+        "117",
         "11051",
-        "115",
-        "117"
+        "115"
       ],
       "transfers_in_names": [
+        "Lando Norris",
         "Gabriel Bortoleto",
-        "Charles Leclerc",
-        "Lando Norris"
+        "Charles Leclerc"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:35.320947+00:00"
+      "fetched_at": "2026-07-26T16:05:51.971796+00:00"
     },
     {
       "user_guid": "7f451c50-11bb-11f1-89ff-6508e30e59f0-0-34802661",
@@ -4042,7 +4042,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:34.742792+00:00"
+      "fetched_at": "2026-07-26T16:05:51.446287+00:00"
     },
     {
       "user_guid": "88597cc6-190b-11f1-aa99-f79ef14ce400-0-45799881",
@@ -4082,7 +4082,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-07-26T14:53:37.055817+00:00"
+      "fetched_at": "2026-07-26T16:05:53.557617+00:00"
     }
   ]
 }

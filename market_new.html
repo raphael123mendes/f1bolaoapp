@@ -253,30 +253,7 @@
       <div class="hero-sentiment-bg material-symbols-outlined" id="sentiment-icon">trending_up</div>
       <div class="hero-label">Market Sentiment</div>
       <div class="hero-title" id="sentiment-title">—</div>
-    </div>
-
-    <div class="hero-card eff">
-      <div class="hero-card-label">Best Value</div>
-      <div class="hero-card-value" id="eff-value">—</div>
-      <div class="hero-card-sub"><span id="eff-price" style="color:var(--red-dim);font-weight:800"></span> Pts / $M</div>
-      <div class="hero-card-entity" id="eff-entity">—</div>
-      <span class="material-symbols-outlined hero-card-icon">trending_up</span>
-    </div>
-
-    <div class="hero-card vol">
-      <div class="hero-card-label">Best Performer</div>
-      <div class="hero-card-value" id="vol-value">—</div>
-      <div class="hero-card-sub"><span id="vol-delta" style="color:var(--green);font-weight:800"></span> Price Gain</div>
-      <div class="hero-card-entity" id="vol-entity">—</div>
-      <span class="material-symbols-outlined hero-card-icon">arrow_drop_up</span>
-    </div>
-
-    <div class="hero-card vol" style="border-left-color:var(--red-dim)">
-      <div class="hero-card-label" style="color:var(--red-dim)">Worst Performer</div>
-      <div class="hero-card-value" id="worst-value">—</div>
-      <div class="hero-card-sub"><span id="worst-delta" style="color:var(--red-dim);font-weight:800"></span> Price Loss</div>
-      <div class="hero-card-entity" id="worst-entity">—</div>
-      <span class="material-symbols-outlined hero-card-icon">arrow_drop_down</span>
+      <div class="hero-sentiment-stats" id="sentiment-stats"></div>
     </div>
   </div>
 
@@ -490,23 +467,31 @@ async function init() {
     const sentIcon = document.getElementById('sentiment-icon');
     sentIcon.textContent = bullish ? 'trending_up' : 'trending_down';
 
-    if (bestEff) {
-      document.getElementById('eff-value').textContent = bestEff.pts_per_m.toFixed(1);
-      document.getElementById('eff-entity').textContent = bestEff.name;
-      document.getElementById('eff-price').textContent = `$${bestEff.price.toFixed(1)}M`;
+    const statsEl = document.getElementById('sentiment-stats');
+    function statHTML(label, entity, val, valClass, isLogo) {
+      return `<div class="hero-stat" style="cursor:pointer" onclick="window.location.href='driver.html?entity='+encodeURIComponent('${entity.name}')">
+        <div class="hero-stat-label">${label}</div>
+        <div class="hero-stat-row">
+          <img class="hero-stat-thumb${isLogo ? ' logo' : ''}" src="${entity.img}" alt="" onerror="this.style.display='none'"/>
+          <div>
+            <div class="hero-stat-name">${entity.name.split(' ')[0]}</div>
+            <div class="hero-stat-val ${valClass}">${val}</div>
+          </div>
+        </div>
+      </div>`;
     }
 
-    // Best Performer (top riser)
-    const riserSign = riser.price_change_pct > 0 ? '+' : '';
-    document.getElementById('vol-value').textContent = `${riserSign}${riser.price_change_pct.toFixed(1)}%`;
-    document.getElementById('vol-entity').textContent = riser.name;
-    document.getElementById('vol-delta').textContent = `${riserSign}$${Math.abs(riser.price_change).toFixed(1)}M`;
+    // Calculate best value (highest pts_per_m)
+    const bestValue = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
+    
+    // Calculate most owned
+    const mostOwned = [...MARKET].sort((a,b) => b.ownership - a.ownership)[0];
 
-    // Worst Performer (top faller)
-    const fallerSign = faller.price_change_pct > 0 ? '+' : '';
-    document.getElementById('worst-value').textContent = `${fallerSign}${faller.price_change_pct.toFixed(1)}%`;
-    document.getElementById('worst-entity').textContent = faller.name;
-    document.getElementById('worst-delta').textContent = `${fallerSign}$${Math.abs(faller.price_change).toFixed(1)}M`;
+    statsEl.innerHTML =
+      statHTML('Top Riser',    riser,     `+${riser.price_change_pct.toFixed(1)}%`,        'pos', riser.type === 'Constructor') +
+      statHTML('Top Faller',   faller,    `${faller.price_change_pct.toFixed(1)}%`,        'neg', faller.type === 'Constructor') +
+      statHTML('Best Value',   bestValue, `${bestValue.pts_per_m.toFixed(1)}x`,            'pos', bestValue.type === 'Constructor') +
+      statHTML('Most Owned',   mostOwned, `${mostOwned.ownership}%`,                       'pos', mostOwned.type === 'Constructor');
 
     renderTable();
     document.getElementById("loading-overlay")?.remove();

@@ -57,116 +57,24 @@
 
   main { flex: 1; padding-bottom: 80px; }
 
-  /* ── CATEGORY LEADERS ── */
-  .category-leaders { display: flex; flex-direction: column; padding: 0 16px; margin-bottom: 16px; }
-  .category-scroll {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 12px 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-  .category-scroll::-webkit-scrollbar { display: none; }
-  .category-card {
-    flex-shrink: 0;
-    width: 110px;
-    background: var(--surface-high);
-    padding: 14px 10px;
-    border-radius: 8px;
-    border-left: 3px solid var(--red);
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .category-card:hover { background: var(--surface-highest); }
-  .category-icon { font-size: 1.4rem; line-height: 1; margin-bottom: 6px; }
-  .category-name { font-size: 0.5rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--on-40); margin-bottom: 6px; }
-  .category-value { font-family:'Space Grotesk',sans-serif; font-size: 1rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
-  .category-entity { font-size: 0.48rem; font-weight: 700; color: var(--on-60); text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
   /* ── HERO BENTO ── */
-  .hero { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 8px; padding: 16px 16px 0; }
-  
-  /* Mobile: single column layout */
-  @media (max-width: 640px) {
-    .hero { grid-template-columns: 1fr; }
-  }
-  
-  /* Tablet: 2 columns */
-  @media (min-width: 641px) and (max-width: 1023px) {
-    .hero { grid-template-columns: 1fr 1fr; }
-  }
+  .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 16px 16px 0; }
 
   .hero-sentiment {
     grid-column: 1 / -1;
     background: var(--surface-low); padding: 20px;
     position: relative; overflow: hidden; border-left: 3px solid var(--red);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-    align-items: start;
   }
-  
-  /* Mobile: single column */
-  @media (max-width: 640px) {
-    .hero-sentiment {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Tablet: 2 columns */
-  @media (min-width: 641px) and (max-width: 1023px) {
-    .hero-sentiment {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  .hero-card.big { grid-column: span 2; }  /* 2 columns = ~half width */
   .hero-sentiment-bg {
     position: absolute; right: -10px; top: 50%; transform: translateY(-50%);
     font-size: 5rem; opacity: 0.05; pointer-events: none; color: var(--on-surface);
-    grid-column: 1 / -1;
   }
-  .hero-label { 
-    font-size: 0.55rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); 
-    margin-bottom: 6px;
-    grid-column: 1 / -1;
-  }
-  .hero-title { 
-    font-family:'Space Grotesk',sans-serif; font-size: 1.8rem; font-weight: 900; letter-spacing: -0.04em; text-transform: uppercase; 
-    line-height: 1;
-    grid-column: 1 / -1;
-  }
+  .hero-label { font-size: 0.55rem; font-weight: 900; letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 6px; }
+  .hero-title { font-family:'Space Grotesk',sans-serif; font-size: 1.8rem; font-weight: 900; letter-spacing: -0.04em; text-transform: uppercase; line-height: 1; }
   .hero-title.bullish { color: var(--on-surface); }
   .hero-title.bearish { color: var(--red-dim); }
-  .hero-sentiment-stats { 
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
-    margin-top: 8px;
-  }
-  
-  /* Mobile: stack sentiment stats vertically */
-  @media (max-width: 640px) {
-    .hero-sentiment-stats {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  /* Tablet: 2-column sentiment stats */
-  @media (min-width: 641px) and (max-width: 1023px) {
-    .hero-sentiment-stats {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  .hero-stat { 
-    background: var(--surface-high);
-    padding: 12px 10px;
-    border-radius: 6px;
-    border-left: 2px solid var(--red);
-  }
+  .hero-sentiment-stats { display: flex; gap: 24px; margin-top: 14px; flex-wrap: wrap; }
+  .hero-stat { }
   .hero-stat-label { font-size: 0.5rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-40); }
   .hero-stat-row { display: flex; align-items: center; gap: 8px; margin-top: 4px; }
   .hero-stat-thumb {
@@ -220,10 +128,10 @@
   /* ── TABLE ── */
   .market-table-wrap { margin: 0 16px; background: var(--surface-low); overflow: hidden; }
 
-  /* FIX: wider columns — entity flex, pts 38px, price 62px, eff 54px, ownership 45px, chg 80px */
+  /* FIX: wider columns — entity flex, pts 38px, price 62px, own 45px, eff 54px, chg 80px */
   .table-head {
     display: grid;
-    grid-template-columns: minmax(0,1fr) 38px 62px 54px 45px 80px;
+    grid-template-columns: minmax(0,1fr) 38px 62px 45px 54px 80px;
     padding: 8px 14px; gap: 4px;
     font-size: 0.5rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; color: var(--on-40);
     border-bottom: 1px solid var(--on-08);
@@ -232,7 +140,7 @@
 
   .market-row {
     display: grid;
-    grid-template-columns: minmax(0,1fr) 38px 62px 54px 45px 80px;
+    grid-template-columns: minmax(0,1fr) 38px 62px 45px 54px 80px;
     padding: 11px 14px; gap: 4px; align-items: center;
     border-bottom: 1px solid var(--on-08);
     transition: background 0.1s;
@@ -280,9 +188,6 @@
   }
   .eff-badge.top { background: rgba(225,6,0,0.2); color: var(--red-dim); }
   .eff-badge.good { background: rgba(74,222,128,0.12); color: var(--green); }
-
-  .ownership-cell { text-align: right; display: flex; align-items: center; justify-content: flex-end; }
-  .ownership-pct { font-size: 0.65rem; font-weight: 700; color: var(--on-40); }
 
   .chg-cell { text-align: right; }
   .chg-inner { display: flex; align-items: center; justify-content: flex-end; gap: 2px; }
@@ -387,19 +292,14 @@
     </div>
   </div>
 
-  <!-- CATEGORY LEADERS -->
-  <div class="category-leaders">
-    <div class="category-scroll" id="category-scroll"></div>
-  </div>
-
   <!-- TABLE -->
   <div class="market-table-wrap">
     <div class="table-head">
       <span>Player / Entity</span>
       <span>Pts</span>
       <span>Price</span>
-      <span>Pts/$M</span>
       <span>Own %</span>
+      <span>Pts/$M</span>
       <span>Chg $</span>
     </div>
     <div id="market-list"></div>
@@ -496,11 +396,11 @@ function renderTable() {
       <div class="price-cell">
         <div class="price-val">$${m.price.toFixed(1)}M</div>
       </div>
+      <div class="price-cell" style="text-align: right;">
+        <div class="price-val">${m.ownership}%</div>
+      </div>
       <div class="eff-cell">
         <span class="eff-badge ${effClass}">${effStr}</span>
-      </div>
-      <div class="ownership-cell">
-        <div class="ownership-pct">${m.ownership}%</div>
       </div>
       <div class="chg-cell">
         <div class="chg-inner">
@@ -565,40 +465,39 @@ async function init() {
       };
     });
 
+    const sorted = [...MARKET].sort((a,b) => b.price_change_pct - a.price_change_pct);
+    const riser   = sorted[0];
+    const faller  = sorted[sorted.length - 1];
     const risers  = MARKET.filter(m => m.price_change_pct > 0).length;
     const fallers = MARKET.filter(m => m.price_change_pct < 0).length;
     const bullish = risers >= fallers;
-    
-    // New sentiment stats
-    const mostOwned = [...MARKET].sort((a,b) => b.ownership - a.ownership)[0];
-    const bestValue = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
-    const biggestSwing = [...MARKET].sort((a,b) => Math.abs(b.price_change) - Math.abs(a.price_change))[0];
     const volatile = [...MARKET].sort((a,b) => Math.abs(b.price_change_pct) - Math.abs(a.price_change_pct))[0];
     const bestEff  = [...MARKET].filter(m => m.pts_per_m > 0).sort((a,b) => b.pts_per_m - a.pts_per_m)[0];
 
     const title = document.getElementById('sentiment-title');
     title.textContent = bullish ? 'DRS MOMENTUM' : 'TRENDS';
     title.className = `hero-title ${bullish ? 'bullish' : 'bearish'}`;
+    // FIX: sentiment icon element needs material-symbols-outlined class
     const sentIcon = document.getElementById('sentiment-icon');
     sentIcon.textContent = bullish ? 'trending_up' : 'trending_down';
 
     const statsEl = document.getElementById('sentiment-stats');
-    function statHTML(label, entity, value, valClass, isLogo) {
+    function statHTML(label, entity, pct, absDelta, valClass, isLogo) {
+      const sign = absDelta >= 0 ? '+' : '';
       return `<div class="hero-stat" style="cursor:pointer" onclick="window.location.href='driver.html?entity='+encodeURIComponent('${entity.name}')">
         <div class="hero-stat-label">${label}</div>
         <div class="hero-stat-row">
           <img class="hero-stat-thumb${isLogo ? ' logo' : ''}" src="${entity.img}" alt="" onerror="this.style.display='none'"/>
           <div>
             <div class="hero-stat-name">${entity.name.split(' ')[0]}</div>
-            <div class="hero-stat-val ${valClass}">${value}</div>
+            <div class="hero-stat-val ${valClass}">${sign}$${Math.abs(absDelta).toFixed(1)}M <span style="opacity:0.55;font-size:0.85em">(${pct})</span></div>
           </div>
         </div>
       </div>`;
     }
     statsEl.innerHTML =
-      statHTML('Most Owned',   mostOwned, `${mostOwned.ownership}%`, 'pos', mostOwned.type === 'Constructor') +
-      statHTML('Best Value',   bestValue, `${bestValue.pts_per_m.toFixed(1)}x`, 'pos', bestValue.type === 'Constructor') +
-      statHTML('Biggest $',    biggestSwing, `${biggestSwing.price_change >= 0 ? '+' : ''}$${Math.abs(biggestSwing.price_change).toFixed(1)}M`, biggestSwing.price_change >= 0 ? 'pos' : 'neg', biggestSwing.type === 'Constructor');
+      statHTML('Top Riser',  riser,  `+${riser.price_change_pct.toFixed(1)}%`,  riser.price_change,  'pos', riser.type  === 'Constructor') +
+      statHTML('Top Faller', faller, `${faller.price_change_pct.toFixed(1)}%`, faller.price_change, 'neg', faller.type === 'Constructor');
 
     if (bestEff) {
       document.getElementById('eff-value').textContent = bestEff.pts_per_m.toFixed(1);
@@ -610,43 +509,6 @@ async function init() {
     document.getElementById('vol-value').textContent = `${Math.abs(volatile.price_change_pct).toFixed(1)}%`;
     document.getElementById('vol-entity').textContent = volatile.name;
     document.getElementById('vol-delta').textContent = `${volSign}$${Math.abs(volatile.price_change).toFixed(1)}M`;
-
-    // Render category leaders
-    const categoryLeaders = [
-      { icon: '🏆', name: 'Top Scorer', entity: [...MARKET].sort((a,b) => b.season_pts - a.season_pts)[0], value: 'pts' },
-      { icon: '💰', name: 'Best Value', entity: bestValue, value: 'x' },
-      { icon: '👥', name: 'Most Owned', entity: mostOwned, value: '%' },
-      { icon: '📈', name: 'Biggest $', entity: biggestSwing, value: 'M' },
-      { icon: '⚡', name: 'Volatile', entity: volatile, value: '%' },
-      { icon: '💎', name: 'Price', entity: [...MARKET].sort((a,b) => b.price - a.price)[0], value: 'M' }
-    ];
-    
-    const categoryScroll = document.getElementById('category-scroll');
-    categoryLeaders.forEach((cat, idx) => {
-      const catCard = document.createElement('div');
-      catCard.className = 'category-card';
-      let displayValue = '';
-      if (cat.value === 'pts') displayValue = cat.entity.season_pts;
-      else if (cat.value === 'x') displayValue = cat.entity.pts_per_m.toFixed(1) + 'x';
-      else if (cat.value === '%') {
-        // idx 2 = Most Owned (ownership), idx 4 = Volatile (price_change_pct)
-        if (idx === 2) displayValue = cat.entity.ownership.toFixed(1) + '%';
-        else if (idx === 4) displayValue = Math.abs(cat.entity.price_change_pct).toFixed(1) + '%';
-      }
-      else if (cat.value === 'M') {
-        // idx 3 = Biggest $ (price_change), idx 5 = Price (price)
-        if (idx === 3) displayValue = (cat.entity.price_change >= 0 ? '+' : '') + cat.entity.price_change.toFixed(1) + 'M';
-        else if (idx === 5) displayValue = '$' + cat.entity.price.toFixed(1) + 'M';
-      }
-      
-      catCard.innerHTML = `
-        <div class="category-icon">${cat.icon}</div>
-        <div class="category-name">${cat.name}</div>
-        <div class="category-value">${displayValue}</div>
-        <div class="category-entity">${cat.entity.name}</div>
-      `;
-      categoryScroll.appendChild(catCard);
-    });
 
     renderTable();
     document.getElementById("loading-overlay")?.remove();

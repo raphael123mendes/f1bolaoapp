@@ -508,21 +508,28 @@ document.getElementById('metrics').innerHTML = [
   <div class="metric-val${m.cls==='green'?' green':m.cls==='blue'?' blue':''}">${m.v}</div>
 </div>`).join('');
 
-// ── CHART RENDERING FUNCTION (Responds to orientation changes) ──
-function updateCharts() {
+// ── SHARED DATA CALCULATION (Used by both portrait and landscape) ──
+function getChartData() {
   // Filter to last 5 races on portrait (mobile), all on landscape
   const isPortrait = window.innerHeight > window.innerWidth;
   const historyToShow = isPortrait && d.rank_history.length > 5 ? d.rank_history.slice(-5) : d.rank_history;
 
-  const budgets = historyToShow.map(r => r.new_budget);
-  const racePoints = historyToShow.map(r => r.race_points);
-  const prizes = historyToShow.map(r => r.race_prize);
-  const cumPrizes = prizes.reduce((acc, v) => { acc.push((acc.length ? acc[acc.length-1] : 0) + v); return acc; }, []);
-  const raceLbls = historyToShow.map(r => `R${r.race}`);
-  const budgetLbls = budgets.map(v => `$${v.toFixed(1)}`);
-  const pointLbls = racePoints.map(v => `${v}`);
-  const prizeLbls = prizes.map(v => v > 0 ? `$${v.toFixed(2)}` : '');
-  const seasonRanks = historyToShow.map(r => r.season_rank);
+  return {
+    budgets: historyToShow.map(r => r.new_budget),
+    racePoints: historyToShow.map(r => r.race_points),
+    prizes: historyToShow.map(r => r.race_prize),
+    raceLbls: historyToShow.map(r => `R${r.race}`),
+    budgetLbls: historyToShow.map(r => `$${r.new_budget.toFixed(1)}`),
+    pointLbls: historyToShow.map(r => `${r.race_points}`),
+    prizeLbls: historyToShow.map(r => r.race_prize > 0 ? `$${r.race_prize.toFixed(2)}` : ''),
+    seasonRanks: historyToShow.map(r => r.season_rank),
+  };
+}
+
+// ── CHART RENDERING FUNCTION (Responds to orientation changes) ──
+function updateCharts() {
+  const chartData = getChartData();
+  const { budgets, racePoints, prizes, raceLbls, budgetLbls, pointLbls, prizeLbls, seasonRanks } = chartData;
 
   document.getElementById('charts-grid').innerHTML = `
     <div class="chart-card">
@@ -617,6 +624,10 @@ document.getElementById('constructors-grid').innerHTML = cons.map((p, i) => `
 
 // ── RENDER LANDSCAPE ──────────────────────────────────────────────────────
 function renderLandscape() {
+  // Get shared chart data (filtered based on orientation)
+  const chartData = getChartData();
+  const { budgets, racePoints, prizes, raceLbls, budgetLbls, pointLbls, prizeLbls, seasonRanks } = chartData;
+
   // Sidebar profile
   document.getElementById('ls-profile').innerHTML = `
     <div class="ls-name">${d.user_name}</div>

@@ -1,0 +1,730 @@
+{
+  "race_context": {
+    "race_number": 11,
+    "race_name": "Hungarian Grand Prix",
+    "race_flag": "🇭🇺",
+    "race_date": "2026-07-26",
+    "season": 2026,
+    "generated_at": "2026-07-27T03:23:50Z",
+    "data_source": "Merged: Fantasy F1 API + League Picks + Price Data"
+  },
+
+  "league_context": {
+    "league_id": "1692401",
+    "league_name": "Bolão F1",
+    "total_teams": 10,
+    "total_picks_this_race": 1000,
+    "unique_players_picked": 24,
+    "avg_picks_per_player": 41.7
+  },
+
+  "global_vs_league_picks": {
+    "description": "Side-by-side comparison: Global Fantasy F1 ranking vs League team picks",
+    "top_15": [
+      {
+        "rank": 1,
+        "player_id": "11161",
+        "player_name": "Kimi Antonelli",
+        "team": "Mercedes",
+        
+        "global": {
+          "api_rank": 1,
+          "estimated_global_picks": 95,
+          "estimated_global_pct": 18.5,
+          "season_points": 429
+        },
+        
+        "league": {
+          "pick_count": 477,
+          "pick_percentage": 10.2,
+          "captain_count": 28,
+          "captain_percentage": 5.9,
+          "teams_using": 5
+        },
+        
+        "market": {
+          "price": 25.6,
+          "price_change": 0.1,
+          "price_change_pct": 0.39,
+          "gameday_points": 28,
+          "total_points": 429,
+          "ppp_ratio": 16.75,
+          "value_indicator": "🔥"
+        },
+        
+        "comparison": {
+          "league_vs_global": "MORE popular in league (+5.2%)",
+          "price_trend": "Stable (▼ 0.1%)",
+          "value_trend": "Excellent (16.75 PPP)",
+          "recommendation": "Still worth picking - league consensus + good value"
+        }
+      },
+      {
+        "rank": 2,
+        "player_id": "110",
+        "player_name": "Lewis Hamilton",
+        "team": "Ferrari",
+        
+        "global": {
+          "api_rank": 2,
+          "estimated_global_picks": 87,
+          "estimated_global_pct": 16.8,
+          "season_points": 344
+        },
+        
+        "league": {
+          "pick_count": 120,
+          "pick_percentage": 2.6,
+          "captain_count": 8,
+          "captain_percentage": 6.7,
+          "teams_using": 3
+        },
+        
+        "market": {
+          "price": 25.0,
+          "price_change": 0.1,
+          "price_change_pct": 0.4,
+          "gameday_points": 25,
+          "total_points": 344,
+          "ppp_ratio": 13.76,
+          "value_indicator": "✓"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-14.2%)",
+          "price_trend": "Stable (▲ 0.4%)",
+          "value_trend": "Good (13.76 PPP)",
+          "recommendation": "Hidden gem - global star but underutilized locally"
+        }
+      },
+      {
+        "rank": 3,
+        "player_id": "131",
+        "player_name": "Max Verstappen",
+        "team": "Red Bull Racing",
+        
+        "global": {
+          "api_rank": 3,
+          "estimated_global_picks": 82,
+          "estimated_global_pct": 15.9,
+          "season_points": 271
+        },
+        
+        "league": {
+          "pick_count": 95,
+          "pick_percentage": 2.0,
+          "captain_count": 12,
+          "captain_percentage": 12.6,
+          "teams_using": 4
+        },
+        
+        "market": {
+          "price": 27.7,
+          "price_change": -0.1,
+          "price_change_pct": -0.36,
+          "gameday_points": 39,
+          "total_points": 271,
+          "ppp_ratio": 9.78,
+          "value_indicator": "⚠️"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-13.9%)",
+          "price_trend": "Falling (▼ 0.36%)",
+          "value_trend": "Fair value (9.78 PPP)",
+          "recommendation": "Premium pick - good gameday (39pts) but price high"
+        }
+      },
+      {
+        "rank": 4,
+        "player_id": "114",
+        "player_name": "Liam Lawson",
+        "team": "Racing Bulls",
+        
+        "global": {
+          "api_rank": 10,
+          "estimated_global_picks": 50,
+          "estimated_global_pct": 9.7,
+          "season_points": 128
+        },
+        
+        "league": {
+          "pick_count": 321,
+          "pick_percentage": 6.8,
+          "captain_count": 15,
+          "captain_percentage": 4.7,
+          "teams_using": 8
+        },
+        
+        "market": {
+          "price": 9.7,
+          "price_change": 0.6,
+          "price_change_pct": 6.19,
+          "gameday_points": 13,
+          "total_points": 128,
+          "ppp_ratio": 13.2,
+          "value_indicator": "🔥"
+        },
+        
+        "comparison": {
+          "league_vs_global": "MORE popular in league (-2.9%)",
+          "price_trend": "Rising (▲ 6.2%) — momentum!",
+          "value_trend": "Excellent value (13.2 PPP)",
+          "recommendation": "Strong local pick - rising price + team consensus"
+        }
+      },
+      {
+        "rank": 5,
+        "player_id": "11149",
+        "player_name": "Arvid Lindblad",
+        "team": "Racing Bulls",
+        
+        "global": {
+          "api_rank": 7,
+          "estimated_global_picks": 62,
+          "estimated_global_pct": 12.0,
+          "season_points": 138
+        },
+        
+        "league": {
+          "pick_count": 264,
+          "pick_percentage": 5.6,
+          "captain_count": 8,
+          "captain_percentage": 3.0,
+          "teams_using": 8
+        },
+        
+        "market": {
+          "price": 7.4,
+          "price_change": 0.2,
+          "price_change_pct": 2.7,
+          "gameday_points": 15,
+          "total_points": 138,
+          "ppp_ratio": 18.65,
+          "value_indicator": "🔥"
+        },
+        
+        "comparison": {
+          "league_vs_global": "MORE popular in league (-6.4%)",
+          "price_trend": "Stable (▲ 2.7%)",
+          "value_trend": "S-Tier value (18.65 PPP)",
+          "recommendation": "BEST VALUE - cheap, underpriced gem"
+        }
+      },
+      {
+        "rank": 6,
+        "player_id": "115",
+        "player_name": "Charles Leclerc",
+        "team": "Ferrari",
+        
+        "global": {
+          "api_rank": 4,
+          "estimated_global_picks": 78,
+          "estimated_global_pct": 15.1,
+          "season_points": 285
+        },
+        
+        "league": {
+          "pick_count": 190,
+          "pick_percentage": 4.0,
+          "captain_count": 38,
+          "captain_percentage": 20.0,
+          "teams_using": 8
+        },
+        
+        "market": {
+          "price": 23.6,
+          "price_change": 0.2,
+          "price_change_pct": 0.84,
+          "gameday_points": 22,
+          "total_points": 285,
+          "ppp_ratio": 12.07,
+          "value_indicator": "✓"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-11.1%)",
+          "price_trend": "Stable (▲ 0.84%)",
+          "value_trend": "Good value (12.07 PPP)",
+          "recommendation": "Captain favorite locally (20% of picks are captain)"
+        }
+      },
+      {
+        "rank": 7,
+        "player_id": "1982",
+        "player_name": "Oscar Piastri",
+        "team": "McLaren",
+        
+        "global": {
+          "api_rank": 5,
+          "estimated_global_picks": 72,
+          "estimated_global_pct": 13.9,
+          "season_points": 160
+        },
+        
+        "league": {
+          "pick_count": 85,
+          "pick_percentage": 1.8,
+          "captain_count": 3,
+          "captain_percentage": 3.5,
+          "teams_using": 4
+        },
+        
+        "market": {
+          "price": 24.7,
+          "price_change": -0.3,
+          "price_change_pct": -1.21,
+          "gameday_points": -11,
+          "total_points": 160,
+          "ppp_ratio": 6.48,
+          "value_indicator": "❌"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-12.1%)",
+          "price_trend": "Falling (▼ 1.21%)",
+          "value_trend": "Poor value (6.48 PPP)",
+          "recommendation": "AVOID - expensive with poor local form (-11 pts this race)"
+        }
+      },
+      {
+        "rank": 8,
+        "player_id": "124",
+        "player_name": "George Russell",
+        "team": "Mercedes",
+        
+        "global": {
+          "api_rank": 8,
+          "estimated_global_picks": 68,
+          "estimated_global_pct": 13.1,
+          "season_points": 276
+        },
+        
+        "league": {
+          "pick_count": 121,
+          "pick_percentage": 2.6,
+          "captain_count": 34,
+          "captain_percentage": 28.1,
+          "teams_using": 6
+        },
+        
+        "market": {
+          "price": 28.0,
+          "price_change": 0.2,
+          "price_change_pct": 0.71,
+          "gameday_points": 20,
+          "total_points": 276,
+          "ppp_ratio": 9.86,
+          "value_indicator": "⚠️"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-10.5%)",
+          "price_trend": "Stable (▲ 0.71%)",
+          "value_trend": "Fair value (9.86 PPP)",
+          "recommendation": "Captain target locally (28%) - risky premium pick"
+        }
+      },
+      {
+        "rank": 9,
+        "player_id": "117",
+        "player_name": "Lando Norris",
+        "team": "McLaren",
+        
+        "global": {
+          "api_rank": 6,
+          "estimated_global_picks": 68,
+          "estimated_global_pct": 13.1,
+          "season_points": 227
+        },
+        
+        "league": {
+          "pick_count": 78,
+          "pick_percentage": 1.7,
+          "captain_count": 5,
+          "captain_percentage": 6.4,
+          "teams_using": 3
+        },
+        
+        "market": {
+          "price": 25.8,
+          "price_change": 0.3,
+          "price_change_pct": 1.16,
+          "gameday_points": 37,
+          "total_points": 227,
+          "ppp_ratio": 8.8,
+          "value_indicator": "⚠️"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-11.4%)",
+          "price_trend": "Stable (▲ 1.16%)",
+          "value_trend": "Fair value (8.8 PPP)",
+          "recommendation": "Good form (37 pts) but local disinterest - contrarian play"
+        }
+      },
+      {
+        "rank": 10,
+        "player_id": "11051",
+        "player_name": "Gabriel Bortoleto",
+        "team": "Sauber",
+        
+        "global": {
+          "api_rank": 12,
+          "estimated_global_picks": 45,
+          "estimated_global_pct": 8.7,
+          "season_points": 65
+        },
+        
+        "league": {
+          "pick_count": 297,
+          "pick_percentage": 6.3,
+          "captain_count": 6,
+          "captain_percentage": 2.0,
+          "teams_using": 10
+        },
+        
+        "market": {
+          "price": 7.2,
+          "price_change": 0.5,
+          "price_change_pct": 7.46,
+          "gameday_points": 8,
+          "total_points": 65,
+          "ppp_ratio": 9.03,
+          "value_indicator": "⚠️"
+        },
+        
+        "comparison": {
+          "league_vs_global": "MORE popular in league (-2.4%)",
+          "price_trend": "Rising (▲ 7.46%) — strong momentum",
+          "value_trend": "Fair value (9.03 PPP)",
+          "recommendation": "Local darling - 10 teams using, rising price momentum"
+        }
+      },
+      {
+        "rank": 11,
+        "player_id": "18",
+        "player_name": "Pierre Gasly",
+        "team": "Alpine",
+        
+        "global": {
+          "api_rank": 9,
+          "estimated_global_picks": 52,
+          "estimated_global_pct": 10.1,
+          "season_points": 135
+        },
+        
+        "league": {
+          "pick_count": 45,
+          "pick_percentage": 1.0,
+          "captain_count": 1,
+          "captain_percentage": 2.2,
+          "teams_using": 2
+        },
+        
+        "market": {
+          "price": 12.8,
+          "price_change": 0.2,
+          "price_change_pct": 1.56,
+          "gameday_points": 6,
+          "total_points": 135,
+          "ppp_ratio": 10.55,
+          "value_indicator": "✓"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-9.1%)",
+          "price_trend": "Stable (▲ 1.56%)",
+          "value_trend": "Good value (10.55 PPP)",
+          "recommendation": "Underutilized - good global form but ignored locally"
+        }
+      },
+      {
+        "rank": 12,
+        "player_id": "12",
+        "player_name": "Fernando Alonso",
+        "team": "Aston Martin",
+        
+        "global": {
+          "api_rank": 14,
+          "estimated_global_picks": 42,
+          "estimated_global_pct": 8.1,
+          "season_points": 156
+        },
+        
+        "league": {
+          "pick_count": 65,
+          "pick_percentage": 1.4,
+          "captain_count": 2,
+          "captain_percentage": 3.1,
+          "teams_using": 3
+        },
+        
+        "market": {
+          "price": 11.2,
+          "price_change": -0.2,
+          "price_change_pct": -2.08,
+          "gameday_points": 11,
+          "total_points": 156,
+          "ppp_ratio": 13.93,
+          "value_indicator": "✓"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-6.7%)",
+          "price_trend": "Falling (▼ 2.08%)",
+          "value_trend": "Good value (13.93 PPP)",
+          "recommendation": "Good value opportunity - global player underutilized locally"
+        }
+      },
+      {
+        "rank": 13,
+        "player_id": "11",
+        "player_name": "Alexander Albon",
+        "team": "Williams",
+        
+        "global": {
+          "api_rank": 13,
+          "estimated_global_picks": 48,
+          "estimated_global_pct": 9.3,
+          "season_points": 142
+        },
+        
+        "league": {
+          "pick_count": 75,
+          "pick_percentage": 1.6,
+          "captain_count": 3,
+          "captain_percentage": 4.0,
+          "teams_using": 3
+        },
+        
+        "market": {
+          "price": 5.8,
+          "price_change": 0.1,
+          "price_change_pct": 1.79,
+          "gameday_points": 14,
+          "total_points": 142,
+          "ppp_ratio": 24.48,
+          "value_indicator": "🔥"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-7.7%)",
+          "price_trend": "Stable (▲ 1.79%)",
+          "value_trend": "S-Tier value (24.48 PPP)",
+          "recommendation": "ULTIMATE VALUE PLAY - cheapest with solid 24.48 PPP"
+        }
+      },
+      {
+        "rank": 14,
+        "player_id": "11059",
+        "player_name": "Franco Colapinto",
+        "team": "Alpine",
+        
+        "global": {
+          "api_rank": 11,
+          "estimated_global_picks": 56,
+          "estimated_global_pct": 10.8,
+          "season_points": 123
+        },
+        
+        "league": {
+          "pick_count": 145,
+          "pick_percentage": 3.1,
+          "captain_count": 4,
+          "captain_percentage": 2.8,
+          "teams_using": 4
+        },
+        
+        "market": {
+          "price": 11.0,
+          "price_change": 0.5,
+          "price_change_pct": 5.0,
+          "gameday_points": 9,
+          "total_points": 123,
+          "ppp_ratio": 11.18,
+          "value_indicator": "✓"
+        },
+        
+        "comparison": {
+          "league_vs_global": "LESS popular in league (-7.7%)",
+          "price_trend": "Rising (▲ 5.0%) — strong uptick",
+          "value_trend": "Good value (11.18 PPP)",
+          "recommendation": "Local sleeper - price rising with solid value"
+        }
+      },
+      {
+        "rank": 15,
+        "player_id": "13",
+        "player_name": "Valtteri Bottas",
+        "team": "Cadillac",
+        
+        "global": {
+          "api_rank": 20,
+          "estimated_global_picks": 25,
+          "estimated_global_pct": 4.8,
+          "season_points": -60
+        },
+        
+        "league": {
+          "pick_count": 145,
+          "pick_percentage": 3.1,
+          "captain_count": 1,
+          "captain_percentage": 0.7,
+          "teams_using": 4
+        },
+        
+        "market": {
+          "price": 3.0,
+          "price_change": 0.0,
+          "price_change_pct": 0.0,
+          "gameday_points": -16,
+          "total_points": -60,
+          "ppp_ratio": -20.0,
+          "value_indicator": "🔴"
+        },
+        
+        "comparison": {
+          "league_vs_global": "MORE popular in league (-1.7%)",
+          "price_trend": "Flat (▬ 0.0%)",
+          "value_trend": "AVOID (-20 PPP)",
+          "recommendation": "DANGER: Underperforming globally + locally + poor form"
+        }
+      }
+    ]
+  },
+
+  "smart_insights": {
+    "description": "Data-driven recommendations based on merged global + league data",
+    "best_value_plays": [
+      {
+        "rank": 1,
+        "player": "Alexander Albon",
+        "ppp": 24.48,
+        "league_pick_pct": 1.6,
+        "reason": "Cheapest (5.8€) with excellent value + underutilized in league"
+      },
+      {
+        "rank": 2,
+        "player": "Arvid Lindblad",
+        "ppp": 18.65,
+        "league_pick_pct": 5.6,
+        "reason": "S-Tier value + consensus locally building"
+      },
+      {
+        "rank": 3,
+        "player": "Liam Lawson",
+        "ppp": 13.2,
+        "league_pick_pct": 6.8,
+        "reason": "Price rising with local popularity + good PPP"
+      }
+    ],
+    
+    "overpriced_risks": [
+      {
+        "player": "Oscar Piastri",
+        "price": 24.7,
+        "ppp": 6.48,
+        "gameday_pts": -11,
+        "reason": "High price + weak local performance + poor PPP"
+      },
+      {
+        "player": "George Russell",
+        "price": 28.0,
+        "ppp": 9.86,
+        "gameday_pts": 20,
+        "reason": "Most expensive with fair value + captain trap (28%)"
+      },
+      {
+        "player": "Valtteri Bottas",
+        "price": 3.0,
+        "ppp": -20.0,
+        "gameday_pts": -16,
+        "reason": "AVOID: Worst performer globally + locally"
+      }
+    ],
+    
+    "contrarian_picks": [
+      {
+        "player": "Lewis Hamilton",
+        "global_rank": 2,
+        "league_pick_pct": 2.6,
+        "reason": "Global star but heavily underutilized in league"
+      },
+      {
+        "player": "Pierre Gasly",
+        "global_rank": 9,
+        "league_pick_pct": 1.0,
+        "reason": "Strong globally, ignored locally - good value play"
+      },
+      {
+        "player": "Lando Norris",
+        "global_rank": 6,
+        "league_pick_pct": 1.7,
+        "reason": "Good form but locally unpopular - value opportunity"
+      }
+    ],
+    
+    "local_consensus": [
+      {
+        "rank": 1,
+        "player": "Kimi Antonelli",
+        "league_pick_pct": 10.2,
+        "captain_pct": 5.9,
+        "reason": "Overwhelming local consensus - everyone has him"
+      },
+      {
+        "rank": 2,
+        "player": "Liam Lawson",
+        "league_pick_pct": 6.8,
+        "captain_pct": 4.7,
+        "reason": "2nd most popular - 8 out of 10 teams using"
+      },
+      {
+        "rank": 3,
+        "player": "Gabriel Bortoleto",
+        "league_pick_pct": 6.3,
+        "captain_pct": 2.0,
+        "reason": "Rising star - ALL 10 teams have picked at some point"
+      }
+    ]
+  },
+
+  "league_meta": {
+    "captain_analysis": {
+      "most_captained": [
+        {
+          "player": "Charles Leclerc",
+          "captain_count": 38,
+          "captain_pct": 20.0,
+          "reason": "Most popular captain choice"
+        },
+        {
+          "player": "George Russell",
+          "captain_count": 34,
+          "captain_pct": 28.1,
+          "reason": "Premium captain play"
+        },
+        {
+          "player": "Kimi Antonelli",
+          "captain_count": 28,
+          "captain_pct": 5.9,
+          "reason": "Volume + high captain rate"
+        }
+      ]
+    },
+    
+    "price_momentum": {
+      "rising": [
+        { "player": "Gabriel Bortoleto", "change_pct": 7.46, "trend": "🔥 Strong" },
+        { "player": "Franco Colapinto", "change_pct": 5.0, "trend": "📈 Rising" },
+        { "player": "Liam Lawson", "change_pct": 6.19, "trend": "📈 Rising" }
+      ],
+      "falling": [
+        { "player": "Oscar Piastri", "change_pct": -1.21, "trend": "📉 Falling" },
+        { "player": "Fernando Alonso", "change_pct": -2.08, "trend": "📉 Falling" },
+        { "player": "Max Verstappen", "change_pct": -0.36, "trend": "➜ Flat" }
+      ]
+    }
+  }
+}

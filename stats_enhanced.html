@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Full Grid Sweep — Global Stats (Enhanced)</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+<style>
+  :root {
+    --red: #e10600; --red-dim: #ffb4a8;
+    --blue: #a6c8ff; --blue-bright: #3192fc;
+    --green: #4ade80; --green-dim: rgba(74,222,128,0.15);
+    --surface: #131313; --surface-low: #1c1b1b;
+    --surface-mid: #201f1f; --surface-high: #2a2a2a;
+    --bg-dark: #0b0e11;
+    --text-dim: #666;
+    --surface-highest: #353534;
+    --on-surface: #e5e2e1;
+    --on-60: rgba(229,226,225,0.6); --on-40: rgba(229,226,225,0.4);
+    --on-20: rgba(229,226,225,0.2); --on-08: rgba(229,226,225,0.08);
+    --outline: #af8781;
+  }
+  
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--surface); color: var(--on-surface); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  body { min-height: 100dvh; display: flex; flex-direction: column; overflow-x: hidden; }
+  
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  /* ── TOP BAR ── */
+  .topbar { position: sticky; top: 0; z-index: 50; background: var(--surface); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+  .topbar-inner { display: flex; justify-content: space-between; align-items: center; height: 56px; padding: 0 20px; }
+  .brand { display: inline-flex; align-items: center; font-size: 1.2rem; font-weight: 900; font-style: italic; text-transform: uppercase; letter-spacing: -0.02em; border-left: 5px solid var(--red); padding-left: 18px; line-height: 1; }
+  .app-name { color: var(--red); }
+  .sep { color: #333; margin: 0 12px; font-weight: 300; }
+  .page-name { color: #ffffff; font-weight: 300; opacity: 0.9; }
+
+  main { flex: 1; padding-bottom: 80px; }
+
+  /* ── HERO KPI CARDS ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 8px;
+    padding: 16px;
+  }
+  
+  .kpi-card {
+    background: var(--surface-high);
+    padding: 16px;
+    border-left: 3px solid var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .kpi-card.red { border-left-color: var(--red); }
+  .kpi-card.green { border-left-color: var(--green); }
+  
+  .kpi-label {
+    font-size: 0.5rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--on-40);
+    margin-bottom: 8px;
+  }
+  
+  .kpi-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+  
+  .kpi-sub {
+    font-size: 0.5rem;
+    color: var(--on-40);
+    margin-top: 4px;
+  }
+
+  /* ── TABS ── */
+  .tabs { display: flex; gap: 0; border-bottom: 1px solid var(--on-08); padding: 0 16px; overflow-x: auto; }
+  .tab {
+    background: none; border: none; color: var(--on-40); cursor: pointer;
+    font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 800;
+    letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 18px;
+    transition: all 0.2s; border-bottom: 2px solid transparent; white-space: nowrap;
+  }
+  .tab:hover { color: var(--on-surface); }
+  .tab.active { color: var(--red); border-bottom-color: var(--red); }
+
+  /* ── CONTENT ── */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  @media (max-width: 1024px) {
+    .content-grid { grid-template-columns: 1fr; }
+  }
+
+  .chart-container {
+    background: var(--surface-low);
+    padding: 20px;
+    border-radius: 4px;
+  }
+
+  .chart-title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--on-40);
+    margin-bottom: 12px;
+  }
+
+  /* ── TABLE ── */
+  .data-table {
+    background: var(--surface-low);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .table-head {
+    display: grid;
+    grid-template-columns: 1fr 90px 80px 90px 120px;
+    gap: 8px;
+    padding: 10px 14px;
+    font-size: 0.5rem;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--on-40);
+    border-bottom: 1px solid var(--on-08);
+    background: var(--surface-high);
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 1fr 90px 80px 90px 120px;
+    gap: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--on-08);
+    align-items: center;
+    transition: background 0.1s;
+    cursor: pointer;
+  }
+
+  .table-row:hover { background: var(--surface-high); }
+  .table-row:last-child { border-bottom: none; }
+
+  .player-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+  }
+
+  .cell-numeric {
+    text-align: right;
+    font-size: 0.6rem;
+    font-weight: 700;
+  }
+
+  .cell-green { color: var(--green); }
+  .cell-red { color: var(--red-dim); }
+  .cell-blue { color: var(--blue); }
+
+  /* ── INSIGHTS BOX ── */
+  .insights-box {
+    background: var(--surface-low);
+    padding: 16px;
+    border-radius: 4px;
+    margin: 16px;
+    border-left: 3px solid var(--red);
+  }
+
+  .insights-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+
+  .insight-item {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--on-08);
+    font-size: 0.65rem;
+    line-height: 1.4;
+  }
+
+  .insight-item:last-child { border-bottom: none; }
+  .insight-player { font-weight: 700; }
+  .insight-reason { color: var(--on-40); margin-top: 3px; }
+
+  /* ── FOOTER ── */
+  .footer {
+    padding: 20px 16px;
+    background: var(--surface-low);
+    margin-top: 40px;
+    font-size: 0.55rem;
+    color: var(--on-40);
+    line-height: 1.6;
+  }
+
+  .footer-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="app-name">FGS</span>
+      <span class="sep">|</span>
+      <span class="page-name">Global Stats (Merged)</span>
+    </div>
+  </div>
+</div>
+
+<main>
+  <!-- KPI CARDS -->
+  <div class="kpi-grid">
+    <div class="kpi-card red">
+      <div class="kpi-label">🏁 This Race</div>
+      <div class="kpi-value" id="raceNum">11</div>
+      <div class="kpi-sub" id="raceName">Hungarian GP</div>
+    </div>
+    
+    <div class="kpi-card">
+      <div class="kpi-label">👑 League Leader</div>
+      <div class="kpi-value" id="leagueLeader">Kimi</div>
+      <div class="kpi-sub" id="leaderPct">10.2%</div>
+    </div>
+    
+    <div class="kpi-card green">
+      <div class="kpi-label">💎 Best Value</div>
+      <div class="kpi-value" id="bestValueName">Albon</div>
+      <div class="kpi-sub" id="bestValuePPP">24.48 PPP</div>
+    </div>
+    
+    <div class="kpi-card">
+      <div class="kpi-label">⚠️ Avoid</div>
+      <div class="kpi-value" id="avoidName">Bottas</div>
+      <div class="kpi-sub" id="avoidReason">-60 pts</div>
+    </div>
+    
+    <div class="kpi-card">
+      <div class="kpi-label">📊 League Picks</div>
+      <div class="kpi-value" id="totalPicks">10k</div>
+      <div class="kpi-sub" id="uniquePlayers">24 players</div>
+    </div>
+    
+    <div class="kpi-card">
+      <div class="kpi-label">🔥 Consensus</div>
+      <div class="kpi-value" id="consensusTeams">10</div>
+      <div class="kpi-sub">teams using</div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" data-tab="comparison">⚖️ Global vs League</button>
+    <button class="tab" data-tab="insights">💡 Smart Insights</button>
+    <button class="tab" data-tab="momentum">📈 Price Momentum</button>
+    <button class="tab" data-tab="captains">👑 Captain Analysis</button>
+  </div>
+
+  <!-- CONTENT GRID -->
+  <div class="content-grid">
+    <!-- LEFT: Charts -->
+    <div>
+      <div class="chart-container">
+        <div class="chart-title" id="chartTitle">Global vs League Picks — Top 10</div>
+        <div id="mainChart" style="height: 400px;"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Table -->
+    <div>
+      <div class="data-table">
+        <div class="table-head">
+          <span>Player</span>
+          <span>League %</span>
+          <span>Price</span>
+          <span>Change %</span>
+          <span>PPP Ratio</span>
+        </div>
+        <div id="tableBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSIGHTS SECTION -->
+  <div class="insights-box" id="insightsSection">
+    <div class="insights-title" id="insightsTitle">💡 Smart Insights</div>
+    <div id="insightsContent"></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-meta">
+      <span>⏱️ Last updated: <span id="updatedAt">—</span></span>
+      <span>📊 Data: Fantasy F1 API + League Picks + Price Data</span>
+      <span id="dataStatus">✅ Ready</span>
+    </div>
+  </div>
+</main>
+
+<script>
+// ════════════════════════════════════════════════════════════════
+// ENHANCED GLOBAL STATS DASHBOARD
+// ════════════════════════════════════════════════════════════════
+
+let globalData = null;
+let currentTab = 'comparison';
+
+async function loadData() {
+  try {
+    const res = await fetch('global_stats_merged.json');
+    globalData = await res.json();
+    render();
+  } catch (e) {
+    console.error('Failed to load stats:', e);
+    document.getElementById('dataStatus').textContent = '❌ Error loading data';
+  }
+}
+
+function init() {
+  loadData();
+  
+  document.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      e.target.classList.add('active');
+      currentTab = e.target.dataset.tab;
+      render();
+    });
+  });
+}
+
+function render() {
+  renderKPIs();
+  renderChart();
+  renderTable();
+  renderInsights();
+}
+
+function renderKPIs() {
+  const rc = globalData.race_context;
+  const lc = globalData.league_context;
+  const mp = globalData.global_vs_league_picks.top_15[0];
+  const ve = globalData.smart_insights.best_value_plays[0];
+  const risk = globalData.smart_insights.overpriced_risks[0];
+  const consensus = globalData.smart_insights.local_consensus[0];
+
+  document.getElementById('raceNum').textContent = rc.race_number;
+  document.getElementById('raceName').textContent = rc.race_flag + ' ' + rc.race_name;
+  
+  document.getElementById('leagueLeader').textContent = mp.player_name.split(' ')[0];
+  document.getElementById('leaderPct').textContent = mp.league.pick_percentage.toFixed(1) + '%';
+  
+  document.getElementById('bestValueName').textContent = ve.player.split(' ')[0];
+  document.getElementById('bestValuePPP').textContent = ve.ppp.toFixed(2) + ' PPP';
+  
+  document.getElementById('avoidName').textContent = risk.player.split(' ')[0];
+  document.getElementById('avoidReason').textContent = risk.ppp.toFixed(1) + ' PPP';
+  
+  document.getElementById('totalPicks').textContent = lc.total_picks_this_race.toLocaleString();
+  document.getElementById('uniquePlayers').textContent = lc.unique_players_picked + ' players';
+  
+  document.getElementById('consensusTeams').textContent = consensus.reason.match(/\d+/)[0];
+  
+  document.getElementById('updatedAt').textContent = new Date(rc.generated_at).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' }) + ' UTC';
+}
+
+function renderChart() {
+  const data = globalData.global_vs_league_picks.top_15.slice(0, 10);
+  
+  if (currentTab === 'comparison') {
+    const names = data.map(d => d.player_name);
+    const globalPicks = data.map(d => d.global.estimated_global_picks);
+    const leaguePicks = data.map(d => d.league.pick_count);
+    
+    const trace1 = {
+      y: names,
+      x: globalPicks,
+      name: 'Global Est.',
+      type: 'bar',
+      orientation: 'h',
+      marker: { color: 'rgba(166,200,255,0.6)' }
+    };
+    
+    const trace2 = {
+      y: names,
+      x: leaguePicks,
+      name: 'League Picks',
+      type: 'bar',
+      orientation: 'h',
+      marker: { color: 'rgba(225,6,0,0.6)' }
+    };
+    
+    const layout = {
+      title: { text: '' },
+      xaxis: { color: 'rgba(229,226,225,0.6)' },
+      yaxis: { color: 'rgba(229,226,225,0.6)' },
+      barmode: 'group',
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      font: { family: 'Inter', color: 'rgba(229,226,225,0.8)', size: 11 },
+      margin: { l: 140, r: 40, t: 20, b: 40 },
+      height: 400,
+    };
+    
+    Plotly.newPlot('mainChart', [trace1, trace2], layout, { responsive: true, displayModeBar: false });
+  } else if (currentTab === 'momentum') {
+    const names = data.map(d => d.player_name);
+    const priceChange = data.map(d => d.market.price_change_pct);
+    const colors = priceChange.map(p => p > 0 ? 'rgba(74,222,128,0.7)' : 'rgba(225,6,0,0.7)');
+    
+    const trace = {
+      y: names,
+      x: priceChange,
+      type: 'bar',
+      orientation: 'h',
+      marker: { color: colors },
+      text: priceChange.map(p => p > 0 ? '+' + p.toFixed(2) + '%' : p.toFixed(2) + '%'),
+      textposition: 'outside'
+    };
+    
+    const layout = {
+      title: { text: '' },
+      xaxis: { title: 'Price Change %', color: 'rgba(229,226,225,0.6)' },
+      yaxis: { color: 'rgba(229,226,225,0.6)' },
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      font: { family: 'Inter', color: 'rgba(229,226,225,0.8)', size: 11 },
+      margin: { l: 140, r: 60, t: 20, b: 40 },
+      height: 400,
+    };
+    
+    Plotly.newPlot('mainChart', [trace], layout, { responsive: true, displayModeBar: false });
+  } else if (currentTab === 'captains') {
+    const captainData = globalData.league_meta.captain_analysis.most_captained;
+    const names = captainData.map(d => d.player);
+    const captainCounts = captainData.map(d => d.captain_count);
+    
+    const trace = {
+      y: names,
+      x: captainCounts,
+      type: 'bar',
+      orientation: 'h',
+      marker: { color: 'rgba(255,180,100,0.7)' },
+      text: captainCounts.map(c => c + ' captains'),
+      textposition: 'outside'
+    };
+    
+    const layout = {
+      title: { text: '' },
+      xaxis: { title: 'Captain Picks', color: 'rgba(229,226,225,0.6)' },
+      yaxis: { color: 'rgba(229,226,225,0.6)' },
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      font: { family: 'Inter', color: 'rgba(229,226,225,0.8)', size: 11 },
+      margin: { l: 140, r: 60, t: 20, b: 40 },
+      height: 400,
+    };
+    
+    Plotly.newPlot('mainChart', [trace], layout, { responsive: true, displayModeBar: false });
+  } else {
+    const insightData = globalData.smart_insights.best_value_plays;
+    const names = insightData.map(d => d.player);
+    const pppValues = insightData.map(d => d.ppp);
+    
+    const trace = {
+      y: names,
+      x: pppValues,
+      type: 'bar',
+      orientation: 'h',
+      marker: { color: 'rgba(74,222,128,0.7)' },
+      text: pppValues.map(p => p.toFixed(2) + ' PPP'),
+      textposition: 'outside'
+    };
+    
+    const layout = {
+      title: { text: '' },
+      xaxis: { title: 'Points Per Pound', color: 'rgba(229,226,225,0.6)' },
+      yaxis: { color: 'rgba(229,226,225,0.6)' },
+      plot_bgcolor: 'rgba(0,0,0,0)',
+      paper_bgcolor: 'rgba(0,0,0,0)',
+      font: { family: 'Inter', color: 'rgba(229,226,225,0.8)', size: 11 },
+      margin: { l: 140, r: 60, t: 20, b: 40 },
+      height: 400,
+    };
+    
+    Plotly.newPlot('mainChart', [trace], layout, { responsive: true, displayModeBar: false });
+  }
+}
+
+function renderTable() {
+  const data = globalData.global_vs_league_picks.top_15.slice(0, 10);
+  
+  const html = data.map(d => {
+    const priceTrend = d.market.price_change_pct > 0 ? 'cell-green' : d.market.price_change_pct < 0 ? 'cell-red' : '';
+    const pppClass = d.market.ppp_ratio > 15 ? 'cell-green' : d.market.ppp_ratio < 0 ? 'cell-red' : 'cell-blue';
+    
+    return `
+      <div class="table-row">
+        <div class="player-name">${d.player_name}</div>
+        <div class="cell-numeric">${d.league.pick_percentage.toFixed(1)}%</div>
+        <div class="cell-numeric">${d.market.price.toFixed(1)}€</div>
+        <div class="cell-numeric ${priceTrend}">${d.market.price_change_pct > 0 ? '+' : ''}${d.market.price_change_pct.toFixed(2)}%</div>
+        <div class="cell-numeric ${pppClass}">${d.market.ppp_ratio.toFixed(2)}</div>
+      </div>
+    `;
+  }).join('');
+  
+  document.getElementById('tableBody').innerHTML = html;
+}
+
+function renderInsights() {
+  let title = '';
+  let html = '';
+  
+  if (currentTab === 'comparison') {
+    title = '⚖️ Global vs League Comparison';
+    const data = globalData.global_vs_league_picks.top_15.slice(0, 5);
+    html = data.map(d => `
+      <div class="insight-item">
+        <div class="insight-player">${d.player_name}</div>
+        <div class="insight-reason">${d.comparison.league_vs_global}</div>
+        <div class="insight-reason">${d.comparison.recommendation}</div>
+      </div>
+    `).join('');
+  } else if (currentTab === 'insights') {
+    title = '💡 Smart Insights';
+    const bestValue = globalData.smart_insights.best_value_plays;
+    const overpriced = globalData.smart_insights.overpriced_risks;
+    html = `
+      <div style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--on-08);">
+        <div class="insight-player" style="color: var(--green); margin-bottom: 6px;">🔥 BEST VALUE PLAYS</div>
+        ${bestValue.map(v => `
+          <div class="insight-item" style="padding: 4px 0; border-bottom: none;">
+            ${v.player} — <span style="color: var(--green);">${v.ppp.toFixed(2)} PPP</span>
+            <div class="insight-reason">${v.reason}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div>
+        <div class="insight-player" style="color: var(--red-dim); margin-bottom: 6px;">⚠️ OVERPRICED RISKS</div>
+        ${overpriced.map(r => `
+          <div class="insight-item" style="padding: 4px 0; border-bottom: none;">
+            ${r.player} — <span style="color: var(--red-dim);">${r.ppp.toFixed(2)} PPP</span>
+            <div class="insight-reason">${r.reason}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  } else if (currentTab === 'momentum') {
+    title = '📈 Price Momentum Leaders';
+    const rising = globalData.league_meta.price_momentum.rising;
+    const falling = globalData.league_meta.price_momentum.falling;
+    html = `
+      <div style="margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--on-08);">
+        <div class="insight-player" style="color: var(--green); margin-bottom: 6px;">📈 RISING</div>
+        ${rising.map(r => `
+          <div class="insight-item" style="padding: 4px 0; border-bottom: none;">
+            ${r.player} <span style="color: var(--green);">+${r.change_pct.toFixed(2)}%</span>
+            <div class="insight-reason">${r.trend}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div>
+        <div class="insight-player" style="color: var(--red-dim); margin-bottom: 6px;">📉 FALLING</div>
+        ${falling.map(f => `
+          <div class="insight-item" style="padding: 4px 0; border-bottom: none;">
+            ${f.player} <span style="color: var(--red-dim);">${f.change_pct.toFixed(2)}%</span>
+            <div class="insight-reason">${f.trend}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  } else {
+    title = '👑 Captain Strategy';
+    const captains = globalData.league_meta.captain_analysis.most_captained;
+    html = captains.map(c => `
+      <div class="insight-item">
+        <div class="insight-player">${c.player}</div>
+        <div class="insight-reason">${c.captain_count} teams (${c.captain_pct.toFixed(1)}%)</div>
+        <div class="insight-reason">${c.reason}</div>
+      </div>
+    `).join('');
+  }
+  
+  document.getElementById('insightsTitle').textContent = title;
+  document.getElementById('insightsContent').innerHTML = html;
+}
+
+window.addEventListener('DOMContentLoaded', init);
+</script>
+
+</body>
+</html>

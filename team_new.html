@@ -508,37 +508,43 @@ document.getElementById('metrics').innerHTML = [
   <div class="metric-val${m.cls==='green'?' green':m.cls==='blue'?' blue':''}">${m.v}</div>
 </div>`).join('');
 
-// Charts - filter to last 5 races on portrait (mobile), all on landscape
-const isPortrait = window.innerHeight > window.innerWidth;
-const historyToShow = isPortrait && d.rank_history.length > 5 ? d.rank_history.slice(-5) : d.rank_history;
+// ── CHART RENDERING FUNCTION (Responds to orientation changes) ──
+function updateCharts() {
+  // Filter to last 5 races on portrait (mobile), all on landscape
+  const isPortrait = window.innerHeight > window.innerWidth;
+  const historyToShow = isPortrait && d.rank_history.length > 5 ? d.rank_history.slice(-5) : d.rank_history;
 
-const budgets = historyToShow.map(r => r.new_budget);
-const racePoints = historyToShow.map(r => r.race_points);
-const prizes = historyToShow.map(r => r.race_prize);
-const cumPrizes = prizes.reduce((acc, v) => { acc.push((acc.length ? acc[acc.length-1] : 0) + v); return acc; }, []);
-const raceLbls = historyToShow.map(r => `R${r.race}`);
-const budgetLbls = budgets.map(v => `$${v.toFixed(1)}`);
-const pointLbls = racePoints.map(v => `${v}`);
-const prizeLbls = prizes.map(v => v > 0 ? `$${v.toFixed(2)}` : '');
-const seasonRanks = historyToShow.map(r => r.season_rank);
+  const budgets = historyToShow.map(r => r.new_budget);
+  const racePoints = historyToShow.map(r => r.race_points);
+  const prizes = historyToShow.map(r => r.race_prize);
+  const cumPrizes = prizes.reduce((acc, v) => { acc.push((acc.length ? acc[acc.length-1] : 0) + v); return acc; }, []);
+  const raceLbls = historyToShow.map(r => `R${r.race}`);
+  const budgetLbls = budgets.map(v => `$${v.toFixed(1)}`);
+  const pointLbls = racePoints.map(v => `${v}`);
+  const prizeLbls = prizes.map(v => v > 0 ? `$${v.toFixed(2)}` : '');
+  const seasonRanks = historyToShow.map(r => r.season_rank);
 
-document.getElementById('charts-grid').innerHTML = `
-  <div class="chart-card">
-    <div class="chart-header"><div class="chart-title">Budget Evolution</div><div class="chart-sub">$${budgets[budgets.length-1].toFixed(1)} current</div></div>
-    ${miniLineChart(budgets, '#a6c8ff', 200, 60, budgetLbls)}
-  </div>
-  <div class="chart-card">
-    <div class="chart-header red"><div class="chart-title">Points per Race</div><div class="chart-sub">Latest: ${racePoints[racePoints.length-1]} pts</div></div>
-    ${miniBarChart(racePoints, '#e10600', 200, 60, pointLbls, raceLbls)}
-  </div>
-  <div class="chart-card">
-    <div class="chart-header green"><div class="chart-title">Prize Earnings</div><div class="chart-sub">Total: $${d.total_prize.toFixed(2)}</div></div>
-    ${miniBarChart(prizes, '#4ade80', 200, 60, prizeLbls, raceLbls)}
-  </div>
-  <div class="chart-card">
-    <div class="chart-header"><div class="chart-title">Season Rank</div><div class="chart-sub">Higher = better</div></div>
-    ${miniRankChart(seasonRanks, '#f59e0b', 200, 60)}
-  </div>`;
+  document.getElementById('charts-grid').innerHTML = `
+    <div class="chart-card">
+      <div class="chart-header"><div class="chart-title">Budget Evolution</div><div class="chart-sub">$${budgets[budgets.length-1].toFixed(1)} current</div></div>
+      ${miniLineChart(budgets, '#a6c8ff', 200, 60, budgetLbls)}
+    </div>
+    <div class="chart-card">
+      <div class="chart-header red"><div class="chart-title">Points per Race</div><div class="chart-sub">Latest: ${racePoints[racePoints.length-1]} pts</div></div>
+      ${miniBarChart(racePoints, '#e10600', 200, 60, pointLbls, raceLbls)}
+    </div>
+    <div class="chart-card">
+      <div class="chart-header green"><div class="chart-title">Prize Earnings</div><div class="chart-sub">Total: $${d.total_prize.toFixed(2)}</div></div>
+      ${miniBarChart(prizes, '#4ade80', 200, 60, prizeLbls, raceLbls)}
+    </div>
+    <div class="chart-card">
+      <div class="chart-header"><div class="chart-title">Season Rank</div><div class="chart-sub">Higher = better</div></div>
+      ${miniRankChart(seasonRanks, '#f59e0b', 200, 60)}
+    </div>`;
+}
+
+// Charts - call updateCharts() to render with proper filtering
+updateCharts();
 
 // Cards
 const usedSet = new Set(d.cards_used);
@@ -682,9 +688,21 @@ renderLandscape();
   document.body.insertAdjacentHTML('afterbegin', `<div style="background:#e10600;color:#fff;padding:12px;font-family:monospace;font-size:11px;position:fixed;top:0;left:0;right:0;z-index:9999">Error: ${e.message}</div>`);
 }
 window.addEventListener('resize', () => {
-  if (window.innerWidth > window.innerHeight && window.innerHeight < 500) renderLandscape();
+  if (window.innerWidth > window.innerHeight && window.innerHeight < 500) {
+    renderLandscape();
+  } else {
+    updateCharts();
+  }
 });
-window.addEventListener('orientationchange', () => setTimeout(renderLandscape, 100));
+window.addEventListener('orientationchange', () => {
+  setTimeout(() => {
+    if (window.innerWidth > window.innerHeight && window.innerHeight < 500) {
+      renderLandscape();
+    } else {
+      updateCharts();
+    }
+  }, 100);
+});
 
   } catch(e) {
     console.error('team.html error:', e);

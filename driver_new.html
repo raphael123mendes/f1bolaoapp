@@ -84,6 +84,7 @@ main{flex:1;padding-bottom:80px}
 .breakdown-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .breakdown-row:last-child{margin-bottom:0}
 .breakdown-label{font-size:0.55rem;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;width:68px;flex-shrink:0;color:var(--on-60)}
+.breakdown-label.leader{font-weight:900;color:#4ade80}
 .breakdown-bars{flex:1;position:relative;height:14px}
 .breakdown-bg{position:absolute;inset:0;background:var(--surface-highest)}
 .breakdown-fill{position:absolute;top:0;left:0;height:100%;transition:width 0.5s ease}
@@ -621,9 +622,8 @@ function renderBento() {
       const avgPct = Math.max(0, (avgVal/globalMax)*100);
       const color = CAT_COLORS[cat] || '#a6c8ff';
       const isLeader = v === categoryMaxes[cat] && v > 0;
-      const medal = isLeader ? '🥇 ' : '';
       return `<div class="breakdown-row">
-        <div class="breakdown-label">${medal}${cat}</div>
+        <div class="breakdown-label${isLeader ? ' leader' : ''}">${cat}</div>
         <div class="breakdown-bars">
           <div class="breakdown-bg"></div>
           <div class="breakdown-fill avg" style="width:${avgPct.toFixed(1)}%"></div>

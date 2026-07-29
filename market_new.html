@@ -103,9 +103,24 @@
     grid-column: 1 / -1;
     background: var(--surface-low); padding: 20px;
     position: relative; overflow: hidden; border-left: 3px solid var(--red);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 12px;
+    align-items: start;
+  }
+  
+  /* Mobile: single column */
+  @media (max-width: 640px) {
+    .hero-sentiment {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Tablet: 2 columns */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .hero-sentiment {
+      grid-template-columns: 1fr 1fr;
+    }
   }
   .hero-card.big { grid-column: span 2; }  /* 2 columns = ~half width */
   .hero-sentiment-bg {

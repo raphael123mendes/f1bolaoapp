@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T18:51:22.966820+00:00",
+  "updated_at": "2026-08-23T21:16:03.793347+00:00",
   "total_rows": 110,
   "races_covered": [
     1,
@@ -4700,7 +4700,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:19.395662+00:00"
+      "fetched_at": "2026-08-23T21:16:00.354283+00:00"
     },
     {
       "user_guid": "0b3f0038-1368-11f1-a688-fd3d4158bf79-0-35279052",
@@ -4740,7 +4740,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:18.838419+00:00"
+      "fetched_at": "2026-08-23T21:15:59.805593+00:00"
     },
     {
       "user_guid": "23694378-196a-11f1-95f5-bf4745e2ae8a-0-190698143",
@@ -4780,7 +4780,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:17.773242+00:00"
+      "fetched_at": "2026-08-23T21:15:58.576571+00:00"
     },
     {
       "user_guid": "af5b6c4a-11b7-11f1-a6ba-3bae984dbbac-0-34875001",
@@ -4820,7 +4820,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:17.241184+00:00"
+      "fetched_at": "2026-08-23T21:15:58.039301+00:00"
     },
     {
       "user_guid": "0f3b086c-1381-11f1-8199-6735aa542fc4-0-179110003",
@@ -4860,7 +4860,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:20.467691+00:00"
+      "fetched_at": "2026-08-23T21:16:01.981416+00:00"
     },
     {
       "user_guid": "d16d9b66-1840-11f1-8fd8-f70cd60e50e6-0-202971566",
@@ -4900,7 +4900,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:21.002682+00:00"
+      "fetched_at": "2026-08-23T21:16:00.892908+00:00"
     },
     {
       "user_guid": "7f6dff66-11fd-11f1-bed2-d5a4efa941d4-0-178877659",
@@ -4940,7 +4940,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:18.306228+00:00"
+      "fetched_at": "2026-08-23T21:15:59.269165+00:00"
     },
     {
       "user_guid": "6cbc08a2-1844-11f1-a808-cb32621ceb82-0-34753001",
@@ -4980,7 +4980,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:19.933128+00:00"
+      "fetched_at": "2026-08-23T21:16:01.438238+00:00"
     },
     {
       "user_guid": "2165dde2-11b9-11f1-94eb-47ffa4421334-0-178889519",
@@ -5020,7 +5020,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:22.766534+00:00"
+      "fetched_at": "2026-08-23T21:16:03.593062+00:00"
     },
     {
       "user_guid": "7f451c50-11bb-11f1-89ff-6508e30e59f0-0-34802661",
@@ -5060,7 +5060,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:21.538202+00:00"
+      "fetched_at": "2026-08-23T21:16:02.516913+00:00"
     },
     {
       "user_guid": "88597cc6-190b-11f1-aa99-f79ef14ce400-0-45799881",
@@ -5100,7 +5100,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": false,
-      "fetched_at": "2026-08-23T18:51:22.076097+00:00"
+      "fetched_at": "2026-08-23T21:16:03.055071+00:00"
     }
   ]
 }

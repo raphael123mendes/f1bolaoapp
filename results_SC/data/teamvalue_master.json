@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T16:42:00.501068+00:00",
+  "updated_at": "2026-09-06T17:06:37.077957+00:00",
   "total_rows": 110,
   "races_covered": [
     1,
@@ -4708,7 +4708,7 @@
         "Arvid Lindblad"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:56.575434+00:00"
+      "fetched_at": "2026-09-06T17:06:33.464498+00:00"
     },
     {
       "user_guid": "0b3f0038-1368-11f1-a688-fd3d4158bf79-0-35279052",
@@ -4744,12 +4744,12 @@
         "Mercedes"
       ],
       "transfers_out": [
-        "11161",
-        "12"
+        "12",
+        "11161"
       ],
       "transfers_out_names": [
-        "Kimi Antonelli",
-        "Fernando Alonso"
+        "Fernando Alonso",
+        "Kimi Antonelli"
       ],
       "transfers_in": [
         "124",
@@ -4760,7 +4760,7 @@
         "Alexander Albon"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:55.787544+00:00"
+      "fetched_at": "2026-09-06T17:06:32.904291+00:00"
     },
     {
       "user_guid": "23694378-196a-11f1-95f5-bf4745e2ae8a-0-190698143",
@@ -4808,7 +4808,7 @@
         "Charles Leclerc"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:54.571846+00:00"
+      "fetched_at": "2026-09-06T17:06:31.776597+00:00"
     },
     {
       "user_guid": "0f3b086c-1381-11f1-8199-6735aa542fc4-0-179110003",
@@ -4860,7 +4860,7 @@
         "Fernando Alonso"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:58.461159+00:00"
+      "fetched_at": "2026-09-06T17:06:35.162343+00:00"
     },
     {
       "user_guid": "af5b6c4a-11b7-11f1-a6ba-3bae984dbbac-0-34875001",
@@ -4897,30 +4897,30 @@
       ],
       "transfers_out": [
         "131",
-        "27",
         "115",
-        "117"
+        "117",
+        "27"
       ],
       "transfers_out_names": [
         "Max Verstappen",
-        "McLaren",
         "Charles Leclerc",
-        "Lando Norris"
+        "Lando Norris",
+        "McLaren"
       ],
       "transfers_in": [
-        "25",
-        "129",
         "111",
+        "129",
+        "25",
         "11"
       ],
       "transfers_in_names": [
-        "Ferrari",
-        "Lance Stroll",
         "Nico Hulkenberg",
+        "Lance Stroll",
+        "Ferrari",
         "Alexander Albon"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:53.961802+00:00"
+      "fetched_at": "2026-09-06T17:06:31.214259+00:00"
     },
     {
       "user_guid": "d16d9b66-1840-11f1-8fd8-f70cd60e50e6-0-202971566",
@@ -4960,7 +4960,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:57.240066+00:00"
+      "fetched_at": "2026-09-06T17:06:34.028926+00:00"
     },
     {
       "user_guid": "7f6dff66-11fd-11f1-bed2-d5a4efa941d4-0-178877659",
@@ -4996,27 +4996,27 @@
         "Audi"
       ],
       "transfers_out": [
+        "117",
         "2640",
-        "11051",
-        "117"
+        "11051"
       ],
       "transfers_out_names": [
+        "Lando Norris",
         "Audi",
-        "Gabriel Bortoleto",
-        "Lando Norris"
+        "Gabriel Bortoleto"
       ],
       "transfers_in": [
-        "129",
         "28",
+        "129",
         "12"
       ],
       "transfers_in_names": [
-        "Lance Stroll",
         "Mercedes",
+        "Lance Stroll",
         "Fernando Alonso"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:55.179718+00:00"
+      "fetched_at": "2026-09-06T17:06:32.341724+00:00"
     },
     {
       "user_guid": "6cbc08a2-1844-11f1-a808-cb32621ceb82-0-34753001",
@@ -5052,27 +5052,27 @@
         "McLaren"
       ],
       "transfers_out": [
+        "13",
         "27",
-        "11161",
-        "13"
+        "11161"
       ],
       "transfers_out_names": [
+        "Valtteri Bottas",
         "McLaren",
-        "Kimi Antonelli",
-        "Valtteri Bottas"
+        "Kimi Antonelli"
       ],
       "transfers_in": [
-        "25",
         "124",
+        "25",
         "11"
       ],
       "transfers_in_names": [
-        "Ferrari",
         "George Russell",
+        "Ferrari",
         "Alexander Albon"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:57.849039+00:00"
+      "fetched_at": "2026-09-06T17:06:34.608606+00:00"
     },
     {
       "user_guid": "2165dde2-11b9-11f1-94eb-47ffa4421334-0-178889519",
@@ -5108,35 +5108,35 @@
         "Racing Bulls"
       ],
       "transfers_out": [
-        "2636",
-        "11149",
         "11031",
+        "11149",
+        "11161",
         "114",
-        "11161"
+        "2636"
       ],
       "transfers_out_names": [
-        "Racing Bulls",
-        "Arvid Lindblad",
         "Oliver Bearman",
+        "Arvid Lindblad",
+        "Kimi Antonelli",
         "Liam Lawson",
-        "Kimi Antonelli"
+        "Racing Bulls"
       ],
       "transfers_in": [
-        "121",
-        "111",
+        "124",
         "13",
-        "25",
-        "124"
+        "111",
+        "121",
+        "25"
       ],
       "transfers_in_names": [
-        "Sergio Perez",
-        "Nico Hulkenberg",
+        "George Russell",
         "Valtteri Bottas",
-        "Ferrari",
-        "George Russell"
+        "Nico Hulkenberg",
+        "Sergio Perez",
+        "Ferrari"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:42:00.300796+00:00"
+      "fetched_at": "2026-09-06T17:06:36.877685+00:00"
     },
     {
       "user_guid": "7f451c50-11bb-11f1-89ff-6508e30e59f0-0-34802661",
@@ -5176,7 +5176,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:59.071596+00:00"
+      "fetched_at": "2026-09-06T17:06:35.736163+00:00"
     },
     {
       "user_guid": "88597cc6-190b-11f1-aa99-f79ef14ce400-0-45799881",
@@ -5216,7 +5216,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-09-06T16:41:59.679111+00:00"
+      "fetched_at": "2026-09-06T17:06:36.313079+00:00"
     }
   ]
 }

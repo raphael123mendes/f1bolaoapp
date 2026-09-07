@@ -10,8 +10,8 @@
     "rank_change": 0,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
-    "total_points": 3333.0,
-    "gd_points": 254.0,
+    "total_points": 3484.0,
+    "gd_points": 405.0,
     "budget_remaining": 0.9,
     "team_value": 116.7,
     "cards_used": [],
@@ -133,8 +133,8 @@
     "rank_change": 0,
     "team_name": "Ixxtain",
     "user_name": "Raphael Stein",
-    "total_points": 3243.0,
-    "gd_points": 321.0,
+    "total_points": 3420.0,
+    "gd_points": 498.0,
     "budget_remaining": 2.0,
     "team_value": 125.2,
     "cards_used": [
@@ -256,8 +256,8 @@
     "rank_change": 0,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
-    "total_points": 3211.0,
-    "gd_points": 220.0,
+    "total_points": 3348.0,
+    "gd_points": 357.0,
     "budget_remaining": 1.3,
     "team_value": 119.8,
     "cards_used": [
@@ -380,8 +380,8 @@
     "rank_change": 0,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
-    "total_points": 3183.0,
-    "gd_points": 165.0,
+    "total_points": 3292.0,
+    "gd_points": 274.0,
     "budget_remaining": 0.1,
     "team_value": 112.0,
     "cards_used": [],
@@ -496,12 +496,12 @@
     "race_date": "2026-09-07",
     "rank": 5,
     "overall_rank": 5,
-    "live_gd_rank": 9,
+    "live_gd_rank": 10,
     "rank_change": 0,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
-    "total_points": 3059.0,
-    "gd_points": 142.0,
+    "total_points": 3164.0,
+    "gd_points": 247.0,
     "budget_remaining": 0.3,
     "team_value": 113.6,
     "cards_used": [],
@@ -613,134 +613,14 @@
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
     "race_date": "2026-09-07",
-    "rank": 6,
-    "overall_rank": 6,
-    "live_gd_rank": 10,
-    "rank_change": 0,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "total_points": 2997.0,
-    "gd_points": 141.0,
-    "budget_remaining": 1.9,
-    "team_value": 109.9,
-    "cards_used": [],
-    "picks": [
-      {
-        "id": "11149",
-        "name": "Arvid Lindblad",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 11,
-        "breakdown": [
-          "Race Position: +4",
-          "Qualifying Position: +1",
-          "Race position gained: +1",
-          "race overtake bonus: +5"
-        ]
-      },
-      {
-        "id": "12",
-        "name": "Fernando Alonso",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": -10,
-        "breakdown": [
-          "Qualifying Position: +0",
-          "Race not classified : -20",
-          "race overtake bonus: +10"
-        ]
-      },
-      {
-        "id": "118",
-        "name": "Esteban Ocon",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 10,
-        "breakdown": [
-          "Race Position: +0",
-          "Qualifying Position: +0",
-          "Race Position lost: -2",
-          "race overtake bonus: +12"
-        ]
-      },
-      {
-        "id": "117",
-        "name": "Lando Norris",
-        "type": "Driver",
-        "is_captain": true,
-        "is_megacap": false,
-        "points_gd": 32,
-        "breakdown": [
-          "Race Position: +12",
-          "Qualifying Position: +2",
-          "Race position gained: +4",
-          "race overtake bonus: +14"
-        ]
-      },
-      {
-        "id": "18",
-        "name": "Pierre Gasly",
-        "type": "Driver",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 14,
-        "breakdown": [
-          "Race Position: +6",
-          "Qualifying Position: +10",
-          "Race Position lost: -6",
-          "race overtake bonus: +4"
-        ]
-      },
-      {
-        "id": "28",
-        "name": "Mercedes",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 128,
-        "breakdown": [
-          "Race Position: +43",
-          "Qualifying Position: +13",
-          "Both Driver Q3: +10",
-          "Race position gained: +18",
-          "Race Fastest lap: +10",
-          "Fastest Pitstop: +2",
-          "race overtake bonus: +32"
-        ]
-      },
-      {
-        "id": "2636",
-        "name": "Racing Bulls",
-        "type": "Constructor",
-        "is_captain": false,
-        "is_megacap": false,
-        "points_gd": 33,
-        "breakdown": [
-          "Race Position: +5",
-          "Qualifying Position: +1",
-          "One Driver Q3: +5",
-          "Race position gained: +6",
-          "race overtake bonus: +16"
-        ]
-      }
-    ]
-  },
-  {
-    "race_number": 13,
-    "race_name": "Italian Grand Prix",
-    "race_flag": "🇮🇹",
-    "race_date": "2026-09-07",
     "rank": 7,
-    "overall_rank": 7,
+    "overall_rank": 6,
     "live_gd_rank": 5,
-    "rank_change": 0,
+    "rank_change": 1,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
-    "total_points": 2973.0,
-    "gd_points": 174.0,
+    "total_points": 3109.0,
+    "gd_points": 310.0,
     "budget_remaining": 0.2,
     "team_value": 123.4,
     "cards_used": [],
@@ -853,14 +733,134 @@
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
     "race_date": "2026-09-07",
+    "rank": 6,
+    "overall_rank": 7,
+    "live_gd_rank": 9,
+    "rank_change": -1,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "total_points": 3106.0,
+    "gd_points": 250.0,
+    "budget_remaining": 1.9,
+    "team_value": 109.9,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 11,
+        "breakdown": [
+          "Race Position: +4",
+          "Qualifying Position: +1",
+          "Race position gained: +1",
+          "race overtake bonus: +5"
+        ]
+      },
+      {
+        "id": "12",
+        "name": "Fernando Alonso",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -10,
+        "breakdown": [
+          "Qualifying Position: +0",
+          "Race not classified : -20",
+          "race overtake bonus: +10"
+        ]
+      },
+      {
+        "id": "118",
+        "name": "Esteban Ocon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 10,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race Position lost: -2",
+          "race overtake bonus: +12"
+        ]
+      },
+      {
+        "id": "117",
+        "name": "Lando Norris",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 32,
+        "breakdown": [
+          "Race Position: +12",
+          "Qualifying Position: +2",
+          "Race position gained: +4",
+          "race overtake bonus: +14"
+        ]
+      },
+      {
+        "id": "18",
+        "name": "Pierre Gasly",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 14,
+        "breakdown": [
+          "Race Position: +6",
+          "Qualifying Position: +10",
+          "Race Position lost: -6",
+          "race overtake bonus: +4"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 128,
+        "breakdown": [
+          "Race Position: +43",
+          "Qualifying Position: +13",
+          "Both Driver Q3: +10",
+          "Race position gained: +18",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
+        ]
+      },
+      {
+        "id": "2636",
+        "name": "Racing Bulls",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 33,
+        "breakdown": [
+          "Race Position: +5",
+          "Qualifying Position: +1",
+          "One Driver Q3: +5",
+          "Race position gained: +6",
+          "race overtake bonus: +16"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 13,
+    "race_name": "Italian Grand Prix",
+    "race_flag": "🇮🇹",
+    "race_date": "2026-09-07",
     "rank": 8,
     "overall_rank": 8,
     "live_gd_rank": 7,
     "rank_change": 0,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
-    "total_points": 2932.0,
-    "gd_points": 148.0,
+    "total_points": 3050.0,
+    "gd_points": 266.0,
     "budget_remaining": 2.3,
     "team_value": 107.4,
     "cards_used": [],
@@ -979,8 +979,8 @@
     "rank_change": 0,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
-    "total_points": 2824.0,
-    "gd_points": 145.0,
+    "total_points": 2934.0,
+    "gd_points": 255.0,
     "budget_remaining": 0.7,
     "team_value": 122.3,
     "cards_used": [],
@@ -1099,8 +1099,8 @@
     "rank_change": 0,
     "team_name": "Mucci_Senior",
     "user_name": "Ricardo Mucci",
-    "total_points": 2528.0,
-    "gd_points": 251.0,
+    "total_points": 2673.0,
+    "gd_points": 396.0,
     "budget_remaining": 5.7,
     "team_value": 108.9,
     "cards_used": [],
@@ -1222,8 +1222,8 @@
     "rank_change": 0,
     "team_name": "Edu Lima",
     "user_name": "Eduardo Santos Lima",
-    "total_points": 2010.0,
-    "gd_points": -15.0,
+    "total_points": 2101.0,
+    "gd_points": 76.0,
     "budget_remaining": 0.0,
     "team_value": 107.6,
     "cards_used": [],

@@ -9122,13 +9122,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 23,
-    "total_points": 368,
+    "gameday_points": 38,
+    "total_points": 383,
     "season_high": 18.9,
     "season_low": 12.5,
     "pct_vs_high": 0.0,
     "pct_vs_low": 51.2,
-    "fetched_at": "2026-09-06T19:54:12.592997+00:00"
+    "fetched_at": "2026-09-07T03:06:24.870530+00:00"
   },
   {
     "player_id": "24",
@@ -9145,13 +9145,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -41,
-    "total_points": -81,
+    "gameday_points": -21,
+    "total_points": -61,
     "season_high": 10.3,
     "season_low": 5.1,
     "pct_vs_high": -38.83,
     "pct_vs_low": 23.53,
-    "fetched_at": "2026-09-06T19:54:13.159225+00:00"
+    "fetched_at": "2026-09-07T03:06:25.511633+00:00"
   },
   {
     "player_id": "2640",
@@ -9168,13 +9168,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 2,
-    "total_points": 133,
+    "gameday_points": 41,
+    "total_points": 172,
     "season_high": 7.4,
     "season_low": 3.8,
     "pct_vs_high": 0.0,
     "pct_vs_low": 94.74,
-    "fetched_at": "2026-09-06T19:54:13.723712+00:00"
+    "fetched_at": "2026-09-07T03:06:26.164197+00:00"
   },
   {
     "player_id": "2641",
@@ -9191,13 +9191,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -5,
-    "total_points": -72,
+    "gameday_points": 16,
+    "total_points": -51,
     "season_high": 6.2,
     "season_low": 3.0,
     "pct_vs_high": -51.61,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:14.283253+00:00"
+    "fetched_at": "2026-09-07T03:06:26.840593+00:00"
   },
   {
     "player_id": "25",
@@ -9214,13 +9214,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 9,
-    "total_points": 849,
+    "gameday_points": 24,
+    "total_points": 864,
     "season_high": 26.9,
     "season_low": 23.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 15.45,
-    "fetched_at": "2026-09-06T19:54:14.853867+00:00"
+    "fetched_at": "2026-09-07T03:06:27.492092+00:00"
   },
   {
     "player_id": "26",
@@ -9237,13 +9237,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -3,
-    "total_points": 193,
+    "gameday_points": 17,
+    "total_points": 213,
     "season_high": 12.0,
     "season_low": 7.4,
     "pct_vs_high": -5.0,
     "pct_vs_low": 54.05,
-    "fetched_at": "2026-09-06T19:54:15.422943+00:00"
+    "fetched_at": "2026-09-07T03:06:28.146103+00:00"
   },
   {
     "player_id": "27",
@@ -9260,13 +9260,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 47,
-    "total_points": 665,
+    "gameday_points": 77,
+    "total_points": 695,
     "season_high": 31.3,
     "season_low": 28.5,
     "pct_vs_high": 0.0,
     "pct_vs_low": 9.82,
-    "fetched_at": "2026-09-06T19:54:15.992472+00:00"
+    "fetched_at": "2026-09-07T03:06:28.790885+00:00"
   },
   {
     "player_id": "28",
@@ -9283,13 +9283,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 94,
-    "total_points": 1060,
+    "gameday_points": 128,
+    "total_points": 1094,
     "season_high": 32.9,
     "season_low": 29.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 12.29,
-    "fetched_at": "2026-09-06T19:54:16.553546+00:00"
+    "fetched_at": "2026-09-07T03:06:29.446710+00:00"
   },
   {
     "player_id": "2636",
@@ -9306,13 +9306,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 17,
-    "total_points": 383,
+    "gameday_points": 33,
+    "total_points": 399,
     "season_high": 13.5,
     "season_low": 6.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 114.29,
-    "fetched_at": "2026-09-06T19:54:17.119188+00:00"
+    "fetched_at": "2026-09-07T03:06:30.088054+00:00"
   },
   {
     "player_id": "29",
@@ -9329,13 +9329,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 35,
-    "total_points": 548,
+    "gameday_points": 69,
+    "total_points": 582,
     "season_high": 31.2,
     "season_low": 28.2,
     "pct_vs_high": 0.0,
     "pct_vs_low": 10.64,
-    "fetched_at": "2026-09-06T19:54:17.691631+00:00"
+    "fetched_at": "2026-09-07T03:06:30.743286+00:00"
   },
   {
     "player_id": "210",
@@ -9352,13 +9352,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 4,
-    "total_points": 151,
+    "gameday_points": 34,
+    "total_points": 181,
     "season_high": 15.6,
     "season_low": 12.0,
     "pct_vs_high": -15.38,
     "pct_vs_low": 10.0,
-    "fetched_at": "2026-09-06T19:54:18.259082+00:00"
+    "fetched_at": "2026-09-07T03:06:31.396624+00:00"
   },
   {
     "player_id": "11",
@@ -9375,13 +9375,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 3,
-    "total_points": 11,
+    "gameday_points": 17,
+    "total_points": 25,
     "season_high": 11.6,
     "season_low": 5.2,
     "pct_vs_high": -55.17,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:00.866902+00:00"
+    "fetched_at": "2026-09-07T03:06:11.543764+00:00"
   },
   {
     "player_id": "11149",
@@ -9398,13 +9398,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 6,
-    "total_points": 77,
+    "gameday_points": 11,
+    "total_points": 82,
     "season_high": 8.0,
     "season_low": 5.6,
     "pct_vs_high": -2.5,
     "pct_vs_low": 39.29,
-    "fetched_at": "2026-09-06T19:54:01.362964+00:00"
+    "fetched_at": "2026-09-07T03:06:12.156699+00:00"
   },
   {
     "player_id": "125",
@@ -9421,13 +9421,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": null,
-    "total_points": 89,
+    "gameday_points": 14,
+    "total_points": 103,
     "season_high": 13.0,
     "season_low": 9.8,
     "pct_vs_high": -24.62,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:01.904740+00:00"
+    "fetched_at": "2026-09-07T03:06:12.805906+00:00"
   },
   {
     "player_id": "115",
@@ -9444,13 +9444,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -13,
-    "total_points": 311,
+    "gameday_points": -12,
+    "total_points": 312,
     "season_high": 24.2,
     "season_low": 22.8,
     "pct_vs_high": 0.0,
     "pct_vs_low": 6.14,
-    "fetched_at": "2026-09-06T19:54:02.464366+00:00"
+    "fetched_at": "2026-09-07T03:06:13.431606+00:00"
   },
   {
     "player_id": "118",
@@ -9467,13 +9467,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -2,
-    "total_points": 108,
+    "gameday_points": 10,
+    "total_points": 120,
     "season_high": 10.7,
     "season_low": 7.3,
     "pct_vs_high": -5.61,
     "pct_vs_low": 38.36,
-    "fetched_at": "2026-09-06T19:54:02.996500+00:00"
+    "fetched_at": "2026-09-07T03:06:14.039871+00:00"
   },
   {
     "player_id": "12",
@@ -9490,13 +9490,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -20,
-    "total_points": 9,
+    "gameday_points": -10,
+    "total_points": 19,
     "season_high": 10.0,
     "season_low": 5.0,
     "pct_vs_high": -32.0,
     "pct_vs_low": 36.0,
-    "fetched_at": "2026-09-06T19:54:03.493096+00:00"
+    "fetched_at": "2026-09-07T03:06:14.655272+00:00"
   },
   {
     "player_id": "11059",
@@ -9513,13 +9513,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 3,
-    "total_points": 132,
+    "gameday_points": 14,
+    "total_points": 143,
     "season_high": 11.2,
     "season_low": 6.2,
     "pct_vs_high": -5.36,
     "pct_vs_low": 70.97,
-    "fetched_at": "2026-09-06T19:54:04.039233+00:00"
+    "fetched_at": "2026-09-07T03:06:15.268006+00:00"
   },
   {
     "player_id": "11051",
@@ -9536,13 +9536,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -1,
-    "total_points": 69,
+    "gameday_points": 14,
+    "total_points": 84,
     "season_high": 8.0,
     "season_low": 5.2,
     "pct_vs_high": 0.0,
     "pct_vs_low": 53.85,
-    "fetched_at": "2026-09-06T19:54:04.531682+00:00"
+    "fetched_at": "2026-09-07T03:06:15.836596+00:00"
   },
   {
     "player_id": "124",
@@ -9559,13 +9559,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 27,
-    "total_points": 335,
+    "gameday_points": 33,
+    "total_points": 341,
     "season_high": 28.6,
     "season_low": 27.4,
     "pct_vs_high": -3.5,
     "pct_vs_low": 0.73,
-    "fetched_at": "2026-09-06T19:54:05.069850+00:00"
+    "fetched_at": "2026-09-07T03:06:16.441763+00:00"
   },
   {
     "player_id": "11032",
@@ -9588,7 +9588,7 @@
     "season_low": 11.5,
     "pct_vs_high": -3.97,
     "pct_vs_low": 26.09,
-    "fetched_at": "2026-09-06T19:54:05.586757+00:00"
+    "fetched_at": "2026-09-07T03:06:17.012508+00:00"
   },
   {
     "player_id": "11161",
@@ -9605,13 +9605,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 67,
-    "total_points": 533,
+    "gameday_points": 93,
+    "total_points": 559,
     "season_high": 26.0,
     "season_low": 23.2,
     "pct_vs_high": 0.0,
     "pct_vs_low": 12.07,
-    "fetched_at": "2026-09-06T19:54:06.164789+00:00"
+    "fetched_at": "2026-09-07T03:06:17.685066+00:00"
   },
   {
     "player_id": "129",
@@ -9628,13 +9628,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -20,
-    "total_points": -110,
+    "gameday_points": -10,
+    "total_points": -100,
     "season_high": 8.0,
     "season_low": 3.0,
     "pct_vs_high": -62.5,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:06.661650+00:00"
+    "fetched_at": "2026-09-07T03:06:18.265856+00:00"
   },
   {
     "player_id": "117",
@@ -9651,13 +9651,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 18,
-    "total_points": 302,
+    "gameday_points": 32,
+    "total_points": 316,
     "season_high": 27.2,
     "season_low": 25.6,
     "pct_vs_high": -2.94,
     "pct_vs_low": 3.12,
-    "fetched_at": "2026-09-06T19:54:07.207497+00:00"
+    "fetched_at": "2026-09-07T03:06:18.879523+00:00"
   },
   {
     "player_id": "110",
@@ -9674,13 +9674,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 12,
-    "total_points": 379,
+    "gameday_points": 26,
+    "total_points": 393,
     "season_high": 25.1,
     "season_low": 22.5,
     "pct_vs_high": 0.0,
     "pct_vs_low": 11.56,
-    "fetched_at": "2026-09-06T19:54:07.746169+00:00"
+    "fetched_at": "2026-09-07T03:06:19.474392+00:00"
   },
   {
     "player_id": "114",
@@ -9703,7 +9703,7 @@
     "season_low": 6.3,
     "pct_vs_high": 0.0,
     "pct_vs_low": 63.49,
-    "fetched_at": "2026-09-06T19:54:08.316687+00:00"
+    "fetched_at": "2026-09-07T03:06:20.059138+00:00"
   },
   {
     "player_id": "131",
@@ -9720,13 +9720,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 22,
-    "total_points": 280,
+    "gameday_points": 37,
+    "total_points": 295,
     "season_high": 28.4,
     "season_low": 27.5,
     "pct_vs_high": -3.17,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:08.855119+00:00"
+    "fetched_at": "2026-09-07T03:06:20.662417+00:00"
   },
   {
     "player_id": "111",
@@ -9743,13 +9743,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": null,
-    "total_points": -27,
+    "gameday_points": 14,
+    "total_points": -13,
     "season_high": 6.8,
     "season_low": 3.0,
     "pct_vs_high": -47.06,
     "pct_vs_low": 20.0,
-    "fetched_at": "2026-09-06T19:54:09.354516+00:00"
+    "fetched_at": "2026-09-07T03:06:21.243644+00:00"
   },
   {
     "player_id": "11031",
@@ -9766,13 +9766,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -4,
-    "total_points": 52,
+    "gameday_points": 4,
+    "total_points": 60,
     "season_high": 9.4,
     "season_low": 7.0,
     "pct_vs_high": -25.53,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:09.897238+00:00"
+    "fetched_at": "2026-09-07T03:06:21.825151+00:00"
   },
   {
     "player_id": "1982",
@@ -9789,13 +9789,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 19,
-    "total_points": 200,
+    "gameday_points": 35,
+    "total_points": 216,
     "season_high": 25.5,
     "season_low": 24.1,
     "pct_vs_high": -5.49,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:10.440587+00:00"
+    "fetched_at": "2026-09-07T03:06:22.431600+00:00"
   },
   {
     "player_id": "18",
@@ -9812,13 +9812,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": 10,
-    "total_points": 153,
+    "gameday_points": 14,
+    "total_points": 157,
     "season_high": 13.0,
     "season_low": 11.6,
     "pct_vs_high": -4.62,
     "pct_vs_low": 6.9,
-    "fetched_at": "2026-09-06T19:54:10.984695+00:00"
+    "fetched_at": "2026-09-07T03:06:23.045740+00:00"
   },
   {
     "player_id": "121",
@@ -9835,13 +9835,13 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -1,
-    "total_points": 12,
+    "gameday_points": 13,
+    "total_points": 26,
     "season_high": 7.6,
     "season_low": 3.2,
     "pct_vs_high": -57.89,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:11.534595+00:00"
+    "fetched_at": "2026-09-07T03:06:23.660725+00:00"
   },
   {
     "player_id": "13",
@@ -9858,12 +9858,12 @@
     "price_next_race": null,
     "price_change": 0.0,
     "price_change_pct": 0.0,
-    "gameday_points": -3,
-    "total_points": -81,
+    "gameday_points": 4,
+    "total_points": -74,
     "season_high": 5.9,
     "season_low": 3.0,
     "pct_vs_high": -49.15,
     "pct_vs_low": 0.0,
-    "fetched_at": "2026-09-06T19:54:12.031732+00:00"
+    "fetched_at": "2026-09-07T03:06:24.230769+00:00"
   }
 ]

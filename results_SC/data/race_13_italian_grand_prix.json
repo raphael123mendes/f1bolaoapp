@@ -3,7 +3,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 1,
     "overall_rank": 1,
     "live_gd_rank": 2,
@@ -22,11 +22,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 6,
+        "points_gd": 11,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -35,13 +36,14 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 67,
+        "points_gd": 93,
         "breakdown": [
           "Driver Of Day: +10",
           "Race Position: +25",
           "Qualifying Position: +4",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "race overtake bonus: +26"
         ]
       },
       {
@@ -50,11 +52,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 8,
+        "points_gd": 25,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +8"
+          "Race position gained: +8",
+          "race overtake bonus: +17"
         ]
       },
       {
@@ -63,11 +66,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 17,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -76,10 +80,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -88,13 +93,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       },
       {
@@ -103,13 +110,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       }
     ]
@@ -118,7 +126,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 2,
     "overall_rank": 2,
     "live_gd_rank": 1,
@@ -139,10 +147,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 27,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +18",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -151,10 +160,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -20,
+        "points_gd": -10,
         "breakdown": [
           "Qualifying Position: +0",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +10"
         ]
       },
       {
@@ -163,13 +173,14 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": true,
-        "points_gd": 67,
+        "points_gd": 93,
         "breakdown": [
           "Driver Of Day: +10",
           "Race Position: +25",
           "Qualifying Position: +4",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "race overtake bonus: +26"
         ]
       },
       {
@@ -178,10 +189,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -190,11 +202,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 17,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -203,13 +216,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -218,13 +232,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       }
     ]
@@ -233,7 +249,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 3,
     "overall_rank": 3,
     "live_gd_rank": 4,
@@ -254,10 +270,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -13,
+        "points_gd": -12,
         "breakdown": [
           "Qualifying Position: +7",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +1"
         ]
       },
       {
@@ -266,13 +283,14 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 67,
+        "points_gd": 93,
         "breakdown": [
           "Driver Of Day: +10",
           "Race Position: +25",
           "Qualifying Position: +4",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "race overtake bonus: +26"
         ]
       },
       {
@@ -281,10 +299,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -293,11 +312,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -306,11 +326,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -3,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -3"
+          "Race Position lost: -3",
+          "race overtake bonus: +7"
         ]
       },
       {
@@ -319,13 +340,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -334,13 +356,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       }
     ]
@@ -349,7 +373,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 4,
     "overall_rank": 4,
     "live_gd_rank": 6,
@@ -368,10 +392,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 27,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +18",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -380,10 +405,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -392,11 +418,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 6,
+        "points_gd": 11,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -405,11 +432,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 17,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -418,11 +446,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -431,13 +460,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -446,13 +476,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       }
     ]
@@ -461,7 +493,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 5,
     "overall_rank": 5,
     "live_gd_rank": 9,
@@ -480,10 +512,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -492,10 +525,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -20,
+        "points_gd": -10,
         "breakdown": [
           "Qualifying Position: +0",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +10"
         ]
       },
       {
@@ -504,11 +538,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 6,
+        "points_gd": 11,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -517,10 +552,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 27,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +18",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -529,11 +565,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -542,13 +579,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -557,13 +595,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       }
     ]
@@ -572,7 +612,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 6,
     "overall_rank": 6,
     "live_gd_rank": 10,
@@ -591,11 +631,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 6,
+        "points_gd": 11,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -604,10 +645,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -20,
+        "points_gd": -10,
         "breakdown": [
           "Qualifying Position: +0",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +10"
         ]
       },
       {
@@ -616,11 +658,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -2,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +12"
         ]
       },
       {
@@ -629,11 +672,12 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 18,
+        "points_gd": 32,
         "breakdown": [
           "Race Position: +12",
           "Qualifying Position: +2",
-          "Race position gained: +4"
+          "Race position gained: +4",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -642,11 +686,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 10,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +6",
           "Qualifying Position: +10",
-          "Race Position lost: -6"
+          "Race Position lost: -6",
+          "race overtake bonus: +4"
         ]
       },
       {
@@ -655,13 +700,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       },
       {
@@ -670,12 +717,13 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 17,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +5",
           "Qualifying Position: +1",
           "One Driver Q3: +5",
-          "Race position gained: +6"
+          "Race position gained: +6",
+          "race overtake bonus: +16"
         ]
       }
     ]
@@ -684,7 +732,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 7,
     "overall_rank": 7,
     "live_gd_rank": 5,
@@ -703,13 +751,14 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 67,
+        "points_gd": 93,
         "breakdown": [
           "Driver Of Day: +10",
           "Race Position: +25",
           "Qualifying Position: +4",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "race overtake bonus: +26"
         ]
       },
       {
@@ -718,10 +767,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -13,
+        "points_gd": -12,
         "breakdown": [
           "Qualifying Position: +7",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +1"
         ]
       },
       {
@@ -730,10 +780,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -20,
+        "points_gd": -10,
         "breakdown": [
           "Qualifying Position: +0",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +10"
         ]
       },
       {
@@ -742,10 +793,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -754,10 +806,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -20,
+        "points_gd": -10,
         "breakdown": [
           "Qualifying Position: +0",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +10"
         ]
       },
       {
@@ -766,13 +819,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -781,13 +835,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       }
     ]
@@ -796,7 +852,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 8,
     "overall_rank": 8,
     "live_gd_rank": 7,
@@ -815,10 +871,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 27,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +18",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -827,10 +884,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -839,11 +897,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -852,11 +911,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -865,11 +925,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 17,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race position gained: +3"
+          "Race position gained: +3",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -878,13 +939,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       },
       {
@@ -893,13 +956,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       }
     ]
@@ -908,7 +972,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 9,
     "overall_rank": 9,
     "live_gd_rank": 8,
@@ -927,11 +991,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 12,
+        "points_gd": 26,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +6",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -940,10 +1005,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 27,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +18",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -952,10 +1018,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": null,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
-          "Qualifying Position: +0"
+          "Qualifying Position: +0",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -964,11 +1031,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -3,
+        "points_gd": 4,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -3"
+          "Race Position lost: -3",
+          "race overtake bonus: +7"
         ]
       },
       {
@@ -977,11 +1045,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -990,13 +1059,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       },
       {
@@ -1005,13 +1076,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       }
     ]
@@ -1020,7 +1092,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 10,
     "overall_rank": 10,
     "live_gd_rank": 3,
@@ -1039,13 +1111,14 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": 67,
+        "points_gd": 93,
         "breakdown": [
           "Driver Of Day: +10",
           "Race Position: +25",
           "Qualifying Position: +4",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "race overtake bonus: +26"
         ]
       },
       {
@@ -1054,11 +1127,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 3,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +2",
           "Qualifying Position: +3",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +11"
         ]
       },
       {
@@ -1067,11 +1141,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -2,
+        "points_gd": 10,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +12"
         ]
       },
       {
@@ -1080,11 +1155,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 6,
+        "points_gd": 11,
         "breakdown": [
           "Race Position: +4",
           "Qualifying Position: +1",
-          "Race position gained: +1"
+          "Race position gained: +1",
+          "race overtake bonus: +5"
         ]
       },
       {
@@ -1093,11 +1169,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -1106,13 +1183,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 94,
+        "points_gd": 128,
         "breakdown": [
           "Race Position: +43",
           "Qualifying Position: +13",
           "Both Driver Q3: +10",
           "Race position gained: +18",
-          "Race Fastest lap: +10"
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +2",
+          "race overtake bonus: +32"
         ]
       },
       {
@@ -1121,12 +1200,13 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 17,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +5",
           "Qualifying Position: +1",
           "One Driver Q3: +5",
-          "Race position gained: +6"
+          "Race position gained: +6",
+          "race overtake bonus: +16"
         ]
       }
     ]
@@ -1135,7 +1215,7 @@
     "race_number": 13,
     "race_name": "Italian Grand Prix",
     "race_flag": "🇮🇹",
-    "race_date": "2026-09-06",
+    "race_date": "2026-09-07",
     "rank": 11,
     "overall_rank": 11,
     "live_gd_rank": 11,
@@ -1154,10 +1234,11 @@
         "type": "Driver",
         "is_captain": true,
         "is_megacap": false,
-        "points_gd": -13,
+        "points_gd": -12,
         "breakdown": [
           "Qualifying Position: +7",
-          "Race not classified : -20"
+          "Race not classified : -20",
+          "race overtake bonus: +1"
         ]
       },
       {
@@ -1166,10 +1247,11 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 27,
+        "points_gd": 33,
         "breakdown": [
           "Race Position: +18",
-          "Qualifying Position: +9"
+          "Qualifying Position: +9",
+          "race overtake bonus: +6"
         ]
       },
       {
@@ -1178,11 +1260,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 13,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +14"
         ]
       },
       {
@@ -1200,11 +1283,12 @@
         "type": "Driver",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": -1,
+        "points_gd": 14,
         "breakdown": [
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -1213,13 +1297,14 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 9,
+        "points_gd": 24,
         "breakdown": [
           "Race Position: +8",
           "Qualifying Position: +13",
           "Race not classified : -20",
           "Both Driver Q3: +10",
-          "Race Position lost: -2"
+          "Race Position lost: -2",
+          "race overtake bonus: +15"
         ]
       },
       {
@@ -1228,12 +1313,15 @@
         "type": "Constructor",
         "is_captain": false,
         "is_megacap": false,
-        "points_gd": 2,
+        "points_gd": 41,
         "breakdown": [
           "Both Driver Q2: +3",
           "Race Position: +0",
           "Qualifying Position: +0",
-          "Race Position lost: -1"
+          "Race Position lost: -1",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +29"
         ]
       }
     ]

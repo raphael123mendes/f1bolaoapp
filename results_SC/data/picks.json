@@ -19041,7 +19041,7 @@
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 1,
     "race_rank": 2,
     "team_name": "Liberius",
@@ -19052,15 +19052,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 5,
     "price_this_race": 8.0,
-    "price_next_race": null
+    "price_next_race": 8.2
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 1,
     "race_rank": 2,
     "team_name": "Liberius",
@@ -19073,13 +19073,13 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 1,
     "race_rank": 2,
     "team_name": "Liberius",
@@ -19090,7 +19090,7 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 13,
+    "pick_points_gd": 16,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -19098,7 +19098,7 @@
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 1,
     "race_rank": 2,
     "team_name": "Liberius",
@@ -19109,15 +19109,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 3,
     "price_this_race": 6.4,
-    "price_next_race": null
+    "price_next_race": 5.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 1,
     "race_rank": 2,
     "team_name": "Liberius",
@@ -19130,13 +19130,13 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 1,
     "race_rank": 2,
     "team_name": "Liberius",
@@ -19147,15 +19147,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 1,
     "race_rank": 2,
     "team_name": "Liberius",
@@ -19166,15 +19166,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 2,
     "race_rank": 1,
     "team_name": "Ixxtain",
@@ -19185,15 +19185,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 4,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 2,
     "race_rank": 1,
     "team_name": "Ixxtain",
@@ -19204,15 +19204,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 5,
     "price_this_race": 8.0,
-    "price_next_race": null
+    "price_next_race": 8.2
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 2,
     "race_rank": 1,
     "team_name": "Ixxtain",
@@ -19225,13 +19225,13 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 2,
     "race_rank": 1,
     "team_name": "Ixxtain",
@@ -19244,13 +19244,13 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 2,
     "race_rank": 1,
     "team_name": "Ixxtain",
@@ -19261,15 +19261,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 7,
+    "pick_points_gd": 9,
     "price_this_race": 24.0,
-    "price_next_race": null
+    "price_next_race": 24.1
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 2,
     "race_rank": 1,
     "team_name": "Ixxtain",
@@ -19280,15 +19280,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 2,
     "race_rank": 1,
     "team_name": "Ixxtain",
@@ -19299,17 +19299,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 3,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "cards_used": "",
@@ -19320,15 +19320,15 @@
     "is_megacap": false,
     "pick_points_gd": 19,
     "price_this_race": 24.1,
-    "price_next_race": null
+    "price_next_race": 24.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 3,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "cards_used": "",
@@ -19339,15 +19339,15 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 3,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "cards_used": "",
@@ -19358,15 +19358,15 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 3,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "cards_used": "",
@@ -19375,17 +19375,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -18,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 3,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "cards_used": "",
@@ -19396,15 +19396,15 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 3,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "cards_used": "",
@@ -19413,17 +19413,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 3,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "cards_used": "",
@@ -19432,17 +19432,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 4,
-    "race_rank": 5,
+    "race_rank": 4,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -19453,15 +19453,15 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 4,
-    "race_rank": 5,
+    "race_rank": 4,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -19472,15 +19472,15 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 4,
-    "race_rank": 5,
+    "race_rank": 4,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -19489,17 +19489,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 13,
     "price_this_race": 10.4,
-    "price_next_race": null
+    "price_next_race": 10.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 4,
-    "race_rank": 5,
+    "race_rank": 4,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -19508,17 +19508,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 4,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 4,
-    "race_rank": 5,
+    "race_rank": 4,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -19527,17 +19527,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -25,
+    "pick_points_gd": -22,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 4,
-    "race_rank": 5,
+    "race_rank": 4,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -19546,17 +19546,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 40,
+    "pick_points_gd": 44,
     "price_this_race": 31.6,
-    "price_next_race": null
+    "price_next_race": 31.9
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 4,
-    "race_rank": 5,
+    "race_rank": 4,
     "team_name": "Stradale  Mucci",
     "user_name": "Fabio Mucci",
     "cards_used": "",
@@ -19565,17 +19565,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "cards_used": "",
@@ -19586,15 +19586,15 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "cards_used": "",
@@ -19603,17 +19603,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 4,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "cards_used": "",
@@ -19622,17 +19622,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 5,
     "price_this_race": 8.0,
-    "price_next_race": null
+    "price_next_race": 8.2
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "cards_used": "",
@@ -19643,15 +19643,15 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "cards_used": "",
@@ -19660,17 +19660,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": null,
     "price_this_race": 8.6,
-    "price_next_race": null
+    "price_next_race": 8.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "cards_used": "",
@@ -19679,17 +19679,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 5,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "cards_used": "",
@@ -19698,17 +19698,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 6,
-    "race_rank": 9,
+    "race_rank": 10,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -19719,15 +19719,15 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 6,
-    "race_rank": 9,
+    "race_rank": 10,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -19736,17 +19736,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 1,
+    "pick_points_gd": 4,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 6,
-    "race_rank": 9,
+    "race_rank": 10,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -19755,17 +19755,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 7,
+    "pick_points_gd": 9,
     "price_this_race": 24.0,
-    "price_next_race": null
+    "price_next_race": 24.1
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 6,
-    "race_rank": 9,
+    "race_rank": 10,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -19776,15 +19776,15 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 6,
-    "race_rank": 9,
+    "race_rank": 10,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -19793,17 +19793,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -18,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 6,
-    "race_rank": 9,
+    "race_rank": 10,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -19812,17 +19812,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 6,
-    "race_rank": 9,
+    "race_rank": 10,
     "team_name": "qq um menos o Liberio",
     "user_name": "Vinicius Agostini",
     "cards_used": "",
@@ -19831,17 +19831,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 7,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "",
@@ -19850,17 +19850,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 5,
     "price_this_race": 8.0,
-    "price_next_race": null
+    "price_next_race": 8.2
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 7,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "",
@@ -19869,17 +19869,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": null,
+    "pick_points_gd": 4,
     "price_this_race": 7.0,
-    "price_next_race": null
+    "price_next_race": 6.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 7,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "",
@@ -19888,17 +19888,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 5,
     "price_this_race": 9.5,
-    "price_next_race": null
+    "price_next_race": 8.9
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 7,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "",
@@ -19909,15 +19909,15 @@
     "is_megacap": false,
     "pick_points_gd": 23,
     "price_this_race": 26.7,
-    "price_next_race": null
+    "price_next_race": 27.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 7,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "",
@@ -19926,17 +19926,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 4,
     "price_this_race": 12.2,
-    "price_next_race": null
+    "price_next_race": 12.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 7,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "",
@@ -19945,17 +19945,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 7,
-    "race_rank": 10,
+    "race_rank": 8,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "",
@@ -19964,15 +19964,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 13,
     "price_this_race": 14.1,
-    "price_next_race": null
+    "price_next_race": 14.7
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 8,
     "race_rank": 8,
     "team_name": "Yas Bombs",
@@ -19985,13 +19985,13 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 8,
     "race_rank": 8,
     "team_name": "Yas Bombs",
@@ -20004,13 +20004,13 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 8,
     "race_rank": 8,
     "team_name": "Yas Bombs",
@@ -20021,15 +20021,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": null,
     "price_this_race": 8.6,
-    "price_next_race": null
+    "price_next_race": 8.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 8,
     "race_rank": 8,
     "team_name": "Yas Bombs",
@@ -20040,15 +20040,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -18,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 8,
     "race_rank": 8,
     "team_name": "Yas Bombs",
@@ -20059,15 +20059,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 5,
     "price_this_race": 8.0,
-    "price_next_race": null
+    "price_next_race": 8.2
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 8,
     "race_rank": 8,
     "team_name": "Yas Bombs",
@@ -20078,15 +20078,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 8,
     "race_rank": 8,
     "team_name": "Yas Bombs",
@@ -20097,17 +20097,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 9,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -20118,15 +20118,15 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 9,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -20137,15 +20137,15 @@
     "is_megacap": false,
     "pick_points_gd": 19,
     "price_this_race": 24.1,
-    "price_next_race": null
+    "price_next_race": 24.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 9,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -20156,15 +20156,15 @@
     "is_megacap": false,
     "pick_points_gd": 2,
     "price_this_race": 4.2,
-    "price_next_race": null
+    "price_next_race": 4.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 9,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -20175,15 +20175,15 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 9,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -20192,17 +20192,17 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -18,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 9,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -20211,17 +20211,17 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 9,
-    "race_rank": 5,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "",
@@ -20230,15 +20230,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 10,
     "race_rank": 3,
     "team_name": "Mucci_Senior",
@@ -20251,13 +20251,13 @@
     "is_megacap": false,
     "pick_points_gd": 35,
     "price_this_race": 26.3,
-    "price_next_race": null
+    "price_next_race": 26.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 10,
     "race_rank": 3,
     "team_name": "Mucci_Senior",
@@ -20268,15 +20268,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 13,
     "price_this_race": 10.4,
-    "price_next_race": null
+    "price_next_race": 10.6
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 10,
     "race_rank": 3,
     "team_name": "Mucci_Senior",
@@ -20287,15 +20287,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 5,
     "price_this_race": 9.5,
-    "price_next_race": null
+    "price_next_race": 8.9
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 10,
     "race_rank": 3,
     "team_name": "Mucci_Senior",
@@ -20306,15 +20306,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 5,
     "price_this_race": 8.0,
-    "price_next_race": null
+    "price_next_race": 8.2
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 10,
     "race_rank": 3,
     "team_name": "Mucci_Senior",
@@ -20325,15 +20325,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": null,
     "price_this_race": 8.6,
-    "price_next_race": null
+    "price_next_race": 8.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 10,
     "race_rank": 3,
     "team_name": "Mucci_Senior",
@@ -20344,15 +20344,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 71,
+    "pick_points_gd": 87,
     "price_this_race": 33.2,
-    "price_next_race": null
+    "price_next_race": 33.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 10,
     "race_rank": 3,
     "team_name": "Mucci_Senior",
@@ -20363,15 +20363,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 13,
     "price_this_race": 14.1,
-    "price_next_race": null
+    "price_next_race": 14.7
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 11,
     "race_rank": 11,
     "team_name": "Edu Lima",
@@ -20384,13 +20384,13 @@
     "is_megacap": false,
     "pick_points_gd": 19,
     "price_this_race": 24.1,
-    "price_next_race": null
+    "price_next_race": 24.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 11,
     "race_rank": 11,
     "team_name": "Edu Lima",
@@ -20401,15 +20401,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 26,
+    "pick_points_gd": 27,
     "price_this_race": 27.7,
-    "price_next_race": null
+    "price_next_race": 27.8
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 11,
     "race_rank": 11,
     "team_name": "Edu Lima",
@@ -20420,15 +20420,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -20,
+    "pick_points_gd": -18,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 11,
     "race_rank": 11,
     "team_name": "Edu Lima",
@@ -20441,13 +20441,13 @@
     "is_megacap": false,
     "pick_points_gd": null,
     "price_this_race": 10.3,
-    "price_next_race": null
+    "price_next_race": 10.3
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 11,
     "race_rank": 11,
     "team_name": "Edu Lima",
@@ -20458,15 +20458,15 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": null,
     "price_this_race": 8.6,
-    "price_next_race": null
+    "price_next_race": 8.4
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 11,
     "race_rank": 11,
     "team_name": "Edu Lima",
@@ -20477,15 +20477,15 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 16,
+    "pick_points_gd": 18,
     "price_this_race": 27.2,
-    "price_next_race": null
+    "price_next_race": 27.5
   },
   {
     "race_number": 14,
     "race_name": "Spanish Grand Prix",
     "race_flag": "🇪🇸",
-    "race_date": "2026-09-13",
+    "race_date": "2026-09-14",
     "season_rank": 11,
     "race_rank": 11,
     "team_name": "Edu Lima",
@@ -20496,8 +20496,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 4,
+    "pick_points_gd": 10,
     "price_this_race": 8.0,
-    "price_next_race": null
+    "price_next_race": 8.6
   }
 ]

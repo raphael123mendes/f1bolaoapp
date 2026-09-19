@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Season Stats — Data Insights</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --red:#e10600; --red-dim:#ffb4a8; --red-faint:rgba(225,6,0,0.08);
+  --blue:#a6c8ff; --blue-bright:#3192fc;
+  --green:#4ade80;
+  --gold:#f59e0b;
+  --surface:#131313; --surface-low:#1c1b1b; --surface-mid:#201f1f;
+  --surface-high:#2a2a2a; --surface-highest:#353534;
+  --on:#e5e2e1;
+  --on-60:rgba(229,226,225,0.6); --on-40:rgba(229,226,225,0.4);
+  --on-20:rgba(229,226,225,0.2); --on-08:rgba(229,226,225,0.08);
+  --outline:#af8781;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--surface);color:var(--on);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+body{min-height:100dvh;display:flex;flex-direction:column;overflow-x:hidden}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;font-family:'Material Symbols Outlined';vertical-align:middle}
+
+/* ── TOPBAR ── */
+.topbar{position:sticky;top:0;z-index:50;background:var(--surface);box-shadow:0 20px 40px rgba(0,0,0,0.3)}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;height:56px;padding:0 20px}
+.brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.03em;color:var(--red);text-transform:uppercase}
+
+main{flex:1;padding-bottom:80px}
+
+/* ── PAGE HEADER ── */
+.page-header{margin:16px 16px 4px;background:var(--surface-low);border-left:3px solid var(--red);padding:16px 20px}
+.page-label{font-size:0.55rem;font-weight:900;letter-spacing:0.2em;text-transform:uppercase;color:var(--red)}
+.page-title{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;letter-spacing:-0.03em;text-transform:uppercase;margin-top:4px}
+.page-sub{font-size:0.58rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);margin-top:4px}
+
+/* ── SECTION SHELL ── */
+.stats-section{background:var(--surface-low);padding:16px;margin:8px 16px 0}
+.section-title-bar{display:flex;align-items:center;gap:8px;margin-bottom:4px}
+.section-accent{width:3px;height:18px;background:var(--red);flex-shrink:0}
+.section-accent.blue{background:var(--blue)}
+.section-accent.gold{background:var(--gold)}
+.section-title{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em}
+.section-note{font-size:0.58rem;color:var(--on-40);margin:2px 0 12px 11px;line-height:1.4}
+
+/* ── FEATURE (STANDOUT) CARDS ── */
+.feature-grid{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:600px){.feature-grid{grid-template-columns:1fr 1fr}}
+.feature-card{background:var(--surface-mid);padding:14px;border-left:3px solid var(--red);cursor:pointer;transition:background 0.1s}
+.feature-card:hover{background:var(--surface-high)}
+.feature-card.avg{border-left-color:var(--blue)}
+.feature-card.climb{border-left-color:var(--green)}
+.feature-card.gold{border-left-color:var(--gold)}
+.feature-kicker{font-size:0.5rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--red-dim)}
+.feature-card.avg .feature-kicker{color:var(--blue)}
+.feature-card.climb .feature-kicker{color:var(--green)}
+.feature-card.gold .feature-kicker{color:var(--gold)}
+.feature-value{font-family:'Space Grotesk',sans-serif;font-size:1.9rem;font-weight:900;letter-spacing:-0.02em;margin-top:6px;color:var(--on)}
+.feature-player{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;margin-top:6px}
+.feature-race{font-size:0.6rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--on-40);margin-top:2px}
+
+/* ── RANK LIST ── */
+.rank-list{display:flex;flex-direction:column;gap:2px;margin-top:10px}
+.rank-row{display:grid;grid-template-columns:22px 1fr 70px;align-items:center;gap:10px;padding:9px 10px;background:var(--surface-mid);cursor:pointer;transition:background 0.1s}
+.rank-row:hover{background:var(--surface-high)}
+.rank-num{font-family:'Space Grotesk',sans-serif;font-size:0.8rem;font-weight:900;color:var(--on-40)}
+.rank-row:first-child .rank-num{color:var(--gold)}
+.rank-main{min-width:0}
+.rank-player{font-size:0.72rem;font-weight:700;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-race{font-size:0.52rem;color:var(--on-40);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank-val{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-align:right;color:var(--green)}
+
+/* ── CHIP GRID ── */
+.chip-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:10px}
+@media(min-width:600px){.chip-grid{grid-template-columns:repeat(3,1fr)}}
+.chip-card{background:var(--surface-mid);padding:12px;cursor:pointer;transition:background 0.1s;position:relative;overflow:hidden}
+.chip-card:hover{background:var(--surface-high)}
+.chip-name{font-size:0.5rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold)}
+.chip-pts{font-family:'Space Grotesk',sans-serif;font-size:1.4rem;font-weight:900;margin-top:6px}
+.chip-player{font-size:0.65rem;font-weight:700;text-transform:uppercase;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip-race{font-size:0.5rem;color:var(--on-40);margin-top:1px;text-transform:uppercase;letter-spacing:0.04em}
+
+/* ── PRIZE MONEY ── */
+.prize-pool-note{background:var(--surface-mid);padding:10px 12px;font-size:0.6rem;color:var(--on-60);line-height:1.5;margin-top:10px}
+.prize-pool-note b{color:var(--on)}
+.subhead{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--on-60);margin:16px 0 8px}
+.prize-row{display:grid;grid-template-columns:22px 1fr 70px;align-items:center;gap:10px;padding:8px 10px;background:var(--surface-mid);margin-bottom:2px}
+.prize-num{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:900;color:var(--on-40)}
+.prize-name{font-size:0.72rem;font-weight:700;text-transform:uppercase}
+.prize-sub{font-size:0.5rem;color:var(--on-40);margin-top:1px;text-transform:uppercase;letter-spacing:0.04em}
+.prize-val{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-align:right;color:var(--green)}
+
+.champ-grid{display:grid;grid-template-columns:1fr;gap:8px;margin-top:8px}
+@media(min-width:600px){.champ-grid{grid-template-columns:repeat(3,1fr)}}
+.champ-card{background:var(--surface-mid);padding:16px 12px;text-align:center;border-top:3px solid var(--gold)}
+.champ-pos{font-family:'Space Grotesk',sans-serif;font-size:0.55rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)}
+.champ-name{font-size:0.78rem;font-weight:700;text-transform:uppercase;margin-top:8px}
+.champ-val{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;margin-top:6px;color:var(--on)}
+
+/* ── POPUP (shared) ── */
+.popup-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.6);display:none;align-items:flex-end;justify-content:center}
+.popup-overlay.open{display:flex}
+.popup{background:var(--surface-low);width:100%;max-width:480px;max-height:70dvh;overflow-y:auto;padding:20px;border-top:3px solid var(--red);position:relative}
+.popup-title{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:900;text-transform:uppercase;letter-spacing:-0.02em;margin-bottom:4px}
+.popup-sub{font-size:0.55rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40);margin-bottom:16px}
+.popup-total{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:900;color:var(--red);margin-bottom:16px}
+.popup-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--on-08);gap:12px}
+.popup-row:last-child{border-bottom:none}
+.popup-cat{font-size:0.65rem;font-weight:600;letter-spacing:0.06em;color:var(--on-60)}
+.popup-pts{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-align:right;text-transform:uppercase}
+.popup-pts.pos{color:var(--green)}
+.popup-pts.neg{color:var(--red-dim)}
+.popup-close{position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;color:var(--on-40)}
+.popup-league{font-size:0.55rem;font-weight:700;color:var(--blue);margin-top:12px;padding-top:12px;border-top:1px solid var(--on-08)}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:var(--surface);
+  box-shadow:0 -10px 40px rgba(0,0,0,0.25);display:flex;height:60px;border-top:1px solid var(--on-08)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;text-decoration:none;color:rgba(166,200,255,0.35);font-size:0.56rem;font-weight:700;
+  letter-spacing:0.08em;text-transform:uppercase;transition:color 0.15s;background:none;border:none;
+  cursor:pointer;-webkit-tap-highlight-color:transparent}
+.nav-item.active{color:var(--red);border-top:2px solid var(--red);background:var(--surface-low)}
+.nav-item .material-symbols-outlined{font-size:1.25rem}
+.nav-item.active .material-symbols-outlined{font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24}
+
+.loading-msg{font-size:0.7rem;color:var(--on-40);text-align:center;padding:20px}
+</style>
+</head>
+<body>
+
+<div id="loading-overlay" style="position:fixed;inset:0;background:#131313;z-index:999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px">
+  <div style="font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;color:#e10600;letter-spacing:-0.02em;text-transform:uppercase">Full Grid Sweep</div>
+  <div style="width:40px;height:2px;background:#2a2a2a;position:relative;overflow:hidden">
+    <div style="position:absolute;top:0;left:-100%;width:100%;height:100%;background:#e10600;animation:loadSlide 1s ease infinite"></div>
+  </div>
+  <style>@keyframes loadSlide{0%{left:-100%}100%{left:100%}}</style>
+</div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Full Grid Sweep — Data Insights</div>
+  </div>
+</header>
+
+<main>
+  <div class="page-header">
+    <div class="page-label" id="page-label">Season Stats</div>
+    <div class="page-title">Insights &amp; Extremes</div>
+    <div class="page-sub" id="page-sub"></div>
+  </div>
+
+  <!-- STANDOUT RESULTS -->
+  <div class="stats-section">
+    <div class="section-title-bar">
+      <div class="section-accent"></div>
+      <div class="section-title">Best Result of the Season</div>
+    </div>
+    <div class="section-note">Tap a card for the full points breakdown.</div>
+    <div class="feature-grid" id="feature-grid"></div>
+    <div class="rank-list" id="top5-list"></div>
+  </div>
+
+  <!-- CHIP HIGHLIGHTS -->
+  <div class="stats-section">
+    <div class="section-title-bar">
+      <div class="section-accent gold"></div>
+      <div class="section-title">Best Use of Each Chip</div>
+    </div>
+    <div class="section-note">Highest race score scored while that power-up chip was active.</div>
+    <div class="chip-grid" id="chip-grid"></div>
+  </div>
+
+  <!-- STANDINGS SWINGS -->
+  <div class="stats-section">
+    <div class="section-title-bar">
+      <div class="section-accent" style="background:var(--green)"></div>
+      <div class="section-title">Standings Swings</div>
+    </div>
+    <div class="section-note">Biggest single-race move up or down the season standings. Tap for that race's breakdown.</div>
+    <div class="feature-grid" id="swing-grid"></div>
+  </div>
+
+  <!-- TRANSFER ACTIVITY -->
+  <div class="stats-section">
+    <div class="section-title-bar">
+      <div class="section-accent blue"></div>
+      <div class="section-title">Transfer Activity</div>
+    </div>
+    <div class="section-note">Driver/constructor changes, counted week to week. Tap the overhaul card for who came in and out.</div>
+    <div class="feature-grid" id="overhaul-grid"></div>
+    <div class="subhead">Most Swaps This Season</div>
+    <div class="rank-list" id="transfer-list"></div>
+  </div>
+
+  <!-- PRIZE MONEY -->
+  <div class="stats-section">
+    <div class="section-title-bar">
+      <div class="section-accent gold"></div>
+      <div class="section-title">Prize Money</div>
+    </div>
+    <div class="section-note">Confirmed race winnings, straight from race results.</div>
+    <div id="prize-list"></div>
+
+    <div class="subhead">Championship Projection</div>
+    <div class="champ-grid" id="champ-grid"></div>
+    <div class="prize-pool-note" id="prize-pool-note"></div>
+  </div>
+
+</main>
+
+<!-- SHARED POPUP -->
+<div class="popup-overlay" id="popup-overlay" onclick="closePopup(event)">
+  <div class="popup">
+    <button class="popup-close" onclick="closePopup()"><span class="material-symbols-outlined">close</span></button>
+    <div class="popup-title" id="popup-title"></div>
+    <div class="popup-sub" id="popup-sub"></div>
+    <div class="popup-total" id="popup-total"></div>
+    <div id="popup-rows"></div>
+    <div class="popup-league" id="popup-league"></div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV — paste this exact nav block into index.html / results.html / market.html / race.html to add the Stats tab there too -->
+<nav class="bottom-nav">
+  <a class="nav-item" href="index.html"><span class="material-symbols-outlined">leaderboard</span><span>Standings</span></a>
+  <a class="nav-item" href="results.html"><span class="material-symbols-outlined">flag</span><span>Results</span></a>
+  <a class="nav-item" href="market.html"><span class="material-symbols-outlined">monetization_on</span><span>Market</span></a>
+  <a class="nav-item" href="race.html"><span class="material-symbols-outlined">sports_motorsports</span><span>Race</span></a>
+  <a class="nav-item active" href="stats.html"><span class="material-symbols-outlined">bar_chart</span><span>Stats</span></a>
+</nav>
+
+<script>
+// ── STATE ─────────────────────────────────────────────────────────────────
+let PICKS = [], RESULTS = [], BREAKDOWNS = [];
+let TOP_RESULTS = [], CHIPS = [];
+let TRANSFER_BIGGEST = null;
+
+// ── DATA LOADING ─────────────────────────────────────────────────────────
+async function loadAll() {
+  const [picks, breakdowns, results] = await Promise.all([
+    fetch('picks.json').then(r => r.json()),
+    fetch('breakdowns.json').then(r => r.json()),
+    fetch('results.json').then(r => r.json()),
+  ]);
+  PICKS = picks; BREAKDOWNS = breakdowns; RESULTS = results;
+}
+
+// ── COMPUTE: best results (vs 2nd place & vs field average) ────────────────
+function computeBestResults(results) {
+  const byRace = {};
+  results.forEach(r => { (byRace[r.race_number] = byRace[r.race_number] || []).push(r); });
+
+  const rows = [];
+  Object.values(byRace).forEach(list => {
+    const sorted = [...list].sort((a, b) => b.race_points - a.race_points);
+    const top = sorted[0];
+    const second = sorted[1];
+    const avg = list.reduce((s, r) => s + r.race_points, 0) / list.length;
+    rows.push({
+      race_number: top.race_number,
+      race_name:   top.race_name,
+      race_flag:   top.race_flag,
+      user_name:   top.user_name,
+      race_points: top.race_points,
+      margin_2nd:  +(top.race_points - (second ? second.race_points : 0)).toFixed(1),
+      margin_avg:  +(top.race_points - avg).toFixed(1),
+      field_avg:   +avg.toFixed(1),
+    });
+  });
+  return rows;
+}
+
+// ── COMPUTE: best use of each chip ─────────────────────────────────────────
+function computeChipHighlights(results) {
+  const map = {};
+  results.forEach(r => {
+    if (!r.cards_used) return;
+    const m = r.cards_used.match(/^(.*?)\s*\(GD\d+\)$/i);
+    const chip = (m ? m[1] : r.cards_used).trim();
+    if (!map[chip] || r.race_points > map[chip].race_points) {
+      map[chip] = {
+        chip, user_name: r.user_name, race_name: r.race_name,
+        race_flag: r.race_flag, race_number: r.race_number, race_points: r.race_points,
+      };
+    }
+  });
+  return Object.values(map).sort((a, b) => b.race_points - a.race_points);
+}
+
+// ── COMPUTE: closest finish (smallest margin between 1st and 2nd) ──────────
+function computeClosestFinish(results) {
+  const byRace = {};
+  results.forEach(r => { (byRace[r.race_number] = byRace[r.race_number] || []).push(r); });
+  let closest = null;
+  Object.values(byRace).forEach(list => {
+    const sorted = [...list].sort((a, b) => b.race_points - a.race_points);
+    const margin = +(sorted[0].race_points - (sorted[1] ? sorted[1].race_points : 0)).toFixed(1);
+    if (!closest || margin < closest.margin) {
+      closest = {
+        margin, race_number: sorted[0].race_number, race_name: sorted[0].race_name, race_flag: sorted[0].race_flag,
+        winner: sorted[0].user_name, winner_pts: sorted[0].race_points,
+        runner_up: sorted[1] ? sorted[1].user_name : null, runner_up_pts: sorted[1] ? sorted[1].race_points : null,
+      };
+    }
+  });
+  return closest;
+}
+
+// ── COMPUTE: biggest single-race score ──────────────────────────────────────
+function computeBiggestScore(results) {
+  return results.reduce((best, r) => (!best || r.race_points > best.race_points) ? r : best, null);
+}
+
+// ── COMPUTE: biggest rank swings ────────────────────────────────────────────
+function computeRankSwings(results) {
+  const withChange = results.filter(r => r.race_number > 1);
+  const climb = withChange.reduce((best, r) => (!best || r.rank_change > best.rank_change) ? r : best, null);
+  const fall  = withChange.reduce((best, r) => (!best || r.rank_change < best.rank_change) ? r : best, null);
+  return { climb, fall };
+}
+
+// ── COMPUTE: transfer activity (counts only, no penalty math) ──────────────
+function computeTransferActivity(picks) {
+  const byUserRace = {};
+  picks.forEach(p => {
+    if (!byUserRace[p.user_name]) byUserRace[p.user_name] = {};
+    if (!byUserRace[p.user_name][p.race_number]) byUserRace[p.user_name][p.race_number] = new Set();
+    byUserRace[p.user_name][p.race_number].add(p.pick_name);
+  });
+  const raceMeta = {};
+  RESULTS.forEach(r => { raceMeta[r.race_number] = { race_name: r.race_name, race_flag: r.race_flag }; });
+
+  const totals = [];
+  let biggest = null;
+  Object.entries(byUserRace).forEach(([user, raceMap]) => {
+    const races = Object.keys(raceMap).map(Number).sort((a, b) => a - b);
+    let total = 0;
+    for (let i = 1; i < races.length; i++) {
+      const prevSet = raceMap[races[i - 1]], curSet = raceMap[races[i]];
+      const removed = [...prevSet].filter(x => !curSet.has(x));
+      const added   = [...curSet].filter(x => !prevSet.has(x));
+      const changes = Math.max(removed.length, added.length);
+      total += changes;
+      if (changes > 0 && (!biggest || changes > biggest.changes)) {
+        const meta = raceMeta[races[i]] || {};
+        biggest = {
+          user_name: user, race_number: races[i],
+          race_name: meta.race_name || `Round ${races[i]}`, race_flag: meta.race_flag || '',
+          changes, removed, added,
+        };
+      }
+    }
+    totals.push({ user_name: user, total });
+  });
+  totals.sort((a, b) => b.total - a.total);
+  return { totals, biggest };
+}
+
+// ── COMPUTE: prize money ────────────────────────────────────────────────────
+function computePrizeMoney(results) {
+  const byUser = {};
+  results.forEach(r => {
+    if (!byUser[r.user_name]) byUser[r.user_name] = { user_name: r.user_name, total: 0, wins: 0 };
+    byUser[r.user_name].total += r.race_prize || 0;
+    if (r.race_rank === 1) byUser[r.user_name].wins += 1;
+  });
+  const winnings = Object.values(byUser).filter(u => u.total > 0).sort((a, b) => b.total - a.total);
+
+  // championship pool: 50% of $7/player/race, accumulated across every round played
+  const byRace = {};
+  results.forEach(r => { (byRace[r.race_number] = byRace[r.race_number] || []).push(r); });
+  let pool = 0;
+  Object.values(byRace).forEach(list => { pool += list.length * 7 * 0.5; });
+
+  const latestRn = Math.max(...results.map(r => r.race_number));
+  const latestStandings = results.filter(r => r.race_number === latestRn).sort((a, b) => a.season_rank - b.season_rank).slice(0, 3);
+  const champProjection = latestStandings.map((r, i) => ({
+    user_name: r.user_name,
+    pos: i + 1,
+    amount: +(pool * [0.5, 0.3, 0.2][i]).toFixed(2),
+  }));
+
+  return { winnings, pool: +pool.toFixed(2), champProjection, latestRn, rounds: Object.keys(byRace).length, players: byRace[latestRn].length };
+}
+
+// ── RENDER: header ───────────────────────────────────────────────────────
+function renderHeader() {
+  const rounds = new Set(RESULTS.map(r => r.race_number)).size;
+  const players = new Set(RESULTS.map(r => r.user_name)).size;
+  document.getElementById('page-sub').textContent = `${rounds} rounds · ${players} players analyzed`;
+}
+
+// ── RENDER: standout results ─────────────────────────────────────────────
+function renderBestResults() {
+  TOP_RESULTS = computeBestResults(RESULTS);
+  const best2nd = [...TOP_RESULTS].sort((a, b) => b.margin_2nd - a.margin_2nd)[0];
+  const bestAvg = [...TOP_RESULTS].sort((a, b) => b.margin_avg - a.margin_avg)[0];
+  const bestScore = computeBiggestScore(RESULTS);
+  const closest = computeClosestFinish(RESULTS);
+
+  const grid = document.getElementById('feature-grid');
+  grid.innerHTML = `
+    <div class="feature-card" onclick="showResultPopup(${best2nd.race_number}, '${escAttr(best2nd.user_name)}', 'margin_2nd')">
+      <div class="feature-kicker">Biggest Blowout · vs 2nd Place</div>
+      <div class="feature-value">+${best2nd.margin_2nd} pts</div>
+      <div class="feature-player">${best2nd.user_name}</div>
+      <div class="feature-race">${best2nd.race_flag} ${best2nd.race_name} · ${best2nd.race_points} pts</div>
+    </div>
+    <div class="feature-card avg" onclick="showResultPopup(${bestAvg.race_number}, '${escAttr(bestAvg.user_name)}', 'margin_avg')">
+      <div class="feature-kicker">Most Dominant · vs Field Average</div>
+      <div class="feature-value">+${bestAvg.margin_avg} pts</div>
+      <div class="feature-player">${bestAvg.user_name}</div>
+      <div class="feature-race">${bestAvg.race_flag} ${bestAvg.race_name} · avg was ${bestAvg.field_avg}</div>
+    </div>
+    <div class="feature-card gold" onclick="showResultPopup(${bestScore.race_number}, '${escAttr(bestScore.user_name)}', 'margin_2nd')">
+      <div class="feature-kicker">Biggest Score · This Season</div>
+      <div class="feature-value">${bestScore.race_points} pts</div>
+      <div class="feature-player">${bestScore.user_name}</div>
+      <div class="feature-race">${bestScore.race_flag} ${bestScore.race_name}</div>
+    </div>
+    <div class="feature-card avg" onclick="showResultPopup(${closest.race_number}, '${escAttr(closest.winner)}', 'margin_2nd')">
+      <div class="feature-kicker">Closest Finish · 1st vs 2nd</div>
+      <div class="feature-value">${closest.margin === 0 ? 'Dead Heat' : '+' + closest.margin + ' pts'}</div>
+      <div class="feature-player">${closest.winner}${closest.runner_up ? ' vs ' + closest.runner_up : ''}</div>
+      <div class="feature-race">${closest.race_flag} ${closest.race_name} · ${closest.winner_pts} – ${closest.runner_up_pts}</div>
+    </div>`;
+
+  const top5 = [...TOP_RESULTS].sort((a, b) => b.margin_2nd - a.margin_2nd).slice(0, 5);
+  document.getElementById('top5-list').innerHTML = top5.map((r, i) => `
+    <div class="rank-row" onclick="showResultPopup(${r.race_number}, '${escAttr(r.user_name)}', 'margin_2nd')">
+      <div class="rank-num">${i + 1}</div>
+      <div class="rank-main">
+        <div class="rank-player">${r.user_name}</div>
+        <div class="rank-race">${r.race_flag} ${r.race_name} · ${r.race_points} pts</div>
+      </div>
+      <div class="rank-val">+${r.margin_2nd}</div>
+    </div>`).join('');
+}
+
+// ── RENDER: chip highlights ──────────────────────────────────────────────
+function renderChips() {
+  CHIPS = computeChipHighlights(RESULTS);
+  document.getElementById('chip-grid').innerHTML = CHIPS.map((c, i) => `
+    <div class="chip-card" onclick="showChipPopup(${i})">
+      <div class="chip-name">${c.chip}</div>
+      <div class="chip-pts">${c.race_points > 0 ? '+' : ''}${c.race_points}</div>
+      <div class="chip-player">${c.user_name}</div>
+      <div class="chip-race">${c.race_flag} ${c.race_name}</div>
+    </div>`).join('') || '<div style="font-size:0.7rem;color:var(--on-40);padding:16px 10px;text-align:center">No chips recorded yet</div>';
+}
+
+// ── RENDER: standings swings ─────────────────────────────────────────────
+function renderSwings() {
+  const { climb, fall } = computeRankSwings(RESULTS);
+  const prevRank = r => r.season_rank + r.rank_change;
+  document.getElementById('swing-grid').innerHTML = `
+    <div class="feature-card climb" onclick="showResultPopup(${climb.race_number}, '${escAttr(climb.user_name)}', 'margin_2nd')">
+      <div class="feature-kicker">Biggest Climb</div>
+      <div class="feature-value">+${climb.rank_change} places</div>
+      <div class="feature-player">${climb.user_name}</div>
+      <div class="feature-race">${climb.race_flag} ${climb.race_name} · ${ordinal(prevRank(climb))} → ${ordinal(climb.season_rank)}</div>
+    </div>
+    <div class="feature-card" onclick="showResultPopup(${fall.race_number}, '${escAttr(fall.user_name)}', 'margin_2nd')">
+      <div class="feature-kicker">Biggest Fall</div>
+      <div class="feature-value">${fall.rank_change} places</div>
+      <div class="feature-player">${fall.user_name}</div>
+      <div class="feature-race">${fall.race_flag} ${fall.race_name} · ${ordinal(prevRank(fall))} → ${ordinal(fall.season_rank)}</div>
+    </div>`;
+}
+
+// ── RENDER: transfer activity ────────────────────────────────────────────
+function renderTransferActivity() {
+  const { totals, biggest } = computeTransferActivity(PICKS);
+  TRANSFER_BIGGEST = biggest;
+
+  document.getElementById('overhaul-grid').innerHTML = biggest ? `
+    <div class="feature-card" style="grid-column:1/-1" onclick="showOverhaulPopup()">
+      <div class="feature-kicker">Biggest Single-Race Overhaul</div>
+      <div class="feature-value">${biggest.changes} changes</div>
+      <div class="feature-player">${biggest.user_name}</div>
+      <div class="feature-race">${biggest.race_flag} ${biggest.race_name} · tap to see who came in &amp; out</div>
+    </div>` : '';
+
+  document.getElementById('transfer-list').innerHTML = totals.map((t, i) => `
+    <div class="rank-row" style="cursor:default">
+      <div class="rank-num">${i + 1}</div>
+      <div class="rank-main">
+        <div class="rank-player">${t.user_name}</div>
+        <div class="rank-race">Across the season</div>
+      </div>
+      <div class="rank-val" style="color:var(--blue)">${t.total}</div>
+    </div>`).join('');
+}
+
+// ── RENDER: prize money ──────────────────────────────────────────────────
+function renderPrizeMoney() {
+  const { winnings, pool, champProjection, rounds, players } = computePrizeMoney(RESULTS);
+
+  document.getElementById('prize-list').innerHTML = winnings.map((w, i) => `
+    <div class="prize-row">
+      <div class="prize-num">${i + 1}</div>
+      <div>
+        <div class="prize-name">${w.user_name}</div>
+        <div class="prize-sub">${w.wins} race win${w.wins === 1 ? '' : 's'}</div>
+      </div>
+      <div class="prize-val">$${w.total.toFixed(2)}</div>
+    </div>`).join('');
+
+  document.getElementById('champ-grid').innerHTML = champProjection.map(c => `
+    <div class="champ-card">
+      <div class="champ-pos">${['1st', '2nd', '3rd'][c.pos - 1]} Place</div>
+      <div class="champ-name">${c.user_name}</div>
+      <div class="champ-val">$${c.amount.toFixed(2)}</div>
+    </div>`).join('');
+
+  document.getElementById('prize-pool-note').innerHTML =
+    `<b>$${pool.toFixed(2)}</b> championship pool accumulated so far (${players} players × $7 × 50% × ${rounds} rounds). Split 50/30/20 to whoever is 1st/2nd/3rd — this is a live projection based on current standings, not a final payout.`;
+}
+
+// ── POPUPS ────────────────────────────────────────────────────────────────
+function teamBreakdown(user, raceNumber) {
+  const rows = {};
+  BREAKDOWNS.filter(b => b.user_name === user && b.race_number === raceNumber).forEach(b => {
+    rows[b.breakdown_category] = (rows[b.breakdown_category] || 0) + b.breakdown_points;
+  });
+  return Object.entries(rows).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
+}
+
+function fillPopupRows(rows) {
+  document.getElementById('popup-rows').innerHTML = rows.length
+    ? rows.map(([cat, val]) => `<div class="popup-row">
+        <span class="popup-cat">${cat}</span>
+        <span class="popup-pts ${val > 0 ? 'pos' : 'neg'}">${val > 0 ? '+' : ''}${val}</span>
+      </div>`).join('')
+    : '<div style="font-size:0.7rem;color:var(--on-40);padding:8px 0">No breakdown available</div>';
+}
+
+function showResultPopup(raceNumber, user, marginKey) {
+  const r = TOP_RESULTS.find(x => x.race_number === raceNumber && x.user_name === user);
+  if (!r) return;
+  document.getElementById('popup-title').textContent = r.user_name;
+  document.getElementById('popup-sub').textContent = `${r.race_flag} ${r.race_name}`;
+  const totEl = document.getElementById('popup-total');
+  totEl.textContent = `${r.race_points} pts`;
+  totEl.style.color = 'var(--red)';
+  fillPopupRows(teamBreakdown(user, raceNumber));
+  document.getElementById('popup-league').textContent = marginKey === 'margin_2nd'
+    ? `+${r.margin_2nd} pts clear of 2nd place`
+    : `+${r.margin_avg} pts above the field average of ${r.field_avg}`;
+  document.getElementById('popup-overlay').classList.add('open');
+}
+
+function showChipPopup(idx) {
+  const c = CHIPS[idx];
+  if (!c) return;
+  document.getElementById('popup-title').textContent = c.chip;
+  document.getElementById('popup-sub').textContent = `${c.user_name} · ${c.race_flag} ${c.race_name}`;
+  const totEl = document.getElementById('popup-total');
+  totEl.textContent = `${c.race_points > 0 ? '+' : ''}${c.race_points} pts`;
+  totEl.style.color = 'var(--gold)';
+  fillPopupRows(teamBreakdown(c.user_name, c.race_number));
+  document.getElementById('popup-league').textContent = `Best result recorded while ${c.chip} was active`;
+  document.getElementById('popup-overlay').classList.add('open');
+}
+
+function showOverhaulPopup() {
+  const p = TRANSFER_BIGGEST;
+  if (!p) return;
+  document.getElementById('popup-title').textContent = p.user_name;
+  document.getElementById('popup-sub').textContent = `${p.race_flag} ${p.race_name} · ${p.changes} changes`;
+  const totEl = document.getElementById('popup-total');
+  totEl.textContent = `${p.changes} changes`;
+  totEl.style.color = 'var(--blue)';
+
+  let rows = '';
+  p.removed.forEach(n => rows += `<div class="popup-row"><span class="popup-cat">Dropped</span><span class="popup-pts neg">${n}</span></div>`);
+  p.added.forEach(n => rows += `<div class="popup-row"><span class="popup-cat">Signed</span><span class="popup-pts pos">${n}</span></div>`);
+  document.getElementById('popup-rows').innerHTML = rows || '<div style="font-size:0.7rem;color:var(--on-40)">No detail available</div>';
+  document.getElementById('popup-league').textContent = 'Biggest single-race lineup shake-up this season';
+  document.getElementById('popup-overlay').classList.add('open');
+}
+
+function closePopup(e) {
+  if (!e || e.target === document.getElementById('popup-overlay'))
+    document.getElementById('popup-overlay').classList.remove('open');
+}
+
+function escAttr(s) { return String(s).replace(/'/g, "\\'"); }
+
+function ordinal(n) {
+  const s = ['th', 'st', 'nd', 'rd'], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
+// ── INIT ──────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    await loadAll();
+    renderHeader();
+    renderBestResults();
+    renderChips();
+    renderSwings();
+    renderTransferActivity();
+    renderPrizeMoney();
+    document.getElementById('loading-overlay')?.remove();
+  } catch (e) {
+    console.error('stats.html error:', e);
+    const ol = document.getElementById('loading-overlay');
+    if (ol) ol.innerHTML = '<div style="color:#ffb4a8;font-family:Inter;padding:20px;text-align:center">Failed to load data.<br>Please refresh.</div>';
+  }
+}
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>

@@ -52,8 +52,12 @@ main{flex:1;padding-bottom:80px}
 .feature-card{background:var(--surface-mid);padding:14px;border-left:3px solid var(--red);cursor:pointer;transition:background 0.1s}
 .feature-card:hover{background:var(--surface-high)}
 .feature-card.avg{border-left-color:var(--blue)}
+.feature-card.climb{border-left-color:var(--green)}
+.feature-card.gold{border-left-color:var(--gold)}
 .feature-kicker{font-size:0.5rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--red-dim)}
 .feature-card.avg .feature-kicker{color:var(--blue)}
+.feature-card.climb .feature-kicker{color:var(--green)}
+.feature-card.gold .feature-kicker{color:var(--gold)}
 .feature-value{font-family:'Space Grotesk',sans-serif;font-size:1.9rem;font-weight:900;letter-spacing:-0.02em;margin-top:6px;color:var(--on)}
 .feature-player{font-family:'Space Grotesk',sans-serif;font-size:0.9rem;font-weight:700;text-transform:uppercase;margin-top:6px}
 .feature-race{font-size:0.6rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--on-40);margin-top:2px}
@@ -79,36 +83,22 @@ main{flex:1;padding-bottom:80px}
 .chip-player{font-size:0.65rem;font-weight:700;text-transform:uppercase;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chip-race{font-size:0.5rem;color:var(--on-40);margin-top:1px;text-transform:uppercase;letter-spacing:0.04em}
 
-/* ── TRANSFER TABLE ── */
-.tf-summary{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:10px 0}
-.tf-sum-card{background:var(--surface-mid);padding:10px 12px}
-.tf-sum-label{font-size:0.48rem;font-weight:900;letter-spacing:0.12em;text-transform:uppercase;color:var(--on-40)}
-.tf-sum-val{font-family:'Space Grotesk',sans-serif;font-size:1.2rem;font-weight:700;margin-top:2px;color:var(--red-dim)}
-.tf-table{margin-top:4px}
-.tf-head{display:grid;grid-template-columns:1fr 70px 60px;padding:6px 10px;
-  font-size:0.46rem;font-weight:900;letter-spacing:0.1em;text-transform:uppercase;color:var(--on-40);
-  border-bottom:1px solid var(--on-08)}
-.tf-head span:not(:first-child){text-align:right}
-.tf-row{display:grid;grid-template-columns:1fr 70px 60px;padding:9px 10px;align-items:center;
-  border-bottom:1px solid var(--on-08);cursor:pointer;transition:background 0.1s}
-.tf-row:hover{background:var(--surface-high)}
-.tf-row:last-child{border-bottom:none}
-.tf-player{font-size:0.68rem;font-weight:700;text-transform:uppercase}
-.tf-race{font-size:0.5rem;color:var(--on-40);margin-top:1px;text-transform:uppercase;letter-spacing:0.03em}
-.tf-changes{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:700;text-align:right;color:var(--on-60)}
-.tf-penalty{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-align:right;color:var(--red-dim)}
-.tf-penalty.protected{color:var(--green);font-size:0.58rem;letter-spacing:0.04em;text-transform:uppercase}
-.tf-empty{font-size:0.7rem;color:var(--on-40);padding:16px 10px;text-align:center}
-.tf-see-more{display:block;width:100%;background:var(--surface-mid);border:none;color:var(--on-40);
-  font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;
-  padding:10px;cursor:pointer;margin-top:2px}
-.tf-see-more:hover{color:var(--on);background:var(--surface-high)}
+/* ── PRIZE MONEY ── */
+.prize-pool-note{background:var(--surface-mid);padding:10px 12px;font-size:0.6rem;color:var(--on-60);line-height:1.5;margin-top:10px}
+.prize-pool-note b{color:var(--on)}
+.subhead{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:0.08em;color:var(--on-60);margin:16px 0 8px}
+.prize-row{display:grid;grid-template-columns:22px 1fr 70px;align-items:center;gap:10px;padding:8px 10px;background:var(--surface-mid);margin-bottom:2px}
+.prize-num{font-family:'Space Grotesk',sans-serif;font-size:0.75rem;font-weight:900;color:var(--on-40)}
+.prize-name{font-size:0.72rem;font-weight:700;text-transform:uppercase}
+.prize-sub{font-size:0.5rem;color:var(--on-40);margin-top:1px;text-transform:uppercase;letter-spacing:0.04em}
+.prize-val{font-family:'Space Grotesk',sans-serif;font-size:0.85rem;font-weight:700;text-align:right;color:var(--green)}
 
-/* penalty leaderboard */
-.pen-board{display:flex;flex-direction:column;gap:2px;margin-top:4px}
-.pen-row{display:grid;grid-template-columns:1fr 60px;padding:7px 10px;background:var(--surface-mid);align-items:center}
-.pen-name{font-size:0.65rem;font-weight:700;text-transform:uppercase}
-.pen-val{font-family:'Space Grotesk',sans-serif;font-size:0.78rem;font-weight:700;text-align:right;color:var(--red-dim)}
+.champ-grid{display:grid;grid-template-columns:1fr;gap:8px;margin-top:8px}
+@media(min-width:600px){.champ-grid{grid-template-columns:repeat(3,1fr)}}
+.champ-card{background:var(--surface-mid);padding:16px 12px;text-align:center;border-top:3px solid var(--gold)}
+.champ-pos{font-family:'Space Grotesk',sans-serif;font-size:0.55rem;font-weight:900;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold)}
+.champ-name{font-size:0.78rem;font-weight:700;text-transform:uppercase;margin-top:8px}
+.champ-val{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:900;margin-top:6px;color:var(--on)}
 
 /* ── POPUP (shared) ── */
 .popup-overlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.6);display:none;align-items:flex-end;justify-content:center}
@@ -184,28 +174,42 @@ main{flex:1;padding-bottom:80px}
     <div class="chip-grid" id="chip-grid"></div>
   </div>
 
-  <!-- TRANSFER PENALTIES -->
+  <!-- STANDINGS SWINGS -->
+  <div class="stats-section">
+    <div class="section-title-bar">
+      <div class="section-accent" style="background:var(--green)"></div>
+      <div class="section-title">Standings Swings</div>
+    </div>
+    <div class="section-note">Biggest single-race move up or down the season standings. Tap for that race's breakdown.</div>
+    <div class="feature-grid" id="swing-grid"></div>
+  </div>
+
+  <!-- TRANSFER ACTIVITY -->
   <div class="stats-section">
     <div class="section-title-bar">
       <div class="section-accent blue"></div>
-      <div class="section-title">Transfer Penalties</div>
+      <div class="section-title">Transfer Activity</div>
     </div>
-    <div class="section-note">Estimated — assumes 2 free swaps per race with no rollover, -10 pts per extra swap, waived when Limitless or Wildcard was played. Tap a row for who was swapped.</div>
-
-    <div class="tf-summary" id="tf-summary"></div>
-
-    <div class="tf-table">
-      <div class="tf-head"><span>Player / Race</span><span>Swaps</span><span>Penalty</span></div>
-      <div id="tf-body"></div>
-      <button class="tf-see-more" id="tf-see-more" style="display:none">Show all</button>
-    </div>
-
-    <div class="section-title-bar" style="margin-top:16px">
-      <div class="section-accent blue"></div>
-      <div class="section-title" style="font-size:0.72rem">Total Points Lost to Penalties</div>
-    </div>
-    <div class="pen-board" id="pen-board"></div>
+    <div class="section-note">Driver/constructor changes, counted week to week. Tap the overhaul card for who came in and out.</div>
+    <div class="feature-grid" id="overhaul-grid"></div>
+    <div class="subhead">Most Swaps This Season</div>
+    <div class="rank-list" id="transfer-list"></div>
   </div>
+
+  <!-- PRIZE MONEY -->
+  <div class="stats-section">
+    <div class="section-title-bar">
+      <div class="section-accent gold"></div>
+      <div class="section-title">Prize Money</div>
+    </div>
+    <div class="section-note">Confirmed race winnings, straight from race results.</div>
+    <div id="prize-list"></div>
+
+    <div class="subhead">Championship Projection</div>
+    <div class="champ-grid" id="champ-grid"></div>
+    <div class="prize-pool-note" id="prize-pool-note"></div>
+  </div>
+
 </main>
 
 <!-- SHARED POPUP -->
@@ -232,9 +236,8 @@ main{flex:1;padding-bottom:80px}
 <script>
 // ── STATE ─────────────────────────────────────────────────────────────────
 let PICKS = [], RESULTS = [], BREAKDOWNS = [];
-let PENALTIES = [], TOP_RESULTS = [], CHIPS = [];
-let tfExpanded = false;
-const TF_COLLAPSED_COUNT = 8;
+let TOP_RESULTS = [], CHIPS = [];
+let TRANSFER_BIGGEST = null;
 
 // ── DATA LOADING ─────────────────────────────────────────────────────────
 async function loadAll() {
@@ -288,55 +291,100 @@ function computeChipHighlights(results) {
   return Object.values(map).sort((a, b) => b.race_points - a.race_points);
 }
 
-// ── COMPUTE: transfer penalties ─────────────────────────────────────────────
-function computeTransferPenalties(picks, results) {
+// ── COMPUTE: closest finish (smallest margin between 1st and 2nd) ──────────
+function computeClosestFinish(results) {
+  const byRace = {};
+  results.forEach(r => { (byRace[r.race_number] = byRace[r.race_number] || []).push(r); });
+  let closest = null;
+  Object.values(byRace).forEach(list => {
+    const sorted = [...list].sort((a, b) => b.race_points - a.race_points);
+    const margin = +(sorted[0].race_points - (sorted[1] ? sorted[1].race_points : 0)).toFixed(1);
+    if (!closest || margin < closest.margin) {
+      closest = {
+        margin, race_number: sorted[0].race_number, race_name: sorted[0].race_name, race_flag: sorted[0].race_flag,
+        winner: sorted[0].user_name, winner_pts: sorted[0].race_points,
+        runner_up: sorted[1] ? sorted[1].user_name : null, runner_up_pts: sorted[1] ? sorted[1].race_points : null,
+      };
+    }
+  });
+  return closest;
+}
+
+// ── COMPUTE: biggest single-race score ──────────────────────────────────────
+function computeBiggestScore(results) {
+  return results.reduce((best, r) => (!best || r.race_points > best.race_points) ? r : best, null);
+}
+
+// ── COMPUTE: biggest rank swings ────────────────────────────────────────────
+function computeRankSwings(results) {
+  const withChange = results.filter(r => r.race_number > 1);
+  const climb = withChange.reduce((best, r) => (!best || r.rank_change > best.rank_change) ? r : best, null);
+  const fall  = withChange.reduce((best, r) => (!best || r.rank_change < best.rank_change) ? r : best, null);
+  return { climb, fall };
+}
+
+// ── COMPUTE: transfer activity (counts only, no penalty math) ──────────────
+function computeTransferActivity(picks) {
   const byUserRace = {};
   picks.forEach(p => {
     if (!byUserRace[p.user_name]) byUserRace[p.user_name] = {};
     if (!byUserRace[p.user_name][p.race_number]) byUserRace[p.user_name][p.race_number] = new Set();
     byUserRace[p.user_name][p.race_number].add(p.pick_name);
   });
+  const raceMeta = {};
+  RESULTS.forEach(r => { raceMeta[r.race_number] = { race_name: r.race_name, race_flag: r.race_flag }; });
 
-  const cardsMap = {}, raceMeta = {};
-  results.forEach(r => {
-    cardsMap[r.user_name + '|' + r.race_number] = r.cards_used || '';
-    raceMeta[r.race_number] = { race_name: r.race_name, race_flag: r.race_flag };
-  });
-
-  const out = [];
+  const totals = [];
+  let biggest = null;
   Object.entries(byUserRace).forEach(([user, raceMap]) => {
     const races = Object.keys(raceMap).map(Number).sort((a, b) => a - b);
+    let total = 0;
     for (let i = 1; i < races.length; i++) {
-      const prevRn = races[i - 1], curRn = races[i];
-      const prevSet = raceMap[prevRn], curSet = raceMap[curRn];
+      const prevSet = raceMap[races[i - 1]], curSet = raceMap[races[i]];
       const removed = [...prevSet].filter(x => !curSet.has(x));
       const added   = [...curSet].filter(x => !prevSet.has(x));
       const changes = Math.max(removed.length, added.length);
-      if (changes <= 2) continue;
-
-      const cardsUsed = cardsMap[user + '|' + curRn] || '';
-      const isProtected = /Limitless|Wildcard/i.test(cardsUsed);
-      const penalty = isProtected ? 0 : -10 * (changes - 2);
-      const meta = raceMeta[curRn] || {};
-      out.push({
-        user_name: user, race_number: curRn,
-        race_name: meta.race_name || `Round ${curRn}`,
-        race_flag: meta.race_flag || '',
-        changes, penalty, protectedChip: isProtected, cardsUsed,
-        removed, added,
-      });
+      total += changes;
+      if (changes > 0 && (!biggest || changes > biggest.changes)) {
+        const meta = raceMeta[races[i]] || {};
+        biggest = {
+          user_name: user, race_number: races[i],
+          race_name: meta.race_name || `Round ${races[i]}`, race_flag: meta.race_flag || '',
+          changes, removed, added,
+        };
+      }
     }
+    totals.push({ user_name: user, total });
   });
-  return out.sort((a, b) => a.penalty - b.penalty || a.race_number - b.race_number);
+  totals.sort((a, b) => b.total - a.total);
+  return { totals, biggest };
 }
 
-function computePenaltyLeaderboard(penalties) {
-  const totals = {};
-  penalties.forEach(p => { totals[p.user_name] = (totals[p.user_name] || 0) + p.penalty; });
-  return Object.entries(totals)
-    .map(([user_name, total]) => ({ user_name, total }))
-    .filter(r => r.total < 0)
-    .sort((a, b) => a.total - b.total);
+// ── COMPUTE: prize money ────────────────────────────────────────────────────
+function computePrizeMoney(results) {
+  const byUser = {};
+  results.forEach(r => {
+    if (!byUser[r.user_name]) byUser[r.user_name] = { user_name: r.user_name, total: 0, wins: 0 };
+    byUser[r.user_name].total += r.race_prize || 0;
+    if (r.race_rank === 1) byUser[r.user_name].wins += 1;
+  });
+  const winnings = Object.values(byUser).filter(u => u.total > 0).sort((a, b) => b.total - a.total);
+
+  // championship pool: 50% of $7/player/race, accumulated across every round played
+  const byRace = {};
+  results.forEach(r => { (byRace[r.race_number] = byRace[r.race_number] || []).push(r); });
+  let pool = 0;
+  Object.values(byRace).forEach(list => { pool += list.length * 7 * 0.5; });
+
+  const latestRn = Math.max(...results.map(r => r.race_number));
+  const latestStandings = results.filter(r => r.race_number === latestRn).sort((a, b) => a.season_rank - b.season_rank).slice(0, 3);
+  const champProjection = latestStandings.map((r, i) => ({
+    user_name: r.user_name,
+    pos: i + 1,
+    amount: +(pool * [0.5, 0.3, 0.2][i]).toFixed(2),
+  }));
+
+  return { winnings, pool: +pool.toFixed(2), champProjection, latestRn, rounds: Object.keys(byRace).length, players: byRace[latestRn].length };
 }
 
 // ── RENDER: header ───────────────────────────────────────────────────────
@@ -351,6 +399,8 @@ function renderBestResults() {
   TOP_RESULTS = computeBestResults(RESULTS);
   const best2nd = [...TOP_RESULTS].sort((a, b) => b.margin_2nd - a.margin_2nd)[0];
   const bestAvg = [...TOP_RESULTS].sort((a, b) => b.margin_avg - a.margin_avg)[0];
+  const bestScore = computeBiggestScore(RESULTS);
+  const closest = computeClosestFinish(RESULTS);
 
   const grid = document.getElementById('feature-grid');
   grid.innerHTML = `
@@ -365,6 +415,18 @@ function renderBestResults() {
       <div class="feature-value">+${bestAvg.margin_avg} pts</div>
       <div class="feature-player">${bestAvg.user_name}</div>
       <div class="feature-race">${bestAvg.race_flag} ${bestAvg.race_name} · avg was ${bestAvg.field_avg}</div>
+    </div>
+    <div class="feature-card gold" onclick="showResultPopup(${bestScore.race_number}, '${escAttr(bestScore.user_name)}', 'margin_2nd')">
+      <div class="feature-kicker">Biggest Score · This Season</div>
+      <div class="feature-value">${bestScore.race_points} pts</div>
+      <div class="feature-player">${bestScore.user_name}</div>
+      <div class="feature-race">${bestScore.race_flag} ${bestScore.race_name}</div>
+    </div>
+    <div class="feature-card avg" onclick="showResultPopup(${closest.race_number}, '${escAttr(closest.winner)}', 'margin_2nd')">
+      <div class="feature-kicker">Closest Finish · 1st vs 2nd</div>
+      <div class="feature-value">${closest.margin === 0 ? 'Dead Heat' : '+' + closest.margin + ' pts'}</div>
+      <div class="feature-player">${closest.winner}${closest.runner_up ? ' vs ' + closest.runner_up : ''}</div>
+      <div class="feature-race">${closest.race_flag} ${closest.race_name} · ${closest.winner_pts} – ${closest.runner_up_pts}</div>
     </div>`;
 
   const top5 = [...TOP_RESULTS].sort((a, b) => b.margin_2nd - a.margin_2nd).slice(0, 5);
@@ -388,60 +450,75 @@ function renderChips() {
       <div class="chip-pts">${c.race_points > 0 ? '+' : ''}${c.race_points}</div>
       <div class="chip-player">${c.user_name}</div>
       <div class="chip-race">${c.race_flag} ${c.race_name}</div>
-    </div>`).join('') || '<div class="tf-empty">No chips recorded yet</div>';
+    </div>`).join('') || '<div style="font-size:0.7rem;color:var(--on-40);padding:16px 10px;text-align:center">No chips recorded yet</div>';
 }
 
-// ── RENDER: transfer penalties ───────────────────────────────────────────
-function renderTransfers() {
-  PENALTIES = computeTransferPenalties(PICKS, RESULTS);
-  const active = PENALTIES.filter(p => p.penalty < 0);
-
-  const totalLost = active.reduce((s, p) => s + p.penalty, 0);
-  document.getElementById('tf-summary').innerHTML = `
-    <div class="tf-sum-card">
-      <div class="tf-sum-label">Penalized Swaps</div>
-      <div class="tf-sum-val" style="color:var(--on)">${active.length}</div>
+// ── RENDER: standings swings ─────────────────────────────────────────────
+function renderSwings() {
+  const { climb, fall } = computeRankSwings(RESULTS);
+  const prevRank = r => r.season_rank + r.rank_change;
+  document.getElementById('swing-grid').innerHTML = `
+    <div class="feature-card climb" onclick="showResultPopup(${climb.race_number}, '${escAttr(climb.user_name)}', 'margin_2nd')">
+      <div class="feature-kicker">Biggest Climb</div>
+      <div class="feature-value">+${climb.rank_change} places</div>
+      <div class="feature-player">${climb.user_name}</div>
+      <div class="feature-race">${climb.race_flag} ${climb.race_name} · ${ordinal(prevRank(climb))} → ${ordinal(climb.season_rank)}</div>
     </div>
-    <div class="tf-sum-card">
-      <div class="tf-sum-label">Total Points Lost</div>
-      <div class="tf-sum-val">${totalLost}</div>
+    <div class="feature-card" onclick="showResultPopup(${fall.race_number}, '${escAttr(fall.user_name)}', 'margin_2nd')">
+      <div class="feature-kicker">Biggest Fall</div>
+      <div class="feature-value">${fall.rank_change} places</div>
+      <div class="feature-player">${fall.user_name}</div>
+      <div class="feature-race">${fall.race_flag} ${fall.race_name} · ${ordinal(prevRank(fall))} → ${ordinal(fall.season_rank)}</div>
     </div>`;
-
-  renderTfBody();
-
-  const board = computePenaltyLeaderboard(PENALTIES);
-  document.getElementById('pen-board').innerHTML = board.length
-    ? board.map(r => `
-      <div class="pen-row">
-        <div class="pen-name">${r.user_name}</div>
-        <div class="pen-val">${r.total}</div>
-      </div>`).join('')
-    : '<div class="tf-empty">No penalties incurred this season</div>';
 }
 
-function renderTfBody() {
-  const list = tfExpanded ? PENALTIES : PENALTIES.slice(0, TF_COLLAPSED_COUNT);
-  document.getElementById('tf-body').innerHTML = list.length ? list.map((p) => {
-    const idx = PENALTIES.indexOf(p);
-    return `
-    <div class="tf-row" onclick="showTransferPopup(${idx})">
-      <div>
-        <div class="tf-player">${p.user_name}</div>
-        <div class="tf-race">${p.race_flag} ${p.race_name}</div>
-      </div>
-      <div class="tf-changes">${p.changes}×</div>
-      <div class="${p.protectedChip ? 'tf-penalty protected' : 'tf-penalty'}">${p.protectedChip ? 'Waived' : p.penalty}</div>
-    </div>`;
-  }).join('') : '<div class="tf-empty">No transfer penalties found</div>';
+// ── RENDER: transfer activity ────────────────────────────────────────────
+function renderTransferActivity() {
+  const { totals, biggest } = computeTransferActivity(PICKS);
+  TRANSFER_BIGGEST = biggest;
 
-  const btn = document.getElementById('tf-see-more');
-  if (PENALTIES.length > TF_COLLAPSED_COUNT) {
-    btn.style.display = 'block';
-    btn.textContent = tfExpanded ? 'Show less' : `Show all ${PENALTIES.length}`;
-    btn.onclick = () => { tfExpanded = !tfExpanded; renderTfBody(); };
-  } else {
-    btn.style.display = 'none';
-  }
+  document.getElementById('overhaul-grid').innerHTML = biggest ? `
+    <div class="feature-card" style="grid-column:1/-1" onclick="showOverhaulPopup()">
+      <div class="feature-kicker">Biggest Single-Race Overhaul</div>
+      <div class="feature-value">${biggest.changes} changes</div>
+      <div class="feature-player">${biggest.user_name}</div>
+      <div class="feature-race">${biggest.race_flag} ${biggest.race_name} · tap to see who came in &amp; out</div>
+    </div>` : '';
+
+  document.getElementById('transfer-list').innerHTML = totals.map((t, i) => `
+    <div class="rank-row" style="cursor:default">
+      <div class="rank-num">${i + 1}</div>
+      <div class="rank-main">
+        <div class="rank-player">${t.user_name}</div>
+        <div class="rank-race">Across the season</div>
+      </div>
+      <div class="rank-val" style="color:var(--blue)">${t.total}</div>
+    </div>`).join('');
+}
+
+// ── RENDER: prize money ──────────────────────────────────────────────────
+function renderPrizeMoney() {
+  const { winnings, pool, champProjection, rounds, players } = computePrizeMoney(RESULTS);
+
+  document.getElementById('prize-list').innerHTML = winnings.map((w, i) => `
+    <div class="prize-row">
+      <div class="prize-num">${i + 1}</div>
+      <div>
+        <div class="prize-name">${w.user_name}</div>
+        <div class="prize-sub">${w.wins} race win${w.wins === 1 ? '' : 's'}</div>
+      </div>
+      <div class="prize-val">$${w.total.toFixed(2)}</div>
+    </div>`).join('');
+
+  document.getElementById('champ-grid').innerHTML = champProjection.map(c => `
+    <div class="champ-card">
+      <div class="champ-pos">${['1st', '2nd', '3rd'][c.pos - 1]} Place</div>
+      <div class="champ-name">${c.user_name}</div>
+      <div class="champ-val">$${c.amount.toFixed(2)}</div>
+    </div>`).join('');
+
+  document.getElementById('prize-pool-note').innerHTML =
+    `<b>$${pool.toFixed(2)}</b> championship pool accumulated so far (${players} players × $7 × 50% × ${rounds} rounds). Split 50/30/20 to whoever is 1st/2nd/3rd — this is a live projection based on current standings, not a final payout.`;
 }
 
 // ── POPUPS ────────────────────────────────────────────────────────────────
@@ -490,23 +567,20 @@ function showChipPopup(idx) {
   document.getElementById('popup-overlay').classList.add('open');
 }
 
-function showTransferPopup(idx) {
-  const p = PENALTIES[idx];
+function showOverhaulPopup() {
+  const p = TRANSFER_BIGGEST;
   if (!p) return;
   document.getElementById('popup-title').textContent = p.user_name;
   document.getElementById('popup-sub').textContent = `${p.race_flag} ${p.race_name} · ${p.changes} changes`;
   const totEl = document.getElementById('popup-total');
-  totEl.textContent = p.protectedChip ? 'No Penalty' : `${p.penalty} pts`;
-  totEl.style.color = p.protectedChip ? 'var(--green)' : 'var(--red-dim)';
+  totEl.textContent = `${p.changes} changes`;
+  totEl.style.color = 'var(--blue)';
 
   let rows = '';
   p.removed.forEach(n => rows += `<div class="popup-row"><span class="popup-cat">Dropped</span><span class="popup-pts neg">${n}</span></div>`);
   p.added.forEach(n => rows += `<div class="popup-row"><span class="popup-cat">Signed</span><span class="popup-pts pos">${n}</span></div>`);
   document.getElementById('popup-rows').innerHTML = rows || '<div style="font-size:0.7rem;color:var(--on-40)">No detail available</div>';
-
-  document.getElementById('popup-league').textContent = p.protectedChip
-    ? `Protected — ${p.cardsUsed} was active that race`
-    : `Estimated: 2 free swaps assumed, -10 pts per swap beyond that`;
+  document.getElementById('popup-league').textContent = 'Biggest single-race lineup shake-up this season';
   document.getElementById('popup-overlay').classList.add('open');
 }
 
@@ -517,6 +591,11 @@ function closePopup(e) {
 
 function escAttr(s) { return String(s).replace(/'/g, "\\'"); }
 
+function ordinal(n) {
+  const s = ['th', 'st', 'nd', 'rd'], v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+}
+
 // ── INIT ──────────────────────────────────────────────────────────────────
 async function init() {
   try {
@@ -524,7 +603,9 @@ async function init() {
     renderHeader();
     renderBestResults();
     renderChips();
-    renderTransfers();
+    renderSwings();
+    renderTransferActivity();
+    renderPrizeMoney();
     document.getElementById('loading-overlay')?.remove();
   } catch (e) {
     console.error('stats.html error:', e);

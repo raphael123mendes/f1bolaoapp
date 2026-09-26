@@ -1,10 +1,10 @@
 {
   "gameday_id": "15",
   "session_type": "race",
-  "ranking_hash": "13760a5a6d2a116ce2ef004aa11a4a80",
+  "ranking_hash": "42b3c0ae74d5770928864eab197ce8e4",
   "scores": {
-    "Fabio Mucci": 60,
     "Raphael Stein": 59,
+    "Fabio Mucci": 50,
     "Rafael Dias": 48,
     "Robson Jardim": 48,
     "Vinicius Agostini": 47,
@@ -16,5 +16,5 @@
     "Ricardo Mucci": 22
   },
   "post_race_sent": false,
-  "saved_at": "2026-09-25T13:19:18.168072+00:00"
+  "saved_at": "2026-09-26T09:22:20.512829+00:00"
 }

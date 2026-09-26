@@ -1,0 +1,1337 @@
+[
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 1,
+    "overall_rank": 1,
+    "live_gd_rank": 3,
+    "rank_change": 0,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "total_points": 3941.0,
+    "gd_points": 253.0,
+    "budget_remaining": 0.9,
+    "team_value": 120.9,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 17,
+        "breakdown": [
+          "Race Position: +6",
+          "Qualifying Position: +0",
+          "Race position gained: +8",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "11032",
+        "name": "Isack Hadjar",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 26,
+        "breakdown": [
+          "Race Position: +15",
+          "Qualifying Position: +7",
+          "Race position gained: +1",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "11031",
+        "name": "Oliver Bearman",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Race Position: +2",
+          "Qualifying Position: +0",
+          "Race position gained: +1",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 2,
+    "overall_rank": 2,
+    "live_gd_rank": 2,
+    "rank_change": 0,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "total_points": 3897.0,
+    "gd_points": 261.0,
+    "budget_remaining": 2.2,
+    "team_value": 129.6,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11",
+        "name": "Alexander Albon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -16,
+        "breakdown": [
+          "Qualifying Position: +0",
+          "Race not classified : -20",
+          "race overtake bonus: +4"
+        ]
+      },
+      {
+        "id": "121",
+        "name": "Sergio Perez",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 11,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +6",
+          "race overtake bonus: +5"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "124",
+        "name": "George Russell",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +25",
+          "Qualifying Position: +10",
+          "Race Fastest lap: +10"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 3,
+    "overall_rank": 3,
+    "live_gd_rank": 4,
+    "rank_change": 0,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "total_points": 3771.0,
+    "gd_points": 241.0,
+    "budget_remaining": 1.3,
+    "team_value": 122.4,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "115",
+        "name": "Charles Leclerc",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 20,
+        "breakdown": [
+          "Race Position: +12",
+          "Qualifying Position: +9",
+          "Race Position lost: -2",
+          "race overtake bonus: +1"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "121",
+        "name": "Sergio Perez",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 11,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +6",
+          "race overtake bonus: +5"
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Valtteri Bottas",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +3",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 4,
+    "overall_rank": 4,
+    "live_gd_rank": 7,
+    "rank_change": 0,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "total_points": 3686.0,
+    "gd_points": 200.0,
+    "budget_remaining": 0.7,
+    "team_value": 116.4,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "124",
+        "name": "George Russell",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +25",
+          "Qualifying Position: +10",
+          "Race Fastest lap: +10"
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "11059",
+        "name": "Franco Colapinto",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -18,
+        "breakdown": [
+          "Qualifying Position: +1",
+          "Race not classified : -20",
+          "race overtake bonus: +1"
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Alexander Albon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -16,
+        "breakdown": [
+          "Qualifying Position: +0",
+          "Race not classified : -20",
+          "race overtake bonus: +4"
+        ]
+      },
+      {
+        "id": "11031",
+        "name": "Oliver Bearman",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Race Position: +2",
+          "Qualifying Position: +0",
+          "Race position gained: +1",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 5,
+    "overall_rank": 5,
+    "live_gd_rank": 6,
+    "rank_change": 0,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "total_points": 3579.0,
+    "gd_points": 229.0,
+    "budget_remaining": 0.7,
+    "team_value": 117.6,
+    "cards_used": [
+      "No Negative (GD15)"
+    ],
+    "picks": [
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Alexander Albon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -16,
+        "breakdown": [
+          "Qualifying Position: +0",
+          "Race not classified : -20",
+          "race overtake bonus: +4"
+        ]
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 17,
+        "breakdown": [
+          "Race Position: +6",
+          "Qualifying Position: +0",
+          "Race position gained: +8",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "11059",
+        "name": "Franco Colapinto",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -18,
+        "breakdown": [
+          "Qualifying Position: +1",
+          "Race not classified : -20",
+          "race overtake bonus: +1"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 6,
+    "overall_rank": 6,
+    "live_gd_rank": 1,
+    "rank_change": 0,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "total_points": 3496.0,
+    "gd_points": 272.0,
+    "budget_remaining": 0.8,
+    "team_value": 112.7,
+    "cards_used": [
+      "No Negative (GD15)"
+    ],
+    "picks": [
+      {
+        "id": "131",
+        "name": "Max Verstappen",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 43,
+        "breakdown": [
+          "Driver Of Day: +10",
+          "Race Position: +18",
+          "Qualifying Position: +3",
+          "Race position gained: +6",
+          "race overtake bonus: +6"
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "11051",
+        "name": "Gabriel Bortoleto",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 8,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +2",
+          "race overtake bonus: +6"
+        ]
+      },
+      {
+        "id": "121",
+        "name": "Sergio Perez",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 11,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +6",
+          "race overtake bonus: +5"
+        ]
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 17,
+        "breakdown": [
+          "Race Position: +6",
+          "Qualifying Position: +0",
+          "Race position gained: +8",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 7,
+    "overall_rank": 7,
+    "live_gd_rank": 8,
+    "rank_change": 0,
+    "team_name": "torcida do Liberio",
+    "user_name": "Vinicius Agostini",
+    "total_points": 3469.0,
+    "gd_points": 194.0,
+    "budget_remaining": 1.5,
+    "team_value": 125.9,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "11",
+        "name": "Alexander Albon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -16,
+        "breakdown": [
+          "Qualifying Position: +0",
+          "Race not classified : -20",
+          "race overtake bonus: +4"
+        ]
+      },
+      {
+        "id": "1982",
+        "name": "Oscar Piastri",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": null,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +8",
+          "Race Position lost: -10",
+          "race overtake bonus: +2"
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Valtteri Bottas",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +3",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 8,
+    "overall_rank": 8,
+    "live_gd_rank": 11,
+    "rank_change": 0,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "total_points": 3365.0,
+    "gd_points": 89.0,
+    "budget_remaining": 1.9,
+    "team_value": 111.1,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 17,
+        "breakdown": [
+          "Race Position: +6",
+          "Qualifying Position: +0",
+          "Race position gained: +8",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "12",
+        "name": "Fernando Alonso",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -14,
+        "breakdown": [
+          "Qualifying Position: +0",
+          "Race not classified : -20",
+          "race overtake bonus: +6"
+        ]
+      },
+      {
+        "id": "118",
+        "name": "Esteban Ocon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 12,
+        "breakdown": [
+          "Race Position: +4",
+          "Qualifying Position: +0",
+          "Race position gained: +5",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "117",
+        "name": "Lando Norris",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": -11,
+        "breakdown": [
+          "Qualifying Position: +6",
+          "Race not classified : -20",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "18",
+        "name": "Pierre Gasly",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -15,
+        "breakdown": [
+          "Qualifying Position: +4",
+          "Race not classified : -20",
+          "race overtake bonus: +1"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "2636",
+        "name": "Racing Bulls",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 23,
+        "breakdown": [
+          "Both Driver Q2: +3",
+          "Race Position: +6",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +7"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 9,
+    "overall_rank": 9,
+    "live_gd_rank": 4,
+    "rank_change": 0,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "total_points": 3360.0,
+    "gd_points": 241.0,
+    "budget_remaining": 3.2,
+    "team_value": 122.4,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "115",
+        "name": "Charles Leclerc",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 20,
+        "breakdown": [
+          "Race Position: +12",
+          "Qualifying Position: +9",
+          "Race Position lost: -2",
+          "race overtake bonus: +1"
+        ]
+      },
+      {
+        "id": "111",
+        "name": "Nico Hulkenberg",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 15,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +8"
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Valtteri Bottas",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +3",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "121",
+        "name": "Sergio Perez",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 11,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +6",
+          "race overtake bonus: +5"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 10,
+    "overall_rank": 10,
+    "live_gd_rank": 9,
+    "rank_change": 0,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "total_points": 3046.0,
+    "gd_points": 189.0,
+    "budget_remaining": 4.3,
+    "team_value": 112.3,
+    "cards_used": [
+      "Autopilot (GD15)"
+    ],
+    "picks": [
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "18",
+        "name": "Pierre Gasly",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": -15,
+        "breakdown": [
+          "Qualifying Position: +4",
+          "Race not classified : -20",
+          "race overtake bonus: +1"
+        ]
+      },
+      {
+        "id": "118",
+        "name": "Esteban Ocon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 12,
+        "breakdown": [
+          "Race Position: +4",
+          "Qualifying Position: +0",
+          "Race position gained: +5",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "11149",
+        "name": "Arvid Lindblad",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 17,
+        "breakdown": [
+          "Race Position: +6",
+          "Qualifying Position: +0",
+          "Race position gained: +8",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "11051",
+        "name": "Gabriel Bortoleto",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 8,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +2",
+          "race overtake bonus: +6"
+        ]
+      },
+      {
+        "id": "28",
+        "name": "Mercedes",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 88,
+        "breakdown": [
+          "Race Position: +35",
+          "Qualifying Position: +10",
+          "One Driver Q3: +5",
+          "Race position gained: +11",
+          "Race Fastest lap: +10",
+          "Fastest Pitstop: +5",
+          "2nd Fastest Pitstop: +5",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "2636",
+        "name": "Racing Bulls",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 23,
+        "breakdown": [
+          "Both Driver Q2: +3",
+          "Race Position: +6",
+          "Qualifying Position: +0",
+          "Race position gained: +7",
+          "race overtake bonus: +7"
+        ]
+      }
+    ]
+  },
+  {
+    "race_number": 15,
+    "race_name": "Azerbaijan Grand Prix",
+    "race_flag": "🇦🇿",
+    "race_date": "2026-09-26",
+    "rank": 11,
+    "overall_rank": 11,
+    "live_gd_rank": 10,
+    "rank_change": 0,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "total_points": 2315.0,
+    "gd_points": 161.0,
+    "budget_remaining": 0.7,
+    "team_value": 108.9,
+    "cards_used": [],
+    "picks": [
+      {
+        "id": "115",
+        "name": "Charles Leclerc",
+        "type": "Driver",
+        "is_captain": true,
+        "is_megacap": false,
+        "points_gd": 20,
+        "breakdown": [
+          "Race Position: +12",
+          "Qualifying Position: +9",
+          "Race Position lost: -2",
+          "race overtake bonus: +1"
+        ]
+      },
+      {
+        "id": "11161",
+        "name": "Kimi Antonelli",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 28,
+        "breakdown": [
+          "Race Position: +10",
+          "Qualifying Position: +0",
+          "Race position gained: +11",
+          "race overtake bonus: +7"
+        ]
+      },
+      {
+        "id": "13",
+        "name": "Valtteri Bottas",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 6,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race position gained: +3",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "114",
+        "name": "Liam Lawson",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 3,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "Race Position lost: -1",
+          "race overtake bonus: +4"
+        ]
+      },
+      {
+        "id": "118",
+        "name": "Esteban Ocon",
+        "type": "Driver",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 12,
+        "breakdown": [
+          "Race Position: +4",
+          "Qualifying Position: +0",
+          "Race position gained: +5",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "25",
+        "name": "Ferrari",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 45,
+        "breakdown": [
+          "Race Position: +20",
+          "Qualifying Position: +14",
+          "Both Driver Q3: +10",
+          "Race Position lost: -2",
+          "race overtake bonus: +3"
+        ]
+      },
+      {
+        "id": "2640",
+        "name": "Audi",
+        "type": "Constructor",
+        "is_captain": false,
+        "is_megacap": false,
+        "points_gd": 27,
+        "breakdown": [
+          "Race Position: +0",
+          "Qualifying Position: +0",
+          "No Driver Q2: -1",
+          "Race position gained: +9",
+          "Fastest Pitstop: +5",
+          "race overtake bonus: +14"
+        ]
+      }
+    ]
+  }
+]

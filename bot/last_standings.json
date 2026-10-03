@@ -1,6 +1,6 @@
 {
   "gameday_id": "16",
-  "session_type": "race",
+  "session_type": "qualifying",
   "ranking_hash": "724b78c683950be8ade284f449f1a621",
   "scores": {
     "Liberio Junior": 67,
@@ -16,5 +16,5 @@
     "Guilherme Figueiredo": 35
   },
   "post_race_sent": false,
-  "saved_at": "2026-10-03T09:59:22.611459+00:00"
+  "saved_at": "2026-10-03T14:18:09.312487+00:00"
 }

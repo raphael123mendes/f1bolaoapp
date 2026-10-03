@@ -206,6 +206,19 @@
     {
       "round": 16,
       "gameday_id": 16,
+      "name": "Bahrain Grand Prix",
+      "location": "Malasya",
+      "circuit": "kuala lampur race Circuit",
+      "sprint": false,
+      "cancelled": false,
+      "sessions": [
+        { "session_type": "qualifying", "utc_start": "2026-10-03T13:00:00Z" },
+        { "session_type": "race",       "utc_start": "2026-10-04T13:00:00Z" }
+      ]
+    },
+    {
+      "round": 17,
+      "gameday_id": 17,
       "name": "Singapore Grand Prix",
       "location": "Singapore",
       "circuit": "Marina Bay Street Circuit",
@@ -218,8 +231,8 @@
       ]
     },
     {
-      "round": 17,
-      "gameday_id": 17,
+      "round": 18,
+      "gameday_id": 18,
       "name": "United States Grand Prix",
       "location": "United States",
       "circuit": "Circuit of the Americas, Austin",
@@ -231,8 +244,8 @@
       ]
     },
     {
-      "round": 18,
-      "gameday_id": 18,
+      "round": 19,
+      "gameday_id": 19,
       "name": "Mexico City Grand Prix",
       "location": "Mexico",
       "circuit": "Autodromo Hermanos Rodriguez, Mexico City",
@@ -244,8 +257,8 @@
       ]
     },
     {
-      "round": 19,
-      "gameday_id": 19,
+      "round": 20,
+      "gameday_id": 20,
       "name": "Sao Paulo Grand Prix",
       "location": "Brazil",
       "circuit": "Autodromo Jose Carlos Pace, Interlagos",
@@ -257,8 +270,8 @@
       ]
     },
     {
-      "round": 20,
-      "gameday_id": 20,
+      "round": 21,
+      "gameday_id": 21,
       "name": "Las Vegas Grand Prix",
       "location": "Las Vegas",
       "circuit": "Las Vegas Strip Circuit",
@@ -270,8 +283,8 @@
       ]
     },
     {
-      "round": 21,
-      "gameday_id": 21,
+      "round": 22,
+      "gameday_id": 22,
       "name": "Qatar Grand Prix",
       "location": "Qatar",
       "circuit": "Lusail International Circuit",
@@ -283,8 +296,8 @@
       ]
     },
     {
-      "round": 22,
-      "gameday_id": 22,
+      "round": 23,
+      "gameday_id": 23,
       "name": "Abu Dhabi Grand Prix",
       "location": "Abu Dhabi",
       "circuit": "Yas Marina Circuit",

@@ -27217,7 +27217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27236,8 +27236,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 220
+    "breakdown_points": 10,
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27256,8 +27256,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 220
+    "breakdown_points": 3,
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27277,7 +27277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27296,8 +27296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 220
+    "breakdown_points": 0,
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27316,8 +27316,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 220
+    "breakdown_points": 4,
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27337,7 +27337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27357,7 +27357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27377,7 +27377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 12,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27397,7 +27397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27417,7 +27417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27437,7 +27437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -3,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27457,7 +27457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27477,7 +27477,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "131",
+    "pick_name": "M. Verstappen",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27497,7 +27517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27517,7 +27537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27537,7 +27557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27557,7 +27577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -12,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27577,7 +27597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27597,7 +27617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27617,7 +27637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 220
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27636,8 +27656,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 40,
-    "pick_points_gd": 220
+    "breakdown_points": 35,
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
@@ -27650,886 +27670,6 @@
     "user_name": "Vinicius Agostini",
     "pick_id": "29",
     "pick_name": "Red Bull Racing",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 220
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 12,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 7,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -12,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "29",
-    "pick_name": "Red Bull Racing",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "29",
-    "pick_name": "Red Bull Racing",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "29",
-    "pick_name": "Red Bull Racing",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Fastest Pitstop",
-    "breakdown_points": 5,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "29",
-    "pick_name": "Red Bull Racing",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 40,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 6,
-    "race_rank": 2,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "29",
-    "pick_name": "Red Bull Racing",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 207
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 12,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 7,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Fastest Pitstop",
-    "breakdown_points": 5,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
@@ -28537,177 +27677,97 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 189
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 189
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 3,
+    "pick_points_gd": 232
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 2,
-    "race_rank": 3,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -12,
-    "pick_points_gd": 189
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 171
+    "breakdown_points": 8,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 171
+    "breakdown_points": 10,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -8,
-    "pick_points_gd": 171
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 3,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "111",
     "pick_name": "N. Hulkenberg",
     "pick_type": "Driver",
@@ -28717,17 +27777,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "111",
     "pick_name": "N. Hulkenberg",
     "pick_type": "Driver",
@@ -28736,18 +27796,18 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 171
+    "breakdown_points": 0,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "111",
     "pick_name": "N. Hulkenberg",
     "pick_type": "Driver",
@@ -28756,18 +27816,18 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 171
+    "breakdown_points": 4,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "11149",
     "pick_name": "A. Lindblad",
     "pick_type": "Driver",
@@ -28777,17 +27837,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "11149",
     "pick_name": "A. Lindblad",
     "pick_type": "Driver",
@@ -28797,17 +27857,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "11149",
     "pick_name": "A. Lindblad",
     "pick_type": "Driver",
@@ -28817,17 +27877,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 12,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "11161",
     "pick_name": "K. Antonelli",
     "pick_type": "Driver",
@@ -28837,17 +27897,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "11161",
     "pick_name": "K. Antonelli",
     "pick_type": "Driver",
@@ -28857,17 +27917,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "11161",
     "pick_name": "K. Antonelli",
     "pick_type": "Driver",
@@ -28877,19 +27937,19 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -28897,19 +27957,19 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -28917,37 +27977,37 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 171
+    "breakdown_points": 2,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "28",
     "pick_name": "Mercedes",
     "pick_type": "Constructor",
@@ -28957,17 +28017,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "28",
     "pick_name": "Mercedes",
     "pick_type": "Constructor",
@@ -28977,17 +28037,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "28",
     "pick_name": "Mercedes",
     "pick_type": "Constructor",
@@ -28997,17 +28057,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "28",
     "pick_name": "Mercedes",
     "pick_type": "Constructor",
@@ -29017,17 +28077,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -12,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "29",
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
@@ -29037,17 +28097,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "29",
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
@@ -29057,17 +28117,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "29",
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
@@ -29077,17 +28137,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 171
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "29",
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
@@ -29096,18 +28156,38 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 40,
-    "pick_points_gd": 171
+    "breakdown_points": 35,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 9,
-    "race_rank": 4,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 199
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 6,
+    "race_rank": 2,
+    "team_name": "Ixxtain",
+    "user_name": "Raphael Stein",
     "pick_id": "29",
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
@@ -29116,8 +28196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 171
+    "breakdown_points": 3,
+    "pick_points_gd": 199
   },
   {
     "race_number": 16,
@@ -29125,7 +28205,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11051",
@@ -29137,7 +28217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29145,7 +28225,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11051",
@@ -29157,7 +28237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29165,7 +28245,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11051",
@@ -29177,7 +28257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -8,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29185,7 +28265,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "111",
@@ -29197,7 +28277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29205,7 +28285,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "111",
@@ -29216,8 +28296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 170
+    "breakdown_points": 0,
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29225,7 +28305,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "111",
@@ -29236,8 +28316,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 170
+    "breakdown_points": 4,
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29245,7 +28325,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11149",
@@ -29257,7 +28337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29265,7 +28345,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11149",
@@ -29277,7 +28357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29285,7 +28365,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11149",
@@ -29297,7 +28377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 12,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29305,7 +28385,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "121",
@@ -29317,7 +28397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29325,7 +28405,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "121",
@@ -29337,7 +28417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29345,7 +28425,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "121",
@@ -29357,7 +28437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29365,7 +28445,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "131",
@@ -29377,7 +28457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29385,7 +28465,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "131",
@@ -29397,7 +28477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29405,7 +28485,27 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "131",
+    "pick_name": "M. Verstappen",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 183
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 8,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -29417,7 +28517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29425,7 +28525,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -29437,7 +28537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29445,7 +28545,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -29457,7 +28557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29465,7 +28565,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -29476,8 +28576,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 170
+    "breakdown_points": 27,
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29485,27 +28585,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
-    "team_name": "Yas Bombs",
-    "user_name": "Danilo Iglesias",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 170
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "25",
@@ -29516,8 +28596,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 170
+    "breakdown_points": -1,
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29525,7 +28605,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29537,7 +28617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29545,7 +28625,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29557,7 +28637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29565,7 +28645,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29577,7 +28657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
@@ -29585,7 +28665,7 @@
     "race_flag": "🏁",
     "race_date": "2026-10-04",
     "season_rank": 8,
-    "race_rank": 5,
+    "race_rank": 3,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29597,77 +28677,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -12,
-    "pick_points_gd": 170
+    "pick_points_gd": 183
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 1,
-    "race_rank": 6,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11",
-    "pick_name": "A. Albon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 1,
-    "race_rank": 6,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11",
-    "pick_name": "A. Albon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 1,
-    "race_rank": 6,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
-    "pick_id": "11",
-    "pick_name": "A. Albon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 1,
-    "race_rank": 6,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
     "pick_id": "11031",
     "pick_name": "O. Bearman",
     "pick_type": "Driver",
@@ -29677,17 +28697,17 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 163
+    "pick_points_gd": 174
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 1,
-    "race_rank": 6,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
     "pick_id": "11031",
     "pick_name": "O. Bearman",
     "pick_type": "Driver",
@@ -29697,19 +28717,79 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 163
+    "pick_points_gd": 174
   },
   {
     "race_number": 16,
     "race_name": "Bahrain Grand Prix",
     "race_flag": "🏁",
     "race_date": "2026-10-04",
-    "season_rank": 1,
-    "race_rank": 6,
-    "team_name": "Stradale  Mucci",
-    "user_name": "Fabio Mucci",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
     "pick_id": "11031",
     "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -29717,7 +28797,987 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 163
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 12,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 7,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 27,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -1,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 2,
+    "race_rank": 4,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -12,
+    "pick_points_gd": 174
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11051",
+    "pick_name": "G. Bortoleto",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -8,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 12,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 7,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -12,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 35,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 9,
+    "race_rank": 5,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 3,
+    "pick_points_gd": 170
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 1,
+    "race_rank": 6,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11",
+    "pick_name": "A. Albon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 165
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 1,
+    "race_rank": 6,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11",
+    "pick_name": "A. Albon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 165
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 1,
+    "race_rank": 6,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11",
+    "pick_name": "A. Albon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 165
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 1,
+    "race_rank": 6,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 165
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 1,
+    "race_rank": 6,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 165
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 1,
+    "race_rank": 6,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29737,7 +29797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29757,7 +29817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29777,7 +29837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29797,7 +29857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29817,7 +29877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29837,7 +29897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29857,7 +29917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29877,7 +29937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29897,7 +29957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -3,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29917,7 +29977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29937,7 +29997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29957,7 +30017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29977,7 +30037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -12,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -29997,7 +30057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -30017,7 +30077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -30037,7 +30097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 163
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -30056,8 +30116,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 40,
-    "pick_points_gd": 163
+    "breakdown_points": 35,
+    "pick_points_gd": 165
+  },
+  {
+    "race_number": 16,
+    "race_name": "Bahrain Grand Prix",
+    "race_flag": "🏁",
+    "race_date": "2026-10-04",
+    "season_rank": 1,
+    "race_rank": 6,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -30076,8 +30156,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 163
+    "breakdown_points": 3,
+    "pick_points_gd": 165
   },
   {
     "race_number": 16,
@@ -30097,7 +30177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30116,8 +30196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 158
+    "breakdown_points": 0,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30136,8 +30216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 158
+    "breakdown_points": 4,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30157,7 +30237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30177,7 +30257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30197,7 +30277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30217,7 +30297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30236,28 +30316,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 158
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 4,
-    "race_rank": 7,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 158
+    "breakdown_points": 12,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30277,7 +30337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30297,7 +30357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30317,7 +30377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30337,7 +30397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30357,7 +30417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30377,7 +30437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -3,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30397,7 +30457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30417,7 +30477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30437,7 +30497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30456,28 +30516,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 158
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 4,
-    "race_rank": 7,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 158
+    "breakdown_points": 27,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30496,8 +30536,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 158
+    "breakdown_points": -1,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30517,7 +30557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30537,7 +30577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30557,7 +30597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30577,7 +30617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -12,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30597,7 +30637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30616,8 +30656,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 158
+    "breakdown_points": 0,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30636,8 +30676,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 158
+    "breakdown_points": 4,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30657,7 +30697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30677,7 +30717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30697,7 +30737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30717,7 +30757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30736,28 +30776,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 158
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 158
+    "breakdown_points": 12,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30777,7 +30797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30797,7 +30817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30817,7 +30837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30837,7 +30857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30857,7 +30877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30877,7 +30897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -3,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30897,7 +30917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30917,7 +30937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30937,7 +30957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30956,28 +30976,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 158
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 5,
-    "race_rank": 7,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 158
+    "breakdown_points": 27,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -30996,8 +30996,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 158
+    "breakdown_points": -1,
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -31017,7 +31017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -31037,7 +31037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -31057,7 +31057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -31077,7 +31077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -12,
-    "pick_points_gd": 158
+    "pick_points_gd": 154
   },
   {
     "race_number": 16,
@@ -31097,7 +31097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31117,7 +31117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31137,7 +31137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31157,7 +31157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31177,7 +31177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31197,7 +31197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31217,7 +31217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31236,28 +31236,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 135
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "115",
-    "pick_name": "C. Leclerc",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 135
+    "breakdown_points": 12,
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31277,7 +31257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31297,7 +31277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31317,7 +31297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31337,7 +31317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31357,7 +31337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31377,7 +31357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -3,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31397,7 +31377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31417,7 +31397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31437,7 +31417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31456,28 +31436,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 22,
-    "pick_points_gd": 135
-  },
-  {
-    "race_number": 16,
-    "race_name": "Bahrain Grand Prix",
-    "race_flag": "🏁",
-    "race_date": "2026-10-04",
-    "season_rank": 10,
-    "race_rank": 9,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 135
+    "breakdown_points": 27,
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31496,8 +31456,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -3,
-    "pick_points_gd": 135
+    "breakdown_points": -1,
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31517,7 +31477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31537,7 +31497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31557,7 +31517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 135
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31576,8 +31536,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 135
+    "breakdown_points": 0,
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -31596,8 +31556,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -2,
-    "pick_points_gd": 135
+    "breakdown_points": -4,
+    "pick_points_gd": 134
   },
   {
     "race_number": 16,
@@ -32097,7 +32057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32117,7 +32077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32137,7 +32097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 12,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32157,7 +32117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32176,8 +32136,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 70
+    "breakdown_points": 2,
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32196,8 +32156,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 70
+    "breakdown_points": -4,
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32217,7 +32177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32237,7 +32197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32257,7 +32217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32277,7 +32237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32297,7 +32257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32317,7 +32277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32337,7 +32297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32357,7 +32317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32377,7 +32337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -7,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32397,7 +32357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32417,7 +32377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32437,7 +32397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 2,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32457,7 +32417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 7,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32477,7 +32437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 16,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32497,7 +32457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32517,7 +32477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32537,7 +32497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   },
   {
     "race_number": 16,
@@ -32557,6 +32517,6 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -12,
-    "pick_points_gd": 70
+    "pick_points_gd": 78
   }
 ]

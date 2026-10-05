@@ -166,17 +166,6 @@
   },
   {
     "round": 16,
-    "race_name": "Bahrain Grand Prix",
-    "location": "Kuala lampur race circuit",
-    "venue": "malasya ",
-    "race_date": "2026-10-02",
-    "sprint_weekend": false,
-    "cancelled": false,
-    "cancellation_reason": "",
-    "notes": ""
-  },
-  {
-    "round": 17,
     "race_name": "Singapore Grand Prix",
     "location": "Singapore",
     "venue": "Marina Bay Street Circuit",
@@ -187,7 +176,7 @@
     "notes": ""
   },
   {
-    "round": 18,
+    "round": 17,
     "race_name": "United States Grand Prix",
     "location": "Austin, Texas, USA",
     "venue": "Circuit of the Americas",
@@ -198,7 +187,7 @@
     "notes": ""
   },
   {
-    "round": 19,
+    "round": 18,
     "race_name": "Mexico City Grand Prix",
     "location": "Mexico City, Mexico",
     "venue": "Autódromo Hermanos Rodríguez",
@@ -209,7 +198,7 @@
     "notes": ""
   },
   {
-    "round": 20,
+    "round": 19,
     "race_name": "São Paulo Grand Prix",
     "location": "São Paulo, Brazil",
     "venue": "Interlagos",
@@ -220,7 +209,7 @@
     "notes": ""
   },
   {
-    "round": 21,
+    "round": 20,
     "race_name": "Las Vegas Grand Prix",
     "location": "Las Vegas, Nevada, USA",
     "venue": "Las Vegas Strip Circuit",
@@ -231,7 +220,7 @@
     "notes": "Race on Saturday night local time"
   },
   {
-    "round": 22,
+    "round": 21,
     "race_name": "Qatar Grand Prix",
     "location": "Lusail, Qatar",
     "venue": "Lusail International Circuit",
@@ -242,7 +231,7 @@
     "notes": ""
   },
   {
-    "round": 23,
+    "round": 22,
     "race_name": "Abu Dhabi Grand Prix",
     "location": "Abu Dhabi, UAE",
     "venue": "Yas Marina Circuit",

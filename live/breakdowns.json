@@ -17,7 +17,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -37,7 +37,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -57,7 +57,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -77,7 +77,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 1,
+    "race_rank": 1,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "11",
+    "pick_name": "A. Albon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -1,
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -97,7 +117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 7,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -117,7 +137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 5,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -137,7 +157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -157,7 +177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -177,7 +197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -197,7 +217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -217,7 +237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -237,7 +257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -257,7 +277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -277,7 +297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 2,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -297,7 +317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -317,7 +337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -337,7 +357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -357,7 +377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -377,7 +397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -397,7 +417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 4,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -417,7 +437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -437,7 +457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -457,7 +477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -477,7 +497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -497,7 +517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -517,7 +537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -537,7 +557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -557,7 +577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -577,7 +597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -597,7 +617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -617,7 +637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 13,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -637,7 +657,47 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 1,
+    "race_rank": 1,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 2,
+    "pick_points_gd": 341
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 1,
+    "race_rank": 1,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -656,8 +716,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 33,
-    "pick_points_gd": 340
+    "breakdown_points": 26,
+    "pick_points_gd": 341
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 1,
+    "race_rank": 1,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -677,7 +757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -697,7 +777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -717,7 +797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -737,7 +817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -757,7 +837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -777,7 +857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 340
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -796,8 +876,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 340
+    "breakdown_points": 15,
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -816,8 +896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 340
+    "breakdown_points": 8,
+    "pick_points_gd": 341
   },
   {
     "race_number": 17,
@@ -916,7 +996,7 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
+    "breakdown_points": 7,
     "pick_points_gd": 264
   },
   {
@@ -1156,7 +1236,7 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
+    "breakdown_points": -7,
     "pick_points_gd": 264
   },
   {
@@ -1495,8 +1575,68 @@
     "is_megacap": false,
     "cap_multiplier": 1,
     "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 2,
+    "pick_points_gd": 264
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 7,
+    "race_rank": 2,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 264
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 7,
+    "race_rank": 2,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 33,
+    "breakdown_points": 26,
+    "pick_points_gd": 264
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 7,
+    "race_rank": 2,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
     "pick_points_gd": 264
   },
   {
@@ -1676,7 +1816,7 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
+    "breakdown_points": 7,
     "pick_points_gd": 264
   },
   {
@@ -1697,7 +1837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 7,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1717,7 +1857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 5,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1737,7 +1877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1757,7 +1897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1777,7 +1917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1797,7 +1937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1817,7 +1957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1837,7 +1977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1857,7 +1997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1877,7 +2017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1896,8 +2036,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 254
+    "breakdown_points": 7,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1917,7 +2057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1937,7 +2077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1957,7 +2097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1977,7 +2117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 2,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -1997,7 +2137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2017,7 +2157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2037,7 +2177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2057,7 +2197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2077,7 +2217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2097,7 +2237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2117,7 +2257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2136,8 +2276,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 254
+    "breakdown_points": -7,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2157,7 +2297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2177,7 +2317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2197,7 +2337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2217,7 +2357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2237,7 +2377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2257,7 +2397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2277,7 +2417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2297,7 +2437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2317,7 +2457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 13,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2337,7 +2477,47 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 2,
+    "race_rank": 3,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 2,
+    "pick_points_gd": 257
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 2,
+    "race_rank": 3,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2356,8 +2536,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 33,
-    "pick_points_gd": 254
+    "breakdown_points": 26,
+    "pick_points_gd": 257
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 2,
+    "race_rank": 3,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2377,7 +2577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2397,7 +2597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2417,7 +2617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2437,7 +2637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2457,7 +2657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2477,7 +2677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 254
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2496,8 +2696,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 254
+    "breakdown_points": 15,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2516,8 +2716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 254
+    "breakdown_points": 8,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2525,7 +2725,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -2537,7 +2737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 7,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2545,7 +2745,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -2557,7 +2757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 5,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2565,7 +2765,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -2577,7 +2777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2585,7 +2785,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -2597,7 +2797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2605,7 +2805,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -2617,7 +2817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2625,7 +2825,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11031",
@@ -2637,7 +2837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2645,7 +2845,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "111",
@@ -2657,7 +2857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2665,7 +2865,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "111",
@@ -2677,7 +2877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2685,7 +2885,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "111",
@@ -2697,7 +2897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2705,7 +2905,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "111",
@@ -2717,7 +2917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 2,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2725,7 +2925,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "111",
@@ -2737,7 +2937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2745,7 +2945,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "111",
@@ -2757,7 +2957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2765,7 +2965,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -2777,7 +2977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2785,7 +2985,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -2797,7 +2997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2805,7 +3005,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -2817,7 +3017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2825,7 +3025,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "11161",
@@ -2836,8 +3036,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 249
+    "breakdown_points": 15,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2845,7 +3045,27 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
+    "team_name": "CarretaFuracao",
+    "user_name": "Robson Jardim",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 257
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 5,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "114",
@@ -2857,7 +3077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2865,7 +3085,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "114",
@@ -2877,7 +3097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2885,7 +3105,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "114",
@@ -2897,7 +3117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2905,7 +3125,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "114",
@@ -2917,7 +3137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 4,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2925,7 +3145,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "114",
@@ -2937,7 +3157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2945,7 +3165,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "114",
@@ -2957,7 +3177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2965,7 +3185,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "131",
@@ -2977,7 +3197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -2985,7 +3205,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "131",
@@ -2997,7 +3217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3005,7 +3225,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "131",
@@ -3017,7 +3237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3025,7 +3245,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "131",
@@ -3037,7 +3257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3045,7 +3265,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "2636",
@@ -3057,7 +3277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 7,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3065,7 +3285,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "2636",
@@ -3077,7 +3297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3085,7 +3305,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "2636",
@@ -3097,7 +3317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3105,7 +3325,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "2636",
@@ -3117,7 +3337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 4,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3125,7 +3345,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "2636",
@@ -3137,7 +3357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3145,7 +3365,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "2636",
@@ -3157,7 +3377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3165,7 +3385,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "2636",
@@ -3176,8 +3396,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -5,
-    "pick_points_gd": 249
+    "breakdown_points": -6,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3185,7 +3405,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3197,7 +3417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3205,7 +3425,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3217,7 +3437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3225,7 +3445,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3237,7 +3457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3245,7 +3465,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3257,7 +3477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3265,7 +3485,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3277,7 +3497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3285,7 +3505,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3297,7 +3517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 249
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3305,7 +3525,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3316,8 +3536,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 249
+    "breakdown_points": 15,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3325,7 +3545,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 5,
-    "race_rank": 4,
+    "race_rank": 3,
     "team_name": "CarretaFuracao",
     "user_name": "Robson Jardim",
     "pick_id": "28",
@@ -3336,8 +3556,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 249
+    "breakdown_points": 8,
+    "pick_points_gd": 257
   },
   {
     "race_number": 17,
@@ -3357,7 +3577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3377,7 +3597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3397,7 +3617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3417,7 +3637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 2,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3437,7 +3657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3457,7 +3677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3477,7 +3697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3497,7 +3717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3517,7 +3737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3537,7 +3757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3557,7 +3777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3576,8 +3796,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 234
+    "breakdown_points": 2,
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3597,7 +3817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3617,7 +3837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3637,7 +3857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3657,7 +3877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3676,8 +3896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 234
+    "breakdown_points": -3,
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3697,7 +3917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3717,7 +3937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3737,7 +3957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3757,7 +3977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3777,7 +3997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3797,7 +4017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3817,7 +4037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3837,7 +4057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3857,7 +4077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3877,7 +4097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -2,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3897,7 +4117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3917,7 +4137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3937,7 +4157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3957,7 +4177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3977,7 +4197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 13,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -3997,7 +4217,47 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 8,
+    "race_rank": 5,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 2,
+    "pick_points_gd": 236
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 8,
+    "race_rank": 5,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -4016,8 +4276,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 33,
-    "pick_points_gd": 234
+    "breakdown_points": 26,
+    "pick_points_gd": 236
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 8,
+    "race_rank": 5,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -4037,7 +4317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -13,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -4057,7 +4337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -4077,7 +4357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 1,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -4097,7 +4377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 234
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -4116,8 +4396,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 234
+    "breakdown_points": 22,
+    "pick_points_gd": 236
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 8,
+    "race_rank": 5,
+    "team_name": "Yas Bombs",
+    "user_name": "Danilo Iglesias",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 236
   },
   {
     "race_number": 17,
@@ -4137,7 +4437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4157,7 +4457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4177,7 +4477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4197,7 +4497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4216,8 +4516,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 218
+    "breakdown_points": 7,
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4237,7 +4537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4257,7 +4557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4277,7 +4577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4297,7 +4597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 2,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4317,7 +4617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4337,7 +4637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4357,7 +4657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4377,7 +4677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4397,7 +4697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4417,7 +4717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4437,7 +4737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4456,8 +4756,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 218
+    "breakdown_points": -7,
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4477,7 +4777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4497,7 +4797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4517,7 +4817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4537,7 +4837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 4,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4557,7 +4857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4577,7 +4877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4597,7 +4897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4617,7 +4917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4637,7 +4937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4657,7 +4957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4677,7 +4977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4697,7 +4997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4717,7 +5017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4737,7 +5037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4757,7 +5057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4777,7 +5077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4796,8 +5096,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 218
+    "breakdown_points": 15,
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4816,8 +5116,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 218
+    "breakdown_points": 8,
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4837,7 +5137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4857,7 +5157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4877,7 +5177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4897,7 +5197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4917,7 +5217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "One Driver Q3",
     "breakdown_points": 5,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4937,7 +5237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4957,7 +5257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4977,7 +5277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 218
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -4996,8 +5296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 218
+    "breakdown_points": 7,
+    "pick_points_gd": 226
   },
   {
     "race_number": 17,
@@ -5017,7 +5317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 7,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5037,7 +5337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 5,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5057,7 +5357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5077,7 +5377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 3,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5097,7 +5397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5117,7 +5417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5137,7 +5437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5157,7 +5457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5177,7 +5477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5197,7 +5497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5216,8 +5516,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 213
+    "breakdown_points": -3,
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5237,7 +5537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5257,7 +5557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5277,7 +5577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5297,7 +5597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5316,8 +5616,8 @@
     "cap_multiplier": 3,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 213
+    "breakdown_points": 7,
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5337,7 +5637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5357,7 +5657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5377,7 +5677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5397,7 +5697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -3,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5417,7 +5717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5437,7 +5737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5457,7 +5757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5477,7 +5777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5497,7 +5797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5517,7 +5817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5537,7 +5837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5557,7 +5857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5577,7 +5877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 13,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5597,7 +5897,47 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 2,
+    "pick_points_gd": 215
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5616,8 +5956,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 33,
-    "pick_points_gd": 213
+    "breakdown_points": 26,
+    "pick_points_gd": 215
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5637,7 +5997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -13,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5657,7 +6017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5677,7 +6037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 1,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5697,7 +6057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 213
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5716,8 +6076,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 213
+    "breakdown_points": 22,
+    "pick_points_gd": 215
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 4,
+    "race_rank": 7,
+    "team_name": "Fiat147",
+    "user_name": "Rafael Dias",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 215
   },
   {
     "race_number": 17,
@@ -5737,7 +6117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5757,7 +6137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5777,7 +6157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5796,8 +6176,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 191
+    "breakdown_points": 15,
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 10,
+    "race_rank": 8,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5817,7 +6217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5837,7 +6237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5857,7 +6257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5877,7 +6277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 4,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5897,7 +6297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5917,7 +6317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5937,7 +6337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5957,7 +6357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 6,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5977,7 +6377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -5997,7 +6397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 6,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6017,7 +6417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6037,7 +6437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6057,7 +6457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6077,7 +6477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6097,7 +6497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6117,7 +6517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6137,7 +6537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6157,7 +6557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6177,7 +6577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -3,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6197,7 +6597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Fastest lap",
     "breakdown_points": 5,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6217,7 +6617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6237,7 +6637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6257,7 +6657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 17,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6277,7 +6677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 13,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6297,7 +6697,47 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 10,
+    "race_rank": 8,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 2,
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 10,
+    "race_rank": 8,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "2nd Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6316,8 +6756,28 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 33,
-    "pick_points_gd": 191
+    "breakdown_points": 26,
+    "pick_points_gd": 192
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 10,
+    "race_rank": 8,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6337,7 +6797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6357,7 +6817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6377,7 +6837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6397,7 +6857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6417,7 +6877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 2,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6437,7 +6897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6457,7 +6917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 191
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -6477,907 +6937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -6,
-    "pick_points_gd": 191
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "110",
-    "pick_name": "L. Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Fastest lap",
-    "breakdown_points": 5,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "110",
-    "pick_name": "L. Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "110",
-    "pick_name": "L. Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint overtake bonus",
-    "breakdown_points": 3,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "110",
-    "pick_name": "L. Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 8,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "110",
-    "pick_name": "L. Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 7,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "110",
-    "pick_name": "L. Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 15,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint overtake bonus",
-    "breakdown_points": 1,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "QF not classified ",
-    "breakdown_points": -5,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Not Classified",
-    "breakdown_points": -10,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11032",
-    "pick_name": "I. Hadjar",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint overtake bonus",
-    "breakdown_points": 2,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 1,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint overtake bonus",
-    "breakdown_points": 2,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "118",
-    "pick_name": "E. Ocon",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint overtake bonus",
-    "breakdown_points": 2,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 3,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -2,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 5,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint overtake bonus",
-    "breakdown_points": 2,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Not Classified",
-    "breakdown_points": -10,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint overtake bonus",
-    "breakdown_points": 1,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Sprint Not Classified",
-    "breakdown_points": -10,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 163
-  },
-  {
-    "race_number": 17,
-    "race_name": "Singapore Grand Prix",
-    "race_flag": "🇸🇬",
-    "race_date": "2026-10-11",
-    "season_rank": 3,
-    "race_rank": 9,
-    "team_name": "Semi-aquatic-mammals",
-    "user_name": "Guilherme Figueiredo",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 163
+    "pick_points_gd": 192
   },
   {
     "race_number": 17,
@@ -7385,7 +6945,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11051",
@@ -7397,7 +6957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7405,7 +6965,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11051",
@@ -7417,7 +6977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7425,7 +6985,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11051",
@@ -7437,7 +6997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7445,7 +7005,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11051",
@@ -7457,7 +7017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -8,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7465,7 +7025,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "111",
@@ -7477,7 +7037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 5,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7485,7 +7045,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "111",
@@ -7497,7 +7057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7505,7 +7065,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "111",
@@ -7517,7 +7077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7525,7 +7085,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "111",
@@ -7537,7 +7097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 2,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7545,7 +7105,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "111",
@@ -7557,7 +7117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 4,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7565,7 +7125,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "111",
@@ -7577,7 +7137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 2,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7585,7 +7145,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11149",
@@ -7597,7 +7157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7605,7 +7165,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11149",
@@ -7617,7 +7177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7625,7 +7185,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11149",
@@ -7637,7 +7197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7645,7 +7205,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11149",
@@ -7657,7 +7217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7665,7 +7225,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11149",
@@ -7677,7 +7237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7685,7 +7245,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11149",
@@ -7696,8 +7256,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 159
+    "breakdown_points": -7,
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7705,7 +7265,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "121",
@@ -7717,7 +7277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7725,7 +7285,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "121",
@@ -7737,7 +7297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7745,7 +7305,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "121",
@@ -7757,7 +7317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7765,7 +7325,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "121",
@@ -7777,7 +7337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7785,7 +7345,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "121",
@@ -7796,8 +7356,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 159
+    "breakdown_points": -3,
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7805,7 +7365,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "131",
@@ -7817,7 +7377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7825,7 +7385,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "131",
@@ -7837,7 +7397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 8,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7845,7 +7405,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "131",
@@ -7857,7 +7417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7865,7 +7425,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "131",
@@ -7877,7 +7437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7885,7 +7445,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "27",
@@ -7897,7 +7457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position lost",
     "breakdown_points": -13,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7905,7 +7465,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "27",
@@ -7917,7 +7477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7925,7 +7485,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "27",
@@ -7937,7 +7497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 1,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7945,7 +7505,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "27",
@@ -7957,7 +7517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7965,7 +7525,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "27",
@@ -7976,8 +7536,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 159
+    "breakdown_points": 22,
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -7985,7 +7545,27 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 167
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 9,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -7997,7 +7577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -8005,7 +7585,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -8017,7 +7597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -8025,7 +7605,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -8037,7 +7617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -8045,7 +7625,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -8057,7 +7637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -8065,7 +7645,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -8077,7 +7657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -8085,7 +7665,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -8097,7 +7677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 159
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -8105,7 +7685,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -8116,8 +7696,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 159
+    "breakdown_points": 15,
+    "pick_points_gd": 167
   },
   {
     "race_number": 17,
@@ -8125,7 +7705,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -8136,8 +7716,928 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
+    "breakdown_points": 8,
+    "pick_points_gd": 167
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "110",
+    "pick_name": "L. Hamilton",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Fastest lap",
+    "breakdown_points": 5,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "110",
+    "pick_name": "L. Hamilton",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "110",
+    "pick_name": "L. Hamilton",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint overtake bonus",
+    "breakdown_points": 3,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "110",
+    "pick_name": "L. Hamilton",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "110",
+    "pick_name": "L. Hamilton",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 7,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "110",
+    "pick_name": "L. Hamilton",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 8,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "110",
+    "pick_name": "L. Hamilton",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -3,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "QF not classified ",
+    "breakdown_points": -5,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Not Classified",
+    "breakdown_points": -10,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 7,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 1,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -7,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
     "breakdown_points": 6,
-    "pick_points_gd": 159
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "118",
+    "pick_name": "E. Ocon",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 3,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -2,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q2",
+    "breakdown_points": 3,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 5,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint overtake bonus",
+    "breakdown_points": 2,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 2,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Not Classified",
+    "breakdown_points": -10,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 4,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -6,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint position gained",
+    "breakdown_points": 3,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint overtake bonus",
+    "breakdown_points": 1,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 12,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Position",
+    "breakdown_points": 5,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Sprint Not Classified",
+    "breakdown_points": -10,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 141
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 3,
+    "race_rank": 10,
+    "team_name": "Semi-aquatic-mammals",
+    "user_name": "Guilherme Figueiredo",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 8,
+    "pick_points_gd": 141
   },
   {
     "race_number": 17,
@@ -8157,7 +8657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8177,7 +8677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8197,7 +8697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8217,7 +8717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -8,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8237,7 +8737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8257,7 +8757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8277,7 +8777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8297,7 +8797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8317,7 +8817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8336,8 +8836,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -6,
-    "pick_points_gd": 119
+    "breakdown_points": -7,
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8357,7 +8857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8377,7 +8877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 7,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8397,7 +8897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8416,8 +8916,28 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 119
+    "breakdown_points": 15,
+    "pick_points_gd": 130
+  },
+  {
+    "race_number": 17,
+    "race_name": "Singapore Grand Prix",
+    "race_flag": "🇸🇬",
+    "race_date": "2026-10-11",
+    "season_rank": 11,
+    "race_rank": 11,
+    "team_name": "Mucci_Senior",
+    "user_name": "Ricardo Mucci",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8437,7 +8957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 6,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8457,7 +8977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8477,7 +8997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8497,7 +9017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8517,7 +9037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8537,7 +9057,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8557,7 +9077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8577,7 +9097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 2,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8597,7 +9117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8617,7 +9137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 0,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8637,7 +9157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8657,7 +9177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -2,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8677,7 +9197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 7,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8697,7 +9217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 3,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8717,7 +9237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8737,7 +9257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 4,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8757,7 +9277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8777,7 +9297,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 6,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8796,8 +9316,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -5,
-    "pick_points_gd": 119
+    "breakdown_points": -6,
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8817,7 +9337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint position gained",
     "breakdown_points": 3,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8837,7 +9357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint overtake bonus",
     "breakdown_points": 1,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8857,7 +9377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 12,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8877,7 +9397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Position",
     "breakdown_points": 5,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8897,7 +9417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8917,7 +9437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Sprint Not Classified",
     "breakdown_points": -10,
-    "pick_points_gd": 119
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8936,8 +9456,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 119
+    "breakdown_points": 15,
+    "pick_points_gd": 130
   },
   {
     "race_number": 17,
@@ -8956,7 +9476,7 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 6,
-    "pick_points_gd": 119
+    "breakdown_points": 8,
+    "pick_points_gd": 130
   }
 ]

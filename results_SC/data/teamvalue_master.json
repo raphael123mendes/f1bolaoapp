@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T14:03:43.357201+00:00",
+  "updated_at": "2026-10-11T16:08:16.345744+00:00",
   "total_rows": 154,
   "races_covered": [
     1,
@@ -6588,7 +6588,7 @@
         "Max Verstappen"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:38.699257+00:00"
+      "fetched_at": "2026-10-11T16:08:11.956507+00:00"
     },
     {
       "user_guid": "af5b6c4a-11b7-11f1-a6ba-3bae984dbbac-0-34875001",
@@ -6640,7 +6640,7 @@
         "Max Verstappen"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:38.101836+00:00"
+      "fetched_at": "2026-10-11T16:08:11.358617+00:00"
     },
     {
       "user_guid": "23694378-196a-11f1-95f5-bf4745e2ae8a-0-190698143",
@@ -6677,30 +6677,30 @@
       ],
       "transfers_out": [
         "25",
-        "13",
         "121",
-        "115"
+        "115",
+        "13"
       ],
       "transfers_out_names": [
         "Ferrari",
-        "Valtteri Bottas",
         "Sergio Perez",
-        "Charles Leclerc"
+        "Charles Leclerc",
+        "Valtteri Bottas"
       ],
       "transfers_in": [
-        "114",
         "11031",
-        "131",
-        "2636"
+        "2636",
+        "114",
+        "131"
       ],
       "transfers_in_names": [
-        "Liam Lawson",
         "Oliver Bearman",
-        "Max Verstappen",
-        "Racing Bulls"
+        "Racing Bulls",
+        "Liam Lawson",
+        "Max Verstappen"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:41.368350+00:00"
+      "fetched_at": "2026-10-11T16:08:14.351067+00:00"
     },
     {
       "user_guid": "0b3f0038-1368-11f1-a688-fd3d4158bf79-0-35279052",
@@ -6736,14 +6736,14 @@
         "Mercedes"
       ],
       "transfers_out": [
+        "11161",
         "29",
-        "13",
-        "11161"
+        "13"
       ],
       "transfers_out_names": [
+        "Kimi Antonelli",
         "Red Bull Racing",
-        "Valtteri Bottas",
-        "Kimi Antonelli"
+        "Valtteri Bottas"
       ],
       "transfers_in": [
         "25",
@@ -6756,7 +6756,7 @@
         "Max Verstappen"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:43.156454+00:00"
+      "fetched_at": "2026-10-11T16:08:16.144810+00:00"
     },
     {
       "user_guid": "6cbc08a2-1844-11f1-a808-cb32621ceb82-0-34753001",
@@ -6802,17 +6802,17 @@
         "Mercedes"
       ],
       "transfers_in": [
-        "27",
+        "18",
         "12",
-        "18"
+        "27"
       ],
       "transfers_in_names": [
-        "McLaren",
+        "Pierre Gasly",
         "Fernando Alonso",
-        "Pierre Gasly"
+        "McLaren"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:36.414198+00:00"
+      "fetched_at": "2026-10-11T16:08:10.167948+00:00"
     },
     {
       "user_guid": "0f3b086c-1381-11f1-8199-6735aa542fc4-0-179110003",
@@ -6848,12 +6848,12 @@
         "Mercedes"
       ],
       "transfers_out": [
-        "29",
-        "11161"
+        "11161",
+        "29"
       ],
       "transfers_out_names": [
-        "Red Bull Racing",
-        "Kimi Antonelli"
+        "Kimi Antonelli",
+        "Red Bull Racing"
       ],
       "transfers_in": [
         "27",
@@ -6864,7 +6864,7 @@
         "Max Verstappen"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:39.582980+00:00"
+      "fetched_at": "2026-10-11T16:08:12.555386+00:00"
     },
     {
       "user_guid": "7f6dff66-11fd-11f1-bed2-d5a4efa941d4-0-178877659",
@@ -6916,7 +6916,7 @@
         "Liam Lawson"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:37.261166+00:00"
+      "fetched_at": "2026-10-11T16:08:10.764989+00:00"
     },
     {
       "user_guid": "2165dde2-11b9-11f1-94eb-47ffa4421334-0-178889519",
@@ -6953,30 +6953,30 @@
       ],
       "transfers_out": [
         "11161",
-        "111",
         "115",
+        "111",
         "28"
       ],
       "transfers_out_names": [
         "Kimi Antonelli",
-        "Nico Hulkenberg",
         "Charles Leclerc",
+        "Nico Hulkenberg",
         "Mercedes"
       ],
       "transfers_in": [
-        "124",
-        "11031",
         "131",
+        "11031",
+        "124",
         "27"
       ],
       "transfers_in_names": [
-        "George Russell",
-        "Oliver Bearman",
         "Max Verstappen",
+        "Oliver Bearman",
+        "George Russell",
         "McLaren"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:40.772782+00:00"
+      "fetched_at": "2026-10-11T16:08:13.750718+00:00"
     },
     {
       "user_guid": "d16d9b66-1840-11f1-8fd8-f70cd60e50e6-0-202971566",
@@ -7032,7 +7032,7 @@
         "Audi"
       ],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:42.563806+00:00"
+      "fetched_at": "2026-10-11T16:08:15.546570+00:00"
     },
     {
       "user_guid": "7f451c50-11bb-11f1-89ff-6508e30e59f0-0-34802661",
@@ -7072,7 +7072,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:41.965949+00:00"
+      "fetched_at": "2026-10-11T16:08:14.947014+00:00"
     },
     {
       "user_guid": "88597cc6-190b-11f1-aa99-f79ef14ce400-0-45799881",
@@ -7112,7 +7112,7 @@
       "transfers_in": [],
       "transfers_in_names": [],
       "transfer_window_open": true,
-      "fetched_at": "2026-10-11T14:03:40.176140+00:00"
+      "fetched_at": "2026-10-11T16:08:13.151716+00:00"
     }
   ]
 }

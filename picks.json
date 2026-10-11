@@ -23443,7 +23443,7 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 9.4,
-    "price_next_race": null
+    "price_next_race": 10.0
   },
   {
     "race_number": 17,
@@ -23462,7 +23462,7 @@
     "is_megacap": false,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -23479,9 +23479,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": 8,
     "price_this_race": 15.7,
-    "price_next_race": null
+    "price_next_race": 16.3
   },
   {
     "race_number": 17,
@@ -23498,9 +23498,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 14,
+    "pick_points_gd": 18,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 17,
@@ -23517,9 +23517,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 15,
+    "pick_points_gd": 17,
     "price_this_race": 6.0,
-    "price_next_race": null
+    "price_next_race": 6.6
   },
   {
     "race_number": 17,
@@ -23536,9 +23536,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 54,
+    "pick_points_gd": 65,
     "price_this_race": 34.0,
-    "price_next_race": null
+    "price_next_race": 34.0
   },
   {
     "race_number": 17,
@@ -23555,9 +23555,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 90,
+    "pick_points_gd": 91,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -23574,9 +23574,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 17,
+    "pick_points_gd": 18,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -23595,7 +23595,7 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 9.4,
-    "price_next_race": null
+    "price_next_race": 10.0
   },
   {
     "race_number": 17,
@@ -23614,7 +23614,7 @@
     "is_megacap": false,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -23631,9 +23631,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": 8,
     "price_this_race": 15.7,
-    "price_next_race": null
+    "price_next_race": 16.3
   },
   {
     "race_number": 17,
@@ -23650,9 +23650,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 15,
+    "pick_points_gd": 17,
     "price_this_race": 6.0,
-    "price_next_race": null
+    "price_next_race": 6.6
   },
   {
     "race_number": 17,
@@ -23669,9 +23669,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 57,
+    "pick_points_gd": 66,
     "price_this_race": 32.4,
-    "price_next_race": null
+    "price_next_race": 32.7
   },
   {
     "race_number": 17,
@@ -23688,9 +23688,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 54,
+    "pick_points_gd": 65,
     "price_this_race": 34.0,
-    "price_next_race": null
+    "price_next_race": 34.0
   },
   {
     "race_number": 17,
@@ -23709,7 +23709,7 @@
     "is_megacap": false,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -23726,9 +23726,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 31,
+    "pick_points_gd": 33,
     "price_this_race": 27.0,
-    "price_next_race": null
+    "price_next_race": 27.1
   },
   {
     "race_number": 17,
@@ -23745,9 +23745,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 15,
+    "pick_points_gd": 17,
     "price_this_race": 6.0,
-    "price_next_race": null
+    "price_next_race": 6.6
   },
   {
     "race_number": 17,
@@ -23764,9 +23764,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 17,
+    "pick_points_gd": 18,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -23783,9 +23783,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 14,
+    "pick_points_gd": 18,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 17,
@@ -23802,9 +23802,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 34,
     "price_this_race": 15.9,
-    "price_next_race": null
+    "price_next_race": 16.5
   },
   {
     "race_number": 17,
@@ -23821,9 +23821,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 54,
+    "pick_points_gd": 65,
     "price_this_race": 34.0,
-    "price_next_race": null
+    "price_next_race": 34.0
   },
   {
     "race_number": 17,
@@ -23842,7 +23842,7 @@
     "is_megacap": true,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -23859,9 +23859,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 15,
+    "pick_points_gd": 17,
     "price_this_race": 6.0,
-    "price_next_race": null
+    "price_next_race": 6.6
   },
   {
     "race_number": 17,
@@ -23878,9 +23878,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 17,
+    "pick_points_gd": 18,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -23897,9 +23897,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 14,
+    "pick_points_gd": 18,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 17,
@@ -23916,9 +23916,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -11,
+    "pick_points_gd": -10,
     "price_this_race": 5.2,
-    "price_next_race": null
+    "price_next_race": 4.6
   },
   {
     "race_number": 17,
@@ -23935,9 +23935,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 90,
+    "pick_points_gd": 91,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -23954,9 +23954,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 54,
+    "pick_points_gd": 65,
     "price_this_race": 34.0,
-    "price_next_race": null
+    "price_next_race": 34.0
   },
   {
     "race_number": 17,
@@ -23975,7 +23975,7 @@
     "is_megacap": false,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -23992,9 +23992,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": 8,
     "price_this_race": 15.7,
-    "price_next_race": null
+    "price_next_race": 16.3
   },
   {
     "race_number": 17,
@@ -24013,7 +24013,7 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 9.4,
-    "price_next_race": null
+    "price_next_race": 10.0
   },
   {
     "race_number": 17,
@@ -24030,9 +24030,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 15,
+    "pick_points_gd": 17,
     "price_this_race": 6.0,
-    "price_next_race": null
+    "price_next_race": 6.6
   },
   {
     "race_number": 17,
@@ -24049,9 +24049,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 17,
+    "pick_points_gd": 18,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -24068,9 +24068,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 90,
+    "pick_points_gd": 91,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -24087,9 +24087,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 57,
+    "pick_points_gd": 66,
     "price_this_race": 32.4,
-    "price_next_race": null
+    "price_next_race": 32.7
   },
   {
     "race_number": 17,
@@ -24097,7 +24097,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 6,
-    "race_rank": 6,
+    "race_rank": 7,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -24108,7 +24108,7 @@
     "is_megacap": false,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -24116,7 +24116,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 6,
-    "race_rank": 6,
+    "race_rank": 7,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -24125,9 +24125,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 15,
+    "pick_points_gd": 17,
     "price_this_race": 6.0,
-    "price_next_race": null
+    "price_next_race": 6.6
   },
   {
     "race_number": 17,
@@ -24135,7 +24135,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 6,
-    "race_rank": 6,
+    "race_rank": 7,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -24144,9 +24144,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 3,
     "price_this_race": 10.8,
-    "price_next_race": null
+    "price_next_race": 10.2
   },
   {
     "race_number": 17,
@@ -24154,7 +24154,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 6,
-    "race_rank": 6,
+    "race_rank": 7,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -24165,7 +24165,7 @@
     "is_megacap": false,
     "pick_points_gd": -9,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.6
   },
   {
     "race_number": 17,
@@ -24173,7 +24173,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 6,
-    "race_rank": 6,
+    "race_rank": 7,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -24182,9 +24182,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 11,
     "price_this_race": 5.6,
-    "price_next_race": null
+    "price_next_race": 5.4
   },
   {
     "race_number": 17,
@@ -24192,7 +24192,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 6,
-    "race_rank": 6,
+    "race_rank": 7,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -24201,9 +24201,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 34,
+    "pick_points_gd": 36,
     "price_this_race": 32.3,
-    "price_next_race": null
+    "price_next_race": 32.4
   },
   {
     "race_number": 17,
@@ -24211,7 +24211,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 6,
-    "race_rank": 6,
+    "race_rank": 7,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "cards_used": "",
@@ -24220,9 +24220,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 90,
+    "pick_points_gd": 91,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -24239,9 +24239,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 15,
+    "pick_points_gd": 17,
     "price_this_race": 6.0,
-    "price_next_race": null
+    "price_next_race": 6.6
   },
   {
     "race_number": 17,
@@ -24258,9 +24258,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -30,
+    "pick_points_gd": -29,
     "price_this_race": 7.6,
-    "price_next_race": null
+    "price_next_race": 7.0
   },
   {
     "race_number": 17,
@@ -24279,7 +24279,7 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 9.4,
-    "price_next_race": null
+    "price_next_race": 10.0
   },
   {
     "race_number": 17,
@@ -24298,7 +24298,7 @@
     "is_megacap": false,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -24317,7 +24317,7 @@
     "is_megacap": false,
     "pick_points_gd": -9,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.6
   },
   {
     "race_number": 17,
@@ -24334,9 +24334,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 34,
+    "pick_points_gd": 36,
     "price_this_race": 32.3,
-    "price_next_race": null
+    "price_next_race": 32.4
   },
   {
     "race_number": 17,
@@ -24353,9 +24353,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 54,
+    "pick_points_gd": 65,
     "price_this_race": 34.0,
-    "price_next_race": null
+    "price_next_race": 34.0
   },
   {
     "race_number": 17,
@@ -24363,7 +24363,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 8,
-    "race_rank": 7,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "Extra DRS (GD17)",
@@ -24374,7 +24374,7 @@
     "is_megacap": false,
     "pick_points_gd": 53,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -24382,7 +24382,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 8,
-    "race_rank": 7,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "Extra DRS (GD17)",
@@ -24391,9 +24391,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 8,
+    "pick_points_gd": 17,
     "price_this_race": 28.0,
-    "price_next_race": null
+    "price_next_race": 27.9
   },
   {
     "race_number": 17,
@@ -24401,7 +24401,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 8,
-    "race_rank": 7,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "Extra DRS (GD17)",
@@ -24410,9 +24410,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 14,
+    "pick_points_gd": 18,
     "price_this_race": 5.8,
-    "price_next_race": null
+    "price_next_race": 6.4
   },
   {
     "race_number": 17,
@@ -24420,7 +24420,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 8,
-    "race_rank": 7,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "Extra DRS (GD17)",
@@ -24431,7 +24431,7 @@
     "is_megacap": false,
     "pick_points_gd": -11,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 17,
@@ -24439,7 +24439,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 8,
-    "race_rank": 7,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "Extra DRS (GD17)",
@@ -24450,7 +24450,7 @@
     "is_megacap": false,
     "pick_points_gd": -9,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.6
   },
   {
     "race_number": 17,
@@ -24458,7 +24458,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 8,
-    "race_rank": 7,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "Extra DRS (GD17)",
@@ -24467,9 +24467,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 34,
+    "pick_points_gd": 36,
     "price_this_race": 32.3,
-    "price_next_race": null
+    "price_next_race": 32.4
   },
   {
     "race_number": 17,
@@ -24477,7 +24477,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 8,
-    "race_rank": 7,
+    "race_rank": 6,
     "team_name": "Fiat147",
     "user_name": "Rafael Dias",
     "cards_used": "Extra DRS (GD17)",
@@ -24486,9 +24486,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 90,
+    "pick_points_gd": 91,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -24496,7 +24496,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "Extra DRS (GD17)",
@@ -24507,7 +24507,7 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 9.4,
-    "price_next_race": null
+    "price_next_race": 10.0
   },
   {
     "race_number": 17,
@@ -24515,7 +24515,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "Extra DRS (GD17)",
@@ -24524,9 +24524,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": -1,
+    "pick_points_gd": 8,
     "price_this_race": 15.7,
-    "price_next_race": null
+    "price_next_race": 16.3
   },
   {
     "race_number": 17,
@@ -24534,7 +24534,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "Extra DRS (GD17)",
@@ -24543,9 +24543,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 7,
+    "pick_points_gd": 12,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -24553,7 +24553,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "Extra DRS (GD17)",
@@ -24562,9 +24562,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": true,
-    "pick_points_gd": 32,
+    "pick_points_gd": 33,
     "price_this_race": 24.3,
-    "price_next_race": null
+    "price_next_race": 24.4
   },
   {
     "race_number": 17,
@@ -24572,7 +24572,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "Extra DRS (GD17)",
@@ -24581,9 +24581,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 3,
     "price_this_race": 10.8,
-    "price_next_race": null
+    "price_next_race": 10.2
   },
   {
     "race_number": 17,
@@ -24591,7 +24591,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "Extra DRS (GD17)",
@@ -24600,9 +24600,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 54,
+    "pick_points_gd": 65,
     "price_this_race": 34.0,
-    "price_next_race": null
+    "price_next_race": 34.0
   },
   {
     "race_number": 17,
@@ -24610,7 +24610,7 @@
     "race_flag": "🇸🇬",
     "race_date": "2026-10-11",
     "season_rank": 9,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "cards_used": "Extra DRS (GD17)",
@@ -24619,9 +24619,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -12,
+    "pick_points_gd": -9,
     "price_this_race": 9.8,
-    "price_next_race": null
+    "price_next_race": 10.4
   },
   {
     "race_number": 17,
@@ -24638,9 +24638,9 @@
     "pick_type": "Driver",
     "is_captain": true,
     "is_megacap": false,
-    "pick_points_gd": 31,
+    "pick_points_gd": 33,
     "price_this_race": 27.0,
-    "price_next_race": null
+    "price_next_race": 27.1
   },
   {
     "race_number": 17,
@@ -24657,9 +24657,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 2,
+    "pick_points_gd": 3,
     "price_this_race": 10.8,
-    "price_next_race": null
+    "price_next_race": 10.2
   },
   {
     "race_number": 17,
@@ -24676,9 +24676,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 7,
+    "pick_points_gd": 12,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -24697,7 +24697,7 @@
     "is_megacap": false,
     "pick_points_gd": 1,
     "price_this_race": 9.4,
-    "price_next_race": null
+    "price_next_race": 10.0
   },
   {
     "race_number": 17,
@@ -24714,9 +24714,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -30,
+    "pick_points_gd": -29,
     "price_this_race": 7.6,
-    "price_next_race": null
+    "price_next_race": 7.0
   },
   {
     "race_number": 17,
@@ -24733,9 +24733,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 54,
+    "pick_points_gd": 65,
     "price_this_race": 34.0,
-    "price_next_race": null
+    "price_next_race": 34.0
   },
   {
     "race_number": 17,
@@ -24752,9 +24752,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 33,
+    "pick_points_gd": 34,
     "price_this_race": 15.9,
-    "price_next_race": null
+    "price_next_race": 16.5
   },
   {
     "race_number": 17,
@@ -24773,7 +24773,7 @@
     "is_megacap": false,
     "pick_points_gd": 43,
     "price_this_race": 23.8,
-    "price_next_race": null
+    "price_next_race": 24.1
   },
   {
     "race_number": 17,
@@ -24790,9 +24790,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 31,
+    "pick_points_gd": 33,
     "price_this_race": 27.0,
-    "price_next_race": null
+    "price_next_race": 27.1
   },
   {
     "race_number": 17,
@@ -24811,7 +24811,7 @@
     "is_megacap": false,
     "pick_points_gd": -11,
     "price_this_race": 3.0,
-    "price_next_race": null
+    "price_next_race": 3.0
   },
   {
     "race_number": 17,
@@ -24828,9 +24828,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 17,
+    "pick_points_gd": 18,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -24847,9 +24847,9 @@
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 7,
+    "pick_points_gd": 12,
     "price_this_race": 9.3,
-    "price_next_race": null
+    "price_next_race": 9.9
   },
   {
     "race_number": 17,
@@ -24866,9 +24866,9 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": 90,
+    "pick_points_gd": 91,
     "price_this_race": 27.9,
-    "price_next_race": null
+    "price_next_race": 28.2
   },
   {
     "race_number": 17,
@@ -24885,8 +24885,8 @@
     "pick_type": "Constructor",
     "is_captain": false,
     "is_megacap": false,
-    "pick_points_gd": -12,
+    "pick_points_gd": -9,
     "price_this_race": 9.8,
-    "price_next_race": null
+    "price_next_race": 10.4
   }
 ]

@@ -1,6 +1,6 @@
 {
   "gameday_id": "17",
-  "session_type": "sprint",
+  "session_type": "race",
   "ranking_hash": "5ff647de69fb05aaf1ca81df5805fcba",
   "scores": {
     "Fabio Mucci": 152,
@@ -15,6 +15,6 @@
     "Rafael Dias": 70,
     "Priscila Rigotto": 62
   },
-  "post_race_sent": true,
-  "saved_at": "2026-10-10T19:31:02.116709+00:00"
+  "post_race_sent": false,
+  "saved_at": "2026-10-11T04:14:34.274414+00:00"
 }

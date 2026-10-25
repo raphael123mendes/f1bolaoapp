@@ -1,6 +1,6 @@
 {
   "gameday_id": "18",
-  "session_type": "qualifying",
+  "session_type": "race",
   "ranking_hash": "793c68856efb32f2e5c7ded5837dae7a",
   "scores": {
     "Rafael Dias": 78,
@@ -16,5 +16,5 @@
     "Eduardo Santos Lima": 51
   },
   "post_race_sent": false,
-  "saved_at": "2026-10-24T23:36:11.600017+00:00"
+  "saved_at": "2026-10-25T19:35:13.771555+00:00"
 }

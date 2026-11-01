@@ -20521,7 +20521,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 2.0,
-    "team_points_gd": 215,
+    "team_points_gd": 206,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20543,7 +20543,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 2.0,
-    "team_points_gd": 215,
+    "team_points_gd": 206,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20565,7 +20565,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 90.0,
-    "team_points_gd": 215,
+    "team_points_gd": 206,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20586,8 +20586,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": -5.0,
-    "team_points_gd": 215,
+    "pick_points_gd": -20.0,
+    "team_points_gd": 206,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20609,7 +20609,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 28.0,
-    "team_points_gd": 215,
+    "team_points_gd": 206,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20631,7 +20631,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 78.0,
-    "team_points_gd": 215,
+    "team_points_gd": 206,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20652,8 +20652,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 20.0,
-    "team_points_gd": 215,
+    "pick_points_gd": 26.0,
+    "team_points_gd": 206,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20829,7 +20829,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 18.0,
-    "team_points_gd": 195,
+    "team_points_gd": 196,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20851,7 +20851,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": -1.0,
-    "team_points_gd": 195,
+    "team_points_gd": 196,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20873,7 +20873,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 90.0,
-    "team_points_gd": 195,
+    "team_points_gd": 196,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20895,7 +20895,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 0.0,
-    "team_points_gd": 195,
+    "team_points_gd": 196,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20916,8 +20916,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 1.0,
-    "team_points_gd": 195,
+    "pick_points_gd": 2.0,
+    "team_points_gd": 196,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20939,7 +20939,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 78.0,
-    "team_points_gd": 195,
+    "team_points_gd": 196,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20961,7 +20961,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 9.0,
-    "team_points_gd": 195,
+    "team_points_gd": 196,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -20983,7 +20983,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 2.0,
-    "team_points_gd": 181,
+    "team_points_gd": 178,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21005,7 +21005,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 2.0,
-    "team_points_gd": 181,
+    "team_points_gd": 178,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21026,8 +21026,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 13.0,
-    "team_points_gd": 181,
+    "pick_points_gd": 10.0,
+    "team_points_gd": 178,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21049,7 +21049,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 36.0,
-    "team_points_gd": 181,
+    "team_points_gd": 178,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21071,7 +21071,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 6.0,
-    "team_points_gd": 181,
+    "team_points_gd": 178,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21093,7 +21093,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 78.0,
-    "team_points_gd": 181,
+    "team_points_gd": 178,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21115,7 +21115,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 44.0,
-    "team_points_gd": 181,
+    "team_points_gd": 178,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21137,7 +21137,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 1.0,
-    "team_points_gd": 171,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21159,7 +21159,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 2.0,
-    "team_points_gd": 171,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21180,8 +21180,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 7.0,
-    "team_points_gd": 171,
+    "pick_points_gd": 4.0,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21202,8 +21202,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 13.0,
-    "team_points_gd": 171,
+    "pick_points_gd": 10.0,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21225,7 +21225,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 18.0,
-    "team_points_gd": 171,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21247,7 +21247,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 32.0,
-    "team_points_gd": 171,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21269,7 +21269,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 78.0,
-    "team_points_gd": 171,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21291,7 +21291,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 44.0,
-    "team_points_gd": 171,
+    "team_points_gd": 165,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21467,7 +21467,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 46.0,
-    "team_points_gd": 139,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21489,7 +21489,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 2.0,
-    "team_points_gd": 139,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21510,8 +21510,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": -5.0,
-    "team_points_gd": 139,
+    "pick_points_gd": -20.0,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21533,7 +21533,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 6.0,
-    "team_points_gd": 139,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21555,7 +21555,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 28.0,
-    "team_points_gd": 139,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21577,7 +21577,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": -2.0,
-    "team_points_gd": 139,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21599,7 +21599,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 78.0,
-    "team_points_gd": 139,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21620,8 +21620,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 20.0,
-    "team_points_gd": 139,
+    "pick_points_gd": 26.0,
+    "team_points_gd": 130,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21642,8 +21642,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 13.0,
-    "team_points_gd": 135,
+    "pick_points_gd": 10.0,
+    "team_points_gd": 129,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21665,7 +21665,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 36.0,
-    "team_points_gd": 135,
+    "team_points_gd": 129,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21687,7 +21687,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": -1.0,
-    "team_points_gd": 135,
+    "team_points_gd": 129,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21709,7 +21709,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": -1.0,
-    "team_points_gd": 135,
+    "team_points_gd": 129,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21731,7 +21731,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": -2.0,
-    "team_points_gd": 135,
+    "team_points_gd": 129,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21753,7 +21753,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 78.0,
-    "team_points_gd": 135,
+    "team_points_gd": 129,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21774,8 +21774,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 12.0,
-    "team_points_gd": 135,
+    "pick_points_gd": 9.0,
+    "team_points_gd": 129,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21797,7 +21797,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 2.0,
-    "team_points_gd": 106,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21818,8 +21818,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 13.0,
-    "team_points_gd": 106,
+    "pick_points_gd": 10.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21841,7 +21841,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 36.0,
-    "team_points_gd": 106,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21863,7 +21863,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": -1.0,
-    "team_points_gd": 106,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21885,7 +21885,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 0.0,
-    "team_points_gd": 106,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21906,8 +21906,8 @@
     "is_captain": false,
     "is_megacap": false,
     "is_finalfix_out": false,
-    "pick_points_gd": 12.0,
-    "team_points_gd": 106,
+    "pick_points_gd": 9.0,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   },
@@ -21929,7 +21929,7 @@
     "is_megacap": false,
     "is_finalfix_out": false,
     "pick_points_gd": 44.0,
-    "team_points_gd": 106,
+    "team_points_gd": 100,
     "price_this_race": null,
     "price_next_race": null
   }

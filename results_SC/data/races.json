@@ -170,7 +170,7 @@
     "location": "MAlasya",
     "venue": "Malasyat",
     "race_date": "2026-10-04",
-    "sprint_weekend": true,
+    "sprint_weekend": false,
     "cancelled": false,
     "cancellation_reason": "",
     "notes": ""

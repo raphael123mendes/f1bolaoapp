@@ -2,7 +2,7 @@
   "race_number": 20,
   "meeting_name": "São Paulo Grand Prix",
   "session": "Qualifying",
-  "phase": "Finished",
-  "final": false,
-  "updated_utc": "2026-11-07T21:07:41Z"
+  "phase": "Final",
+  "final": true,
+  "updated_utc": "2026-11-07T21:23:25Z"
 }

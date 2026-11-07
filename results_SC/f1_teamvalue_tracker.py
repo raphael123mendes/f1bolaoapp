@@ -311,7 +311,7 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter,
         epilog="""
 OUTPUT:
-  G:/My Drive/FantasyF1-26/teamvalue_master.json
+  results_SC/data/teamvalue_master.json
   One row per team per race — safe to run multiple times (upserts)
   Also detects transfers if next race window is open
 

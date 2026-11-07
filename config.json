@@ -1,4 +1,5 @@
 {
+  "season": 2026,
   "driver_slug_overrides": {
     "Alexander Albon": "alex_albon",
     "Kimi Antonelli": "kimi_antonelli"
@@ -20,5 +21,4 @@
     "podium": 3,
     "mid": 7
   }
-
 }

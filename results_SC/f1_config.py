@@ -9,8 +9,6 @@ Then reads settings like:
 
     cfg["league_id"]
     cfg["save_folder"]
-    cfg["whatsapp"]          # list of {phone, apikey}
-    cfg["textmebot_api_key"]
     etc.
 
 config.json must be in the same folder as this file.
@@ -31,10 +29,10 @@ def load_config():
     with open(CONFIG_PATH, encoding="utf-8") as f:
         data = json.load(f)
 
-    # Resolve relative file paths to absolute (relative to script folder)
-    for key in ("google_creds_file",):
-        if key in data and not os.path.isabs(data[key]):
-            data[key] = os.path.join(SCRIPT_DIR, data[key])
+    # save_folder is relative to this folder (default: results_SC/data)
+    folder = data.get("save_folder", "data")
+    if not os.path.isabs(folder):
+        data["save_folder"] = os.path.join(SCRIPT_DIR, folder)
 
     # Allow GitHub Actions (or any CI) to redirect the save folder via env var
     env_folder = os.environ.get("F1_SAVE_FOLDER")

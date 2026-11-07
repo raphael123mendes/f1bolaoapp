@@ -1,40 +1,80 @@
 # F1 Bolão — Fantasy League Web App
 
-A mobile-first F1 fantasy league dashboard built as a static site hosted on GitHub Pages. No backend, no build tools — pure HTML, CSS and JavaScript with all data embedded directly in each page.
+A mobile-first dashboard for our private F1 Fantasy league (11 players). Static site on
+GitHub Pages — plain HTML, CSS and JavaScript, no framework or build step. The pages read
+JSON files that GitHub Actions refreshes from the F1 Fantasy API.
+
+**Live site:** https://raphael123mendes.github.io/f1bolaoapp/
 
 ---
 
-## Live Site
+## How it works
 
 ```
-https://raphael123mendes.github.io/f1bolaoapp/
+F1 Fantasy API ──► GitHub Actions (Python) ──► JSON files in this repo ──► HTML pages (GitHub Pages)
 ```
+
+| Workflow | When | What it does |
+|---|---|---|
+| **F1 Fantasy Standings** (`f1_standings.yml` → `bot/f1_quick.py`) | Every 10 min on Sat/Sun, 03:00–22:00 UTC | Live scores during qualifying/sprint/race → `live/results.json`, `live/picks.json`, `live/breakdowns.json`. Publishes only when scores change, plus once when the session is final. |
+| **F1 Results Pipeline** (`f1_results_pipeline.yml` → `results_SC/run_all.py` + `build_fantasy_f1.py`) | Manually after each race (Actions → *Run workflow*; optional race number) | Final data for the race → `results.json`, `picks.json`, `prices.json`, `breakdowns.json`, `races.json` |
+| **F1 Refresh Cookie** (`f1_get_cookie.yml` → `bot/f1_login.py`) | Manually, when the other workflows fail with 401 | Logs in to F1 Fantasy and saves a fresh `F1_COOKIE` secret |
+
+### Secrets (Settings → Secrets and variables → Actions)
+- `F1_COOKIE` — F1 Fantasy session cookie (set by *F1 Refresh Cookie*)
+- `F1_EMAIL`, `F1_PASSWORD` — F1 account used by *F1 Refresh Cookie*
+- `GH_PAT` — token that lets *F1 Refresh Cookie* update the `F1_COOKIE` secret
+
+Never put phone numbers, API keys or passwords in files in this repo — it is public.
 
 ---
 
-## File Structure
+## Season & calendar
+
+- The season is set **once** in `config.json` → `"season": 2026`.
+- The **master calendar** is `calendar/2026.json` — the only calendar to edit by hand
+  (rounds, F1 Fantasy `gameday_id`, names, circuit, sprint/cancelled flags, session times in UTC).
+- `races.json` (used by the website) is **generated** from it — don't edit it by hand.
+  After changing the calendar locally, run `python season.py` to regenerate it
+  (the results pipeline also regenerates it on every run).
+- Every results run compares the calendar with F1 Fantasy's own calendar and prints
+  ⚠ warnings in the log if gameday numbers, names or race dates disagree.
+
+### New season checklist
+1. Add `calendar/2027.json` (same format as `calendar/2026.json`).
+2. Set `"season": 2027` in `config.json`.
+3. Check `league_id` in `bot/config.json` and `results_SC/config.json`.
+4. Archive or clear last season's data files (`results.json`, `picks.json`, `prices.json`,
+   `breakdowns.json`, `results_SC/data/race_*.json`, `live/*.json`).
+
+---
+
+## File structure
 
 ```
 /
-├── index.html              ← League Standings (main page, loads by default)
-├── results.html            ← Race Results & Market Impact
-├── market.html             ← Market Overview (prices, efficiency)
-├── race.html               ← Race Analysis & Strategy Portal
-├── team.html               ← Player Team Detail Dashboard
-├── driver.html             ← Driver & Constructor Analytics
-├── historical.html         ← Historical Performance Hub
+├── index.html            ← League Standings (home)
+├── results.html          ← Race Results (live + final)
+├── market.html           ← Market Overview
+├── race.html             ← Race Analysis
+├── team.html             ← Player detail
+├── driver.html           ← Driver & Constructor analytics
+├── historical.html       ← Historical performance per entity
+├── stats.html            ← Season Stats
 │
-├── results.json            ← Season results with race_prize column (generated)
-├── races.json              ← 2026 calendar with sprint/cancelled flags
-├── picks.json              ← Player picks per race (drivers + constructors)
-├── prices.json             ← Market prices per entity per race
-├── breakdowns.json         ← Points breakdown by scoring category
+├── config.json           ← season + site settings (card list, image slugs)
+├── season.py             ← reads calendar/<season>.json, generates races.json
+├── calendar/2026.json    ← MASTER calendar
+├── races.json            ← generated calendar for the pages
+├── results.json          ← one row per player per race (final)
+├── picks.json            ← one row per pick per player per race
+├── prices.json           ← prices per entity per race
+├── breakdowns.json       ← points by scoring category per pick
+├── live/                 ← live race-weekend data (written by the standings bot)
 │
-└── images/
-    ├── portraits/          ← Driver portrait PNGs (22 drivers)
-    ├── cars/               ← Constructor car livery WEBPs (11 teams)
-    ├── circuits/           ← Circuit layout SVGs (24 circuits)
-    └── logos/              ← Constructor logos (reserved for future use)
+├── bot/                  ← live bot (f1_quick.py), F1 login (f1_login.py), config
+├── results_SC/           ← results pipeline scripts + data/race_NN_*.json snapshots
+└── images/               ← portraits, car liveries, circuit SVGs, logos
 ```
 
 ---
@@ -42,19 +82,18 @@ https://raphael123mendes.github.io/f1bolaoapp/
 ## Pages
 
 ### `index.html` — League Standings
-- P1 spotlight hero with current leader
-- Expandable accordion rows for all 11 players
-- Per-player: season points, budget (`new_budget`), avg/race, rank trend, cards used, prize total
-- Trophy Race chart — rank progression across all rounds
-- Footer stats: league average points, highest budget
+- P1 spotlight hero and expandable row per player
+- Expanded row: avg points per race, prize total, **gap to the player above (▲, red) and below (▼, green)**
+- **Trophy Race** chart — season rank per round; player names at the end of each line
+- **Cards Used** table — players in rows, cards in columns, cell shows the round played (e.g. `R9`)
 - **Data:** `results.json`
 
 ### `results.html` — Race Results
-- Round switcher — all 24 rounds, completed races clickable, cancelled rounds struck through
-- Race header with circuit SVG watermark, sprint weekend badge
-- Player table sorted by `race_rank` (not season rank) showing race points, season total, budget, budget delta
-- Weekend MVPs: Top Driver, Top Constructor, Market Riser, Market Faller
-- Driver portraits and constructor car images with graceful fallback
+- Round switcher; live mode during race weekends (from `live/`)
+- Player table by race rank: race points, season total, prize, budget and budget change
+- Under each player (own line): cards used (`EXTRA DRS · R13`) and penalties
+  (`-20 (Transfers)`, `-25 (Inactive)`; tap/hover for the breakdown)
+- Weekend MVPs: top driver, top constructor, market riser/faller
 - **Data:** `results.json`, `picks.json`, `prices.json`, `races.json`
 
 ### `market.html` — Market Overview
@@ -75,18 +114,17 @@ https://raphael123mendes.github.io/f1bolaoapp/
 - **Landscape mode:** Left sidebar with pick list, right panel with full horizontal bar chart for all 20 scoring categories
 - **Data:** `picks.json`, `breakdowns.json`, `results.json`, `races.json`
 
-### `team.html` — Player Team Detail
-- Accessed from Standings via "View Full Team Details" button: `team.html?user=Liberio+Junior`
-- Profile header with tier badge (Podium / Mid / Backmarker), season rank, team name
-- 5 metric cards: Total Points, Avg/Race, Season Rank, Budget, Prize Money
-- 4 mini charts: Budget Evolution, Points per Race, Prize Earnings, Season Rank trend
-- Strategy Cards: all 6 cards shown (used = green tick, unused = grey cross). GD suffix stripped.
-- Driver lineup: top 2 as hero cards (portrait, greyscale → colour on hover), bottom 3 compact
-- NEW badge on picks that changed from previous race
-- Constructor cards with car livery images
-- **Click any driver/constructor → navigates to `driver.html?entity=Name`**
-- **Landscape mode:** Sidebar with stats, right panel with rank history table (season rank, race rank, delta, points, budget, prize per round)
-- **Data:** `picks.json`, `results.json`, `prices.json`
+### `team.html` — Player detail
+- Opened from Standings → *View Full Team Details* (`team.html?user=Liberio+Junior`)
+- Profile header, tier badge, metric cards
+- 4 charts — **latest 8 races visible, swipe left for earlier ones, tap any race for its value**:
+  - Budget Evolution ($M) — exact value on every point
+  - Points per Race — value on every bar
+  - Prize Earnings ($) — exact value on prize-winning races
+  - Season Rank — green = moved up, red = moved down, white = same
+- Strategy Cards — used cards lit up with the round played
+- Driver lineup and constructors; tap any → `driver.html`
+- **Data:** `results.json`, `picks.json`, `prices.json`, `config.json`
 
 ### `driver.html` — Driver & Constructor Analytics
 - Accessed from Market (`click row`) or directly: `driver.html?entity=Charles+Leclerc`
@@ -109,43 +147,44 @@ https://raphael123mendes.github.io/f1bolaoapp/
 - **Landscape mode:** Left sidebar with entity stats, right panel with full scrollable table + charts. Designed for 24 races.
 - **Data:** `picks.json` (deduplicated), `prices.json`, `races.json`
 
----
-
-## Navigation Flow
-
-```
-index.html (Standings)
-  └─ View Full Team Details → team.html?user=Name
-       └─ Click driver/constructor → driver.html?entity=Name
-            └─ Tap image or History button → historical.html?entity=Name
-
-market.html
-  └─ Click any row → driver.html?entity=Name
-
-results.html → standalone (round switcher built in)
-race.html    → standalone (round switcher + player selector built in)
-```
-
-Bottom navigation bar (Standings / Results / Market / Race) is present on all pages.
+### `stats.html` — Season Stats
+- Best result of the season, best use of each card, standings swings, transfer activity, prize money
+- **Data:** `results.json`, `picks.json`, `breakdowns.json`
 
 ---
 
-## Data Notes
+## Data rules
 
-### `results.json` — added `race_prize` column
-Prize money is pre-calculated per race with tie-splitting logic:
-- 1st: $19.25 / 2nd: $11.55 / 3rd: $7.70
-- Ties split the pooled prizes equally (e.g. two P1s share $30.80)
-- Non-podium players get `race_prize: 0.0`
+### Race points and penalties
+- `race_points` is the game's final GD score and **already includes penalties**.
+- Penalties come from the game itself (same values as the F1 Fantasy team screen):
+  - extra transfers: `usersubsleft < 0` × `extrasubscost` (e.g. `-10 × 1 = -10`)
+  - inactive driver: `inactive_driver_penality_points` (e.g. `-25`)
+- `results.json` stores them for display: `extra_transfers`, `transfer_penalty`,
+  `inactive_penalty`, `penalty_points`.
+- **Live:** the game only publishes the inactive-driver penalty after the race. Until then
+  the bot uses the game's inactive flag on the driver and deducts per session started
+  (qualifying −5, sprint −10, race −20). Final GD points always take priority once the race is done.
+
+### Season points and rank
+The API only gives the season total *as of now*, so each race saves a snapshot. When the
+pipeline builds the data, a snapshot is kept if it equals the previous total + this race's
+points (±10 pts for steward changes); otherwise it was taken too late (after the next race
+weekend started) and is rebuilt from race points — the log shows
+`⚠ R6: season snapshot taken late`. The running total always matches the official league table.
+
+### Prizes
+Per race, by race rank: 1st $19.25, 2nd $11.55, 3rd $7.70. Ties share the pooled prizes.
 
 ### Budget fields
-- `new_budget` — the player's budget going into the next race (used for display)
-- `current_budget` — budget at start of current race
+- `new_budget` — budget going into the next race (displayed)
+- `current_budget` — budget at the start of the race
 - `budget_remaining` — unspent cash after picks
-- Delta displayed = `new_budget - current_budget`
+- Delta shown = `new_budget - current_budget`
 
-### Pick deduplication
-`picks.json` contains one row per user per pick per race. For market/historical analytics, picks are deduplicated to one row per entity per race (same `pick_points_gd` value across all users who picked the same entity).
+### Cards
+Stored as `"Final Fix (GD19)"`; several cards in one race are separated by `;`.
+The pages show the card name and the round (`R19`).
 
 ### Image paths
 All images referenced as relative paths from the root:
@@ -184,47 +223,9 @@ Circuit images use venue-keyword mapping (not round number) since the image set 
 
 ---
 
-## Strategy Cards
-
-| Card | Type |
-|---|---|
-| No Negative | GD1 |
-| Autopilot | GD1 |
-| Extra DRS | GD2 |
-| Limitless | GD2 |
-| Final Fix | GD3 |
-| Wildcard | GD3 |
-
-GD suffix stripped in all UI displays.
-
----
-
-## Season Calendar Notes (races.json)
-
-- Round 4 (Bahrain) and Round 5 (Saudi Arabia) cancelled — Middle East conflict
-- Round 16 (Spanish GP) at new Madrid Street Circuit (Madring) — subject to FIA homologation
-- Round 17 (Azerbaijan) on Saturday — accommodates Remembrance Day
-- Sprint weekends: Rounds 2, 6, 7, 11, 14, 18
-
----
-
-## Updating Data Each Race
-
-After each race weekend, update the following files:
-
-1. **`results.json`** — add new entries for the new race_number, then re-run the prize calculation script to regenerate `race_prize` values
-2. **`picks.json`** — add picks for the new race
-3. **`prices.json`** — add new price entries (race_number + next_race_number)
-4. **`breakdowns.json`** — add breakdown rows for the new race
-
-All HTML files embed the JSON data directly — after updating the JSON files, the embedded data in each HTML file also needs to be refreshed. The simplest approach is to re-run the data embedding step for each page.
-
----
-
-## Tech Stack
-
+## Tech stack
 - Pure HTML / CSS / JavaScript — no framework, no build step
-- Fonts: Space Grotesk (headlines) + Inter (body) via Google Fonts
-- Icons: Material Symbols Outlined
-- Charts: hand-rolled SVG (no chart library dependency)
-- Hosting: GitHub Pages (static)
+- Charts: hand-rolled SVG (no chart library)
+- Fonts: Space Grotesk + Inter (Google Fonts); icons: Material Symbols Outlined
+- Data pipeline: Python 3.11 on GitHub Actions
+- Hosting: GitHub Pages

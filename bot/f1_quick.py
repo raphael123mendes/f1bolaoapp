@@ -1,6 +1,6 @@
 """
-F1 Fantasy Quick Standings — Automated WhatsApp Bot
-=====================================================
+F1 Fantasy Quick Standings — live results bot
+==============================================
 - Auto-detects current race from the F1 Fantasy schedule feed
 - Fetches per-team data from /services/user/opponentteam/ endpoints:
     opponentgamedayplayerteamget → picks with iscaptain, ismgcaptain, gdpoints
@@ -9,29 +9,24 @@ F1 Fantasy Quick Standings — Automated WhatsApp Bot
     where: captain_mult  = 2 if iscaptain,   else 1
            megacap_mult  = 3 if ismgcaptain, else 1  (stacks: both = 6x)
            no_neg_factor = 0 if No Negative card AND component < 0, else 1
-- Sends WhatsApp standings only when scores change, or once 60min after session ends
-- After each final (post-race) send, exports three JSON files to a data repo:
+- Publishes live/*.json for the website only when scores change, and once more
+  after the session ends (final):
     picks.json      → one row per pick per team per race
     breakdowns.json → one row per scoring category per pick per team per race
-    races.json      → full season calendar (from races.json config)
+    (races.json for the website is generated from calendar/<season>.json)
 - Runs on GitHub Actions — no laptop needed
 
 FILES NEEDED (same folder):
   f1_quick.py           <- this script
-  f1_image.py           <- PNG card generator
   config.json           <- your settings
   cookie.txt            <- your F1 Fantasy session cookie
-  f1_2026_schedule.json <- race calendar
-  races.json            <- season calendar for JSON export
+  ../calendar/<season>.json <- master race calendar (season set in ../config.json)
   last_standings.json   <- auto-created, tracks last sent standings
 
 config.json format:
 {
   "league_id":   "1692401",
   "league_name": "Bolão F1",
-  "whatsapp": [
-    {"phone": "+971565256000", "apikey": "6999974"}
-  ],
   "data_repo": {
     "owner": "your-github-username",
     "repo":  "your-data-repo-name",
@@ -63,21 +58,14 @@ def load_config():
 CONFIG        = load_config()
 LEAGUE_ID     = CONFIG["league_id"]
 LEAGUE_NAME   = CONFIG["league_name"]
-WA_RECIPIENTS = CONFIG["whatsapp"]
 NICKNAMES     = CONFIG.get("nicknames", {})
-# DATA_REPO removed — using GITHUB_TOKEN + GITHUB_REPOSITORY (auto-set by Actions)
 
-RACES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "races.json")
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+import season   # master calendar: calendar/<season>.json (season set in config.json)
 
 BASE_FEEDS    = "https://fantasy.formula1.com/feeds"
 BASE_SERVICES = "https://fantasy.formula1.com/services/user"
 
-# ── Meta WhatsApp API credentials (from GitHub Secrets / env vars) ─
-META_PHONE_ID = os.environ.get("WA_PHONE_NUMBER_ID", "")
-META_TOKEN    = os.environ.get("WA_ACCESS_TOKEN", "")
-META_TO_PHONE = os.environ.get("WA_TO_PHONE", "")
-META_API_URL  = "https://graph.facebook.com/v21.0"
-IMG_PATH      = os.path.join(os.path.dirname(os.path.abspath(__file__)), "standings_card.png")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
@@ -104,6 +92,19 @@ def load_cookie():
 COOKIE = load_cookie()
 AUTH_HEADERS = {**HEADERS, "Cookie": COOKIE} if COOKIE else None
 
+
+class CookieExpired(Exception):
+    """F1 Fantasy rejected the session cookie (HTTP 401/403)."""
+
+
+def cookie_expired_exit(detail=""):
+    print("\n" + "!" * 60)
+    print("  F1 FANTASY COOKIE EXPIRED OR INVALID" + (f" ({detail})" if detail else ""))
+    print("  Nothing was published. Refresh the F1_COOKIE secret")
+    print("  (Actions -> F1 Refresh Cookie, or paste a new cookie manually).")
+    print("!" * 60)
+    sys.exit(2)
+
 FLAG_MAP = {
     "Australia":      "🇦🇺", "China":          "🇨🇳", "Japan":          "🇯🇵",
     "Bahrain":        "🇧🇭", "Saudi Arabia":   "🇸🇦", "United States":  "🇺🇸",
@@ -113,6 +114,7 @@ FLAG_MAP = {
     "Azerbaijan":     "🇦🇿", "Singapore":      "🇸🇬", "Mexico":         "🇲🇽",
     "Brazil":         "🇧🇷", "UAE":            "🇦🇪", "Abu Dhabi":      "🇦🇪",
     "Qatar":          "🇶🇦", "Las Vegas":      "🇺🇸", "Miami":          "🇺🇸",
+    "Malaysia":       "🇲🇾",
 }
 
 CARD_FIELDS = {
@@ -177,18 +179,16 @@ def parse_iso(dt_str):
 
 def get_current_race():
     """
-    Reads f1_2026_schedule.json and returns the most relevant
+    Reads the master calendar (calendar/<season>.json) and returns the most relevant
     is_competitive session (qualifying, sprint, race).
     Window: 30 min before session start → 2 hours after session start.
     Cancelled rounds are skipped automatically.
     """
-    schedule_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f1_2026_schedule.json")
-    if not os.path.exists(schedule_file):
-        print("  ERROR: f1_2026_schedule.json not found!")
+    try:
+        schedule = season.load_calendar()
+    except Exception as e:
+        print(f"  ERROR: {e}")
         return None, None
-
-    with open(schedule_file, encoding="utf-8") as f:
-        schedule = json.load(f)
 
     now          = datetime.now(timezone.utc)
     SCORED_TYPES = ("qualifying", "sprint", "race")
@@ -197,7 +197,7 @@ def get_current_race():
     for r in schedule["rounds"]:
         if r.get("cancelled"):
             continue
-        country = r.get("location", "")
+        country = r.get("country") or r.get("location", "")
         flag    = next((v for k, v in FLAG_MAP.items() if k.lower() in country.lower()), "🏁")
 
         # ── GAMEDAY ID FIX ────────────────────────────────────────────────
@@ -210,7 +210,7 @@ def get_current_race():
         if "gameday_id" not in r:
             print(f"  WARNING: round {r['round']} ({r.get('name','?')}) has no "
                   f"'gameday_id' field — using round number as fallback. "
-                  f"Update f1_2026_schedule.json if races were cancelled!")
+                  f"Update calendar/{schedule.get('season')}.json if races were cancelled!")
 
         for s in r["sessions"]:
             if s["session_type"] not in SCORED_TYPES:
@@ -306,7 +306,7 @@ def validate_gameday_id(race):
         print(f"     F1 Fantasy API reports live_gd={live_gd}, last_gd={last_gd}")
         print(f"     Difference: {diff:+d}  (likely {abs(diff)} cancelled race(s) shifted IDs)")
         print(f"     → Auto-correcting to gameday_id={nearest} for this run")
-        print(f"     → ACTION REQUIRED: update 'gameday_id' in f1_2026_schedule.json\n")
+        print(f"     → ACTION REQUIRED: update 'gameday_id' in calendar/<season>.json\n")
         return nearest
 
     except Exception as e:
@@ -413,7 +413,7 @@ def scores_changed(race, results, last_state):
         print("  Standings changed — will send.")
         return True
 
-    print("  Standings unchanged — skipping WhatsApp.")
+    print("  Standings unchanged — nothing to publish.")
     return False
 
 
@@ -477,6 +477,12 @@ def get_team_details(gameday_id, user_guid, team_no=1):
         }
         return gdpoints, picks, cards, team_info
 
+    except requests.HTTPError as e:
+        code = e.response.status_code if e.response is not None else None
+        if code in (401, 403):
+            raise CookieExpired(f"HTTP {code} on team details")
+        print(f"    WARNING: could not fetch team details for {user_guid}: {e}")
+        return None, [], {}, {}
     except Exception as e:
         print(f"    WARNING: could not fetch team details for {user_guid}: {e}")
         return None, [], {}, {}
@@ -515,10 +521,8 @@ def sessions_started_for(race):
     """Scored session types of this round that have already started (from the schedule)."""
     if not race:
         return []
-    schedule_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f1_2026_schedule.json")
     try:
-        with open(schedule_file, encoding="utf-8") as f:
-            rounds = json.load(f)["rounds"]
+        rounds = season.load_calendar()["rounds"]
         rnd = next(r for r in rounds if r["round"] == race["meeting_number"])
     except Exception:
         return [race.get("session_type", "race")]
@@ -584,8 +588,8 @@ def get_standings(gameday_id, score=0, race=None):
 
     lv = get(f"{BASE_FEEDS}/live/mixapi.json?buster={buster()}")["Value"]["lv"]
 
-    player_names     = {}   # pid -> full display name  (for JSON export + WhatsApp fallback)
-    player_tlas      = {}   # pid -> TLA                 (for WhatsApp message display)
+    player_names     = {}   # pid -> full display name  (for JSON export)
+    player_tlas      = {}   # pid -> TLA                 (short driver code)
     player_skills    = {}   # pid -> 1 (Driver) | 2 (Constructor)
     try:
         drivers_data = get(f"{BASE_FEEDS}/drivers/1_en.json?buster={buster()}")
@@ -763,6 +767,12 @@ def get_standings(gameday_id, score=0, race=None):
             "season_rank":  season_rank,
         })
 
+    empty = [t["user_name"] for t in results if not t["pick_details"]]
+    if results and len(empty) == len(results):
+        cookie_expired_exit("no team data returned for any player")
+    if empty:
+        print(f"  WARNING: no team data for: {', '.join(empty)} - publishing the others")
+
     results.sort(key=lambda x: x["points"], reverse=True)
 
     for i, t in enumerate(results):
@@ -776,171 +786,7 @@ def get_standings(gameday_id, score=0, race=None):
     return results, lv
 
 
-# ── Step 6: Build & send WhatsApp message ────────────────────────
-
-def build_message(race, results, mode="live"):
-    now_str = datetime.now(timezone.utc).strftime("%H:%M UTC")
-    session_label = {"race": "Race", "qualifying": "Qualifying",
-                     "sprint": "Sprint"}.get(race["session_type"], race["session_type"].title())
-    status_tag = "🏁 Final" if mode == "post_race" else "⏱ Live"
-
-    lines = [
-        f"{race['flag']} {race['meeting_name']} — R{race['meeting_number']} {session_label}",
-        f"{status_tag} | {now_str} | {LEAGUE_NAME}",
-        "",
-    ]
-
-    for t in results:
-        card_str = ""
-        if t["cards"]:
-            card_str = " | " + ", ".join(t["cards"].keys())
-        rank_str = f"({t['rank']:02d})"
-
-        picks_sorted = sorted(
-            t.get("pick_details", []),
-            key=lambda p: (0 if p["ismgcaptain"] else 1 if p["iscaptain"] else 2 if p["skill"] == 1 else 3)
-        )
-        picks_str = " ".join(
-            (p["tla"] + "*MC" if p["ismgcaptain"] else
-             p["tla"] + "*C"  if p["iscaptain"]   else
-             p["tla"])
-            for p in picks_sorted
-        )
-
-        display_name = t.get("display_name", t["user_name"])
-        lines.append(
-            f"{rank_str} {display_name} {int(t['points'])}pts"
-            + (f" | {picks_str}" if picks_str else "")
-            + card_str
-        )
-
-    footer = "🏁 Final standings." if mode == "post_race" else "Updates when scores change."
-    lines += ["", footer]
-    body = "\n".join(lines)
-    return f"```\n{body}\n```"
-
-
-def send_whatsapp(message):
-    for recipient in WA_RECIPIENTS:
-        phone  = recipient["phone"]
-        apikey = recipient["apikey"]
-        try:
-            r = requests.get(
-                "https://api.callmebot.com/whatsapp.php",
-                params={"phone": phone, "text": message, "apikey": apikey},
-                timeout=15
-            )
-            if r.status_code == 200:
-                print(f"  WhatsApp sent to {phone}")
-            else:
-                print(f"  WhatsApp failed for {phone}: {r.text[:100]}")
-            time.sleep(2)
-        except Exception as e:
-            print(f"  WhatsApp error for {phone}: {e}")
-
-
-# ── Step 7: Generate PNG card ─────────────────────────────────────
-
-def generate_image(race, results, mode="live"):
-    """Generate standings PNG via f1_image.py. Returns path or None."""
-    try:
-        from f1_image import generate_standings_image, apply_nicknames
-        results_with_names = apply_nicknames(results, NICKNAMES)
-        is_live = (mode == "live")
-        img_path = generate_standings_image(race, results_with_names, LEAGUE_NAME, output_path=IMG_PATH, is_live=is_live)
-        print(f"  PNG generated: {img_path}")
-
-        # Also copy a separate version for the website, so the WhatsApp
-        # image and the website image can be chosen independently.
-        try:
-            import shutil
-            repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-            web_path  = os.path.join(repo_root, "live", "live_standings_card.png")
-            os.makedirs(os.path.dirname(web_path), exist_ok=True)
-            shutil.copy(img_path, web_path)
-            print(f"  PNG copied for website: {web_path}")
-        except Exception as e:
-            print(f"  WARNING: could not copy PNG for website: {e}")
-
-        return img_path
-    except Exception as e:
-        print(f"  WARNING: could not generate PNG: {e}")
-        return None
-
-
-# ── Step 8: Send PNG via Meta WhatsApp API ────────────────────────
-
-def upload_image_meta(img_path):
-    """Upload PNG to Meta media endpoint. Returns media_id or None."""
-    if not all([META_PHONE_ID, META_TOKEN, META_TO_PHONE]):
-        print("  WARNING: Meta credentials missing — skipping image send.")
-        return None
-    if not os.path.exists(img_path):
-        print(f"  WARNING: PNG not found at {img_path} — skipping image send.")
-        return None
-    print(f"  Uploading image ({os.path.getsize(img_path)} bytes)...")
-    url = f"{META_API_URL}/{META_PHONE_ID}/media"
-    try:
-        with open(img_path, "rb") as f:
-            r = requests.post(
-                url,
-                headers={"Authorization": f"Bearer {META_TOKEN}"},
-                files={"file": ("standings_card.png", f, "image/png")},
-                data={"messaging_product": "whatsapp"},
-                timeout=30,
-            )
-        if r.status_code == 200:
-            media_id = r.json().get("id")
-            print(f"  Upload OK — media_id: {media_id}")
-            return media_id
-        print(f"  Upload failed ({r.status_code}): {r.text[:200]}")
-        return None
-    except Exception as e:
-        print(f"  Upload error: {e}")
-        return None
-
-
-def send_image_meta(media_id, caption=""):
-    """Send image message via Meta API using media_id."""
-    url = f"{META_API_URL}/{META_PHONE_ID}/messages"
-    payload = {
-        "messaging_product": "whatsapp",
-        "to":   META_TO_PHONE,
-        "type": "image",
-        "image": {"id": media_id, "caption": caption},
-    }
-    try:
-        r = requests.post(
-            url,
-            headers={
-                "Authorization": f"Bearer {META_TOKEN}",
-                "Content-Type":  "application/json",
-            },
-            json=payload,
-            timeout=15,
-        )
-        if r.status_code == 200:
-            msg_id = r.json().get("messages", [{}])[0].get("id", "?")
-            print(f"  Image sent via Meta — message_id: {msg_id}")
-            return True
-        print(f"  Image send failed ({r.status_code}): {r.text[:200]}")
-        return False
-    except Exception as e:
-        print(f"  Image send error: {e}")
-        return False
-
-
-def send_whatsapp_image(img_path, caption="F1 Fantasy Standings"):
-    """Full flow: upload PNG to Meta then send as WhatsApp image."""
-    print("\n[Meta Image]")
-    media_id = upload_image_meta(img_path)
-    if media_id:
-        send_image_meta(media_id, caption=caption)
-
-
-
-# ── JSON export helpers ───────────────────────────────────────────
-
+# Card codes → names shown on the website (e.g. "Extra DRS (GD13)")
 CARD_LABEL_MAP = {
     "NoNeg":     "No Negative",
     "Auto":      "Autopilot",
@@ -1089,162 +935,52 @@ def build_breakdowns_rows(race, results, lv, gameday_id):
     return rows
 
 
-def load_races_json(token="", owner="", repo="", branch="main"):
-    """
-    Load races.json — tries local disk first, then the data repo, then races.json
-    uploaded alongside the script (RACES_FILE). Returns [] if all fail.
-    """
-    # 1. Try local file next to script (fastest, works in dev)
-    if os.path.exists(RACES_FILE):
-        with open(RACES_FILE, encoding="utf-8") as f:
+LIVE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "live")
+
+
+def _read_live(filename):
+    path = os.path.join(LIVE_DIR, filename)
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, encoding="utf-8") as f:
             return json.load(f)
-    # 2. Try fetching from data repo if credentials available
-    if all([token, owner, repo]):
-        data = _fetch_json_from_repo(owner, repo, branch, "races.json", token)
-        if data:
-            return data
-    print(f"  WARNING: races.json not found locally or in repo — races will be empty")
-    return []
-
-
-def push_json_to_repo(filename, data):
-    """
-    Upsert live/{filename} in the current repo via the GitHub Contents API.
-    Uses GITHUB_TOKEN (auto-provided by Actions) — no PAT or secret needed.
-    GITHUB_REPOSITORY and GITHUB_REF_NAME are set automatically by Actions.
-    """
-    token   = os.environ.get("GITHUB_TOKEN", "")
-    gh_repo = os.environ.get("GITHUB_REPOSITORY", "")
-    branch  = os.environ.get("GITHUB_REF_NAME", "main")
-
-    if not all([token, gh_repo]):
-        print(f"  WARNING: GITHUB_TOKEN/GITHUB_REPOSITORY missing — skipping {filename}")
-        return False
-
-    owner, repo = gh_repo.split("/", 1)
-    api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/live/{filename}"
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Accept":        "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-    }
-
-    # Check if file exists to get its SHA (required for updates)
-    sha = None
-    try:
-        r = requests.get(api_url, headers=headers, params={"ref": branch}, timeout=15)
-        if r.status_code == 200:
-            sha = r.json().get("sha")
     except Exception as e:
-        print(f"  WARNING: could not check existing file {filename}: {e}")
+        print(f"  WARNING: could not read {path}: {e} - starting fresh")
+        return []
 
-    import base64
-    content_bytes = json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
-    content_b64   = base64.b64encode(content_bytes).decode("ascii")
 
-    payload = {
-        "message": f"data update: live/{filename} [skip ci]",
-        "content": content_b64,
-        "branch":  branch,
-    }
-    if sha:
-        payload["sha"] = sha
-
-    try:
-        r = requests.put(api_url, headers=headers, json=payload, timeout=30)
-        if r.status_code in (200, 201):
-            print(f"  Pushed live/{filename} to {owner}/{repo} ({r.status_code})")
-            return True
-        print(f"  ERROR pushing {filename}: {r.status_code} {r.text[:200]}")
-        return False
-    except Exception as e:
-        print(f"  ERROR pushing {filename}: {e}")
-        return False
+def _write_live(filename, rows):
+    os.makedirs(LIVE_DIR, exist_ok=True)
+    path = os.path.join(LIVE_DIR, filename)
+    tmp = path + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(rows, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, path)   # atomic: never leaves a half-written file
+    print(f"  wrote live/{filename} ({len(rows)} rows)")
 
 
 def export_json_data(race, results, lv, gameday_id, last_state=None):
     """
-    Build picks, breakdowns and races rows for this race, then
-    load the existing JSON files from the data repo (if reachable),
-    append the new rows, and push back.
-    Runs every time the script sends — live and post-race alike.
+    Build results / picks / breakdowns rows for this race and write them to
+    live/*.json (replacing earlier rows of the same race). The workflow then
+    commits all live files together in ONE commit.
     """
-    print("\n[JSON Export] Building picks and breakdowns...")
-
-    token   = os.environ.get("GITHUB_TOKEN", "")
-    gh_repo = os.environ.get("GITHUB_REPOSITORY", "")
-    branch  = os.environ.get("GITHUB_REF_NAME", "main")
-    owner, repo = gh_repo.split("/", 1) if gh_repo else ("", "")
-
-    # Diagnostics — helps catch empty results or missing cookie early
+    print("\n[JSON Export] Building live JSON files...")
     print(f"  teams in results: {len(results)}")
     for t in results:
-        print(f"    {t['user_name']} — {len(t.get('pick_details', []))} picks, {int(t['points'])}pts")
+        print(f"    {t['user_name']} - {len(t.get('pick_details', []))} picks, {int(t['points'])}pts")
 
     new_picks      = build_picks_rows(race, results)
     new_breakdowns = build_breakdowns_rows(race, results, lv, gameday_id)
     new_results    = build_results_rows(race, results, last_state)
-    races_data     = load_races_json(token, owner, repo, branch)
-
-    print(f"  picks rows      : {len(new_picks)}")
-    print(f"  breakdown rows  : {len(new_breakdowns)}")
-    print(f"  results rows    : {len(new_results)}")
-    print(f"  races rows      : {len(races_data)}")
-
-    if not all([token, gh_repo]):
-        print("  WARNING: GITHUB_TOKEN not available — saving JSON locally only.")
-        _save_local("picks.json",      new_picks)
-        _save_local("breakdowns.json", new_breakdowns)
-        _save_local("results.json",    new_results)
-        _save_local("races.json",      races_data)
-        return
-
-    # Fetch existing data from repo and append new rows
-    existing_picks      = _fetch_json_from_repo(owner, repo, branch, "picks.json",      token) or []
-    existing_breakdowns = _fetch_json_from_repo(owner, repo, branch, "breakdowns.json", token) or []
-    existing_results    = _fetch_json_from_repo(owner, repo, branch, "results.json",    token) or []
 
     race_num = race["meeting_number"]
-    # Remove any existing rows for this race (re-run safety)
-    existing_picks      = [r for r in existing_picks      if r.get("race_number") != race_num]
-    existing_breakdowns = [r for r in existing_breakdowns if r.get("race_number") != race_num]
-    existing_results    = [r for r in existing_results    if r.get("race_number") != race_num]
-
-    push_json_to_repo("picks.json",      existing_picks      + new_picks)
-    push_json_to_repo("breakdowns.json", existing_breakdowns + new_breakdowns)
-    push_json_to_repo("results.json",    existing_results    + new_results)
-    push_json_to_repo("races.json",      races_data)
-
-
-def _fetch_json_from_repo(owner, repo, branch, filename, token):
-    """Fetch and decode a JSON file from the data repo. Returns parsed list or None."""
-    import base64
-    api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/live/{filename}"
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Accept":        "application/vnd.github+json",
-        "X-GitHub-Api-Version": "2022-11-28",
-    }
-    try:
-        r = requests.get(api_url, headers=headers, params={"ref": branch}, timeout=15)
-        if r.status_code == 200:
-            content = base64.b64decode(r.json()["content"]).decode("utf-8")
-            return json.loads(content)
-        if r.status_code == 404:
-            return []   # file doesn't exist yet — that's fine
-        print(f"  WARNING: could not fetch {filename}: {r.status_code}")
-        return None
-    except Exception as e:
-        print(f"  WARNING: error fetching {filename}: {e}")
-        return None
-
-
-def _save_local(filename, data):
-    """Fallback: write JSON file next to the script."""
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), filename)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    print(f"  Saved locally: {path}")
+    for filename, new_rows in (("results.json",    new_results),
+                               ("picks.json",      new_picks),
+                               ("breakdowns.json", new_breakdowns)):
+        kept = [r for r in _read_live(filename) if r.get("race_number") != race_num]
+        _write_live(filename, kept + new_rows)
 
 
 # ── Main ──────────────────────────────────────────────────────────
@@ -1312,7 +1048,10 @@ def main():
 
     # ── 3. Fetch standings ────────────────────────────────────────
     print("\n[3/5] Fetching standings...")
-    results, lv = get_standings(race["gameday_id"], score, race)
+    try:
+        results, lv = get_standings(race["gameday_id"], score, race)
+    except CookieExpired as e:
+        cookie_expired_exit(str(e))
     for t in results:
         cards_str = f" [{', '.join(t['cards'].keys())}]" if t["cards"] else ""
         print(f"  {t['rank']}. {t['user_name']} ({t['team_name']}) — "
@@ -1323,33 +1062,14 @@ def main():
     should_send = force or mode == "post_race" or scores_changed(race, results, last_state)
 
     if not should_send:
-        print("  No changes — skipping WhatsApp and PNG generation.")
+        print("  No changes — nothing to publish.")
         return
-
-    # ── 5. Generate PNG ──────────────────────────────────────────
-    print("\n[5/6] Generating standings image...")
-    img_path = generate_image(race, results, mode=mode)
-
-    # ── 6. Send WhatsApp text + image ────────────────────────────
-    print("\n[6/6] Sending WhatsApp...")
-    message = build_message(race, results, mode=mode)
-    print("\nMESSAGE PREVIEW:")
-    print("-" * 40)
-    print(message)
-    print("-" * 40)
-    send_whatsapp(message)
-
-    if img_path:
-        caption = f"F1 Fantasy Standings — {race['meeting_name']} {race['session_type'].title()}"
-        send_whatsapp_image(img_path, caption=caption)
-    else:
-        print("  No PNG — skipping image send.")
 
     # Save state — mark post_race_sent if this was the final send
     save_state(race, results, post_race_sent=(mode == "post_race"))
 
     # ── 7. Export JSON data to data repo (live + final) ─────────
-    print("\n[7/7] Exporting JSON data to data repo...")
+    print("\n[5/5] Exporting JSON data for the website...")
     export_json_data(race, results, lv, race["gameday_id"], last_state=last_state)
 
     print("\nDone!")

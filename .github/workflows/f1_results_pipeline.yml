@@ -1,6 +1,7 @@
 name: F1 Results Pipeline
 
 # Triggered manually from the GitHub UI or mobile app.
+# Never overlaps with itself (two runs would race on the push).
 # Go to: Actions → F1 Results Pipeline → Run workflow
 on:
   workflow_dispatch:
@@ -9,6 +10,10 @@ on:
         description: "Race number override (e.g. 3). Leave blank to auto-detect."
         required: false
         default: ""
+
+concurrency:
+  group: f1-results-pipeline
+  cancel-in-progress: false
 
 jobs:
   results:
@@ -27,25 +32,15 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests openpyxl gspread oauth2client
+        run: pip install requests
 
       - name: Prepare cookie
         env:
           F1_COOKIE: ${{ secrets.F1_COOKIE }}
         run: echo "$F1_COOKIE" > results_SC/cookie.txt
 
-      - name: Write Google credentials
-        env:
-          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
-        run: |
-          if [ -n "$GOOGLE_CREDENTIALS" ]; then
-            echo "$GOOGLE_CREDENTIALS" > results_SC/google_credentials.json
-          fi
-
       - name: Prepare data folder
-        run: |
-          mkdir -p results_SC/data
-          cp results_SC/f1_2026_schedule.json results_SC/data/f1_2026_schedule.json
+        run: mkdir -p results_SC/data
 
       - name: Fetch league data
         env:
@@ -53,9 +48,9 @@ jobs:
         run: |
           cd results_SC
           if [ -n "${{ github.event.inputs.race_number }}" ]; then
-            python run_all.py --no-image --race ${{ github.event.inputs.race_number }}
+            python run_all.py --race ${{ github.event.inputs.race_number }}
           else
-            python run_all.py --no-image
+            python run_all.py
           fi
 
       - name: Build final JSON files
@@ -70,6 +65,12 @@ jobs:
           for f in races prices results picks breakdowns; do
             [ -f results_SC/data/${f}.json ] && cp results_SC/data/${f}.json ./${f}.json && echo "Copied ${f}.json"
           done
+
+      - name: Check against F1 Fantasy
+        continue-on-error: true   # warns only, never blocks publishing
+        run: |
+          cd results_SC
+          python validate.py ../results.json
 
       - name: Commit and push
         run: |

@@ -514,15 +514,14 @@ async function loadStatic() {
 }
 
 async function loadLive() {
-  const [results, picks, prices] = await Promise.all([
+  // Live mode has no new prices (they only change after the race) → keep static PRICES
+  const [results, picks] = await Promise.all([
     tryFetch(LIVE_BASE + 'results.json'),
     tryFetch(LIVE_BASE + 'picks.json'),
-    tryFetch(LIVE_BASE + 'prices.json'),
   ]);
   if (!results || results.length === 0) return false;
   RESULTS = results;
   if (picks)  PICKS  = picks;
-  if (prices) PRICES = prices;
   return true;
 }
 

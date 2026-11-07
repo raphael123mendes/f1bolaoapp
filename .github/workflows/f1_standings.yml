@@ -18,6 +18,11 @@ on:
         required: false
         default: ""
 
+# Never run two live updates at the same time (they would race on the push)
+concurrency:
+  group: f1-live-standings
+  cancel-in-progress: false
+
 jobs:
   standings:
     runs-on: ubuntu-latest
@@ -35,27 +40,23 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: |
-          pip install requests playwright
-          playwright install --with-deps chromium
+        run: pip install requests
 
       - name: Run F1 standings bot
         env:
           FORCE_RUN:          ${{ github.event.inputs.force_run || '0' }}
           FORCE_ROUND:        ${{ github.event.inputs.force_round || '' }}
-          WA_PHONE_NUMBER_ID: ${{ secrets.WA_PHONE_NUMBER_ID }}
-          WA_ACCESS_TOKEN:    ${{ secrets.WA_ACCESS_TOKEN }}
-          WA_TO_PHONE:        ${{ secrets.WA_TO_PHONE }}
-          GITHUB_TOKEN:       ${{ secrets.GITHUB_TOKEN }}
           F1_COOKIE:          ${{ secrets.F1_COOKIE }}
         run: python bot/f1_quick.py
 
-      - name: Commit state and image
-        if: always()
+      # One commit per run with all live files + bot state (only if something changed)
+      - name: Commit live data
+        if: success()
         run: |
           git config user.name "F1 Bot"
           git config user.email "f1bot@github.com"
-          [ -f bot/last_standings.json ]       && git add bot/last_standings.json       || true
-          [ -f bot/standings_card.png ]        && git add bot/standings_card.png        || true
-          [ -f live/live_standings_card.png ]  && git add live/live_standings_card.png  || true
-          git diff --staged --quiet || (git commit -m "standings update [skip ci]" && git pull --rebase && git push)
+          git add live/*.json bot/last_standings.json 2>/dev/null || true
+          git diff --staged --quiet && { echo "Nothing changed"; exit 0; }
+          git commit -m "live update [skip ci]"
+          for i in 1 2 3; do git pull --rebase && git push && exit 0; sleep 5; done
+          exit 1

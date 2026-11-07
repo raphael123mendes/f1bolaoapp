@@ -8,13 +8,10 @@ Steps:
   1. f1_fantasy_league.py   → fetch league standings → race_NN_*.json
   2. f1_price_tracker.py    → fetch price changes   → prices_master.json
   3. f1_teamvalue_tracker.py→ fetch team values     → teamvalue_master.json
-  4. f1_image_card.py       → generate standings PNG
-  5. f1_whatsapp_sender.py  → send image via WhatsApp (optional)
 
 USAGE:
   python run_all.py              # run all steps
-  python run_all.py --no-whatsapp  # skip WhatsApp send
-  python run_all.py --image-only   # only regenerate image (skip fetching)
+  python run_all.py --race 3     # force a specific race
 
 LOGS:
   Written to SCRIPT_DIR/logs/run_YYYY-MM-DD_HH-MM.log
@@ -169,9 +166,6 @@ def print_summary(results, total_time):
 
 def main():
     parser = argparse.ArgumentParser(description="F1 Fantasy Pipeline Runner")
-    parser.add_argument("--no-whatsapp",  action="store_true", help="Skip WhatsApp send step")
-    parser.add_argument("--image-only",   action="store_true", help="Only run image generation (skip data fetch)")
-    parser.add_argument("--no-image",     action="store_true", help="Skip image generation and WhatsApp")
     parser.add_argument("--race",         type=int, default=None, metavar="N", help="Override round/race number (e.g. --race 3)")
     args = parser.parse_args()
 
@@ -187,68 +181,36 @@ def main():
     log_section("F1 FANTASY PIPELINE  —  " + datetime.now().strftime("%Y-%m-%d %H:%M"))
     log(f"  League     : {cfg.get('league_name', '?')}  (ID {cfg.get('league_id', '?')})")
     log(f"  Save folder: {cfg.get('save_folder', '?')}")
-    log(f"  WhatsApp   : {'enabled' if cfg.get('enable_whatsapp') and not args.no_whatsapp else 'disabled'}")
-    log(f"  Image      : {'enabled' if cfg.get('enable_image') and not args.no_image else 'disabled'}")
-    log(f"  Mode       : {'image-only' if args.image_only else 'full pipeline'}")
 
     results = []
 
     # ── Step 1: Fetch league standings ────────────────────────────
-    if not args.image_only:
-        r = run_step("Fetch League Standings", "f1_fantasy_league")
-        results.append(r)
-        if not r.success:
-            log("⛔ Aborting pipeline — standings fetch failed.", level="ERROR")
-            print_summary(results, time.time() - pipeline_start)
-            _close_log()
-            sys.exit(1)
+    r = run_step("Fetch League Standings", "f1_fantasy_league")
+    results.append(r)
+    if not r.success:
+        log("⛔ Aborting pipeline — standings fetch failed.", level="ERROR")
+        print_summary(results, time.time() - pipeline_start)
+        _close_log()
+        sys.exit(1)
 
     # ── Step 2: Fetch price changes ───────────────────────────────
-    if not args.image_only:
-        r = run_step("Fetch Price Changes", "f1_price_tracker")
-        results.append(r)
-        if not r.success:
-            log("⚠  Price fetch failed — continuing without price data.", level="WARN")
+    r = run_step("Fetch Price Changes", "f1_price_tracker")
+    results.append(r)
+    if not r.success:
+        log("⚠  Price fetch failed — continuing without price data.", level="WARN")
 
     # ── Step 3: Fetch team values ─────────────────────────────────
-    if not args.image_only:
-        r = run_step("Fetch Team Values", "f1_teamvalue_tracker")
-        results.append(r)
-        if not r.success:
-            log("⚠  Team value fetch failed — continuing.", level="WARN")
-
-    # ── Step 4: Generate image ────────────────────────────────────
-    if not args.no_image and cfg.get("enable_image", True):
-        r = run_step("Generate Standings Image", "f1_image_card")
-        results.append(r)
-        if not r.success:
-            log("⚠  Image generation failed — skipping WhatsApp send.", level="WARN")
-            print_summary(results, time.time() - pipeline_start)
-            _close_log()
-            sys.exit(1)
-    else:
-        log("  [SKIP] Image generation disabled.")
-
-    # ── Step 5: Send WhatsApp ─────────────────────────────────────
-    if not args.no_whatsapp and cfg.get("enable_whatsapp", True) and not args.no_image:
-        # Check sender script exists before trying
-        sender_path = os.path.join(SCRIPT_DIR, "f1_whatsapp_sender.py")
-        if os.path.exists(sender_path):
-            r = run_step("Send WhatsApp", "f1_whatsapp_sender", stop_on_fail=False)
-            results.append(r)
-            if not r.success:
-                log("⚠  WhatsApp send failed — image was saved to Drive anyway.", level="WARN")
-        else:
-            log("  [SKIP] f1_whatsapp_sender.py not found — skipping WhatsApp.", level="WARN")
-    else:
-        log("  [SKIP] WhatsApp send disabled.")
+    r = run_step("Fetch Team Values", "f1_teamvalue_tracker")
+    results.append(r)
+    if not r.success:
+        log("⚠  Team value fetch failed — continuing.", level="WARN")
 
     # ── Summary ───────────────────────────────────────────────────
     print_summary(results, time.time() - pipeline_start)
     _close_log()
 
     # Exit with error code if any critical step failed
-    failed_critical = [r for r in results if not r.success and "WhatsApp" not in r.name]
+    failed_critical = [r for r in results if not r.success]
     sys.exit(1 if failed_critical else 0)
 
 

@@ -167,9 +167,9 @@
   {
     "round": 16,
     "race_name": "Bahrain Grand Prix",
-    "location": "Kuala lampur race circuit",
-    "venue": "malasya ",
-    "race_date": "2026-10-02",
+    "location": "Kuala Lumpur, Malaysia",
+    "venue": "Kuala Lumpur Race Circuit",
+    "race_date": "2026-10-04",
     "sprint_weekend": false,
     "cancelled": false,
     "cancellation_reason": "",

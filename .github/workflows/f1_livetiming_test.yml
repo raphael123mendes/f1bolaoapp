@@ -2,7 +2,7 @@ name: F1 Live Timing Test
 
 # Run by hand DURING a session (qualifying / sprint / race).
 # Checks whether the bot can read F1's live timing basics (status, Q1/Q2/Q3,
-# lap count, flags): first with no login, then with the existing F1_COOKIE.
+# lap count, flags): with no login, with F1_COOKIE, and with F1TV_COOKIE (if set).
 # Prints a summary only — nothing is saved, no cookie value is printed.
 on:
   workflow_dispatch:
@@ -26,6 +26,7 @@ jobs:
       - run: pip install requests websocket-client
       - name: Test live timing
         env:
-          F1_COOKIE:  ${{ secrets.F1_COOKIE }}
+          F1_COOKIE:   ${{ secrets.F1_COOKIE }}
+          F1TV_COOKIE: ${{ secrets.F1TV_COOKIE }}
           LT_SECONDS: ${{ github.event.inputs.seconds || '90' }}
         run: python bot/livetiming_test.py

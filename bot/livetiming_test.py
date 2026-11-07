@@ -9,9 +9,10 @@ live timing page uses), subscribes to a few small topics and prints a summary:
   LapCount                                    current / total laps (sprint, race)
   RaceControlMessages                         latest flag / message
 
-It tries twice:
+It tries up to three times:
   1. anonymous   — no login at all
   2. with cookie — the F1 Fantasy cookie already saved as the F1_COOKIE secret
+  3. with cookie — another formula1.com login cookie saved as F1TV_COOKIE (optional)
 Nothing is saved; no cookie or token value is ever printed.
 
     LT_SECONDS=120 python bot/livetiming_test.py
@@ -135,9 +136,12 @@ def attempt(label, extra_cookie=None, seconds=60):
 if __name__ == "__main__":
     secs = int(os.environ.get("LT_SECONDS", "60"))
     anon = attempt("1) anonymous — no login", seconds=secs)
-    cookie = os.environ.get("F1_COOKIE", "").strip()
-    with_cookie = attempt("2) with the F1 Fantasy cookie (F1_COOKIE)", cookie, secs) if cookie \
-        else print("\n=== 2) skipped — F1_COOKIE not set ===")
-    print("\nSUMMARY:",
-          "anonymous works ✅ — no credentials needed" if anon else
-          "anonymous ❌; " + ("F1_COOKIE works ✅" if with_cookie else "F1_COOKIE ❌ too"))
+    results = {"anonymous": anon}
+    for n, (name, label) in enumerate((("F1_COOKIE", "the F1 Fantasy cookie"),
+                                       ("F1TV_COOKIE", "your other login cookie")), start=2):
+        cookie = os.environ.get(name, "").strip()
+        if cookie:
+            results[name] = attempt(f"{n}) with {label} ({name})", cookie, secs)
+        else:
+            print(f"\n=== {n}) skipped — {name} not set ===")
+    print("\nSUMMARY:", " | ".join(f"{k} {'✅' if v else '❌'}" for k, v in results.items()))

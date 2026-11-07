@@ -182,8 +182,13 @@
   .player-row.open .player-expanded { display: block; }
 
   .expanded-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 14px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px;
   }
+  .gap-up   { color: var(--red-dim); }
+  .gap-down { color: #4ade80; }
+  .gap-lead { color: #4ade80; }
+  .gap-name { font-size: 0.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--on-surface-30); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .expanded-grid .exp-stat-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .exp-stat-label {
     font-size: 0.5rem; font-weight: 900; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--on-surface-30);
@@ -192,9 +197,6 @@
     font-family: 'Space Grotesk', sans-serif;
     font-size: 0.9rem; font-weight: 700; margin-top: 2px;
   }
-  .trend-up { color: #4ade80; }
-  .trend-down { color: var(--red-dim); }
-  .trend-flat { color: var(--blue); }
   .prize-val { color: #4ade80; }
 
   .cards-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; align-items: center; }
@@ -430,15 +432,23 @@ function rankClass(rank) {
   if (rank === 3) return 'rank-3';
   return 'rank-other';
 }
-function trendHTML(change) {
-  if (change > 0) return `<span class="trend-up" style="display:flex;align-items:center;gap:3px"><svg width="10" height="10" viewBox="0 0 10 10"><polygon points="5,1 9,9 1,9" fill="#4ade80"/></svg><span style="font-size:.6rem;font-weight:800">+${change}</span></span>`;
-  if (change < 0) return `<span class="trend-down" style="display:flex;align-items:center;gap:3px"><svg width="10" height="10" viewBox="0 0 10 10"><polygon points="5,9 9,1 1,1" fill="#ffb4a8"/></svg><span style="font-size:.6rem;font-weight:800">${change}</span></span>`;
-  return `<span class="trend-flat" style="display:flex;align-items:center;gap:3px"><svg width="10" height="4" viewBox="0 0 10 4"><rect x="0" y="1.5" width="10" height="1.5" fill="#a6c8ff"/></svg><span style="font-size:.6rem;font-weight:800">—</span></span>`;
-}
 
 const list = document.getElementById('standings-list');
+// Players by season points, used for the gap to the player above / below
+const byPoints = [...latest].sort((a, b) => b.season_points - a.season_points);
+function gapCell(label, other, diff, cls) {
+  if (!other) return `<div><div class="exp-stat-label">${label}</div><div class="exp-stat-value dim">—</div></div>`;
+  const name = other.user_name.split(' ')[0];
+  return `<div title="${diff} pts ${cls === 'gap-up' ? 'behind' : 'ahead of'} ${other.user_name}">
+    <div class="exp-stat-label">${label} P${other.season_rank}</div>
+    <div class="exp-stat-value ${cls}">${cls === 'gap-up' ? '−' : '+'}${diff.toFixed(0)}</div>
+    <div class="gap-name">${name}</div></div>`;
+}
+
 latest.forEach((p, idx) => {
   const avgPts = (p.season_points / p.race_number).toFixed(1);
+  const pos   = byPoints.indexOf(p);
+  const above = byPoints[pos - 1], below = byPoints[pos + 1];
   const totalPrize = RESULTS.filter(r => r.user_name === p.user_name)
     .reduce((sum, r) => sum + (r.race_prize || 0), 0);
   const prize = totalPrize > 0 ? `$${totalPrize.toFixed(2)}` : '—';
@@ -482,10 +492,9 @@ latest.forEach((p, idx) => {
           <div class="exp-stat-label">Prize</div>
           <div class="exp-stat-value ${prizeClass}">${prize}</div>
         </div>
-        <div>
-          <div class="exp-stat-label">Trend</div>
-          <div class="exp-stat-value" style="display:flex;align-items:center">${trendHTML(p.rank_change)}</div>
-        </div>
+        ${above ? gapCell('▲', above, above.season_points - p.season_points, 'gap-up')
+                : `<div><div class="exp-stat-label">▲</div><div class="exp-stat-value gap-lead">Leader</div></div>`}
+        ${gapCell('▼', below, below ? p.season_points - below.season_points : 0, 'gap-down')}
       </div>
       ${hasCard ? `<div class="cards-row"><span class="cards-label">Cards:</span><span class="card-chip">${p.cards_used}</span></div>` : ''}
       <button class="view-team-btn" onclick="location.href='team.html?user=${encodeURIComponent(p.user_name)}'">

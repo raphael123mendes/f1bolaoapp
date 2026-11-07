@@ -1,0 +1,5 @@
+- name: Fetch F1 Data
+        env:
+          F1_USERNAME: ${{ secrets.F1_EMAIL }}
+          F1_PASSWORD: ${{ secrets.F1_PASSWORD }}
+        run: python scripts/fetch_f1_status.py

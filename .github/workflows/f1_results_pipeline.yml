@@ -53,18 +53,12 @@ jobs:
             python run_all.py
           fi
 
-      - name: Build final JSON files
+      - name: Build website JSON files (written to the repo root)
         env:
           F1_SAVE_FOLDER: ${{ github.workspace }}/results_SC/data
         run: |
           cd results_SC
           python build_fantasy_f1.py data
-
-      - name: Copy JSON files to repo root
-        run: |
-          for f in races prices results picks breakdowns; do
-            [ -f results_SC/data/${f}.json ] && cp results_SC/data/${f}.json ./${f}.json && echo "Copied ${f}.json"
-          done
 
       - name: Check against F1 Fantasy
         continue-on-error: true   # warns only, never blocks publishing

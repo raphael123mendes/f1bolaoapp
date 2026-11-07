@@ -188,15 +188,15 @@ The pages show the card name and the round (`R19`).
 
 ### Image paths
 All images referenced as relative paths from the root:
-- `images/portraits/{slug}.png` — driver portraits
+- `images/portraits/{slug}.webp` — driver portraits (360×360 WebP; resize new ones the same way)
 - `images/cars/{slug}.webp` — constructor car liveries
 - `images/circuits/round-XX_{venue}.svg` — circuit layouts
 
 Circuit images use venue-keyword mapping (not round number) since the image set follows a different season order than the 2026 calendar. Australian GP has no circuit image — handled gracefully.
 
 ### Known image placeholders
-- `images/portraits/arvid_lindblad.png` — placeholder (2KB), replace with real portrait
-- `images/portraits/carlos_sainz.png` — placeholder (2KB), replace with real portrait
+- `images/portraits/arvid_lindblad.webp` — placeholder, replace with real portrait
+- `images/portraits/carlos_sainz.webp` — placeholder, replace with real portrait
 
 ---
 

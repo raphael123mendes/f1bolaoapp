@@ -460,7 +460,7 @@ function driverImg(name) {
   const slug = (CONFIG.driver_slug_overrides && CONFIG.driver_slug_overrides[name])
     ? CONFIG.driver_slug_overrides[name]
     : name.toLowerCase().replace(/\s+/g,'_').replace(/[^a-z0-9_]/g,'');
-  return `images/portraits/${slug}.png`;
+  return `images/portraits/${slug}.webp`;
 }
 
 function carImg(name) {

@@ -1045,10 +1045,10 @@ function renderMVPs(raceNum) {
   }
 
   const cards = [
-    topDriver ? { cls:'driver-card', label:'Top Driver', name:topDriver[0], sub:'—', value:`${topDriver[1]} PTS`, img:`images/portraits/${driverSlug(topDriver[0])}.png`, imgCls:'mvp-thumb' } : null,
+    topDriver ? { cls:'driver-card', label:'Top Driver', name:topDriver[0], sub:'—', value:`${topDriver[1]} PTS`, img:`images/portraits/${driverSlug(topDriver[0])}.webp`, imgCls:'mvp-thumb' } : null,
     topCon    ? { cls:'constructor-card', label:'Top Constructor', name:topCon[0], sub:'', value:`${topCon[1]} PTS`, img:`images/logos/${conSlug(topCon[0])}.webp`, imgCls:'mvp-logo' } : null,
-    riser     ? { cls:'riser-card', label:'Market Riser', name:riser.player_name, sub:riser.type.toUpperCase(), value:`+${riser.price_change_pct.toFixed(1)}%`, img:riser.type==='Driver'?`images/portraits/${driverSlug(riser.player_name)}.png`:`images/logos/${conSlug(riser.player_name)}.webp`, imgCls:riser.type==='Driver'?'mvp-thumb':'mvp-logo' } : null,
-    faller    ? { cls:'faller-card', label:'Market Faller', name:faller.player_name, sub:faller.type.toUpperCase(), value:`${faller.price_change_pct.toFixed(1)}%`, img:faller.type==='Driver'?`images/portraits/${driverSlug(faller.player_name)}.png`:`images/logos/${conSlug(faller.player_name)}.webp`, imgCls:faller.type==='Driver'?'mvp-thumb':'mvp-logo' } : null,
+    riser     ? { cls:'riser-card', label:'Market Riser', name:riser.player_name, sub:riser.type.toUpperCase(), value:`+${riser.price_change_pct.toFixed(1)}%`, img:riser.type==='Driver'?`images/portraits/${driverSlug(riser.player_name)}.webp`:`images/logos/${conSlug(riser.player_name)}.webp`, imgCls:riser.type==='Driver'?'mvp-thumb':'mvp-logo' } : null,
+    faller    ? { cls:'faller-card', label:'Market Faller', name:faller.player_name, sub:faller.type.toUpperCase(), value:`${faller.price_change_pct.toFixed(1)}%`, img:faller.type==='Driver'?`images/portraits/${driverSlug(faller.player_name)}.webp`:`images/logos/${conSlug(faller.player_name)}.webp`, imgCls:faller.type==='Driver'?'mvp-thumb':'mvp-logo' } : null,
   ];
 
   cards.filter(Boolean).forEach(c => {

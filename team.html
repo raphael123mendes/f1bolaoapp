@@ -299,7 +299,7 @@ function cleanCard(c) { return c.replace(/\s*\(GD\d+x?\)\s*/i,'').trim(); }
 function cardRound(c, fallback) { const m = c.match(/\(GD(\d+)x?\)/i); return m ? +m[1] : fallback; }
 function driverImg(name) {
   const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
-  return 'images/portraits/' + slug + '.png';
+  return 'images/portraits/' + slug + '.webp';
 }
 function carImg(name) {
   const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,'');

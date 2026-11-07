@@ -417,7 +417,7 @@ async function init() {
     function imgPath(name, ptype) {
       if (ptype === 'Driver') {
         const slug = DRIVER_SLUG[name] || name.toLowerCase().replace(/ /g,'_');
-        return 'images/portraits/' + slug + '.png';
+        return 'images/portraits/' + slug + '.webp';
       }
       const slug = CON_SLUG[name] || name.toLowerCase().replace(/ f1 team/i,'').replace(/ /g,'_').replace(/_+$/,'');
       return 'images/logos/' + slug + '.webp';

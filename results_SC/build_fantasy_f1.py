@@ -4,9 +4,11 @@ Fantasy F1 – dataset builder
 Builds the website JSON files from the per-race files in results_SC/data/.
 
 Usage:
-  python build_fantasy_f1.py [data_folder]     # default: results_SC/data
+  python build_fantasy_f1.py [data_folder] [output_folder]
+      data_folder   default: results_SC/data   (race_NN_*.json, prices_master.json)
+      output_folder default: repo root         (the files the website reads)
 
-Outputs (in the data folder; the workflow copies them to the repo root):
+Outputs (written straight to the repo root — no second copy is kept):
   races.json        (generated from ../calendar/<season>.json)
   prices.json
   results.json
@@ -19,7 +21,8 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 import season   # master calendar: calendar/<season>.json (season set in config.json)
 
-FOLDER       = Path(__file__).resolve().parent / "data"
+FOLDER       = Path(__file__).resolve().parent / "data"     # inputs
+OUT_DIR      = Path(__file__).resolve().parent.parent       # repo root: website files
 
 def load_json(path):
     with open(path, encoding="utf-8") as f:
@@ -217,7 +220,8 @@ def build_data(schedule, prices_data, race_files):
 
 # ── Main ───────────────────────────────────────────────────────────────────────
 def main():
-    folder = Path(sys.argv[1]) if len(sys.argv) > 1 else FOLDER
+    folder  = Path(sys.argv[1]) if len(sys.argv) > 1 else FOLDER
+    out_dir = Path(sys.argv[2]) if len(sys.argv) > 2 else OUT_DIR
     if not folder.exists():
         print(f"ERROR: Folder not found: {folder}")
         sys.exit(1)
@@ -238,9 +242,9 @@ def main():
     data = build_data(schedule, load_json(prices_path), race_files)
 
     # ── JSON exports ───────────────────────────────────────────────────────────
-    print("Exporting JSON files...")
+    print(f"Exporting JSON files to {out_dir} ...")
     for name, rows in data.items():
-        save_json(folder / f"{name}.json", rows)
+        save_json(out_dir / f"{name}.json", rows)
 
     print("\nDone! Outputs:")
     for name, rows in data.items():

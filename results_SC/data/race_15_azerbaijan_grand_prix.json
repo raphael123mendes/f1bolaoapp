@@ -119,7 +119,14 @@
           "race overtake bonus: +3"
         ]
       }
-    ]
+    ],
+    "transfers_made": 1,
+    "transfers_allowed": 3,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -239,7 +246,14 @@
           "race overtake bonus: +7"
         ]
       }
-    ]
+    ],
+    "transfers_made": 2,
+    "transfers_allowed": 2,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -361,7 +375,14 @@
           "race overtake bonus: +7"
         ]
       }
-    ]
+    ],
+    "transfers_made": 0,
+    "transfers_allowed": 2,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -480,7 +501,14 @@
           "race overtake bonus: +7"
         ]
       }
-    ]
+    ],
+    "transfers_made": 3,
+    "transfers_allowed": 2,
+    "extra_transfers": 1,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 15,
@@ -602,7 +630,14 @@
           "race overtake bonus: +7"
         ]
       }
-    ]
+    ],
+    "transfers_made": 1,
+    "transfers_allowed": 2,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -727,7 +762,14 @@
           "race overtake bonus: +3"
         ]
       }
-    ]
+    ],
+    "transfers_made": 1,
+    "transfers_allowed": 2,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -848,7 +890,14 @@
           "race overtake bonus: +7"
         ]
       }
-    ]
+    ],
+    "transfers_made": 1,
+    "transfers_allowed": 2,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -967,7 +1016,14 @@
           "race overtake bonus: +7"
         ]
       }
-    ]
+    ],
+    "transfers_made": 0,
+    "transfers_allowed": 3,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -1089,7 +1145,14 @@
           "race overtake bonus: +3"
         ]
       }
-    ]
+    ],
+    "transfers_made": 0,
+    "transfers_allowed": 2,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -1212,7 +1275,14 @@
           "race overtake bonus: +7"
         ]
       }
-    ]
+    ],
+    "transfers_made": 1,
+    "transfers_allowed": 3,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -1332,6 +1402,13 @@
           "race overtake bonus: +14"
         ]
       }
-    ]
+    ],
+    "transfers_made": 3,
+    "transfers_allowed": 3,
+    "extra_transfers": 0,
+    "extra_transfer_cost": 10,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   }
 ]

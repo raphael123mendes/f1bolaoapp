@@ -16,7 +16,11 @@
     "cards_used": "No Negative (GD1)",
     "current_budget": 100.0,
     "new_budget": 100.5,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -35,7 +39,11 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 102.5,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -54,7 +62,11 @@
     "cards_used": "Autopilot (GD1)",
     "current_budget": 100.0,
     "new_budget": 102.9,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -73,7 +85,11 @@
     "cards_used": "Limitless (GD2)",
     "current_budget": 100.0,
     "new_budget": 102.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -92,7 +108,11 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 103.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -111,7 +131,11 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 102.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -130,7 +154,11 @@
     "cards_used": "No Negative (GD1)",
     "current_budget": 100.0,
     "new_budget": 101.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -149,7 +177,11 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 101.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -168,7 +200,11 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 101.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -187,7 +223,11 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 100.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 1,
@@ -206,7 +246,11 @@
     "cards_used": "",
     "current_budget": 100.0,
     "new_budget": 99.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -225,7 +269,11 @@
     "cards_used": "Extra DRS (GD2)",
     "current_budget": 102.5,
     "new_budget": 104.6,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -244,7 +292,11 @@
     "cards_used": "Limitless (GD2)",
     "current_budget": 102.5,
     "new_budget": 104.0,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -263,7 +315,11 @@
     "cards_used": "",
     "current_budget": 100.5,
     "new_budget": 101.4,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -282,7 +338,11 @@
     "cards_used": "",
     "current_budget": 103.1,
     "new_budget": 105.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -301,7 +361,11 @@
     "cards_used": "",
     "current_budget": 101.5,
     "new_budget": 103.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -320,7 +384,11 @@
     "cards_used": "",
     "current_budget": 102.1,
     "new_budget": 104.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -339,7 +407,11 @@
     "cards_used": "",
     "current_budget": 101.3,
     "new_budget": 103.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -358,7 +430,11 @@
     "cards_used": "",
     "current_budget": 101.1,
     "new_budget": 102.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -377,7 +453,11 @@
     "cards_used": "",
     "current_budget": 102.9,
     "new_budget": 105.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 2,
@@ -396,7 +476,11 @@
     "cards_used": "",
     "current_budget": 100.4,
     "new_budget": 100.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 2,
@@ -415,7 +499,11 @@
     "cards_used": "",
     "current_budget": 99.8,
     "new_budget": 99.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -434,7 +522,11 @@
     "cards_used": "Limitless (GD3)",
     "current_budget": 101.4,
     "new_budget": 102.9,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -453,7 +545,11 @@
     "cards_used": "",
     "current_budget": 104.6,
     "new_budget": 106.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -472,7 +568,11 @@
     "cards_used": "",
     "current_budget": 103.6,
     "new_budget": 104.5,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -491,7 +591,11 @@
     "cards_used": "",
     "current_budget": 104.6,
     "new_budget": 106.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -510,7 +614,11 @@
     "cards_used": "",
     "current_budget": 103.4,
     "new_budget": 105.1,
-    "race_prize": 3.85
+    "race_prize": 3.85,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -529,7 +637,11 @@
     "cards_used": "",
     "current_budget": 105.2,
     "new_budget": 107.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -548,7 +660,11 @@
     "cards_used": "",
     "current_budget": 102.0,
     "new_budget": 102.5,
-    "race_prize": 3.85
+    "race_prize": 3.85,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -567,7 +683,11 @@
     "cards_used": "",
     "current_budget": 105.3,
     "new_budget": 105.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 3,
@@ -586,7 +706,11 @@
     "cards_used": "",
     "current_budget": 104.2,
     "new_budget": 107.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -605,7 +729,11 @@
     "cards_used": "",
     "current_budget": 100.4,
     "new_budget": 102.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 3,
@@ -624,7 +752,11 @@
     "cards_used": "",
     "current_budget": 99.8,
     "new_budget": 101.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -643,7 +775,11 @@
     "cards_used": "",
     "current_budget": 102.3,
     "new_budget": 103.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -662,7 +798,11 @@
     "cards_used": "No Negative (GD4)",
     "current_budget": 106.7,
     "new_budget": 107.2,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -681,7 +821,11 @@
     "cards_used": "Limitless (GD4)",
     "current_budget": 105.1,
     "new_budget": 106.4,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -700,7 +844,11 @@
     "cards_used": "",
     "current_budget": 104.5,
     "new_budget": 105.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -719,7 +867,11 @@
     "cards_used": "Autopilot (GD4)",
     "current_budget": 106.7,
     "new_budget": 108.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -738,7 +890,11 @@
     "cards_used": "",
     "current_budget": 105.8,
     "new_budget": 105.9,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 4,
@@ -757,7 +913,11 @@
     "cards_used": "",
     "current_budget": 102.5,
     "new_budget": 102.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -776,7 +936,11 @@
     "cards_used": "",
     "current_budget": 107.3,
     "new_budget": 110.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -795,7 +959,11 @@
     "cards_used": "",
     "current_budget": 107.5,
     "new_budget": 110.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 4,
@@ -814,7 +982,11 @@
     "cards_used": "",
     "current_budget": 101.8,
     "new_budget": 103.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 2,
+    "transfer_penalty": -20,
+    "inactive_penalty": 0,
+    "penalty_points": -20
   },
   {
     "race_number": 4,
@@ -833,7 +1005,11 @@
     "cards_used": "",
     "current_budget": 102.1,
     "new_budget": 103.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -852,7 +1028,11 @@
     "cards_used": "",
     "current_budget": 103.6,
     "new_budget": 103.7,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -871,7 +1051,11 @@
     "cards_used": "",
     "current_budget": 107.2,
     "new_budget": 106.9,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -890,7 +1074,11 @@
     "cards_used": "",
     "current_budget": 106.4,
     "new_budget": 106.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 5,
@@ -909,7 +1097,11 @@
     "cards_used": "",
     "current_budget": 105.4,
     "new_budget": 106.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -928,7 +1120,11 @@
     "cards_used": "",
     "current_budget": 108.4,
     "new_budget": 110.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -947,7 +1143,11 @@
     "cards_used": "",
     "current_budget": 105.9,
     "new_budget": 106.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -966,7 +1166,11 @@
     "cards_used": "",
     "current_budget": 102.6,
     "new_budget": 102.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -985,7 +1189,11 @@
     "cards_used": "",
     "current_budget": 110.2,
     "new_budget": 110.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -1004,7 +1212,11 @@
     "cards_used": "",
     "current_budget": 110.0,
     "new_budget": 111.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 2,
+    "transfer_penalty": -20,
+    "inactive_penalty": 0,
+    "penalty_points": -20
   },
   {
     "race_number": 5,
@@ -1023,7 +1235,11 @@
     "cards_used": "",
     "current_budget": 103.8,
     "new_budget": 104.6,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 5,
@@ -1042,7 +1258,11 @@
     "cards_used": "",
     "current_budget": 103.0,
     "new_budget": 102.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1061,7 +1281,11 @@
     "cards_used": "",
     "current_budget": 106.9,
     "new_budget": 107.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1080,7 +1304,11 @@
     "cards_used": "",
     "current_budget": 111.7,
     "new_budget": 113.4,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1099,7 +1327,11 @@
     "cards_used": "No Negative (GD6)",
     "current_budget": 110.5,
     "new_budget": 111.0,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1118,7 +1350,11 @@
     "cards_used": "",
     "current_budget": 103.7,
     "new_budget": 103.0,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1137,7 +1373,11 @@
     "cards_used": "Autopilot (GD6)",
     "current_budget": 106.7,
     "new_budget": 106.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 6,
@@ -1156,7 +1396,11 @@
     "cards_used": "",
     "current_budget": 102.3,
     "new_budget": 102.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1175,7 +1419,11 @@
     "cards_used": "",
     "current_budget": 106.9,
     "new_budget": 107.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1194,7 +1442,11 @@
     "cards_used": "",
     "current_budget": 110.5,
     "new_budget": 111.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1213,7 +1465,11 @@
     "cards_used": "",
     "current_budget": 106.8,
     "new_budget": 106.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1232,7 +1488,11 @@
     "cards_used": "",
     "current_budget": 104.6,
     "new_budget": 104.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 6,
@@ -1251,7 +1511,11 @@
     "cards_used": "",
     "current_budget": 102.1,
     "new_budget": 101.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1270,7 +1534,11 @@
     "cards_used": "",
     "current_budget": 103.0,
     "new_budget": 103.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1289,7 +1557,11 @@
     "cards_used": "",
     "current_budget": 107.8,
     "new_budget": 107.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1308,7 +1580,11 @@
     "cards_used": "",
     "current_budget": 107.2,
     "new_budget": 107.9,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1327,7 +1603,11 @@
     "cards_used": "No Negative (GD7)",
     "current_budget": 106.9,
     "new_budget": 106.6,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 7,
@@ -1346,7 +1626,11 @@
     "cards_used": "",
     "current_budget": 111.2,
     "new_budget": 112.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1365,7 +1649,11 @@
     "cards_used": "",
     "current_budget": 111.0,
     "new_budget": 111.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1384,7 +1672,11 @@
     "cards_used": "Wildcard (GD7)",
     "current_budget": 106.2,
     "new_budget": 109.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1403,7 +1695,11 @@
     "cards_used": "",
     "current_budget": 113.4,
     "new_budget": 115.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1422,7 +1718,11 @@
     "cards_used": "",
     "current_budget": 102.2,
     "new_budget": 102.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1441,7 +1741,11 @@
     "cards_used": "Limitless (GD7)",
     "current_budget": 104.8,
     "new_budget": 105.3,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 7,
@@ -1460,7 +1764,11 @@
     "cards_used": "",
     "current_budget": 101.4,
     "new_budget": 101.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1479,7 +1787,11 @@
     "cards_used": "",
     "current_budget": 103.5,
     "new_budget": 104.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1498,7 +1810,11 @@
     "cards_used": "",
     "current_budget": 107.9,
     "new_budget": 109.6,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1517,7 +1833,11 @@
     "cards_used": "",
     "current_budget": 107.5,
     "new_budget": 108.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1536,7 +1856,11 @@
     "cards_used": "",
     "current_budget": 106.6,
     "new_budget": 106.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1555,7 +1879,11 @@
     "cards_used": "",
     "current_budget": 111.9,
     "new_budget": 112.6,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1574,7 +1902,11 @@
     "cards_used": "",
     "current_budget": 112.9,
     "new_budget": 115.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1593,7 +1925,11 @@
     "cards_used": "",
     "current_budget": 109.4,
     "new_budget": 112.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1612,7 +1948,11 @@
     "cards_used": "",
     "current_budget": 115.5,
     "new_budget": 118.0,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1631,7 +1971,11 @@
     "cards_used": "",
     "current_budget": 102.3,
     "new_budget": 103.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 8,
@@ -1650,7 +1994,11 @@
     "cards_used": "",
     "current_budget": 106.2,
     "new_budget": 106.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 8,
@@ -1669,7 +2017,11 @@
     "cards_used": "",
     "current_budget": 101.9,
     "new_budget": 102.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1688,7 +2040,11 @@
     "cards_used": "Limitless (GD9)",
     "current_budget": 109.6,
     "new_budget": 110.7,
-    "race_prize": 15.4
+    "race_prize": 15.4,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1707,7 +2063,11 @@
     "cards_used": "",
     "current_budget": 104.7,
     "new_budget": 106.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1726,7 +2086,11 @@
     "cards_used": "",
     "current_budget": 108.1,
     "new_budget": 110.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1745,7 +2109,11 @@
     "cards_used": "Limitless (GD9)",
     "current_budget": 112.6,
     "new_budget": 113.7,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1764,7 +2132,11 @@
     "cards_used": "",
     "current_budget": 106.9,
     "new_budget": 107.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1783,7 +2155,11 @@
     "cards_used": "Limitless (GD9)",
     "current_budget": 103.5,
     "new_budget": 104.6,
-    "race_prize": 15.4
+    "race_prize": 15.4,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1802,7 +2178,11 @@
     "cards_used": "",
     "current_budget": 115.2,
     "new_budget": 117.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1821,7 +2201,11 @@
     "cards_used": "Final Fix (GD9)",
     "current_budget": 118.0,
     "new_budget": 120.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1840,7 +2224,11 @@
     "cards_used": "",
     "current_budget": 112.4,
     "new_budget": 114.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 2,
+    "transfer_penalty": -20,
+    "inactive_penalty": 0,
+    "penalty_points": -20
   },
   {
     "race_number": 9,
@@ -1859,7 +2247,11 @@
     "cards_used": "",
     "current_budget": 106.8,
     "new_budget": 109.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 9,
@@ -1878,7 +2270,11 @@
     "cards_used": "",
     "current_budget": 102.2,
     "new_budget": 104.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -1897,7 +2293,11 @@
     "cards_used": "",
     "current_budget": 111.9,
     "new_budget": 114.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -1916,7 +2316,11 @@
     "cards_used": "",
     "current_budget": 106.4,
     "new_budget": 108.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -1935,7 +2339,11 @@
     "cards_used": "Extra DRS (GD10)",
     "current_budget": 110.4,
     "new_budget": 112.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 10,
@@ -1954,7 +2362,11 @@
     "cards_used": "",
     "current_budget": 115.1,
     "new_budget": 118.0,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -1973,7 +2385,11 @@
     "cards_used": "Limitless (GD10)",
     "current_budget": 107.4,
     "new_budget": 108.3,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -1992,7 +2408,11 @@
     "cards_used": "",
     "current_budget": 120.7,
     "new_budget": 123.0,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -2011,7 +2431,11 @@
     "cards_used": "",
     "current_budget": 105.2,
     "new_budget": 106.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -2030,7 +2454,11 @@
     "cards_used": "",
     "current_budget": 117.7,
     "new_budget": 120.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -2049,7 +2477,11 @@
     "cards_used": "",
     "current_budget": 114.7,
     "new_budget": 117.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -2068,7 +2500,11 @@
     "cards_used": "No Negative (GD10)",
     "current_budget": 109.2,
     "new_budget": 112.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 10,
@@ -2087,7 +2523,11 @@
     "cards_used": "",
     "current_budget": 104.1,
     "new_budget": 105.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2106,7 +2546,11 @@
     "cards_used": "",
     "current_budget": 114.2,
     "new_budget": 116.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2125,7 +2569,11 @@
     "cards_used": "",
     "current_budget": 108.1,
     "new_budget": 110.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2144,7 +2592,11 @@
     "cards_used": "",
     "current_budget": 118.0,
     "new_budget": 120.5,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2163,7 +2615,11 @@
     "cards_used": "",
     "current_budget": 112.1,
     "new_budget": 114.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2182,7 +2638,11 @@
     "cards_used": "",
     "current_budget": 109.5,
     "new_budget": 111.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2201,7 +2661,11 @@
     "cards_used": "",
     "current_budget": 123.0,
     "new_budget": 125.0,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2220,7 +2684,11 @@
     "cards_used": "",
     "current_budget": 106.7,
     "new_budget": 108.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2239,7 +2707,11 @@
     "cards_used": "",
     "current_budget": 120.0,
     "new_budget": 122.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2258,7 +2730,11 @@
     "cards_used": "",
     "current_budget": 117.7,
     "new_budget": 121.0,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 11,
@@ -2277,7 +2753,11 @@
     "cards_used": "",
     "current_budget": 112.0,
     "new_budget": 114.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 11,
@@ -2296,7 +2776,11 @@
     "cards_used": "",
     "current_budget": 105.4,
     "new_budget": 107.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 12,
@@ -2315,7 +2799,11 @@
     "cards_used": "",
     "current_budget": 116.7,
     "new_budget": 117.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 12,
@@ -2334,7 +2822,11 @@
     "cards_used": "",
     "current_budget": 110.0,
     "new_budget": 112.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 12,
@@ -2353,7 +2845,11 @@
     "cards_used": "Extra DRS (GD12)",
     "current_budget": 120.5,
     "new_budget": 121.1,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 12,
@@ -2372,7 +2868,11 @@
     "cards_used": "",
     "current_budget": 114.0,
     "new_budget": 113.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 12,
@@ -2391,7 +2891,11 @@
     "cards_used": "Limitless (GD12)",
     "current_budget": 125.0,
     "new_budget": 126.1,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 12,
@@ -2410,7 +2914,11 @@
     "cards_used": "",
     "current_budget": 111.4,
     "new_budget": 111.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 12,
@@ -2429,7 +2937,11 @@
     "cards_used": "",
     "current_budget": 121.0,
     "new_budget": 123.6,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 12,
@@ -2448,7 +2960,11 @@
     "cards_used": "",
     "current_budget": 108.6,
     "new_budget": 109.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 12,
@@ -2467,7 +2983,11 @@
     "cards_used": "",
     "current_budget": 122.5,
     "new_budget": 123.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": -35,
+    "penalty_points": -35
   },
   {
     "race_number": 12,
@@ -2486,7 +3006,11 @@
     "cards_used": "",
     "current_budget": 114.6,
     "new_budget": 114.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 12,
@@ -2505,7 +3029,11 @@
     "cards_used": "",
     "current_budget": 107.1,
     "new_budget": 107.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": -35,
+    "penalty_points": -35
   },
   {
     "race_number": 13,
@@ -2524,7 +3052,11 @@
     "cards_used": "",
     "current_budget": 117.6,
     "new_budget": 119.9,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 13,
@@ -2543,7 +3075,11 @@
     "cards_used": "Extra DRS (GD13)",
     "current_budget": 127.2,
     "new_budget": 129.4,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 2,
+    "transfer_penalty": -20,
+    "inactive_penalty": 0,
+    "penalty_points": -20
   },
   {
     "race_number": 13,
@@ -2562,7 +3098,11 @@
     "cards_used": "Autopilot (GD13)",
     "current_budget": 121.1,
     "new_budget": 122.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 13,
@@ -2581,7 +3121,11 @@
     "cards_used": "",
     "current_budget": 112.1,
     "new_budget": 114.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 13,
@@ -2600,7 +3144,11 @@
     "cards_used": "",
     "current_budget": 113.9,
     "new_budget": 116.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 13,
@@ -2619,7 +3167,11 @@
     "cards_used": "",
     "current_budget": 123.6,
     "new_budget": 125.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 13,
@@ -2638,7 +3190,11 @@
     "cards_used": "",
     "current_budget": 111.8,
     "new_budget": 112.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 13,
@@ -2657,7 +3213,11 @@
     "cards_used": "",
     "current_budget": 109.7,
     "new_budget": 112.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 13,
@@ -2676,7 +3236,11 @@
     "cards_used": "",
     "current_budget": 123.0,
     "new_budget": 124.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 2,
+    "transfer_penalty": -20,
+    "inactive_penalty": 0,
+    "penalty_points": -20
   },
   {
     "race_number": 13,
@@ -2695,7 +3259,11 @@
     "cards_used": "",
     "current_budget": 114.6,
     "new_budget": 115.8,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 13,
@@ -2714,7 +3282,11 @@
     "cards_used": "",
     "current_budget": 107.6,
     "new_budget": 108.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": -25,
+    "penalty_points": -25
   },
   {
     "race_number": 14,
@@ -2733,7 +3305,11 @@
     "cards_used": "",
     "current_budget": 120.5,
     "new_budget": 121.6,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2752,7 +3328,11 @@
     "cards_used": "No Negative (GD14)",
     "current_budget": 129.4,
     "new_budget": 131.8,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2771,7 +3351,11 @@
     "cards_used": "",
     "current_budget": 122.3,
     "new_budget": 123.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2790,7 +3374,11 @@
     "cards_used": "",
     "current_budget": 114.8,
     "new_budget": 117.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 14,
@@ -2809,7 +3397,11 @@
     "cards_used": "",
     "current_budget": 116.2,
     "new_budget": 118.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2828,7 +3420,11 @@
     "cards_used": "",
     "current_budget": 112.6,
     "new_budget": 113.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2847,7 +3443,11 @@
     "cards_used": "",
     "current_budget": 125.2,
     "new_budget": 127.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 14,
@@ -2866,7 +3466,11 @@
     "cards_used": "",
     "current_budget": 112.0,
     "new_budget": 113.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2885,7 +3489,11 @@
     "cards_used": "",
     "current_budget": 124.2,
     "new_budget": 125.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2904,7 +3512,11 @@
     "cards_used": "",
     "current_budget": 115.8,
     "new_budget": 116.6,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 14,
@@ -2923,7 +3535,11 @@
     "cards_used": "",
     "current_budget": 108.9,
     "new_budget": 109.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": -25,
+    "penalty_points": -25
   },
   {
     "race_number": 15,
@@ -2942,7 +3558,11 @@
     "cards_used": "",
     "current_budget": 121.8,
     "new_budget": 124.1,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -2961,7 +3581,11 @@
     "cards_used": "",
     "current_budget": 131.8,
     "new_budget": 132.8,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -2980,7 +3604,11 @@
     "cards_used": "",
     "current_budget": 123.7,
     "new_budget": 125.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -2999,7 +3627,11 @@
     "cards_used": "",
     "current_budget": 117.1,
     "new_budget": 117.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 15,
@@ -3018,7 +3650,11 @@
     "cards_used": "No Negative (GD15)",
     "current_budget": 118.3,
     "new_budget": 119.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -3037,7 +3673,11 @@
     "cards_used": "No Negative (GD15)",
     "current_budget": 113.5,
     "new_budget": 115.2,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -3056,7 +3696,11 @@
     "cards_used": "",
     "current_budget": 127.4,
     "new_budget": 128.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -3075,7 +3719,11 @@
     "cards_used": "",
     "current_budget": 113.0,
     "new_budget": 113.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -3094,7 +3742,11 @@
     "cards_used": "",
     "current_budget": 125.6,
     "new_budget": 127.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -3113,7 +3765,11 @@
     "cards_used": "Autopilot (GD15)",
     "current_budget": 116.6,
     "new_budget": 117.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 15,
@@ -3132,7 +3788,11 @@
     "cards_used": "",
     "current_budget": 109.6,
     "new_budget": 110.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3151,7 +3811,11 @@
     "cards_used": "",
     "current_budget": 124.1,
     "new_budget": 126.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3170,7 +3834,11 @@
     "cards_used": "",
     "current_budget": 132.8,
     "new_budget": 135.4,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 2,
+    "transfer_penalty": -20,
+    "inactive_penalty": 0,
+    "penalty_points": -20
   },
   {
     "race_number": 16,
@@ -3189,7 +3857,11 @@
     "cards_used": "",
     "current_budget": 125.3,
     "new_budget": 126.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3208,7 +3880,11 @@
     "cards_used": "",
     "current_budget": 117.0,
     "new_budget": 116.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 2,
+    "transfer_penalty": -20,
+    "inactive_penalty": 0,
+    "penalty_points": -20
   },
   {
     "race_number": 16,
@@ -3227,7 +3903,11 @@
     "cards_used": "",
     "current_budget": 119.0,
     "new_budget": 120.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3246,7 +3926,11 @@
     "cards_used": "",
     "current_budget": 115.2,
     "new_budget": 116.6,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3265,7 +3949,11 @@
     "cards_used": "",
     "current_budget": 128.6,
     "new_budget": 130.6,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 16,
@@ -3284,7 +3972,11 @@
     "cards_used": "",
     "current_budget": 127.2,
     "new_budget": 127.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3303,7 +3995,11 @@
     "cards_used": "",
     "current_budget": 113.2,
     "new_budget": 113.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3322,7 +4018,11 @@
     "cards_used": "",
     "current_budget": 117.8,
     "new_budget": 118.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 16,
@@ -3341,7 +4041,11 @@
     "cards_used": "",
     "current_budget": 109.9,
     "new_budget": 110.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3360,7 +4064,11 @@
     "cards_used": "",
     "current_budget": 126.7,
     "new_budget": 129.7,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3379,7 +4087,11 @@
     "cards_used": "",
     "current_budget": 135.4,
     "new_budget": 138.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3398,7 +4110,11 @@
     "cards_used": "Wildcard (GD17)",
     "current_budget": 126.0,
     "new_budget": 128.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3417,7 +4133,11 @@
     "cards_used": "Extra DRS (GD17)",
     "current_budget": 116.8,
     "new_budget": 118.6,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 17,
@@ -3436,7 +4156,11 @@
     "cards_used": "",
     "current_budget": 130.6,
     "new_budget": 133.9,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3455,7 +4179,11 @@
     "cards_used": "",
     "current_budget": 116.6,
     "new_budget": 117.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3474,7 +4202,11 @@
     "cards_used": "",
     "current_budget": 120.2,
     "new_budget": 121.8,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3493,7 +4225,11 @@
     "cards_used": "Extra DRS (GD17)",
     "current_budget": 127.9,
     "new_budget": 129.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 17,
@@ -3512,7 +4248,11 @@
     "cards_used": "Extra DRS (GD17)",
     "current_budget": 113.3,
     "new_budget": 115.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3531,7 +4271,11 @@
     "cards_used": "",
     "current_budget": 118.3,
     "new_budget": 119.0,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 17,
@@ -3550,7 +4294,11 @@
     "cards_used": "",
     "current_budget": 110.8,
     "new_budget": 113.3,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3569,7 +4317,11 @@
     "cards_used": "",
     "current_budget": 129.7,
     "new_budget": 129.9,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3588,7 +4340,11 @@
     "cards_used": "Autopilot (GD18)",
     "current_budget": 138.4,
     "new_budget": 140.3,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 18,
@@ -3607,7 +4363,11 @@
     "cards_used": "",
     "current_budget": 128.8,
     "new_budget": 130.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3626,7 +4386,11 @@
     "cards_used": "",
     "current_budget": 118.6,
     "new_budget": 119.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3645,7 +4409,11 @@
     "cards_used": "",
     "current_budget": 133.9,
     "new_budget": 136.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": 0,
+    "penalty_points": -10
   },
   {
     "race_number": 18,
@@ -3664,7 +4432,11 @@
     "cards_used": "",
     "current_budget": 121.8,
     "new_budget": 122.4,
-    "race_prize": 9.625
+    "race_prize": 9.625,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3683,7 +4455,11 @@
     "cards_used": "",
     "current_budget": 117.7,
     "new_budget": 118.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3702,7 +4478,11 @@
     "cards_used": "",
     "current_budget": 129.7,
     "new_budget": 130.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3721,7 +4501,11 @@
     "cards_used": "",
     "current_budget": 115.2,
     "new_budget": 116.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3740,7 +4524,11 @@
     "cards_used": "",
     "current_budget": 119.0,
     "new_budget": 119.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 18,
@@ -3759,7 +4547,11 @@
     "cards_used": "",
     "current_budget": 113.3,
     "new_budget": 115.6,
-    "race_prize": 9.625
+    "race_prize": 9.625,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3778,7 +4570,11 @@
     "cards_used": "Autopilot (GD19)",
     "current_budget": 129.9,
     "new_budget": 131.2,
-    "race_prize": 19.25
+    "race_prize": 19.25,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3797,7 +4593,11 @@
     "cards_used": "",
     "current_budget": 140.3,
     "new_budget": 141.8,
-    "race_prize": 11.55
+    "race_prize": 11.55,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3816,7 +4616,11 @@
     "cards_used": "",
     "current_budget": 130.6,
     "new_budget": 131.4,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3835,7 +4639,11 @@
     "cards_used": "Final Fix (GD19)",
     "current_budget": 119.6,
     "new_budget": 117.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3854,7 +4662,11 @@
     "cards_used": "",
     "current_budget": 136.1,
     "new_budget": 136.7,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3873,7 +4685,11 @@
     "cards_used": "",
     "current_budget": 122.4,
     "new_budget": 122.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3892,7 +4708,11 @@
     "cards_used": "Final Fix (GD19)",
     "current_budget": 118.6,
     "new_budget": 119.2,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3911,7 +4731,11 @@
     "cards_used": "",
     "current_budget": 130.1,
     "new_budget": 129.9,
-    "race_prize": 7.7
+    "race_prize": 7.7,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3930,7 +4754,11 @@
     "cards_used": "",
     "current_budget": 116.5,
     "new_budget": 116.6,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 1,
+    "transfer_penalty": -10,
+    "inactive_penalty": -25,
+    "penalty_points": -35
   },
   {
     "race_number": 19,
@@ -3949,7 +4777,11 @@
     "cards_used": "",
     "current_budget": 119.5,
     "new_budget": 120.1,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": 0,
+    "penalty_points": 0
   },
   {
     "race_number": 19,
@@ -3968,6 +4800,10 @@
     "cards_used": "",
     "current_budget": 115.6,
     "new_budget": 117.5,
-    "race_prize": 0
+    "race_prize": 0,
+    "extra_transfers": 0,
+    "transfer_penalty": 0,
+    "inactive_penalty": -25,
+    "penalty_points": -25
   }
 ]

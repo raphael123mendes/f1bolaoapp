@@ -421,7 +421,7 @@ def scores_changed(race, results, last_state):
 
 def get_team_details(gameday_id, user_guid, team_no=1):
     if not AUTH_HEADERS:
-        return None, [], {}
+        return None, [], {}, {}
 
     url = (f"{BASE_SERVICES}/opponentteam/opponentgamedayplayerteamget"
            f"/1/{user_guid}/1/{gameday_id}/1"
@@ -432,7 +432,7 @@ def get_team_details(gameday_id, user_guid, team_no=1):
         data      = r.json()["Data"]["Value"]
         user_team = data.get("userTeam", [])
         if not user_team:
-            return None, [], {}
+            return None, [], {}, {}
 
         team_data  = user_team[0]
         picks      = team_data.get("playerid", [])
@@ -467,6 +467,8 @@ def get_team_details(gameday_id, user_guid, team_no=1):
 
         team_info = {
             "usersubs":                        team_data.get("usersubs", 0),
+            "usersubsleft":                    team_data.get("usersubsleft"),
+            "isaccounting":                    team_data.get("isaccounting"),
             "subsallowed":                     team_data.get("subsallowed", 2),
             "extrasubscost":                   team_data.get("extrasubscost", 10),
             "inactive_driver_penality_points": team_data.get("inactive_driver_penality_points", 0),
@@ -504,10 +506,78 @@ def get_player_components(pid, gameday_id, lv):
 
 # ── Step 5: Build standings ───────────────────────────────────────
 
-def get_standings(gameday_id, score=0):
+# Inactive-driver deduction per session, as the game charges it to the
+# overall score (matches final values: -25 normal weekend, -35 sprint weekend).
+INACTIVE_SESSION_PENALTY = {"qualifying": -5, "sprint": -10, "race": -20}
+
+
+def sessions_started_for(race):
+    """Scored session types of this round that have already started (from the schedule)."""
+    if not race:
+        return []
+    schedule_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "f1_2026_schedule.json")
+    try:
+        with open(schedule_file, encoding="utf-8") as f:
+            rounds = json.load(f)["rounds"]
+        rnd = next(r for r in rounds if r["round"] == race["meeting_number"])
+    except Exception:
+        return [race.get("session_type", "race")]
+    now = datetime.now(timezone.utc)
+    return [s["session_type"] for s in rnd["sessions"]
+            if s["session_type"] in INACTIVE_SESSION_PENALTY
+            and datetime.fromisoformat(s["utc_start"].replace("Z", "+00:00")) <= now]
+
+
+def get_inactive_ids(gameday_id):
+    """Driver ids the game itself flags as inactive (IsActive == "0") for this gameday."""
+    try:
+        data = get(f"{BASE_FEEDS}/drivers/{gameday_id}_en.json?buster={buster()}")
+        return {str(p["PlayerId"]) for p in data["Data"]["Value"]
+                if str(p.get("IsActive", "1")) == "0" and p.get("Skill", 1) == 1}
+    except Exception as e:
+        print(f"  WARNING: could not load inactive flags for GD{gameday_id}: {e}")
+        return set()
+
+
+def live_penalties(team_data, picks, inactive_ids, sessions_started):
+    """Penalties for a LIVE (not yet finalised) gameday.
+
+    Transfers: the game's own count (usersubsleft < 0 = transfers over the limit).
+    Inactive driver: the game's own value when it is already published; before the
+    gameday is finalised the API still returns 0, so we use the game's inactive flag
+    on the picked driver and the per-session deduction for sessions already started.
+    """
+    cost      = team_data.get("extrasubscost", 10) or 10
+    subs_left = team_data.get("usersubsleft")
+    if subs_left is None:      # field missing → fall back to made vs allowed
+        extra = max(0, (team_data.get("usersubs") or 0) - (team_data.get("subsallowed") or 0))
+    else:
+        extra = max(0, -int(subs_left))
+    transfer_pen = -extra * cost
+
+    inactive_pen = int(team_data.get("inactive_driver_penality_points") or 0)
+    source = "game"
+    if not inactive_pen:
+        n_inactive = sum(1 for p in picks if str(p["id"]) in inactive_ids)
+        if n_inactive:
+            inactive_pen = n_inactive * sum(INACTIVE_SESSION_PENALTY.get(t, 0)
+                                            for t in sessions_started)
+            source = f"provisional: {n_inactive} inactive x {sessions_started}"
+    return transfer_pen, inactive_pen, source
+
+
+def get_standings(gameday_id, score=0, race=None):
     # Use finalised gdpoints when: forced run, or session ended >2h ago (7200s)
     force_flag = os.environ.get("FORCE_RUN", "0") == "1"
-    use_gdpoints = force_flag or (score is not None and score < 0 and abs(score) >= 7200)
+    # gdpoints is the game's final result (penalties already included), but
+    # only once the race itself is done. After qualifying/sprint the game has
+    # not applied penalties yet, so keep calculating live until then.
+    is_race_session = (race or {}).get("session_type", "race") == "race"
+    use_gdpoints = force_flag or (is_race_session and score is not None
+                                  and score < 0 and abs(score) >= 7200)
+    sessions_started = sessions_started_for(race)
+    print(f"  Mode: {'final gdpoints' if use_gdpoints else 'live calculation'} | "
+          f"sessions started: {sessions_started}")
     if not AUTH_HEADERS:
         print("  FATAL: cookie.txt is missing or empty.")
         sys.exit(1)
@@ -529,6 +599,10 @@ def get_standings(gameday_id, score=0):
         print(f"  Player names loaded: {len(player_names)}")
     except Exception as e:
         print(f"  WARNING: could not load player names: {e}")
+
+    inactive_ids = get_inactive_ids(gameday_id)
+    if inactive_ids:
+        print(f"  Inactive drivers (game flag): {sorted(inactive_ids)}")
 
     leaderboard = get(
         f"{BASE_FEEDS}/leaderboard/privateleague/list_2_{LEAGUE_ID}_1_1.json"
@@ -582,6 +656,8 @@ def get_standings(gameday_id, score=0):
 
         if use_gdpoints:
             total = float(gdpoints) if gdpoints is not None else 0.0
+            # Final: gdpoints already include penalties — read them for display only
+            sub_penalty, inactive_pen, _ = live_penalties(team_data, picks, set(), [])
             print(f"    → Post-event: using gdpoints={total}")
 
             if smart_finfx:
@@ -624,16 +700,15 @@ def get_standings(gameday_id, score=0):
                 total += pick_sub
                 time.sleep(0.05)
 
-            usersubs    = team_data.get("usersubs", 0) or 0
-            subsallowed = team_data.get("subsallowed", 2) or 2
-            subsallowed_effective = subsallowed + (1 if has_final_fix else 0)
-            extra_subs  = max(0, usersubs - subsallowed_effective)
-            sub_penalty = extra_subs * -(team_data.get("extrasubscost", 10) or 10)
-            inactive_pen = team_data.get("inactive_driver_penality_points", 0) or 0
+            sub_penalty, inactive_pen, pen_source = live_penalties(
+                team_data, picks, inactive_ids, sessions_started)
             total += sub_penalty + inactive_pen
 
-            if sub_penalty or inactive_pen:
-                print(f"    Penalties: transfers={sub_penalty} inactive={inactive_pen}")
+            print(f"    Penalties: transfers={sub_penalty} inactive={inactive_pen} ({pen_source}) "
+                  f"| raw usersubs={team_data.get('usersubs')} allowed={team_data.get('subsallowed')} "
+                  f"left={team_data.get('usersubsleft')} "
+                  f"inactive_api={team_data.get('inactive_driver_penality_points')} "
+                  f"accounting={team_data.get('isaccounting')}")
 
             if has_final_fix and not smart_finfx and gdpoints is not None:
                 print(f"    → Final Fix fallback: component total={total:.0f}, "
@@ -681,6 +756,8 @@ def get_standings(gameday_id, score=0):
             "user_name":    user_name,
             "display_name": NICKNAMES.get(user_name, user_name),
             "points":       total,
+            "transfer_penalty": sub_penalty,
+            "inactive_penalty": inactive_pen,
             "cards":        cards,
             "pick_details": pick_details,
             "season_rank":  season_rank,
@@ -917,6 +994,9 @@ def build_results_rows(race, results, last_state):
             "user_name":        team["user_name"],
             "season_points":    season_scores.get(team["user_name"], None),
             "race_points":      int(team["points"]),
+            "transfer_penalty": team.get("transfer_penalty", 0),
+            "inactive_penalty": team.get("inactive_penalty", 0),
+            "penalty_points":   team.get("transfer_penalty", 0) + team.get("inactive_penalty", 0),
             "budget_remaining": None,
             "team_value":       None,
             "cards_used":       cards_str,
@@ -1232,7 +1312,7 @@ def main():
 
     # ── 3. Fetch standings ────────────────────────────────────────
     print("\n[3/5] Fetching standings...")
-    results, lv = get_standings(race["gameday_id"], score)
+    results, lv = get_standings(race["gameday_id"], score, race)
     for t in results:
         cards_str = f" [{', '.join(t['cards'].keys())}]" if t["cards"] else ""
         print(f"  {t['rank']}. {t['user_name']} ({t['team_name']}) — "

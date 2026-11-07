@@ -177,6 +177,12 @@ def build_data(schedule, prices_data, race_files):
                 "current_budget":   current_budget,
                 "new_budget":       new_budget,
                 "race_prize":       prizes.get(e["user_name"], 0),
+                # Penalties as shown on the F1 Fantasy team screen.
+                # Informational only: race_points (final gdpoints) already include them.
+                "extra_transfers":     e.get("extra_transfers", 0),
+                "transfer_penalty":    e.get("transfer_penalty", 0),
+                "inactive_penalty":    e.get("inactive_penalty", 0),
+                "penalty_points":      e.get("penalty_points", 0),
             })
 
             # ── Picks rows (one per pick) ──────────────────────────────────────
@@ -273,14 +279,18 @@ def write_results(wb, data):
                "Team Name", "User Name",
                "Season Points", "Race Points",
                "Budget Remaining", "Team Value", "Cards Used",
-               "Current Budget", "New Budget", "Race Prize"])
+               "Current Budget", "New Budget", "Race Prize",
+               "Extra Transfers", "Transfer Penalty", "Inactive Penalty",
+               "Penalty Points"])
     for r in data:
         ws.append([r["race_number"], r["race_name"], r["race_flag"], r["race_date"],
                    r["season_rank"], r["race_rank"], r["rank_change"],
                    r["team_name"], r["user_name"],
                    r["season_points"], r["race_points"],
                    r["budget_remaining"], r["team_value"], r["cards_used"],
-                   r["current_budget"], r["new_budget"], r["race_prize"]])
+                   r["current_budget"], r["new_budget"], r["race_prize"],
+                   r["extra_transfers"], r["transfer_penalty"], r["inactive_penalty"],
+                   r["penalty_points"]])
     style_header(ws, [12, 28, 10, 12, 11, 10, 12, 22, 22, 13, 12, 16, 11, 28, 15, 12, 11])
     style_rows(ws)
     autofilter(ws)

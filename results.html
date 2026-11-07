@@ -149,6 +149,14 @@
   }
 
   .p-pts { text-align: right; }
+  .p-penalty {
+    display: flex; width: fit-content; max-width: 100%; align-items: center; gap: 4px;
+    flex-wrap: wrap; box-sizing: border-box;
+    margin: 4px 4px 0 0; padding: 2px 8px; border-radius: 6px;
+    background: #f6b5b0; color: #1a1a1a;
+    font-size: 0.68rem; font-weight: 600; line-height: 1.4;
+  }
+  .p-penalty .material-symbols-outlined { font-size: 0.85rem; }
   .p-prize {
     text-align: right;
   }
@@ -658,6 +666,22 @@ async function manualRefresh() {
 }
 
 // ── RENDER ─────────────────────────────────────────────────────────────────
+// Penalties as the F1 Fantasy team screen reports them.
+// Already included in GD PTS — shown so the deduction is visible.
+function penaltyHtml(p) {
+  const out = [];
+  if (p.transfer_penalty) {
+    const n = p.extra_transfers || 0;
+    const cost = n ? Math.abs(p.transfer_penalty) / n : 10;
+    out.push([`${p.transfer_penalty} pts`, `${n} extra transfer${n === 1 ? '' : 's'}`,
+              `-${cost} x ${n} = ${p.transfer_penalty} pts (included in GD PTS)`]);
+  }
+  if (p.inactive_penalty) out.push([`${p.inactive_penalty} pts`, 'inactive driver',
+              `Inactive driver penalty points = ${p.inactive_penalty} pts (included in GD PTS)`]);
+  return out.map(([pts, why, tip]) =>
+    `<span class="p-penalty" title="${tip}"><span class="material-symbols-outlined">warning</span><b>${pts}</b> ${why}</span>`).join('');
+}
+
 function render() {
   document.getElementById("loading-overlay")?.remove();
   buildSwitcher();
@@ -731,6 +755,7 @@ function render() {
         <div class="p-team">${p.team_name}</div>
         ${picksHtml ? `<div class="p-picks">${picksHtml}</div>` : ''}
         ${hasCard ? `<span class="p-card">${p.cards_used}</span>` : ''}
+        ${penaltyHtml(p)}
       </div>
       <div class="p-pts">
         <div class="p-pts-race">${(p.race_points ?? 0).toFixed(0)}</div>
@@ -743,6 +768,7 @@ function render() {
         <div class="p-name">${p.user_name}</div>
         <div class="p-team">${p.team_name}</div>
         ${hasCard ? `<span class="p-card">${p.cards_used}</span>` : ''}
+        ${penaltyHtml(p)}
       </div>
       <div class="p-prize">
         ${hasPrize

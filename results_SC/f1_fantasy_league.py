@@ -284,6 +284,36 @@ def get_team_detail(user_guid):
            f"/1/{user_guid}/1/{MATCHDAY}/1?buster={buster()}")
     return get(url)["Data"]["Value"]["userTeam"][0]
 
+def get_penalties(detail):
+    """Penalty values exactly as the F1 Fantasy team screen shows them.
+
+    The game's team page reads these fields from the same response:
+      - usersubsleft  < 0  -> extra transfers made (e.g. -1 = one over the limit)
+      - extrasubscost      -> points lost per extra transfer (10)
+        Screen: "Additional transfers points deducted from overall
+                 score (-10 x 1 = -10 pts)"
+      - inactive_driver_penality_points -> already a signed value (e.g. -25)
+        Screen: "Inactive driver penalty points = -25 pts"
+    The final gdpoints already include both, so these are for display only.
+    """
+    subs_left     = int(detail.get("usersubsleft") or 0)
+    cost          = int(detail.get("extrasubscost") or 0)
+    extra         = -subs_left if subs_left < 0 else 0
+    transfer_pen  = -extra * cost
+    inactive_pen  = int(detail.get("inactive_driver_penality_points") or 0)
+    if transfer_pen or inactive_pen:
+        print(f"    Penalties (from game): transfers {transfer_pen} "
+              f"({extra} x -{cost}), inactive driver {inactive_pen}")
+    return {
+        "transfers_made":     int(detail.get("usersubs") or 0),
+        "transfers_allowed":  int(detail.get("subsallowed") or 0),
+        "extra_transfers":    extra,
+        "extra_transfer_cost": cost,
+        "transfer_penalty":   transfer_pen,
+        "inactive_penalty":   inactive_pen,
+        "penalty_points":     transfer_pen + inactive_pen,
+    }
+
 def get_player_stats(player_id, lv):
     url = f"{BASE_FEED}/popup/playerstats_{player_id}.json?buster={lv}"
     try:
@@ -334,6 +364,7 @@ def fetch_all():
             gd_points  = detail["gdpoints"] or 0
             ovpoints   = detail["ovpoints"] or 0
             player_ids = detail["playerid"]
+            penalties  = get_penalties(detail)
         except Exception as e:
             print(f"    ⚠ Team detail error: {e}")
             continue
@@ -373,6 +404,7 @@ def fetch_all():
             "budget_remaining": budget,
             "team_value":       team_value,
             "cards_used":       cards,
+            **penalties,
             "picks":            picks,
         })
 

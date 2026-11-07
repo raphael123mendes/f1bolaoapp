@@ -236,28 +236,30 @@
 
   /* ── CARDS MATRIX ── */
   .cards-matrix-section { margin: 32px 16px 0; }
-  .cards-matrix-wrap { background: var(--surface-low); padding: 16px 12px; overflow-x: auto; }
-  .cards-matrix { border-collapse: collapse; }
+  .cards-matrix-wrap { background: var(--surface-low); padding: 16px 8px; overflow-x: auto; }
+  .cards-matrix { border-collapse: collapse; width: 100%; }
   .cards-matrix th {
-    font-size: 0.46rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--on-surface-30); padding: 0 3px 8px; text-align: center; white-space: nowrap;
+    font-size: 0.46rem; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--on-surface-30); padding: 0 3px 8px; text-align: center;
+    vertical-align: bottom; line-height: 1.3;
   }
-  .cards-matrix th.cm-name-header { text-align: left; padding-right: 12px; min-width: 100px; }
-  .cm-card-name {
-    font-size: 0.56rem; font-weight: 700; text-transform: uppercase;
-    color: var(--on-surface); white-space: nowrap; padding: 4px 14px 4px 0; text-align: left;
-    letter-spacing: 0.06em;
+  .cards-matrix th.cm-name-header { text-align: left; padding-right: 8px; }
+  .cards-matrix tbody tr { border-top: 1px solid var(--on-surface-08); }
+  .cm-player-name {
+    font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+    color: var(--on-surface); white-space: nowrap; padding: 6px 6px 6px 0; text-align: left;
+    letter-spacing: 0.04em; max-width: 120px; overflow: hidden; text-overflow: ellipsis;
   }
-  .cm-cell { text-align: center; width: 24px; padding: 3px; }
+  .cm-cell { text-align: center; padding: 4px 2px; }
   .cm-used {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 20px; height: 20px;
+    min-width: 26px; height: 20px; padding: 0 3px; box-sizing: border-box;
     background: rgba(225,6,0,0.1); border: 1px solid rgba(225,6,0,0.3);
-    color: var(--red); font-size: 0.7rem; font-weight: 900; line-height: 1;
+    color: var(--red); font-size: 0.55rem; font-weight: 900; line-height: 1;
   }
   .cm-empty {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 20px; height: 20px; color: var(--on-surface-15); font-size: 0.55rem;
+    min-width: 26px; height: 20px; color: var(--on-surface-15); font-size: 0.55rem;
   }
 
   /* ── BOTTOM NAV ── */
@@ -351,7 +353,7 @@
   <!-- CARDS MATRIX -->
   <div class="cards-matrix-section">
     <div class="chart-title">Cards Used</div>
-    <div class="chart-sub">Per-race card usage tracker</div>
+    <div class="chart-sub">Round each card was played</div>
     <div class="cards-matrix-wrap">
       <table class="cards-matrix" id="cards-matrix"></table>
     </div>
@@ -532,7 +534,7 @@ window.toggleRow = function(row) {
   races.forEach((race, i) => {
     const x = xPos(race);
     const isLast = i === races.length - 1;
-    svgHTML += `<text x="${x}" y="${H - 4}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="${isLast ? '#e10600' : 'rgba(229,226,225,0.3)'}">${isLast ? 'LIVE' : `RD ${race}`}</text>`;
+    svgHTML += `<text x="${x}" y="${H - 4}" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" font-weight="700" fill="${isLast ? '#e10600' : 'rgba(229,226,225,0.3)'}">${race}</text>`;
   });
 
   // Y axis label (P1, P11)
@@ -589,47 +591,46 @@ window.toggleRow = function(row) {
 })();
 
 // ── CARDS MATRIX ──────────────────────────────────────────────────────────
+// Players in rows, cards in columns. A used card shows the round it was played.
 (function buildCardsMatrix() {
   const sortedPlayers = [...latest].sort((a,b) => a.season_rank - b.season_rank);
+  const CARD_ORDER = ['Wildcard', 'Limitless', 'Final Fix', 'Extra DRS', 'No Negative', 'Autopilot'];
 
-  function normalizeCard(name) {
-    return name.replace(/\s*\(GD\d*x?\)\s*/gi, '').trim();
-  }
-
-  // Build map: normalized card name → Set of user_names who used it
-  const cardPlayerMap = {};
+  // user_name → { card → round played }
+  const used = {};
+  const seenCards = new Set();
   RESULTS.forEach(r => {
-    if (r.cards_used && r.cards_used.trim()) {
-      const card = normalizeCard(r.cards_used);
-      if (!cardPlayerMap[card]) cardPlayerMap[card] = new Set();
-      cardPlayerMap[card].add(r.user_name);
-    }
+    if (!r.cards_used || !r.cards_used.trim()) return;
+    r.cards_used.split(';').forEach(raw => {
+      const m = raw.trim().match(/^(.*?)\s*(?:\(GD(\d+)x?\))?$/i);
+      const card = (m ? m[1] : raw).trim();
+      if (!card) return;
+      seenCards.add(card);
+      (used[r.user_name] ??= {})[card] = m && m[2] ? +m[2] : r.race_number;
+    });
   });
+  if (seenCards.size === 0) return;
 
-  const allCards = Object.keys(cardPlayerMap).sort();
-  if (allCards.length === 0) return;
+  const cards = [...CARD_ORDER.filter(c => seenCards.has(c)),
+                 ...[...seenCards].filter(c => !CARD_ORDER.includes(c)).sort()];
 
-  const table = document.getElementById('cards-matrix');
-  let html = '<thead><tr><th class="cm-name-header"></th>';
-  sortedPlayers.forEach(p => {
-    html += `<th>${p.user_name.split(' ')[0]}</th>`;
-  });
+  let html = '<thead><tr><th class="cm-name-header">Player</th>';
+  cards.forEach(c => { html += `<th class="cm-card-header">${c.replace(' ', '<br>')}</th>`; });
   html += '</tr></thead><tbody>';
 
-  allCards.forEach(card => {
-    html += `<tr><td class="cm-card-name">${card}</td>`;
-    sortedPlayers.forEach(p => {
-      if (cardPlayerMap[card].has(p.user_name)) {
-        html += `<td class="cm-cell"><span class="cm-used">×</span></td>`;
-      } else {
-        html += `<td class="cm-cell"><span class="cm-empty">·</span></td>`;
-      }
+  sortedPlayers.forEach(p => {
+    const u = used[p.user_name] || {};
+    html += `<tr><td class="cm-player-name" title="${p.user_name}">${p.user_name.split(' ')[0]}</td>`;
+    cards.forEach(c => {
+      html += u[c] != null
+        ? `<td class="cm-cell"><span class="cm-used" title="${c} played in R${u[c]}">R${u[c]}</span></td>`
+        : `<td class="cm-cell"><span class="cm-empty">·</span></td>`;
     });
     html += '</tr>';
   });
 
   html += '</tbody>';
-  table.innerHTML = html;
+  document.getElementById('cards-matrix').innerHTML = html;
 })();
 
   } catch(e) {

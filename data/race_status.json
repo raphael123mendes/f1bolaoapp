@@ -1,0 +1,10 @@
+{
+  "session_name": "No Live Session Active",
+  "session_type": "Upcoming Race",
+  "phase": "N/A",
+  "lap_info": {
+    "current_lap": null,
+    "total_laps": null
+  },
+  "status": "Scheduled"
+}

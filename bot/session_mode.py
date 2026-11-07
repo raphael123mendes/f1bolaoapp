@@ -50,6 +50,21 @@ class Checkpointer:
         self.complete_at = None
         self.done        = False
 
+    def phase(self, now):
+        """Short label for the website: Q1/Q2/Q3, ~Lap N, Finished, Final."""
+        if self.done:
+            return "Final"
+        if self.complete_at:
+            return "Finished"
+        if now < self.start:
+            return "Starting soon"
+        if self.kind == "qualifying":
+            return f"Q{min(self.parts_published + 1, 3)}"
+        elapsed = (now - self.start).total_seconds() / 60
+        if elapsed > self.rule["length"]:
+            return "Running"
+        return f"~Lap {max(1, round(elapsed * LAPS_PER_MINUTE))}"
+
     def tick(self, now, signals):
         reasons = []
         if self.done or now < self.start:
@@ -111,9 +126,9 @@ class Checkpointer:
 
 
 def run(session_type, start_dt, publish, signals_fn, *, now_fn=None, sleep_fn=None,
-        poll_seconds=60, log=print):
-    """Loop until the session is final. publish(reasons, final) does one update;
-    signals_fn() returns the signals dict (see Checkpointer)."""
+        poll_seconds=60, log=print, on_start=None):
+    """Loop until the session is final. publish(reasons, final, phase) does one
+    update; signals_fn() returns the signals dict (see Checkpointer)."""
     now_fn   = now_fn or (lambda: datetime.now(timezone.utc))
     sleep_fn = sleep_fn or time.sleep
     cp = Checkpointer(session_type, start_dt)
@@ -124,6 +139,9 @@ def run(session_type, start_dt, publish, signals_fn, *, now_fn=None, sleep_fn=No
         wait = min(poll_seconds * 5, (start_dt - now_fn()).total_seconds())
         log(f"  waiting for the start ({(start_dt - now_fn()).total_seconds() / 60:.0f} min)")
         sleep_fn(max(wait, 1))
+
+    if on_start:                      # session has begun → status-only update (banner)
+        on_start(cp.phase(now_fn()))
 
     updates, last = 0, None
     while not cp.done:
@@ -137,7 +155,7 @@ def run(session_type, start_dt, publish, signals_fn, *, now_fn=None, sleep_fn=No
         reasons = cp.tick(now, sig)
         if reasons:
             log(f"  {now:%H:%M} PUBLISH: {', '.join(reasons)}")
-            publish(reasons, cp.done)
+            publish(reasons, cp.done, cp.phase(now))
             updates += 1
         if not cp.done:
             sleep_fn(poll_seconds)

@@ -966,7 +966,7 @@ def _write_live(filename, rows):
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(rows, f, ensure_ascii=False, indent=2)
     os.replace(tmp, path)   # atomic: never leaves a half-written file
-    print(f"  wrote live/{filename} ({len(rows)} rows)")
+    print(f"  wrote live/{filename}" + (f" ({len(rows)} rows)" if isinstance(rows, list) else ""))
 
 
 def export_json_data(race, results, lv, gameday_id, last_state=None):
@@ -1107,17 +1107,39 @@ def fantasy_signals_fn(race):
     return signals
 
 
+SESSION_LABELS = {"qualifying": "Qualifying", "sprint": "Sprint", "race": "Race"}
+
+
+def write_session_status(race, phase, final=False):
+    """live/session.json — what the results page banner shows."""
+    _write_live("session.json", {
+        "race_number":  race["meeting_number"],
+        "meeting_name": race["meeting_name"],
+        "session":      SESSION_LABELS.get(race["session_type"], race["session_type"].title()),
+        "phase":        phase,
+        "final":        bool(final),
+        "updated_utc":  datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    })
+
+
 def run_session_mode(race):
     """Stay alive for the whole session and publish only at checkpoints."""
     import session_mode
     label = f"live: {race['meeting_name']} {race['session_type']}"
 
-    def publish(reasons, final):
-        print(f"\n[checkpoint] {', '.join(reasons)}")
-        if publish_update(race, force_send=final, final=final):
-            commit_live(f"{label} — {reasons[-1]}")
+    def publish(reasons, final, phase):
+        print(f"\n[checkpoint] {', '.join(reasons)}  → phase {phase}")
+        publish_update(race, force_send=final, final=final)
+        write_session_status(race, phase, final)       # banner on the results page
+        commit_live(f"{label} — {reasons[-1]}")
 
-    session_mode.run(race["session_type"], race["start_dt"], publish, fantasy_signals_fn(race))
+    def on_start(phase):
+        print(f"\n[session start] phase {phase}")
+        write_session_status(race, phase)
+        commit_live(f"{label} — started")
+
+    session_mode.run(race["session_type"], race["start_dt"], publish, fantasy_signals_fn(race),
+                     on_start=on_start)
 
 
 # ── Main ──────────────────────────────────────────────────────────

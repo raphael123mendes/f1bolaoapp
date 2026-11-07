@@ -417,7 +417,7 @@
       <div class="race-title" id="race-title"></div>
       <div class="race-meta" id="race-meta"></div>
       <div class="live-meta" id="live-meta" style="display:none">
-        ● Live · <span id="live-updated"></span>
+        <span id="live-updated"></span>
         <span class="refresh-countdown" id="refresh-countdown"></span>
       </div>
     </div>
@@ -483,6 +483,7 @@ let STATIC_RESULTS, STATIC_PICKS, STATIC_PRICES;
 let RESULTS, PICKS, PRICES, RACES, CONFIG;
 let isLive = false;
 let liveAvailable = false;
+let SESSION = null;          // live/session.json — session, phase, last update (UTC)
 let selectedRace = null;
 let refreshTimer = null;
 let countdownTimer = null;
@@ -515,10 +516,12 @@ async function loadStatic() {
 
 async function loadLive() {
   // Live mode has no new prices (they only change after the race) → keep static PRICES
-  const [results, picks] = await Promise.all([
+  const [results, picks, session] = await Promise.all([
     tryFetch(LIVE_BASE + 'results.json'),
     tryFetch(LIVE_BASE + 'picks.json'),
+    tryFetch(LIVE_BASE + 'session.json'),
   ]);
+  SESSION = session;
   if (!results || results.length === 0) return false;
   RESULTS = results;
   if (picks)  PICKS  = picks;
@@ -608,6 +611,15 @@ function buildSwitcher() {
 }
 
 // ── LIVE MODE ENTER / EXIT ─────────────────────────────────────────────────
+// "● Qualifying · Q2 · updated 19:50 UTC" — from live/session.json (written by the bot)
+function liveStatusText(raceNumber) {
+  const s = SESSION;
+  if (!s || s.race_number !== raceNumber) return '● Live';
+  const icon = s.phase === 'Final' ? '✓' : s.phase === 'Finished' ? '🏁' : '●';
+  const t = (s.updated_utc || '').slice(11, 16);
+  return `${icon} ${s.session} · ${s.phase}${t ? ` · updated ${t} UTC` : ''}`;
+}
+
 async function enterLiveMode() {
   isLive = true;
   const ok = await loadLive();
@@ -727,9 +739,7 @@ function render() {
   // Live meta bar
   const liveMeta = document.getElementById('live-meta');
   if (isLive) {
-    const now = new Date();
-    document.getElementById('live-updated').textContent =
-      `Updated ${now.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})}`;
+    document.getElementById('live-updated').textContent = liveStatusText(sample.race_number);
     liveMeta.style.display = 'block';
   } else {
     liveMeta.style.display = 'none';

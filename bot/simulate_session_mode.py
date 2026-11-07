@@ -60,14 +60,14 @@ def run_scenario(name, kind, signals_at, begin=-30):
 
     session_mode.run(
         kind, START,
-        publish=lambda reasons, final: published.append((minute(), reasons, final)),
+        publish=lambda reasons, final, phase: published.append((minute(), reasons, final, phase)),
         signals_fn=lambda: signals_at(minute()),
         now_fn=lambda: clock["t"],
         sleep_fn=lambda s: clock.__setitem__("t", clock["t"] + timedelta(seconds=s)),
         log=lambda *_: None)
     print(f"\n=== {name} ===")
-    for m, reasons, final in published:
-        print(f"  +{m:3d} min  {'FINAL ' if final else ''}{' + '.join(reasons)}")
+    for m, reasons, final, phase in published:
+        print(f"  +{m:3d} min  [{phase:>9}]  {' + '.join(reasons)}")
     print(f"  → {len(published)} updates, bot stops at +{minute()} min")
     return published
 

@@ -1,58 +1,64 @@
-const fs = require('fs');
-const path = require('path');
+import os
+import json
+import livef1
 
-// OpenF1 base endpoint for sessions
-const API_URL = 'https://api.openf1.org/v1/sessions?session_key=latest';
+def main():
+    # 1. Login to F1TV via LiveF1 (uses F1_USERNAME and F1_PASSWORD env vars)
+    try:
+        livef1.login()
+    except Exception as e:
+        print(f"Authentication failed: {e}")
+        # Proceed to query session structure fallback if offline
+    
+    # 2. Get the latest or current live session
+    try:
+        # Fetch data for current active or latest session
+        session = livef1.get_session("latest")
+        session_info = session.get_data("SessionInfo")
+        lap_count = session.get_data("LapCount")
+        
+        # 3. Parse qualifying stage / race lap details
+        session_name = session_info.get("Name", "Unknown")
+        path = session_info.get("Path", "")
+        
+        # Extract Q1/Q2/Q3 if qualifying session
+        phase = "N/A"
+        if "Qualifying" in session_name or "Shootout" in session_name:
+            if "Q3" in path or "Q3" in str(session_info):
+                phase = "Q3"
+            elif "Q2" in path or "Q2" in str(session_info):
+                phase = "Q2"
+            else:
+                phase = "Q1"
+                
+        status_payload = {
+            "timestamp": livef1.get_timestamp() if hasattr(livef1, "get_timestamp") else "",
+            "session_name": session_name,
+            "session_type": session_info.get("Type", "Unknown"),
+            "phase": phase,
+            "lap_info": {
+                "current_lap": lap_count.get("CurrentLap", None) if lap_count else None,
+                "total_laps": lap_count.get("TotalLaps", None) if lap_count else None
+            },
+            "status": session_info.get("ArchiveStatus", {}).get("Status", "Live")
+        }
+    except Exception as err:
+        print(f"Error fetching live feed: {err}")
+        # Fallback payload structure if session is not active
+        status_payload = {
+            "session_name": "No Active Session",
+            "phase": "N/A",
+            "lap_info": {"current_lap": None, "total_laps": None},
+            "status": "Inactive"
+        }
 
-async function getRaceStatus() {
-  try {
-    const response = await fetch(API_URL);
-    if (!response.ok) {
-      throw new Error(`HTTP Error: ${response.status} - ${response.statusText}`);
-    }
+    # 4. Save to data/race_status.json
+    output_path = os.path.join(os.path.dirname(__file__), "../data/race_status.json")
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w") as f:
+        json.dump(status_payload, f, indent=2)
+        
+    print(f"Successfully wrote payload to data/race_status.json: {status_payload}")
 
-    const data = await response.json();
-    if (!data || data.length === 0) {
-      throw new Error("No session data returned from OpenF1 API.");
-    }
-
-    // OpenF1 returns an array of matching session objects
-    const session = data[0];
-
-    // Standardized payload extraction
-    const statusPayload = {
-      timestamp: new Date().toISOString(),
-      session_name: session.session_name || "Unknown",
-      session_type: session.session_type || "Unknown",
-      circuit_name: session.circuit_short_name || "Unknown",
-      country_name: session.country_name || "Unknown",
-      date_start: session.date_start || null,
-      date_end: session.date_end || null,
-      // Infer phase for Qualifying sessions
-      phase: (session.session_name && session.session_name.includes('Qualifying'))
-        ? (session.qualifying_phase || 'Q1/Q2/Q3')
-        : 'N/A',
-      is_live: checkIsLive(session.date_start, session.date_end)
-    };
-
-    const outputPath = path.join(__dirname, '../data/race_status.json');
-    fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-    fs.writeFileSync(outputPath, JSON.stringify(statusPayload, null, 2));
-
-    console.log("Successfully wrote status to data/race_status.json:", statusPayload);
-  } catch (error) {
-    console.error("Failed to fetch F1 session status:", error.message);
-    process.exit(1);
-  }
-}
-
-// Helper to determine if session is currently within active time frame
-function checkIsLive(startStr, endStr) {
-  if (!startStr || !endStr) return false;
-  const now = new Date();
-  const start = new Date(startStr);
-  const end = new Date(endStr);
-  return now >= start && now <= end;
-}
-
-getRaceStatus();
+if __name__ == "__main__":
+    main()

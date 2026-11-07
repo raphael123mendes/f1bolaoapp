@@ -177,7 +177,7 @@ def parse_iso(dt_str):
 
 # ── Step 1: Auto-detect current race ─────────────────────────────
 
-def get_current_race():
+def get_current_race(upcoming_within_hours=None):
     """
     Reads the master calendar (calendar/<season>.json) and returns the most relevant
     is_competitive session (qualifying, sprint, race).
@@ -244,6 +244,15 @@ def get_current_race():
     for s in sessions:
         if s["window_start"] <= now <= s["window_end"]:
             return s, 0
+
+    # Manual early start: the next session if it starts within N hours
+    if upcoming_within_hours:
+        soon = [s for s in sessions
+                if now < s["start_dt"] <= now + timedelta(hours=upcoming_within_hours)]
+        if soon:
+            s = min(soon, key=lambda x: x["start_dt"])
+            return s, (s["window_start"] - now).total_seconds()
+        return None, None
 
     # Priority 2: most recently completed
     completed = [s for s in sessions if s["start_dt"] < now]
@@ -983,6 +992,134 @@ def export_json_data(race, results, lv, gameday_id, last_state=None):
         _write_live(filename, kept + new_rows)
 
 
+def _score_now(race):
+    """Same meaning as get_current_race()'s score, recomputed for 'now'."""
+    now = datetime.now(timezone.utc)
+    if race["window_start"] <= now <= race["window_end"]:
+        return 0
+    return -(now - race["window_end"]).total_seconds()
+
+
+def publish_update(race, force_send=False, final=False):
+    """Fetch standings once and publish live/*.json if anything changed."""
+    last_state = load_last_state()
+    try:
+        results, lv = get_standings(race["gameday_id"], _score_now(race), race)
+    except CookieExpired as e:
+        cookie_expired_exit(str(e))
+    for t in results:
+        print(f"    {t['rank']}. {t['user_name']} — {int(t['points'])}pts")
+    if not (force_send or scores_changed(race, results, last_state)):
+        print("  No changes — nothing to publish.")
+        return False
+    save_state(race, results, post_race_sent=final)
+    export_json_data(race, results, lv, race["gameday_id"], last_state=last_state)
+    return True
+
+
+def commit_live(message):
+    """Session mode: push each checkpoint right away (only on GitHub Actions)."""
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        print("  (local run — not committing)")
+        return
+    import subprocess
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    def git(*args):
+        return subprocess.run(["git", *args], cwd=root, capture_output=True, text=True)
+    git("config", "user.name", "F1 Bot")
+    git("config", "user.email", "f1bot@github.com")
+    git("add", "live", os.path.join("bot", "last_standings.json"))
+    if git("diff", "--staged", "--quiet").returncode == 0:
+        return
+    git("commit", "-m", f"{message} [skip ci]")
+    for attempt in range(3):
+        if git("pull", "--rebase").returncode == 0 and git("push").returncode == 0:
+            print("  pushed")
+            return
+        time.sleep(5)
+    print("  WARNING: push failed — will retry at the next checkpoint")
+
+
+FANTASY_SESSION_TYPES = {"qualifying": "Qualifying", "sprint": "Sprint", "race": "Race"}
+MATCH_STATUS = {"1": "upcoming", "2": "live", "3": "complete", "4": "complete"}
+
+
+def _schedule_sessions(node):
+    """All session entries in F1 Fantasy's schedule feed (nested structure)."""
+    if isinstance(node, list):
+        for x in node:
+            yield from _schedule_sessions(x)
+    elif isinstance(node, dict):
+        if "GamedayId" in node and "SessionType" in node:
+            yield node
+        else:
+            for v in node.values():
+                yield from _schedule_sessions(v)
+
+
+def fantasy_signals_fn(race):
+    """Build the signals function for session mode — F1 Fantasy API only:
+      status        schedule MatchStatus (1 upcoming, 2 live, 4 complete)
+      q_parts_done  0/1/2 — constructor bonus "...Q2" appears after Q1, "...Q3" after Q2
+    """
+    gd   = int(race["gameday_id"])
+    kind = race["session_type"]
+    want = FANTASY_SESSION_TYPES.get(kind, "Race")
+    cache = {"lv": "unset", "parts": 0, "cons": None}
+
+    def constructor_ids():
+        if cache["cons"] is None:
+            data = get(f"{BASE_FEEDS}/drivers/{gd}_en.json?buster={buster()}")["Data"]["Value"]
+            cache["cons"] = [str(p["PlayerId"]) for p in data
+                             if p.get("Skill") == 2 or p.get("PositionName", "").upper() != "DRIVER"]
+        return cache["cons"]
+
+    def signals():
+        sig = {"status": None, "q_parts_done": None}
+        try:
+            sched = get(f"{BASE_FEEDS}/v2/schedule/raceday_en.json?buster={buster()}")
+            entry = next((e for e in _schedule_sessions(sched)
+                          if int(e.get("GamedayId", 0)) == gd and e.get("SessionType") == want), None)
+            if entry:
+                sig["status"] = MATCH_STATUS.get(str(entry.get("MatchStatus")))
+        except Exception as e:
+            print(f"    (schedule feed unavailable: {e})")
+        if kind == "qualifying":
+            try:
+                lv = get(f"{BASE_FEEDS}/live/mixapi.json?buster={buster()}")["Value"].get("lv")
+                if lv != cache["lv"]:                     # new F1 Fantasy batch → re-check bonuses
+                    cache["lv"] = lv
+                    events = set()
+                    for pid in constructor_ids():
+                        stats = get(f"{BASE_FEEDS}/popup/playerstats_{pid}.json?buster={lv or buster()}")
+                        for g in stats["Value"]["GamedayWiseStats"]:
+                            if int(g["GamedayId"]) == gd:
+                                events |= {st["Event"] for st in g["StatsWise"]}
+                        time.sleep(0.05)
+                    parts = 2 if any("Q3" in ev for ev in events) else \
+                            1 if any("Q2" in ev for ev in events) else 0
+                    cache["parts"] = max(cache["parts"], parts)
+                sig["q_parts_done"] = cache["parts"]
+            except Exception as e:
+                print(f"    (qualifying bonus check failed: {e})")
+        return sig
+
+    return signals
+
+
+def run_session_mode(race):
+    """Stay alive for the whole session and publish only at checkpoints."""
+    import session_mode
+    label = f"live: {race['meeting_name']} {race['session_type']}"
+
+    def publish(reasons, final):
+        print(f"\n[checkpoint] {', '.join(reasons)}")
+        if publish_update(race, force_send=final, final=final):
+            commit_live(f"{label} — {reasons[-1]}")
+
+    session_mode.run(race["session_type"], race["start_dt"], publish, fantasy_signals_fn(race))
+
+
 # ── Main ──────────────────────────────────────────────────────────
 
 def main():
@@ -1020,8 +1157,29 @@ def main():
         print("  FORCE_RUN=1 — skipping all window and change checks.")
 
     ok, mode = should_run(race, score, force=force)
+    if not ok and not force and os.environ.get("SESSION_MODE", "1") == "1":
+        # Started by hand ahead of time? Take the next session if it's within 2 h.
+        soon, _ = get_current_race(upcoming_within_hours=2)
+        if soon:
+            soon = {**soon, "gameday_id": validate_gameday_id(soon)}
+            print(f"\nNext session {soon['meeting_name']} {soon['session_type']} starts "
+                  f"{soon['start_dt']:%H:%M} UTC — session mode will wait for it.")
+            race, ok, mode = soon, True, "live"
     if not ok:
         print("\nOutside race window. Exiting cleanly.")
+        return
+
+    # Session mode (default): one run covers the whole session, publishing at
+    # Q1/Q2/Q3 ends or every ~10 laps. SESSION_MODE=0 → old one-shot behaviour.
+    if mode == "live" and not force and os.environ.get("SESSION_MODE", "1") == "1":
+        last_state = load_last_state()
+        same = (last_state and str(last_state.get("gameday_id")) == str(race["gameday_id"])
+                and last_state.get("session_type") == race["session_type"])
+        if same and last_state.get("post_race_sent"):
+            print("\nThis session is already final. Exiting.")
+            return
+        run_session_mode(race)
+        print("\nDone!")
         return
 
     # ── 2. Load last state ────────────────────────────────────────

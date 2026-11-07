@@ -1,14 +1,14 @@
 name: F1 Fantasy Standings
 
+# Start by hand (Actions → F1 Fantasy Standings → Run workflow) up to 2 hours
+# before qualifying, the sprint or the race. One run covers the whole session
+# (session mode) and publishes live/*.json at checkpoints, then stops.
+# (GitHub's own schedule was too unreliable — runs came hours late.)
 on:
-  schedule:
-    # Runs every 10 minutes, Saturdays + Sundays, 03:00-22:00 UTC
-    - cron: "*/10 3-22 * * 0,6"
-
   workflow_dispatch:
     inputs:
       force_run:
-        description: "Force send even outside race window"
+        description: "1 = one immediate update and exit (no session mode). Leave 0 normally."
         required: false
         default: "0"
         type: choice
@@ -26,7 +26,9 @@ concurrency:
 jobs:
   standings:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    # Session mode: up to 2 h waiting for the start + the session itself
+    # (race + delays + 45 min settle). 360 min is GitHub's maximum.
+    timeout-minutes: 360
     permissions:
       contents: write
 
@@ -47,6 +49,7 @@ jobs:
           FORCE_RUN:          ${{ github.event.inputs.force_run || '0' }}
           FORCE_ROUND:        ${{ github.event.inputs.force_round || '' }}
           F1_COOKIE:          ${{ secrets.F1_COOKIE }}
+          SESSION_MODE:       "1"   # "0" = old behaviour (one update per run)
         run: python bot/f1_quick.py
 
       # One commit per run with all live files + bot state (only if something changed)

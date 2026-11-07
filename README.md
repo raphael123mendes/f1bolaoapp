@@ -16,9 +16,18 @@ F1 Fantasy API ──► GitHub Actions (Python) ──► JSON files in this re
 
 | Workflow | When | What it does |
 |---|---|---|
-| **F1 Fantasy Standings** (`f1_standings.yml` → `bot/f1_quick.py`) | Every 10 min on Sat/Sun, 03:00–22:00 UTC | Live scores during qualifying/sprint/race → `live/results.json`, `live/picks.json`, `live/breakdowns.json`. Publishes only when scores change, plus once when the session is final. |
+| **F1 Fantasy Standings** (`f1_standings.yml` → `bot/f1_quick.py`) | **Start by hand** up to 2 h before qualifying / sprint / race (leave `force_run` = 0) | **Session mode:** one run covers the whole session and publishes `live/*.json` at checkpoints — qualifying: Q1 end, Q2 end (from F1 Fantasy bonuses), complete, final +15 min; sprint/race: every ~10 laps (estimated), chequered flag, final (race +45 min). |
 | **F1 Results Pipeline** (`f1_results_pipeline.yml` → `results_SC/run_all.py` + `build_fantasy_f1.py`) | Manually after each race (Actions → *Run workflow*; optional race number) | Final data for the race → `results.json`, `picks.json`, `prices.json`, `breakdowns.json`, `races.json` |
 | **F1 Refresh Cookie** (`f1_get_cookie.yml` → `bot/f1_login.py`) | Manually, when the other workflows fail with 401 | Logs in to F1 Fantasy and saves a fresh `F1_COOKIE` secret |
+
+### Live session mode (`bot/session_mode.py`)
+- Uses only the F1 Fantasy API: the schedule feed's session status (1 upcoming, 2 live,
+  4 complete) and the constructor bonuses that appear when Q1 / Q2 end ("…Q2", "…Q3").
+- Laps are **estimated** (~10 laps per 15 min); red flags aren't visible, so after the normal
+  race length updates say "session still running".
+- Started early it waits for the start; a session that's already final is skipped.
+- Test without network: `python bot/simulate_session_mode.py`
+- `SESSION_MODE: "0"` in `f1_standings.yml` → old one-update-per-run behaviour.
 
 ### Secrets (Settings → Secrets and variables → Actions)
 - `F1_COOKIE` — F1 Fantasy session cookie (set by *F1 Refresh Cookie*)

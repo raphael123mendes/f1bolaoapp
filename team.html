@@ -567,9 +567,8 @@ const fmtPrize  = v => v.toFixed(2);                 // exact, $ in the title
 const budgetTip = i => `${raceLbls[i]} · $${fmtBudget(budgets[i])}M`;
 const pointsTip = i => `${raceLbls[i]} · ${racePoints[i]} pts`;
 const prizeTip  = i => `${raceLbls[i]} · ${prizes[i] > 0 ? '$' + fmtPrize(prizes[i]) : 'no prize'}`;
-// Points: print only best and latest race; tap any bar for its value
-const bestIdx   = racePoints.indexOf(Math.max(...racePoints));
-const showPts   = i => i === bestIdx || i === racePoints.length - 1;
+// Points: every race is labelled (scrolling gives each race enough room)
+const showPts   = () => true;
 const LEAGUE_SIZE = Object.keys(DATA).length;
 const seasonRanks = d.rank_history.map(r => r.season_rank);
 

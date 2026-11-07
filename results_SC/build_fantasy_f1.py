@@ -125,6 +125,34 @@ def build_data(schedule, prices_data, race_files):
         if data:
             all_races_entries[data[0]["race_number"]] = data
 
+    # ── Season points & rank: validate the snapshot taken at each race ────────
+    # The API's overall total is a "right now" value, so a race fetched late
+    # (after the next weekend started) carries later totals — e.g. R4, R6.
+    # Rule: keep the snapshot when it matches previous total + this race's GD
+    # points within SNAPSHOT_TOLERANCE (small steward corrections, like Gasly
+    # at Monaco); otherwise use previous total + GD points and flag the race.
+    SNAPSHOT_TOLERANCE = 10
+    prev_total = {}
+    for race_number in sorted(all_races_entries):
+        entries = all_races_entries[race_number]
+        replaced = []
+        for e in entries:
+            expected = prev_total.get(e["user_name"], 0) + (e["gd_points"] or 0)
+            snap = e.get("total_points")
+            if snap is None or abs(snap - expected) > SNAPSHOT_TOLERANCE:
+                replaced.append(f'{e["user_name"]} {snap}->{expected}')
+                e["total_points"] = expected
+        if replaced:
+            # Totals changed → rank from the corrected totals (ties share a rank)
+            ordered = sorted(entries, key=lambda e: -e["total_points"])
+            for i, e in enumerate(ordered):
+                tied = i > 0 and e["total_points"] == ordered[i - 1]["total_points"]
+                e["rank"] = ordered[i - 1]["rank"] if tied else i + 1
+            print(f"  ⚠ R{race_number}: season snapshot taken late — rebuilt from GD "
+                  f"points for {len(replaced)} team(s): {', '.join(replaced)}")
+        for e in entries:
+            prev_total[e["user_name"]] = e["total_points"]
+
     for race_number in sorted(all_races_entries):
         race_data    = all_races_entries[race_number]
         prev_number  = race_number - 1

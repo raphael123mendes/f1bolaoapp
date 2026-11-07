@@ -149,14 +149,20 @@
   }
 
   .p-pts { text-align: right; }
-  .p-penalty {
-    display: flex; width: fit-content; max-width: 100%; align-items: center; gap: 4px;
-    flex-wrap: wrap; box-sizing: border-box;
-    margin: 4px 4px 0 0; padding: 2px 8px; border-radius: 6px;
-    background: #f6b5b0; color: #1a1a1a;
-    font-size: 0.68rem; font-weight: 600; line-height: 1.4;
+  .player-row.has-tags .p-rank { grid-row: span 2; }
+  .p-tags {
+    grid-column: 2 / -1; display: flex; flex-wrap: wrap; gap: 4px; align-items: center;
+    margin-top: -4px;
   }
-  .p-penalty .material-symbols-outlined { font-size: 0.85rem; }
+  .p-tags .p-card { margin-top: 0; }
+  .p-penalty {
+    display: inline-flex; align-items: center; gap: 4px; white-space: nowrap;
+    padding: 1px 6px; border-radius: 3px;
+    background: #f6b5b0; color: #1a1a1a;
+    font-size: 0.58rem; font-weight: 600; line-height: 1.5;
+  }
+  .p-penalty b { font-weight: 800; }
+  .p-penalty .material-symbols-outlined { font-size: 0.75rem; }
   .p-prize {
     text-align: right;
   }
@@ -668,18 +674,30 @@ async function manualRefresh() {
 // ── RENDER ─────────────────────────────────────────────────────────────────
 // Penalties as the F1 Fantasy team screen reports them.
 // Already included in GD PTS — shown so the deduction is visible.
+// "Extra DRS (GD13); Autopilot (GD13)" → one chip per card: "EXTRA DRS · R13"
+function cardChips(cardsUsed) {
+  if (!cardsUsed || !cardsUsed.trim()) return '';
+  return cardsUsed.split(/[;,]/).map(c => c.trim()).filter(Boolean).map(c => {
+    const m = c.match(/^(.*?)\s*\(GD(\d+)x?\)$/i);
+    return `<span class="p-card">${m ? `${m[1]} · R${m[2]}` : c}</span>`;
+  }).join('');
+}
+
+// One compact pill: total penalty + type, e.g. "-20 (Transfers)".
+// Full breakdown in the hover/tap tooltip. Already included in GD PTS.
 function penaltyHtml(p) {
-  const out = [];
-  if (p.transfer_penalty) {
+  const tp = p.transfer_penalty || 0, ip = p.inactive_penalty || 0;
+  if (!tp && !ip) return '';
+  const types = [], tip = [];
+  if (tp) {
     const n = p.extra_transfers || 0;
-    const cost = n ? Math.abs(p.transfer_penalty) / n : 10;
-    out.push([`${p.transfer_penalty} pts`, `${n} extra transfer${n === 1 ? '' : 's'}`,
-              `-${cost} x ${n} = ${p.transfer_penalty} pts (included in GD PTS)`]);
+    const cost = n ? Math.abs(tp) / n : 10;
+    types.push('Transfers');
+    tip.push(`Extra transfers: -${cost} x ${n} = ${tp} pts`);
   }
-  if (p.inactive_penalty) out.push([`${p.inactive_penalty} pts`, 'inactive driver',
-              `Inactive driver penalty points = ${p.inactive_penalty} pts (included in GD PTS)`]);
-  return out.map(([pts, why, tip]) =>
-    `<span class="p-penalty" title="${tip}"><span class="material-symbols-outlined">warning</span><b>${pts}</b> ${why}</span>`).join('');
+  if (ip) { types.push('Inactive'); tip.push(`Inactive driver: ${ip} pts`); }
+  tip.push('Already included in GD PTS');
+  return `<span class="p-penalty" title="${tip.join(' | ')}"><b>${tp + ip}</b> (${types.join(' + ')})</span>`;
 }
 
 function render() {
@@ -754,8 +772,6 @@ function render() {
         <div class="p-name">${p.user_name}</div>
         <div class="p-team">${p.team_name}</div>
         ${picksHtml ? `<div class="p-picks">${picksHtml}</div>` : ''}
-        ${hasCard ? `<span class="p-card">${p.cards_used}</span>` : ''}
-        ${penaltyHtml(p)}
       </div>
       <div class="p-pts">
         <div class="p-pts-race">${(p.race_points ?? 0).toFixed(0)}</div>
@@ -767,8 +783,6 @@ function render() {
       <div class="p-info">
         <div class="p-name">${p.user_name}</div>
         <div class="p-team">${p.team_name}</div>
-        ${hasCard ? `<span class="p-card">${p.cards_used}</span>` : ''}
-        ${penaltyHtml(p)}
       </div>
       <div class="p-prize">
         ${hasPrize
@@ -786,6 +800,12 @@ function render() {
           ${deltaStr}
         </div>
       </div>`;
+    }
+    // Cards + penalties on their own full-width line under the player
+    const tags = cardChips(p.cards_used) + penaltyHtml(p);
+    if (tags) {
+      row.classList.add('has-tags');
+      row.insertAdjacentHTML('beforeend', `<div class="p-tags">${tags}</div>`);
     }
     list.appendChild(row);
   });

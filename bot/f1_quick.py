@@ -1034,7 +1034,7 @@ def commit_live(message):
     git("commit", "-m", f"{message} [skip ci]")
     for attempt in range(3):
         if git("pull", "--rebase").returncode == 0 and git("push").returncode == 0:
-            print("  pushed")
+            print("  ✓ pushed to GitHub — website shows it in ~1 min")
             return
         time.sleep(5)
     print("  WARNING: push failed — will retry at the next checkpoint")

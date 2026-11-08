@@ -50,7 +50,8 @@ jobs:
           FORCE_ROUND:        ${{ github.event.inputs.force_round || '' }}
           F1_COOKIE:          ${{ secrets.F1_COOKIE }}
           SESSION_MODE:       "1"   # "0" = old behaviour (one update per run)
-        run: python bot/f1_quick.py
+          PYTHONUNBUFFERED:   "1"   # show log lines live while the run is going
+        run: python -u bot/f1_quick.py
 
       # One commit per run with all live files + bot state (only if something changed)
       - name: Commit live data

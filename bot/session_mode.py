@@ -65,6 +65,26 @@ class Checkpointer:
             return "Running"
         return f"~Lap {max(1, round(elapsed * LAPS_PER_MINUTE))}"
 
+    def next_update(self, now):
+        """(what, when|None) — the next checkpoint, for the log."""
+        if self.done:
+            return ("nothing — session final", None)
+        if self.complete_at:
+            return ("final update", self.complete_at + timedelta(minutes=self.rule["settle"]))
+        if now < self.start:
+            return ("session start", self.start)
+        if self.kind == "qualifying":
+            nxt = self.parts_published + 1
+            if nxt <= 2:
+                # typical end of Q1 ~18 min, Q2 ~40 min (later after red flags)
+                eta = self.start + timedelta(minutes=(20, 42)[nxt - 1])
+                return (f"Q{nxt} end — when F1 Fantasy shows the Q{nxt + 1} bonuses", max(eta, now))
+            return ("qualifying complete — when F1 Fantasy marks it", max(self.start + timedelta(minutes=60), now))
+        at = self.start + timedelta(minutes=self.next_every)
+        if self.next_every <= self.rule["length"]:
+            return (f"~lap {round(self.next_every * LAPS_PER_MINUTE)}", at)
+        return ("update (session still running) / chequered flag", at)
+
     def tick(self, now, signals):
         reasons = []
         if self.done or now < self.start:
@@ -137,26 +157,39 @@ def run(session_type, start_dt, publish, signals_fn, *, now_fn=None, sleep_fn=No
     # started early by hand → wait for the start (cheaply)
     while now_fn() < start_dt:
         wait = min(poll_seconds * 5, (start_dt - now_fn()).total_seconds())
-        log(f"  waiting for the start ({(start_dt - now_fn()).total_seconds() / 60:.0f} min)")
+        log(f"[{now_fn():%H:%M} UTC] {session_type.upper()} · waiting — starts {start_dt:%H:%M} UTC "
+            f"(in {(start_dt - now_fn()).total_seconds() / 60:.0f} min) · NEXT: first update at the start")
         sleep_fn(max(wait, 1))
 
     if on_start:                      # session has begun → status-only update (banner)
         on_start(cp.phase(now_fn()))
 
-    updates, last = 0, None
+    def status_line(now, sig):
+        what, when = cp.next_update(now)
+        eta = f" at ~{when:%H:%M} UTC" if when else ""
+        log(f"[{now:%H:%M} UTC] {session_type.upper()} · {cp.phase(now)} · "
+            f"F1 Fantasy: {sig.get('status') or 'unreachable'} · "
+            f"updates so far: {updates} · NEXT: {what}{eta}")
+
+    updates, last, last_line = 0, None, None
     while not cp.done:
         now = now_fn()
         sig = signals_fn() or {}
         key = (sig.get("status"), sig.get("q_parts_done"))
         if key != last:
-            log(f"  {now:%H:%M} F1 Fantasy: status={sig.get('status')} "
+            log(f"  {now:%H:%M} F1 Fantasy changed: status={sig.get('status')} "
                 f"q_parts_done={sig.get('q_parts_done')}")
             last = key
         reasons = cp.tick(now, sig)
         if reasons:
-            log(f"  {now:%H:%M} PUBLISH: {', '.join(reasons)}")
+            log(f"\n>>> {now:%H:%M} UTC PUBLISHING: {', '.join(reasons)}")
             publish(reasons, cp.done, cp.phase(now))
             updates += 1
+            status_line(now, sig)
+            last_line = now
+        elif last_line is None or (now - last_line).total_seconds() >= 300:
+            status_line(now, sig)                       # heartbeat every 5 min
+            last_line = now
         if not cp.done:
             sleep_fn(poll_seconds)
     log(f"[session mode] done — {updates} update(s) published")

@@ -21,6 +21,7 @@ Regenerate races.json by hand after editing the calendar:
 import json
 import os
 import unicodedata
+from datetime import datetime, timezone
 
 REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -100,6 +101,20 @@ def check_against_api(api_calendar, cal=None):
                 warnings.append(f"GD{gd}: F1 Fantasy says '{g['race_name']}', calendar says '{r['name']}'")
             if g.get("race_date") and g["race_date"] != race_date(r):
                 warnings.append(f"GD{gd} {r['name']}: race date F1 Fantasy {g['race_date']} vs calendar {race_date(r)}")
+            # start TIMES too (a 1-hour error stopped the live bot in Brazil)
+            for fs in g.get("sessions", []):
+                kind = {"Qualifying": "qualifying", "Race": "race"}.get(fs.get("type"))
+                mine_s = next((x for x in r["sessions"] if x["session_type"] == kind), None)
+                if not kind or not mine_s or not fs.get("start"):
+                    continue
+                try:
+                    f_utc = datetime.fromisoformat(fs["start"]).astimezone(timezone.utc)
+                    m_utc = datetime.fromisoformat(mine_s["utc_start"].replace("Z", "+00:00"))
+                except ValueError:
+                    continue
+                if abs((f_utc - m_utc).total_seconds()) > 300:
+                    warnings.append(f"GD{gd} {r['name']} {kind}: starts {f_utc:%Y-%m-%d %H:%M} UTC on "
+                                    f"F1 Fantasy, calendar says {m_utc:%Y-%m-%d %H:%M} UTC")
         # F1 Fantasy only lists gamedays released so far → check up to the last one it has
         api_gds = {g.get("matchday") for g in api_calendar}
         last_api = max(api_gds)

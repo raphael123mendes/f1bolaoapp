@@ -1,8 +1,8 @@
 {
-  "race_number": 20,
-  "meeting_name": "São Paulo Grand Prix",
+  "race_number": 21,
+  "meeting_name": "Las Vegas Grand Prix",
   "session": "Race",
-  "phase": "Final",
-  "final": true,
-  "updated_utc": "2026-11-08T20:30:48Z"
+  "phase": "~Lap 1",
+  "final": false,
+  "updated_utc": "2026-11-22T04:00:00Z"
 }

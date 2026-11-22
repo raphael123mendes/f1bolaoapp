@@ -138715,7 +138715,7 @@
     "pick_name": "Isack Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 9,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -138732,7 +138732,7 @@
     "pick_name": "Isack Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 9,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6
   },
@@ -138749,9 +138749,9 @@
     "pick_name": "Isack Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 9,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -10
+    "breakdown_points": -11
   },
   {
     "race_number": 21,
@@ -138766,7 +138766,7 @@
     "pick_name": "Isack Hadjar",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 10,
+    "pick_points_gd": 9,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 14
   },
@@ -139514,7 +139514,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -139531,7 +139531,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3
   },
@@ -139548,9 +139548,9 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -139565,7 +139565,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -139582,7 +139582,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 4
   },
@@ -140534,7 +140534,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -140551,7 +140551,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3
   },
@@ -140568,9 +140568,9 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -140585,7 +140585,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -140602,7 +140602,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 4
   },
@@ -140687,7 +140687,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -140704,7 +140704,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8
   },
@@ -140721,7 +140721,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race not classified",
     "breakdown_points": -20
   },
@@ -140738,7 +140738,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -140755,9 +140755,9 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -140772,7 +140772,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -140789,7 +140789,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -140806,7 +140806,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -140823,7 +140823,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 8
   },
@@ -141248,7 +141248,7 @@
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 75,
+    "pick_points_gd": 74,
     "breakdown_category": "Race Position",
     "breakdown_points": 25
   },
@@ -141265,7 +141265,7 @@
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 75,
+    "pick_points_gd": 74,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15
   },
@@ -141282,7 +141282,7 @@
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 75,
+    "pick_points_gd": 74,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -141299,9 +141299,9 @@
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 75,
+    "pick_points_gd": 74,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -10
+    "breakdown_points": -11
   },
   {
     "race_number": 21,
@@ -141316,7 +141316,7 @@
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 75,
+    "pick_points_gd": 74,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -141333,7 +141333,7 @@
     "pick_name": "Red Bull Racing",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 75,
+    "pick_points_gd": 74,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 30
   },
@@ -142098,7 +142098,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -142115,7 +142115,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3
   },
@@ -142132,9 +142132,9 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -142149,7 +142149,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -142166,7 +142166,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 4
   },
@@ -143067,7 +143067,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -143084,7 +143084,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3
   },
@@ -143101,9 +143101,9 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -143118,7 +143118,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -143135,7 +143135,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 4
   },
@@ -143390,7 +143390,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -143407,7 +143407,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8
   },
@@ -143424,7 +143424,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race not classified",
     "breakdown_points": -20
   },
@@ -143441,7 +143441,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -143458,9 +143458,9 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -143475,7 +143475,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -143492,7 +143492,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -143509,7 +143509,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -143526,7 +143526,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 8
   },
@@ -143798,7 +143798,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -143815,7 +143815,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3
   },
@@ -143832,9 +143832,9 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -143849,7 +143849,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -143866,7 +143866,7 @@
     "pick_name": "Liam Lawson",
     "pick_type": "Driver",
     "is_captain": false,
-    "pick_points_gd": 9,
+    "pick_points_gd": 10,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 4
   },
@@ -143985,7 +143985,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position",
     "breakdown_points": 0
   },
@@ -144002,7 +144002,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8
   },
@@ -144019,7 +144019,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race not classified",
     "breakdown_points": -20
   },
@@ -144036,7 +144036,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10
   },
@@ -144053,9 +144053,9 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Position lost",
-    "breakdown_points": -8
+    "breakdown_points": -7
   },
   {
     "race_number": 21,
@@ -144070,7 +144070,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Race Fastest lap",
     "breakdown_points": 10
   },
@@ -144087,7 +144087,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -144104,7 +144104,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "2nd Fastest Pitstop",
     "breakdown_points": 5
   },
@@ -144121,7 +144121,7 @@
     "pick_name": "Racing Bulls",
     "pick_type": "Constructor",
     "is_captain": false,
-    "pick_points_gd": 18,
+    "pick_points_gd": 19,
     "breakdown_category": "race overtake bonus",
     "breakdown_points": 8
   },

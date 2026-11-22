@@ -29044,8 +29044,468 @@
     "race_name": "Las Vegas Grand Prix",
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
-    "season_rank": 8,
+    "season_rank": 7,
     "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "QF not classified ",
+    "breakdown_points": -5,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11031",
+    "pick_name": "O. Bearman",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 10,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": true,
+    "cap_multiplier": 3,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 3,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "12",
+    "pick_name": "F. Alonso",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "12",
+    "pick_name": "F. Alonso",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "12",
+    "pick_name": "F. Alonso",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 2,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "1982",
+    "pick_name": "O. Piastri",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 4,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "1982",
+    "pick_name": "O. Piastri",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 12,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "1982",
+    "pick_name": "O. Piastri",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 13,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 11,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 22,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "27",
+    "pick_name": "McLaren",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 11,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q3",
+    "breakdown_points": 10,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 40,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 7,
+    "race_rank": 1,
+    "team_name": "qq um menos o Liberio",
+    "user_name": "Vinicius Agostini",
+    "pick_id": "28",
+    "pick_name": "Mercedes",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 220
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 8,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11059",
@@ -29057,7 +29517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29065,7 +29525,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "11059",
@@ -29077,7 +29537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29085,7 +29545,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "12",
@@ -29097,7 +29557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29105,7 +29565,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "12",
@@ -29117,7 +29577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29125,7 +29585,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "12",
@@ -29136,8 +29596,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 197
+    "breakdown_points": 2,
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29145,7 +29605,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "121",
@@ -29157,7 +29617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29165,7 +29625,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "121",
@@ -29177,7 +29637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29185,7 +29645,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "121",
@@ -29197,7 +29657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29205,7 +29665,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "124",
@@ -29217,7 +29677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29225,7 +29685,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "124",
@@ -29237,7 +29697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29245,7 +29705,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "124",
@@ -29257,7 +29717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29265,7 +29725,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "125",
@@ -29277,7 +29737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29285,7 +29745,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "125",
@@ -29297,7 +29757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29305,7 +29765,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "125",
@@ -29317,7 +29777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 10,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29325,7 +29785,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "27",
@@ -29337,7 +29797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 11,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29345,7 +29805,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "27",
@@ -29357,7 +29817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29365,7 +29825,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "27",
@@ -29376,8 +29836,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 21,
-    "pick_points_gd": 197
+    "breakdown_points": 22,
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29385,7 +29845,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "27",
@@ -29396,8 +29856,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 10,
-    "pick_points_gd": 197
+    "breakdown_points": 11,
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29405,7 +29865,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29417,7 +29877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29425,7 +29885,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29437,7 +29897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 197
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29445,7 +29905,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29456,8 +29916,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 197
+    "breakdown_points": 40,
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29465,7 +29925,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 8,
-    "race_rank": 1,
+    "race_rank": 2,
     "team_name": "Yas Bombs",
     "user_name": "Danilo Iglesias",
     "pick_id": "28",
@@ -29476,8 +29936,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 197
+    "breakdown_points": 4,
+    "pick_points_gd": 205
   },
   {
     "race_number": 21,
@@ -29485,7 +29945,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11031",
@@ -29497,7 +29957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29505,7 +29965,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11031",
@@ -29517,7 +29977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29525,7 +29985,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11031",
@@ -29536,8 +29996,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 11,
-    "pick_points_gd": 187
+    "breakdown_points": 10,
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29545,7 +30005,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11032",
@@ -29557,7 +30017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 6,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29565,7 +30025,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11032",
@@ -29577,7 +30037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29585,7 +30045,27 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
+    "team_name": "Liberius",
+    "user_name": "Liberio Junior",
+    "pick_id": "11032",
+    "pick_name": "I. Hadjar",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 193
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11032",
@@ -29597,7 +30077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -15,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29605,7 +30085,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11059",
@@ -29617,7 +30097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29625,7 +30105,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "11059",
@@ -29637,7 +30117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29645,7 +30125,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "131",
@@ -29657,7 +30137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29665,7 +30145,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "131",
@@ -29677,7 +30157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29685,7 +30165,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "131",
@@ -29697,7 +30177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29705,7 +30185,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "18",
@@ -29717,7 +30197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29725,7 +30205,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "18",
@@ -29736,28 +30216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 187
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 2,
-    "race_rank": 2,
-    "team_name": "Liberius",
-    "user_name": "Liberio Junior",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29765,7 +30225,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "27",
@@ -29777,7 +30237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 11,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29785,7 +30245,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "27",
@@ -29797,7 +30257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29805,7 +30265,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "27",
@@ -29816,8 +30276,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 21,
-    "pick_points_gd": 187
+    "breakdown_points": 22,
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29825,7 +30285,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "27",
@@ -29836,8 +30296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 10,
-    "pick_points_gd": 187
+    "breakdown_points": 11,
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29845,7 +30305,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -29857,7 +30317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29865,7 +30325,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -29877,7 +30337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 187
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29885,7 +30345,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -29896,8 +30356,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 187
+    "breakdown_points": 40,
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -29905,7 +30365,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 2,
-    "race_rank": 2,
+    "race_rank": 3,
     "team_name": "Liberius",
     "user_name": "Liberio Junior",
     "pick_id": "28",
@@ -29916,468 +30376,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 187
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "QF not classified ",
-    "breakdown_points": -5,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11031",
-    "pick_name": "O. Bearman",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 11,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": true,
-    "cap_multiplier": 3,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "12",
-    "pick_name": "F. Alonso",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "12",
-    "pick_name": "F. Alonso",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "12",
-    "pick_name": "F. Alonso",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "1982",
-    "pick_name": "O. Piastri",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
     "breakdown_points": 4,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "1982",
-    "pick_name": "O. Piastri",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 6,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "1982",
-    "pick_name": "O. Piastri",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 10,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 11,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 21,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "27",
-    "pick_name": "McLaren",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 10,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q3",
-    "breakdown_points": 10,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 186
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 7,
-    "race_rank": 3,
-    "team_name": "qq um menos o Liberio",
-    "user_name": "Vinicius Agostini",
-    "pick_id": "28",
-    "pick_name": "Mercedes",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 186
+    "pick_points_gd": 193
   },
   {
     "race_number": 21,
@@ -30397,7 +30397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30417,7 +30417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30436,8 +30436,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 11,
-    "pick_points_gd": 166
+    "breakdown_points": 10,
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30457,7 +30457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30477,27 +30477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 6,
-    "race_rank": 4,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30517,7 +30497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30536,8 +30516,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 166
+    "breakdown_points": 15,
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30556,8 +30536,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 166
+    "breakdown_points": 3,
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30577,7 +30557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30597,7 +30577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30617,7 +30597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -11,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30637,7 +30617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30657,7 +30637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30677,7 +30657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30697,7 +30677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30717,7 +30697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30737,7 +30717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 2,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30756,28 +30736,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 166
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 6,
-    "race_rank": 4,
-    "team_name": "Ixxtain",
-    "user_name": "Raphael Stein",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 166
+    "breakdown_points": 14,
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30796,8 +30756,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 166
+    "breakdown_points": 8,
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30817,7 +30777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30837,7 +30797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 166
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30856,8 +30816,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 166
+    "breakdown_points": 40,
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30876,8 +30836,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 166
+    "breakdown_points": 4,
+    "pick_points_gd": 178
   },
   {
     "race_number": 21,
@@ -30897,7 +30857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -30916,28 +30876,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 4,
-    "pick_points_gd": 160
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 4,
-    "race_rank": 5,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "pick_id": "110",
-    "pick_name": "L. Hamilton",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 160
+    "breakdown_points": 8,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -30956,8 +30896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 160
+    "breakdown_points": 5,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -30977,7 +30917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -30997,7 +30937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31016,8 +30956,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 11,
-    "pick_points_gd": 160
+    "breakdown_points": 10,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31037,7 +30977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31057,27 +30997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 160
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 4,
-    "race_rank": 5,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31097,7 +31017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31116,8 +31036,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 160
+    "breakdown_points": 15,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31136,8 +31056,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 160
+    "breakdown_points": 3,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31157,7 +31077,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31177,7 +31097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31197,7 +31117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -5,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31217,7 +31137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31237,7 +31157,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31257,7 +31177,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 2,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31276,28 +31196,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 160
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 4,
-    "race_rank": 5,
-    "team_name": "Fiat147",
-    "user_name": "Rafael Dias",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 160
+    "breakdown_points": 14,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31316,8 +31216,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 160
+    "breakdown_points": 8,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31337,7 +31237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31357,7 +31257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 160
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31376,8 +31276,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 160
+    "breakdown_points": 40,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31396,8 +31296,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 160
+    "breakdown_points": 4,
+    "pick_points_gd": 168
   },
   {
     "race_number": 21,
@@ -31417,7 +31317,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31437,27 +31337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 147
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 5,
-    "race_rank": 6,
-    "team_name": "CarretaFuracao",
-    "user_name": "Robson Jardim",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31477,7 +31357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31497,7 +31377,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31517,7 +31397,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31536,8 +31416,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 147
+    "breakdown_points": 15,
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31556,8 +31436,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 147
+    "breakdown_points": 3,
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31577,7 +31457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31597,7 +31477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31617,7 +31497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -11,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31637,7 +31517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31657,7 +31537,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 25,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31677,7 +31557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31697,7 +31577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31717,7 +31597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31737,7 +31617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31757,7 +31637,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31777,7 +31657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -26,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31797,7 +31677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31817,7 +31697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 147
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31836,8 +31716,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 147
+    "breakdown_points": 40,
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31856,8 +31736,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 147
+    "breakdown_points": 4,
+    "pick_points_gd": 160
   },
   {
     "race_number": 21,
@@ -31877,7 +31757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -31897,7 +31777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -31917,7 +31797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -31937,7 +31817,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -31956,8 +31836,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 11,
-    "pick_points_gd": 141
+    "breakdown_points": 10,
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -31977,7 +31857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 1,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -31997,7 +31877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 2,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32017,7 +31897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32037,7 +31917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32056,8 +31936,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 3,
-    "pick_points_gd": 141
+    "breakdown_points": 2,
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32077,7 +31957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 9,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32097,7 +31977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32117,7 +31997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -1,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32137,7 +32017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32157,7 +32037,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32176,8 +32056,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 141
+    "breakdown_points": 40,
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32196,8 +32076,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 141
+    "breakdown_points": 4,
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32217,7 +32097,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 15,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32237,7 +32117,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32257,7 +32137,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32277,7 +32157,27 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 18,
-    "pick_points_gd": 141
+    "pick_points_gd": 156
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 1,
+    "race_rank": 7,
+    "team_name": "Stradale  Mucci",
+    "user_name": "Fabio Mucci",
+    "pick_id": "29",
+    "pick_name": "Red Bull Racing",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Fastest lap",
+    "breakdown_points": 10,
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32297,507 +32197,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -16,
-    "pick_points_gd": 141
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 5,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11149",
-    "pick_name": "A. Lindblad",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -15,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "11161",
-    "pick_name": "K. Antonelli",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "121",
-    "pick_name": "S. Perez",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -5,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "131",
-    "pick_name": "M. Verstappen",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 9,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "131",
-    "pick_name": "M. Verstappen",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 18,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "131",
-    "pick_name": "M. Verstappen",
-    "pick_type": "Driver",
-    "is_captain": true,
-    "is_megacap": false,
-    "cap_multiplier": 2,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 2,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 4,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Fastest Pitstop",
-    "breakdown_points": 2,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Both Driver Q2",
-    "breakdown_points": 3,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Fastest Pitstop",
-    "breakdown_points": 5,
-    "pick_points_gd": 118
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 10,
-    "race_rank": 8,
-    "team_name": "Edu Lima",
-    "user_name": "Eduardo Santos Lima",
-    "pick_id": "2640",
-    "pick_name": "Audi",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 118
+    "pick_points_gd": 156
   },
   {
     "race_number": 21,
@@ -32805,7 +32205,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11",
@@ -32817,7 +32217,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -32825,7 +32225,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11",
@@ -32837,7 +32237,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race not classified ",
     "breakdown_points": -20,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -32845,7 +32245,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11051",
@@ -32857,7 +32257,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -32865,7 +32265,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11051",
@@ -32877,7 +32277,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -32885,11 +32285,51 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
-    "pick_id": "11051",
-    "pick_name": "G. Bortoleto",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 128
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 128
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 9,
+    "race_rank": 8,
+    "team_name": "Prisci Prisci",
+    "user_name": "Priscila Rigotto",
+    "pick_id": "111",
+    "pick_name": "N. Hulkenberg",
     "pick_type": "Driver",
     "is_captain": false,
     "is_megacap": false,
@@ -32897,7 +32337,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 1,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -32905,67 +32345,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Qualifying Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 113
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 9,
-    "race_rank": 9,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position",
-    "breakdown_points": 0,
-    "pick_points_gd": 113
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 9,
-    "race_rank": 9,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "111",
-    "pick_name": "N. Hulkenberg",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Position lost",
-    "breakdown_points": -1,
-    "pick_points_gd": 113
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11161",
@@ -32977,7 +32357,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -32985,7 +32365,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11161",
@@ -32996,8 +32376,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 113
+    "breakdown_points": 15,
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33005,7 +32385,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "11161",
@@ -33016,8 +32396,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 113
+    "breakdown_points": 3,
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33025,7 +32405,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "114",
@@ -33037,7 +32417,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33045,7 +32425,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "114",
@@ -33057,7 +32437,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33065,7 +32445,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "114",
@@ -33077,7 +32457,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -11,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33085,7 +32465,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "25",
@@ -33097,7 +32477,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33105,7 +32485,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "25",
@@ -33117,7 +32497,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33125,7 +32505,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "25",
@@ -33137,7 +32517,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 2,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33145,7 +32525,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "25",
@@ -33156,8 +32536,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 113
+    "breakdown_points": 14,
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33165,27 +32545,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
-    "team_name": "Prisci Prisci",
-    "user_name": "Priscila Rigotto",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 113
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "25",
@@ -33196,8 +32556,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 113
+    "breakdown_points": 8,
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33205,7 +32565,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -33217,7 +32577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33225,7 +32585,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -33237,7 +32597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 113
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33245,7 +32605,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -33256,8 +32616,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 113
+    "breakdown_points": 40,
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33265,7 +32625,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 9,
-    "race_rank": 9,
+    "race_rank": 8,
     "team_name": "Prisci Prisci",
     "user_name": "Priscila Rigotto",
     "pick_id": "28",
@@ -33276,8 +32636,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 2,
-    "pick_points_gd": 113
+    "breakdown_points": 4,
+    "pick_points_gd": 128
   },
   {
     "race_number": 21,
@@ -33285,7 +32645,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11031",
@@ -33297,7 +32657,7 @@
     "no_neg_applied": false,
     "breakdown_category": "QF not classified ",
     "breakdown_points": -5,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33305,7 +32665,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11031",
@@ -33317,7 +32677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33325,7 +32685,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11031",
@@ -33336,8 +32696,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 11,
-    "pick_points_gd": 92
+    "breakdown_points": 10,
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33345,7 +32705,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11149",
@@ -33357,7 +32717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33365,7 +32725,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11149",
@@ -33377,7 +32737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33385,7 +32745,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11149",
@@ -33397,7 +32757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -15,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33405,7 +32765,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11161",
@@ -33417,7 +32777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33425,7 +32785,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11161",
@@ -33436,8 +32796,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 92
+    "breakdown_points": 15,
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33445,7 +32805,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "11161",
@@ -33456,8 +32816,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 92
+    "breakdown_points": 3,
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33465,7 +32825,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "114",
@@ -33477,7 +32837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33485,7 +32845,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "114",
@@ -33497,7 +32857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33505,7 +32865,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "114",
@@ -33517,7 +32877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -11,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33525,7 +32885,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "2636",
@@ -33537,7 +32897,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33545,7 +32905,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "2636",
@@ -33557,7 +32917,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33565,7 +32925,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "2636",
@@ -33577,7 +32937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33585,7 +32945,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "2636",
@@ -33597,7 +32957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33605,7 +32965,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "2636",
@@ -33617,7 +32977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -26,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33625,7 +32985,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "28",
@@ -33637,7 +32997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 18,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33645,7 +33005,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "28",
@@ -33657,7 +33017,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 92
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33665,7 +33025,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "28",
@@ -33676,8 +33036,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 35,
-    "pick_points_gd": 92
+    "breakdown_points": 40,
+    "pick_points_gd": 112
   },
   {
     "race_number": 21,
@@ -33685,7 +33045,7 @@
     "race_flag": "🇺🇸",
     "race_date": "2026-11-22",
     "season_rank": 3,
-    "race_rank": 10,
+    "race_rank": 9,
     "team_name": "Semi-aquatic-mammals",
     "user_name": "Guilherme Figueiredo",
     "pick_id": "28",
@@ -33696,8 +33056,488 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
+    "breakdown_points": 4,
+    "pick_points_gd": 112
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 5,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11149",
+    "pick_name": "A. Lindblad",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -15,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 10,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 15,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "11161",
+    "pick_name": "K. Antonelli",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 3,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "121",
+    "pick_name": "S. Perez",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -5,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "131",
+    "pick_name": "M. Verstappen",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 9,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "131",
+    "pick_name": "M. Verstappen",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 18,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "131",
+    "pick_name": "M. Verstappen",
+    "pick_type": "Driver",
+    "is_captain": true,
+    "is_megacap": false,
+    "cap_multiplier": 2,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position lost",
+    "breakdown_points": -1,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 92
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "18",
+    "pick_name": "P. Gasly",
+    "pick_type": "Driver",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 4,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q2",
+    "breakdown_points": 3,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 2,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 14,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "25",
+    "pick_name": "Ferrari",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 8,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Both Driver Q2",
+    "breakdown_points": 3,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Qualifying Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Fastest Pitstop",
+    "breakdown_points": 5,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race Position",
+    "breakdown_points": 0,
+    "pick_points_gd": 107
+  },
+  {
+    "race_number": 21,
+    "race_name": "Las Vegas Grand Prix",
+    "race_flag": "🇺🇸",
+    "race_date": "2026-11-22",
+    "season_rank": 10,
+    "race_rank": 10,
+    "team_name": "Edu Lima",
+    "user_name": "Eduardo Santos Lima",
+    "pick_id": "2640",
+    "pick_name": "Audi",
+    "pick_type": "Constructor",
+    "is_captain": false,
+    "is_megacap": false,
+    "cap_multiplier": 1,
+    "no_neg_applied": false,
+    "breakdown_category": "Race position gained",
+    "breakdown_points": 1,
+    "pick_points_gd": 107
   },
   {
     "race_number": 21,
@@ -33717,7 +33557,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 5,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33737,7 +33577,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33757,7 +33597,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -15,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33777,7 +33617,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 10,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33796,8 +33636,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 10,
-    "pick_points_gd": 84
+    "breakdown_points": 15,
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33816,8 +33656,8 @@
     "cap_multiplier": 2,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 1,
-    "pick_points_gd": 84
+    "breakdown_points": 3,
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33837,7 +33677,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 3,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33857,7 +33697,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33877,7 +33717,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -11,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33897,7 +33737,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33917,7 +33757,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 1,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33937,7 +33777,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
     "breakdown_points": 10,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33957,7 +33797,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 2,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -33976,28 +33816,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 84
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 11,
-    "race_rank": 11,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "18",
-    "pick_name": "P. Gasly",
-    "pick_type": "Driver",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race position gained",
     "breakdown_points": 4,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34017,7 +33837,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q2",
     "breakdown_points": 3,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34037,7 +33857,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 0,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34057,7 +33877,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 2,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34076,28 +33896,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
-    "breakdown_points": 12,
-    "pick_points_gd": 84
-  },
-  {
-    "race_number": 21,
-    "race_name": "Las Vegas Grand Prix",
-    "race_flag": "🇺🇸",
-    "race_date": "2026-11-22",
-    "season_rank": 11,
-    "race_rank": 11,
-    "team_name": "Mucci_Senior",
-    "user_name": "Ricardo Mucci",
-    "pick_id": "25",
-    "pick_name": "Ferrari",
-    "pick_type": "Constructor",
-    "is_captain": false,
-    "is_megacap": false,
-    "cap_multiplier": 1,
-    "no_neg_applied": false,
-    "breakdown_category": "Race Fastest lap",
-    "breakdown_points": 10,
-    "pick_points_gd": 84
+    "breakdown_points": 14,
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34116,8 +33916,8 @@
     "cap_multiplier": 1,
     "no_neg_applied": false,
     "breakdown_category": "Race position gained",
-    "breakdown_points": 7,
-    "pick_points_gd": 84
+    "breakdown_points": 8,
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34137,7 +33937,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Qualifying Position",
     "breakdown_points": 8,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34157,7 +33957,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Both Driver Q3",
     "breakdown_points": 10,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34177,7 +33977,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Fastest Pitstop",
     "breakdown_points": 5,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34197,7 +33997,7 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position",
     "breakdown_points": 0,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   },
   {
     "race_number": 21,
@@ -34217,6 +34017,6 @@
     "no_neg_applied": false,
     "breakdown_category": "Race Position lost",
     "breakdown_points": -26,
-    "pick_points_gd": 84
+    "pick_points_gd": 79
   }
 ]
